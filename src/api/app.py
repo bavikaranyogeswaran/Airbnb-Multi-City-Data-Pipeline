@@ -16,17 +16,17 @@ from __future__ import annotations
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 
-from .routes import cities, cleaning, enrichment, familiarization, ingestion
+from .routes import cities, cleaning, enrichment, familiarization, ingestion, warehouse
 
 app = FastAPI(
     title="Inside Airbnb · London Pipeline",
-    version="0.4.0",
+    version="0.5.0",
     description=(
         "FastAPI surface over Dataset Familiarization, Ingestion & "
-        "Profiling, Cleaning & Standardization, and Enrichment & Joining. "
-        "Read endpoints serve generated artifacts; trigger endpoints "
-        "re-run the underlying `run()` functions in-process. Heavy "
-        "steps may block 1–2 min."
+        "Profiling, Cleaning & Standardization, Enrichment & Joining, "
+        "and the Star-Schema Warehouse. Read endpoints serve generated "
+        "artifacts; trigger endpoints re-run the underlying `run()` "
+        "functions in-process. Heavy steps may block 1–2 min."
     ),
 )
 
@@ -36,6 +36,7 @@ app.include_router(familiarization.router)
 app.include_router(ingestion.router)
 app.include_router(cleaning.router)
 app.include_router(enrichment.router)
+app.include_router(warehouse.router)
 
 
 @app.get("/", include_in_schema=False)
@@ -61,5 +62,6 @@ def index() -> dict:
             "ingestion":         "/ingestion",
             "cleaning":          "/cleaning",
             "enrichment":        "/enrichment",
+            "warehouse":         "/warehouse",
         },
     }

@@ -70,6 +70,20 @@ Triggers (in-process, sync):
 - `POST /familiarization/schema:annotate`
 - `POST /familiarization/key-integrity:rebuild`
 
+### Warehouse / Star Schema (`src/api/routes/warehouse.py`)
+DuckDB warehouse at `data/processed/london/warehouse.duckdb`. Five dim tables, three fact tables, and 5 analytical SQL queries auto-discovered from `sql/`.
+
+Reads:
+- `GET /warehouse/tables?city=london` — list tables with row counts
+- `GET /warehouse/queries` — list available SQL queries
+- `GET /warehouse/queries/{name}?city=london` — run a named query, return rows as JSON
+- `GET /warehouse/queries/{name}/sql` — return the raw SQL text
+
+Triggers:
+- `POST /warehouse/dimensions:run?city=london`
+- `POST /warehouse/facts:run?city=london`
+- `POST /warehouse/build?city=london` — dimensions then facts
+
 ### Enrichment & Joining (`src/api/routes/enrichment.py`)
 Reads:
 - `GET /enrichment/manifest?city=london` — all cleaned + enriched parquet inventory
