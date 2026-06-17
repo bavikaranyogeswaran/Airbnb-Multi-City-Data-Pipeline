@@ -70,6 +70,21 @@ Triggers (in-process, sync):
 - `POST /familiarization/schema:annotate`
 - `POST /familiarization/key-integrity:rebuild`
 
+### Cleaning & Standardization (`src/api/routes/cleaning.py`)
+Reads:
+- `GET /cleaning/manifest?city=london` — cleaned-parquet inventory (paths, exists, size, row counts)
+- `GET /cleaning/listings?city=london&n=5` — head preview of cleaned listings
+- `GET /cleaning/calendar?city=london&n=5` — head preview of cleaned calendar
+- `GET /cleaning/reviews?city=london&n=5` — head preview of cleaned reviews
+- `GET /cleaning/neighbourhoods?city=london` — all 33 cleaned neighbourhoods + centroid + area_km2
+
+Triggers:
+- `POST /cleaning/listings:run?city=london`
+- `POST /cleaning/calendar:run?city=london` (slow, ~50s for 35M rows)
+- `POST /cleaning/reviews:run?city=london` (slow, ~30s for 2M rows + dedup pass)
+- `POST /cleaning/neighbourhoods:run?city=london`
+- `POST /cleaning/all?city=london` — neighbourhoods → listings → calendar → reviews
+
 ### Ingestion & Profiling (`src/api/routes/ingestion.py`)
 Reads:
 - `GET /ingestion/manifest` (CSV→JSON)
