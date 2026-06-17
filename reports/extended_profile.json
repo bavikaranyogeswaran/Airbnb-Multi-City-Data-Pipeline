@@ -1,0 +1,3361 @@
+{
+  "city": "london",
+  "snapshot_date": "2025-09-14",
+  "files": [
+    {
+      "source_file": "listings.csv.gz",
+      "row_count": 96871,
+      "column_count": 79,
+      "memory_mb": 227.73,
+      "columns": [
+        {
+          "column": "id",
+          "detected_dtype": "int64",
+          "completeness_class": "critical",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 96871,
+          "cardinality_ratio": 1.0,
+          "numeric_stats": {
+            "min": 13913.0,
+            "max": 1.5089644180569539e+18,
+            "mean": 6.894448176786734e+17,
+            "median": 8.505248193614892e+17,
+            "std": 5.941221984003247e+17,
+            "q25": 30260579.0,
+            "q75": 1.2542624662735864e+18
+          },
+          "sample_values": [
+            "13913",
+            "15400",
+            "17402"
+          ]
+        },
+        {
+          "column": "listing_url",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 96871,
+          "cardinality_ratio": 1.0,
+          "sample_values": [
+            "https://www.airbnb.com/rooms/13913",
+            "https://www.airbnb.com/rooms/15400",
+            "https://www.airbnb.com/rooms/17402"
+          ]
+        },
+        {
+          "column": "scrape_id",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 1,
+          "cardinality_ratio": 1e-05,
+          "numeric_stats": {
+            "min": 20250914034649.0,
+            "max": 20250914034649.0,
+            "mean": 20250914034649.0,
+            "median": 20250914034649.0,
+            "std": 0.0,
+            "q25": 20250914034649.0,
+            "q75": 20250914034649.0
+          },
+          "top_values": [
+            {
+              "value": "20250914034649",
+              "count": 96871
+            }
+          ],
+          "sample_values": [
+            "20250914034649",
+            "20250914034649",
+            "20250914034649"
+          ]
+        },
+        {
+          "column": "last_scraped",
+          "detected_dtype": "str",
+          "completeness_class": "critical",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 5,
+          "cardinality_ratio": 5.2e-05,
+          "top_values": [
+            {
+              "value": "2025-09-16",
+              "count": 23409
+            },
+            {
+              "value": "2025-09-15",
+              "count": 22469
+            },
+            {
+              "value": "2025-09-17",
+              "count": 22393
+            },
+            {
+              "value": "2025-09-18",
+              "count": 15612
+            },
+            {
+              "value": "2025-09-14",
+              "count": 12988
+            }
+          ],
+          "sample_values": [
+            "2025-09-16",
+            "2025-09-16",
+            "2025-09-16"
+          ]
+        },
+        {
+          "column": "source",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 2,
+          "cardinality_ratio": 2.1e-05,
+          "top_values": [
+            {
+              "value": "city scrape",
+              "count": 62101
+            },
+            {
+              "value": "previous scrape",
+              "count": 34770
+            }
+          ],
+          "sample_values": [
+            "city scrape",
+            "city scrape",
+            "city scrape"
+          ]
+        },
+        {
+          "column": "name",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 93340,
+          "cardinality_ratio": 0.963549,
+          "sample_values": [
+            "Holiday London DB Room Let-on going",
+            "Bright Chelsea  Apartment. Chelsea!",
+            "Very Central Modern 3-Bed/2 Bath By Oxford St W1"
+          ]
+        },
+        {
+          "column": "description",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 2450,
+          "null_percentage": 2.5291,
+          "unique_count": 83379,
+          "cardinality_ratio": 0.883056,
+          "sample_values": [
+            "My bright double bedroom with a large window has a relaxed feeling! It comfortably fits one or two and is centrally located just two blocks from Finsbury Park. Enjoy great restaurants in the area and easy access to easy transport tubes, trains and buses. Babies and children of all ages are welcome.",
+            "Lots of windows and light.  St Luke's Gardens are at the end of the block, and the river not too far the other way. Ten minutes walk if you go slowly. Buses to everywhere round the corner and shops, restaurants, pubs, the cinema and once again Waitrose .",
+            "You'll have a great time in this beautiful, clean, modern, well-equipped contemporary and recently refurbished Fitzroy Street 3-bed / 2-bath, right in the heart of Central London (W1T 4BL). It is fully furnished with everything ready to provide an enjoyable and comfortable stay. There is free unlimited wifi access and unlimited Netflix. There is woodstrip flooring throughout."
+          ]
+        },
+        {
+          "column": "neighborhood_overview",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 55663,
+          "null_percentage": 57.461,
+          "unique_count": 33388,
+          "cardinality_ratio": 0.810231,
+          "sample_values": [
+            "Finsbury Park is a friendly melting pot community composed of Turkish, French, Spanish, Middle Eastern, Irish and English families. <br />We have a wonderful variety of international restaurants directly under us on Stroud Green Road. And there are many shops and large Tescos supermarket right next door. <br /><br />But you can also venture up to Crouch End and along Greens Lanes where there will endless choice of Turkish and Middle Eastern cuisines.s",
+            "It is Chelsea.",
+            "Fitzrovia is a very desirable trendy, arty and foodie top location, in the heart of the West End in Central London. It's a wonderful and safe area with lots going on. Walk to tourist London or use the close by tubes. Head in any direction for a great day out. Amazing choice of restaurants, pubs and supermarkets.<br /><br />The neighbourhood has a villagey feel and some beautiful Georgian architecture. It was was once home to such writers as Virginia Woolf, George Bernard Shaw and Arthur Rimbaud. Today Fitzrovia is a popular and lively neighbourhood with a residential and business mix. The numerous media companies based in the area feed into a vibrant buzz."
+          ]
+        },
+        {
+          "column": "picture_url",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 6,
+          "null_percentage": 0.0062,
+          "unique_count": 94609,
+          "cardinality_ratio": 0.97671,
+          "sample_values": [
+            "https://a0.muscache.com/pictures/miso/Hosting-13913/original/d755aa6d-cebb-4464-80be-2722c921e8d5.jpeg",
+            "https://a0.muscache.com/pictures/428392/462d262a_original.jpg",
+            "https://a0.muscache.com/pictures/39d5309d-fba7-4ecb-8cae-383dcb3b757c.jpg"
+          ]
+        },
+        {
+          "column": "host_id",
+          "detected_dtype": "int64",
+          "completeness_class": "critical",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 55646,
+          "cardinality_ratio": 0.574434,
+          "numeric_stats": {
+            "min": 2594.0,
+            "max": 718690455.0,
+            "mean": 214449413.68850327,
+            "median": 116432057.0,
+            "std": 219605286.55079618,
+            "q25": 27268143.5,
+            "q75": 419897445.0
+          },
+          "sample_values": [
+            "54730",
+            "60302",
+            "67564"
+          ]
+        },
+        {
+          "column": "host_url",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 55646,
+          "cardinality_ratio": 0.574434,
+          "sample_values": [
+            "https://www.airbnb.com/users/show/54730",
+            "https://www.airbnb.com/users/show/60302",
+            "https://www.airbnb.com/users/show/67564"
+          ]
+        },
+        {
+          "column": "host_name",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 43,
+          "null_percentage": 0.0444,
+          "unique_count": 16672,
+          "cardinality_ratio": 0.172182,
+          "sample_values": [
+            "Alina",
+            "Philippa",
+            "Liz"
+          ]
+        },
+        {
+          "column": "host_since",
+          "detected_dtype": "str",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 41,
+          "null_percentage": 0.0423,
+          "unique_count": 5489,
+          "cardinality_ratio": 0.056687,
+          "sample_values": [
+            "2009-11-16",
+            "2009-12-05",
+            "2010-01-04"
+          ]
+        },
+        {
+          "column": "host_location",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 23771,
+          "null_percentage": 24.5388,
+          "unique_count": 1766,
+          "cardinality_ratio": 0.024159,
+          "sample_values": [
+            "London, United Kingdom",
+            "Royal Borough of Kensington and Chelsea, United Kingdom",
+            "London, United Kingdom"
+          ]
+        },
+        {
+          "column": "host_about",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 47038,
+          "null_percentage": 48.5574,
+          "unique_count": 24306,
+          "cardinality_ratio": 0.487749,
+          "sample_values": [
+            "I am a Multi-Media Visual Artist and Creative Practitioner in Education. I live in  London England with a Greek/Canadian origins and work internationally. \r\n\r\nI love everything there is to be enjoyed in life and travel is on top of my list!",
+            "English, grandmother,  I have travelled quite a lot.  I love being in different countries, as long as they are warm!.\r\n I enjoy preparing a clean comfortable flat with plenty of empty cupboards, as I would like to find things myself.\r\n Nowadays I like to travel by sea so it is a challenge getting to where I would like to go. But that is the fun of it!\r\n\r\n",
+            "We are Liz and Jack.  We manage a number of holiday let properties in Fitzrovia, central London and Lymington, as well as many long let properties. We look forward to welcoming you one of our super  home from homes.\r\n\r\nWe know Fitzrovia well and can thoroughly recommend it for its central London location, great transport links (although you'll probably be mostly on foot as tourist London is very walkable!) and wide choice of bars and restaurants. It's a highly desirable neighbourhood with beautiful architecture and interesting streets. People come from all over London to enjoy some Fitzrovia life. We're lucky enough to be based here and hope to see you here too! \r\n\r\nWhen we want to head out of the city, Lymington is our favourite getaway location. You'll love this quaint seaside town on the edge of the beautiful New Forest. \r\n\r\nWe have been letting our properties for over 15 years. We hope we've perfected a warm and professional welcome. Really importantly, you can book with us worry-free. As you'll see from our vast number of reviews, we offer a friendly, guest-focused, helpful and absolutely reliable service.  \r\n\r\nWe're very happy to help with questions (before or during your stay) or to tailor any trip to suit your needs so just let us know if there's anything we can do. We look forward to seeing you in London or Lymington!"
+          ]
+        },
+        {
+          "column": "host_response_time",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 31707,
+          "null_percentage": 32.7312,
+          "unique_count": 4,
+          "cardinality_ratio": 6.1e-05,
+          "top_values": [
+            {
+              "value": "within an hour",
+              "count": 43447
+            },
+            {
+              "value": "within a few hours",
+              "count": 10683
+            },
+            {
+              "value": "within a day",
+              "count": 6726
+            },
+            {
+              "value": "a few days or more",
+              "count": 4308
+            }
+          ],
+          "sample_values": [
+            "within a few hours",
+            "within an hour",
+            "within a few hours"
+          ]
+        },
+        {
+          "column": "host_response_rate",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 31707,
+          "null_percentage": 32.7312,
+          "unique_count": 92,
+          "cardinality_ratio": 0.001412,
+          "top_values": [
+            {
+              "value": "100%",
+              "count": 42677
+            },
+            {
+              "value": "0%",
+              "count": 2446
+            },
+            {
+              "value": "99%",
+              "count": 2213
+            },
+            {
+              "value": "90%",
+              "count": 2174
+            },
+            {
+              "value": "98%",
+              "count": 1344
+            }
+          ],
+          "sample_values": [
+            "100%",
+            "88%",
+            "100%"
+          ]
+        },
+        {
+          "column": "host_acceptance_rate",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 27760,
+          "null_percentage": 28.6567,
+          "unique_count": 101,
+          "cardinality_ratio": 0.001461,
+          "top_values": [
+            {
+              "value": "100%",
+              "count": 23624
+            },
+            {
+              "value": "99%",
+              "count": 5815
+            },
+            {
+              "value": "0%",
+              "count": 3916
+            },
+            {
+              "value": "98%",
+              "count": 3391
+            },
+            {
+              "value": "97%",
+              "count": 2439
+            }
+          ],
+          "sample_values": [
+            "96%",
+            "50%",
+            "88%"
+          ]
+        },
+        {
+          "column": "host_is_superhost",
+          "detected_dtype": "str",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 1766,
+          "null_percentage": 1.823,
+          "unique_count": 2,
+          "cardinality_ratio": 2.1e-05,
+          "top_values": [
+            {
+              "value": "f",
+              "count": 77913
+            },
+            {
+              "value": "t",
+              "count": 17192
+            }
+          ],
+          "sample_values": [
+            "t",
+            "f",
+            "t"
+          ]
+        },
+        {
+          "column": "host_thumbnail_url",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 41,
+          "null_percentage": 0.0423,
+          "unique_count": 52765,
+          "cardinality_ratio": 0.544924,
+          "sample_values": [
+            "https://a0.muscache.com/im/users/54730/profile_pic/1327774386/original.jpg?aki_policy=profile_small",
+            "https://a0.muscache.com/im/users/60302/profile_pic/1348610590/original.jpg?aki_policy=profile_small",
+            "https://a0.muscache.com/im/users/67564/profile_pic/1320663729/original.jpg?aki_policy=profile_small"
+          ]
+        },
+        {
+          "column": "host_picture_url",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 41,
+          "null_percentage": 0.0423,
+          "unique_count": 52765,
+          "cardinality_ratio": 0.544924,
+          "sample_values": [
+            "https://a0.muscache.com/im/users/54730/profile_pic/1327774386/original.jpg?aki_policy=profile_x_medium",
+            "https://a0.muscache.com/im/users/60302/profile_pic/1348610590/original.jpg?aki_policy=profile_x_medium",
+            "https://a0.muscache.com/im/users/67564/profile_pic/1320663729/original.jpg?aki_policy=profile_x_medium"
+          ]
+        },
+        {
+          "column": "host_neighbourhood",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 51021,
+          "null_percentage": 52.669,
+          "unique_count": 624,
+          "cardinality_ratio": 0.01361,
+          "sample_values": [
+            "LB of Islington",
+            "Chelsea",
+            "Fitzrovia"
+          ]
+        },
+        {
+          "column": "host_listings_count",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 41,
+          "null_percentage": 0.0423,
+          "unique_count": 147,
+          "cardinality_ratio": 0.001518,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 5469.0,
+            "mean": 50.08899101518124,
+            "median": 2.0,
+            "std": 399.40569380267726,
+            "q25": 1.0,
+            "q75": 10.0
+          },
+          "top_values": [
+            {
+              "value": "1.0",
+              "count": 41372
+            },
+            {
+              "value": "2.0",
+              "count": 12219
+            },
+            {
+              "value": "3.0",
+              "count": 5871
+            },
+            {
+              "value": "4.0",
+              "count": 3681
+            },
+            {
+              "value": "5.0",
+              "count": 2522
+            }
+          ],
+          "sample_values": [
+            "2.0",
+            "1.0",
+            "3.0"
+          ]
+        },
+        {
+          "column": "host_total_listings_count",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 41,
+          "null_percentage": 0.0423,
+          "unique_count": 216,
+          "cardinality_ratio": 0.002231,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 8769.0,
+            "mean": 80.3052463079624,
+            "median": 3.0,
+            "std": 589.3261727365235,
+            "q25": 1.0,
+            "q75": 14.0
+          },
+          "sample_values": [
+            "5.0",
+            "1.0",
+            "16.0"
+          ]
+        },
+        {
+          "column": "host_verifications",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 41,
+          "null_percentage": 0.0423,
+          "unique_count": 8,
+          "cardinality_ratio": 8.3e-05,
+          "top_values": [
+            {
+              "value": "['email', 'phone']",
+              "count": 75809
+            },
+            {
+              "value": "['email', 'phone', 'work_email']",
+              "count": 10997
+            },
+            {
+              "value": "['phone']",
+              "count": 9110
+            },
+            {
+              "value": "['phone', 'work_email']",
+              "count": 401
+            },
+            {
+              "value": "['email']",
+              "count": 319
+            }
+          ],
+          "sample_values": [
+            "['email', 'phone']",
+            "['email', 'phone']",
+            "['email', 'phone', 'work_email']"
+          ]
+        },
+        {
+          "column": "host_has_profile_pic",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 41,
+          "null_percentage": 0.0423,
+          "unique_count": 2,
+          "cardinality_ratio": 2.1e-05,
+          "top_values": [
+            {
+              "value": "t",
+              "count": 92661
+            },
+            {
+              "value": "f",
+              "count": 4169
+            }
+          ],
+          "sample_values": [
+            "t",
+            "t",
+            "t"
+          ]
+        },
+        {
+          "column": "host_identity_verified",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 41,
+          "null_percentage": 0.0423,
+          "unique_count": 2,
+          "cardinality_ratio": 2.1e-05,
+          "top_values": [
+            {
+              "value": "t",
+              "count": 84463
+            },
+            {
+              "value": "f",
+              "count": 12367
+            }
+          ],
+          "sample_values": [
+            "t",
+            "t",
+            "t"
+          ]
+        },
+        {
+          "column": "neighbourhood",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 55662,
+          "null_percentage": 57.4599,
+          "unique_count": 1,
+          "cardinality_ratio": 2.4e-05,
+          "top_values": [
+            {
+              "value": "Neighborhood highlights",
+              "count": 41209
+            }
+          ],
+          "sample_values": [
+            "Neighborhood highlights",
+            "Neighborhood highlights",
+            "Neighborhood highlights"
+          ]
+        },
+        {
+          "column": "neighbourhood_cleansed",
+          "detected_dtype": "str",
+          "completeness_class": "critical",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 33,
+          "cardinality_ratio": 0.000341,
+          "top_values": [
+            {
+              "value": "Westminster",
+              "count": 11385
+            },
+            {
+              "value": "Tower Hamlets",
+              "count": 7469
+            },
+            {
+              "value": "Camden",
+              "count": 6551
+            },
+            {
+              "value": "Kensington and Chelsea",
+              "count": 6401
+            },
+            {
+              "value": "Hackney",
+              "count": 6359
+            }
+          ],
+          "sample_values": [
+            "Islington",
+            "Kensington and Chelsea",
+            "Westminster"
+          ]
+        },
+        {
+          "column": "neighbourhood_group_cleansed",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 96871,
+          "null_percentage": 100.0,
+          "unique_count": 0,
+          "cardinality_ratio": 0.0,
+          "sample_values": []
+        },
+        {
+          "column": "latitude",
+          "detected_dtype": "float64",
+          "completeness_class": "critical",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 54112,
+          "cardinality_ratio": 0.558599,
+          "numeric_stats": {
+            "min": 51.295937,
+            "max": 51.68263,
+            "mean": 51.50973982394052,
+            "median": 51.51372,
+            "std": 0.0490668823841057,
+            "q25": 51.48415,
+            "q75": 51.539107510513546
+          },
+          "sample_values": [
+            "51.56861",
+            "51.4878",
+            "51.52195"
+          ]
+        },
+        {
+          "column": "longitude",
+          "detected_dtype": "float64",
+          "completeness_class": "critical",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 63584,
+          "cardinality_ratio": 0.656378,
+          "numeric_stats": {
+            "min": -0.49676,
+            "max": 0.27896,
+            "mean": -0.12763797732931664,
+            "median": -0.127505407549997,
+            "std": 0.10111245075560481,
+            "q25": -0.1894675,
+            "q75": -0.06831625338792224
+          },
+          "sample_values": [
+            "-0.1127",
+            "-0.16813",
+            "-0.14094"
+          ]
+        },
+        {
+          "column": "property_type",
+          "detected_dtype": "str",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 91,
+          "cardinality_ratio": 0.000939,
+          "top_values": [
+            {
+              "value": "Entire rental unit",
+              "count": 41215
+            },
+            {
+              "value": "Private room in rental unit",
+              "count": 14464
+            },
+            {
+              "value": "Private room in home",
+              "count": 11704
+            },
+            {
+              "value": "Entire home",
+              "count": 9120
+            },
+            {
+              "value": "Entire condo",
+              "count": 8250
+            }
+          ],
+          "sample_values": [
+            "Private room in rental unit",
+            "Entire rental unit",
+            "Entire rental unit"
+          ]
+        },
+        {
+          "column": "room_type",
+          "detected_dtype": "str",
+          "completeness_class": "critical",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 4,
+          "cardinality_ratio": 4.1e-05,
+          "top_values": [
+            {
+              "value": "Entire home/apt",
+              "count": 62907
+            },
+            {
+              "value": "Private room",
+              "count": 33643
+            },
+            {
+              "value": "Shared room",
+              "count": 212
+            },
+            {
+              "value": "Hotel room",
+              "count": 109
+            }
+          ],
+          "sample_values": [
+            "Private room",
+            "Entire home/apt",
+            "Entire home/apt"
+          ]
+        },
+        {
+          "column": "accommodates",
+          "detected_dtype": "int64",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 16,
+          "cardinality_ratio": 0.000165,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 16.0,
+            "mean": 3.3262276635938517,
+            "median": 2.0,
+            "std": 2.0786053795486987,
+            "q25": 2.0,
+            "q75": 4.0
+          },
+          "top_values": [
+            {
+              "value": "2",
+              "count": 38419
+            },
+            {
+              "value": "4",
+              "count": 19978
+            },
+            {
+              "value": "1",
+              "count": 11034
+            },
+            {
+              "value": "6",
+              "count": 8276
+            },
+            {
+              "value": "3",
+              "count": 7299
+            }
+          ],
+          "sample_values": [
+            "1",
+            "2",
+            "6"
+          ]
+        },
+        {
+          "column": "bathrooms",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 34846,
+          "null_percentage": 35.9715,
+          "unique_count": 30,
+          "cardinality_ratio": 0.000484,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 26.0,
+            "mean": 1.3555501813784765,
+            "median": 1.0,
+            "std": 0.7207700141464015,
+            "q25": 1.0,
+            "q75": 1.5
+          },
+          "top_values": [
+            {
+              "value": "1.0",
+              "count": 41164
+            },
+            {
+              "value": "2.0",
+              "count": 9799
+            },
+            {
+              "value": "1.5",
+              "count": 5127
+            },
+            {
+              "value": "2.5",
+              "count": 2038
+            },
+            {
+              "value": "3.0",
+              "count": 1539
+            }
+          ],
+          "sample_values": [
+            "1.0",
+            "1.0",
+            "2.0"
+          ]
+        },
+        {
+          "column": "bathrooms_text",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 153,
+          "null_percentage": 0.1579,
+          "unique_count": 50,
+          "cardinality_ratio": 0.000517,
+          "top_values": [
+            {
+              "value": "1 bath",
+              "count": 44926
+            },
+            {
+              "value": "2 baths",
+              "count": 12741
+            },
+            {
+              "value": "1 shared bath",
+              "count": 12057
+            },
+            {
+              "value": "1 private bath",
+              "count": 8503
+            },
+            {
+              "value": "1.5 baths",
+              "count": 5805
+            }
+          ],
+          "sample_values": [
+            "1 shared bath",
+            "1 bath",
+            "2 baths"
+          ]
+        },
+        {
+          "column": "bedrooms",
+          "detected_dtype": "float64",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 12775,
+          "null_percentage": 13.1876,
+          "unique_count": 22,
+          "cardinality_ratio": 0.000262,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 50.0,
+            "mean": 1.6070918949771689,
+            "median": 1.0,
+            "std": 1.040425132717851,
+            "q25": 1.0,
+            "q75": 2.0
+          },
+          "top_values": [
+            {
+              "value": "1.0",
+              "count": 47348
+            },
+            {
+              "value": "2.0",
+              "count": 22040
+            },
+            {
+              "value": "3.0",
+              "count": 7793
+            },
+            {
+              "value": "4.0",
+              "count": 3127
+            },
+            {
+              "value": "0.0",
+              "count": 2403
+            }
+          ],
+          "sample_values": [
+            "1.0",
+            "1.0",
+            "3.0"
+          ]
+        },
+        {
+          "column": "beds",
+          "detected_dtype": "float64",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 34920,
+          "null_percentage": 36.0479,
+          "unique_count": 27,
+          "cardinality_ratio": 0.000436,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 50.0,
+            "mean": 1.9531081015641394,
+            "median": 2.0,
+            "std": 1.4445957235295177,
+            "q25": 1.0,
+            "q75": 2.0
+          },
+          "top_values": [
+            {
+              "value": "1.0",
+              "count": 29554
+            },
+            {
+              "value": "2.0",
+              "count": 15747
+            },
+            {
+              "value": "3.0",
+              "count": 8139
+            },
+            {
+              "value": "4.0",
+              "count": 3912
+            },
+            {
+              "value": "5.0",
+              "count": 1637
+            }
+          ],
+          "sample_values": [
+            "1.0",
+            "1.0",
+            "3.0"
+          ]
+        },
+        {
+          "column": "amenities",
+          "detected_dtype": "str",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 85530,
+          "cardinality_ratio": 0.882927,
+          "sample_values": [
+            "[\"Self check-in\", \"Kitchen\", \"Smoke alarm\", \"Dedicated workspace\", \"Shampoo\", \"Hair dryer\", \"Laundromat nearby\", \"Portable fans\", \"Stove\", \"Central heating\", \"Conditioner\", \"Blender\", \"Wifi\", \"Refrigerator\", \"Cooking basics\", \"Baking sheet\", \"Private patio or balcony\", \"Freezer\", \"Essentials\", \"Coffee maker\", \"Body soap\", \"Dishes and silverware\", \"Books and reading material\", \"Wine glasses\", \"Dining table\", \"Luggage dropoff allowed\", \"Oven\", \"Hot water kettle\", \"Long term stays allowed\", \"Free washer \\u2013 In unit\", \"Hangers\", \"Coffee\", \"Children\\u2019s dinnerware\", \"Outlet covers\", \"Iron\", \"Private entrance\", \"Board games\", \"First aid kit\", \"Lake access\", \"Shower gel\", \"Ethernet connection\", \"Clothing storage: dresser\", \"Paid street parking off premises\", \"Extra pillows and blankets\", \"Children\\u2019s books and toys\", \"Bed linens\", \"Bathtub\", \"Building staff\", \"Fire extinguisher\", \"Toaster\", \"Hot water\", \"Carbon monoxide alarm\", \"Lock on bedroom door\", \"Room-darkening shades\", \"Babysitter recommendations\"]",
+            "[\"Kitchen\", \"Smoke alarm\", \"Dedicated workspace\", \"Shampoo\", \"Hair dryer\", \"Air conditioning\", \"Heating\", \"Microwave\", \"Wifi\", \"Refrigerator\", \"Cooking basics\", \"Essentials\", \"Washer\", \"Dishes and silverware\", \"Coffee maker\", \"Luggage dropoff allowed\", \"TV with standard cable\", \"Long term stays allowed\", \"Hangers\", \"Iron\", \"Fire extinguisher\", \"Host greets you\", \"Hot water\", \"Carbon monoxide alarm\", \"Dryer\"]",
+            "[\"Kitchen\", \"Cleaning products\", \"Smoke alarm\", \"Dedicated workspace\", \"Hair dryer\", \"Laundromat nearby\", \"Portable fans\", \"Drying rack for clothing\", \"Heating\", \"Elevator\", \"Microwave\", \"Wifi\", \"Refrigerator\", \"Cooking basics\", \"Baking sheet\", \"Freezer\", \"Essentials\", \"Coffee maker\", \"Dishes and silverware\", \"Wine glasses\", \"Dining table\", \"Electric stove\", \"Oven\", \"Paid parking off premises\", \"Hot water kettle\", \"Long term stays allowed\", \"Free washer \\u2013 In unit\", \"Hangers\", \"Coffee\", \"Single level home\", \"Iron\", \"TV\", \"Clothing storage: closet and wardrobe\", \"Bed linens\", \"Dishwasher\", \"Bathtub\", \"Toaster\", \"Hot water\", \"Free dryer \\u2013 In unit\"]"
+          ]
+        },
+        {
+          "column": "price",
+          "detected_dtype": "str",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 34908,
+          "null_percentage": 36.0356,
+          "unique_count": 1350,
+          "cardinality_ratio": 0.021787,
+          "sample_values": [
+            "$70.00",
+            "$149.00",
+            "$411.00"
+          ]
+        },
+        {
+          "column": "minimum_nights",
+          "detected_dtype": "int64",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 136,
+          "cardinality_ratio": 0.001404,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 1125.0,
+            "mean": 5.4402968896780255,
+            "median": 2.0,
+            "std": 23.686680781928224,
+            "q25": 1.0,
+            "q75": 4.0
+          },
+          "top_values": [
+            {
+              "value": "1",
+              "count": 32837
+            },
+            {
+              "value": "2",
+              "count": 22719
+            },
+            {
+              "value": "3",
+              "count": 16914
+            },
+            {
+              "value": "4",
+              "count": 5841
+            },
+            {
+              "value": "5",
+              "count": 5611
+            }
+          ],
+          "sample_values": [
+            "1",
+            "4",
+            "3"
+          ]
+        },
+        {
+          "column": "maximum_nights",
+          "detected_dtype": "int64",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 305,
+          "cardinality_ratio": 0.003149,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 524855552.0,
+            "mean": 6065.007804193206,
+            "median": 365.0,
+            "std": 1686883.1390549436,
+            "q25": 60.0,
+            "q75": 730.0
+          },
+          "sample_values": [
+            "29",
+            "30",
+            "365"
+          ]
+        },
+        {
+          "column": "minimum_minimum_nights",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 3,
+          "null_percentage": 0.0031,
+          "unique_count": 125,
+          "cardinality_ratio": 0.00129,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 1125.0,
+            "mean": 4.829479291406863,
+            "median": 2.0,
+            "std": 21.803364861992886,
+            "q25": 1.0,
+            "q75": 3.0
+          },
+          "top_values": [
+            {
+              "value": "1.0",
+              "count": 36804
+            },
+            {
+              "value": "2.0",
+              "count": 24197
+            },
+            {
+              "value": "3.0",
+              "count": 14440
+            },
+            {
+              "value": "4.0",
+              "count": 5209
+            },
+            {
+              "value": "5.0",
+              "count": 4864
+            }
+          ],
+          "sample_values": [
+            "1.0",
+            "4.0",
+            "3.0"
+          ]
+        },
+        {
+          "column": "maximum_minimum_nights",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 3,
+          "null_percentage": 0.0031,
+          "unique_count": 160,
+          "cardinality_ratio": 0.001652,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 1125.0,
+            "mean": 9.094179708469257,
+            "median": 3.0,
+            "std": 33.46220678803953,
+            "q25": 1.0,
+            "q75": 5.0
+          },
+          "top_values": [
+            {
+              "value": "1.0",
+              "count": 24687
+            },
+            {
+              "value": "2.0",
+              "count": 21217
+            },
+            {
+              "value": "3.0",
+              "count": 16689
+            },
+            {
+              "value": "5.0",
+              "count": 8078
+            },
+            {
+              "value": "4.0",
+              "count": 7785
+            }
+          ],
+          "sample_values": [
+            "1.0",
+            "4.0",
+            "3.0"
+          ]
+        },
+        {
+          "column": "minimum_maximum_nights",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 3,
+          "null_percentage": 0.0031,
+          "unique_count": 284,
+          "cardinality_ratio": 0.002932,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 524855552.0,
+            "mean": 6148.555074947351,
+            "median": 365.0,
+            "std": 1686908.9918574276,
+            "q25": 90.0,
+            "q75": 1125.0
+          },
+          "sample_values": [
+            "29.0",
+            "30.0",
+            "365.0"
+          ]
+        },
+        {
+          "column": "maximum_maximum_nights",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 3,
+          "null_percentage": 0.0031,
+          "unique_count": 289,
+          "cardinality_ratio": 0.002983,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 2147483647.0,
+            "mean": 294373.923979023,
+            "median": 365.0,
+            "std": 24933284.24249758,
+            "q25": 99.0,
+            "q75": 1125.0
+          },
+          "sample_values": [
+            "29.0",
+            "30.0",
+            "365.0"
+          ]
+        },
+        {
+          "column": "minimum_nights_avg_ntm",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 750,
+          "cardinality_ratio": 0.007742,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 1125.0,
+            "mean": 6.263236675578862,
+            "median": 2.1,
+            "std": 23.31425245092894,
+            "q25": 1.0,
+            "q75": 4.0
+          },
+          "sample_values": [
+            "1.0",
+            "4.0",
+            "3.0"
+          ]
+        },
+        {
+          "column": "maximum_nights_avg_ntm",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 2284,
+          "cardinality_ratio": 0.023578,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 2135716619.5,
+            "mean": 292108.40271082154,
+            "median": 365.0,
+            "std": 24739442.45070217,
+            "q25": 99.0,
+            "q75": 1125.0
+          },
+          "sample_values": [
+            "29.0",
+            "30.0",
+            "365.0"
+          ]
+        },
+        {
+          "column": "calendar_updated",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 96871,
+          "null_percentage": 100.0,
+          "unique_count": 0,
+          "cardinality_ratio": 0.0,
+          "sample_values": []
+        },
+        {
+          "column": "has_availability",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 4249,
+          "null_percentage": 4.3862,
+          "unique_count": 1,
+          "cardinality_ratio": 1.1e-05,
+          "top_values": [
+            {
+              "value": "t",
+              "count": 92622
+            }
+          ],
+          "sample_values": [
+            "t",
+            "t",
+            "t"
+          ]
+        },
+        {
+          "column": "availability_30",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 31,
+          "cardinality_ratio": 0.00032,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 30.0,
+            "mean": 9.384294577324484,
+            "median": 4.0,
+            "std": 11.05452428333741,
+            "q25": 0.0,
+            "q75": 18.0
+          },
+          "top_values": [
+            {
+              "value": "0",
+              "count": 42612
+            },
+            {
+              "value": "30",
+              "count": 5877
+            },
+            {
+              "value": "29",
+              "count": 5432
+            },
+            {
+              "value": "28",
+              "count": 1990
+            },
+            {
+              "value": "4",
+              "count": 1875
+            }
+          ],
+          "sample_values": [
+            "21",
+            "0",
+            "24"
+          ]
+        },
+        {
+          "column": "availability_60",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 61,
+          "cardinality_ratio": 0.00063,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 60.0,
+            "mean": 22.261770808601128,
+            "median": 15.0,
+            "std": 23.205237769398064,
+            "q25": 0.0,
+            "q75": 45.0
+          },
+          "top_values": [
+            {
+              "value": "0",
+              "count": 38667
+            },
+            {
+              "value": "60",
+              "count": 5632
+            },
+            {
+              "value": "59",
+              "count": 5183
+            },
+            {
+              "value": "58",
+              "count": 1776
+            },
+            {
+              "value": "53",
+              "count": 1482
+            }
+          ],
+          "sample_values": [
+            "39",
+            "0",
+            "54"
+          ]
+        },
+        {
+          "column": "availability_90",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 91,
+          "cardinality_ratio": 0.000939,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 90.0,
+            "mean": 36.15211982946393,
+            "median": 29.0,
+            "std": 35.83390338488373,
+            "q25": 0.0,
+            "q75": 73.0
+          },
+          "top_values": [
+            {
+              "value": "0",
+              "count": 36914
+            },
+            {
+              "value": "90",
+              "count": 5515
+            },
+            {
+              "value": "89",
+              "count": 5077
+            },
+            {
+              "value": "88",
+              "count": 1711
+            },
+            {
+              "value": "83",
+              "count": 1398
+            }
+          ],
+          "sample_values": [
+            "69",
+            "0",
+            "64"
+          ]
+        },
+        {
+          "column": "availability_365",
+          "detected_dtype": "int64",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 366,
+          "cardinality_ratio": 0.003778,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 365.0,
+            "mean": 144.9274292615953,
+            "median": 96.0,
+            "std": 141.80827910742664,
+            "q25": 0.0,
+            "q75": 288.0
+          },
+          "sample_values": [
+            "331",
+            "199",
+            "80"
+          ]
+        },
+        {
+          "column": "calendar_last_scraped",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 5,
+          "cardinality_ratio": 5.2e-05,
+          "top_values": [
+            {
+              "value": "2025-09-16",
+              "count": 23409
+            },
+            {
+              "value": "2025-09-15",
+              "count": 22469
+            },
+            {
+              "value": "2025-09-17",
+              "count": 22393
+            },
+            {
+              "value": "2025-09-18",
+              "count": 15612
+            },
+            {
+              "value": "2025-09-14",
+              "count": 12988
+            }
+          ],
+          "sample_values": [
+            "2025-09-16",
+            "2025-09-16",
+            "2025-09-16"
+          ]
+        },
+        {
+          "column": "number_of_reviews",
+          "detected_dtype": "int64",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 571,
+          "cardinality_ratio": 0.005894,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 1902.0,
+            "mean": 21.65762715363731,
+            "median": 5.0,
+            "std": 50.368643995521,
+            "q25": 1.0,
+            "q75": 20.0
+          },
+          "sample_values": [
+            "55",
+            "97",
+            "56"
+          ]
+        },
+        {
+          "column": "number_of_reviews_ltm",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 146,
+          "cardinality_ratio": 0.001507,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 390.0,
+            "mean": 5.709613816312415,
+            "median": 0.0,
+            "std": 11.996769908967723,
+            "q25": 0.0,
+            "q75": 6.0
+          },
+          "top_values": [
+            {
+              "value": "0",
+              "count": 48610
+            },
+            {
+              "value": "1",
+              "count": 7810
+            },
+            {
+              "value": "2",
+              "count": 5272
+            },
+            {
+              "value": "3",
+              "count": 4059
+            },
+            {
+              "value": "4",
+              "count": 3244
+            }
+          ],
+          "sample_values": [
+            "10",
+            "1",
+            "0"
+          ]
+        },
+        {
+          "column": "number_of_reviews_l30d",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 29,
+          "cardinality_ratio": 0.000299,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 61.0,
+            "mean": 0.5007174489785384,
+            "median": 0.0,
+            "std": 1.253283908273063,
+            "q25": 0.0,
+            "q75": 0.0
+          },
+          "top_values": [
+            {
+              "value": "0",
+              "count": 74051
+            },
+            {
+              "value": "1",
+              "count": 11120
+            },
+            {
+              "value": "2",
+              "count": 5487
+            },
+            {
+              "value": "3",
+              "count": 2820
+            },
+            {
+              "value": "4",
+              "count": 1577
+            }
+          ],
+          "sample_values": [
+            "1",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "column": "availability_eoy",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 110,
+          "cardinality_ratio": 0.001136,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 109.0,
+            "mean": 43.480154019262734,
+            "median": 36.0,
+            "std": 42.33150272076753,
+            "q25": 0.0,
+            "q75": 87.0
+          },
+          "top_values": [
+            {
+              "value": "0",
+              "count": 35472
+            },
+            {
+              "value": "108",
+              "count": 2916
+            },
+            {
+              "value": "107",
+              "count": 2835
+            },
+            {
+              "value": "106",
+              "count": 2360
+            },
+            {
+              "value": "105",
+              "count": 1539
+            }
+          ],
+          "sample_values": [
+            "74",
+            "0",
+            "78"
+          ]
+        },
+        {
+          "column": "number_of_reviews_ly",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 148,
+          "cardinality_ratio": 0.001528,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 272.0,
+            "mean": 4.650235880707332,
+            "median": 0.0,
+            "std": 11.413385969683636,
+            "q25": 0.0,
+            "q75": 4.0
+          },
+          "top_values": [
+            {
+              "value": "0",
+              "count": 59611
+            },
+            {
+              "value": "1",
+              "count": 5721
+            },
+            {
+              "value": "2",
+              "count": 3949
+            },
+            {
+              "value": "3",
+              "count": 2968
+            },
+            {
+              "value": "4",
+              "count": 2407
+            }
+          ],
+          "sample_values": [
+            "8",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "column": "estimated_occupancy_l365d",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 104,
+          "cardinality_ratio": 0.001074,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 255.0,
+            "mean": 45.99938061958687,
+            "median": 0.0,
+            "std": 74.93048676082985,
+            "q25": 0.0,
+            "q75": 60.0
+          },
+          "top_values": [
+            {
+              "value": "0",
+              "count": 48610
+            },
+            {
+              "value": "9",
+              "count": 5971
+            },
+            {
+              "value": "255",
+              "count": 5923
+            },
+            {
+              "value": "18",
+              "count": 4217
+            },
+            {
+              "value": "28",
+              "count": 3707
+            }
+          ],
+          "sample_values": [
+            "92",
+            "9",
+            "0"
+          ]
+        },
+        {
+          "column": "estimated_revenue_l365d",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 34908,
+          "null_percentage": 36.0356,
+          "unique_count": 7651,
+          "cardinality_ratio": 0.123477,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 10150000.0,
+            "mean": 10473.484337427175,
+            "median": 2968.0,
+            "std": 66124.29322250541,
+            "q25": 0.0,
+            "q75": 12250.0
+          },
+          "sample_values": [
+            "6440.0",
+            "1341.0",
+            "0.0"
+          ]
+        },
+        {
+          "column": "first_review",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 24122,
+          "null_percentage": 24.9012,
+          "unique_count": 4591,
+          "cardinality_ratio": 0.063107,
+          "sample_values": [
+            "2010-08-18",
+            "2009-12-21",
+            "2011-03-21"
+          ]
+        },
+        {
+          "column": "last_review",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 24122,
+          "null_percentage": 24.9012,
+          "unique_count": 3605,
+          "cardinality_ratio": 0.049554,
+          "sample_values": [
+            "2025-08-21",
+            "2025-04-05",
+            "2024-02-19"
+          ]
+        },
+        {
+          "column": "review_scores_rating",
+          "detected_dtype": "float64",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 24122,
+          "null_percentage": 24.9012,
+          "unique_count": 184,
+          "cardinality_ratio": 0.002529,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 5.0,
+            "mean": 4.68471882775021,
+            "median": 4.83,
+            "std": 0.4941910092085108,
+            "q25": 4.58,
+            "q75": 5.0
+          },
+          "top_values": [
+            {
+              "value": "5.0",
+              "count": 22204
+            },
+            {
+              "value": "4.0",
+              "count": 2911
+            },
+            {
+              "value": "4.5",
+              "count": 2662
+            },
+            {
+              "value": "4.67",
+              "count": 2152
+            },
+            {
+              "value": "4.75",
+              "count": 1805
+            }
+          ],
+          "sample_values": [
+            "4.85",
+            "4.8",
+            "4.77"
+          ]
+        },
+        {
+          "column": "review_scores_accuracy",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 24137,
+          "null_percentage": 24.9166,
+          "unique_count": 177,
+          "cardinality_ratio": 0.002434,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 5.0,
+            "mean": 4.72551392746171,
+            "median": 4.88,
+            "std": 0.4797777250631039,
+            "q25": 4.67,
+            "q75": 5.0
+          },
+          "top_values": [
+            {
+              "value": "5.0",
+              "count": 24206
+            },
+            {
+              "value": "4.5",
+              "count": 2338
+            },
+            {
+              "value": "4.0",
+              "count": 2323
+            },
+            {
+              "value": "4.67",
+              "count": 2016
+            },
+            {
+              "value": "4.75",
+              "count": 1749
+            }
+          ],
+          "sample_values": [
+            "4.8",
+            "4.86",
+            "4.83"
+          ]
+        },
+        {
+          "column": "review_scores_cleanliness",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 24131,
+          "null_percentage": 24.9104,
+          "unique_count": 204,
+          "cardinality_ratio": 0.002805,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 5.0,
+            "mean": 4.650038080835854,
+            "median": 4.81,
+            "std": 0.516499293336393,
+            "q25": 4.51,
+            "q75": 5.0
+          },
+          "sample_values": [
+            "4.8",
+            "4.87",
+            "4.72"
+          ]
+        },
+        {
+          "column": "review_scores_checkin",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 24165,
+          "null_percentage": 24.9455,
+          "unique_count": 167,
+          "cardinality_ratio": 0.002297,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 5.0,
+            "mean": 4.790344400737216,
+            "median": 4.93,
+            "std": 0.430135071957624,
+            "q25": 4.76,
+            "q75": 5.0
+          },
+          "top_values": [
+            {
+              "value": "5.0",
+              "count": 28777
+            },
+            {
+              "value": "4.5",
+              "count": 1845
+            },
+            {
+              "value": "4.0",
+              "count": 1777
+            },
+            {
+              "value": "4.88",
+              "count": 1622
+            },
+            {
+              "value": "4.92",
+              "count": 1580
+            }
+          ],
+          "sample_values": [
+            "4.81",
+            "4.88",
+            "4.72"
+          ]
+        },
+        {
+          "column": "review_scores_communication",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 24142,
+          "null_percentage": 24.9218,
+          "unique_count": 164,
+          "cardinality_ratio": 0.002255,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 5.0,
+            "mean": 4.812270071085811,
+            "median": 4.96,
+            "std": 0.4259092232133652,
+            "q25": 4.8,
+            "q75": 5.0
+          },
+          "top_values": [
+            {
+              "value": "5.0",
+              "count": 32626
+            },
+            {
+              "value": "4.0",
+              "count": 1568
+            },
+            {
+              "value": "4.95",
+              "count": 1558
+            },
+            {
+              "value": "4.96",
+              "count": 1554
+            },
+            {
+              "value": "4.5",
+              "count": 1535
+            }
+          ],
+          "sample_values": [
+            "4.87",
+            "4.84",
+            "4.72"
+          ]
+        },
+        {
+          "column": "review_scores_location",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 24166,
+          "null_percentage": 24.9466,
+          "unique_count": 169,
+          "cardinality_ratio": 0.002324,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 5.0,
+            "mean": 4.729839350801183,
+            "median": 4.85,
+            "std": 0.4096891085356646,
+            "q25": 4.65,
+            "q75": 5.0
+          },
+          "top_values": [
+            {
+              "value": "5.0",
+              "count": 22066
+            },
+            {
+              "value": "4.5",
+              "count": 2747
+            },
+            {
+              "value": "4.0",
+              "count": 2652
+            },
+            {
+              "value": "4.67",
+              "count": 2446
+            },
+            {
+              "value": "4.75",
+              "count": 2080
+            }
+          ],
+          "sample_values": [
+            "4.78",
+            "4.93",
+            "4.89"
+          ]
+        },
+        {
+          "column": "review_scores_value",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 24166,
+          "null_percentage": 24.9466,
+          "unique_count": 187,
+          "cardinality_ratio": 0.002572,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 5.0,
+            "mean": 4.6162020493776215,
+            "median": 4.75,
+            "std": 0.5118164102445778,
+            "q25": 4.5,
+            "q75": 4.94
+          },
+          "top_values": [
+            {
+              "value": "5.0",
+              "count": 16892
+            },
+            {
+              "value": "4.0",
+              "count": 3301
+            },
+            {
+              "value": "4.5",
+              "count": 3294
+            },
+            {
+              "value": "4.67",
+              "count": 2740
+            },
+            {
+              "value": "4.75",
+              "count": 2148
+            }
+          ],
+          "sample_values": [
+            "4.78",
+            "4.74",
+            "4.61"
+          ]
+        },
+        {
+          "column": "license",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 96871,
+          "null_percentage": 100.0,
+          "unique_count": 0,
+          "cardinality_ratio": 0.0,
+          "sample_values": []
+        },
+        {
+          "column": "instant_bookable",
+          "detected_dtype": "str",
+          "completeness_class": "important",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 2,
+          "cardinality_ratio": 2.1e-05,
+          "top_values": [
+            {
+              "value": "f",
+              "count": 65367
+            },
+            {
+              "value": "t",
+              "count": 31504
+            }
+          ],
+          "sample_values": [
+            "f",
+            "f",
+            "f"
+          ]
+        },
+        {
+          "column": "calculated_host_listings_count",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 98,
+          "cardinality_ratio": 0.001012,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 500.0,
+            "mean": 16.685499272228014,
+            "median": 2.0,
+            "std": 53.13028957467012,
+            "q25": 1.0,
+            "q75": 8.0
+          },
+          "top_values": [
+            {
+              "value": "1",
+              "count": 44875
+            },
+            {
+              "value": "2",
+              "count": 11552
+            },
+            {
+              "value": "3",
+              "count": 5457
+            },
+            {
+              "value": "4",
+              "count": 3616
+            },
+            {
+              "value": "6",
+              "count": 2346
+            }
+          ],
+          "sample_values": [
+            "2",
+            "1",
+            "2"
+          ]
+        },
+        {
+          "column": "calculated_host_listings_count_entire_homes",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 87,
+          "cardinality_ratio": 0.000898,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 499.0,
+            "mean": 14.30324865026685,
+            "median": 1.0,
+            "std": 52.478298716211526,
+            "q25": 0.0,
+            "q75": 5.0
+          },
+          "top_values": [
+            {
+              "value": "1",
+              "count": 34709
+            },
+            {
+              "value": "0",
+              "count": 26511
+            },
+            {
+              "value": "2",
+              "count": 6179
+            },
+            {
+              "value": "3",
+              "count": 2876
+            },
+            {
+              "value": "4",
+              "count": 1921
+            }
+          ],
+          "sample_values": [
+            "1",
+            "1",
+            "2"
+          ]
+        },
+        {
+          "column": "calculated_host_listings_count_private_rooms",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 46,
+          "cardinality_ratio": 0.000475,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 116.0,
+            "mean": 2.325525699125641,
+            "median": 0.0,
+            "std": 9.623242780717865,
+            "q25": 0.0,
+            "q75": 1.0
+          },
+          "top_values": [
+            {
+              "value": "0",
+              "count": 54548
+            },
+            {
+              "value": "1",
+              "count": 22630
+            },
+            {
+              "value": "2",
+              "count": 6074
+            },
+            {
+              "value": "3",
+              "count": 3318
+            },
+            {
+              "value": "4",
+              "count": 2025
+            }
+          ],
+          "sample_values": [
+            "1",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "column": "calculated_host_listings_count_shared_rooms",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 13,
+          "cardinality_ratio": 0.000134,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 25.0,
+            "mean": 0.02855343704514251,
+            "median": 0.0,
+            "std": 0.6314837830684543,
+            "q25": 0.0,
+            "q75": 0.0
+          },
+          "top_values": [
+            {
+              "value": "0",
+              "count": 96260
+            },
+            {
+              "value": "1",
+              "count": 371
+            },
+            {
+              "value": "25",
+              "count": 46
+            },
+            {
+              "value": "7",
+              "count": 43
+            },
+            {
+              "value": "4",
+              "count": 33
+            }
+          ],
+          "sample_values": [
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "column": "reviews_per_month",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 24122,
+          "null_percentage": 24.9012,
+          "unique_count": 910,
+          "cardinality_ratio": 0.012509,
+          "numeric_stats": {
+            "min": 0.01,
+            "max": 36.96,
+            "mean": 0.9903341626689025,
+            "median": 0.52,
+            "std": 1.3042818338506632,
+            "q25": 0.15,
+            "q75": 1.29
+          },
+          "sample_values": [
+            "0.3",
+            "0.51",
+            "0.32"
+          ]
+        }
+      ]
+    },
+    {
+      "source_file": "calendar.csv.gz",
+      "row_count": 35357974,
+      "column_count": 7,
+      "memory_mb": 2259.24,
+      "columns": [
+        {
+          "column": "listing_id",
+          "detected_dtype": "int64",
+          "completeness_class": "critical",
+          "row_count": 35357974,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 96871,
+          "cardinality_ratio": 0.00274,
+          "numeric_stats": {
+            "min": 13913.0,
+            "max": 1.5089644180569539e+18,
+            "mean": 6.894452460176965e+17,
+            "median": 8.505248193614892e+17,
+            "std": 5.941191474904573e+17,
+            "q25": 30260238.0,
+            "q75": 1.254267801834991e+18
+          },
+          "sample_values": [
+            "1196288722069341420",
+            "1196288722069341420",
+            "1196288722069341420"
+          ]
+        },
+        {
+          "column": "date",
+          "detected_dtype": "str",
+          "completeness_class": "critical",
+          "row_count": 35357974,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 369,
+          "cardinality_ratio": 1e-05,
+          "sample_values": [
+            "2025-09-15",
+            "2025-09-16",
+            "2025-09-17"
+          ]
+        },
+        {
+          "column": "available",
+          "detected_dtype": "str",
+          "completeness_class": "critical",
+          "row_count": 35357974,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 2,
+          "cardinality_ratio": 0.0,
+          "top_values": [
+            {
+              "value": "f",
+              "count": 21313866
+            },
+            {
+              "value": "t",
+              "count": 14044108
+            }
+          ],
+          "sample_values": [
+            "f",
+            "f",
+            "f"
+          ]
+        },
+        {
+          "column": "price",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 35357974,
+          "null_count": 35357974,
+          "null_percentage": 100.0,
+          "unique_count": 0,
+          "cardinality_ratio": 0.0,
+          "sample_values": []
+        },
+        {
+          "column": "adjusted_price",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 35357974,
+          "null_count": 35357974,
+          "null_percentage": 100.0,
+          "unique_count": 0,
+          "cardinality_ratio": 0.0,
+          "sample_values": []
+        },
+        {
+          "column": "minimum_nights",
+          "detected_dtype": "int64",
+          "completeness_class": "important",
+          "row_count": 35357974,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 184,
+          "cardinality_ratio": 5e-06,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 1125.0,
+            "mean": 6.263561339798485,
+            "median": 2.0,
+            "std": 24.423867238096488,
+            "q25": 1.0,
+            "q75": 4.0
+          },
+          "top_values": [
+            {
+              "value": "1",
+              "count": 10486535
+            },
+            {
+              "value": "2",
+              "count": 8262483
+            },
+            {
+              "value": "3",
+              "count": 6328018
+            },
+            {
+              "value": "4",
+              "count": 2542764
+            },
+            {
+              "value": "5",
+              "count": 2395925
+            }
+          ],
+          "sample_values": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "column": "maximum_nights",
+          "detected_dtype": "int64",
+          "completeness_class": "important",
+          "row_count": 35357974,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 763,
+          "cardinality_ratio": 2.2e-05,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 2147483647.0,
+            "mean": 292107.90206506173,
+            "median": 365.0,
+            "std": 24835809.761490896,
+            "q25": 90.0,
+            "q75": 1125.0
+          },
+          "sample_values": [
+            "1125",
+            "1125",
+            "1125"
+          ]
+        }
+      ]
+    },
+    {
+      "source_file": "reviews.csv.gz",
+      "row_count": 2097996,
+      "column_count": 6,
+      "memory_mb": 631.53,
+      "columns": [
+        {
+          "column": "listing_id",
+          "detected_dtype": "int64",
+          "completeness_class": "critical",
+          "row_count": 2097996,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 72749,
+          "cardinality_ratio": 0.034675,
+          "numeric_stats": {
+            "min": 13913.0,
+            "max": 1.5089000428721795e+18,
+            "mean": 3.572206701611668e+17,
+            "median": 37989968.0,
+            "std": 4.9053989118991245e+17,
+            "q25": 15813129.5,
+            "q75": 8.332622271342086e+17
+          },
+          "sample_values": [
+            "13913",
+            "13913",
+            "13913"
+          ]
+        },
+        {
+          "column": "id",
+          "detected_dtype": "int64",
+          "completeness_class": "critical",
+          "row_count": 2097996,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 2097996,
+          "cardinality_ratio": 1.0,
+          "numeric_stats": {
+            "min": 21032.0,
+            "max": 1.5123480455196534e+18,
+            "mean": 7.776854881499665e+17,
+            "median": 9.259551077419384e+17,
+            "std": 5.533265902732279e+17,
+            "q25": 570744771.75,
+            "q75": 1.2615099404670013e+18
+          },
+          "sample_values": [
+            "80770",
+            "367568",
+            "529579"
+          ]
+        },
+        {
+          "column": "date",
+          "detected_dtype": "str",
+          "completeness_class": "critical",
+          "row_count": 2097996,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 5324,
+          "cardinality_ratio": 0.002538,
+          "sample_values": [
+            "2010-08-18",
+            "2011-07-11",
+            "2011-09-13"
+          ]
+        },
+        {
+          "column": "reviewer_id",
+          "detected_dtype": "int64",
+          "completeness_class": "important",
+          "row_count": 2097996,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 1768660,
+          "cardinality_ratio": 0.843024,
+          "numeric_stats": {
+            "min": 44.0,
+            "max": 718830086.0,
+            "mean": 196830096.16551843,
+            "median": 127912318.5,
+            "std": 187555236.69126725,
+            "q25": 40439160.75,
+            "q75": 325754259.5
+          },
+          "sample_values": [
+            "177109",
+            "19835707",
+            "1110304"
+          ]
+        },
+        {
+          "column": "reviewer_name",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 2097996,
+          "null_count": 2,
+          "null_percentage": 0.0001,
+          "unique_count": 205732,
+          "cardinality_ratio": 0.098061,
+          "sample_values": [
+            "Michael",
+            "Mathias",
+            "Kristin"
+          ]
+        },
+        {
+          "column": "comments",
+          "detected_dtype": "str",
+          "completeness_class": "important",
+          "row_count": 2097996,
+          "null_count": 201,
+          "null_percentage": 0.0096,
+          "unique_count": 2024256,
+          "cardinality_ratio": 0.964945,
+          "sample_values": [
+            "My girlfriend and I hadn't known Alina before we took the leap of faith to rent her flat. Alina just couldn't be nicer! Her flat is comfortable, homey, very sunny, and quiet at night. Her diverse neighborhood rocks! It's full of excellent eateries of varying ethnicities, good supermarkets, etc., etc. Her place is about a 10-minute walk to the Finsbury Park tube stop, and there are also several buses that ply Stroud Green Road. The Piccadilly and Victoria tube lines that serve Finsbury Park are very dependable and come frequently. My only caveat is if you are unwilling to take 20- to 40-minute commutes to downtown London attractions and money is no object, you will prefer to stay downtown. But for anyone else, you will love your experience of living in a real, untouristy neighborhood and dealing with a generous, warm-hearted woman I'm happy to call a new friend.",
+            "Alina was a really good host. The flat is clean and tidy - and really close to Finsbury Park station which is quite close to Central London. I recommend Alina to everyone. ",
+            "Alina is an amazing host. She made me feel right at home. It was more like hanging out with a friend than a complete stranger. She's very sweet and makes a mean espresso. There are tons of places right around flat to eat and market is close in case you want to cook. I would definitely stay here again if I was in London. Thanks Alina you're awesome."
+          ]
+        }
+      ]
+    },
+    {
+      "source_file": "listings.csv",
+      "row_count": 96871,
+      "column_count": 18,
+      "memory_mb": 20.28,
+      "columns": [
+        {
+          "column": "id",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 96871,
+          "cardinality_ratio": 1.0,
+          "numeric_stats": {
+            "min": 13913.0,
+            "max": 1.5089644180569539e+18,
+            "mean": 6.894448176786734e+17,
+            "median": 8.505248193614892e+17,
+            "std": 5.941221984003247e+17,
+            "q25": 30260579.0,
+            "q75": 1.2542624662735864e+18
+          },
+          "sample_values": [
+            "13913",
+            "15400",
+            "17402"
+          ]
+        },
+        {
+          "column": "name",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 93341,
+          "cardinality_ratio": 0.96356,
+          "sample_values": [
+            "Holiday London DB Room Let-on going",
+            "Bright Chelsea  Apartment. Chelsea!",
+            "Very Central Modern 3-Bed/2 Bath By Oxford St W1"
+          ]
+        },
+        {
+          "column": "host_id",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 55646,
+          "cardinality_ratio": 0.574434,
+          "numeric_stats": {
+            "min": 2594.0,
+            "max": 718690455.0,
+            "mean": 214449413.68850327,
+            "median": 116432057.0,
+            "std": 219605286.55079618,
+            "q25": 27268143.5,
+            "q75": 419897445.0
+          },
+          "sample_values": [
+            "54730",
+            "60302",
+            "67564"
+          ]
+        },
+        {
+          "column": "host_name",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 43,
+          "null_percentage": 0.0444,
+          "unique_count": 16672,
+          "cardinality_ratio": 0.172182,
+          "sample_values": [
+            "Alina",
+            "Philippa",
+            "Liz"
+          ]
+        },
+        {
+          "column": "neighbourhood_group",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 96871,
+          "null_percentage": 100.0,
+          "unique_count": 0,
+          "cardinality_ratio": 0.0,
+          "sample_values": []
+        },
+        {
+          "column": "neighbourhood",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 33,
+          "cardinality_ratio": 0.000341,
+          "top_values": [
+            {
+              "value": "Westminster",
+              "count": 11385
+            },
+            {
+              "value": "Tower Hamlets",
+              "count": 7469
+            },
+            {
+              "value": "Camden",
+              "count": 6551
+            },
+            {
+              "value": "Kensington and Chelsea",
+              "count": 6401
+            },
+            {
+              "value": "Hackney",
+              "count": 6359
+            }
+          ],
+          "sample_values": [
+            "Islington",
+            "Kensington and Chelsea",
+            "Westminster"
+          ]
+        },
+        {
+          "column": "latitude",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 54112,
+          "cardinality_ratio": 0.558599,
+          "numeric_stats": {
+            "min": 51.295937,
+            "max": 51.68263,
+            "mean": 51.50973982394052,
+            "median": 51.51372,
+            "std": 0.0490668823841057,
+            "q25": 51.48415,
+            "q75": 51.539107510513546
+          },
+          "sample_values": [
+            "51.56861",
+            "51.4878",
+            "51.52195"
+          ]
+        },
+        {
+          "column": "longitude",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 63584,
+          "cardinality_ratio": 0.656378,
+          "numeric_stats": {
+            "min": -0.49676,
+            "max": 0.27896,
+            "mean": -0.12763797732931664,
+            "median": -0.127505407549997,
+            "std": 0.10111245075560481,
+            "q25": -0.1894675,
+            "q75": -0.06831625338792224
+          },
+          "sample_values": [
+            "-0.1127",
+            "-0.16813",
+            "-0.14094"
+          ]
+        },
+        {
+          "column": "room_type",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 4,
+          "cardinality_ratio": 4.1e-05,
+          "top_values": [
+            {
+              "value": "Entire home/apt",
+              "count": 62907
+            },
+            {
+              "value": "Private room",
+              "count": 33643
+            },
+            {
+              "value": "Shared room",
+              "count": 212
+            },
+            {
+              "value": "Hotel room",
+              "count": 109
+            }
+          ],
+          "sample_values": [
+            "Private room",
+            "Entire home/apt",
+            "Entire home/apt"
+          ]
+        },
+        {
+          "column": "price",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 34908,
+          "null_percentage": 36.0356,
+          "unique_count": 1350,
+          "cardinality_ratio": 0.021787,
+          "numeric_stats": {
+            "min": 7.0,
+            "max": 1085147.0,
+            "mean": 229.9169827154915,
+            "median": 135.0,
+            "std": 4437.589295624427,
+            "q25": 77.0,
+            "q75": 221.0
+          },
+          "sample_values": [
+            "70.0",
+            "149.0",
+            "411.0"
+          ]
+        },
+        {
+          "column": "minimum_nights",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 136,
+          "cardinality_ratio": 0.001404,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 1125.0,
+            "mean": 5.4402968896780255,
+            "median": 2.0,
+            "std": 23.686680781928224,
+            "q25": 1.0,
+            "q75": 4.0
+          },
+          "top_values": [
+            {
+              "value": "1",
+              "count": 32837
+            },
+            {
+              "value": "2",
+              "count": 22719
+            },
+            {
+              "value": "3",
+              "count": 16914
+            },
+            {
+              "value": "4",
+              "count": 5841
+            },
+            {
+              "value": "5",
+              "count": 5611
+            }
+          ],
+          "sample_values": [
+            "1",
+            "4",
+            "3"
+          ]
+        },
+        {
+          "column": "number_of_reviews",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 571,
+          "cardinality_ratio": 0.005894,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 1902.0,
+            "mean": 21.65762715363731,
+            "median": 5.0,
+            "std": 50.368643995521,
+            "q25": 1.0,
+            "q75": 20.0
+          },
+          "sample_values": [
+            "55",
+            "97",
+            "56"
+          ]
+        },
+        {
+          "column": "last_review",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 24122,
+          "null_percentage": 24.9012,
+          "unique_count": 3605,
+          "cardinality_ratio": 0.049554,
+          "sample_values": [
+            "2025-08-21",
+            "2025-04-05",
+            "2024-02-19"
+          ]
+        },
+        {
+          "column": "reviews_per_month",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 24122,
+          "null_percentage": 24.9012,
+          "unique_count": 910,
+          "cardinality_ratio": 0.012509,
+          "numeric_stats": {
+            "min": 0.01,
+            "max": 36.96,
+            "mean": 0.9903341626689025,
+            "median": 0.52,
+            "std": 1.3042818338506632,
+            "q25": 0.15,
+            "q75": 1.29
+          },
+          "sample_values": [
+            "0.3",
+            "0.51",
+            "0.32"
+          ]
+        },
+        {
+          "column": "calculated_host_listings_count",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 98,
+          "cardinality_ratio": 0.001012,
+          "numeric_stats": {
+            "min": 1.0,
+            "max": 500.0,
+            "mean": 16.685499272228014,
+            "median": 2.0,
+            "std": 53.13028957467012,
+            "q25": 1.0,
+            "q75": 8.0
+          },
+          "top_values": [
+            {
+              "value": "1",
+              "count": 44875
+            },
+            {
+              "value": "2",
+              "count": 11552
+            },
+            {
+              "value": "3",
+              "count": 5457
+            },
+            {
+              "value": "4",
+              "count": 3616
+            },
+            {
+              "value": "6",
+              "count": 2346
+            }
+          ],
+          "sample_values": [
+            "2",
+            "1",
+            "2"
+          ]
+        },
+        {
+          "column": "availability_365",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 366,
+          "cardinality_ratio": 0.003778,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 365.0,
+            "mean": 144.9274292615953,
+            "median": 96.0,
+            "std": 141.80827910742664,
+            "q25": 0.0,
+            "q75": 288.0
+          },
+          "sample_values": [
+            "331",
+            "199",
+            "80"
+          ]
+        },
+        {
+          "column": "number_of_reviews_ltm",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 146,
+          "cardinality_ratio": 0.001507,
+          "numeric_stats": {
+            "min": 0.0,
+            "max": 390.0,
+            "mean": 5.709613816312415,
+            "median": 0.0,
+            "std": 11.996769908967723,
+            "q25": 0.0,
+            "q75": 6.0
+          },
+          "top_values": [
+            {
+              "value": "0",
+              "count": 48610
+            },
+            {
+              "value": "1",
+              "count": 7810
+            },
+            {
+              "value": "2",
+              "count": 5272
+            },
+            {
+              "value": "3",
+              "count": 4059
+            },
+            {
+              "value": "4",
+              "count": 3244
+            }
+          ],
+          "sample_values": [
+            "10",
+            "1",
+            "0"
+          ]
+        },
+        {
+          "column": "license",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 96871,
+          "null_count": 96871,
+          "null_percentage": 100.0,
+          "unique_count": 0,
+          "cardinality_ratio": 0.0,
+          "sample_values": []
+        }
+      ]
+    },
+    {
+      "source_file": "reviews.csv",
+      "row_count": 2097996,
+      "column_count": 2,
+      "memory_mb": 52.02,
+      "columns": [
+        {
+          "column": "listing_id",
+          "detected_dtype": "int64",
+          "completeness_class": "optional",
+          "row_count": 2097996,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 72749,
+          "cardinality_ratio": 0.034675,
+          "numeric_stats": {
+            "min": 13913.0,
+            "max": 1.5089000428721795e+18,
+            "mean": 3.572206701611667e+17,
+            "median": 37989968.0,
+            "std": 4.9053989118991245e+17,
+            "q25": 15813129.5,
+            "q75": 8.332622271342086e+17
+          },
+          "sample_values": [
+            "13913",
+            "13913",
+            "13913"
+          ]
+        },
+        {
+          "column": "date",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 2097996,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 5324,
+          "cardinality_ratio": 0.002538,
+          "sample_values": [
+            "2010-08-18",
+            "2011-07-11",
+            "2011-09-13"
+          ]
+        }
+      ]
+    },
+    {
+      "source_file": "neighbourhoods.csv",
+      "row_count": 33,
+      "column_count": 2,
+      "memory_mb": 0.0,
+      "columns": [
+        {
+          "column": "neighbourhood_group",
+          "detected_dtype": "float64",
+          "completeness_class": "optional",
+          "row_count": 33,
+          "null_count": 33,
+          "null_percentage": 100.0,
+          "unique_count": 0,
+          "cardinality_ratio": 0.0,
+          "sample_values": []
+        },
+        {
+          "column": "neighbourhood",
+          "detected_dtype": "str",
+          "completeness_class": "critical",
+          "row_count": 33,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 33,
+          "cardinality_ratio": 1.0,
+          "top_values": [
+            {
+              "value": "Barking and Dagenham",
+              "count": 1
+            },
+            {
+              "value": "Barnet",
+              "count": 1
+            },
+            {
+              "value": "Bexley",
+              "count": 1
+            },
+            {
+              "value": "Brent",
+              "count": 1
+            },
+            {
+              "value": "Bromley",
+              "count": 1
+            }
+          ],
+          "sample_values": [
+            "Barking and Dagenham",
+            "Barnet",
+            "Bexley"
+          ]
+        }
+      ]
+    },
+    {
+      "source_file": "neighbourhoods.geojson",
+      "row_count": 33,
+      "column_count": 3,
+      "memory_mb": 0.0,
+      "columns": [
+        {
+          "column": "neighbourhood",
+          "detected_dtype": "str",
+          "completeness_class": "critical",
+          "row_count": 33,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 33,
+          "cardinality_ratio": 1.0,
+          "top_values": [
+            {
+              "value": "Kingston upon Thames",
+              "count": 1
+            },
+            {
+              "value": "Croydon",
+              "count": 1
+            },
+            {
+              "value": "Bromley",
+              "count": 1
+            },
+            {
+              "value": "Hounslow",
+              "count": 1
+            },
+            {
+              "value": "Ealing",
+              "count": 1
+            }
+          ],
+          "sample_values": [
+            "Kingston upon Thames",
+            "Croydon",
+            "Bromley"
+          ]
+        },
+        {
+          "column": "neighbourhood_group",
+          "detected_dtype": "object",
+          "completeness_class": "optional",
+          "row_count": 33,
+          "null_count": 33,
+          "null_percentage": 100.0,
+          "unique_count": 0,
+          "cardinality_ratio": 0.0,
+          "sample_values": []
+        },
+        {
+          "column": "geometry_type",
+          "detected_dtype": "str",
+          "completeness_class": "optional",
+          "row_count": 33,
+          "null_count": 0,
+          "null_percentage": 0.0,
+          "unique_count": 1,
+          "cardinality_ratio": 0.030303,
+          "top_values": [
+            {
+              "value": "MultiPolygon",
+              "count": 33
+            }
+          ],
+          "sample_values": [
+            "MultiPolygon",
+            "MultiPolygon",
+            "MultiPolygon"
+          ]
+        }
+      ]
+    }
+  ]
+}
