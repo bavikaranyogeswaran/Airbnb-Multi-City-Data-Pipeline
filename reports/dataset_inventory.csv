@@ -1,0 +1,8 @@
+city,snapshot_date,file_key,file_name,file_type,compressed_size_mb,uncompressed_size_mb,row_count,column_count,load_status,notes
+london,2025-09-14,listings_detailed,listings.csv.gz,GZIP,48.06,194.6,96871,79,ok,
+london,2025-09-14,calendar,calendar.csv.gz,GZIP,77.77,1231.23,35357974,7,ok,
+london,2025-09-14,reviews_detailed,reviews.csv.gz,GZIP,246.09,621.25,2097996,6,ok,
+london,2025-09-14,listings_summary,listings.csv,CSV,13.88,13.88,96871,18,ok,
+london,2025-09-14,reviews_summary,reviews.csv,CSV,47.27,47.27,2097996,2,ok,
+london,2025-09-14,neighbourhoods,neighbourhoods.csv,CSV,0.0,0.0,33,2,ok,
+london,2025-09-14,neighbourhoods_geojson,neighbourhoods.geojson,GeoJSON,1.0,1.0,33,2,ok,rows = feature count; cols = property count
