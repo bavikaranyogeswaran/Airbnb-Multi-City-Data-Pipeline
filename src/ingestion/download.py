@@ -154,34 +154,48 @@ def process_file(city_code: str, snapshot: str, key: str, file_cfg: dict, force:
     return row
 
 
+def run(city: str = "london", force: bool = False) -> dict:
+    from src.api.result import make_result, timed
+
+    setup_logging()
+    with timed() as elapsed:
+        with CONFIG_PATH.open(encoding="utf-8") as f:
+            cfg = yaml.safe_load(f)
+        city_cfg = cfg["cities"][city]
+        snapshot = city_cfg["source"]["snapshot_date"]
+
+        log.info("ingest start: city=%s snapshot=%s force=%s", city, snapshot, force)
+        rows = []
+        for key, file_cfg in city_cfg["files"].items():
+            rows.append(process_file(city, snapshot, key, file_cfg, force))
+
+        append_manifest(rows)
+        log.info("manifest updated: %s (+%d rows)", MANIFEST_PATH, len(rows))
+
+    by_status: dict[str, int] = {}
+    for r in rows:
+        by_status[r["status"]] = by_status.get(r["status"], 0) + 1
+
+    return make_result(
+        step="ingestion.download",
+        outputs=[MANIFEST_PATH],
+        summary={
+            "city": city,
+            "snapshot_date": snapshot,
+            "files_processed": len(rows),
+            "by_status": by_status,
+        },
+        elapsed_seconds=elapsed(),
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--city", default="london")
     parser.add_argument("--force", action="store_true",
                         help="Re-download even if file is present.")
     args = parser.parse_args()
-
-    setup_logging()
-    with CONFIG_PATH.open(encoding="utf-8") as f:
-        cfg = yaml.safe_load(f)
-
-    city_cfg = cfg["cities"][args.city]
-    snapshot = city_cfg["source"]["snapshot_date"]
-
-    log.info("ingest start: city=%s snapshot=%s force=%s",
-             args.city, snapshot, args.force)
-
-    rows = []
-    for key, file_cfg in city_cfg["files"].items():
-        rows.append(process_file(args.city, snapshot, key, file_cfg, args.force))
-
-    append_manifest(rows)
-    log.info("manifest updated: %s (+%d rows)", MANIFEST_PATH, len(rows))
-
-    by_status = {}
-    for r in rows:
-        by_status[r["status"]] = by_status.get(r["status"], 0) + 1
-    log.info("status counts: %s", by_status)
+    print(run(city=args.city, force=args.force))
 
 
 if __name__ == "__main__":

@@ -126,24 +126,46 @@ def build_rows(city: str, city_cfg: dict) -> Iterable[dict]:
         yield row
 
 
+def run(city: str = "london") -> dict:
+    """Build the dataset inventory for `city`.
+
+    Returns the shared `make_result` dict shape (see src.api.result).
+    """
+    from src.api.result import make_result, timed
+
+    with timed() as elapsed:
+        with CONFIG_PATH.open(encoding="utf-8") as f:
+            cfg = yaml.safe_load(f)
+        city_cfg = cfg["cities"][city]
+        rows = list(build_rows(city, city_cfg))
+
+        df = pd.DataFrame(rows)
+        REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+        out = REPORTS_DIR / "dataset_inventory.csv"
+        df.to_csv(out, index=False)
+
+    by_status = df["load_status"].value_counts().to_dict()
+    total_rows = int(df["row_count"].fillna(0).sum())
+
+    return make_result(
+        step="familiarization.inventory",
+        outputs=[out],
+        summary={
+            "city": city,
+            "files_inventoried": len(df),
+            "load_status_counts": by_status,
+            "total_raw_rows": total_rows,
+        },
+        elapsed_seconds=elapsed(),
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--city", default="london")
     args = parser.parse_args()
-
-    with CONFIG_PATH.open(encoding="utf-8") as f:
-        cfg = yaml.safe_load(f)
-
-    city_cfg = cfg["cities"][args.city]
-    rows = list(build_rows(args.city, city_cfg))
-
-    df = pd.DataFrame(rows)
-    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    out = REPORTS_DIR / "dataset_inventory.csv"
-    df.to_csv(out, index=False)
-
-    print(df.to_string(index=False))
-    print(f"\nwrote {out}")
+    result = run(city=args.city)
+    print(result)
 
 
 if __name__ == "__main__":

@@ -102,26 +102,38 @@ def iter_file_profiles(city: str, city_cfg: dict) -> Iterable[pd.DataFrame]:
         yield profile
 
 
+def run(city: str = "london") -> dict:
+    from src.api.result import make_result, timed
+
+    with timed() as elapsed:
+        with CONFIG_PATH.open(encoding="utf-8") as f:
+            cfg = yaml.safe_load(f)
+        city_cfg = cfg["cities"][city]
+
+        profiles = list(iter_file_profiles(city, city_cfg))
+        schema = pd.concat(profiles, ignore_index=True)
+        REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+        out = REPORTS_DIR / "schema_documentation.csv"
+        schema.to_csv(out, index=False)
+
+    rows_per_file = schema.groupby("source_file").size().to_dict()
+    return make_result(
+        step="familiarization.schema",
+        outputs=[out],
+        summary={
+            "city": city,
+            "total_columns": int(len(schema)),
+            "rows_per_file": rows_per_file,
+        },
+        elapsed_seconds=elapsed(),
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--city", default="london")
     args = parser.parse_args()
-
-    with CONFIG_PATH.open(encoding="utf-8") as f:
-        cfg = yaml.safe_load(f)
-    city_cfg = cfg["cities"][args.city]
-
-    print(f"profiling {args.city} ({city_cfg['source']['snapshot_date']})")
-    profiles = list(iter_file_profiles(args.city, city_cfg))
-
-    schema = pd.concat(profiles, ignore_index=True)
-    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    out = REPORTS_DIR / "schema_documentation.csv"
-    schema.to_csv(out, index=False)
-
-    print(f"\nwrote {out} ({len(schema)} rows)")
-    print("\nrows per file:")
-    print(schema.groupby("source_file").size().to_string())
+    print(run(city=args.city))
 
 
 if __name__ == "__main__":

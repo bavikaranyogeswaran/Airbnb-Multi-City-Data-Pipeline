@@ -143,81 +143,82 @@ def domain_rules_calendar(calendar_path: Path) -> pd.DataFrame:
     )
 
 
+def run(city: str = "london") -> dict:
+    from src.api.result import make_result, timed
+
+    with timed() as elapsed:
+        with CONFIG_PATH.open(encoding="utf-8") as f:
+            cfg = yaml.safe_load(f)
+        city_cfg = cfg["cities"][city]
+        raw_dir = RAW_BASE / city
+        REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+
+        listings = pd.read_csv(raw_dir / "listings.csv.gz", compression="gzip", low_memory=False)
+        iqr_l = iqr_for_file(listings, "listings.csv.gz", LISTINGS_IQR_COLS)
+        del listings
+
+        calendar = pd.read_csv(
+            raw_dir / "calendar.csv.gz",
+            compression="gzip",
+            usecols=CALENDAR_IQR_COLS,
+            low_memory=False,
+        )
+        iqr_c = iqr_for_file(calendar, "calendar.csv.gz", CALENDAR_IQR_COLS)
+        del calendar
+
+        iqr_df = pd.concat([iqr_l, iqr_c], ignore_index=True)
+        iqr_out = REPORTS_DIR / "outliers_iqr.csv"
+        iqr_df.to_csv(iqr_out, index=False)
+
+        dom_l = domain_rules_listings(raw_dir / "listings.csv.gz")
+        dom_c = domain_rules_calendar(raw_dir / "calendar.csv.gz")
+        dom_df = pd.concat([dom_l, dom_c], ignore_index=True)
+        dom_out = REPORTS_DIR / "outliers_domain.csv"
+        dom_df.to_csv(dom_out, index=False)
+
+        lines = ["# Outliers and Rule Violations", "",
+                 f"City: **{city}** · Snapshot: **{city_cfg['source']['snapshot_date']}**", "",
+                 "Sentinel rows (e.g. `maximum_nights = 2^31 - 1`, A-018) are stripped before IQR is computed; they are counted separately in `sentinel_int_max_rows` so they aren't conflated with real outliers.", "",
+                 "## 1. Domain-rule violations", "",
+                 "| File | Rule | Violations |", "|---|---|---:|"]
+        for _, r in dom_df.iterrows():
+            lines.append(f"| `{r['source_file']}` | `{r['rule']}` | {r['violation_count']:,} |")
+        lines += ["", "## 2. IQR outliers (sentinels removed first)", "",
+                  "| File | Column | Non-null | Lower | Upper | Low outliers | High outliers | Sentinel rows |",
+                  "|---|---|---:|---:|---:|---:|---:|---:|"]
+        for _, r in iqr_df.iterrows():
+            lines.append(
+                f"| `{r['source_file']}` | `{r['column']}` | {r['non_null']:,} | "
+                f"{r['iqr_lower']} | {r['iqr_upper']} | "
+                f"{r['low_outliers']:,} | {r['high_outliers']:,} | {r['sentinel_int_max_rows']:,} |"
+            )
+        lines += ["", "## 3. Phase 2.2 implications", "",
+                  "- IQR \"outliers\" on bounded columns (`availability_*`, `review_scores_rating`) are statistical artifacts of the long tail at zero — not data errors. They should NOT be quarantined.",
+                  "- Domain-rule violations on `latitude`/`longitude` *would* be quarantined, but London passes them all.",
+                  "- Sentinel rows in `maximum_nights` map to NULL in Phase 2.2 (`cap_sentinel_intmax`).",
+                  "- Listings with `minimum_nights >= 365` flow into `is_de_facto_inactive` in Phase 2.3 (A-019)."]
+        summary_out = REPORTS_DIR / "outliers_summary.md"
+        summary_out.write_text("\n".join(lines), encoding="utf-8")
+
+    violations_triggered = int((dom_df["violation_count"] > 0).sum())
+    return make_result(
+        step="ingestion.outliers",
+        outputs=[iqr_out, dom_out, summary_out],
+        summary={
+            "city": city,
+            "iqr_columns": int(len(iqr_df)),
+            "domain_rules_checked": int(len(dom_df)),
+            "domain_rules_triggered": violations_triggered,
+        },
+        elapsed_seconds=elapsed(),
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--city", default="london")
     args = parser.parse_args()
-
-    with CONFIG_PATH.open(encoding="utf-8") as f:
-        cfg = yaml.safe_load(f)
-    city_cfg = cfg["cities"][args.city]
-    raw_dir = RAW_BASE / args.city
-    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-
-    print("-> IQR on listings")
-    listings = pd.read_csv(raw_dir / "listings.csv.gz", compression="gzip", low_memory=False)
-    iqr_l = iqr_for_file(listings, "listings.csv.gz", LISTINGS_IQR_COLS)
-    del listings
-
-    print("-> IQR on calendar (loading)")
-    calendar = pd.read_csv(
-        raw_dir / "calendar.csv.gz",
-        compression="gzip",
-        usecols=CALENDAR_IQR_COLS,
-        low_memory=False,
-    )
-    iqr_c = iqr_for_file(calendar, "calendar.csv.gz", CALENDAR_IQR_COLS)
-    del calendar
-
-    iqr_df = pd.concat([iqr_l, iqr_c], ignore_index=True)
-    iqr_df.to_csv(REPORTS_DIR / "outliers_iqr.csv", index=False)
-    print(f"  wrote reports/outliers_iqr.csv ({len(iqr_df)} rows)")
-
-    print("-> domain rules on listings")
-    dom_l = domain_rules_listings(raw_dir / "listings.csv.gz")
-    print("-> domain rules on calendar")
-    dom_c = domain_rules_calendar(raw_dir / "calendar.csv.gz")
-    dom_df = pd.concat([dom_l, dom_c], ignore_index=True)
-    dom_df.to_csv(REPORTS_DIR / "outliers_domain.csv", index=False)
-    print(f"  wrote reports/outliers_domain.csv ({len(dom_df)} rows)")
-
-    # Markdown summary
-    lines = []
-    lines.append("# Outliers and Rule Violations")
-    lines.append("")
-    lines.append(f"City: **{args.city}** · Snapshot: **{city_cfg['source']['snapshot_date']}**")
-    lines.append("")
-    lines.append("Sentinel rows (e.g. `maximum_nights = 2^31 - 1`, A-018) are stripped before IQR is computed; they are counted separately in `sentinel_int_max_rows` so they aren't conflated with real outliers.")
-    lines.append("")
-
-    lines.append("## 1. Domain-rule violations")
-    lines.append("")
-    lines.append("| File | Rule | Violations |")
-    lines.append("|---|---|---:|")
-    for _, r in dom_df.iterrows():
-        lines.append(f"| `{r['source_file']}` | `{r['rule']}` | {r['violation_count']:,} |")
-    lines.append("")
-
-    lines.append("## 2. IQR outliers (sentinels removed first)")
-    lines.append("")
-    lines.append("| File | Column | Non-null | Lower | Upper | Low outliers | High outliers | Sentinel rows |")
-    lines.append("|---|---|---:|---:|---:|---:|---:|---:|")
-    for _, r in iqr_df.iterrows():
-        lines.append(
-            f"| `{r['source_file']}` | `{r['column']}` | {r['non_null']:,} | "
-            f"{r['iqr_lower']} | {r['iqr_upper']} | "
-            f"{r['low_outliers']:,} | {r['high_outliers']:,} | {r['sentinel_int_max_rows']:,} |"
-        )
-    lines.append("")
-    lines.append("## 3. Phase 2.2 implications")
-    lines.append("")
-    lines.append("- IQR \"outliers\" on bounded columns (`availability_*`, `review_scores_rating`) are statistical artifacts of the long tail at zero — not data errors. They should NOT be quarantined.")
-    lines.append("- Domain-rule violations on `latitude`/`longitude` *would* be quarantined, but London passes them all.")
-    lines.append("- Sentinel rows in `maximum_nights` map to NULL in Phase 2.2 (`cap_sentinel_intmax`).")
-    lines.append("- Listings with `minimum_nights >= 365` flow into `is_de_facto_inactive` in Phase 2.3 (A-019).")
-
-    (REPORTS_DIR / "outliers_summary.md").write_text("\n".join(lines), encoding="utf-8")
-    print(f"\nwrote reports/outliers_summary.md")
+    print(run(city=args.city))
 
 
 if __name__ == "__main__":

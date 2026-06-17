@@ -210,31 +210,40 @@ def apply_annotations(schema: pd.DataFrame) -> tuple[pd.DataFrame, list[tuple[st
     return schema, missing
 
 
+def run(schema_path: str | None = None) -> dict:
+    from src.api.result import make_result, timed
+
+    path = schema_path or str(SCHEMA_PATH)
+
+    with timed() as elapsed:
+        schema = pd.read_csv(path)
+        for col in ("expected_type", "business_meaning", "cleaning_requirement"):
+            if col not in schema.columns:
+                schema[col] = ""
+            schema[col] = schema[col].fillna("")
+
+        enriched, missing = apply_annotations(schema)
+        enriched.to_csv(path, index=False)
+
+    total = len(enriched)
+    return make_result(
+        step="familiarization.enrich_schema",
+        outputs=[SCHEMA_PATH],
+        summary={
+            "total_columns": total,
+            "annotated": total - len(missing),
+            "missing": [{"source_file": s, "column": c} for s, c in missing],
+            "cleaning_requirement_counts": enriched["cleaning_requirement"].value_counts().to_dict(),
+        },
+        elapsed_seconds=elapsed(),
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--schema", default=str(SCHEMA_PATH))
     args = parser.parse_args()
-
-    schema = pd.read_csv(args.schema)
-    for col in ("expected_type", "business_meaning", "cleaning_requirement"):
-        if col not in schema.columns:
-            schema[col] = ""
-        schema[col] = schema[col].fillna("")
-
-    enriched, missing = apply_annotations(schema)
-    enriched.to_csv(args.schema, index=False)
-
-    total = len(enriched)
-    annotated = total - len(missing)
-    print(f"annotated {annotated} / {total} columns")
-    if missing:
-        print(f"\nMISSING ANNOTATIONS ({len(missing)}):")
-        for src, col in missing:
-            print(f"  {src:28} {col}")
-
-    # cleaning_requirement breakdown
-    print("\ncleaning_requirement counts:")
-    print(enriched["cleaning_requirement"].value_counts().to_string())
+    print(run(schema_path=args.schema))
 
 
 if __name__ == "__main__":

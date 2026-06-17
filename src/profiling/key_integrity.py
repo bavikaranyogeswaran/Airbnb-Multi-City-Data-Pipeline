@@ -215,39 +215,45 @@ def render_markdown(L: dict, R: dict, C: dict, N: dict) -> str:
     return "\n".join(lines)
 
 
-def main() -> None:
-    print("-> listings")
-    L = check_listings()
-    listings_ids = L.pop("_df")["id"]
+def run() -> dict:
+    from src.api.result import make_result, timed
 
-    print("-> reviews")
-    R = check_reviews(listings_ids)
+    with timed() as elapsed:
+        L = check_listings()
+        listings_ids = L.pop("_df")["id"]
+        R = check_reviews(listings_ids)
+        C = check_calendar(listings_ids)
+        df_n = pd.read_csv(
+            RAW / "listings.csv.gz",
+            compression="gzip",
+            usecols=["neighbourhood_cleansed"],
+            low_memory=False,
+        )
+        N = check_neighbourhoods(df_n["neighbourhood_cleansed"])
 
-    print("-> calendar (this is the slow one)")
-    C = check_calendar(listings_ids)
+        md = render_markdown(L, R, C, N)
+        out = REPORTS_DIR / "key_integrity.md"
+        out.write_text(md, encoding="utf-8")
 
-    print("-> neighbourhoods")
-    df_n = pd.read_csv(
-        RAW / "listings.csv.gz",
-        compression="gzip",
-        usecols=["neighbourhood_cleansed"],
-        low_memory=False,
+    return make_result(
+        step="familiarization.key_integrity",
+        outputs=[out],
+        summary={
+            "listings_id_unique": L["id_unique"],
+            "reviews_id_unique": R["id_unique"],
+            "calendar_composite_duplicates": C["composite_key_duplicate_count"],
+            "reviews_orphan_rows": R["orphan_review_row_count"],
+            "calendar_orphan_rows": C["orphan_calendar_row_count"],
+            "listings_absent_from_calendar": C["listings_with_no_calendar_count"],
+            "distinct_hosts": L["distinct_host_count"],
+            "csv_geojson_parity": N["csv_geojson_parity"],
+        },
+        elapsed_seconds=elapsed(),
     )
-    N = check_neighbourhoods(df_n["neighbourhood_cleansed"])
 
-    md = render_markdown(L, R, C, N)
-    out = REPORTS_DIR / "key_integrity.md"
-    out.write_text(md, encoding="utf-8")
-    print(f"\nwrote {out}")
-    print("\n=== summary ===")
-    print(f"listings.id unique                : {L['id_unique']}")
-    print(f"reviews.id unique                 : {R['id_unique']}")
-    print(f"calendar composite dup count      : {C['composite_key_duplicate_count']:,}")
-    print(f"reviews orphans                   : {R['orphan_review_row_count']:,} rows / {R['orphan_listing_count']:,} listings")
-    print(f"calendar orphans                  : {C['orphan_calendar_row_count']:,} rows / {C['orphan_listing_count']:,} listings")
-    print(f"listings absent from calendar     : {C['listings_with_no_calendar_count']:,}")
-    print(f"listings without neighbourhood    : {L['neighbourhood_null_count']:,}")
-    print(f"distinct hosts                    : {L['distinct_host_count']:,}")
+
+def main() -> None:
+    print(run())
 
 
 if __name__ == "__main__":

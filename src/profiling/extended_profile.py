@@ -127,37 +127,50 @@ def profile_file(path: Path, source_name: str, compressed: bool) -> dict[str, An
     }
 
 
+def run(city: str = "london") -> dict:
+    from src.api.result import make_result, timed
+
+    with timed() as elapsed:
+        with CONFIG_PATH.open(encoding="utf-8") as f:
+            cfg = yaml.safe_load(f)
+        city_cfg = cfg["cities"][city]
+
+        raw_dir = RAW_BASE / city
+        REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+
+        profile = {
+            "city": city,
+            "snapshot_date": city_cfg["source"]["snapshot_date"],
+            "files": [],
+        }
+
+        for key, file_cfg in city_cfg["files"].items():
+            path = raw_dir / file_cfg["name"]
+            if not path.exists():
+                continue
+            prof = profile_file(path, file_cfg["name"], bool(file_cfg.get("compressed")))
+            profile["files"].append(prof)
+
+        out = REPORTS_DIR / "extended_profile.json"
+        out.write_text(json.dumps(profile, indent=2, default=str), encoding="utf-8")
+
+    return make_result(
+        step="ingestion.extended_profile",
+        outputs=[out],
+        summary={
+            "city": city,
+            "files_profiled": len(profile["files"]),
+            "total_columns": sum(len(f["columns"]) for f in profile["files"]),
+        },
+        elapsed_seconds=elapsed(),
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--city", default="london")
     args = parser.parse_args()
-
-    with CONFIG_PATH.open(encoding="utf-8") as f:
-        cfg = yaml.safe_load(f)
-    city_cfg = cfg["cities"][args.city]
-
-    raw_dir = RAW_BASE / args.city
-    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-
-    profile = {
-        "city": args.city,
-        "snapshot_date": city_cfg["source"]["snapshot_date"],
-        "files": [],
-    }
-
-    for key, file_cfg in city_cfg["files"].items():
-        path = raw_dir / file_cfg["name"]
-        if not path.exists():
-            print(f"skip {file_cfg['name']} (missing)")
-            continue
-        print(f"profile {file_cfg['name']} ...", flush=True)
-        prof = profile_file(path, file_cfg["name"], bool(file_cfg.get("compressed")))
-        profile["files"].append(prof)
-        print(f"  done: {prof['row_count']:,} rows x {prof['column_count']} cols")
-
-    out = REPORTS_DIR / "extended_profile.json"
-    out.write_text(json.dumps(profile, indent=2, default=str), encoding="utf-8")
-    print(f"\nwrote {out}")
+    print(run(city=args.city))
 
 
 if __name__ == "__main__":

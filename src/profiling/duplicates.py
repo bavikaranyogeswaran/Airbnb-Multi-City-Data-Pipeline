@@ -97,88 +97,88 @@ def review_comment_templates(reviews_path: Path, top_n: int = 20) -> tuple[int, 
     return duplicate_text_rows, distinct_template_count, top_dups
 
 
+def run(city: str = "london") -> dict:
+    from src.api.result import make_result, timed
+
+    with timed() as elapsed:
+        with CONFIG_PATH.open(encoding="utf-8") as f:
+            cfg = yaml.safe_load(f)
+        city_cfg = cfg["cities"][city]
+        raw_dir = RAW_BASE / city
+        REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+
+        exact_counts: dict[str, dict[str, int]] = {}
+        for key, file_cfg in city_cfg["files"].items():
+            name = file_cfg["name"]
+            path = raw_dir / name
+            if not path.exists() or name.endswith(".geojson"):
+                continue
+            if name == "reviews.csv.gz":
+                df = pd.read_csv(path, compression="gzip",
+                                 usecols=["id", "listing_id", "date", "reviewer_id"],
+                                 low_memory=False)
+            else:
+                df = pd.read_csv(path,
+                                 compression="gzip" if file_cfg.get("compressed") else None,
+                                 low_memory=False)
+            exact_counts[name] = {
+                "row_count": int(len(df)),
+                "exact_dup_count": exact_duplicates(df),
+            }
+
+        fuzzy = fuzzy_listing_duplicates(raw_dir / "listings.csv.gz")
+        fuzzy_out = REPORTS_DIR / "duplicate_listings.csv"
+        if not fuzzy.empty:
+            fuzzy.to_csv(fuzzy_out, index=False)
+
+        dup_text_rows, template_count, top = review_comment_templates(raw_dir / "reviews.csv.gz")
+        templates_out = REPORTS_DIR / "duplicate_review_comments.csv"
+        top.to_csv(templates_out, index=False)
+
+        # markdown
+        lines = ["# Duplicate Findings", "",
+                 f"City: **{city}** · Snapshot: **{city_cfg['source']['snapshot_date']}**", "",
+                 "## 1. Exact row duplicates (per file)", "",
+                 "| File | Rows | Exact dup rows |",
+                 "|---|---:|---:|"]
+        for name, stats in exact_counts.items():
+            lines.append(f"| `{name}` | {stats['row_count']:,} | {stats['exact_dup_count']:,} |")
+        lines += ["", "## 2. Fuzzy listing duplicates", ""]
+        if fuzzy.empty:
+            lines.append("No candidate duplicate listings found under the blocking key.")
+        else:
+            lines += [
+                f"- Rows in candidate-dup blocks: **{len(fuzzy):,}**",
+                "- Blocking key: `(neighbourhood_cleansed, host_id, round(latitude, 3), round(longitude, 3), normalised(name))`",
+                "- Action: flagged in `duplicate_listings.csv`, **not** deleted (A-030 principle extended to listings).",
+            ]
+        lines += ["", "## 3. Review comment templates", "",
+                  f"- Reviews whose comment text matches at least one other review: **{dup_text_rows:,}**",
+                  f"- Distinct duplicate-text templates: **{template_count:,}**",
+                  f"- Top {len(top)} templates by occurrence written to `duplicate_review_comments.csv`.",
+                  "- Action: flagged for NLP deduplication (A-030); raw `fact_reviews` keeps all rows.", ""]
+        summary_out = REPORTS_DIR / "duplicates_summary.md"
+        summary_out.write_text("\n".join(lines), encoding="utf-8")
+
+    return make_result(
+        step="ingestion.duplicates",
+        outputs=[summary_out, fuzzy_out, templates_out],
+        summary={
+            "city": city,
+            "exact_per_file": exact_counts,
+            "fuzzy_listing_rows": int(len(fuzzy)),
+            "review_text_duplicate_rows": int(dup_text_rows),
+            "review_distinct_templates": int(template_count),
+        },
+        elapsed_seconds=elapsed(),
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--city", default="london")
     args = parser.parse_args()
-
-    with CONFIG_PATH.open(encoding="utf-8") as f:
-        cfg = yaml.safe_load(f)
-    city_cfg = cfg["cities"][args.city]
-    raw_dir = RAW_BASE / args.city
-    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-
-    print("-> exact duplicates (per file)")
-    exact_counts: dict[str, dict[str, int]] = {}
-    for key, file_cfg in city_cfg["files"].items():
-        name = file_cfg["name"]
-        path = raw_dir / name
-        if not path.exists():
-            continue
-        if name.endswith(".geojson"):
-            continue  # GeoJSON dup-row notion is not meaningful here.
-
-        # For calendar reviews comments we only need a subset to detect dups cheaply.
-        if name == "calendar.csv.gz":
-            df = pd.read_csv(path, compression="gzip", low_memory=False)
-        elif name == "reviews.csv.gz":
-            df = pd.read_csv(path, compression="gzip", usecols=["id", "listing_id", "date", "reviewer_id"], low_memory=False)
-        elif name == "listings.csv.gz":
-            df = pd.read_csv(path, compression="gzip", low_memory=False)
-        else:
-            df = pd.read_csv(path, compression="gzip" if file_cfg.get("compressed") else None, low_memory=False)
-
-        n_dup = exact_duplicates(df)
-        exact_counts[name] = {"row_count": int(len(df)), "exact_dup_count": n_dup}
-        print(f"  {name:28} {n_dup:>10,} exact dups in {len(df):>12,} rows")
-
-    print("\n-> fuzzy listing duplicates (block by neigh/host/lat3/lon3/name)")
-    fuzzy = fuzzy_listing_duplicates(raw_dir / "listings.csv.gz")
-    print(f"  candidate-dup blocks: {fuzzy.groupby(['host_id','name'], dropna=False).ngroups if not fuzzy.empty else 0}")
-    print(f"  rows in candidate-dup blocks: {len(fuzzy)}")
-    if not fuzzy.empty:
-        fuzzy.to_csv(REPORTS_DIR / "duplicate_listings.csv", index=False)
-        print(f"  wrote reports/duplicate_listings.csv")
-
-    print("\n-> review comment templates")
-    dup_text_rows, template_count, top = review_comment_templates(raw_dir / "reviews.csv.gz")
-    print(f"  reviews with a duplicate-text twin: {dup_text_rows:,}")
-    print(f"  distinct templates (text shared by 2+ reviews): {template_count:,}")
-    top.to_csv(REPORTS_DIR / "duplicate_review_comments.csv", index=False)
-    print(f"  wrote reports/duplicate_review_comments.csv")
-
-    # Summary markdown
-    lines = []
-    lines.append("# Duplicate Findings")
-    lines.append("")
-    lines.append(f"City: **{args.city}** · Snapshot: **{city_cfg['source']['snapshot_date']}**")
-    lines.append("")
-    lines.append("## 1. Exact row duplicates (per file)")
-    lines.append("")
-    lines.append("| File | Rows | Exact dup rows |")
-    lines.append("|---|---:|---:|")
-    for name, stats in exact_counts.items():
-        lines.append(f"| `{name}` | {stats['row_count']:,} | {stats['exact_dup_count']:,} |")
-    lines.append("")
-    lines.append("## 2. Fuzzy listing duplicates")
-    lines.append("")
-    if fuzzy.empty:
-        lines.append("No candidate duplicate listings found under the blocking key.")
-    else:
-        lines.append(f"- Rows in candidate-dup blocks: **{len(fuzzy):,}**")
-        lines.append(f"- Blocking key: `(neighbourhood_cleansed, host_id, round(latitude, 3), round(longitude, 3), normalised(name))`")
-        lines.append("- Action: flagged in `duplicate_listings.csv`, **not** deleted (A-030 principle extended to listings).")
-    lines.append("")
-    lines.append("## 3. Review comment templates")
-    lines.append("")
-    lines.append(f"- Reviews whose comment text matches at least one other review: **{dup_text_rows:,}**")
-    lines.append(f"- Distinct duplicate-text templates: **{template_count:,}**")
-    lines.append(f"- Top {len(top)} templates by occurrence written to `duplicate_review_comments.csv`.")
-    lines.append("- Action: flagged for NLP deduplication (A-030); raw `fact_reviews` keeps all rows.")
-    lines.append("")
-
-    (REPORTS_DIR / "duplicates_summary.md").write_text("\n".join(lines), encoding="utf-8")
-    print("\nwrote reports/duplicates_summary.md")
+    print(run(city=args.city))
 
 
 if __name__ == "__main__":
