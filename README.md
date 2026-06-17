@@ -70,6 +70,22 @@ Triggers (in-process, sync):
 - `POST /familiarization/schema:annotate`
 - `POST /familiarization/key-integrity:rebuild`
 
+### Enrichment & Joining (`src/api/routes/enrichment.py`)
+Reads:
+- `GET /enrichment/manifest?city=london` — all cleaned + enriched parquet inventory
+- `GET /enrichment/review-summary?city=london&n=5`
+- `GET /enrichment/calendar-summary?city=london&n=5`
+- `GET /enrichment/neighbourhood-summary?city=london` — 33 boroughs with density
+- `GET /enrichment/listing-master?city=london&n=5`
+- `GET /enrichment/top-neighbourhoods?by=median_price_gbp&n=10`
+
+Triggers:
+- `POST /enrichment/review-summary:run?city=london`
+- `POST /enrichment/calendar-summary:run?city=london`
+- `POST /enrichment/neighbourhood-summary:run?city=london`
+- `POST /enrichment/listing-master:run?city=london`
+- `POST /enrichment/all?city=london` — chain in dependency order
+
 ### Cleaning & Standardization (`src/api/routes/cleaning.py`)
 Reads:
 - `GET /cleaning/manifest?city=london` — cleaned-parquet inventory (paths, exists, size, row counts)
