@@ -1,0 +1,6 @@
+test,hypothesis,method,n_total,statistic,p_value,effect_size,effect_label,significant,conclusion
+H1,Entire home > private room price,Welch t-test,5806,35.8121,0.0,1.1419,Cohen's d,True,Entire home significantly more expensive
+H2,Superhost rating > non-superhost rating,Mann-Whitney U,9273,5894053.0,0.0,0.1284,rank-biserial r,True,Non-superhosts rated higher
+H3,More-reviewed listings have different price,Welch t-test,5874,-10.5018,0.0,-0.2741,Cohen's d,True,Significant price difference by review count
+H4,Neighbourhood price differs across areas,Kruskal-Wallis,5708,293.6249,0.0,0.0488,epsilon-squared,True,Significant price variation by neighbourhood
+H5,Weekend availability differs from weekday,Wilcoxon signed-rank,10480,9131259.0,0.0,-0.07,Cohen's d,True,Significant weekend/weekday difference

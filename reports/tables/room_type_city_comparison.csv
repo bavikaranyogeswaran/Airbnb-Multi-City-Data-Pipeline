@@ -1,6 +1,5 @@
-room_type_norm,Amsterdam (EUR),London (GBP)
-entire_home,81.7,64.9
-private_room,17.5,34.7
-hotel_room,0.5,0.1
-shared_room,0.3,0.2
-other,0.0,0.0
+room_type,Amsterdam (EUR),London (GBP)
+entire_home,81.69,64.94
+private_room,17.55,34.73
+hotel_room,0.47,0.11
+shared_room,0.3,0.22

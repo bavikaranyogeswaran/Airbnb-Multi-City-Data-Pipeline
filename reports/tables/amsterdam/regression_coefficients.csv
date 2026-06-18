@@ -1,0 +1,30 @@
+Unnamed: 0,coefficient,std_err,t_stat,p_value,ci_low,ci_high,significant
+Intercept,3.930303,0.227663,17.2637,0.0,3.484093,4.376514,True
+C(room_type)[T.hotel_room],0.15035,0.22037,0.6823,0.495074,-0.281568,0.582268,False
+C(room_type)[T.private_room],-0.409177,0.017136,-23.8782,0.0,-0.442763,-0.375591,True
+C(room_type)[T.shared_room],-0.541282,0.149117,-3.6299,0.000284,-0.833545,-0.249019,True
+C(neighbourhood_cleansed)[T.Bijlmer-Oost],-0.246603,0.069555,-3.5454,0.000392,-0.382929,-0.110278,True
+C(neighbourhood_cleansed)[T.Bos en Lommer],0.110358,0.053143,2.0766,0.037836,0.0062,0.214517,True
+C(neighbourhood_cleansed)[T.Buitenveldert - Zuidas],0.401744,0.143839,2.793,0.005222,0.119825,0.683664,True
+C(neighbourhood_cleansed)[T.Centrum-Oost],0.474662,0.05072,9.3584,0.0,0.375252,0.574071,True
+C(neighbourhood_cleansed)[T.Centrum-West],0.566144,0.050655,11.1764,0.0,0.466862,0.665427,True
+C(neighbourhood_cleansed)[T.De Aker - Nieuw Sloten],-0.018716,0.086356,-0.2167,0.828415,-0.187971,0.150539,False
+C(neighbourhood_cleansed)[T.De Baarsjes - Oud-West],0.378208,0.050017,7.5616,0.0,0.280177,0.47624,True
+C(neighbourhood_cleansed)[T.De Pijp - Rivierenbuurt],0.422856,0.050801,8.3238,0.0,0.323289,0.522424,True
+C(neighbourhood_cleansed)[T.Gaasperdam - Driemond],-0.171439,0.084189,-2.0364,0.041715,-0.336447,-0.006431,True
+C(neighbourhood_cleansed)[T.Geuzenveld - Slotermeer],0.053759,0.062931,0.8543,0.392961,-0.069583,0.177102,False
+C(neighbourhood_cleansed)[T.IJburg - Zeeburgereiland],0.164014,0.112888,1.4529,0.146252,-0.057242,0.38527,False
+C(neighbourhood_cleansed)[T.Noord-Oost],-0.150889,0.056069,-2.6911,0.007122,-0.260783,-0.040995,True
+C(neighbourhood_cleansed)[T.Noord-West],-0.131955,0.054751,-2.4101,0.015949,-0.239265,-0.024644,True
+C(neighbourhood_cleansed)[T.Oostelijk Havengebied - Indische Buurt],0.178788,0.053239,3.3582,0.000785,0.074441,0.283136,True
+C(neighbourhood_cleansed)[T.Osdorp],0.053978,0.065144,0.8286,0.407334,-0.073702,0.181657,False
+C(neighbourhood_cleansed)[T.Oud-Noord],0.116323,0.058569,1.9861,0.047025,0.001529,0.231116,True
+C(neighbourhood_cleansed)[T.Oud-Oost],0.30223,0.051837,5.8304,0.0,0.20063,0.403829,True
+C(neighbourhood_cleansed)[T.Slotervaart],0.053689,0.058435,0.9188,0.358214,-0.060842,0.168219,False
+C(neighbourhood_cleansed)[T.Watergraafsmeer],0.167611,0.058125,2.8836,0.003931,0.053688,0.281534,True
+C(neighbourhood_cleansed)[T.Westerpark],0.321701,0.052051,6.1805,0.0,0.219683,0.423719,True
+C(neighbourhood_cleansed)[T.Zuid],0.363736,0.052757,6.8946,0.0,0.260335,0.467138,True
+accommodates,0.131605,0.008871,14.8348,0.0,0.114218,0.148993,True
+bedrooms,0.12718,0.011496,11.0627,0.0,0.104648,0.149712,True
+review_scores_rating,0.141304,0.0471,3.0001,0.002699,0.048989,0.233618,True
+superhost_flag,-0.003696,0.014208,-0.2602,0.79473,-0.031543,0.02415,False

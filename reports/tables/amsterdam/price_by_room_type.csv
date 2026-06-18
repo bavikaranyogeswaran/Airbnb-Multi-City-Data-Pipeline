@@ -1,0 +1,5 @@
+room_type,listing_count,median_price,mean_price,p25,p75,p95
+entire_home,4532,248.0,336.18,186.0,338.0,596.35
+hotel_room,38,231.0,5971.24,156.25,309.75,41500.0
+private_room,1274,139.0,175.73,104.0,196.0,335.35
+shared_room,30,95.5,130.27,73.75,110.5,372.65

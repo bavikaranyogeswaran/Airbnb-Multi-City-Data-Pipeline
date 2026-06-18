@@ -1,0 +1,8 @@
+metric,value
+R²,0.4729
+Adj-R²,0.47
+F-statistic,131.07
+p(F),0.0
+N,5156
+parameters,29
+SE type,HC3 (heteroscedasticity-robust)

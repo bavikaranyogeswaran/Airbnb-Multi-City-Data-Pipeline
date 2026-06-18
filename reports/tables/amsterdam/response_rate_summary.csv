@@ -1,0 +1,5 @@
+response_rate_band,listing_count,superhost_rate,median_rating,median_price,median_occupancy
+0-50%,304,0.01,4.93,206.5,0.577
+51-80%,423,0.103,4.91,227.5,0.715
+81-95%,568,0.245,4.85,219.0,0.579
+96-100%,5215,0.302,4.92,214.0,0.814
