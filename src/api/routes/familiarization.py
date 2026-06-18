@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException, Query
 
+from src.profiling import cross_city_schema as cross_mod
 from src.profiling import enrich_schema as enrich_mod
 from src.profiling import inventory as inventory_mod
 from src.profiling import key_integrity as integrity_mod
@@ -34,14 +35,17 @@ def familiarization_index() -> dict:
             "special_fields":   "GET  /familiarization/special-fields",
             "limitations":      "GET  /familiarization/limitations",
             "assumptions":      "GET  /familiarization/assumptions",
-            "er_diagram":       "GET  /familiarization/er-diagram          (HTML, Mermaid-rendered)",
-            "er_diagram_source":"GET  /familiarization/er-diagram/source   (raw .mmd text)",
+            "er_diagram":           "GET  /familiarization/er-diagram                    (HTML, Mermaid-rendered)",
+            "er_diagram_source":    "GET  /familiarization/er-diagram/source             (raw .mmd text)",
+            "cross_city_schema":    "GET  /familiarization/cross-city-schema             (CSV)",
+            "cross_city_schema_md": "GET  /familiarization/cross-city-schema/report      (Markdown narrative)",
         },
         "triggers": {
             "rebuild_inventory":   "POST /familiarization/inventory:rebuild",
             "rebuild_schema":      "POST /familiarization/schema:rebuild",
             "annotate_schema":     "POST /familiarization/schema:annotate",
             "rebuild_integrity":   "POST /familiarization/key-integrity:rebuild",
+            "cross_city_schema":   "POST /familiarization/cross-city-schema:run?city_a=london&city_b=amsterdam",
         },
     }
 
@@ -133,3 +137,33 @@ def annotate_schema() -> dict:
 @router.post("/key-integrity:rebuild", summary="Re-run Step 8")
 def rebuild_integrity() -> dict:
     return integrity_mod.run()
+
+
+# ---------- cross-city schema comparison ----------
+
+@router.get("/cross-city-schema", summary="Cross-city schema comparison (CSV rows)")
+def get_cross_city_schema_csv(
+    city_a: str = Query("london"),
+    city_b: str = Query("amsterdam"),
+) -> list[dict]:
+    # Returns the machine-readable CSV as JSON records.
+    p = REPORTS_DIR / "cross_city_schema_comparison.csv"
+    if not p.exists():
+        raise HTTPException(status_code=404,
+            detail="Run POST /familiarization/cross-city-schema:run first")
+    return csv_to_records(p)
+
+
+@router.get("/cross-city-schema/report", summary="Cross-city schema comparison (Markdown narrative)")
+def get_cross_city_schema_md() -> object:
+    return markdown_response(REPORTS_DIR / "cross_city_schema_comparison.md")
+
+
+@router.post("/cross-city-schema:run",
+             summary="Run cross-city schema comparison (london vs amsterdam by default)")
+def run_cross_city_schema(
+    city_a: str = Query("london"),
+    city_b: str = Query("amsterdam"),
+) -> dict:
+    # Profiles both cities' listings samples and writes the two report files.
+    return cross_mod.run(city_a=city_a, city_b=city_b)
