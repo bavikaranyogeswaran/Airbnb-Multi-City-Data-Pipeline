@@ -1,0 +1,5 @@
+rule,count
+total_listings,96871
+missing_price,34908
+negative_price,0
+price_eligible_population,61963
