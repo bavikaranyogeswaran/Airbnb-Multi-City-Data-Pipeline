@@ -1,0 +1,5 @@
+host_segment,listing_count,unique_hosts,median_price,median_rating,median_reviews_per_month,median_availability,median_occupancy,superhost_rate
+Single (1),44875,44875,120.0,4.91,0.08,9.0,0.98,0.11214114161298287
+Small (2–5),22950,8964,110.0,4.84,0.25,132.0,0.64,0.2844290040976305
+Professional (6–20),14280,1486,155.0,4.71,0.42,241.0,0.34,0.25945317044793487
+Commercial (21+),14766,321,184.0,4.64,0.33,204.0,0.44,0.1562369337979094
