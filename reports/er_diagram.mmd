@@ -1,0 +1,115 @@
+%%{init: { 'theme': 'base', 'themeVariables': { 'primaryColor': '#eff6ff', 'primaryBorderColor': '#1d4ed8', 'lineColor': '#475569' } }}%%
+erDiagram
+    DIM_CITY                ||--o{ DIM_NEIGHBOURHOOD          : "contains"
+    DIM_NEIGHBOURHOOD       ||--o{ DIM_LISTING                : "located in"
+    DIM_HOST                ||--o{ DIM_LISTING                : "owns"
+    DIM_LISTING             ||--o{ FACT_CALENDAR              : "has days"
+    DIM_LISTING             ||--o{ FACT_REVIEWS               : "receives"
+    DIM_LISTING             ||--|| FACT_LISTING_SNAPSHOT      : "snapshot of"
+    DIM_DATE                ||--o{ FACT_CALENDAR              : "on date"
+    DIM_DATE                ||--o{ FACT_REVIEWS               : "on date"
+    DIM_DATE                ||--o{ FACT_LISTING_SNAPSHOT      : "as of"
+    DIM_NEIGHBOURHOOD       ||--o{ FACT_LISTING_SNAPSHOT      : "in"
+    DIM_HOST                ||--o{ FACT_LISTING_SNAPSHOT      : "by"
+
+    DIM_CITY {
+        int     city_key                PK
+        string  city_code
+        string  city_name
+        string  country_code
+        string  currency_code
+        string  timezone
+    }
+
+    DIM_NEIGHBOURHOOD {
+        int     neighbourhood_key       PK
+        int     city_key                FK
+        string  neighbourhood_name
+        double  area_km2
+        double  centroid_latitude
+        double  centroid_longitude
+    }
+
+    DIM_HOST {
+        int      host_key                PK
+        bigint   source_host_id
+        date     host_since
+        boolean  host_is_superhost
+        double   host_response_rate
+        double   host_acceptance_rate
+        boolean  host_identity_verified
+        int      host_portfolio_size
+        date     valid_from
+        date     valid_to
+        boolean  is_current
+    }
+
+    DIM_LISTING {
+        bigint   listing_key             PK
+        bigint   source_listing_id
+        int      host_key                FK
+        int      neighbourhood_key       FK
+        string   room_type
+        string   property_type
+        string   property_type_bucket
+        int      accommodates
+        int      bedrooms
+        double   bathroom_count
+        boolean  bathroom_is_shared
+        double   latitude
+        double   longitude
+        boolean  instant_bookable
+        boolean  is_de_facto_inactive
+    }
+
+    DIM_DATE {
+        int      date_key                PK
+        date     date
+        int      year
+        int      quarter
+        int      month
+        int      day
+        int      day_of_week
+        boolean  is_weekend
+        int      iso_week
+        string   month_name
+    }
+
+    FACT_CALENDAR {
+        bigint   listing_key             FK
+        int      date_key                FK
+        boolean  available
+        int      available_int
+        int      minimum_nights
+        int      maximum_nights
+    }
+
+    FACT_REVIEWS {
+        bigint   review_id               PK
+        bigint   listing_key             FK
+        int      date_key                FK
+        bigint   reviewer_id
+        int      comment_length
+        boolean  comment_is_duplicate
+    }
+
+    FACT_LISTING_SNAPSHOT {
+        bigint   listing_key             FK
+        int      snapshot_date_key       FK
+        int      neighbourhood_key       FK
+        int      host_key                FK
+        double   price_numeric
+        string   currency_code
+        int      availability_365
+        int      number_of_reviews
+        double   review_scores_rating
+        boolean  has_availability
+        boolean  is_active_supply
+        boolean  is_professional_host
+        double   host_tenure_years
+        double   price_per_bedroom_gbp
+        double   reviews_per_month_calc
+        double   revenue_proxy_gbp
+        double   occupancy_proxy
+        double   availability_rate
+    }

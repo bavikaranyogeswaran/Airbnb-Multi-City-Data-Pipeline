@@ -27,6 +27,7 @@ def orchestration_index() -> dict:
             "run_detail":       "GET  /orchestration/runs/{run_id}?city=london",
             "dataset_versions": "GET  /orchestration/dataset-versions?city=london",
             "lineage":          "GET  /orchestration/lineage  (Markdown)",
+            "decisions":        "GET  /orchestration/engineering-decisions  (Markdown)",
         },
         "triggers": {
             "run":              "POST /orchestration/run?city=london&stages=all&force=false",
@@ -55,6 +56,12 @@ def list_versions(city: str = Query("london")) -> list[dict]:
 @router.get("/lineage", summary="Source → warehouse data lineage (Markdown)")
 def get_lineage():
     return markdown_response(REPORTS_DIR / "lineage.md")
+
+
+@router.get("/engineering-decisions", summary="Engineering decision log (Markdown)")
+def get_engineering_decisions():
+    # Every non-trivial architectural choice with Reason / Trade-offs / Future.
+    return markdown_response(REPORTS_DIR / "engineering_decisions.md")
 
 
 @router.post("/run", summary="Run the pipeline (sync). Empty stages → all.")

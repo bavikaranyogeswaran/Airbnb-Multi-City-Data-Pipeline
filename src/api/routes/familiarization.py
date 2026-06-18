@@ -13,8 +13,9 @@ from src.profiling import inventory as inventory_mod
 from src.profiling import key_integrity as integrity_mod
 from src.profiling import schema as schema_mod
 
-from ..helpers import csv_to_records, markdown_response
+from ..helpers import csv_to_records, html_response, markdown_response
 from ..paths import NOTEBOOKS_DIR, REPORTS_DIR
+from fastapi.responses import PlainTextResponse
 
 router = APIRouter(prefix="/familiarization", tags=["familiarization"])
 
@@ -33,6 +34,8 @@ def familiarization_index() -> dict:
             "special_fields":   "GET  /familiarization/special-fields",
             "limitations":      "GET  /familiarization/limitations",
             "assumptions":      "GET  /familiarization/assumptions",
+            "er_diagram":       "GET  /familiarization/er-diagram          (HTML, Mermaid-rendered)",
+            "er_diagram_source":"GET  /familiarization/er-diagram/source   (raw .mmd text)",
         },
         "triggers": {
             "rebuild_inventory":   "POST /familiarization/inventory:rebuild",
@@ -95,6 +98,19 @@ def get_limitations():
 @router.get("/assumptions", summary="Step 12 — assumptions log (Markdown)")
 def get_assumptions():
     return markdown_response(REPORTS_DIR / "assumptions_log.md")
+
+
+@router.get("/er-diagram", summary="Entity-relationship diagram (HTML, Mermaid-rendered)")
+def get_er_diagram():
+    # Serves the Mermaid-rendered HTML so a browser draws the diagram inline.
+    return html_response(REPORTS_DIR / "er_diagram.html")
+
+
+@router.get("/er-diagram/source", summary="Raw Mermaid source for the ER diagram (.mmd)")
+def get_er_diagram_source():
+    # Plain text so it can be piped into mermaid-cli or pasted into other tools.
+    path = REPORTS_DIR / "er_diagram.mmd"
+    return PlainTextResponse(path.read_text(encoding="utf-8"), media_type="text/plain")
 
 
 # ---------- triggers ----------

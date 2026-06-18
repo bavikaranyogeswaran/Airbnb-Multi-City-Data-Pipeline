@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ER Diagram · London Warehouse</title>
+<style>
+  :root { --navy:#0f172a; --blue:#1d4ed8; --slate:#475569; --line:#dbe3ee;
+          --paper:#fff; --bg:#f6f8fb; }
+  *{box-sizing:border-box}
+  body{font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.55;color:#1e293b;background:var(--bg);margin:0}
+  .page{max-width:1240px;margin:0 auto;background:var(--paper);min-height:100vh;box-shadow:0 12px 40px rgba(15,23,42,.08)}
+  header{background:linear-gradient(135deg,#0f172a 0%,#1d4ed8 100%);color:#fff;padding:32px 48px}
+  header h1{margin:0 0 8px;font-size:26px}
+  header p{margin:2px 0;color:#dbeafe;font-size:14px}
+  main{padding:24px 48px 48px}
+  .mermaid{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px;overflow:auto}
+  footer{padding:14px 48px 28px;color:var(--slate);font-size:12px;border-top:1px solid var(--line);background:#f8fafc}
+  code{font-family:Consolas,Monaco,monospace;background:#edf2f7;padding:1px 5px;border-radius:3px;font-size:.92em}
+</style>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'default', securityLevel: 'loose' });
+</script>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Entity-Relationship Diagram</h1>
+    <p>City: <strong>London</strong> · Snapshot: <strong>2025-09-14</strong> · Warehouse: <code>data/processed/london/warehouse.duckdb</code></p>
+    <p>5 dimensions, 3 facts. Source SQL lives in <code>src/loading/warehouse.py</code>.</p>
+  </header>
+  <main>
+    <div class="mermaid">
+%%{init: { 'theme': 'base', 'themeVariables': { 'primaryColor': '#eff6ff', 'primaryBorderColor': '#1d4ed8', 'lineColor': '#475569' } }}%%
+erDiagram
+    DIM_CITY                ||--o{ DIM_NEIGHBOURHOOD          : "contains"
+    DIM_NEIGHBOURHOOD       ||--o{ DIM_LISTING                : "located in"
+    DIM_HOST                ||--o{ DIM_LISTING                : "owns"
+    DIM_LISTING             ||--o{ FACT_CALENDAR              : "has days"
+    DIM_LISTING             ||--o{ FACT_REVIEWS               : "receives"
+    DIM_LISTING             ||--|| FACT_LISTING_SNAPSHOT      : "snapshot of"
+    DIM_DATE                ||--o{ FACT_CALENDAR              : "on date"
+    DIM_DATE                ||--o{ FACT_REVIEWS               : "on date"
+    DIM_DATE                ||--o{ FACT_LISTING_SNAPSHOT      : "as of"
+    DIM_NEIGHBOURHOOD       ||--o{ FACT_LISTING_SNAPSHOT      : "in"
+    DIM_HOST                ||--o{ FACT_LISTING_SNAPSHOT      : "by"
+
+    DIM_CITY {
+        int     city_key                PK
+        string  city_code
+        string  city_name
+        string  country_code
+        string  currency_code
+        string  timezone
+    }
+
+    DIM_NEIGHBOURHOOD {
+        int     neighbourhood_key       PK
+        int     city_key                FK
+        string  neighbourhood_name
+        double  area_km2
+        double  centroid_latitude
+        double  centroid_longitude
+    }
+
+    DIM_HOST {
+        int      host_key                PK
+        bigint   source_host_id
+        date     host_since
+        boolean  host_is_superhost
+        double   host_response_rate
+        double   host_acceptance_rate
+        boolean  host_identity_verified
+        int      host_portfolio_size
+        date     valid_from
+        date     valid_to
+        boolean  is_current
+    }
+
+    DIM_LISTING {
+        bigint   listing_key             PK
+        bigint   source_listing_id
+        int      host_key                FK
+        int      neighbourhood_key       FK
+        string   room_type
+        string   property_type
+        string   property_type_bucket
+        int      accommodates
+        int      bedrooms
+        double   bathroom_count
+        boolean  bathroom_is_shared
+        double   latitude
+        double   longitude
+        boolean  instant_bookable
+        boolean  is_de_facto_inactive
+    }
+
+    DIM_DATE {
+        int      date_key                PK
+        date     date
+        int      year
+        int      quarter
+        int      month
+        int      day
+        int      day_of_week
+        boolean  is_weekend
+        int      iso_week
+        string   month_name
+    }
+
+    FACT_CALENDAR {
+        bigint   listing_key             FK
+        int      date_key                FK
+        boolean  available
+        int      available_int
+        int      minimum_nights
+        int      maximum_nights
+    }
+
+    FACT_REVIEWS {
+        bigint   review_id               PK
+        bigint   listing_key             FK
+        int      date_key                FK
+        bigint   reviewer_id
+        int      comment_length
+        boolean  comment_is_duplicate
+    }
+
+    FACT_LISTING_SNAPSHOT {
+        bigint   listing_key             FK
+        int      snapshot_date_key       FK
+        int      neighbourhood_key       FK
+        int      host_key                FK
+        double   price_numeric
+        string   currency_code
+        int      availability_365
+        int      number_of_reviews
+        double   review_scores_rating
+        boolean  has_availability
+        boolean  is_active_supply
+        boolean  is_professional_host
+        double   host_tenure_years
+        double   price_per_bedroom_gbp
+        double   reviews_per_month_calc
+        double   revenue_proxy_gbp
+        double   occupancy_proxy
+        double   availability_rate
+    }
+    </div>
+  </main>
+  <footer>
+    Rendered from <code>reports/er_diagram.mmd</code> via Mermaid 10 (CDN). Regenerate by editing the source and refreshing.
+  </footer>
+</div>
+</body>
+</html>
