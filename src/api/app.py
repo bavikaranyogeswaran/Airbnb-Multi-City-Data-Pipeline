@@ -13,13 +13,14 @@ Docs:
 
 from __future__ import annotations
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Query
 from fastapi.responses import RedirectResponse
 
 from .routes import (
     analytics, cities, cleaning, enrichment, familiarization,
     ingestion, orchestration, quality, warehouse,
 )
+from src.validation import completion_gate as _gate
 
 app = FastAPI(
     title="Inside Airbnb · London Pipeline",
@@ -54,6 +55,17 @@ def root() -> RedirectResponse:
 @app.get("/health", tags=["meta"], summary="Liveness check")
 def health() -> dict:
     return {"status": "ok"}
+
+
+@app.get("/completion-gate", tags=["meta"],
+         summary="Single-city completion gate — all 13 checklist items")
+def completion_gate_check(city: str = Query("london")) -> dict:
+    """Run all 13 Section-26 checklist items and return pass/warn/fail per check.
+
+    gate_open=true means the city is ready to scale to additional cities.
+    The full markdown report is also written to reports/completion_gate_<city>.md.
+    """
+    return _gate.run(city=city)
 
 
 @app.get("/index", tags=["meta"], summary="Service index — what's wired up")

@@ -15,17 +15,21 @@ from pathlib import Path
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
-RAW = ROOT / "data" / "raw" / "london"
 REPORTS_DIR = ROOT / "reports"
+
+def _raw(city: str) -> Path:
+    return ROOT / "data" / "raw" / city
 
 
 def md_kv(label: str, value) -> str:
     return f"- **{label}:** {value}"
 
 
-def check_listings() -> dict:
+def check_listings(raw: Path = None) -> dict:
+    if raw is None:
+        raw = _raw("london")
     df = pd.read_csv(
-        RAW / "listings.csv.gz",
+        raw / "listings.csv.gz",
         compression="gzip",
         usecols=["id", "host_id", "neighbourhood_cleansed"],
         low_memory=False,
@@ -43,9 +47,11 @@ def check_listings() -> dict:
     }
 
 
-def check_reviews(listings_ids: pd.Series) -> dict:
+def check_reviews(listings_ids: pd.Series, raw: Path = None) -> dict:
+    if raw is None:
+        raw = _raw("london")
     df = pd.read_csv(
-        RAW / "reviews.csv.gz",
+        raw / "reviews.csv.gz",
         compression="gzip",
         usecols=["id", "listing_id"],
         low_memory=False,
@@ -70,9 +76,11 @@ def check_reviews(listings_ids: pd.Series) -> dict:
     }
 
 
-def check_calendar(listings_ids: pd.Series) -> dict:
+def check_calendar(listings_ids: pd.Series, raw: Path = None) -> dict:
+    if raw is None:
+        raw = _raw("london")
     df = pd.read_csv(
-        RAW / "calendar.csv.gz",
+        raw / "calendar.csv.gz",
         compression="gzip",
         usecols=["listing_id", "date"],
         low_memory=False,
@@ -98,9 +106,11 @@ def check_calendar(listings_ids: pd.Series) -> dict:
     }
 
 
-def check_neighbourhoods(listings_neigh: pd.Series) -> dict:
-    csv = pd.read_csv(RAW / "neighbourhoods.csv")
-    with (RAW / "neighbourhoods.geojson").open("r", encoding="utf-8") as f:
+def check_neighbourhoods(listings_neigh: pd.Series, raw: Path = None) -> dict:
+    if raw is None:
+        raw = _raw("london")
+    csv = pd.read_csv(raw / "neighbourhoods.csv")
+    with (raw / "neighbourhoods.geojson").open("r", encoding="utf-8") as f:
         gj = json.load(f)
     gj_names = pd.Series(
         [feat["properties"].get("neighbourhood") for feat in gj["features"]]
@@ -215,21 +225,22 @@ def render_markdown(L: dict, R: dict, C: dict, N: dict) -> str:
     return "\n".join(lines)
 
 
-def run() -> dict:
+def run(city: str = "london") -> dict:
     from src.api.result import make_result, timed
 
+    raw = _raw(city)
     with timed() as elapsed:
-        L = check_listings()
+        L = check_listings(raw)
         listings_ids = L.pop("_df")["id"]
-        R = check_reviews(listings_ids)
-        C = check_calendar(listings_ids)
+        R = check_reviews(listings_ids, raw)
+        C = check_calendar(listings_ids, raw)
         df_n = pd.read_csv(
-            RAW / "listings.csv.gz",
+            raw / "listings.csv.gz",
             compression="gzip",
             usecols=["neighbourhood_cleansed"],
             low_memory=False,
         )
-        N = check_neighbourhoods(df_n["neighbourhood_cleansed"])
+        N = check_neighbourhoods(df_n["neighbourhood_cleansed"], raw)
 
         md = render_markdown(L, R, C, N)
         out = REPORTS_DIR / "key_integrity.md"

@@ -22,10 +22,15 @@ from ..paths import ROOT
 router = APIRouter(prefix="/analytics", tags=["analytics"])
 
 # ── Artifact paths ─────────────────────────────────────────────────────────────
-TABLES   = ROOT / "reports" / "tables"
-REPORTS  = ROOT / "reports"
-PARQUET  = ROOT / "data" / "processed" / "london" / "listing_master.parquet"
-WAREHOUSE = ROOT / "data" / "processed" / "london" / "warehouse.duckdb"
+TABLES  = ROOT / "reports" / "tables"
+REPORTS = ROOT / "reports"
+
+# City-aware path helpers — never hardcode a city name at module level
+def _parquet(city: str) -> Path:
+    return ROOT / "data" / "processed" / city / "listing_master.parquet"
+
+def _warehouse(city: str) -> Path:
+    return ROOT / "data" / "processed" / city / "warehouse.duckdb"
 
 # Convenience alias for the tables directory
 def _t(name: str) -> Path:
@@ -116,6 +121,7 @@ def availability_bands() -> list[dict]:
 
 @router.get("/listings/search", summary="Live parquet search with optional filters")
 def search_listings(
+    city:           Annotated[str, Query()] = "london",
     room_type:      Annotated[str | None, Query()] = None,
     neighbourhood:  Annotated[str | None, Query()] = None,
     min_price:      Annotated[float | None, Query(ge=0)] = None,
@@ -125,7 +131,8 @@ def search_listings(
     limit:          Annotated[int, Query(ge=1, le=200)] = 20,
 ) -> list[dict]:
     """Filter listing_master.parquet via DuckDB. Returns up to `limit` rows."""
-    must_exist(PARQUET)
+    parquet = _parquet(city)
+    must_exist(parquet)
 
     # Build WHERE clause with positional ? placeholders for safe parameterisation
     clauses: list[str] = []
@@ -159,7 +166,7 @@ def search_listings(
         "price_numeric, review_scores_rating, number_of_reviews, "
         "availability_365, host_is_superhost, latitude, longitude"
     )
-    parquet_str = str(PARQUET).replace("\\", "/")
+    parquet_str = str(parquet).replace("\\", "/")
     sql = f"SELECT {cols} FROM read_parquet('{parquet_str}') {where} LIMIT {limit}"
 
     try:
@@ -172,12 +179,16 @@ def search_listings(
 
 
 @router.get("/listings/{listing_id}", summary="Single listing detail from parquet")
-def get_listing(listing_id: int) -> dict:
+def get_listing(
+    listing_id: int,
+    city: Annotated[str, Query()] = "london",
+) -> dict:
     """Fetch one listing by its Inside Airbnb numeric ID."""
-    must_exist(PARQUET)
+    parquet = _parquet(city)
+    must_exist(parquet)
     try:
         conn = duckdb.connect()
-        parquet_str = str(PARQUET).replace("\\", "/")
+        parquet_str = str(parquet).replace("\\", "/")
         df = conn.execute(
             f"SELECT * FROM read_parquet('{parquet_str}') WHERE id = ? LIMIT 1",
             [listing_id],
