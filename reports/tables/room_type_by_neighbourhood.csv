@@ -1,0 +1,34 @@
+neighbourhood_cleansed,entire_home,hotel_room,private_room,shared_room
+Barking and Dagenham,46.8,0.0,52.9,0.3
+Barnet,63.5,0.0,36.5,0.0
+Bexley,46.2,0.0,53.8,0.0
+Brent,59.5,0.0,40.3,0.2
+Bromley,57.5,0.0,42.4,0.1
+Camden,69.4,0.1,30.0,0.5
+City of London,85.8,0.0,14.0,0.2
+Croydon,52.4,0.1,47.4,0.2
+Ealing,55.7,0.0,44.1,0.3
+Enfield,48.6,1.0,50.4,0.0
+Greenwich,58.4,0.0,41.4,0.2
+Hackney,64.8,0.2,35.0,0.1
+Hammersmith and Fulham,72.3,0.2,27.4,0.2
+Haringey,54.6,0.0,45.0,0.4
+Harrow,49.0,0.0,50.6,0.4
+Havering,53.4,0.0,46.6,0.0
+Hillingdon,41.9,0.0,58.1,0.0
+Hounslow,56.6,0.1,43.1,0.1
+Islington,67.6,0.1,32.3,0.0
+Kensington and Chelsea,85.0,0.4,14.4,0.2
+Kingston upon Thames,59.3,0.0,40.7,0.0
+Lambeth,60.3,0.0,39.5,0.1
+Lewisham,57.3,0.0,42.3,0.4
+Merton,57.8,0.0,41.9,0.3
+Newham,55.7,0.1,44.0,0.3
+Redbridge,44.1,0.0,55.8,0.1
+Richmond upon Thames,67.3,0.1,32.6,0.0
+Southwark,60.5,0.1,39.3,0.2
+Sutton,52.4,0.0,47.6,0.0
+Tower Hamlets,59.1,0.0,40.7,0.2
+Waltham Forest,57.2,0.0,42.6,0.2
+Wandsworth,65.9,0.1,33.9,0.1
+Westminster,80.4,0.2,18.8,0.5

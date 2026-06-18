@@ -1,0 +1,34 @@
+neighbourhood,neighbourhood_group,area_km2,listing_count,unique_hosts,listings_per_km2
+Kingston upon Thames,,37.262,727,542,19.5
+Croydon,,86.496,1717,1167,19.9
+Bromley,,150.135,913,691,6.1
+Hounslow,,55.928,1340,951,24.0
+Ealing,,55.546,2391,1558,43.0
+Havering,,112.352,524,369,4.7
+Hillingdon,,115.704,998,594,8.6
+Harrow,,50.466,668,465,13.2
+Brent,,43.234,3019,1878,69.8
+Barnet,,86.75,2529,1574,29.2
+Enfield,,82.202,938,636,11.4
+Waltham Forest,,38.808,1955,1487,50.4
+Redbridge,,56.42,1008,659,17.9
+Sutton,,43.848,477,333,10.9
+Lambeth,,26.811,5190,3742,193.6
+Southwark,,28.863,5475,3813,189.7
+Lewisham,,35.15,2680,2054,76.2
+Greenwich,,47.335,2100,1512,44.4
+Bexley,,60.581,640,458,10.6
+Richmond upon Thames,,57.355,1290,1034,22.5
+Merton,,37.626,1550,1194,41.2
+Wandsworth,,34.266,4965,3638,144.9
+Hammersmith and Fulham,,16.398,4157,2689,253.5
+Kensington and Chelsea,,12.124,6401,3100,528.0
+City of London,,2.904,549,266,189.0
+Westminster,,21.488,11385,4597,529.8
+Camden,,21.79,6551,3449,300.6
+Tower Hamlets,,19.779,7469,4665,377.6
+Islington,,14.857,5036,3507,339.0
+Hackney,,19.05,6359,4864,333.8
+Haringey,,29.598,2598,1942,87.8
+Newham,,36.202,2522,1722,69.7
+Barking and Dagenham,,36.109,750,532,20.8
