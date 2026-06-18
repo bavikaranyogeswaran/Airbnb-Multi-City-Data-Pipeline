@@ -1,0 +1,16 @@
+neighbourhood_cleansed,listing_count,median_price,mean_price
+Merton,968,110.0,148.0
+Greenwich,1335,113.0,154.0
+Lambeth,2821,116.0,346.0
+Newham,1653,118.0,155.0
+Southwark,3218,122.0,174.0
+Hackney,3175,126.0,161.0
+Tower Hamlets,4275,127.0,431.0
+Richmond upon Thames,812,130.0,184.0
+Wandsworth,3012,140.0,198.0
+Islington,2756,141.0,218.0
+Hammersmith and Fulham,2669,144.0,199.0
+Camden,4330,160.0,217.0
+Westminster,8443,220.0,342.0
+Kensington and Chelsea,4768,225.0,336.0
+City of London,436,248.0,354.0
