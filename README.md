@@ -70,6 +70,21 @@ Triggers (in-process, sync):
 - `POST /familiarization/schema:annotate`
 - `POST /familiarization/key-integrity:rebuild`
 
+### Pipeline Orchestration (`src/api/routes/orchestration.py`)
+Single entry point. Stages: `ingest → profile → clean → transform → load → report`.
+Idempotent: once a snapshot lands in `dataset_version`, repeat runs are skipped unless `force=true`.
+
+Reads:
+- `GET /orchestration/runs?city=london&limit=20` — recent pipeline runs (one row per invocation)
+- `GET /orchestration/runs/{run_id}?city=london` — stage-level breakdown for one run
+- `GET /orchestration/dataset-versions?city=london` — registered snapshot versions with manifest SHA-256
+- `GET /orchestration/lineage` — source → warehouse data lineage (Markdown)
+
+Triggers:
+- `POST /orchestration/run?city=london&stages=all&force=false` — full pipeline (sync)
+- `POST /orchestration/run?stages=clean,transform` — subset (always runs, no gate)
+- `POST /orchestration/run?stages=all&force=true` — re-run even if registered
+
 ### Warehouse / Star Schema (`src/api/routes/warehouse.py`)
 DuckDB warehouse at `data/processed/london/warehouse.duckdb`. Five dim tables, three fact tables, and 5 analytical SQL queries auto-discovered from `sql/`.
 
