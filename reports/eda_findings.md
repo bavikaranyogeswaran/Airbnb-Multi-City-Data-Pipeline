@@ -1,10 +1,9 @@
-# EDA Key Findings — London Airbnb
+# EDA Key Findings — London & Amsterdam Airbnb
 
-**Snapshot date:** 2025-09-14  
 **Assessment:** Experne'c Pvt Ltd — Inside Airbnb Data Engineer Intern  
-**Notebook:** `notebooks/03_exploratory_data_analysis.ipynb`  
-**Generated:** 2026-06-18  
-**City:** London (one-city EDA; multi-city scale-out planned in Step 8)
+**Cities:** London (snapshot 2025-09-14) · Amsterdam (snapshot 2025-09-11)  
+**Notebooks:** `notebooks/03_exploratory_data_analysis.ipynb` (London) · `generate_amsterdam_eda.py` (Amsterdam)  
+**Updated:** 2026-06-18
 
 ---
 
@@ -298,11 +297,30 @@ The normalised distribution (Chart 26) shows Amsterdam has a heavier right tail 
 more listings priced at 2× or more the city median — consistent with fewer but
 more premium entire-home listings.
 
+**C-06 · Amsterdam non-superhosts rated higher (H2 reversal)**
+Hypothesis H2 (superhost → higher rating) holds for London but reverses in Amsterdam:
+Mann-Whitney test is significant (p < 0.001), but the direction is reversed — Amsterdam
+non-superhosts have a marginally higher median rating. Possible explanations: Amsterdam's
+regulatory filter already removes poor-quality hosts, compressing the rating distribution;
+superhost status may lag quality for newly-registered hosts who quickly reach 4.8+ ratings
+without yet accumulating enough reviews for the superhost badge.
+
+**C-07 · Regression explains less variance in Amsterdam (R² 0.47 vs 0.64)**
+The OLS model (room type + accommodates + bedrooms + rating + superhost + neighbourhood)
+explains 47% of log-price variance in Amsterdam vs 64% in London. Neighbourhood
+contributes less in Amsterdam — its 22 districts are geographically compact (all within
+~10 km of the centre), so location is a weaker price signal than in London's sprawling
+33-borough market.
+
 ### Limitations
 
 - Currency differences (EUR vs GBP) prevent direct nominal price comparison.
-- Amsterdam data is raw (no pipeline cleaning); London uses the fully processed parquet.
+- Both cities use fully processed parquet (as of 2026-06-18); earlier versions of this
+  document noted Amsterdam as "raw" — that is now superseded.
 - Only two cities available; six-city scale-out requires additional data ingestion.
-- Amsterdam's 44% price null rate (vs London's 36%) may reflect different listing practices.
+- Amsterdam's 44% price null rate (vs London's 36%) may reflect stricter listing practices
+  or hosts choosing not to publish a nightly rate.
+- Amsterdam statistical tests use a threshold of 50 listings/neighbourhood for H4
+  (vs 100 for London) due to the smaller market size.
 
-*Cross-city charts: `reports/figures/eda/24_cross_city_overview.png` through `27_host_concentration_comparison.png`*
+*Amsterdam EDA tables: `reports/tables/amsterdam/` · Cross-city tables: `reports/tables/city_comparison_summary.csv`, `room_type_city_comparison.csv`*

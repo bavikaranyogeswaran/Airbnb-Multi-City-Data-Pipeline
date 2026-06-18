@@ -1,6 +1,6 @@
 # Assumptions Log
 
-City: **London** · Snapshot: **2025-09-14**
+Cities: **London** (2025-09-14) · **Amsterdam** (2025-09-11)
 
 Every non-trivial choice the downstream pipeline depends on is recorded
 here as a numbered assumption. Each entry states what is assumed, the
@@ -255,3 +255,68 @@ Statuses:
 | A-028 | London has no neighbourhood_group | verified |
 | A-029 | EPSG:27700 for projected geometry | provisional |
 | A-030 | Duplicate review texts flagged, not deleted | verified |
+| A-031 | host_response_rate stored as fraction 0–1 (both cities) | verified |
+| A-032 | Amsterdam price null rate = 44% | verified |
+| A-033 | Amsterdam superhost "t"/"f" handled by parse_bool | verified |
+| A-034 | Amsterdam has 22 neighbourhoods, no borough grouping | verified |
+| A-035 | Amsterdam H2 reversal: non-superhosts rated higher | verified |
+| A-036 | `_gbp` suffix cosmetically wrong for Amsterdam EUR data | noted (D-022) |
+
+---
+
+## Amsterdam-specific assumptions (A-031 – A-036)
+
+### A-031 · `host_response_rate` stored as fraction 0–1, not percentage 0–100
+- **Reason:** `clean_percentage()` strips "%" and divides by 100, resulting in values 0–1
+  for both cities. Confirmed in EDA: Amsterdam values range 0.0–1.0, median 1.0.
+- **Risk:** Any code that bins response rates using a 0–100 scale will silently misclassify
+  all hosts into the lowest band. The EDA generation script uses 0–1 bins.
+- **Acted on in:** `generate_amsterdam_eda.py` response-rate band bins.
+- **Status:** verified.
+
+### A-032 · Amsterdam price null rate is 44% (vs London 36%)
+- **Reason:** Observed in Step 4 quality check: 4,606 of 10,480 listings have NULL
+  `price_numeric`. The cause is not known from the raw data alone; likely a mix of
+  listings without a set nightly rate and scraping gaps.
+- **Risk:** Price-based analyses use ~56% of supply. Conclusions should note this caveat.
+- **Acted on in:** `eda_findings.md` limitations section; regression uses price-eligible rows only.
+- **Status:** verified.
+
+### A-033 · Amsterdam raw superhost column uses "t"/"f" strings
+- **Reason:** Amsterdam `listings.csv.gz` stores `host_is_superhost` as literal "t" or "f"
+  (as opposed to London's Python True/False booleans). `parse_bool()` in `transforms.py`
+  handles both formats, so no code change was needed.
+- **Risk:** Any raw-file reader that bypasses `parse_bool` will read "t"/"f" as strings,
+  not booleans. Always use the cleaned parquet, not the raw CSV.
+- **Acted on in:** `src/cleaning/transforms.py::parse_bool` — handles "t"/"f", True/False, 1/0.
+- **Status:** verified.
+
+### A-034 · Amsterdam has 22 neighbourhoods with no borough group hierarchy
+- **Reason:** Amsterdam's `neighbourhoods.csv` and GeoJSON have 22 district entries with no
+  `neighbourhood_group` field (unlike London's inner/outer borough grouping).
+  `dim_neighbourhood.neighbourhood_group` is NULL for all Amsterdam rows.
+- **Risk:** Any report that groups by `neighbourhood_group` will produce a single NULL bucket
+  for Amsterdam. Cross-city neighbourhood comparisons must use the raw neighbourhood name.
+- **Acted on in:** `neighbourhood_density.csv` generated with `neighbourhood_group=NULL`.
+- **Status:** verified.
+
+### A-035 · Amsterdam H2: non-superhosts rated higher than superhosts (reversal)
+- **Reason:** Mann-Whitney test on review_scores_rating (superhost vs non-superhost) is
+  statistically significant (p < 0.001) but the direction is reversed vs London. Amsterdam
+  non-superhosts have a marginally higher median rating. Hypothesis: Amsterdam's regulatory
+  filter already removes low-quality hosts, compressing the rating distribution so that
+  superhost status is not a reliable quality differentiator.
+- **Risk:** Using superhost status as a quality proxy will be misleading for Amsterdam.
+  Cross-city models should not assume superhost → higher rating.
+- **Acted on in:** `hypothesis_test_results.csv` (amsterdam) conclusion field.
+- **Status:** verified.
+
+### A-036 · Three derived columns carry a `_gbp` suffix that is wrong for Amsterdam EUR data
+- **Reason:** `revenue_proxy_gbp`, `price_per_bedroom_gbp`, and `neighbourhood_median_price_gbp`
+  in `listing_master.parquet` are named from the London-first implementation. For Amsterdam
+  the values are in EUR, making the suffix cosmetically misleading. The `currency_code`
+  column is the authoritative currency indicator.
+- **Risk:** Anyone reading the column name in isolation will assume GBP. Code that infers
+  currency from the column name (rather than `currency_code`) will be wrong for Amsterdam.
+- **Acted on in:** `src/transformation/listing_master.py` docstring note; `engineering_decisions.md` D-022.
+- **Status:** noted (D-022).
