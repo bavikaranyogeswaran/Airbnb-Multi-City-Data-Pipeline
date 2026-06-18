@@ -32,9 +32,13 @@ def _parquet(city: str) -> Path:
 def _warehouse(city: str) -> Path:
     return ROOT / "data" / "processed" / city / "warehouse.duckdb"
 
-# Convenience alias for the tables directory
-def _t(name: str) -> Path:
-    return TABLES / name
+# City-aware table path helper.
+# London EDA artifacts live directly in reports/tables/ (notebook output location).
+# Other cities use a reports/tables/<city>/ subfolder — created when that city's EDA runs.
+def _t(name: str, city: str = "london") -> Path:
+    if city == "london":
+        return TABLES / name
+    return TABLES / city / name
 
 
 # ── Index ──────────────────────────────────────────────────────────────────────
@@ -95,28 +99,35 @@ def analytics_index() -> dict:
 # ── Listing endpoints ──────────────────────────────────────────────────────────
 
 @router.get("/listings/numerical-summary", summary="Descriptive stats for all numeric columns")
-def listings_numerical_summary() -> list[dict]:
-    return csv_to_records(_t("numerical_summary.csv"))
+def listings_numerical_summary(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("numerical_summary.csv", city))
 
 
 @router.get("/listings/price-by-room-type", summary="Price metrics per room type")
-def price_by_room_type() -> list[dict]:
-    return csv_to_records(_t("price_by_room_type.csv"))
+def price_by_room_type(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("price_by_room_type.csv", city))
 
 
 @router.get("/listings/price-by-neighbourhood", summary="Price metrics per borough (sorted by median)")
 def price_by_neighbourhood(
+    city:  Annotated[str, Query()] = "london",
     top_n: Annotated[int, Query(ge=1, le=50)] = 33,
 ) -> list[dict]:
-    rows = csv_to_records(_t("price_by_neighbourhood.csv"))
+    rows = csv_to_records(_t("price_by_neighbourhood.csv", city))
     # Sort by median descending so the caller gets the most expensive boroughs first
     rows.sort(key=lambda r: r.get("median_price") or 0, reverse=True)
     return rows[:top_n]
 
 
 @router.get("/listings/availability-bands", summary="Listings grouped by annual availability band")
-def availability_bands() -> list[dict]:
-    return csv_to_records(_t("availability_band_summary.csv"))
+def availability_bands(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("availability_band_summary.csv", city))
 
 
 @router.get("/listings/search", summary="Live parquet search with optional filters")
@@ -173,7 +184,10 @@ def search_listings(
         conn = duckdb.connect()
         df = conn.execute(sql, params).df()
         conn.close()
-        return df.where(pd.notna(df), None).to_dict(orient="records")
+        return [
+            {k: v if pd.notna(v) else None for k, v in r.items()}
+            for r in df.to_dict(orient="records")
+        ]
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"{type(e).__name__}: {e}")
 
@@ -199,118 +213,151 @@ def get_listing(
 
     if df.empty:
         raise HTTPException(status_code=404, detail=f"Listing {listing_id} not found.")
-    row = df.iloc[0].where(pd.notna(df.iloc[0]), None).to_dict()
-    return row
+    return {k: v if pd.notna(v) else None for k, v in df.iloc[0].to_dict().items()}
 
 
 # ── Host endpoints ─────────────────────────────────────────────────────────────
 
 @router.get("/hosts/segments", summary="Host segment distribution (solo / multi / professional)")
-def host_segments() -> list[dict]:
-    return csv_to_records(_t("host_segment_summary.csv"))
+def host_segments(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("host_segment_summary.csv", city))
 
 
 @router.get("/hosts/tenure", summary="Host tenure distribution by registration year bucket")
-def host_tenure() -> list[dict]:
-    return csv_to_records(_t("host_tenure_summary.csv"))
+def host_tenure(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("host_tenure_summary.csv", city))
 
 
 @router.get("/hosts/response-rates", summary="Host response rate distribution by segment")
-def host_response_rates() -> list[dict]:
-    return csv_to_records(_t("response_rate_summary.csv"))
+def host_response_rates(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("response_rate_summary.csv", city))
 
 
 # ── Market endpoints ───────────────────────────────────────────────────────────
 
 @router.get("/market/concentration", summary="Market concentration — Gini and top-N host share")
-def market_concentration() -> list[dict]:
-    return csv_to_records(_t("market_concentration.csv"))
+def market_concentration(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("market_concentration.csv", city))
 
 
 # ── Geographic endpoints ───────────────────────────────────────────────────────
 
 @router.get("/geographic/density", summary="Listing density and price per borough")
-def geographic_density() -> list[dict]:
-    return csv_to_records(_t("neighbourhood_density.csv"))
+def geographic_density(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("neighbourhood_density.csv", city))
 
 
 @router.get("/geographic/price-by-distance", summary="Median price by distance band from city centre")
-def price_by_distance() -> list[dict]:
-    return csv_to_records(_t("price_by_distance_band.csv"))
+def price_by_distance(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("price_by_distance_band.csv", city))
 
 
 @router.get("/geographic/room-type-mix", summary="Room-type share per borough")
-def room_type_mix() -> list[dict]:
-    return csv_to_records(_t("room_type_by_neighbourhood.csv"))
+def room_type_mix(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("room_type_by_neighbourhood.csv", city))
 
 
 # ── Temporal endpoints ─────────────────────────────────────────────────────────
 
 @router.get("/temporal/availability", summary="Monthly availability rate across the year")
-def temporal_availability() -> list[dict]:
-    return csv_to_records(_t("monthly_availability.csv"))
+def temporal_availability(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("monthly_availability.csv", city))
 
 
 @router.get("/temporal/reviews", summary="Monthly review volume (proxy for bookings)")
-def temporal_reviews() -> list[dict]:
-    return csv_to_records(_t("monthly_review_volume.csv"))
+def temporal_reviews(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("monthly_review_volume.csv", city))
 
 
 @router.get("/temporal/minimum-nights", summary="Monthly minimum-nights requirement trends")
-def temporal_minimum_nights() -> list[dict]:
-    return csv_to_records(_t("minimum_nights_monthly.csv"))
+def temporal_minimum_nights(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("minimum_nights_monthly.csv", city))
 
 
 @router.get("/temporal/weekday-vs-weekend", summary="Weekday vs weekend availability rates")
-def temporal_weekday_weekend() -> list[dict]:
-    return csv_to_records(_t("weekday_weekend_availability.csv"))
+def temporal_weekday_weekend(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("weekday_weekend_availability.csv", city))
 
 
 @router.get("/temporal/seasonal", summary="Seasonal availability and review summary per listing")
-def temporal_seasonal() -> list[dict]:
-    return csv_to_records(_t("temporal_summary.csv"))
+def temporal_seasonal(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("temporal_summary.csv", city))
 
 
 # ── Review endpoints ───────────────────────────────────────────────────────────
 
 @router.get("/reviews/summary", summary="Review score summary statistics")
-def reviews_summary() -> list[dict]:
-    return csv_to_records(_t("review_summary.csv"))
+def reviews_summary(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("review_summary.csv", city))
 
 
 @router.get("/reviews/subdimensions", summary="Subdimension review score medians by room type")
-def reviews_subdimensions() -> list[dict]:
-    return csv_to_records(_t("review_subdimension_summary.csv"))
+def reviews_subdimensions(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("review_subdimension_summary.csv", city))
 
 
 @router.get("/reviews/anomalies", summary="High-review / low-score anomaly listings")
 def reviews_anomalies(
+    city:  Annotated[str, Query()] = "london",
     limit: Annotated[int, Query(ge=1, le=500)] = 50,
 ) -> list[dict]:
-    rows = csv_to_records(_t("high_review_low_score_listings.csv"))
+    rows = csv_to_records(_t("high_review_low_score_listings.csv", city))
     return rows[:limit]
 
 
 # ── Statistical analysis endpoints ────────────────────────────────────────────
 
 @router.get("/stats/hypothesis-tests", summary="All five hypothesis test results")
-def hypothesis_tests() -> list[dict]:
-    return csv_to_records(_t("hypothesis_test_results.csv"))
+def hypothesis_tests(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("hypothesis_test_results.csv", city))
 
 
 @router.get("/stats/regression/coefficients", summary="OLS regression coefficients with CI")
 def regression_coefficients(
+    city:                  Annotated[str, Query()] = "london",
     exclude_neighbourhood: Annotated[bool, Query()] = False,
 ) -> list[dict]:
-    rows = csv_to_records(_t("regression_coefficients.csv"))
+    rows = csv_to_records(_t("regression_coefficients.csv", city))
     if exclude_neighbourhood:
         rows = [r for r in rows if not str(r.get("Unnamed: 0", "")).startswith("C(neighbourhood")]
     return rows
 
 
 @router.get("/stats/regression/summary", summary="OLS model-level fit metrics (R², F-stat, n)")
-def regression_summary() -> list[dict]:
-    return csv_to_records(_t("regression_summary.csv"))
+def regression_summary(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("regression_summary.csv", city))
 
 
 # ── City comparison endpoints ──────────────────────────────────────────────────
