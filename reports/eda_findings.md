@@ -246,3 +246,63 @@ Each finding follows the Section 11 framework: Question → Evidence → Interpr
 
 *This document was generated programmatically from `notebooks/03_exploratory_data_analysis.ipynb`.*  
 *All figures referenced are stored in `reports/figures/eda/`; all tables in `reports/tables/`.*
+---
+
+## 11. Two-City Comparison: London vs Amsterdam (Step 8)
+
+**Note:** Only two cities are currently downloaded. The framework is designed to
+scale to six cities once additional snapshots are ingested.
+
+### City Overview
+
+| Metric | Amsterdam (EUR) | London (GBP) |
+|--------|----------------|-------------|
+| Snapshot date | 2025-09-11 | 2025-09-14 |
+| Total listings | 10,480 | 96,871 |
+| Unique hosts | 9,201 | 55,646 |
+| Median price (local currency) | 222 | 135 |
+| Median availability (days/yr) | 20 | 96 |
+| Entire home share | 81.7% | 64.9% |
+| Commercial host share (21+) | 0.8% | 15.2% |
+| Superhost rate | 18.0% | 18.1% |
+| Median review score | 4.92 | 4.83 |
+| Top-1% host supply share | 7.1% | 19.3% |
+| Top-10% host supply share | 21.0% | 42.9% |
+
+### Key Cross-City Findings
+
+**C-01 · Amsterdam is heavily entire-home dominant**
+Amsterdam is 82% entire homes vs London's 65%.
+This likely reflects Amsterdam's stricter short-stay registration rules, which push
+casual room-sharing out and leave only committed entire-home operators on the platform.
+
+**C-02 · Amsterdam has far less professional-operator concentration**
+Commercial hosts (21+ listings) account for only 0.8% of Amsterdam supply vs
+15.2% in London. Top-1% host supply share: Amsterdam 7.1% vs London 19.3%.
+London's market is structurally more concentrated — resembling a managed-property market.
+
+**C-03 · Amsterdam listings are much less available**
+Median availability_365 is only 20 days in Amsterdam vs 96 days in London.
+This is consistent with Amsterdam's 30-night-per-year short-stay cap, which forces
+hosts to block the majority of the calendar.
+
+**C-04 · Amsterdam scores higher on review quality**
+Median overall rating: Amsterdam 4.92 vs London 4.83.
+With far fewer active listings (regulation effect), Amsterdam's supply is skewed
+toward experienced, high-quality operators who survived the regulatory filter.
+
+**C-05 · Price comparison requires city-median normalisation**
+Amsterdam median is EUR 222 vs London GBP 135. These are not directly
+comparable (different currencies, purchasing power, and regulatory environments).
+The normalised distribution (Chart 26) shows Amsterdam has a heavier right tail —
+more listings priced at 2× or more the city median — consistent with fewer but
+more premium entire-home listings.
+
+### Limitations
+
+- Currency differences (EUR vs GBP) prevent direct nominal price comparison.
+- Amsterdam data is raw (no pipeline cleaning); London uses the fully processed parquet.
+- Only two cities available; six-city scale-out requires additional data ingestion.
+- Amsterdam's 44% price null rate (vs London's 36%) may reflect different listing practices.
+
+*Cross-city charts: `reports/figures/eda/24_cross_city_overview.png` through `27_host_concentration_comparison.png`*
