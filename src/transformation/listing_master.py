@@ -15,6 +15,10 @@ Derives:
   revenue_proxy_gbp          = price_numeric * unavailable_days      (A-002, A-005, A-011)
   active_supply              = has_availability AND NOT is_de_facto_inactive
 
+Note: three columns carry a `_gbp` suffix (revenue_proxy_gbp, price_per_bedroom_gbp,
+neighbourhood_median_price_gbp). The suffix is cosmetically wrong for non-GBP cities —
+the actual currency is in the `currency_code` column. See D-022 in engineering_decisions.md.
+
 Output: data/processed/<city>/listing_master.parquet
 """
 

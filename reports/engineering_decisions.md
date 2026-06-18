@@ -136,13 +136,13 @@ can reference `D-NNN`.
 - **Trade-offs.** Adds two columns to dim_listing. Cheap.
 - **Future.** None — clean separation.
 
-### D-015 · Currency hard-coded as `GBP` for London
-- **Problem.** Source price field is stored as `$X.XX` even though London is GBP — a scraping artefact.
-- **Options considered.** Trust the symbol, hard-code from config, infer from listing geography.
-- **Selected.** Hard-code `currency_code = 'GBP'` for London from `config/cities.yml`.
-- **Reason.** The `$` in the source file is a layout convention, not a currency. Cross-city pipelines per A-010 must use the city's currency.
-- **Trade-offs.** Adding a new city requires explicit `currency_code` in `config/cities.yml`.
-- **Future.** Cross-city analysis layer will FX-convert at query time.
+### D-015 · Currency code read from `config/cities.yml`, not hard-coded
+- **Problem.** Source price field is stored as `$X.XX` for all cities regardless of local currency — a scraping artefact. Initial implementation hard-coded `"GBP"` in the cleaning layer.
+- **Options considered.** Trust the dollar symbol, hard-code per file, read from a central config.
+- **Selected.** `clean(df, currency_code)` receives the value from `cities.yml` via `run(city)`. London → `GBP`, Amsterdam → `EUR`. The default argument (`"GBP"`) preserves backward compatibility for unit tests that call `clean(df)` directly.
+- **Reason.** Single source of truth in config; adding a third city requires only a new `currency_code` entry in `cities.yml`, no code change.
+- **Trade-offs.** The three derived column names (`revenue_proxy_gbp`, `price_per_bedroom_gbp`, `neighbourhood_median_price_gbp`) still carry the `_gbp` suffix — see D-022.
+- **Future.** Cross-city analysis layer will FX-convert at query time using the stored `currency_code` column.
 
 ---
 
@@ -182,6 +182,20 @@ can reference `D-NNN`.
 
 These show up here because *not* doing them is itself a decision.
 
+### D-022 · `_gbp` suffix retained on derived price columns
+- **Problem.** Three columns in `listing_master.parquet` carry a `_gbp` suffix (`revenue_proxy_gbp`, `price_per_bedroom_gbp`, `neighbourhood_median_price_gbp`). After adding Amsterdam the suffix is misleading — Amsterdam values are in EUR.
+- **Options considered.**
+  - **A.** Rename columns to currency-neutral names (e.g. `revenue_proxy`, `price_per_bedroom`, `neighbourhood_median_price`) and rebuild both city datasets.
+  - **B.** Leave column names unchanged; document the mismatch here; rely on the `currency_code` column as the authoritative currency indicator.
+- **Selected.** Option B — leave names unchanged.
+- **Reason.** The column schema must be identical across cities so that cross-city analytics code, the EDA notebooks, and the warehouse SQL can reference stable column names. Renaming now while EDA artefacts and downstream CSVs already reference `revenue_proxy_gbp` would create churn with no analytical benefit. The `currency_code` column (`"GBP"` or `"EUR"`) is the correct place to read currency — the suffix is purely cosmetic.
+- **Trade-offs.** Anyone reading the parquet column name in isolation sees `_gbp` regardless of city. A code comment in `listing_master.py` flags this.
+- **Future.** On the next schema version bump (e.g. when a third currency is added), rename to `_local_currency` suffix and update all references in one coordinated change.
+
+---
+
+## Things deliberately deferred
+
 ### D-019 · No Docker container shipped
 - **Reason.** Adds environment-management overhead for what is currently a single-developer pipeline. The README's `pip install -r requirements.txt` works as documented.
 - **Future.** Containerise when a CI environment needs a reproducible build (likely Phase 2.1 of a real deployment).
@@ -214,7 +228,8 @@ These show up here because *not* doing them is itself a decision.
 | D-012 | INT_MAX sentinel → NULL | accepted |
 | D-013 | Null `price` excluded, not imputed | provisional |
 | D-014 | bathrooms_text canonical | accepted |
-| D-015 | GBP hard-code for London | accepted |
+| D-015 | Currency code from cities.yml (not hard-coded) | accepted |
+| D-022 | `_gbp` suffix retained on derived price columns | accepted (cosmetic, see note) |
 | D-016 | Pytest + custom plugin | accepted |
 | D-017 | Heuristic rule_category | accepted |
 | D-018 | EPSG:27700 for projected geometry | accepted |
