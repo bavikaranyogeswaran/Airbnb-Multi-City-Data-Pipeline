@@ -20,10 +20,12 @@ def test_dim_neighbourhood_area_positive(warehouse_con):
     assert n == 0, f"{n} neighbourhoods have non-positive area_km2"
 
 
-def test_dim_neighbourhood_count_matches_source(warehouse_con):
-    # London has exactly 33 boroughs in this snapshot (A-028).
+def test_dim_neighbourhood_count_matches_source(warehouse_con, city):
+    # City-specific neighbourhood counts from the source CSV (A-028).
+    expected = {"london": 33, "amsterdam": 22}
     n = warehouse_con.execute("SELECT COUNT(*) FROM dim_neighbourhood").fetchone()[0]
-    assert n == 33, f"expected 33 boroughs, got {n}"
+    exp = expected.get(city, n)   # unknown city: skip the exact check
+    assert n == exp, f"expected {exp} neighbourhoods for {city}, got {n}"
 
 
 def test_dim_host_unique_source_id(warehouse_con):

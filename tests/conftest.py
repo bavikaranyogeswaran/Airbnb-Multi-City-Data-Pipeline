@@ -1,8 +1,8 @@
 """Shared pytest fixtures.
 
-The fixtures point at the warehouse DuckDB file. Tests that need raw
-parquet read it directly. All tests are read-only — they never write
-to the warehouse.
+warehouse_con is parametrized over all known cities so every warehouse
+test runs against both London and Amsterdam automatically. Tests that
+need raw parquet read it directly. All tests are read-only.
 """
 
 from __future__ import annotations
@@ -13,20 +13,30 @@ import duckdb
 import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
-WAREHOUSE_PATH = ROOT / "data" / "processed" / "london" / "warehouse.duckdb"
+
+# Minimum rows expected in fact_listing_snapshot per city.
+# Lets warehouse row-count tests use a city-appropriate threshold.
+MIN_LISTING_ROWS = {
+    "london":    50_000,
+    "amsterdam":  5_000,
+}
+
+
+def _warehouse_path(city: str) -> Path:
+    return ROOT / "data" / "processed" / city / "warehouse.duckdb"
+
+
+@pytest.fixture(scope="session", params=["london", "amsterdam"])
+def city(request) -> str:
+    return request.param
 
 
 @pytest.fixture(scope="session")
-def warehouse_con():
-    # Skip the whole suite cleanly if the warehouse hasn't been built yet.
-    if not WAREHOUSE_PATH.exists():
-        pytest.skip(f"warehouse not built at {WAREHOUSE_PATH}; run the load stage first")
-    con = duckdb.connect(str(WAREHOUSE_PATH), read_only=True)
+def warehouse_con(city):
+    """Open a read-only DuckDB connection for the given city's warehouse."""
+    path = _warehouse_path(city)
+    if not path.exists():
+        pytest.skip(f"warehouse not built for {city}; run the load stage first")
+    con = duckdb.connect(str(path), read_only=True)
     yield con
     con.close()
-
-
-@pytest.fixture(scope="session")
-def city() -> str:
-    # Single-city for now; cross-city tests would parametrize this.
-    return "london"

@@ -99,9 +99,11 @@ def test_warehouse_tables_present_and_non_empty(warehouse_con):
     assert not missing, f"SQL build missing tables: {missing}"
 
 
-def test_fact_listing_snapshot_has_rows(warehouse_con):
+def test_fact_listing_snapshot_has_rows(warehouse_con, city):
+    from tests.conftest import MIN_LISTING_ROWS
     n = warehouse_con.execute("SELECT COUNT(*) FROM fact_listing_snapshot").fetchone()[0]
-    assert n > 50_000, f"expected 50k+ listing rows, got {n}"
+    min_rows = MIN_LISTING_ROWS.get(city, 1_000)
+    assert n > min_rows, f"expected >{min_rows} rows for {city}, got {n}"
 
 
 def test_dim_listing_price_non_negative(warehouse_con):
