@@ -71,8 +71,9 @@ def test_clean_function_has_correct_signature():
     from src.cleaning.listings import clean
     sig = inspect.signature(clean)
     params = list(sig.parameters)
-    # clean(df) takes a DataFrame and returns (clean_df, rejected_df)
+    # clean(df, currency_code) — currency_code defaults to "GBP" for backward compat
     assert "df" in params
+    assert "currency_code" in params
 
 
 def test_run_functions_accept_city_parameter():

@@ -60,8 +60,12 @@ STRING_TRIM_COLUMNS = [
 ]
 
 
-def clean(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Return (clean_df, rejected_df)."""
+def clean(df: pd.DataFrame, currency_code: str = "GBP") -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Return (clean_df, rejected_df).
+
+    currency_code: ISO 4217 code read from cities.yml; defaults to GBP for
+    backward-compat but callers should always pass the city-specific value.
+    """
     df = df.copy()
 
     # Drop columns
@@ -73,7 +77,7 @@ def clean(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     if "price" in df.columns:
         df["price_raw"] = df["price"].astype("string")
         df["price_numeric"] = T.clean_price(df["price"]).astype("Float64")
-        df["currency_code"] = "GBP"  # A-010
+        df["currency_code"] = currency_code  # A-010: sourced from cities.yml
         df = df.drop(columns="price")
 
     # Dates
@@ -172,9 +176,10 @@ def run(city: str = "london") -> dict:
         out_dir = PROCESSED_BASE / city
         out_dir.mkdir(parents=True, exist_ok=True)
 
+        currency_code = city_cfg.get("currency_code", "GBP")
         df = pd.read_csv(raw, compression="gzip", low_memory=False)
         original_cols = list(df.columns)
-        clean_df, rejected = clean(df)
+        clean_df, rejected = clean(df, currency_code=currency_code)
 
         clean_out = out_dir / "listings_clean.parquet"
         rejected_out = out_dir / "rejected_listings.parquet"
@@ -189,11 +194,11 @@ def run(city: str = "london") -> dict:
         outputs=[clean_out, rejected_out],
         summary={
             "city": city,
-            "input_rows": int(len(df)),
-            "input_columns": int(len(original_cols)),
-            "clean_rows": int(len(clean_df)),
-            "clean_columns": int(clean_df.shape[1]),
-            "rejected_rows": int(len(rejected)),
+            "input_rows": len(df),
+            "input_columns": len(original_cols),
+            "clean_rows": len(clean_df),
+            "clean_columns": clean_df.shape[1],
+            "rejected_rows": len(rejected),
             "dropped_columns": sorted(c for c in DROP_COLUMNS if c in original_cols),
             "derived_columns": [
                 "price_raw", "price_numeric", "currency_code",
