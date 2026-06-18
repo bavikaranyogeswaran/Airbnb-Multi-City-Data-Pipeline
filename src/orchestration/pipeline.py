@@ -47,7 +47,7 @@ from src.transformation import (
     neighbourhood_summary,
     review_summary,
 )
-from src.validation import quality_report
+from src.validation import quality_report, quality_tests
 from src.orchestration import metadata as meta
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -92,6 +92,11 @@ STAGE_STEPS: dict[str, list[tuple[str, Callable]]] = {
     "load":      [
         ("dimensions",       lambda city, force: wh.build_dimensions(city)),
         ("facts",            lambda city, force: wh.build_facts(city)),
+    ],
+    # Test stage runs the pytest suite against the freshly-loaded warehouse
+    # and persists per-test results into data_quality_result.
+    "test":      [
+        ("quality_tests",    lambda city, force: quality_tests.run(city=city)),
     ],
     "report":    [
         ("quality_report",   lambda city, force: quality_report.run(city=city)),

@@ -70,6 +70,17 @@ Triggers (in-process, sync):
 - `POST /familiarization/schema:annotate`
 - `POST /familiarization/key-integrity:rebuild`
 
+### Quality Checks (`src/api/routes/quality.py`)
+Pytest-driven data-quality suite (`tests/test_*_quality.py`). Results land in `data_quality_result` inside the warehouse.
+
+Reads:
+- `GET /quality/runs?city=london&limit=20` — past runs with pass/fail counts
+- `GET /quality/runs/{run_id}?city=london` — per-test detail for one run
+- `GET /quality/latest?city=london` — per-test detail from the most recent run
+
+Triggers:
+- `POST /quality/run?city=london` — execute the full suite (sync, ~2s)
+
 ### Pipeline Orchestration (`src/api/routes/orchestration.py`)
 Single entry point. Stages: `ingest → profile → clean → transform → load → report`.
 Idempotent: once a snapshot lands in `dataset_version`, repeat runs are skipped unless `force=true`.

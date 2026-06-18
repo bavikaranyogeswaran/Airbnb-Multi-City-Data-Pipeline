@@ -143,12 +143,13 @@ def build_dimensions(city: str) -> dict:
         """)
 
         # --- dim_date ---
-        # Covers earliest review (2010-01-01) through calendar end + buffer (2027-01-01).
+        # Some London listings have first_review back to 2009-12; start in 2008
+        # to leave a small safety margin. End in 2027 covers the calendar window.
         con.execute("DROP TABLE IF EXISTS dim_date;")
         con.execute("""
             CREATE TABLE dim_date AS
             WITH days AS (
-                SELECT UNNEST(GENERATE_SERIES(DATE '2010-01-01', DATE '2027-01-01', INTERVAL 1 DAY)) AS d
+                SELECT UNNEST(GENERATE_SERIES(DATE '2008-01-01', DATE '2027-01-01', INTERVAL 1 DAY)) AS d
             )
             SELECT
                 CAST(STRFTIME(d, '%Y%m%d') AS INT)   AS date_key,

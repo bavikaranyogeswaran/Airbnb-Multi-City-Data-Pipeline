@@ -18,18 +18,18 @@ from fastapi.responses import RedirectResponse
 
 from .routes import (
     cities, cleaning, enrichment, familiarization,
-    ingestion, orchestration, warehouse,
+    ingestion, orchestration, quality, warehouse,
 )
 
 app = FastAPI(
     title="Inside Airbnb · London Pipeline",
-    version="0.6.0",
+    version="0.7.0",
     description=(
         "FastAPI surface over Familiarization, Ingestion & Profiling, "
-        "Cleaning, Enrichment, Warehouse, and end-to-end Orchestration. "
-        "Read endpoints serve generated artifacts; trigger endpoints "
-        "re-run the underlying `run()` functions in-process. Heavy "
-        "steps may block 1–2 min."
+        "Cleaning, Enrichment, Warehouse, Quality Tests, and end-to-end "
+        "Orchestration. Read endpoints serve generated artifacts; "
+        "trigger endpoints re-run the underlying `run()` functions "
+        "in-process. Heavy steps may block 1–2 min."
     ),
 )
 
@@ -40,6 +40,7 @@ app.include_router(ingestion.router)
 app.include_router(cleaning.router)
 app.include_router(enrichment.router)
 app.include_router(warehouse.router)
+app.include_router(quality.router)
 app.include_router(orchestration.router)
 
 
@@ -67,6 +68,7 @@ def index() -> dict:
             "cleaning":          "/cleaning",
             "enrichment":        "/enrichment",
             "warehouse":         "/warehouse",
+            "quality":           "/quality",
             "orchestration":     "/orchestration",
         },
     }
