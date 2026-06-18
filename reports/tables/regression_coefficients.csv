@@ -1,0 +1,41 @@
+,coefficient,std_err,t_stat,p_value,ci_low,ci_high,significant
+Intercept,3.840955,0.030862,124.456993,0.0,3.780467,3.901442,True
+C(room_type)[T.hotel_room],-0.126908,0.121675,-1.043005,0.296946,-0.365387,0.111571,False
+C(room_type)[T.private_room],-0.610913,0.005877,-103.955094,0.0,-0.622432,-0.599395,True
+C(room_type)[T.shared_room],-1.36883,0.085734,-15.966077,0.0,-1.536865,-1.200795,True
+C(neighbourhood_cleansed)[T.Barnet],0.12039,0.020514,5.868687,0.0,0.080183,0.160596,True
+C(neighbourhood_cleansed)[T.Bexley],-0.051922,0.025802,-2.012334,0.044185,-0.102494,-0.001351,True
+C(neighbourhood_cleansed)[T.Brent],0.252915,0.021539,11.742296,0.0,0.2107,0.295131,True
+C(neighbourhood_cleansed)[T.Bromley],0.047352,0.024899,1.901802,0.057197,-0.001448,0.096153,False
+C(neighbourhood_cleansed)[T.Camden],0.554192,0.019438,28.510908,0.0,0.516095,0.59229,True
+C(neighbourhood_cleansed)[T.City of London],0.845292,0.032395,26.093371,0.0,0.781799,0.908785,True
+C(neighbourhood_cleansed)[T.Croydon],-0.013261,0.022047,-0.601478,0.547522,-0.056472,0.029951,False
+C(neighbourhood_cleansed)[T.Ealing],0.15551,0.021039,7.391608,0.0,0.114275,0.196746,True
+C(neighbourhood_cleansed)[T.Enfield],0.060197,0.024343,2.472865,0.013403,0.012486,0.107909,True
+C(neighbourhood_cleansed)[T.Greenwich],0.172238,0.022859,7.534668,0.0,0.127435,0.217042,True
+C(neighbourhood_cleansed)[T.Hackney],0.334545,0.019586,17.080598,0.0,0.296157,0.372934,True
+C(neighbourhood_cleansed)[T.Hammersmith and Fulham],0.424354,0.020537,20.66291,0.0,0.384103,0.464606,True
+C(neighbourhood_cleansed)[T.Haringey],0.174616,0.022039,7.922955,0.0,0.13142,0.217812,True
+C(neighbourhood_cleansed)[T.Harrow],0.055147,0.026232,2.102303,0.035527,0.003734,0.10656,True
+C(neighbourhood_cleansed)[T.Havering],-0.069552,0.026679,-2.607033,0.009133,-0.121842,-0.017263,True
+C(neighbourhood_cleansed)[T.Hillingdon],0.134069,0.025985,5.159499,0.0,0.083139,0.184998,True
+C(neighbourhood_cleansed)[T.Hounslow],0.210587,0.025523,8.25076,0.0,0.160562,0.260612,True
+C(neighbourhood_cleansed)[T.Islington],0.460555,0.020194,22.806346,0.0,0.420975,0.500135,True
+C(neighbourhood_cleansed)[T.Kensington and Chelsea],0.755084,0.019815,38.106189,0.0,0.716246,0.793921,True
+C(neighbourhood_cleansed)[T.Kingston upon Thames],0.161718,0.025887,6.247029,0.0,0.11098,0.212456,True
+C(neighbourhood_cleansed)[T.Lambeth],0.350891,0.022871,15.342083,0.0,0.306065,0.395718,True
+C(neighbourhood_cleansed)[T.Lewisham],0.075322,0.021016,3.583986,0.000338,0.034131,0.116514,True
+C(neighbourhood_cleansed)[T.Merton],0.229129,0.024025,9.537097,0.0,0.182041,0.276217,True
+C(neighbourhood_cleansed)[T.Newham],0.259773,0.022017,11.79897,0.0,0.216621,0.302925,True
+C(neighbourhood_cleansed)[T.Redbridge],0.074993,0.027682,2.709047,0.006748,0.020736,0.12925,True
+C(neighbourhood_cleansed)[T.Richmond upon Thames],0.372274,0.023493,15.846496,0.0,0.32623,0.418319,True
+C(neighbourhood_cleansed)[T.Southwark],0.360575,0.020091,17.946899,0.0,0.321197,0.399953,True
+C(neighbourhood_cleansed)[T.Sutton],-0.064694,0.028022,-2.308712,0.02096,-0.119615,-0.009772,True
+C(neighbourhood_cleansed)[T.Tower Hamlets],0.376432,0.019461,19.343123,0.0,0.33829,0.414575,True
+C(neighbourhood_cleansed)[T.Waltham Forest],0.084443,0.02139,3.947815,7.9e-05,0.04252,0.126367,True
+C(neighbourhood_cleansed)[T.Wandsworth],0.392258,0.02021,19.409447,0.0,0.352648,0.431868,True
+C(neighbourhood_cleansed)[T.Westminster],0.741781,0.019112,38.812022,0.0,0.704322,0.77924,True
+accommodates,0.078422,0.002227,35.212555,0.0,0.074057,0.082787,True
+bedrooms,0.177913,0.004813,36.962711,0.0,0.168479,0.187347,True
+review_scores_rating,0.058043,0.005341,10.866544,0.0,0.047574,0.068512,True
+superhost_flag,0.061309,0.004427,13.850381,0.0,0.052634,0.069985,True

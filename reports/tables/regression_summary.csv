@@ -1,0 +1,8 @@
+metric,value
+R²,0.6375
+Adjusted R²,0.6372
+F-statistic,2038.2
+p(F),0.00e+00
+N observations,46801
+N parameters,40
+SE type,HC3 (heteroskedasticity-robust)
