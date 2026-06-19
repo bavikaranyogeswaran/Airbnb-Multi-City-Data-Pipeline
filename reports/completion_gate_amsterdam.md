@@ -1,6 +1,6 @@
 # Single-City Completion Gate — Amsterdam
 
-**Generated:** 2026-06-18 17:08 UTC  
+**Generated:** 2026-06-19 06:48 UTC  
 **Gate status:** OPEN — ready to scale  
 **Results:** 13 PASS · 0 WARN · 0 FAIL
 
@@ -17,8 +17,8 @@
 | 9 | stats_notebook | ✅ PASS | 04_statistical_analysis.ipynb: all 9 code cells executed |
 | 10 | api_endpoints | ✅ PASS | health=200, analytics index=200, price-by-room-type=200 (4 rows) |
 | 11 | tests_pass | ✅ PASS | 0 tests passed, 0 failures. (-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html) |
-| 12 | readme_commands | ✅ PASS | README.md present (791 words), contains: ['uvicorn', 'pytest', 'pip install'] |
-| 13 | decision_logs | ✅ PASS | All decision docs present: ['engineering_decisions.md (18.1KB)', 'assumptions_log.md (15.4KB)', 'eda_findings.md (22.9KB |
+| 12 | readme_commands | ✅ PASS | README.md present (1215 words), contains: ['uvicorn', 'pytest', 'pip install'] |
+| 13 | decision_logs | ✅ PASS | All decision docs present: ['engineering_decisions.md (18.1KB)', 'assumptions_log.md (19.5KB)', 'eda_findings.md (24.4KB |
 
 ## Details
 
@@ -103,14 +103,14 @@ health=200, analytics index=200, price-by-room-type=200 (4 rows)
 **Status:** ✅ PASS
 
 ```
-README.md present (791 words), contains: ['uvicorn', 'pytest', 'pip install']
+README.md present (1215 words), contains: ['uvicorn', 'pytest', 'pip install']
 ```
 
 ### 13. decision_logs
 **Status:** ✅ PASS
 
 ```
-All decision docs present: ['engineering_decisions.md (18.1KB)', 'assumptions_log.md (15.4KB)', 'eda_findings.md (22.9KB)']
+All decision docs present: ['engineering_decisions.md (18.1KB)', 'assumptions_log.md (19.5KB)', 'eda_findings.md (24.4KB)']
 ```
 
 ---

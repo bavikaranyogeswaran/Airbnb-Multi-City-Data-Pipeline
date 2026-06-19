@@ -14,6 +14,7 @@ Docs:
 from __future__ import annotations
 
 from fastapi import FastAPI, Query
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
 
 from .routes import (
@@ -35,6 +36,13 @@ app = FastAPI(
     ),
 )
 
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_methods=["GET"],
+    allow_headers=["*"],
+)
 
 app.include_router(cities.router)
 app.include_router(familiarization.router)
