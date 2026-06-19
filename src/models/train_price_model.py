@@ -28,7 +28,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import Ridge
-from sklearn.metrics import make_scorer, mean_absolute_error
+from sklearn.metrics import mean_absolute_error
 from sklearn.model_selection import (
     GroupKFold,
     GroupShuffleSplit,
@@ -246,7 +246,7 @@ def train(city: str = "london") -> dict:
     }
 
     cv = GroupKFold(n_splits=5)
-    currency_scorer = make_scorer(_currency_mae_scorer)
+    currency_scorer = _currency_mae_scorer  # callable (estimator, X, y) — no make_scorer wrapper
     cv_records = []
     best_name, best_mae, best_pipeline = None, float("inf"), None
 
