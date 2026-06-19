@@ -1,0 +1,46 @@
+{
+  "city": "london",
+  "dataset": "Inside Airbnb 2025-09-14",
+  "test_rows": 12163,
+  "train_rows": 49800,
+  "target": "log1p(price_numeric), back-transformed to GBP for all metrics",
+  "split": "GroupShuffleSplit(test_size=0.20) by host_id",
+  "best_model": "Gradient Boosting (LightGBM)",
+  "baselines": {
+    "global_median_mae": 126.25076050316534,
+    "room_type_mae": 108.9513277974184,
+    "neighbourhood_rt_mae": 103.97800707062402
+  },
+  "models": {
+    "Ridge": {
+      "test_mae": 165.63,
+      "test_rmse": 8755.31,
+      "test_mape": 77.86,
+      "test_r2_currency": -288.4238,
+      "test_r2_log": 0.6038,
+      "within_20pct": 42.2
+    },
+    "Random Forest": {
+      "test_mae": 80.28,
+      "test_rmse": 488.66,
+      "test_mape": 29.98,
+      "test_r2_currency": 0.0984,
+      "test_r2_log": 0.6597,
+      "within_20pct": 47.0
+    },
+    "Gradient Boosting": {
+      "test_mae": 77.47,
+      "test_rmse": 485.71,
+      "test_mape": 27.93,
+      "test_r2_currency": 0.1093,
+      "test_r2_log": 0.6902,
+      "within_20pct": 49.6
+    }
+  },
+  "notes": [
+    "Currency R2 is low because SS_tot is dominated by extreme luxury outliers (max \u00a330,812).",
+    "Log-scale R2 is the primary model quality metric for this dataset.",
+    "Ridge extrapolates beyond training range \u2014 predicted \u00a3962,299 for one \u00a3175 listing.",
+    "LightGBM predictions capped at training max, preventing extreme extrapolation."
+  ]
+}
