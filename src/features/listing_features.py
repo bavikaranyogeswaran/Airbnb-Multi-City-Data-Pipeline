@@ -27,7 +27,7 @@ AMENITY_FLAGS: dict[str, str] = {
     "dedicated workspace":"has_workspace",
     "gym":                "has_gym",
     "elevator":           "has_elevator",
-    " tv":                "has_tv",        # space-prefixed to avoid "activity" matches
+    "tv":                 "has_tv",
     "bathtub":            "has_bathtub",
     "dishwasher":         "has_dishwasher",
 }

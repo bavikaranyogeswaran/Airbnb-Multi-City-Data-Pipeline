@@ -35,7 +35,7 @@ from sklearn.model_selection import (
     cross_validate,
 )
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.preprocessing import OneHotEncoder, StandardScaler, TargetEncoder
 
 ROOT = Path(__file__).parent.parent.parent
 DATA = ROOT / "data" / "processed"
@@ -58,11 +58,14 @@ NUMERIC_FEATURES: list[str] = [
     "amenity_count",
 ]
 
-CATEGORICAL_FEATURES: list[str] = [
-    "room_type",
-    "neighbourhood_cleansed",
-    "property_type_bucket",
-]
+# Low cardinality (4–5 unique values) → OneHotEncoder
+OHE_FEATURES: list[str] = ["room_type", "property_type_bucket"]
+
+# High cardinality (33 London / 22 Amsterdam) → TargetEncoder fitted per CV fold.
+# TargetEncoder must live inside the sklearn Pipeline so it only sees training-fold
+# targets during cross-validation — computing target means on the full dataset before
+# splitting would leak validation-set price information into the features.
+TARGET_ENC_FEATURES: list[str] = ["neighbourhood_cleansed"]
 
 
 def _currency_mae_scorer(estimator, X, y_log):
@@ -102,21 +105,28 @@ def _get_lgbm():
 
 def _build_preprocessor(
     num_cols: list[str],
-    cat_cols: list[str],
+    ohe_cols: list[str],
+    target_enc_cols: list[str],
 ) -> ColumnTransformer:
     numeric_pipe = Pipeline([
         ("imputer", SimpleImputer(strategy="median")),
         ("scaler", StandardScaler()),
     ])
-    categorical_pipe = Pipeline([
+    ohe_pipe = Pipeline([
         ("imputer", SimpleImputer(strategy="most_frequent")),
         ("encoder", OneHotEncoder(handle_unknown="ignore", sparse_output=False)),
     ])
-    return ColumnTransformer(
-        [("numeric", numeric_pipe, num_cols),
-         ("categorical", categorical_pipe, cat_cols)],
-        remainder="drop",
-    )
+    # TargetEncoder replaces each neighbourhood with its mean log-price from the
+    # training fold. It handles unseen categories via global mean shrinkage.
+    target_enc_pipe = TargetEncoder(target_type="continuous", random_state=42)
+
+    transformers: list = [("numeric", numeric_pipe, num_cols)]
+    if ohe_cols:
+        transformers.append(("ohe_cat", ohe_pipe, ohe_cols))
+    if target_enc_cols:
+        transformers.append(("target_enc", target_enc_pipe, target_enc_cols))
+
+    return ColumnTransformer(transformers, remainder="drop")
 
 
 def _compute_test_metrics(
@@ -168,8 +178,9 @@ def train(city: str = "london") -> dict:
 
     # Resolve columns that actually exist in this city's feature matrix
     num_cols = [c for c in NUMERIC_FEATURES if c in df.columns]
-    cat_cols = [c for c in CATEGORICAL_FEATURES if c in df.columns]
-    feature_cols = num_cols + cat_cols
+    ohe_cols = [c for c in OHE_FEATURES if c in df.columns]
+    target_enc_cols = [c for c in TARGET_ENC_FEATURES if c in df.columns]
+    feature_cols = num_cols + ohe_cols + target_enc_cols
 
     X = df[feature_cols]
     y = df["log_price"].to_numpy()
@@ -186,8 +197,6 @@ def train(city: str = "london") -> dict:
     y_train, y_test = y[train_idx], y[test_idx]
     g_train = groups[train_idx]
     price_test = price_actual[test_idx]
-
-    preprocessor = _build_preprocessor(num_cols, cat_cols)
 
     # --- Naive baselines (no ML) ---
     global_median = np.median(np.expm1(y_train))
@@ -218,11 +227,11 @@ def train(city: str = "london") -> dict:
     # --- Model pipelines ---
     models_def = {
         "Ridge": Pipeline([
-            ("preprocessor", _build_preprocessor(num_cols, cat_cols)),
+            ("preprocessor", _build_preprocessor(num_cols, ohe_cols, target_enc_cols)),
             ("model", Ridge(alpha=10.0)),
         ]),
         "Random Forest": Pipeline([
-            ("preprocessor", _build_preprocessor(num_cols, cat_cols)),
+            ("preprocessor", _build_preprocessor(num_cols, ohe_cols, target_enc_cols)),
             ("model", RandomForestRegressor(
                 n_estimators=300,
                 min_samples_leaf=3,
@@ -231,7 +240,7 @@ def train(city: str = "london") -> dict:
             )),
         ]),
         "Gradient Boosting": Pipeline([
-            ("preprocessor", _build_preprocessor(num_cols, cat_cols)),
+            ("preprocessor", _build_preprocessor(num_cols, ohe_cols, target_enc_cols)),
             ("model", _get_lgbm()),
         ]),
     }
@@ -315,7 +324,8 @@ def train(city: str = "london") -> dict:
         "train_rows": len(X_train),
         "test_rows": len(X_test),
         "numeric_features": num_cols,
-        "categorical_features": cat_cols,
+        "ohe_features": ohe_cols,
+        "target_enc_features": target_enc_cols,
     }
     with open(MODELS_DIR / f"{city}_model_metadata.json", "w") as f:
         json.dump(metadata, f, indent=2)
