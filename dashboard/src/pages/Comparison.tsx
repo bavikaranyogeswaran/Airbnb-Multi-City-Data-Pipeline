@@ -183,17 +183,37 @@ export default function Comparison() {
         <h2 className="text-base font-semibold text-brand-dark mb-4">OLS Regression Model Fit (R²)</h2>
         {(regLon.loading || regAms.loading) && <Loading />}
         {r2Data.length > 0 && (
-          <ResponsiveContainer width="100%" height={220}>
-            <BarChart data={r2Data} margin={{ top: 10, right: 20, bottom: 5, left: 5 }}>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} />
-              <XAxis dataKey="metric" tick={{ fontSize: 12 }} />
-              <YAxis domain={[0, 1]} tickFormatter={(v) => `${(v as number).toFixed(1)}`} tick={{ fontSize: 11 }} />
-              <Tooltip formatter={(v) => [(v as number).toFixed(4)]} />
-              <Legend />
-              <Bar dataKey={lonKey} fill={CITY_COLOR.london}    radius={[4, 4, 0, 0]} />
-              <Bar dataKey={amsKey} fill={CITY_COLOR.amsterdam} radius={[4, 4, 0, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
+          <>
+            <ResponsiveContainer width="100%" height={220}>
+              <BarChart data={r2Data} margin={{ top: 10, right: 20, bottom: 5, left: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                <XAxis dataKey="metric" tick={{ fontSize: 12 }} />
+                <YAxis domain={[0, 1]} tickFormatter={(v) => `${(v as number).toFixed(1)}`} tick={{ fontSize: 11 }} />
+                <Tooltip formatter={(v) => [(v as number).toFixed(4)]} />
+                <Legend />
+                <Bar dataKey={lonKey} fill={CITY_COLOR.london}    radius={[4, 4, 0, 0]} />
+                <Bar dataKey={amsKey} fill={CITY_COLOR.amsterdam} radius={[4, 4, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+            {(() => {
+              const lonR2 = regLon.data ? parseFloat(getReg(regLon.data, 'R²')) : NaN;
+              const amsR2 = regAms.data ? parseFloat(getReg(regAms.data, 'R²')) : NaN;
+              if (isNaN(lonR2) || isNaN(amsR2)) return null;
+              const stronger = lonR2 >= amsR2 ? CITY_NAME.london : CITY_NAME.amsterdam;
+              const lonPct = (lonR2 * 100).toFixed(0);
+              const amsPct = (amsR2 * 100).toFixed(0);
+              return (
+                <p className="mt-3 text-xs text-brand-gray leading-relaxed">
+                  <span className="font-semibold" style={{ color: CITY_COLOR.london }}>{CITY_NAME.london}</span> listing
+                  attributes (room type, neighbourhood, host tier, availability) explain{' '}
+                  <strong>{lonPct}%</strong> of log-price variance.{' '}
+                  <span className="font-semibold" style={{ color: CITY_COLOR.amsterdam }}>{CITY_NAME.amsterdam}</span>{' '}
+                  explains <strong>{amsPct}%</strong>.{' '}
+                  {stronger} pricing is more predictable from observable listing features alone.
+                </p>
+              );
+            })()}
+          </>
         )}
       </div>
     </div>
