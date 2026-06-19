@@ -60,7 +60,9 @@ export default function Overview({ city }: Props) {
                   cx="50%" cy="50%"
                   outerRadius={90}
                   label={({ name, percent }) =>
-                    `${(name as string).replace('_', ' ')} ${((percent as number) * 100).toFixed(0)}%`
+                    (percent as number) > 0.02
+                      ? `${(name as string).replace(/_/g, ' ')} ${((percent as number) * 100).toFixed(0)}%`
+                      : ''
                   }
                   labelLine={false}
                 >

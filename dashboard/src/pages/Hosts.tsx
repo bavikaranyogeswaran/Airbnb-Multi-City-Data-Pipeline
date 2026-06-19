@@ -41,8 +41,8 @@ export default function Hosts({ city }: Props) {
                     data={seg.data}
                     dataKey="listing_count"
                     nameKey="host_segment"
-                    cx="50%" cy="50%"
-                    outerRadius={85}
+                    cx="50%" cy="55%"
+                    outerRadius={75}
                     label={({ name, percent }) =>
                       `${String(name)} ${((percent as number) * 100).toFixed(0)}%`
                     }
