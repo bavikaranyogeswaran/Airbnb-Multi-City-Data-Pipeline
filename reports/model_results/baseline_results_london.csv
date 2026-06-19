@@ -1,0 +1,4 @@
+model,test_mae,test_rmse,test_mape,test_r2,within_20pct
+Global median baseline,126.25,519.11,73.01,-0.0175,21.5
+Room-type median baseline,108.95,513.86,44.66,0.003,30.4
+Neighbourhood+room-type median baseline,103.98,508.36,41.38,0.0243,32.9
