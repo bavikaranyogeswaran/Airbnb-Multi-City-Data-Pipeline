@@ -225,7 +225,7 @@ Each finding follows the Section 11 framework: Question → Evidence → Interpr
 2. **Single-point-in-time snapshot.** The listing snapshot is 2025-09-14. Prices, availability, and host status change continuously; these findings reflect one moment.
 3. **Review count ≠ booking count.** Airbnb's review rate is approximately 50–70% of stays. review volume understates true occupancy.
 4. **36% of listings have no price.** Unpriced listings are excluded from all price analyses. If they are systematically cheap (inactive or enquiry-only), observed prices are biased upward.
-5. **Single city.** These findings are specific to London's market structure, regulation, and tourism demand. Generalisations to other cities require separate validation.
+5. **Two cities, same snapshot window.** London and Amsterdam have been analysed; findings reflect each city's own market structure, regulation, and tourism demand. Cross-city comparisons (Section 11) identify structural differences but cannot establish causality. Generalisation to other markets requires separate validation.
 6. **Trafalgar Square as centre.** London is polycentric; a single distance reference underestimates location value in non-central demand clusters (Canary Wharf, Shoreditch, Heathrow corridor).
 7. **Host identity.** A single operator may run multiple host accounts. Concentration metrics based on host_id understate true market concentration.
 8. **Right-skewed rating distribution.** Scores cluster near 5.0, compressing variance. Pearson correlations and percentile thresholds should be interpreted within this narrow range.
@@ -235,7 +235,7 @@ Each finding follows the Section 11 framework: Question → Evidence → Interpr
 ## 10. Next Analysis Steps
 
 1. **Statistical Analysis (Phase 2):** Regression models for price prediction; hypothesis tests for segment differences; confidence intervals around key metrics.
-2. **Multi-City EDA (Step 8):** Apply the same pipeline to Amsterdam and 4 other cities; generate cross-city comparison summary (`city_price_summary`).
+2. **Multi-City EDA (Step 8):** ✅ Amsterdam complete — pipeline applied, full EDA notebook (`05_amsterdam_eda.ipynb`), 22 charts, and cross-city comparison summary generated. Remaining cities (4 of 6) pending.
 3. **ML Modelling (Phase 3):** Train a price prediction model using borough, room type, distance, host segment, and review metrics as features.
 4. **Calendar Price Recovery:** Investigate whether the A-005 NULL prices are recoverable from listing `price` × calendar `minimum_nights` × `adjusted_price` fields in raw data.
 5. **Anomaly Monitoring API:** Expose the high-review / low-score listing set via a FastAPI endpoint for the operations team.
