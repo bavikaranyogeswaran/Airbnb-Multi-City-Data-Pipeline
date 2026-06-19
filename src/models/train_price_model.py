@@ -118,7 +118,7 @@ def _build_preprocessor(
     ])
     # TargetEncoder replaces each neighbourhood with its mean log-price from the
     # training fold. It handles unseen categories via global mean shrinkage.
-    target_enc_pipe = TargetEncoder(target_type="continuous", random_state=42)
+    target_enc_pipe = TargetEncoder(target_type="continuous")
 
     transformers: list = [("numeric", numeric_pipe, num_cols)]
     if ohe_cols:
