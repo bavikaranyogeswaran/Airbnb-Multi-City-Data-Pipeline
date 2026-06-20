@@ -1,0 +1,6 @@
+cluster,n,median_price,mean_price,mean_log_price,mean_accommodates,mean_bedrooms,median_minimum_nights,mean_minimum_nights,mean_availability_365,mean_review_scores_rating,mean_reviews_per_month,mean_distance_km,mean_amenity_count,pct_entire_home,pct_private_room,pct_shared_room,pct_hotel_room,dominant_room_type,top_neighbourhood,pct_of_city,cluster_name
+0,1696,333.0,559.79,5.87,4.37,2.53,3.0,4.04,130.73,4.89,0.44,3.05,39.89,95.8,3.9,0.1,0.3,entire_home,De Baarsjes - Oud-West,28.9,Premium Spacious Apartments
+1,1222,241.0,281.69,5.49,2.4,1.12,2.0,4.1,292.64,4.89,0.37,2.46,26.7,81.1,17.6,0.5,0.8,entire_home,De Baarsjes - Oud-West,20.8,Well-Available City Apartments
+2,1776,187.0,196.63,5.21,2.21,1.05,3.0,4.42,56.26,4.89,0.39,2.59,30.02,84.8,13.7,1.0,0.5,entire_home,De Baarsjes - Oud-West,30.2,Part-Time City Apartments
+3,999,147.0,166.68,5.02,2.49,1.02,2.0,1.99,191.82,4.8,4.51,2.42,32.69,27.7,70.7,0.5,1.1,private_room,Centrum-West,17.0,High-Turnover Private Rooms
+4,181,195.0,933.27,5.34,3.07,1.33,2.0,5.66,183.73,3.87,0.29,2.67,22.81,74.0,23.8,0.0,2.2,entire_home,De Baarsjes - Oud-West,3.1,New & Unreviewed Listings

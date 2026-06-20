@@ -1,0 +1,6 @@
+cluster,n,median_price,mean_price,mean_log_price,mean_accommodates,mean_bedrooms,median_minimum_nights,mean_minimum_nights,mean_availability_365,mean_review_scores_rating,mean_reviews_per_month,mean_distance_km,mean_amenity_count,pct_entire_home,pct_private_room,pct_shared_room,pct_hotel_room,dominant_room_type,top_neighbourhood,pct_of_city,cluster_name
+0,16684,262.0,493.44,5.68,6.11,2.72,3.0,5.5,226.62,4.77,0.54,6.8,37.98,98.1,1.7,0.1,0.1,entire_home,Westminster,26.9,Premium Spacious Apartments
+1,9008,96.0,113.83,4.58,2.83,1.14,2.0,1.94,189.44,4.74,2.79,6.08,35.8,55.2,44.2,0.5,0.1,entire_home,Westminster,14.5,High-Turnover City Lets
+2,20759,134.0,167.29,4.91,2.62,1.07,3.0,7.46,176.73,4.76,0.36,5.2,30.26,72.4,27.3,0.1,0.1,entire_home,Westminster,33.5,Standard City Apartments
+3,13819,67.0,81.39,4.26,2.16,1.12,1.0,2.91,268.68,4.77,0.41,13.0,22.13,34.5,64.8,0.5,0.1,private_room,Ealing,22.3,Outer City Budget Rooms
+4,1693,121.0,230.9,4.85,3.62,1.47,1.0,3.63,250.22,2.6,0.14,7.28,24.09,69.8,28.8,1.4,0.0,entire_home,Westminster,2.7,New & Unreviewed Listings
