@@ -108,6 +108,12 @@ def analytics_index() -> dict:
             "residuals_segment": "GET /analytics/ml/residuals/by-segment?city=london&segment=neighbourhood",
             "predict":           "POST /analytics/ml/predict",
         },
+        "clustering": {
+            "profile":  "GET /analytics/clustering/profile?city=london",
+            "elbow":    "GET /analytics/clustering/elbow?city=london",
+            "labels":   "GET /analytics/clustering/labels?city=london&cluster=0&limit=100",
+            "assign":   "POST /analytics/clustering/assign",
+        },
     }
 
 
@@ -691,4 +697,288 @@ def ml_predict(body: PredictRequest) -> PredictResponse:
         model_used=metadata.get("model_type", "Gradient Boosting (LightGBM)"),
         city=body.city,
         warning=warning,
+    )
+
+
+# ── Clustering helpers ─────────────────────────────────────────────────────────
+
+DATA_DIR = ROOT / "data" / "processed"
+
+# City-centre coordinates (same as clustering_features.py)
+_CLUSTER_CENTRES: dict[str, tuple[float, float]] = {
+    "london":    (51.5080, -0.1281),
+    "amsterdam": (52.3732,  4.8932),
+}
+
+# Features and skewed cols must match the order used during K-Means training
+_CLUSTER_FEATURES = [
+    "log_price", "accommodates", "bedrooms", "minimum_nights",
+    "availability_365", "review_scores_rating", "reviews_per_month_calc",
+    "distance_to_centre_km", "amenity_count",
+]
+_LOG1P_CLUSTER_COLS = ["minimum_nights", "bedrooms", "reviews_per_month_calc"]
+
+_cluster_model_cache:   dict = {}
+_cluster_profile_cache: dict = {}   # city -> {cluster_id: name}
+_cluster_medians_cache: dict = {}   # city -> {feature: median}
+
+
+def _get_cluster_model(city: str) -> dict:
+    if city not in _cluster_model_cache:
+        path = MODELS_DIR / f"{city}_kmeans.joblib"
+        if not path.exists():
+            raise HTTPException(
+                status_code=404,
+                detail=f"No K-Means model for '{city}'. Run cluster_listings.py first.",
+            )
+        _cluster_model_cache[city] = joblib.load(path)
+    return _cluster_model_cache[city]
+
+
+def _get_cluster_profile(city: str) -> dict[int, str]:
+    """Returns {cluster_id: cluster_name} loaded once per process."""
+    if city not in _cluster_profile_cache:
+        path = MODEL_RESULTS / f"clustering_profile_{city}.csv"
+        if not path.exists():
+            raise HTTPException(
+                status_code=404,
+                detail=f"No cluster profile for '{city}'. Run cluster_profiles.py first.",
+            )
+        df = pd.read_csv(path)
+        _cluster_profile_cache[city] = dict(
+            zip(df["cluster"].astype(int), df["cluster_name"])
+        )
+    return _cluster_profile_cache[city]
+
+
+def _get_cluster_medians(city: str) -> dict[str, float]:
+    """Load training-set column medians from clustering_features.parquet (cached)."""
+    if city not in _cluster_medians_cache:
+        path = DATA_DIR / city / "clustering_features.parquet"
+        if not path.exists():
+            raise HTTPException(
+                status_code=404,
+                detail=f"clustering_features.parquet not found for '{city}'.",
+            )
+        df = pd.read_parquet(path)
+        _cluster_medians_cache[city] = df.median(numeric_only=True).to_dict()
+    return _cluster_medians_cache[city]
+
+
+def _haversine_scalar(lat: float, lon: float, centre_lat: float, centre_lon: float) -> float:
+    """Haversine distance in km for a single point."""
+    R = 6371.0
+    dlat = np.radians(centre_lat - lat)
+    dlon = np.radians(centre_lon - lon)
+    a = (
+        np.sin(dlat / 2) ** 2
+        + np.cos(np.radians(lat)) * np.cos(np.radians(centre_lat)) * np.sin(dlon / 2) ** 2
+    )
+    return float(R * 2 * np.arcsin(np.sqrt(a)))
+
+
+# ── 8. Cluster profiles ────────────────────────────────────────────────────────
+
+@router.get(
+    "/clustering/profile",
+    summary="Cluster profiles — per-segment statistics and names",
+)
+def clustering_profile(
+    city: Annotated[str, Query(description="london or amsterdam")] = "london",
+) -> list[dict]:
+    """
+    Returns the Step-21 cluster profiles for one city.
+
+    Each record includes: cluster_id, cluster_name, n, pct_of_city,
+    median_price, mean feature statistics, room-type breakdown, top_neighbourhood.
+    """
+    return csv_to_records(must_exist(MODEL_RESULTS / f"clustering_profile_{city}.csv"))
+
+
+# ── 9. Elbow scores ────────────────────────────────────────────────────────────
+
+@router.get(
+    "/clustering/elbow",
+    summary="Elbow sweep — inertia and silhouette for k=2..10",
+)
+def clustering_elbow(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    """Returns the Step-20 elbow sweep table used to select optimal k."""
+    return csv_to_records(must_exist(MODEL_RESULTS / f"elbow_scores_{city}.csv"))
+
+
+# ── 10. Cluster labels (paginated) ─────────────────────────────────────────────
+
+@router.get(
+    "/clustering/labels",
+    summary="Labelled listings — cluster assignment + key features, paginated",
+)
+def clustering_labels(
+    city:          Annotated[str, Query()] = "london",
+    cluster:       Annotated[Optional[int], Query(ge=0, description="Filter to a single cluster ID")] = None,
+    room_type:     Annotated[Optional[str], Query(description="Exact match on room_type")] = None,
+    neighbourhood: Annotated[Optional[str], Query(description="Substring match on neighbourhood_cleansed")] = None,
+    limit:         Annotated[int, Query(ge=1, le=500)] = 100,
+    offset:        Annotated[int, Query(ge=0)] = 0,
+) -> dict:
+    """
+    Returns listing IDs, cluster assignments, and key features.
+
+    Pagination via `limit` (max 500) and `offset`. Optional filters:
+    `cluster` (exact ID), `room_type` (exact), `neighbourhood` (substring).
+    """
+    path = DATA_DIR / city / "clustering_labels.parquet"
+    if not path.exists():
+        raise HTTPException(
+            status_code=404,
+            detail=f"clustering_labels.parquet not found for '{city}'. Run cluster_listings.py first.",
+        )
+
+    # Build DuckDB WHERE clauses (use forward slashes — DuckDB on Windows)
+    pq_path = str(path).replace("\\", "/")
+    where_parts: list[str] = []
+    if cluster is not None:
+        where_parts.append(f"cluster = {cluster}")
+    if room_type:
+        safe_rt = room_type.replace("'", "''")
+        where_parts.append(f"LOWER(room_type) = LOWER('{safe_rt}')")
+    if neighbourhood:
+        safe_nb = neighbourhood.replace("'", "''")
+        where_parts.append(f"LOWER(neighbourhood_cleansed) LIKE LOWER('%{safe_nb}%')")
+
+    where_sql = f"WHERE {' AND '.join(where_parts)}" if where_parts else ""
+
+    data_sql = (
+        f"SELECT id, cluster, room_type, neighbourhood_cleansed, price_numeric, "
+        f"accommodates, bedrooms, availability_365, distance_to_centre_km "
+        f"FROM read_parquet('{pq_path}') {where_sql} "
+        f"ORDER BY cluster, id LIMIT {limit} OFFSET {offset}"
+    )
+    count_sql = (
+        f"SELECT COUNT(*) AS total FROM read_parquet('{pq_path}') {where_sql}"
+    )
+
+    conn = duckdb.connect()
+    try:
+        rows  = conn.execute(data_sql).fetchdf().to_dict(orient="records")
+        total = conn.execute(count_sql).fetchone()[0]  # type: ignore[index]
+    finally:
+        conn.close()
+
+    return {"city": city, "total": total, "limit": limit, "offset": offset, "rows": rows}
+
+
+# ── 11. Live cluster assignment ────────────────────────────────────────────────
+
+class ClusterAssignRequest(BaseModel):
+    city: str = Field("london", description="london or amsterdam")
+    # Price — provide price_numeric OR log_price (price_numeric takes precedence)
+    price_numeric:          Optional[float] = Field(None, ge=0,  description="Nightly price in local currency → log1p applied internally")
+    log_price:              Optional[float] = Field(None,         description="log1p(price_numeric) — use when you have the log value directly")
+    # Location — provide lat/lon OR distance_to_centre_km (lat/lon takes precedence)
+    latitude:               Optional[float] = None
+    longitude:              Optional[float] = None
+    distance_to_centre_km:  Optional[float] = Field(None, ge=0)
+    # Remaining clustering features (all optional — missing values use training medians)
+    accommodates:           Optional[int]   = Field(None, ge=1,  le=20)
+    bedrooms:               Optional[float] = Field(None, ge=0)
+    minimum_nights:         Optional[int]   = Field(None, ge=1)
+    availability_365:       Optional[int]   = Field(None, ge=0,  le=365)
+    review_scores_rating:   Optional[float] = Field(None, ge=0,  le=5)
+    reviews_per_month_calc: Optional[float] = Field(None, ge=0)
+    amenity_count:          Optional[int]   = Field(None, ge=0)
+
+
+class ClusterAssignResponse(BaseModel):
+    cluster_id:       int
+    cluster_name:     str
+    city:             str
+    imputed_features: list[str]         # features that were missing and filled from training medians
+    features_used:    dict[str, float]  # final feature vector sent to the model
+
+
+@router.post(
+    "/clustering/assign",
+    summary="Assign a new listing to a market segment using the saved K-Means model",
+    response_model=ClusterAssignResponse,
+)
+def clustering_assign(body: ClusterAssignRequest) -> ClusterAssignResponse:
+    """
+    Predict which market segment a new listing belongs to.
+
+    Only `city` is required — every other field is optional. Missing features
+    are filled from training-set column medians so even a minimal request
+    returns a valid cluster (though more inputs give a more accurate result).
+
+    **Derived inputs:**
+    - `price_numeric` → `log_price` via log1p (takes precedence over `log_price`)
+    - `latitude` + `longitude` → `distance_to_centre_km` via haversine (takes precedence over `distance_to_centre_km`)
+
+    The `imputed_features` field in the response lists every feature that was
+    filled from training medians so you can see how much was inferred.
+    """
+    artifact   = _get_cluster_model(body.city)
+    scaler     = artifact["scaler"]
+    kmeans     = artifact["kmeans"]
+    log1p_cols: list[str] = artifact["log1p_cols"]
+    features:   list[str] = artifact["features"]
+
+    medians  = _get_cluster_medians(body.city)
+    name_map = _get_cluster_profile(body.city)
+
+    # ── Resolve log_price ──────────────────────────────────────────────────────
+    log_price = body.log_price
+    if body.price_numeric is not None:
+        log_price = float(np.log1p(body.price_numeric))
+
+    # ── Resolve distance_to_centre_km ──────────────────────────────────────────
+    distance = body.distance_to_centre_km
+    if body.latitude is not None and body.longitude is not None:
+        if body.city not in _CLUSTER_CENTRES:
+            raise HTTPException(400, detail=f"No city centre defined for '{body.city}'.")
+        clat, clon = _CLUSTER_CENTRES[body.city]
+        distance = _haversine_scalar(body.latitude, body.longitude, clat, clon)
+
+    # ── Collect raw values (None = missing, will be imputed) ──────────────────
+    raw: dict[str, Optional[float]] = {
+        "log_price":              log_price,
+        "accommodates":           float(body.accommodates) if body.accommodates is not None else None,
+        "bedrooms":               body.bedrooms,
+        "minimum_nights":         float(body.minimum_nights) if body.minimum_nights is not None else None,
+        "availability_365":       float(body.availability_365) if body.availability_365 is not None else None,
+        "review_scores_rating":   body.review_scores_rating,
+        "reviews_per_month_calc": body.reviews_per_month_calc,
+        "distance_to_centre_km":  distance,
+        "amenity_count":          float(body.amenity_count) if body.amenity_count is not None else None,
+    }
+
+    # Impute missing features from training medians
+    imputed: list[str] = []
+    filled: dict[str, float] = {}
+    for feat in features:
+        val = raw.get(feat)
+        if val is None:
+            filled[feat] = medians.get(feat, 0.0)
+            imputed.append(feat)
+        else:
+            filled[feat] = val
+
+    # Apply log1p to skewed features (same transform used during K-Means training)
+    for col in log1p_cols:
+        if col in filled:
+            filled[col] = float(np.log1p(filled[col]))
+
+    # ── Scale and predict ──────────────────────────────────────────────────────
+    # Use a DataFrame so StandardScaler sees the column names it was fitted on
+    X = pd.DataFrame([[filled[f] for f in features]], columns=features)
+    X_scaled   = scaler.transform(X)       # type: ignore[attr-defined]
+    cluster_id = int(kmeans.predict(X_scaled)[0])  # type: ignore[attr-defined]
+
+    return ClusterAssignResponse(
+        cluster_id=cluster_id,
+        cluster_name=name_map.get(cluster_id, f"Cluster {cluster_id}"),
+        city=body.city,
+        imputed_features=imputed,
+        features_used={k: round(v, 4) for k, v in filled.items()},
     )

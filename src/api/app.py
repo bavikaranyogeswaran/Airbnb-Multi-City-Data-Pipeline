@@ -24,13 +24,14 @@ from .routes import (
 from src.validation import completion_gate as _gate
 
 app = FastAPI(
-    title="Inside Airbnb · London Pipeline",
-    version="0.9.0",
+    title="Inside Airbnb · London & Amsterdam Pipeline",
+    version="1.0.0",
     description=(
         "FastAPI surface over Familiarization, Ingestion & Profiling, "
         "Cleaning, Enrichment, Warehouse, Quality Tests, Orchestration, "
-        "the Analytics layer (EDA + statistical analysis results), "
-        "and the ML layer (price prediction model results + live inference). "
+        "the Analytics layer (EDA + statistical analysis), "
+        "the ML layer (LightGBM price prediction + live inference), "
+        "and the Clustering layer (K-Means market segmentation for London & Amsterdam). "
         "Read endpoints serve generated artifacts; trigger endpoints "
         "re-run the underlying `run()` functions in-process. "
         "Heavy steps may block 1–2 min."
@@ -85,15 +86,16 @@ def index() -> dict:
         "docs": "/docs",
         "openapi": "/openapi.json",
         "routers": {
-            "cities":            "/cities",
-            "familiarization":   "/familiarization",
-            "ingestion":         "/ingestion",
-            "cleaning":          "/cleaning",
-            "enrichment":        "/enrichment",
-            "warehouse":         "/warehouse",
-            "quality":           "/quality",
-            "orchestration":     "/orchestration",
-            "analytics":         "/analytics",
-            "analytics_ml":      "/analytics/ml",
+            "cities":                "/cities",
+            "familiarization":       "/familiarization",
+            "ingestion":             "/ingestion",
+            "cleaning":              "/cleaning",
+            "enrichment":            "/enrichment",
+            "warehouse":             "/warehouse",
+            "quality":               "/quality",
+            "orchestration":         "/orchestration",
+            "analytics":             "/analytics",
+            "analytics_ml":          "/analytics/ml",
+            "analytics_clustering":  "/analytics/clustering",
         },
     }
