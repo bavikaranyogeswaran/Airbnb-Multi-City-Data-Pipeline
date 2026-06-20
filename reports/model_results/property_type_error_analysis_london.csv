@@ -1,0 +1,6 @@
+property_type_bucket,n,mae,median_error,median_residual,pct_within_20,pct_over_pred
+apartment,8748,85.67,25.45,-2.8,50.8,53.7
+house,3133,57.49,18.35,-2.73,49.6,55.1
+hotel,194,52.13,33.73,-7.02,29.9,56.2
+other,70,42.34,15.86,-5.06,57.1,57.1
+unique,18,38.78,20.12,-8.89,50.0,72.2

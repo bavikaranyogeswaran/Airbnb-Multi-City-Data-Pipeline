@@ -1,0 +1,5 @@
+room_type,n,mae,median_error,median_residual,pct_within_20,pct_over_pred
+hotel_room,17,803.12,1121.84,1121.84,11.8,17.6
+entire_home,8167,90.14,32.7,-3.57,50.7,53.3
+shared_room,43,56.98,23.41,-14.23,20.9,74.4
+private_room,3936,48.54,12.03,-2.17,49.6,56.0

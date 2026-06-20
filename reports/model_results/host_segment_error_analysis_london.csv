@@ -1,0 +1,4 @@
+host_segment,n,mae,median_error,median_residual,pct_within_20,pct_over_pred
+professional (5+),4980,113.42,31.86,-4.12,45.7,54.7
+solo (1),4334,58.07,20.28,-1.86,53.5,53.2
+multi (2-4),2849,44.51,18.54,-2.69,52.9,54.7
