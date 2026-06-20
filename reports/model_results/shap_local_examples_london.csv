@@ -1,0 +1,6 @@
+case,actual_price,predicted_price,abs_error,shap_base_value,top_feature_1,shap_1,top_feature_2,shap_2,top_feature_3,shap_3,top_feature_4,shap_4,top_feature_5,shap_5
+accurate (error < p10),67.0,67.01,0.01,4.93,room_type_entire_home,-0.4927,reviews_per_month_calc,-0.1081,bathroom_is_shared,-0.088,neighbourhood_cleansed,0.0866,bathroom_count,0.073
+large underprediction,30812.0,223.06,30588.94,4.93,room_type_entire_home,0.1982,bathroom_count,0.1358,neighbourhood_cleansed,-0.091,minimum_nights,0.06,has_dishwasher,0.0477
+large overprediction,175.0,3091.08,2916.08,4.93,bathroom_count,0.8512,accommodates,0.6379,bedrooms,0.5977,availability_365,0.3538,neighbourhood_cleansed,0.3186
+budget listing (~p10 price),48.0,34.87,13.13,4.93,room_type_entire_home,-0.4597,accommodates,-0.247,latitude,-0.1645,neighbourhood_cleansed,-0.125,bathroom_is_shared,-0.0764
+luxury listing (~p95 price),500.0,325.09,174.91,4.93,bathroom_count,0.225,room_type_entire_home,0.1939,accommodates,0.1915,bedrooms,0.1271,longitude,0.0679
