@@ -1,0 +1,55 @@
+{
+  "city": "amsterdam",
+  "currency": "EUR",
+  "dataset": "Inside Airbnb 2025-09-11",
+  "test_rows": 1117,
+  "train_rows": 4757,
+  "target": "log1p(price_numeric), back-transformed to EUR for all metrics",
+  "split": "GroupShuffleSplit(test_size=0.20) by host_id",
+  "best_model": "Gradient Boosting (LightGBM)",
+  "baselines": {
+    "global_median_mae": 120.96866606982991
+  },
+  "models": {
+    "Global median baseline": {
+      "test_mae": 120.97,
+      "test_rmse": 461.66,
+      "test_mape": 44.55,
+      "test_r2_currency": -0.0141,
+      "test_r2_log": NaN,
+      "within_20pct": 33.2
+    },
+    "Room-type median baseline": {
+      "test_mae": 109.65,
+      "test_rmse": 457.56,
+      "test_mape": 35.14,
+      "test_r2_currency": 0.0038,
+      "test_r2_log": NaN,
+      "within_20pct": 34.7
+    },
+    "Ridge": {
+      "test_mae": 84.44,
+      "test_rmse": 434.6,
+      "test_mape": 26.15,
+      "test_r2_currency": 0.1013,
+      "test_r2_log": 0.5769,
+      "within_20pct": 50.7
+    },
+    "Random Forest": {
+      "test_mae": 81.81,
+      "test_rmse": 429.25,
+      "test_mape": 26.13,
+      "test_r2_currency": 0.1233,
+      "test_r2_log": 0.5906,
+      "within_20pct": 54.0
+    },
+    "Gradient Boosting": {
+      "test_mae": 80.68,
+      "test_rmse": 425.84,
+      "test_mape": 25.28,
+      "test_r2_currency": 0.1371,
+      "test_r2_log": 0.6172,
+      "within_20pct": 54.1
+    }
+  }
+}

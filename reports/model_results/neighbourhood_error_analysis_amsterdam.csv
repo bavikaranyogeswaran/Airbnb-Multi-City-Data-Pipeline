@@ -1,0 +1,23 @@
+neighbourhood_cleansed,n,mae,median_error,median_residual,pct_within_20,pct_over_pred
+Oud-Noord,50,355.22,42.15,-16.57,46.0,64.0
+Zuid,84,107.22,32.8,6.03,63.1,46.4
+Buitenveldert - Zuidas,21,104.62,93.84,5.29,33.3,47.6
+IJburg - Zeeburgereiland,19,100.6,35.5,-2.77,36.8,57.9
+Centrum-Oost,112,87.69,56.5,10.16,52.7,42.0
+De Pijp - Rivierenbuurt,117,71.18,48.35,-7.04,55.6,55.6
+Centrum-West,145,71.05,41.67,-12.22,53.1,62.1
+De Aker - Nieuw Sloten,6,69.62,48.54,47.71,33.3,33.3
+De Baarsjes - Oud-West,187,63.85,44.28,-4.79,52.9,51.3
+Oud-Oost,59,59.86,32.77,-4.71,54.2,59.3
+Geuzenveld - Slotermeer,25,57.87,45.11,33.45,48.0,28.0
+Westerpark,73,54.81,35.32,-6.64,56.2,56.2
+Watergraafsmeer,33,49.62,30.77,-17.39,48.5,69.7
+Slotervaart,15,47.8,33.74,8.78,66.7,40.0
+Noord-West,38,47.04,34.44,7.52,57.9,42.1
+Oostelijk Havengebied - Indische Buurt,45,46.96,36.38,5.5,55.6,42.2
+Bos en Lommer,40,42.44,31.72,-11.28,55.0,55.0
+Noord-Oost,27,39.63,26.73,-1.39,63.0,51.9
+Osdorp,5,37.08,36.53,33.5,60.0,40.0
+Gaasperdam - Driemond,2,16.99,16.99,-2.56,50.0,50.0
+Bijlmer-Oost,4,15.48,14.77,-7.47,100.0,50.0
+Bijlmer-Centrum,10,14.76,9.68,0.97,70.0,50.0

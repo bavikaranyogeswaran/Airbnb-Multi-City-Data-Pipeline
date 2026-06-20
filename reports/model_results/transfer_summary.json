@@ -1,0 +1,15 @@
+{
+  "in_domain_model": "Amsterdam LightGBM (trained and evaluated on Amsterdam)",
+  "transfer_model": "London LightGBM (trained on London, evaluated on Amsterdam)",
+  "test_set": "Amsterdam test set (1117 listings)",
+  "currency": "EUR (Amsterdam prices)",
+  "in_domain_mae": 80.68,
+  "transfer_mae": 175.41,
+  "mae_degradation": 94.73,
+  "in_domain_r2_log": 0.6172,
+  "transfer_r2_log": -2.0582,
+  "r2_degradation": 2.6754,
+  "in_domain_within20": 54.1,
+  "transfer_within20": 3.2,
+  "key_finding": "The London model retains structural pricing logic (room_type, capacity) but all 22 Amsterdam neighbourhoods are unseen \u2014 the TargetEncoder falls back to the London global mean, effectively dropping neighbourhood signal for cross-city use. Retraining on Amsterdam data is required for neighbourhood-level accuracy."
+}

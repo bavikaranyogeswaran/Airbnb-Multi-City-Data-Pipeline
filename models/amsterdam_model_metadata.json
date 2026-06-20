@@ -1,0 +1,176 @@
+{
+  "model_name": "Amsterdam Airbnb Price Predictor",
+  "model_type": "Gradient Boosting (LightGBM)",
+  "algorithm": "LGBMRegressor",
+  "city": "amsterdam",
+  "currency": "EUR",
+  "trained_date": "2026-06-20",
+  "artifact": "models/amsterdam_price_model.joblib",
+  "data_source": "Inside Airbnb",
+  "snapshot_date": "2025-09-11",
+  "raw_listings": 10480,
+  "filtered_listings": 5874,
+  "filter_rule": "price_numeric > 0 AND price_numeric IS NOT NULL",
+  "target_column": "log_price",
+  "target_transform": "np.log1p(price_numeric) \u2014 back-transformed with np.expm1 for all metrics",
+  "price_range": {
+    "min": 35,
+    "max": 80018,
+    "median": 222,
+    "p95": 550
+  },
+  "split_strategy": "GroupShuffleSplit(test_size=0.20, random_state=42) grouped by host_id",
+  "split_rationale": "Same host cannot appear in both train and test sets",
+  "train_rows": 4757,
+  "test_rows": 1117,
+  "cv_strategy": "GroupKFold(n_splits=5) on training set, grouped by host_id",
+  "feature_count": 36,
+  "numeric_features": [
+    "accommodates",
+    "bedrooms",
+    "beds",
+    "bathroom_count",
+    "minimum_nights",
+    "host_tenure_years",
+    "host_response_rate",
+    "latitude",
+    "longitude",
+    "availability_365",
+    "review_scores_rating",
+    "review_scores_cleanliness",
+    "review_scores_location",
+    "reviews_per_month_calc",
+    "calculated_host_listings_count",
+    "number_of_reviews",
+    "beds_per_guest",
+    "host_is_superhost",
+    "instant_bookable",
+    "bathroom_is_shared",
+    "has_wifi",
+    "has_kitchen",
+    "has_air_conditioning",
+    "has_washer",
+    "has_parking",
+    "has_pool",
+    "has_workspace",
+    "has_gym",
+    "has_elevator",
+    "has_tv",
+    "has_bathtub",
+    "has_dishwasher",
+    "amenity_count"
+  ],
+  "ohe_features": [
+    "room_type",
+    "property_type_bucket"
+  ],
+  "target_enc_features": [
+    "neighbourhood_cleansed"
+  ],
+  "encoding_notes": "TargetEncoder fitted per CV fold \u2014 neighbourhood leakage prevented. Amsterdam has 22 neighbourhoods.",
+  "hyperparameters": {
+    "n_estimators": 500,
+    "learning_rate": 0.05,
+    "num_leaves": 63,
+    "min_child_samples": 20,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "random_state": 42
+  },
+  "cv_metrics": {
+    "cv_mae_mean": 157.51,
+    "cv_mae_std": 101.71,
+    "cv_r2_mean": 0.5095,
+    "train_mae_mean": 84.89,
+    "overfit_gap_mae": -72.62
+  },
+  "test_metrics": {
+    "mae": 80.68,
+    "rmse": 425.84,
+    "mape": 25.28,
+    "r2_log": 0.6172,
+    "r2_currency": 0.1371,
+    "within_20pct": 54.1
+  },
+  "baselines": {
+    "global_median_mae": 120.97,
+    "mae_improvement_vs_baseline": 40.29
+  },
+  "top_features_permutation": [
+    {
+      "feature": "accommodates",
+      "importance": 0.05863
+    },
+    {
+      "feature": "room_type",
+      "importance": 0.03459
+    },
+    {
+      "feature": "availability_365",
+      "importance": 0.0309
+    },
+    {
+      "feature": "bedrooms",
+      "importance": 0.02411
+    },
+    {
+      "feature": "longitude",
+      "importance": 0.02126
+    },
+    {
+      "feature": "neighbourhood_cleansed",
+      "importance": 0.02055
+    },
+    {
+      "feature": "reviews_per_month_calc",
+      "importance": 0.01619
+    },
+    {
+      "feature": "latitude",
+      "importance": 0.01362
+    },
+    {
+      "feature": "number_of_reviews",
+      "importance": 0.0048
+    },
+    {
+      "feature": "has_tv",
+      "importance": 0.00409
+    }
+  ],
+  "bias_findings": {
+    "luxury_underprediction": [
+      {
+        "price_band": "luxury (700+)",
+        "n": 26,
+        "mae": 1026.96,
+        "median_error": 326.61,
+        "median_residual": 326.61,
+        "pct_within_20": 19.2,
+        "pct_over_pred": 7.7
+      }
+    ],
+    "worst_neighbourhoods": [
+      "Oud-Noord",
+      "Zuid",
+      "Buitenveldert - Zuidas"
+    ],
+    "best_neighbourhoods": [
+      "Gaasperdam - Driemond",
+      "Bijlmer-Oost",
+      "Bijlmer-Centrum"
+    ]
+  },
+  "artifacts": {
+    "model_file": "models/amsterdam_price_model.joblib",
+    "metadata_file": "models/amsterdam_model_metadata.json",
+    "full_comparison_csv": "reports/model_results/full_model_comparison_amsterdam.csv",
+    "cv_results_csv": "reports/model_results/cross_validation_results_amsterdam.csv",
+    "residuals_enriched_csv": "reports/model_results/residuals_enriched_amsterdam.csv",
+    "neighbourhood_error_csv": "reports/model_results/neighbourhood_error_analysis_amsterdam.csv",
+    "room_type_error_csv": "reports/model_results/room_type_error_analysis_amsterdam.csv",
+    "price_band_error_csv": "reports/model_results/price_band_error_analysis_amsterdam.csv",
+    "feature_importance_permutation": "reports/model_results/feature_importance_permutation_amsterdam.csv",
+    "feature_importance_shap": "reports/model_results/feature_importance_shap_amsterdam.csv"
+  }
+}
