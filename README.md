@@ -74,6 +74,18 @@ Source: https://insideairbnb.com/get-the-data/
 
 Both cities share the same five market archetypes despite different price levels, confirming the segment structure generalises across cities.
 
+### Host Segmentation (K-Means on host portfolios)
+
+| City | Cluster | Segment Name | Hosts | % | Key signal |
+|---|---|---|---|---|---|
+| London | 0 | Passive Listers | 6,788 | 12.2% | 53% response, 24% acceptance — disengaged |
+| London | 1 | Professional Superhosts | 9,925 | 17.8% | 79% superhost, 4+ listings, actively booked |
+| London | 2 | Occasional Hosts | 38,933 | 70.0% | Responsive, part-time (81 avail days/year) |
+| Amsterdam | 0 | Active Superhost Operators | 1,270 | 13.8% | 65% superhost, 2.83 reviews/month, room-sharers |
+| Amsterdam | 1 | Part-Time Apartment Hosts | 7,931 | 86.2% | 97% entire home, rarely booked holiday lets |
+
+Host clustering silhouette scores: London 0.266, Amsterdam 0.366 — hosts cluster more cleanly than listings.
+
 ---
 
 ## Project Layout
@@ -225,7 +237,7 @@ python -m src.models.residual_analysis amsterdam
 python -m src.models.cross_city_transfer     # London model → Amsterdam
 ```
 
-### Step 6 — Build clustering features and run K-Means
+### Step 6 — Build listing clustering features and run K-Means
 
 ```bash
 python -m src.features.clustering_features london
@@ -236,6 +248,19 @@ python -m src.models.cluster_listings amsterdam 5
 
 python -m src.models.cluster_profiles london
 python -m src.models.cluster_profiles amsterdam
+```
+
+### Step 7 — Build host clustering features and run K-Means
+
+```bash
+python -m src.features.host_features london
+python -m src.features.host_features amsterdam
+
+python -m src.models.cluster_hosts london    # k auto-detected (London=3, Amsterdam=2)
+python -m src.models.cluster_hosts amsterdam
+
+python -m src.models.host_cluster_profiles london
+python -m src.models.host_cluster_profiles amsterdam
 ```
 
 Everything above is also triggerable via the API — see the endpoint map below.
@@ -382,6 +407,53 @@ All analytics read endpoints serve pre-computed CSVs/JSON. Run the pipeline firs
 
 ---
 
+### Host Segmentation (`/analytics/clustering/host-*`)
+
+K-Means clustering at the **host level** — one row per host aggregated across their entire portfolio. Features capture portfolio size, tenure, responsiveness, pricing, availability, and property-type mix.
+
+**Named segments:**
+
+| City | Cluster | Name | Hosts | % | Key signal |
+|---|---|---|---|---|---|
+| London | 0 | Passive Listers | 6,788 | 12.2% | Response 53%, acceptance 24% — listed but disengaged |
+| London | 1 | Professional Superhosts | 9,925 | 17.8% | 79% superhost, 4+ listings, 1.47 reviews/month |
+| London | 2 | Occasional Hosts | 38,933 | 70.0% | 0% superhost, 99% response, only 81 avail days/year |
+| Amsterdam | 0 | Active Superhost Operators | 1,270 | 13.8% | 65% superhost, 2.83 reviews/month, 24% entire home |
+| Amsterdam | 1 | Part-Time Apartment Hosts | 7,931 | 86.2% | 97% entire home, 71 avail days, €225 median price |
+
+**Read endpoints:**
+
+- `GET /analytics/clustering/host-profile?city=london` — host cluster profiles (segment name, n, pct_of_city, median_avg_price, pct_superhost, mean response/acceptance rates, availability, reviews/month)
+- `GET /analytics/clustering/host-elbow?city=london` — k=2..8 elbow sweep for hosts
+- `GET /analytics/clustering/host-labels?city=london&cluster=1&limit=100` — paginated host → cluster assignments, filterable by cluster ID
+
+**Live host cluster assignment:**
+
+- `POST /analytics/clustering/host-assign` — assign a host profile to a segment
+
+  Only `city` is required. All 13 host features are optional — missing values are imputed from training medians.
+
+  `host_response_rate` and `host_acceptance_rate` are **0–1 fractions** (e.g. `0.95`, not `95`). `pct_entire_home` is **0–100**.
+
+  ```json
+  {
+    "city": "london",
+    "listing_count": 5,
+    "host_is_superhost": 1,
+    "host_response_rate": 0.99,
+    "host_acceptance_rate": 0.92,
+    "avg_price": 160.0,
+    "avg_availability_365": 180.0,
+    "avg_review_scores_rating": 4.85,
+    "avg_reviews_per_month": 1.8,
+    "pct_entire_home": 60.0
+  }
+  ```
+
+  Returns: `cluster_id`, `cluster_name`, `city`, `imputed_features`, `features_used`
+
+---
+
 ### Warehouse / Star Schema (`/warehouse`)
 
 Each city has its own DuckDB warehouse at `data/processed/{city}/warehouse.duckdb`.
@@ -450,12 +522,20 @@ All paths, currency codes, and snapshot dates come from `config/cities.yml`. Not
 - **Grouped split**: `GroupShuffleSplit(groups=host_id)` ensures a host's listings never appear in both train and test sets
 - **Explainability**: SHAP via `TreeExplainer` on the final estimator after preprocessing; permutation importance on the full pipeline with 15 repeats
 
-### Clustering pipeline
+### Listing clustering pipeline
 
 - **Features**: 9 features — `log_price`, `accommodates`, `bedrooms`, `minimum_nights`, `availability_365`, `review_scores_rating`, `reviews_per_month_calc`, `distance_to_centre_km`, `amenity_count`
-- **Pre-transform**: `log1p` applied to `minimum_nights`, `bedrooms`, `reviews_per_month_calc` before `StandardScaler` (right-skew correction)
-- **k selection**: elbow sweep k=2..10; k=5 chosen manually for both cities (gradual linear inertia decline — no hard elbow; k=5 maps to five interpretable market tiers)
+- **Pre-transform**: `log1p` applied to `minimum_nights`, `bedrooms`, `reviews_per_month_calc` before `StandardScaler`
+- **k selection**: elbow sweep k=2..10; k=5 chosen for both cities (no hard elbow; maps to five interpretable market tiers)
 - **Segment naming**: priority-ordered rule system on aggregated cluster statistics, with price-rank fallback
+
+### Host clustering pipeline
+
+- **Unit of analysis**: one row per host (aggregated from `listing_master.parquet`)
+- **Features**: 13 features — `listing_count`, `host_tenure_years`, `host_response_rate`, `host_acceptance_rate`, `host_is_superhost`, `avg_price`, `avg_availability_365`, `avg_review_scores_rating`, `avg_reviews_per_month`, `avg_accommodates`, `avg_minimum_nights`, `pct_entire_home`, `neighbourhood_count`
+- **Pre-transform**: `log1p` applied to `listing_count`, `avg_price`, `avg_minimum_nights` before `StandardScaler` (all three are strongly right-skewed)
+- **k selection**: elbow sweep k=2..8; London k=3 (silhouette peak 0.266), Amsterdam k=2 (silhouette peak 0.366)
+- **Imputation**: `host_response_rate` (~57% NA in London) and `host_acceptance_rate` (~50% NA) imputed with column medians — hosts with no recorded rate have never responded
 
 ---
 
