@@ -25,11 +25,12 @@ from src.validation import completion_gate as _gate
 
 app = FastAPI(
     title="Inside Airbnb · London Pipeline",
-    version="0.8.0",
+    version="0.9.0",
     description=(
         "FastAPI surface over Familiarization, Ingestion & Profiling, "
         "Cleaning, Enrichment, Warehouse, Quality Tests, Orchestration, "
-        "and the Analytics layer (EDA + statistical analysis results). "
+        "the Analytics layer (EDA + statistical analysis results), "
+        "and the ML layer (price prediction model results + live inference). "
         "Read endpoints serve generated artifacts; trigger endpoints "
         "re-run the underlying `run()` functions in-process. "
         "Heavy steps may block 1–2 min."
@@ -40,7 +41,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173", "http://localhost:3000"],
-    allow_methods=["GET"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
 
@@ -93,5 +94,6 @@ def index() -> dict:
             "quality":           "/quality",
             "orchestration":     "/orchestration",
             "analytics":         "/analytics",
+            "analytics_ml":      "/analytics/ml",
         },
     }

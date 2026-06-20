@@ -3,20 +3,26 @@
 Serves pre-computed EDA and statistical analysis artifacts from
 reports/tables/ and supports live parquet queries via DuckDB.
 
-All endpoints are GET-only — no pipeline mutations happen here.
+GET endpoints are read-only. POST /analytics/ml/predict is the one
+write-path endpoint — it loads the trained LightGBM pipeline and runs
+live inference. All other ML endpoints serve pre-computed CSVs/JSON.
 """
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, Optional
 
 import duckdb
+import joblib
+import numpy as np
 import pandas as pd
 from fastapi import APIRouter, HTTPException, Query
 from fastapi.responses import PlainTextResponse
+from pydantic import BaseModel, Field
 
-from ..helpers import csv_to_records, markdown_response, must_exist
+from ..helpers import csv_to_records, markdown_response, must_exist, read_json
 from ..paths import ROOT
 
 router = APIRouter(prefix="/analytics", tags=["analytics"])
@@ -92,6 +98,15 @@ def analytics_index() -> dict:
         },
         "reports": {
             "eda_findings": "GET /analytics/reports/eda-findings",
+        },
+        "ml": {
+            "model_card":        "GET /analytics/ml/model-card?city=london",
+            "model_comparison":  "GET /analytics/ml/model-comparison?city=london",
+            "cv_results":        "GET /analytics/ml/cv-results?city=london",
+            "feature_importance":"GET /analytics/ml/feature-importance?city=london&method=permutation",
+            "residuals":         "GET /analytics/ml/residuals?city=london&limit=100",
+            "residuals_segment": "GET /analytics/ml/residuals/by-segment?city=london&segment=neighbourhood",
+            "predict":           "POST /analytics/ml/predict",
         },
     }
 
@@ -381,3 +396,299 @@ def comparison_room_types() -> list[dict]:
 )
 def eda_findings_report() -> PlainTextResponse:
     return markdown_response(REPORTS / "eda_findings.md")
+
+
+# ── ML model endpoints ─────────────────────────────────────────────────────────
+#
+# All ML results come from the LightGBM price prediction pipeline trained in
+# src/models/train_price_model.py (Steps 7–11).  The POST /predict endpoint is
+# the only one that loads the model at runtime; everything else reads CSVs/JSON
+# written to reports/model_results/.
+
+MODEL_RESULTS = ROOT / "reports" / "model_results"
+MODELS_DIR    = ROOT / "models"
+
+# Module-level cache so the model is loaded only once per process lifetime.
+_model_cache: dict = {}
+
+_VALID_SEGMENT_COLS = {
+    "neighbourhood": "neighbourhood_error_analysis",
+    "room_type":     "room_type_error_analysis",
+    "price_band":    "price_band_error_analysis",
+    "property_type": "property_type_error_analysis",
+    "host_segment":  "host_segment_error_analysis",
+}
+
+
+def _model_results_path(name: str, city: str) -> Path:
+    return MODEL_RESULTS / f"{name}_{city}.csv"
+
+
+def _get_model(city: str):
+    """Load and cache the trained pipeline for a city."""
+    if city not in _model_cache:
+        path = MODELS_DIR / f"{city}_price_model.joblib"
+        if not path.exists():
+            raise HTTPException(
+                status_code=404,
+                detail=f"No trained model found for '{city}'. Run train_price_model.py first.",
+            )
+        _model_cache[city] = joblib.load(path)
+    return _model_cache[city]
+
+
+# ── 1. Model card ──────────────────────────────────────────────────────────────
+
+@router.get("/ml/model-card", summary="Full model card: metrics, hyperparameters, bias findings")
+def ml_model_card(
+    city: Annotated[str, Query()] = "london",
+) -> dict:
+    """Returns the comprehensive model metadata JSON written during Step 11."""
+    return read_json(MODELS_DIR / f"{city}_model_metadata.json")
+
+
+# ── 2. Model comparison ────────────────────────────────────────────────────────
+
+@router.get("/ml/model-comparison", summary="All models vs baselines — MAE, MAPE, R², within-20%")
+def ml_model_comparison(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    """
+    Returns the full model comparison table (baselines + Ridge + Random Forest
+    + Gradient Boosting) with log-scale R² alongside currency metrics.
+    """
+    return csv_to_records(_model_results_path("full_model_comparison", city))
+
+
+# ── 3. Cross-validation results ────────────────────────────────────────────────
+
+@router.get("/ml/cv-results", summary="5-fold grouped CV results — MAE, R², overfit gap")
+def ml_cv_results(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_model_results_path("cross_validation_results", city))
+
+
+# ── 4. Feature importance ──────────────────────────────────────────────────────
+
+@router.get("/ml/feature-importance", summary="Feature importance via permutation or SHAP")
+def ml_feature_importance(
+    city:   Annotated[str, Query()] = "london",
+    method: Annotated[str, Query(description="permutation or shap")] = "permutation",
+    top_n:  Annotated[int, Query(ge=1, le=50)] = 20,
+) -> list[dict]:
+    """
+    Returns ranked feature importance.
+
+    - `method=permutation`: increase in MAE when a feature is shuffled (36 original features)
+    - `method=shap`: mean |SHAP value| per feature in log-price units (43 transformed features)
+    """
+    if method not in ("permutation", "shap"):
+        raise HTTPException(status_code=400, detail="method must be 'permutation' or 'shap'")
+    rows = csv_to_records(_model_results_path(f"feature_importance_{method}", city))
+    return rows[:top_n]
+
+
+# ── 5. Residuals ───────────────────────────────────────────────────────────────
+
+@router.get("/ml/residuals", summary="Test-set residuals with price band, room type, neighbourhood")
+def ml_residuals(
+    city:          Annotated[str, Query()] = "london",
+    room_type:     Annotated[str | None, Query()] = None,
+    neighbourhood: Annotated[str | None, Query()] = None,
+    price_band:    Annotated[str | None, Query()] = None,
+    limit:         Annotated[int, Query(ge=1, le=5000)] = 500,
+    offset:        Annotated[int, Query(ge=0)] = 0,
+) -> list[dict]:
+    """
+    Returns enriched test-set residuals (actual price, predicted price, error,
+    room type, neighbourhood, price band, host segment).
+
+    Optional filters: room_type, neighbourhood (substring), price_band.
+    Pagination: limit + offset.
+    """
+    rows = csv_to_records(_model_results_path("residuals_enriched", city))
+
+    if room_type:
+        rows = [r for r in rows if str(r.get("room_type", "")).lower() == room_type.lower()]
+    if neighbourhood:
+        rows = [r for r in rows if neighbourhood.lower() in str(r.get("neighbourhood_cleansed", "")).lower()]
+    if price_band:
+        rows = [r for r in rows if str(r.get("price_band", "")).lower() == price_band.lower()]
+
+    return rows[offset: offset + limit]
+
+
+# ── 6. Residuals by segment ────────────────────────────────────────────────────
+
+@router.get("/ml/residuals/by-segment", summary="Aggregated error metrics per segment group")
+def ml_residuals_by_segment(
+    city:    Annotated[str, Query()] = "london",
+    segment: Annotated[str, Query(
+        description="One of: neighbourhood, room_type, price_band, property_type, host_segment"
+    )] = "neighbourhood",
+) -> list[dict]:
+    """
+    Returns pre-computed MAE, median residual, and within-20% accuracy grouped
+    by the requested segment.  These are the Step-9 deep residual analysis tables.
+    """
+    if segment not in _VALID_SEGMENT_COLS:
+        raise HTTPException(
+            status_code=400,
+            detail=f"segment must be one of: {', '.join(_VALID_SEGMENT_COLS)}",
+        )
+    return csv_to_records(_model_results_path(_VALID_SEGMENT_COLS[segment], city))
+
+
+# ── 7. Live price prediction ───────────────────────────────────────────────────
+
+class PredictRequest(BaseModel):
+    city:                          str   = Field("london", description="City whose model to use")
+    # Required inputs — the two most important features
+    accommodates:                  int   = Field(..., ge=1, le=20,  description="Number of guests")
+    room_type:                     str   = Field(..., description="entire_home | private_room | shared_room | hotel_room")
+    neighbourhood_cleansed:        str   = Field(..., description="London borough (e.g. 'Camden')")
+    # Capacity
+    bedrooms:            Optional[float] = Field(None, ge=0)
+    beds:                Optional[float] = Field(None, ge=0)
+    bathroom_count:      Optional[float] = Field(None, ge=0)
+    bathroom_is_shared:  Optional[int]   = Field(None, ge=0, le=1)
+    # Stay rules
+    minimum_nights:      Optional[int]   = Field(None, ge=1)
+    availability_365:    Optional[int]   = Field(None, ge=0, le=365)
+    # Host profile
+    host_tenure_years:   Optional[float] = Field(None, ge=0)
+    host_response_rate:  Optional[float] = Field(None, ge=0, le=100)
+    host_is_superhost:   Optional[int]   = Field(None, ge=0, le=1)
+    instant_bookable:    Optional[int]   = Field(None, ge=0, le=1)
+    calculated_host_listings_count: Optional[int] = Field(None, ge=1)
+    # Location
+    latitude:            Optional[float] = None
+    longitude:           Optional[float] = None
+    # Review scores
+    review_scores_rating:      Optional[float] = Field(None, ge=0, le=5)
+    review_scores_cleanliness: Optional[float] = Field(None, ge=0, le=5)
+    review_scores_location:    Optional[float] = Field(None, ge=0, le=5)
+    reviews_per_month_calc:    Optional[float] = Field(None, ge=0)
+    number_of_reviews:         Optional[int]   = Field(None, ge=0)
+    # Property type
+    property_type_bucket: Optional[str] = Field(None, description="apartment | house | hotel | unique | other")
+    # Amenities (0/1 flags)
+    has_wifi:            Optional[int] = Field(None, ge=0, le=1)
+    has_kitchen:         Optional[int] = Field(None, ge=0, le=1)
+    has_air_conditioning:Optional[int] = Field(None, ge=0, le=1)
+    has_washer:          Optional[int] = Field(None, ge=0, le=1)
+    has_parking:         Optional[int] = Field(None, ge=0, le=1)
+    has_pool:            Optional[int] = Field(None, ge=0, le=1)
+    has_workspace:       Optional[int] = Field(None, ge=0, le=1)
+    has_gym:             Optional[int] = Field(None, ge=0, le=1)
+    has_elevator:        Optional[int] = Field(None, ge=0, le=1)
+    has_tv:              Optional[int] = Field(None, ge=0, le=1)
+    has_bathtub:         Optional[int] = Field(None, ge=0, le=1)
+    has_dishwasher:      Optional[int] = Field(None, ge=0, le=1)
+    amenity_count:       Optional[int] = Field(None, ge=0)
+
+
+class PredictResponse(BaseModel):
+    predicted_price_gbp: float
+    model_used:          str
+    city:                str
+    warning:             Optional[str] = None
+
+
+@router.post(
+    "/ml/predict",
+    summary="Live price prediction — POST listing features, get GBP price estimate",
+    response_model=PredictResponse,
+)
+def ml_predict(body: PredictRequest) -> PredictResponse:
+    """
+    Run the trained LightGBM pipeline on user-supplied listing features.
+
+    Only `accommodates`, `room_type`, and `neighbourhood_cleansed` are required.
+    All other features are optional — the pipeline's median imputer fills gaps
+    using training-set medians, so partial inputs still produce valid estimates.
+
+    `beds_per_guest` is derived automatically from `beds` / `accommodates` when
+    `beds` is provided; otherwise the imputer handles it.
+
+    **Limitations**:
+    - Luxury listings (> £500) are systematically underpredicted (Step-9 finding).
+    - `hotel_room` type has very few training examples — predictions are unreliable.
+    - Unseen neighbourhoods fall back to the global training mean via TargetEncoder shrinkage.
+    """
+    model = _get_model(body.city)
+
+    # Derive beds_per_guest if possible
+    beds_per_guest = None
+    if body.beds is not None and body.accommodates > 0:
+        beds_per_guest = body.beds / body.accommodates
+
+    # Build a single-row DataFrame matching the 36-feature schema
+    row = {
+        "accommodates":                    body.accommodates,
+        "bedrooms":                        body.bedrooms,
+        "beds":                            body.beds,
+        "bathroom_count":                  body.bathroom_count,
+        "minimum_nights":                  body.minimum_nights,
+        "host_tenure_years":               body.host_tenure_years,
+        "host_response_rate":              body.host_response_rate,
+        "latitude":                        body.latitude,
+        "longitude":                       body.longitude,
+        "availability_365":                body.availability_365,
+        "review_scores_rating":            body.review_scores_rating,
+        "review_scores_cleanliness":       body.review_scores_cleanliness,
+        "review_scores_location":          body.review_scores_location,
+        "reviews_per_month_calc":          body.reviews_per_month_calc,
+        "calculated_host_listings_count":  body.calculated_host_listings_count,
+        "number_of_reviews":               body.number_of_reviews,
+        "beds_per_guest":                  beds_per_guest,
+        "host_is_superhost":               body.host_is_superhost,
+        "instant_bookable":                body.instant_bookable,
+        "bathroom_is_shared":              body.bathroom_is_shared,
+        "has_wifi":                        body.has_wifi,
+        "has_kitchen":                     body.has_kitchen,
+        "has_air_conditioning":            body.has_air_conditioning,
+        "has_washer":                      body.has_washer,
+        "has_parking":                     body.has_parking,
+        "has_pool":                        body.has_pool,
+        "has_workspace":                   body.has_workspace,
+        "has_gym":                         body.has_gym,
+        "has_elevator":                    body.has_elevator,
+        "has_tv":                          body.has_tv,
+        "has_bathtub":                     body.has_bathtub,
+        "has_dishwasher":                  body.has_dishwasher,
+        "amenity_count":                   body.amenity_count,
+        "room_type":                       body.room_type,
+        "property_type_bucket":            body.property_type_bucket,
+        "neighbourhood_cleansed":          body.neighbourhood_cleansed,
+    }
+    X = pd.DataFrame([row])
+
+    try:
+        log_pred = model.predict(X)
+        price    = float(np.expm1(log_pred[0]))
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"Prediction failed: {exc}")
+
+    # Warn when the prediction is likely unreliable
+    warning = None
+    if price > 500:
+        warning = (
+            "Luxury range (>£500): model systematically underpredicts at this price tier "
+            "(Step-9 finding: median residual +£376). Treat as a lower-bound estimate."
+        )
+    elif body.room_type == "hotel_room":
+        warning = (
+            "hotel_room has very few training examples (n=17 in test set). "
+            "Prediction reliability is low for this room type."
+        )
+
+    metadata = read_json(MODELS_DIR / f"{body.city}_model_metadata.json")
+
+    return PredictResponse(
+        predicted_price_gbp=round(price, 2),
+        model_used=metadata.get("model_type", "Gradient Boosting (LightGBM)"),
+        city=body.city,
+        warning=warning,
+    )
