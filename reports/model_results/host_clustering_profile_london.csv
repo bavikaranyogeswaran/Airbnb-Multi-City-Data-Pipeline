@@ -1,0 +1,4 @@
+cluster,n,median_listing_count,mean_listing_count,median_avg_price,mean_avg_price,pct_superhost,mean_tenure,mean_response_rate,mean_acceptance_rate,mean_availability,mean_rating,mean_reviews_per_month,mean_accommodates,mean_pct_entire_home,mean_neighbourhood_count,pct_of_city,cluster_name
+0,6788,1.0,1.366,122.0,148.55,0.6,7.177,0.528,0.243,230.547,4.745,0.126,3.02,60.286,1.053,12.2,Passive Listers
+1,9925,1.0,4.076,122.0,159.192,78.8,7.809,0.98,0.907,168.619,4.81,1.471,3.283,62.095,1.466,17.8,Professional Superhosts
+2,38933,1.0,1.211,122.0,148.914,0.0,8.644,0.991,0.88,80.812,4.789,0.173,3.038,61.9,1.027,70.0,Occasional Hosts
