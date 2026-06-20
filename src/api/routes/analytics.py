@@ -109,10 +109,14 @@ def analytics_index() -> dict:
             "predict":           "POST /analytics/ml/predict",
         },
         "clustering": {
-            "profile":  "GET /analytics/clustering/profile?city=london",
-            "elbow":    "GET /analytics/clustering/elbow?city=london",
-            "labels":   "GET /analytics/clustering/labels?city=london&cluster=0&limit=100",
-            "assign":   "POST /analytics/clustering/assign",
+            "profile":      "GET /analytics/clustering/profile?city=london",
+            "elbow":        "GET /analytics/clustering/elbow?city=london",
+            "labels":       "GET /analytics/clustering/labels?city=london&cluster=0&limit=100",
+            "assign":       "POST /analytics/clustering/assign",
+            "host_profile": "GET /analytics/clustering/host-profile?city=london",
+            "host_elbow":   "GET /analytics/clustering/host-elbow?city=london",
+            "host_labels":  "GET /analytics/clustering/host-labels?city=london&cluster=0&limit=100",
+            "host_assign":  "POST /analytics/clustering/host-assign",
         },
     }
 
@@ -976,6 +980,251 @@ def clustering_assign(body: ClusterAssignRequest) -> ClusterAssignResponse:
     cluster_id = int(kmeans.predict(X_scaled)[0])  # type: ignore[attr-defined]
 
     return ClusterAssignResponse(
+        cluster_id=cluster_id,
+        cluster_name=name_map.get(cluster_id, f"Cluster {cluster_id}"),
+        city=body.city,
+        imputed_features=imputed,
+        features_used={k: round(v, 4) for k, v in filled.items()},
+    )
+
+
+# ── Host clustering helpers ────────────────────────────────────────────────────
+
+# Features and log1p cols must match cluster_hosts.py exactly
+_HOST_FEATURES = [
+    "listing_count", "host_tenure_years", "host_response_rate",
+    "host_acceptance_rate", "host_is_superhost", "avg_price",
+    "avg_availability_365", "avg_review_scores_rating", "avg_reviews_per_month",
+    "avg_accommodates", "avg_minimum_nights", "pct_entire_home",
+    "neighbourhood_count",
+]
+_LOG1P_HOST_COLS = ["listing_count", "avg_price", "avg_minimum_nights"]
+
+_host_model_cache:   dict = {}
+_host_profile_cache: dict = {}   # city -> {cluster_id: name}
+_host_medians_cache: dict = {}   # city -> {feature: median}
+
+
+def _get_host_model(city: str) -> dict:
+    if city not in _host_model_cache:
+        path = MODELS_DIR / f"{city}_host_kmeans.joblib"
+        if not path.exists():
+            raise HTTPException(
+                status_code=404,
+                detail=f"No host K-Means model for '{city}'. Run cluster_hosts.py first.",
+            )
+        _host_model_cache[city] = joblib.load(path)
+    return _host_model_cache[city]
+
+
+def _get_host_profile(city: str) -> dict[int, str]:
+    """Returns {cluster_id: cluster_name} loaded once per process."""
+    if city not in _host_profile_cache:
+        path = MODEL_RESULTS / f"host_clustering_profile_{city}.csv"
+        if not path.exists():
+            raise HTTPException(
+                status_code=404,
+                detail=f"No host cluster profile for '{city}'. Run host_cluster_profiles.py first.",
+            )
+        df = pd.read_csv(path)
+        _host_profile_cache[city] = dict(
+            zip(df["cluster"].astype(int), df["cluster_name"])
+        )
+    return _host_profile_cache[city]
+
+
+def _get_host_medians(city: str) -> dict[str, float]:
+    """Load training-set host feature medians (cached)."""
+    if city not in _host_medians_cache:
+        path = DATA_DIR / city / "host_features.parquet"
+        if not path.exists():
+            raise HTTPException(
+                status_code=404,
+                detail=f"host_features.parquet not found for '{city}'.",
+            )
+        df = pd.read_parquet(path)
+        _host_medians_cache[city] = df.median(numeric_only=True).to_dict()
+    return _host_medians_cache[city]
+
+
+# ── 12. Host cluster profiles ──────────────────────────────────────────────────
+
+@router.get(
+    "/clustering/host-profile",
+    summary="Host cluster profiles — per-segment statistics and names",
+)
+def host_clustering_profile(
+    city: Annotated[str, Query(description="london or amsterdam")] = "london",
+) -> list[dict]:
+    """
+    Returns the Step-25 host cluster profiles for one city.
+
+    Each record includes: cluster_id, cluster_name, n, pct_of_city,
+    median_avg_price, pct_superhost, mean response/acceptance rates,
+    mean availability, reviews per month, and portfolio composition.
+    """
+    return csv_to_records(must_exist(MODEL_RESULTS / f"host_clustering_profile_{city}.csv"))
+
+
+# ── 13. Host elbow scores ──────────────────────────────────────────────────────
+
+@router.get(
+    "/clustering/host-elbow",
+    summary="Host elbow sweep — inertia and silhouette for k=2..8",
+)
+def host_clustering_elbow(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    """Returns the Step-24 host elbow sweep table used to select optimal k."""
+    return csv_to_records(must_exist(MODEL_RESULTS / f"host_elbow_scores_{city}.csv"))
+
+
+# ── 14. Host cluster labels (paginated) ───────────────────────────────────────
+
+@router.get(
+    "/clustering/host-labels",
+    summary="Host cluster assignments — one row per host, paginated",
+)
+def host_clustering_labels(
+    city:    Annotated[str, Query()] = "london",
+    cluster: Annotated[Optional[int], Query(ge=0, description="Filter to a single cluster ID")] = None,
+    limit:   Annotated[int, Query(ge=1, le=500)] = 100,
+    offset:  Annotated[int, Query(ge=0)] = 0,
+) -> dict:
+    """
+    Returns host IDs, cluster assignments, and key portfolio features.
+
+    Pagination via `limit` (max 500) and `offset`.
+    Optional filter: `cluster` (exact cluster ID).
+    """
+    path = DATA_DIR / city / "host_clustering_labels.parquet"
+    if not path.exists():
+        raise HTTPException(
+            status_code=404,
+            detail=f"host_clustering_labels.parquet not found for '{city}'. "
+                   "Run cluster_hosts.py first.",
+        )
+
+    pq_path  = str(path).replace("\\", "/")
+    where_sql = f"WHERE cluster = {cluster}" if cluster is not None else ""
+
+    data_sql = (
+        f"SELECT host_id, cluster, listing_count, host_is_superhost, "
+        f"avg_price, avg_availability_365, avg_review_scores_rating, "
+        f"avg_reviews_per_month, pct_entire_home "
+        f"FROM read_parquet('{pq_path}') {where_sql} "
+        f"ORDER BY cluster, host_id LIMIT {limit} OFFSET {offset}"
+    )
+    count_sql = (
+        f"SELECT COUNT(*) AS total FROM read_parquet('{pq_path}') {where_sql}"
+    )
+
+    conn = duckdb.connect()
+    try:
+        rows  = conn.execute(data_sql).fetchdf().to_dict(orient="records")
+        total = conn.execute(count_sql).fetchone()[0]  # type: ignore[index]
+    finally:
+        conn.close()
+
+    return {"city": city, "total": total, "limit": limit, "offset": offset, "rows": rows}
+
+
+# ── 15. Live host cluster assignment ──────────────────────────────────────────
+
+class HostAssignRequest(BaseModel):
+    city: str = Field("london", description="london or amsterdam")
+    # All 13 host features — all optional, missing values imputed from training medians
+    listing_count:            Optional[int]   = Field(None, ge=1,   description="Number of active listings")
+    host_tenure_years:        Optional[float] = Field(None, ge=0)
+    host_response_rate:       Optional[float] = Field(None, ge=0,   le=1,   description="0–1 fraction (e.g. 0.95)")
+    host_acceptance_rate:     Optional[float] = Field(None, ge=0,   le=1,   description="0–1 fraction (e.g. 0.80)")
+    host_is_superhost:        Optional[int]   = Field(None, ge=0,   le=1)
+    avg_price:                Optional[float] = Field(None, ge=0,   description="Mean nightly price across portfolio")
+    avg_availability_365:     Optional[float] = Field(None, ge=0,   le=365)
+    avg_review_scores_rating: Optional[float] = Field(None, ge=0,   le=5)
+    avg_reviews_per_month:    Optional[float] = Field(None, ge=0)
+    avg_accommodates:         Optional[float] = Field(None, ge=1)
+    avg_minimum_nights:       Optional[float] = Field(None, ge=1)
+    pct_entire_home:          Optional[float] = Field(None, ge=0,   le=100, description="% of listings that are entire home (0–100)")
+    neighbourhood_count:      Optional[int]   = Field(None, ge=1,   description="Number of distinct neighbourhoods hosted in")
+
+
+class HostAssignResponse(BaseModel):
+    cluster_id:       int
+    cluster_name:     str
+    city:             str
+    imputed_features: list[str]
+    features_used:    dict[str, float]
+
+
+@router.post(
+    "/clustering/host-assign",
+    summary="Assign a host to a market segment using the saved host K-Means model",
+    response_model=HostAssignResponse,
+)
+def host_clustering_assign(body: HostAssignRequest) -> HostAssignResponse:
+    """
+    Predict which host segment a host profile belongs to.
+
+    Only `city` is required — all 13 host features are optional.
+    Missing features are filled from training-set column medians.
+
+    `host_response_rate` and `host_acceptance_rate` are **0–1 fractions**
+    (e.g. 0.95, not 95). `pct_entire_home` is **0–100**.
+
+    `listing_count`, `avg_price`, and `avg_minimum_nights` have log1p
+    applied internally before scaling (same transform used during training).
+
+    The `imputed_features` field lists every feature filled from medians.
+    """
+    artifact   = _get_host_model(body.city)
+    scaler     = artifact["scaler"]
+    kmeans     = artifact["kmeans"]
+    log1p_cols: list[str] = artifact["log1p_cols"]
+    features:   list[str] = artifact["features"]
+
+    medians  = _get_host_medians(body.city)
+    name_map = _get_host_profile(body.city)
+
+    # Collect raw values — None means missing, will be imputed
+    raw: dict[str, Optional[float]] = {
+        "listing_count":            float(body.listing_count) if body.listing_count is not None else None,
+        "host_tenure_years":        body.host_tenure_years,
+        "host_response_rate":       body.host_response_rate,
+        "host_acceptance_rate":     body.host_acceptance_rate,
+        "host_is_superhost":        float(body.host_is_superhost) if body.host_is_superhost is not None else None,
+        "avg_price":                body.avg_price,
+        "avg_availability_365":     body.avg_availability_365,
+        "avg_review_scores_rating": body.avg_review_scores_rating,
+        "avg_reviews_per_month":    body.avg_reviews_per_month,
+        "avg_accommodates":         body.avg_accommodates,
+        "avg_minimum_nights":       body.avg_minimum_nights,
+        "pct_entire_home":          body.pct_entire_home,
+        "neighbourhood_count":      float(body.neighbourhood_count) if body.neighbourhood_count is not None else None,
+    }
+
+    # Impute missing features from training medians
+    imputed: list[str] = []
+    filled: dict[str, float] = {}
+    for feat in features:
+        val = raw.get(feat)
+        if val is None:
+            filled[feat] = medians.get(feat, 0.0)
+            imputed.append(feat)
+        else:
+            filled[feat] = val
+
+    # Apply log1p to right-skewed features (same transform used during K-Means training)
+    for col in log1p_cols:
+        if col in filled:
+            filled[col] = float(np.log1p(filled[col]))
+
+    # Use a DataFrame so StandardScaler sees the column names it was fitted on
+    X = pd.DataFrame([[filled[f] for f in features]], columns=features)
+    X_scaled   = scaler.transform(X)       # type: ignore[attr-defined]
+    cluster_id = int(kmeans.predict(X_scaled)[0])  # type: ignore[attr-defined]
+
+    return HostAssignResponse(
         cluster_id=cluster_id,
         cluster_name=name_map.get(cluster_id, f"Cluster {cluster_id}"),
         city=body.city,
