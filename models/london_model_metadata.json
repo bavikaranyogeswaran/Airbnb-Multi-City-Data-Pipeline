@@ -1,48 +1,32 @@
 {
+  "model_name": "London Airbnb Price Predictor",
+  "model_type": "Gradient Boosting (LightGBM)",
+  "algorithm": "LGBMRegressor",
   "city": "london",
-  "best_model": "Gradient Boosting",
-  "test_mae": 77.56,
-  "feature_count": 36,
-  "feature_names": [
-    "accommodates",
-    "bedrooms",
-    "beds",
-    "bathroom_count",
-    "minimum_nights",
-    "host_tenure_years",
-    "host_response_rate",
-    "latitude",
-    "longitude",
-    "availability_365",
-    "review_scores_rating",
-    "review_scores_cleanliness",
-    "review_scores_location",
-    "reviews_per_month_calc",
-    "calculated_host_listings_count",
-    "number_of_reviews",
-    "beds_per_guest",
-    "host_is_superhost",
-    "instant_bookable",
-    "bathroom_is_shared",
-    "has_wifi",
-    "has_kitchen",
-    "has_air_conditioning",
-    "has_washer",
-    "has_parking",
-    "has_pool",
-    "has_workspace",
-    "has_gym",
-    "has_elevator",
-    "has_tv",
-    "has_bathtub",
-    "has_dishwasher",
-    "amenity_count",
-    "room_type",
-    "property_type_bucket",
-    "neighbourhood_cleansed"
-  ],
+  "trained_date": "2026-06-20",
+  "artifact": "models/london_price_model.joblib",
+  "data_source": "Inside Airbnb",
+  "snapshot_date": "2025-09-14",
+  "raw_listings": 96871,
+  "filtered_listings": 61963,
+  "filter_rule": "price_numeric > 0 AND price_numeric IS NOT NULL",
+  "target_column": "log_price",
+  "target_transform": "np.log1p(price_numeric) \u2014 back-transformed with np.expm1 for all metrics",
+  "price_range": {
+    "min": 10,
+    "max": 30812,
+    "median": 120,
+    "p95": 400
+  },
+  "split_strategy": "GroupShuffleSplit(test_size=0.20, random_state=42) grouped by host_id",
+  "split_rationale": "Same host cannot appear in both train and test sets \u2014 prevents host-leakage inflation",
   "train_rows": 49800,
   "test_rows": 12163,
+  "cv_strategy": "GroupKFold(n_splits=5) on training set, grouped by host_id",
+  "feature_count": 36,
+  "numeric_feature_count": 33,
+  "ohe_feature_count": 2,
+  "target_enc_feature_count": 1,
   "numeric_features": [
     "accommodates",
     "bedrooms",
@@ -84,5 +68,146 @@
   ],
   "target_enc_features": [
     "neighbourhood_cleansed"
-  ]
+  ],
+  "encoding_notes": "TargetEncoder fitted per CV fold inside sklearn Pipeline to prevent neighbourhood leakage",
+  "hyperparameters": {
+    "n_estimators": 500,
+    "learning_rate": 0.05,
+    "num_leaves": 63,
+    "min_child_samples": 20,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "random_state": 42
+  },
+  "cv_metrics": {
+    "cv_mae_mean": 104.76,
+    "cv_mae_std": 49.27,
+    "cv_r2_mean": 0.7264,
+    "train_mae_mean": 80.74,
+    "overfit_gap_mae": -24.02,
+    "note": "MAE in GBP via back-transformed custom scorer; overfit gap shows moderate regularisation"
+  },
+  "test_metrics": {
+    "mae": 77.47,
+    "rmse": 485.71,
+    "mape": 27.93,
+    "r2_log": 0.6902,
+    "r2_currency": 0.1093,
+    "within_20pct": 49.6,
+    "note": "r2_log is the primary quality metric; r2_currency is low because SS_tot is dominated by luxury outliers (max \u00a330,812)"
+  },
+  "baselines": {
+    "global_median_mae": 126.25,
+    "room_type_median_mae": 108.95,
+    "neighbourhood_rt_mae": 103.98,
+    "best_baseline": 103.98,
+    "mae_improvement_vs_baseline": 26.51,
+    "within20_improvement_pp": 16.7
+  },
+  "model_comparison": [
+    {
+      "model": "Gradient Boosting",
+      "test_mae": 77.47,
+      "r2_log": 0.6902,
+      "within_20pct": 49.6
+    },
+    {
+      "model": "Random Forest",
+      "test_mae": 80.28,
+      "r2_log": 0.6597,
+      "within_20pct": 47.0
+    },
+    {
+      "model": "Ridge",
+      "test_mae": 165.63,
+      "r2_log": 0.6038,
+      "within_20pct": 42.2
+    }
+  ],
+  "top_features_permutation": [
+    {
+      "feature": "room_type",
+      "importance": 0.10155
+    },
+    {
+      "feature": "accommodates",
+      "importance": 0.06242
+    },
+    {
+      "feature": "neighbourhood_cleansed",
+      "importance": 0.04389
+    },
+    {
+      "feature": "latitude",
+      "importance": 0.03322
+    },
+    {
+      "feature": "bedrooms",
+      "importance": 0.02889
+    },
+    {
+      "feature": "longitude",
+      "importance": 0.02718
+    },
+    {
+      "feature": "availability_365",
+      "importance": 0.02466
+    },
+    {
+      "feature": "bathroom_count",
+      "importance": 0.02383
+    },
+    {
+      "feature": "reviews_per_month_calc",
+      "importance": 0.01303
+    },
+    {
+      "feature": "bathroom_is_shared",
+      "importance": 0.01217
+    }
+  ],
+  "bias_findings": {
+    "luxury_underprediction": {
+      "price_band": "luxury (>\u00a3500)",
+      "n_listings": 601,
+      "mae": 861.27,
+      "median_residual": 376.03,
+      "within_20pct": 18.0,
+      "note": "Model systematically underpredicts luxury listings \u2014 regression-to-mean effect from log-target training"
+    },
+    "budget_overprediction": {
+      "price_band": "budget (<\u00a375)",
+      "median_residual": -8.38,
+      "note": "Model slightly overpredicts budget listings"
+    },
+    "worst_neighbourhoods": [
+      "Westminster",
+      "City of London",
+      "Brent"
+    ],
+    "best_neighbourhoods": [
+      "Sutton",
+      "Croydon",
+      "Redbridge"
+    ],
+    "hotel_room_note": "hotel_room type (n=17) has very high MAE (\u00a3803) \u2014 too few training examples to model hotel-specific pricing",
+    "professional_host_note": "Professional hosts (5+ listings) have higher MAE (\u00a3113) than solo hosts (\u00a358) due to wide portfolio price ranges"
+  },
+  "artifacts": {
+    "model_file": "models/london_price_model.joblib",
+    "metadata_file": "models/london_model_metadata.json",
+    "model_comparison_csv": "reports/model_results/price_model_comparison_london.csv",
+    "full_comparison_csv": "reports/model_results/full_model_comparison_london.csv",
+    "cv_results_csv": "reports/model_results/cross_validation_results_london.csv",
+    "residuals_csv": "reports/model_results/residuals_london.csv",
+    "residuals_enriched_csv": "reports/model_results/residuals_enriched_london.csv",
+    "neighbourhood_error_csv": "reports/model_results/neighbourhood_error_analysis_london.csv",
+    "room_type_error_csv": "reports/model_results/room_type_error_analysis_london.csv",
+    "price_band_error_csv": "reports/model_results/price_band_error_analysis_london.csv",
+    "property_type_error_csv": "reports/model_results/property_type_error_analysis_london.csv",
+    "host_segment_error_csv": "reports/model_results/host_segment_error_analysis_london.csv",
+    "feature_importance_permutation": "reports/model_results/feature_importance_permutation_london.csv",
+    "feature_importance_shap": "reports/model_results/feature_importance_shap_london.csv",
+    "shap_local_examples": "reports/model_results/shap_local_examples_london.csv"
+  }
 }
