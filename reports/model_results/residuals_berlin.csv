@@ -1,0 +1,1795 @@
+actual_price,predicted_price,residual,absolute_error,pct_error,room_type,neighbourhood_cleansed,property_type_bucket
+135.0,410.52,-275.52,275.52,204.09,entire_home,Prenzlauer Berg Südwest,apartment
+60.0,47.51,12.49,12.49,20.82,private_room,Schöneberg-Nord,apartment
+200.0,127.71,72.29,72.29,36.15,entire_home,Frankfurter Allee Süd FK,apartment
+144.0,156.71,-12.71,12.71,8.83,entire_home,Reuterstraße,apartment
+99.0,82.4,16.6,16.6,16.77,entire_home,Schmargendorf,apartment
+94.0,108.73,-14.73,14.73,15.67,entire_home,Alexanderplatz,apartment
+95.0,130.01,-35.01,35.01,36.86,entire_home,Blankenfelde/Niederschönhausen,house
+58.0,78.88,-20.88,20.88,35.99,entire_home,südliche Luisenstadt,apartment
+67.0,93.52,-26.52,26.52,39.58,entire_home,Buckow Nord,other
+110.0,56.58,53.42,53.42,48.56,private_room,Südliche Friedrichstadt,apartment
+50.0,48.79,1.21,1.21,2.43,private_room,Düsseldorfer Straße,apartment
+84.0,58.91,25.09,25.09,29.87,entire_home,Mierendorffplatz,apartment
+60.0,63.74,-3.74,3.74,6.24,private_room,Alexanderplatz,apartment
+55.0,79.12,-24.12,24.12,43.86,entire_home,Buckow Nord,apartment
+146.0,113.43,32.57,32.57,22.31,entire_home,Frankfurter Allee Süd FK,apartment
+89.0,107.08,-18.08,18.08,20.31,entire_home,Zehlendorf  Südwest,apartment
+85.0,68.7,16.3,16.3,19.17,entire_home,Zehlendorf  Südwest,apartment
+92.0,100.93,-8.93,8.93,9.71,entire_home,Helmholtzplatz,apartment
+80.0,82.49,-2.49,2.49,3.11,entire_home,Schöneberg-Süd,apartment
+135.0,110.68,24.32,24.32,18.02,entire_home,Prenzlauer Berg Südwest,apartment
+35.0,61.84,-26.84,26.84,76.69,private_room,Prenzlauer Berg Nordwest,apartment
+91.0,66.01,24.99,24.99,27.46,private_room,Prenzlauer Berg Südwest,apartment
+62.0,62.48,-0.48,0.48,0.77,entire_home,Otto-Suhr-Allee,apartment
+116.0,88.21,27.79,27.79,23.95,entire_home,nördliche Luisenstadt,other
+100.0,169.81,-69.81,69.81,69.81,entire_home,Prenzlauer Berg Südwest,apartment
+105.0,114.73,-9.73,9.73,9.27,entire_home,Brunnenstr. Süd,apartment
+115.0,122.03,-7.03,7.03,6.12,entire_home,Brunnenstr. Süd,apartment
+259.0,228.96,30.04,30.04,11.6,entire_home,Schöneberg-Süd,apartment
+87.0,85.31,1.69,1.69,1.94,entire_home,Prenzlauer Berg Nordwest,apartment
+51.0,64.28,-13.28,13.28,26.04,private_room,Schöneberg-Nord,apartment
+198.0,204.81,-6.81,6.81,3.44,entire_home,Prenzlauer Berg Süd,apartment
+29.0,38.9,-9.9,9.9,34.15,private_room,Ost 2,apartment
+135.0,75.07,59.93,59.93,44.39,entire_home,südliche Luisenstadt,apartment
+77.0,50.32,26.68,26.68,34.65,entire_home,Neue Kantstraße,apartment
+49.0,53.47,-4.47,4.47,9.12,private_room,südliche Luisenstadt,apartment
+70.0,110.36,-40.36,40.36,57.65,entire_home,südliche Luisenstadt,apartment
+57.0,80.71,-23.71,23.71,41.6,entire_home,Moabit Ost,apartment
+281.0,181.36,99.64,99.64,35.46,entire_home,südliche Luisenstadt,apartment
+40.0,52.0,-12.0,12.0,30.01,entire_home,Gropiusstadt,apartment
+225.0,97.88,127.12,127.12,56.5,entire_home,Schöneberg-Nord,apartment
+62.0,75.46,-13.46,13.46,21.71,entire_home,Ost 1,apartment
+165.0,99.66,65.34,65.34,39.6,entire_home,südliche Luisenstadt,apartment
+129.0,140.23,-11.23,11.23,8.7,entire_home,Rixdorf,apartment
+109.0,98.7,10.3,10.3,9.45,entire_home,Prenzlauer Berg Süd,apartment
+33.0,31.45,1.55,1.55,4.71,private_room,Oberschöneweide,apartment
+100.0,105.09,-5.09,5.09,5.09,entire_home,südliche Luisenstadt,apartment
+136.0,97.41,38.59,38.59,28.38,entire_home,Prenzlauer Berg Nordwest,apartment
+184.0,129.76,54.24,54.24,29.48,entire_home,Prenzlauer Berg Süd,apartment
+47.0,73.29,-26.29,26.29,55.93,entire_home,Westend,apartment
+693.0,183.25,509.75,509.75,73.56,entire_home,Wiesbadener Straße,apartment
+171.0,105.45,65.55,65.55,38.33,entire_home,Wiesbadener Straße,apartment
+82.0,76.73,5.27,5.27,6.43,entire_home,Tiergarten Süd,apartment
+58.0,74.59,-16.59,16.59,28.6,entire_home,Prenzlauer Berg Nordwest,apartment
+208.0,169.71,38.29,38.29,18.41,entire_home,Brunnenstr. Süd,apartment
+93.0,78.96,14.04,14.04,15.09,entire_home,Brunnenstr. Süd,apartment
+108.0,51.36,56.64,56.64,52.44,private_room,Barstraße,apartment
+78.0,63.49,14.51,14.51,18.61,private_room,Alexanderplatz,apartment
+145.0,127.36,17.64,17.64,12.16,entire_home,Brunnenstr. Süd,apartment
+41.0,55.69,-14.69,14.69,35.82,entire_home,Parkviertel,apartment
+80.0,108.44,-28.44,28.44,35.56,entire_home,Karl-Marx-Allee-Nord,apartment
+46.0,46.83,-0.83,0.83,1.8,private_room,Otto-Suhr-Allee,apartment
+208.0,131.61,76.39,76.39,36.72,entire_home,Brunnenstr. Süd,apartment
+260.0,184.31,75.69,75.69,29.11,entire_home,Brunnenstr. Süd,apartment
+260.0,157.15,102.85,102.85,39.56,entire_home,Brunnenstr. Süd,apartment
+208.0,156.96,51.04,51.04,24.54,entire_home,Brunnenstr. Süd,apartment
+210.0,173.22,36.78,36.78,17.51,entire_home,Schöneberg-Nord,apartment
+89.0,99.72,-10.72,10.72,12.04,entire_home,Brunnenstr. Süd,apartment
+54.0,67.29,-13.29,13.29,24.62,private_room,Prenzlauer Berg Nord,apartment
+38.0,76.6,-38.6,38.6,101.58,entire_home,südliche Luisenstadt,apartment
+72.0,125.18,-53.18,53.18,73.86,entire_home,Lichtenrade,apartment
+88.0,86.66,1.34,1.34,1.53,entire_home,Mierendorffplatz,apartment
+73.0,53.0,20.0,20.0,27.39,private_room,Zehlendorf  Nord,house
+98.0,78.0,20.0,20.0,20.41,private_room,nördliche Luisenstadt,apartment
+236.0,234.4,1.6,1.6,0.68,entire_home,Alexanderplatz,apartment
+65.0,48.82,16.18,16.18,24.89,private_room,Schöneberg-Süd,apartment
+85.0,79.48,5.52,5.52,6.49,entire_home,Tempelhofer Vorstadt,apartment
+100.0,143.47,-43.47,43.47,43.47,entire_home,Rahnsdorf/Hessenwinkel,apartment
+124.0,125.7,-1.7,1.7,1.37,entire_home,Brunnenstr. Süd,apartment
+51.0,48.3,2.7,2.7,5.29,entire_home,Reuterstraße,apartment
+74.0,90.31,-16.31,16.31,22.04,entire_home,Brunnenstr. Süd,apartment
+73.0,91.4,-18.4,18.4,25.21,entire_home,Moabit West,apartment
+42.0,59.87,-17.87,17.87,42.55,entire_home,Prenzlauer Berg Südwest,apartment
+79.0,98.28,-19.28,19.28,24.41,entire_home,Alexanderplatz,apartment
+276.0,220.32,55.68,55.68,20.17,entire_home,Prenzlauer Berg Südwest,apartment
+140.0,126.36,13.64,13.64,9.74,entire_home,Friedenau,apartment
+208.0,183.25,24.75,24.75,11.9,entire_home,Helmholtzplatz,apartment
+106.0,110.87,-4.87,4.87,4.59,entire_home,Heerstrasse,apartment
+86.0,82.15,3.85,3.85,4.48,entire_home,Südliche Friedrichstadt,apartment
+189.0,185.24,3.76,3.76,1.99,entire_home,Alexanderplatz,apartment
+63.0,65.01,-2.01,2.01,3.19,private_room,Südliche Friedrichstadt,apartment
+63.0,120.63,-57.63,57.63,91.48,entire_home,Fennpfuhl,apartment
+70.0,56.95,13.05,13.05,18.64,private_room,Rixdorf,apartment
+93.0,108.6,-15.6,15.6,16.77,entire_home,Prenzlauer Berg Süd,apartment
+68.0,67.52,0.48,0.48,0.7,entire_home,Helmholtzplatz,apartment
+81.0,78.33,2.67,2.67,3.3,private_room,Brunnenstr. Süd,house
+83.0,58.91,24.09,24.09,29.02,private_room,Rixdorf,apartment
+133.0,159.34,-26.34,26.34,19.81,entire_home,Prenzlauer Berg Süd,apartment
+90.0,76.6,13.4,13.4,14.89,private_room,nördliche Luisenstadt,apartment
+65.0,105.51,-40.51,40.51,62.33,private_room,Prenzlauer Berg Südwest,apartment
+101.0,109.15,-8.15,8.15,8.07,entire_home,Schöneberg-Süd,apartment
+103.0,92.21,10.79,10.79,10.48,entire_home,Karl-Marx-Allee-Süd,apartment
+272.0,241.3,30.7,30.7,11.29,entire_home,Tempelhofer Vorstadt,apartment
+77.0,79.42,-2.42,2.42,3.14,private_room,Südliche Friedrichstadt,apartment
+176.0,87.76,88.24,88.24,50.14,private_room,Schillerpromenade,apartment
+193.0,137.64,55.36,55.36,28.68,entire_home,Alexanderplatz,apartment
+55.0,89.36,-34.36,34.36,62.48,private_room,Brunnenstr. Nord,apartment
+297.0,235.18,61.82,61.82,20.82,entire_home,nördliche Luisenstadt,apartment
+99.0,110.21,-11.21,11.21,11.33,entire_home,Buckow,hotel
+76.0,95.98,-19.98,19.98,26.28,private_room,Schillerpromenade,apartment
+54.0,75.36,-21.36,21.36,39.56,entire_home,Drakestr.,apartment
+85.0,109.92,-24.92,24.92,29.32,entire_home,Alexanderplatz,apartment
+60.0,60.49,-0.49,0.49,0.82,private_room,Südliche Friedrichstadt,apartment
+121.0,111.47,9.53,9.53,7.88,entire_home,Wedding Zentrum,apartment
+129.0,125.49,3.51,3.51,2.72,entire_home,Alexanderplatz,apartment
+114.0,144.5,-30.5,30.5,26.76,entire_home,Rixdorf,apartment
+40.0,52.65,-12.65,12.65,31.63,private_room,Baumschulenweg,apartment
+130.0,160.74,-30.74,30.74,23.65,entire_home,Regierungsviertel,apartment
+38.0,62.46,-24.46,24.46,64.37,private_room,Reuterstraße,apartment
+203.0,140.87,62.13,62.13,30.61,entire_home,Grunewald,apartment
+68.0,76.95,-8.95,8.95,13.16,entire_home,Tempelhofer Vorstadt,apartment
+34.0,38.86,-4.86,4.86,14.28,private_room,Moabit West,apartment
+207.0,144.86,62.14,62.14,30.02,entire_home,Rahnsdorf/Hessenwinkel,house
+196.0,121.97,74.03,74.03,37.77,entire_home,Forst Grunewald,house
+92.0,87.51,4.49,4.49,4.88,entire_home,Schloß Charlottenburg,apartment
+66.0,62.8,3.2,3.2,4.85,private_room,Alexanderplatz,apartment
+40.0,35.25,4.75,4.75,11.88,private_room,Oberschöneweide,apartment
+147.0,151.27,-4.27,4.27,2.9,entire_home,Prenzlauer Berg Nord,apartment
+29.0,66.51,-37.51,37.51,129.36,entire_home,Buchholz,apartment
+71.0,71.68,-0.68,0.68,0.96,entire_home,Schöneberg-Nord,apartment
+97.0,92.75,4.25,4.25,4.38,entire_home,Prenzlauer Berg Nordwest,apartment
+98.0,203.46,-105.46,105.46,107.61,entire_home,Düsseldorfer Straße,apartment
+172.0,186.01,-14.01,14.01,8.15,entire_home,Alexanderplatz,apartment
+190.0,238.05,-48.05,48.05,25.29,entire_home,Prenzlauer Berg Nordwest,apartment
+123.0,131.89,-8.89,8.89,7.23,entire_home,Tempelhofer Vorstadt,apartment
+87.0,93.41,-6.41,6.41,7.37,entire_home,Moabit Ost,apartment
+63.0,93.87,-30.87,30.87,49.0,entire_home,Prenzlauer Berg Südwest,apartment
+33.0,51.02,-18.02,18.02,54.62,private_room,Tempelhof,apartment
+231.0,152.15,78.85,78.85,34.14,entire_home,Alexanderplatz,other
+70.0,68.1,1.9,1.9,2.72,private_room,Tempelhofer Vorstadt,apartment
+251.0,209.55,41.45,41.45,16.51,entire_home,Wiesbadener Straße,apartment
+95.0,82.8,12.2,12.2,12.85,entire_home,Rixdorf,apartment
+135.0,112.2,22.8,22.8,16.89,entire_home,Alexanderplatz,apartment
+183.0,212.09,-29.09,29.09,15.9,entire_home,südliche Luisenstadt,apartment
+169.0,108.75,60.25,60.25,35.65,entire_home,südliche Luisenstadt,apartment
+246.0,158.0,88.0,88.0,35.77,entire_home,Schillerpromenade,apartment
+147.0,80.43,66.57,66.57,45.28,private_room,Alexanderplatz,apartment
+148.0,166.02,-18.02,18.02,12.18,entire_home,Prenzlauer Berg Süd,apartment
+94.0,77.59,16.41,16.41,17.46,entire_home,Tempelhofer Vorstadt,apartment
+102.0,93.51,8.49,8.49,8.32,entire_home,Moabit Ost,apartment
+171.0,147.72,23.28,23.28,13.61,entire_home,Prenzlauer Berg Nord,apartment
+300.0,223.03,76.97,76.97,25.66,entire_home,Prenzlauer Berg Süd,apartment
+94.0,116.86,-22.86,22.86,24.32,entire_home,Alexanderplatz,apartment
+164.0,134.3,29.7,29.7,18.11,entire_home,Prenzlauer Berg Ost,apartment
+86.0,68.56,17.44,17.44,20.28,private_room,Schöneberg-Nord,apartment
+80.0,87.49,-7.49,7.49,9.36,entire_home,Mierendorffplatz,apartment
+45.0,34.04,10.96,10.96,24.35,private_room,Buchholz,house
+123.0,131.22,-8.22,8.22,6.68,entire_home,Südliche Friedrichstadt,apartment
+102.0,106.15,-4.15,4.15,4.07,entire_home,Brunnenstr. Süd,apartment
+81.0,118.24,-37.24,37.24,45.98,private_room,Prenzlauer Berg Südwest,apartment
+132.0,133.17,-1.17,1.17,0.89,entire_home,Südliche Friedrichstadt,apartment
+121.0,131.63,-10.63,10.63,8.79,entire_home,Südliche Friedrichstadt,apartment
+74.0,50.6,23.4,23.4,31.62,private_room,Schillerpromenade,apartment
+70.0,97.74,-27.74,27.74,39.63,entire_home,Frankfurter Allee Nord,other
+167.0,85.62,81.38,81.38,48.73,entire_home,Tiergarten Süd,apartment
+70.0,80.63,-10.63,10.63,15.19,entire_home,Mahlsdorf,apartment
+103.0,101.39,1.61,1.61,1.56,entire_home,Brunnenstr. Süd,apartment
+90.0,108.6,-18.6,18.6,20.67,entire_home,nördliche Luisenstadt,apartment
+77.0,75.75,1.25,1.25,1.62,entire_home,Tempelhofer Vorstadt,apartment
+351.0,333.61,17.39,17.39,4.95,entire_home,Frankfurter Allee Süd FK,apartment
+100.0,88.4,11.6,11.6,11.6,entire_home,Alt-Lichtenberg,apartment
+83.0,113.05,-30.05,30.05,36.2,entire_home,Buckow,apartment
+95.0,102.64,-7.64,7.64,8.04,entire_home,Tempelhofer Vorstadt,apartment
+130.0,102.38,27.62,27.62,21.24,entire_home,südliche Luisenstadt,apartment
+105.0,116.65,-11.65,11.65,11.09,entire_home,Frankfurter Allee Süd FK,apartment
+90.0,77.63,12.37,12.37,13.75,entire_home,Schillerpromenade,apartment
+49.0,40.44,8.56,8.56,17.48,entire_home,Reuterstraße,apartment
+243.0,167.56,75.44,75.44,31.05,entire_home,Mierendorffplatz,apartment
+275.0,289.54,-14.54,14.54,5.29,entire_home,Schöneberg-Süd,apartment
+65.0,43.51,21.49,21.49,33.06,entire_home,Düsseldorfer Straße,apartment
+125.0,93.31,31.69,31.69,25.35,entire_home,Alexanderplatz,apartment
+257.0,187.56,69.44,69.44,27.02,entire_home,Brunnenstr. Süd,apartment
+316.0,310.04,5.96,5.96,1.88,entire_home,Brunnenstr. Süd,apartment
+100.0,99.57,0.43,0.43,0.43,entire_home,südliche Luisenstadt,apartment
+85.0,98.67,-13.67,13.67,16.08,entire_home,Kaulsdorf,apartment
+168.0,126.74,41.26,41.26,24.56,entire_home,Brunnenstr. Süd,apartment
+153.0,148.46,4.54,4.54,2.97,entire_home,Prenzlauer Berg Südwest,apartment
+95.0,163.73,-68.73,68.73,72.34,entire_home,Frankfurter Allee Süd FK,apartment
+70.0,64.32,5.68,5.68,8.11,private_room,südliche Luisenstadt,apartment
+75.0,78.32,-3.32,3.32,4.42,entire_home,Wedding Zentrum,apartment
+36.0,40.43,-4.43,4.43,12.31,private_room,Köpenick-Nord,house
+60.0,57.2,2.8,2.8,4.67,private_room,Wedding Zentrum,apartment
+59.0,66.87,-7.87,7.87,13.34,private_room,Tempelhofer Vorstadt,apartment
+95.0,117.29,-22.29,22.29,23.46,entire_home,Neuköllner Mitte/Zentrum,apartment
+300.0,312.64,-12.64,12.64,4.21,entire_home,nördliche Luisenstadt,apartment
+75.0,78.15,-3.15,3.15,4.2,private_room,Schöneberg-Nord,apartment
+77.0,128.02,-51.02,51.02,66.26,entire_home,Prenzlauer Berg Südwest,apartment
+40.0,55.96,-15.96,15.96,39.89,private_room,Rudow,house
+162.0,99.72,62.28,62.28,38.45,entire_home,Frankfurter Allee Nord,apartment
+172.0,171.67,0.33,0.33,0.19,entire_home,Prenzlauer Berg Nord,apartment
+50.0,74.07,-24.07,24.07,48.14,entire_home,Tiergarten Süd,apartment
+72.0,67.3,4.7,4.7,6.52,private_room,südliche Luisenstadt,apartment
+67.0,86.43,-19.43,19.43,28.99,entire_home,Moabit Ost,apartment
+75.0,155.77,-80.77,80.77,107.7,entire_home,Weißensee,apartment
+289.0,137.03,151.97,151.97,52.58,entire_home,südliche Luisenstadt,apartment
+60.0,134.67,-74.67,74.67,124.46,entire_home,Regierungsviertel,apartment
+218.0,207.55,10.45,10.45,4.79,entire_home,südliche Luisenstadt,apartment
+244.0,117.91,126.09,126.09,51.67,entire_home,Schloßstr.,apartment
+111.0,83.2,27.8,27.8,25.05,entire_home,Tempelhofer Vorstadt,apartment
+40.0,54.46,-14.46,14.46,36.14,private_room,Rudow,house
+65.0,89.73,-24.73,24.73,38.05,entire_home,Alexanderplatz,apartment
+50.0,52.04,-2.04,2.04,4.08,private_room,Friedrichsfelde Süd,apartment
+65.0,49.43,15.57,15.57,23.95,private_room,Zehlendorf  Nord,house
+80.0,71.89,8.11,8.11,10.14,entire_home,Schöneberg-Nord,apartment
+87.0,58.55,28.45,28.45,32.71,private_room,Frankfurter Allee Nord,apartment
+91.0,84.53,6.47,6.47,7.11,entire_home,Moabit Ost,apartment
+110.0,99.76,10.24,10.24,9.31,entire_home,Helmholtzplatz,apartment
+158.0,104.42,53.58,53.58,33.91,entire_home,Brunnenstr. Süd,apartment
+158.0,131.3,26.7,26.7,16.9,entire_home,Brunnenstr. Süd,apartment
+98.0,76.16,21.84,21.84,22.28,entire_home,Brunnenstr. Süd,apartment
+93.0,124.44,-31.44,31.44,33.8,entire_home,Frankfurter Allee Süd FK,other
+356.0,254.77,101.23,101.23,28.44,entire_home,Prenzlauer Berg Süd,apartment
+90.0,174.38,-84.38,84.38,93.75,private_room,Prenzlauer Berg Südwest,apartment
+37.0,41.92,-4.92,4.92,13.3,private_room,Köpenick-Nord,house
+68.0,47.95,20.05,20.05,29.49,private_room,Moabit Ost,apartment
+285.0,192.46,92.54,92.54,32.47,entire_home,südliche Luisenstadt,apartment
+99.0,119.45,-20.45,20.45,20.66,entire_home,Blankenfelde/Niederschönhausen,apartment
+105.0,103.92,1.08,1.08,1.03,entire_home,Helmholtzplatz,apartment
+216.0,188.68,27.32,27.32,12.65,entire_home,nördliche Luisenstadt,apartment
+64.0,68.65,-4.65,4.65,7.26,entire_home,Osloer Straße,apartment
+125.0,68.85,56.15,56.15,44.92,private_room,Kantstraße,apartment
+165.0,176.76,-11.76,11.76,7.13,entire_home,Neuköllner Mitte/Zentrum,apartment
+138.0,153.11,-15.11,15.11,10.95,entire_home,Helmholtzplatz,apartment
+175.0,180.99,-5.99,5.99,3.42,entire_home,Prenzlauer Berg Südwest,apartment
+216.0,223.39,-7.39,7.39,3.42,entire_home,nördliche Luisenstadt,apartment
+61.0,54.76,6.24,6.24,10.23,entire_home,Otto-Suhr-Allee,apartment
+70.0,99.75,-29.75,29.75,42.5,entire_home,Parkviertel,apartment
+74.0,117.54,-43.54,43.54,58.83,entire_home,Schloßstr.,apartment
+83.0,89.9,-6.9,6.9,8.32,entire_home,Prenzlauer Berg Nord,apartment
+45.0,41.51,3.49,3.49,7.75,private_room,Kaulsdorf,house
+130.0,85.07,44.93,44.93,34.56,entire_home,Tempelhofer Vorstadt,apartment
+75.0,98.25,-23.25,23.25,31.01,entire_home,Parkviertel,apartment
+55.0,102.67,-47.67,47.67,86.67,entire_home,Parkviertel,apartment
+105.0,123.31,-18.31,18.31,17.44,entire_home,Parkviertel,apartment
+54.0,66.88,-12.88,12.88,23.85,private_room,Frankfurter Allee Süd FK,apartment
+120.0,102.36,17.64,17.64,14.7,entire_home,Frankfurter Allee Nord,apartment
+200.0,224.83,-24.83,24.83,12.41,entire_home,südliche Luisenstadt,apartment
+77.0,59.85,17.15,17.15,22.27,private_room,Alexanderplatz,apartment
+101.0,86.01,14.99,14.99,14.85,entire_home,Brunnenstr. Nord,apartment
+162.0,184.45,-22.45,22.45,13.86,entire_home,Schillerpromenade,apartment
+226.0,162.72,63.28,63.28,28.0,entire_home,Prenzlauer Berg Süd,apartment
+167.0,227.18,-60.18,60.18,36.04,entire_home,Prenzlauer Berg Ost,apartment
+45.0,42.62,2.38,2.38,5.29,private_room,West 1,apartment
+130.0,159.06,-29.06,29.06,22.35,entire_home,Tempelhofer Vorstadt,apartment
+137.0,166.95,-29.95,29.95,21.86,entire_home,Tempelhofer Vorstadt,apartment
+139.0,133.4,5.6,5.6,4.03,entire_home,Tempelhofer Vorstadt,apartment
+142.0,144.12,-2.12,2.12,1.49,entire_home,Tempelhofer Vorstadt,apartment
+167.0,202.55,-35.55,35.55,21.29,entire_home,Parkviertel,apartment
+348.0,339.24,8.76,8.76,2.52,entire_home,Weißensee,apartment
+132.0,117.64,14.36,14.36,10.88,entire_home,Tempelhofer Vorstadt,other
+143.0,163.91,-20.91,20.91,14.62,entire_home,Parkviertel,apartment
+258.0,221.0,37.0,37.0,14.34,entire_home,Alexanderplatz,apartment
+153.0,149.85,3.15,3.15,2.06,entire_home,Kurfürstendamm,apartment
+240.0,144.74,95.26,95.26,39.69,entire_home,Alexanderplatz,apartment
+203.0,176.55,26.45,26.45,13.03,entire_home,Marzahn-Süd,apartment
+513.0,340.77,172.23,172.23,33.57,entire_home,Tempelhofer Vorstadt,apartment
+72.0,109.49,-37.49,37.49,52.07,entire_home,Schillerpromenade,apartment
+105.0,100.56,4.44,4.44,4.22,entire_home,Reuterstraße,apartment
+81.0,66.42,14.58,14.58,18.0,private_room,Frankfurter Allee Süd FK,apartment
+103.0,67.47,35.53,35.53,34.5,private_room,Düsseldorfer Straße,apartment
+60.0,97.14,-37.14,37.14,61.91,private_room,Schöneberg-Süd,apartment
+28.0,58.57,-30.57,30.57,109.2,private_room,Heerstraße Nord,house
+55.0,45.94,9.06,9.06,16.48,private_room,Nord 1,house
+129.0,114.26,14.74,14.74,11.43,entire_home,Schöneberg-Süd,apartment
+64.0,63.56,0.44,0.44,0.69,private_room,Prenzlauer Berg Südwest,apartment
+249.0,138.9,110.1,110.1,44.22,entire_home,Frankfurter Allee Nord,apartment
+25.0,50.83,-25.83,25.83,103.34,private_room,Heerstraße Nord,house
+166.0,146.04,19.96,19.96,12.02,entire_home,Rixdorf,apartment
+252.0,169.6,82.4,82.4,32.7,entire_home,nördliche Luisenstadt,apartment
+110.0,79.75,30.25,30.25,27.5,entire_home,Brunnenstr. Süd,apartment
+75.0,82.1,-7.1,7.1,9.47,entire_home,Brunnenstr. Nord,apartment
+69.0,65.29,3.71,3.71,5.38,private_room,Alexanderplatz,apartment
+114.0,139.13,-25.13,25.13,22.04,entire_home,Helmholtzplatz,apartment
+154.0,128.3,25.7,25.7,16.69,entire_home,Neuköllner Mitte/Zentrum,apartment
+69.0,81.11,-12.11,12.11,17.55,entire_home,Alexanderplatz,apartment
+184.0,197.7,-13.7,13.7,7.45,entire_home,Weißensee,house
+196.0,188.88,7.12,7.12,3.63,entire_home,Weißensee,house
+99.0,67.82,31.18,31.18,31.49,entire_home,Karl-Marx-Allee-Süd,apartment
+67.0,79.29,-12.29,12.29,18.34,entire_home,Tempelhofer Vorstadt,apartment
+42.0,39.69,2.31,2.31,5.5,private_room,Ostpreußendamm,house
+65.0,84.4,-19.4,19.4,29.84,entire_home,nördliche Luisenstadt,apartment
+153.0,183.97,-30.97,30.97,20.24,entire_home,Brunnenstr. Süd,apartment
+156.0,116.01,39.99,39.99,25.64,entire_home,Prenzlauer Berg Ost,apartment
+56.0,66.84,-10.84,10.84,19.36,entire_home,Schloß Charlottenburg,other
+33.0,35.24,-2.24,2.24,6.79,private_room,Ostpreußendamm,house
+76.0,66.6,9.4,9.4,12.37,private_room,Prenzlauer Berg Nord,apartment
+72.0,65.31,6.69,6.69,9.29,private_room,Drakestr.,house
+186.0,91.05,94.95,94.95,51.05,hotel_room,Tiergarten Süd,apartment
+74.0,74.67,-0.67,0.67,0.9,private_room,Karl-Marx-Allee-Nord,apartment
+102.0,109.58,-7.58,7.58,7.43,entire_home,Alexanderplatz,apartment
+546.0,304.58,241.42,241.42,44.22,entire_home,Prenzlauer Berg Nord,apartment
+199.0,180.86,18.14,18.14,9.11,entire_home,Schillerpromenade,apartment
+45.0,63.18,-18.18,18.18,40.4,private_room,Prenzlauer Berg Südwest,apartment
+181.0,238.06,-57.06,57.06,31.52,hotel_room,Tiergarten Süd,apartment
+279.0,249.76,29.24,29.24,10.48,hotel_room,Tiergarten Süd,apartment
+375.0,288.5,86.5,86.5,23.07,entire_home,Tiergarten Süd,apartment
+217.0,99.05,117.95,117.95,54.35,entire_home,Helmholtzplatz,apartment
+45.0,51.35,-6.35,6.35,14.12,private_room,Wedding Zentrum,apartment
+90.0,96.46,-6.46,6.46,7.17,entire_home,Brunnenstr. Süd,apartment
+80.0,73.74,6.26,6.26,7.82,private_room,Prenzlauer Berg Nordwest,apartment
+85.0,93.24,-8.24,8.24,9.7,entire_home,Brunnenstr. Süd,apartment
+36.0,104.7,-68.7,68.7,190.82,entire_home,Karlshorst,apartment
+23.0,39.54,-16.54,16.54,71.91,private_room,Baumschulenweg,apartment
+51.0,67.43,-16.43,16.43,32.22,private_room,Helmholtzplatz,apartment
+104.0,89.22,14.78,14.78,14.21,entire_home,Marzahn-Süd,apartment
+155.0,139.15,15.85,15.85,10.22,entire_home,Marzahn-Süd,apartment
+49.0,65.23,-16.23,16.23,33.12,private_room,Tempelhofer Vorstadt,apartment
+72.0,65.38,6.62,6.62,9.19,entire_home,Moabit Ost,apartment
+85.0,105.14,-20.14,20.14,23.69,entire_home,Regierungsviertel,apartment
+116.0,181.76,-65.76,65.76,56.69,entire_home,Brunnenstr. Nord,apartment
+79.0,56.64,22.36,22.36,28.3,private_room,Frankfurter Allee Süd FK,apartment
+147.0,132.36,14.64,14.64,9.96,entire_home,Reuterstraße,apartment
+105.0,78.36,26.64,26.64,25.37,private_room,Lankwitz,apartment
+63.0,63.42,-0.42,0.42,0.66,entire_home,Lankwitz,apartment
+44.0,51.12,-7.12,7.12,16.19,private_room,Zehlendorf  Nord,apartment
+89.0,91.76,-2.76,2.76,3.11,entire_home,Rummelsburger Bucht,apartment
+145.0,156.8,-11.8,11.8,8.14,entire_home,Tempelhofer Vorstadt,apartment
+42.0,46.16,-4.16,4.16,9.91,private_room,Tempelhof,apartment
+71.0,85.34,-14.34,14.34,20.19,entire_home,Plänterwald,apartment
+130.0,66.1,63.9,63.9,49.15,private_room,Karl-Marx-Allee-Süd,apartment
+99.0,83.23,15.77,15.77,15.93,entire_home,Drakestr.,apartment
+248.0,272.03,-24.03,24.03,9.69,entire_home,Prenzlauer Berg Nordwest,apartment
+145.0,236.25,-91.25,91.25,62.93,entire_home,Brunnenstr. Nord,apartment
+243.0,189.27,53.73,53.73,22.11,entire_home,Prenzlauer Berg Süd,apartment
+67.0,102.83,-35.83,35.83,53.48,entire_home,Alexanderplatz,apartment
+57.0,61.95,-4.95,4.95,8.68,entire_home,Brunnenstr. Süd,apartment
+56.0,66.69,-10.69,10.69,19.08,private_room,Rixdorf,apartment
+220.0,135.48,84.52,84.52,38.42,entire_home,Prenzlauer Berg Südwest,apartment
+110.0,103.11,6.89,6.89,6.26,entire_home,Rixdorf,apartment
+46.0,57.96,-11.96,11.96,26.0,entire_home,Lankwitz,apartment
+56.0,57.79,-1.79,1.79,3.19,private_room,Prenzlauer Berg Ost,apartment
+91.0,74.87,16.13,16.13,17.73,entire_home,Wedding Zentrum,apartment
+90.0,84.61,5.39,5.39,5.99,entire_home,Moabit Ost,apartment
+112.0,123.71,-11.71,11.71,10.45,entire_home,Rahnsdorf/Hessenwinkel,apartment
+59.0,39.8,19.2,19.2,32.54,private_room,Tiergarten Süd,apartment
+384.0,177.51,206.49,206.49,53.77,entire_home,Grunewald,apartment
+197.0,165.78,31.22,31.22,15.85,hotel_room,Karlshorst,apartment
+226.0,190.08,35.92,35.92,15.89,hotel_room,Karlshorst,apartment
+123.0,137.4,-14.4,14.4,11.71,entire_home,Brunnenstr. Süd,apartment
+196.0,195.28,0.72,0.72,0.37,hotel_room,Karlshorst,apartment
+169.0,297.05,-128.05,128.05,75.77,hotel_room,Otto-Suhr-Allee,apartment
+183.0,279.76,-96.76,96.76,52.87,hotel_room,Otto-Suhr-Allee,apartment
+91.0,141.89,-50.89,50.89,55.92,entire_home,Bohnsdorf,house
+240.0,163.96,76.04,76.04,31.68,hotel_room,Friedenau,hotel
+222.0,160.41,61.59,61.59,27.74,hotel_room,Friedenau,hotel
+207.0,101.87,105.13,105.13,50.79,hotel_room,Friedenau,hotel
+198.0,91.93,106.07,106.07,53.57,hotel_room,Friedenau,hotel
+194.0,116.89,77.11,77.11,39.75,hotel_room,Friedenau,hotel
+73.0,97.77,-24.77,24.77,33.93,entire_home,Ostpreußendamm,apartment
+487.0,218.82,268.18,268.18,55.07,entire_home,Brunnenstr. Süd,apartment
+104.0,109.4,-5.4,5.4,5.19,entire_home,Tempelhofer Vorstadt,apartment
+79.0,93.03,-14.03,14.03,17.76,private_room,Prenzlauer Berg Nordwest,other
+102.0,139.21,-37.21,37.21,36.48,private_room,Prenzlauer Berg Nordwest,other
+120.0,78.91,41.09,41.09,34.24,entire_home,Brunnenstr. Süd,apartment
+196.0,159.95,36.05,36.05,18.39,entire_home,Schöneberg-Nord,apartment
+155.0,171.22,-16.22,16.22,10.47,entire_home,Brunnenstr. Süd,apartment
+396.0,209.54,186.46,186.46,47.09,entire_home,Brunnenstr. Süd,apartment
+396.0,187.84,208.16,208.16,52.57,entire_home,Alexanderplatz,apartment
+1371.0,314.62,1056.38,1056.38,77.05,entire_home,Brunnenstr. Süd,apartment
+1697.0,389.36,1307.64,1307.64,77.06,entire_home,Brunnenstr. Süd,apartment
+328.0,191.62,136.38,136.38,41.58,entire_home,Brunnenstr. Süd,apartment
+97.0,103.42,-6.42,6.42,6.62,entire_home,Schillerpromenade,apartment
+140.0,151.87,-11.87,11.87,8.48,entire_home,Brunnenstr. Süd,apartment
+216.0,195.15,20.85,20.85,9.65,hotel_room,Kurfürstendamm,hotel
+97.0,71.6,25.4,25.4,26.18,private_room,Alexanderplatz,apartment
+131.0,111.97,19.03,19.03,14.53,entire_home,Marzahn-Süd,apartment
+60.0,151.02,-91.02,91.02,151.7,entire_home,Schillerpromenade,apartment
+98.0,112.98,-14.98,14.98,15.29,entire_home,Schillerpromenade,apartment
+97.0,101.79,-4.79,4.79,4.94,entire_home,Schillerpromenade,apartment
+93.0,98.15,-5.15,5.15,5.54,entire_home,Tempelhofer Vorstadt,apartment
+47.0,86.06,-39.06,39.06,83.1,entire_home,Moabit Ost,house
+50.0,66.13,-16.13,16.13,32.26,private_room,Regierungsviertel,apartment
+29.0,39.69,-10.69,10.69,36.86,private_room,Tempelhofer Vorstadt,apartment
+42.0,39.33,2.67,2.67,6.36,private_room,Tempelhofer Vorstadt,apartment
+29.0,43.85,-14.85,14.85,51.2,private_room,Tempelhofer Vorstadt,apartment
+36.0,58.4,-22.4,22.4,62.21,private_room,Tempelhofer Vorstadt,apartment
+135.0,97.01,37.99,37.99,28.14,entire_home,Brunnenstr. Süd,apartment
+74.0,67.49,6.51,6.51,8.8,private_room,Frankfurter Allee Süd FK,apartment
+86.0,97.35,-11.35,11.35,13.2,entire_home,Prenzlauer Berg Süd,apartment
+80.0,93.28,-13.28,13.28,16.6,entire_home,Weißensee Ost,apartment
+145.0,163.82,-18.82,18.82,12.98,entire_home,Schöneberg-Süd,apartment
+137.0,174.95,-37.95,37.95,27.7,hotel_room,Karlshorst,apartment
+138.0,160.57,-22.57,22.57,16.35,hotel_room,Karlshorst,apartment
+133.0,193.46,-60.46,60.46,45.46,hotel_room,Karlshorst,apartment
+164.0,216.25,-52.25,52.25,31.86,hotel_room,Karlshorst,apartment
+99.0,110.78,-11.78,11.78,11.9,entire_home,Buckow,apartment
+156.0,356.54,-200.54,200.54,128.55,hotel_room,Otto-Suhr-Allee,apartment
+127.0,232.46,-105.46,105.46,83.04,hotel_room,Otto-Suhr-Allee,apartment
+138.0,308.94,-170.94,170.94,123.87,hotel_room,Otto-Suhr-Allee,apartment
+152.0,142.48,9.52,9.52,6.26,entire_home,Karl-Marx-Allee-Süd,apartment
+120.0,113.99,6.01,6.01,5.01,entire_home,Buckow,apartment
+200.0,203.12,-3.12,3.12,1.56,entire_home,Helmholtzplatz,apartment
+97.0,129.66,-32.66,32.66,33.67,entire_home,Prenzlauer Berg Süd,apartment
+97.0,98.59,-1.59,1.59,1.64,entire_home,Prenzlauer Berg Südwest,apartment
+35.0,39.98,-4.98,4.98,14.23,private_room,Volkspark Wilmersdorf,apartment
+63.0,62.13,0.87,0.87,1.38,private_room,Reuterstraße,apartment
+40.0,89.87,-49.87,49.87,124.67,private_room,Alexanderplatz,apartment
+221.0,154.84,66.16,66.16,29.94,entire_home,südliche Luisenstadt,apartment
+454.0,567.99,-113.99,113.99,25.11,entire_home,südliche Luisenstadt,apartment
+145.0,195.65,-50.65,50.65,34.93,entire_home,Schönholz/Wilhelmsruh/Rosenthal,apartment
+88.0,115.5,-27.5,27.5,31.25,entire_home,Karl-Marx-Allee-Nord,apartment
+132.0,116.94,15.06,15.06,11.41,entire_home,Dammvorstadt,other
+96.0,125.78,-29.78,29.78,31.03,entire_home,Tempelhofer Vorstadt,apartment
+216.0,91.52,124.48,124.48,57.63,hotel_room,Düsseldorfer Straße,hotel
+250.0,116.76,133.24,133.24,53.3,private_room,Düsseldorfer Straße,hotel
+171.0,158.81,12.19,12.19,7.13,entire_home,Karl-Marx-Allee-Nord,apartment
+79.0,74.05,4.95,4.95,6.27,entire_home,Frankfurter Allee Süd FK,apartment
+117.0,144.48,-27.48,27.48,23.49,entire_home,Kurfürstendamm,apartment
+103.0,85.72,17.28,17.28,16.77,private_room,Schöneberg-Süd,hotel
+274.0,162.79,111.21,111.21,40.59,entire_home,Heerstrasse,house
+186.0,117.85,68.15,68.15,36.64,entire_home,Reuterstraße,apartment
+90.0,65.03,24.97,24.97,27.75,private_room,Alexanderplatz,apartment
+87.0,61.32,25.68,25.68,29.51,private_room,Schöneberg-Süd,apartment
+140.0,102.65,37.35,37.35,26.68,entire_home,Prenzlauer Berg Nordwest,apartment
+45.0,64.2,-19.2,19.2,42.66,private_room,Prenzlauer Berg Süd,apartment
+697.0,157.92,539.08,539.08,77.34,entire_home,Frankfurter Allee Süd FK,apartment
+88.0,119.3,-31.3,31.3,35.56,hotel_room,Wilhelmstadt,apartment
+72.0,102.4,-30.4,30.4,42.23,entire_home,Schmöckwitz/Karolinenhof/Rauchfangswerder,house
+42.0,51.67,-9.67,9.67,23.04,private_room,Alt  Treptow,apartment
+86.0,91.5,-5.5,5.5,6.39,entire_home,Tempelhof,apartment
+290.0,266.81,23.19,23.19,8.0,entire_home,Marzahn-Süd,apartment
+105.0,85.95,19.05,19.05,18.14,entire_home,West 4,apartment
+108.0,61.17,46.83,46.83,43.36,entire_home,Mierendorffplatz,apartment
+217.0,220.31,-3.31,3.31,1.52,entire_home,nördliche Luisenstadt,apartment
+57.0,75.91,-18.91,18.91,33.18,private_room,Fennpfuhl,apartment
+57.0,58.23,-1.23,1.23,2.16,private_room,Frankfurter Allee Nord,apartment
+178.0,195.65,-17.65,17.65,9.92,entire_home,Zehlendorf  Südwest,house
+48.0,79.76,-31.76,31.76,66.16,entire_home,Tiergarten Süd,apartment
+90.0,78.14,11.86,11.86,13.18,private_room,Prenzlauer Berg Südwest,apartment
+76.0,111.81,-35.81,35.81,47.12,entire_home,Prenzlauer Berg Nordwest,house
+76.0,96.76,-20.76,20.76,27.32,entire_home,Prenzlauer Berg Nordwest,house
+70.0,71.53,-1.53,1.53,2.19,private_room,Schöneberg-Süd,hotel
+61.0,62.48,-1.48,1.48,2.43,private_room,Karl-Marx-Allee-Süd,apartment
+106.0,66.71,39.29,39.29,37.06,entire_home,Frankfurter Allee Süd FK,apartment
+67.0,50.32,16.68,16.68,24.89,private_room,Buch,apartment
+76.0,113.87,-37.87,37.87,49.83,entire_home,Prenzlauer Berg Nordwest,house
+46.0,81.47,-35.47,35.47,77.1,entire_home,Buchholz,house
+256.0,238.89,17.11,17.11,6.68,entire_home,Brunnenstr. Nord,apartment
+87.0,86.8,0.2,0.2,0.23,entire_home,Neuköllner Mitte/Zentrum,apartment
+100.0,60.8,39.2,39.2,39.2,entire_home,Schloß Charlottenburg,apartment
+364.0,397.98,-33.98,33.98,9.34,entire_home,Frankfurter Allee Süd FK,apartment
+76.0,107.85,-31.85,31.85,41.9,entire_home,Prenzlauer Berg Nordwest,house
+178.0,315.29,-137.29,137.29,77.13,entire_home,Reuterstraße,apartment
+100.0,94.08,5.92,5.92,5.92,entire_home,Düsseldorfer Straße,apartment
+71.0,51.49,19.51,19.51,27.47,entire_home,Reuterstraße,apartment
+243.0,228.42,14.58,14.58,6.0,entire_home,nördliche Luisenstadt,apartment
+30.0,60.55,-30.55,30.55,101.85,private_room,Reuterstraße,apartment
+213.0,158.07,54.93,54.93,25.79,entire_home,Prenzlauer Berg Südwest,apartment
+81.0,93.95,-12.95,12.95,15.98,entire_home,Düsseldorfer Straße,apartment
+292.0,140.89,151.11,151.11,51.75,private_room,Düsseldorfer Straße,hotel
+185.0,193.44,-8.44,8.44,4.56,entire_home,Prenzlauer Berg Südwest,apartment
+189.0,134.21,54.79,54.79,28.99,entire_home,Prenzlauer Berg Südwest,apartment
+206.0,136.29,69.71,69.71,33.84,entire_home,Prenzlauer Berg Südwest,apartment
+204.0,143.44,60.56,60.56,29.69,entire_home,Prenzlauer Berg Südwest,apartment
+99.0,141.63,-42.63,42.63,43.06,entire_home,Reuterstraße,apartment
+65.0,96.98,-31.98,31.98,49.2,entire_home,Britz,house
+414.0,409.19,4.81,4.81,1.16,entire_home,Prenzlauer Berg Südwest,house
+106.0,161.16,-55.16,55.16,52.04,entire_home,Bohnsdorf,house
+110.0,103.83,6.17,6.17,5.61,entire_home,Buckow,apartment
+126.0,102.87,23.13,23.13,18.36,entire_home,Brunnenstr. Süd,apartment
+150.0,178.07,-28.07,28.07,18.71,entire_home,Alexanderplatz,apartment
+96.0,56.09,39.91,39.91,41.57,entire_home,Alexanderplatz,apartment
+90.0,115.33,-25.33,25.33,28.14,entire_home,Heerstraße Nord,apartment
+50.0,87.35,-37.35,37.35,74.69,private_room,Tempelhofer Vorstadt,hotel
+50.0,72.13,-22.13,22.13,44.27,private_room,Tempelhofer Vorstadt,hotel
+15.0,22.53,-7.53,7.53,50.21,shared_room,Tempelhofer Vorstadt,hotel
+25.0,19.34,5.66,5.66,22.65,shared_room,Tempelhofer Vorstadt,hotel
+76.0,110.04,-34.04,34.04,44.79,entire_home,Prenzlauer Berg Nordwest,house
+76.0,111.17,-35.17,35.17,46.28,entire_home,Prenzlauer Berg Nordwest,house
+102.0,55.56,46.44,46.44,45.53,private_room,Frankfurter Allee Süd FK,apartment
+122.0,124.65,-2.65,2.65,2.18,entire_home,Marzahn-Süd,apartment
+80.0,77.84,2.16,2.16,2.7,entire_home,Tempelhofer Vorstadt,apartment
+71.0,62.41,8.59,8.59,12.1,private_room,südliche Luisenstadt,apartment
+59.0,52.38,6.62,6.62,11.22,private_room,Tempelhofer Vorstadt,apartment
+38.0,68.79,-30.79,30.79,81.02,private_room,Pankow Zentrum,house
+102.0,96.21,5.79,5.79,5.68,entire_home,Zehlendorf  Südwest,apartment
+125.0,97.55,27.45,27.45,21.96,entire_home,Alexanderplatz,apartment
+87.0,110.91,-23.91,23.91,27.48,entire_home,Alexanderplatz,apartment
+143.0,118.7,24.3,24.3,16.99,entire_home,Ostpreußendamm,apartment
+67.0,71.36,-4.36,4.36,6.51,entire_home,Bohnsdorf,house
+72.0,72.98,-0.98,0.98,1.36,entire_home,Tempelhofer Vorstadt,apartment
+300.0,153.19,146.81,146.81,48.94,entire_home,Alexanderplatz,apartment
+80.0,96.29,-16.29,16.29,20.37,entire_home,Alexanderplatz,apartment
+96.0,51.17,44.83,44.83,46.69,entire_home,Prenzlauer Berg Süd,apartment
+120.0,125.22,-5.22,5.22,4.35,private_room,Alexanderplatz,apartment
+130.0,117.96,12.04,12.04,9.26,entire_home,Brunnenstr. Süd,apartment
+68.0,65.43,2.57,2.57,3.77,private_room,Rixdorf,apartment
+94.0,90.82,3.18,3.18,3.38,entire_home,Helmholtzplatz,apartment
+60.0,56.42,3.58,3.58,5.97,entire_home,Adlershof,apartment
+55.0,47.54,7.46,7.46,13.57,entire_home,Adlershof,apartment
+118.0,90.96,27.04,27.04,22.91,entire_home,Biesdorf,apartment
+80.0,101.49,-21.49,21.49,26.87,entire_home,Brunnenstr. Süd,apartment
+80.0,101.29,-21.29,21.29,26.62,entire_home,Mahlsdorf,house
+65.0,63.41,1.59,1.59,2.44,private_room,Alexanderplatz,apartment
+50.0,121.71,-71.71,71.71,143.42,private_room,Südliche Friedrichstadt,hotel
+33.0,74.85,-41.85,41.85,126.81,private_room,Neuköllner Mitte/Zentrum,apartment
+113.0,105.61,7.39,7.39,6.54,entire_home,Rixdorf,apartment
+187.0,92.0,95.0,95.0,50.8,entire_home,Alexanderplatz,apartment
+93.0,107.83,-14.83,14.83,15.95,private_room,Moabit West,hotel
+197.0,244.29,-47.29,47.29,24.0,entire_home,Tiergarten Süd,apartment
+85.0,98.39,-13.39,13.39,15.75,entire_home,Volkspark Wilmersdorf,apartment
+68.0,76.77,-8.77,8.77,12.9,entire_home,Reuterstraße,apartment
+100.0,92.37,7.63,7.63,7.63,entire_home,Müggelheim,house
+88.0,97.21,-9.21,9.21,10.47,entire_home,Prenzlauer Berg Südwest,apartment
+50.0,45.88,4.12,4.12,8.23,private_room,Tempelhofer Vorstadt,apartment
+174.0,183.08,-9.08,9.08,5.22,entire_home,Otto-Suhr-Allee,apartment
+105.0,114.07,-9.07,9.07,8.64,private_room,Moabit West,hotel
+86.0,94.93,-8.93,8.93,10.38,entire_home,Tempelhof,apartment
+103.0,110.72,-7.72,7.72,7.49,private_room,Moabit West,hotel
+92.0,96.74,-4.74,4.74,5.15,private_room,Moabit West,hotel
+42.0,67.59,-25.59,25.59,60.92,private_room,Reuterstraße,apartment
+49.0,74.97,-25.97,25.97,53.0,private_room,Reuterstraße,apartment
+67.0,90.6,-23.6,23.6,35.22,entire_home,Blankenfelde/Niederschönhausen,apartment
+180.0,137.03,42.97,42.97,23.87,entire_home,Alexanderplatz,apartment
+194.0,143.61,50.39,50.39,25.97,entire_home,Alexanderplatz,apartment
+67.0,92.94,-25.94,25.94,38.72,entire_home,Blankenfelde/Niederschönhausen,apartment
+69.0,118.12,-49.12,49.12,71.19,entire_home,Gatow / Kladow,apartment
+86.0,93.11,-7.11,7.11,8.27,entire_home,Südliche Friedrichstadt,apartment
+103.0,103.39,-0.39,0.39,0.38,private_room,Moabit West,hotel
+79.0,73.9,5.1,5.1,6.46,private_room,Friedenau,apartment
+74.0,79.22,-5.22,5.22,7.05,entire_home,Karl-Marx-Allee-Süd,apartment
+173.0,129.96,43.04,43.04,24.88,entire_home,Alexanderplatz,apartment
+295.0,239.95,55.05,55.05,18.66,entire_home,Alexanderplatz,apartment
+433.0,199.95,233.05,233.05,53.82,entire_home,Alexanderplatz,apartment
+80.0,78.42,1.58,1.58,1.98,private_room,Schöneberg-Nord,hotel
+300.0,173.45,126.55,126.55,42.18,entire_home,Frankfurter Allee Süd FK,apartment
+234.0,95.93,138.07,138.07,59.01,entire_home,Düsseldorfer Straße,apartment
+165.0,127.71,37.29,37.29,22.6,entire_home,Hellersdorf-Nord,apartment
+140.0,97.55,42.45,42.45,30.32,entire_home,Hellersdorf-Nord,apartment
+96.0,112.51,-16.51,16.51,17.2,entire_home,Buckow,apartment
+124.0,78.92,45.08,45.08,36.35,private_room,Karl-Marx-Allee-Süd,unique
+90.0,108.47,-18.47,18.47,20.52,entire_home,Teltower Damm,house
+700.0,166.58,533.42,533.42,76.2,private_room,Regierungsviertel,hotel
+238.0,128.55,109.45,109.45,45.99,entire_home,Rummelsburger Bucht,house
+700.0,240.65,459.35,459.35,65.62,private_room,Regierungsviertel,hotel
+112.0,148.31,-36.31,36.31,32.42,entire_home,Prenzlauer Berg Süd,apartment
+250.0,220.74,29.26,29.26,11.7,entire_home,Buchholz,house
+115.0,129.37,-14.37,14.37,12.5,entire_home,Moabit Ost,apartment
+171.0,127.02,43.98,43.98,25.72,entire_home,Alexanderplatz,apartment
+23.0,47.49,-24.49,24.49,106.46,private_room,Oberschöneweide,apartment
+59.0,153.12,-94.12,94.12,159.52,private_room,Köpenick-Nord,hotel
+52.0,141.01,-89.01,89.01,171.17,entire_home,Tempelhofer Vorstadt,apartment
+139.0,193.47,-54.47,54.47,39.18,entire_home,Pankow Süd,apartment
+86.0,81.44,4.56,4.56,5.3,entire_home,Wedding Zentrum,apartment
+130.0,108.21,21.79,21.79,16.76,entire_home,Buckow,apartment
+190.0,182.97,7.03,7.03,3.7,entire_home,Albrechtstr.,apartment
+105.0,78.76,26.24,26.24,24.99,entire_home,Schloß Charlottenburg,apartment
+75.0,132.31,-57.31,57.31,76.41,entire_home,Weißensee,apartment
+61.0,61.31,-0.31,0.31,0.51,private_room,Reuterstraße,apartment
+92.0,112.07,-20.07,20.07,21.81,private_room,Moabit West,hotel
+100.0,105.61,-5.61,5.61,5.61,entire_home,Parkviertel,apartment
+251.0,105.53,145.47,145.47,57.96,entire_home,Alexanderplatz,apartment
+55.0,65.93,-10.93,10.93,19.87,private_room,Alexanderplatz,apartment
+103.0,115.1,-12.1,12.1,11.75,private_room,Moabit West,hotel
+120.0,112.53,7.47,7.47,6.23,private_room,Moabit West,hotel
+192.0,224.01,-32.01,32.01,16.67,entire_home,Brunnenstr. Süd,apartment
+188.0,244.05,-56.05,56.05,29.81,entire_home,Brunnenstr. Süd,apartment
+419.0,373.76,45.24,45.24,10.8,entire_home,Brunnenstr. Süd,apartment
+109.0,143.51,-34.51,34.51,31.66,private_room,Düsseldorfer Straße,hotel
+138.0,146.21,-8.21,8.21,5.95,entire_home,Adlershof,apartment
+174.0,175.31,-1.31,1.31,0.75,entire_home,Albrechtstr.,apartment
+98.0,105.78,-7.78,7.78,7.94,private_room,Düsseldorfer Straße,hotel
+331.0,354.86,-23.86,23.86,7.21,entire_home,Prenzlauer Berg Südwest,apartment
+91.0,129.8,-38.8,38.8,42.64,entire_home,Fennpfuhl,apartment
+159.0,118.3,40.7,40.7,25.6,entire_home,Prenzlauer Berg Nord,apartment
+234.0,215.04,18.96,18.96,8.1,entire_home,Karlshorst,apartment
+64.0,76.06,-12.06,12.06,18.84,private_room,Wedding Zentrum,apartment
+133.0,164.53,-31.53,31.53,23.71,private_room,Alexanderplatz,hotel
+109.0,75.0,34.0,34.0,31.19,entire_home,Schillerpromenade,apartment
+285.0,214.73,70.27,70.27,24.65,entire_home,Weißensee,apartment
+165.0,167.59,-2.59,2.59,1.57,entire_home,Albrechtstr.,apartment
+128.0,134.74,-6.74,6.74,5.27,entire_home,Niederschöneweide,apartment
+100.0,82.13,17.87,17.87,17.87,private_room,Ostpreußendamm,house
+171.0,159.29,11.71,11.71,6.85,entire_home,Prenzlauer Berg Südwest,apartment
+96.0,94.13,1.87,1.87,1.95,private_room,Schillerpromenade,apartment
+147.0,233.61,-86.61,86.61,58.92,entire_home,Moabit Ost,apartment
+100.0,104.75,-4.75,4.75,4.75,private_room,Karl-Marx-Allee-Süd,hotel
+107.0,115.71,-8.71,8.71,8.14,private_room,Karl-Marx-Allee-Süd,hotel
+88.0,54.6,33.4,33.4,37.95,entire_home,Reuterstraße,apartment
+82.0,90.85,-8.85,8.85,10.79,entire_home,Frankfurter Allee Nord,apartment
+128.0,143.6,-15.6,15.6,12.19,private_room,Karl-Marx-Allee-Süd,hotel
+124.0,176.41,-52.41,52.41,42.27,private_room,Karl-Marx-Allee-Süd,hotel
+144.0,119.05,24.95,24.95,17.33,private_room,Schillerpromenade,apartment
+88.0,85.72,2.28,2.28,2.59,private_room,Schillerpromenade,apartment
+74.0,106.86,-32.86,32.86,44.41,private_room,Neuköllner Mitte/Zentrum,apartment
+179.0,162.23,16.77,16.77,9.37,entire_home,Pankow Süd,apartment
+109.0,142.7,-33.7,33.7,30.92,entire_home,Moabit West,apartment
+31.0,40.29,-9.29,9.29,29.96,private_room,Britz,apartment
+399.0,292.92,106.08,106.08,26.59,entire_home,Neuköllner Mitte/Zentrum,apartment
+30.0,57.89,-27.89,27.89,92.98,private_room,Moabit West,apartment
+71.0,69.71,1.29,1.29,1.81,private_room,Schöneberg-Nord,apartment
+201.0,153.42,47.58,47.58,23.67,entire_home,Pankow Süd,apartment
+89.0,75.07,13.93,13.93,15.66,private_room,Ostpreußendamm,house
+109.0,86.69,22.31,22.31,20.47,private_room,Neue Kantstraße,hotel
+315.0,160.18,154.82,154.82,49.15,private_room,Neuköllner Mitte/Zentrum,apartment
+85.0,55.65,29.35,29.35,34.53,entire_home,nördliche Luisenstadt,house
+120.0,179.86,-59.86,59.86,49.89,entire_home,Alexanderplatz,apartment
+108.0,129.58,-21.58,21.58,19.98,entire_home,Weißensee,apartment
+141.0,128.12,12.88,12.88,9.13,private_room,Kurfürstendamm,hotel
+168.0,118.92,49.08,49.08,29.22,private_room,Kurfürstendamm,hotel
+185.0,130.28,54.72,54.72,29.58,private_room,Kurfürstendamm,hotel
+221.0,135.16,85.84,85.84,38.84,private_room,Kurfürstendamm,hotel
+277.0,210.08,66.92,66.92,24.16,private_room,Schillerpromenade,apartment
+99.0,87.63,11.37,11.37,11.49,entire_home,Blankenburg/Heinersdorf/Märchenland,apartment
+148.0,179.56,-31.56,31.56,21.32,entire_home,Neue Kantstraße,apartment
+190.0,63.43,126.57,126.57,66.62,entire_home,Frankfurter Allee Nord,apartment
+336.0,169.45,166.55,166.55,49.57,private_room,Düsseldorfer Straße,hotel
+101.0,68.47,32.53,32.53,32.2,private_room,Biesdorf,house
+60.0,60.88,-0.88,0.88,1.46,private_room,Schloßstr.,apartment
+127.0,115.13,11.87,11.87,9.35,entire_home,Osloer Straße,apartment
+685.0,319.5,365.5,365.5,53.36,entire_home,Brunnenstr. Süd,apartment
+153.0,139.15,13.85,13.85,9.06,entire_home,Karl-Marx-Allee-Nord,apartment
+80.0,105.56,-25.56,25.56,31.95,entire_home,Tiergarten Süd,apartment
+228.0,292.16,-64.16,64.16,28.14,entire_home,Reuterstraße,apartment
+60.0,89.09,-29.09,29.09,48.48,entire_home,Wedding Zentrum,apartment
+71.0,73.27,-2.27,2.27,3.2,entire_home,Wedding Zentrum,apartment
+112.0,121.44,-9.44,9.44,8.43,entire_home,Blankenfelde/Niederschönhausen,apartment
+107.0,107.08,-0.08,0.08,0.08,entire_home,Blankenfelde/Niederschönhausen,apartment
+192.0,124.19,67.81,67.81,35.32,private_room,Karl-Marx-Allee-Süd,house
+137.0,78.17,58.83,58.83,42.94,private_room,Karl-Marx-Allee-Süd,house
+158.0,82.65,75.35,75.35,47.69,private_room,Karl-Marx-Allee-Süd,house
+60.0,67.2,-7.2,7.2,11.99,private_room,Friedenau,apartment
+94.0,89.27,4.73,4.73,5.03,entire_home,Brunnenstr. Nord,apartment
+114.0,130.89,-16.89,16.89,14.82,entire_home,Brunnenstr. Nord,apartment
+85.0,96.35,-11.35,11.35,13.35,entire_home,Brunnenstr. Nord,apartment
+68.0,63.45,4.55,4.55,6.69,private_room,Tiergarten Süd,apartment
+83.0,138.49,-55.49,55.49,66.85,entire_home,Brunnenstr. Süd,apartment
+83.0,115.62,-32.62,32.62,39.3,private_room,Brunnenstr. Süd,apartment
+303.0,229.23,73.77,73.77,24.35,entire_home,Brunnenstr. Süd,apartment
+48.0,115.77,-67.77,67.77,141.18,entire_home,Brunnenstr. Nord,apartment
+110.0,94.1,15.9,15.9,14.45,private_room,Neuköllner Mitte/Zentrum,hotel
+91.0,86.42,4.58,4.58,5.03,private_room,Neuköllner Mitte/Zentrum,hotel
+103.0,85.07,17.93,17.93,17.41,private_room,Neuköllner Mitte/Zentrum,hotel
+96.0,102.24,-6.24,6.24,6.5,entire_home,Tempelhofer Vorstadt,apartment
+80.0,63.69,16.31,16.31,20.39,entire_home,Tempelhofer Vorstadt,apartment
+75.0,77.56,-2.56,2.56,3.41,private_room,Prenzlauer Berg Süd,apartment
+165.0,138.49,26.51,26.51,16.07,private_room,Neue Kantstraße,hotel
+138.0,162.81,-24.81,24.81,17.98,entire_home,Oberschöneweide,house
+189.0,144.97,44.03,44.03,23.3,entire_home,Alexanderplatz,apartment
+129.0,152.14,-23.14,23.14,17.94,entire_home,Weißensee,apartment
+131.0,112.28,18.72,18.72,14.29,entire_home,Karl-Marx-Allee-Nord,apartment
+67.0,108.75,-41.75,41.75,62.31,entire_home,nördliche Luisenstadt,apartment
+116.0,108.59,7.41,7.41,6.39,entire_home,Schmargendorf,apartment
+202.0,489.14,-287.14,287.14,142.15,entire_home,Alexanderplatz,house
+270.0,171.26,98.74,98.74,36.57,entire_home,Tempelhofer Vorstadt,apartment
+243.0,152.66,90.34,90.34,37.18,entire_home,Frankfurter Allee Nord,apartment
+139.0,155.26,-16.26,16.26,11.69,entire_home,Südliche Friedrichstadt,house
+176.0,198.22,-22.22,22.22,12.62,entire_home,Brunnenstr. Süd,apartment
+172.0,208.24,-36.24,36.24,21.07,entire_home,Brunnenstr. Süd,apartment
+303.0,300.98,2.02,2.02,0.67,entire_home,Brunnenstr. Süd,apartment
+383.0,325.76,57.24,57.24,14.95,entire_home,Brunnenstr. Süd,apartment
+95.0,96.26,-1.26,1.26,1.33,entire_home,Prenzlauer Berg Nordwest,apartment
+123.0,179.36,-56.36,56.36,45.82,entire_home,Brunnenstr. Süd,house
+161.0,149.41,11.59,11.59,7.2,entire_home,Kurfürstendamm,apartment
+343.0,207.35,135.65,135.65,39.55,private_room,Düsseldorfer Straße,hotel
+264.0,127.32,136.68,136.68,51.77,private_room,Düsseldorfer Straße,hotel
+56.0,62.34,-6.34,6.34,11.33,private_room,Schöneberg-Süd,apartment
+76.0,98.68,-22.68,22.68,29.84,entire_home,Rummelsburger Bucht,apartment
+75.0,66.68,8.32,8.32,11.09,private_room,Frankfurter Allee Süd FK,apartment
+183.0,156.6,26.4,26.4,14.43,entire_home,Frankfurter Allee Süd FK,other
+154.0,165.61,-11.61,11.61,7.54,entire_home,Tempelhofer Vorstadt,apartment
+400.0,148.18,251.82,251.82,62.96,entire_home,Südliche Friedrichstadt,apartment
+43.0,44.91,-1.91,1.91,4.43,private_room,Kölln. Vorstadt/Spindlersf.,apartment
+46.0,78.34,-32.34,32.34,70.31,private_room,Tempelhofer Vorstadt,apartment
+115.0,93.63,21.37,21.37,18.58,entire_home,Brunnenstr. Nord,apartment
+127.0,163.55,-36.55,36.55,28.78,entire_home,Reuterstraße,apartment
+146.0,154.18,-8.18,8.18,5.6,entire_home,Kurfürstendamm,apartment
+66.0,71.3,-5.3,5.3,8.03,private_room,Rixdorf,apartment
+172.0,154.17,17.83,17.83,10.36,entire_home,Mariendorf,apartment
+110.0,113.07,-3.07,3.07,2.79,entire_home,Alexanderplatz,apartment
+107.0,109.83,-2.83,2.83,2.65,entire_home,Schmöckwitz/Karolinenhof/Rauchfangswerder,house
+145.0,153.24,-8.24,8.24,5.69,entire_home,Rixdorf,apartment
+149.0,118.91,30.09,30.09,20.19,entire_home,Frankfurter Allee Süd FK,apartment
+111.0,105.26,5.74,5.74,5.17,entire_home,Schillerpromenade,apartment
+163.0,181.02,-18.02,18.02,11.06,entire_home,Zehlendorf  Nord,house
+104.0,145.86,-41.86,41.86,40.25,entire_home,Schillerpromenade,apartment
+97.0,91.51,5.49,5.49,5.65,entire_home,Frankfurter Allee Nord,apartment
+174.0,212.71,-38.71,38.71,22.25,entire_home,Albrechtstr.,apartment
+143.0,133.4,9.6,9.6,6.71,entire_home,Otto-Suhr-Allee,apartment
+144.0,378.84,-234.84,234.84,163.09,entire_home,Brunnenstr. Süd,apartment
+60.0,47.46,12.54,12.54,20.9,entire_home,Prenzlauer Berg Ost,apartment
+167.0,209.0,-42.0,42.0,25.15,entire_home,Brunnenstr. Süd,apartment
+68.0,71.16,-3.16,3.16,4.65,entire_home,Wedding Zentrum,apartment
+135.0,79.57,55.43,55.43,41.06,private_room,Grunewald,other
+79.0,107.78,-28.78,28.78,36.43,entire_home,Schillerpromenade,apartment
+90.0,84.48,5.52,5.52,6.13,entire_home,Helmholtzplatz,apartment
+200.0,191.05,8.95,8.95,4.48,entire_home,Schönholz/Wilhelmsruh/Rosenthal,house
+119.0,146.9,-27.9,27.9,23.44,entire_home,Neue Kantstraße,apartment
+87.0,109.34,-22.34,22.34,25.68,entire_home,Zehlendorf  Südwest,other
+111.0,112.96,-1.96,1.96,1.76,entire_home,Buckow,house
+223.0,244.4,-21.4,21.4,9.6,entire_home,Karl-Marx-Allee-Süd,apartment
+36.0,58.75,-22.75,22.75,63.2,private_room,Tempelhofer Vorstadt,apartment
+50.0,65.82,-15.82,15.82,31.64,entire_home,Lichtenrade,apartment
+95.0,85.27,9.73,9.73,10.24,private_room,Osloer Straße,apartment
+68.0,86.85,-18.85,18.85,27.72,private_room,Reuterstraße,apartment
+500.0,87.48,412.52,412.52,82.5,private_room,Pankow Zentrum,apartment
+156.0,199.98,-43.98,43.98,28.19,entire_home,Albrechtstr.,apartment
+85.0,80.82,4.18,4.18,4.92,entire_home,Prenzlauer Berg Nordwest,apartment
+235.0,196.75,38.25,38.25,16.27,entire_home,Alt-Lichtenberg,house
+193.0,152.07,40.93,40.93,21.21,entire_home,Frankfurter Allee Nord,apartment
+10.0,135.88,-125.88,125.88,1258.76,entire_home,Brunnenstr. Süd,apartment
+120.0,82.24,37.76,37.76,31.47,entire_home,nördliche Luisenstadt,apartment
+95.0,103.73,-8.73,8.73,9.19,entire_home,Frankfurter Allee Süd FK,apartment
+23.0,35.29,-12.29,12.29,53.43,private_room,Schöneberg-Nord,apartment
+10.0,130.29,-120.29,120.29,1202.89,entire_home,Brunnenstr. Süd,apartment
+103.0,39.24,63.76,63.76,61.9,private_room,Karow,house
+200.0,201.54,-1.54,1.54,0.77,entire_home,Frankfurter Allee Süd FK,apartment
+73.0,102.82,-29.82,29.82,40.84,private_room,Alt-Lichtenberg,apartment
+65.0,55.91,9.09,9.09,13.99,private_room,Frankfurter Allee Süd FK,apartment
+250.0,89.55,160.45,160.45,64.18,entire_home,Pankow Zentrum,other
+160.0,141.01,18.99,18.99,11.87,entire_home,Schöneberg-Süd,apartment
+49.0,56.29,-7.29,7.29,14.88,entire_home,Drakestr.,apartment
+271.0,198.98,72.02,72.02,26.58,entire_home,Brunnenstr. Süd,apartment
+101.0,105.04,-4.04,4.04,4.0,entire_home,Alexanderplatz,apartment
+83.0,91.88,-8.88,8.88,10.7,entire_home,Karl-Marx-Allee-Süd,apartment
+200.0,121.43,78.57,78.57,39.29,entire_home,Tempelhof,apartment
+87.0,80.31,6.69,6.69,7.69,private_room,Helmholtzplatz,other
+69.0,118.47,-49.47,49.47,71.69,entire_home,Neue Kantstraße,apartment
+95.0,109.7,-14.7,14.7,15.48,entire_home,Brunsbütteler Damm,apartment
+248.0,157.52,90.48,90.48,36.48,entire_home,Prenzlauer Berg Südwest,apartment
+626.0,233.72,392.28,392.28,62.66,entire_home,Prenzlauer Berg Südwest,apartment
+75.0,77.0,-2.0,2.0,2.67,entire_home,Helmholtzplatz,apartment
+85.0,92.12,-7.12,7.12,8.38,private_room,Moabit West,apartment
+98.0,132.17,-34.17,34.17,34.87,entire_home,Neue Kantstraße,apartment
+85.0,110.62,-25.62,25.62,30.14,entire_home,Buchholz,apartment
+21.0,34.37,-13.37,13.37,63.68,private_room,Blankenfelde/Niederschönhausen,apartment
+22.0,35.83,-13.83,13.83,62.88,private_room,Blankenfelde/Niederschönhausen,apartment
+41.0,35.55,5.45,5.45,13.3,private_room,Pankow Zentrum,apartment
+193.0,284.64,-91.64,91.64,47.48,entire_home,Albrechtstr.,apartment
+63.0,69.63,-6.63,6.63,10.52,entire_home,Heerstraße Nord,house
+105.0,127.87,-22.87,22.87,21.78,entire_home,Düsseldorfer Straße,apartment
+144.0,127.95,16.05,16.05,11.15,entire_home,Südliche Friedrichstadt,apartment
+138.0,171.44,-33.44,33.44,24.24,entire_home,Müggelheim,house
+86.0,114.11,-28.11,28.11,32.68,private_room,Moabit Ost,apartment
+149.0,121.06,27.94,27.94,18.75,entire_home,Südliche Friedrichstadt,apartment
+153.0,155.78,-2.78,2.78,1.81,entire_home,Südliche Friedrichstadt,apartment
+150.0,136.54,13.46,13.46,8.98,entire_home,Südliche Friedrichstadt,apartment
+151.0,136.52,14.48,14.48,9.59,entire_home,Südliche Friedrichstadt,apartment
+158.0,145.56,12.44,12.44,7.87,entire_home,Südliche Friedrichstadt,apartment
+232.0,162.06,69.94,69.94,30.15,entire_home,Südliche Friedrichstadt,apartment
+221.0,169.75,51.25,51.25,23.19,entire_home,Barstraße,apartment
+89.0,77.48,11.52,11.52,12.94,private_room,Schöneberg-Süd,apartment
+121.0,125.23,-4.23,4.23,3.5,entire_home,Buchholz,apartment
+81.0,144.59,-63.59,63.59,78.51,entire_home,Siemensstadt,house
+60.0,80.5,-20.5,20.5,34.16,private_room,Otto-Suhr-Allee,apartment
+35.0,58.72,-23.72,23.72,67.76,entire_home,Alexanderplatz,apartment
+54.0,93.76,-39.76,39.76,73.64,entire_home,Alexanderplatz,apartment
+54.0,71.01,-17.01,17.01,31.5,private_room,Weißensee,apartment
+227.0,344.93,-117.93,117.93,51.95,entire_home,Lichtenrade,house
+65.0,79.85,-14.85,14.85,22.85,entire_home,Adlershof,apartment
+130.0,110.72,19.28,19.28,14.83,entire_home,Karl-Marx-Allee-Nord,apartment
+69.0,75.19,-6.19,6.19,8.98,private_room,Alt  Treptow,apartment
+110.0,88.82,21.18,21.18,19.26,entire_home,Frankfurter Allee Nord,apartment
+101.0,91.2,9.8,9.8,9.7,entire_home,Frankfurter Allee Nord,apartment
+76.0,54.14,21.86,21.86,28.77,private_room,Lichtenrade,apartment
+28.0,32.97,-4.97,4.97,17.75,shared_room,Tempelhofer Vorstadt,hotel
+96.0,76.67,19.33,19.33,20.14,private_room,nördliche Luisenstadt,apartment
+35.0,36.45,-1.45,1.45,4.13,shared_room,Tempelhofer Vorstadt,hotel
+148.0,169.5,-21.5,21.5,14.53,entire_home,Prenzlauer Berg Nord,apartment
+35.0,43.67,-8.67,8.67,24.77,shared_room,Tempelhofer Vorstadt,hotel
+30.0,24.94,5.06,5.06,16.86,shared_room,Tempelhofer Vorstadt,hotel
+174.0,185.42,-11.42,11.42,6.56,entire_home,Frankfurter Allee Nord,apartment
+128.0,156.05,-28.05,28.05,21.91,entire_home,Albrechtstr.,apartment
+112.0,158.12,-46.12,46.12,41.18,entire_home,Drakestr.,apartment
+130.0,131.06,-1.06,1.06,0.82,entire_home,"Malchow, Wartenberg und Falkenberg",house
+69.0,104.79,-35.79,35.79,51.87,private_room,Tempelhofer Vorstadt,hotel
+278.0,214.86,63.14,63.14,22.71,entire_home,südliche Luisenstadt,house
+81.0,81.55,-0.55,0.55,0.68,entire_home,Baumschulenweg,apartment
+190.0,160.67,29.33,29.33,15.43,entire_home,Schöneberg-Süd,apartment
+263.0,235.28,27.72,27.72,10.54,entire_home,Prenzlauer Berg Südwest,apartment
+141.0,129.47,11.53,11.53,8.18,entire_home,Kurfürstendamm,apartment
+76.0,115.87,-39.87,39.87,52.46,entire_home,Schönholz/Wilhelmsruh/Rosenthal,house
+188.0,139.4,48.6,48.6,25.85,entire_home,Frankfurter Allee Nord,apartment
+161.0,146.19,14.81,14.81,9.2,entire_home,Neuköllner Mitte/Zentrum,apartment
+128.0,184.83,-56.83,56.83,44.4,entire_home,Prenzlauer Berg Nordwest,apartment
+148.0,212.03,-64.03,64.03,43.26,entire_home,nördliche Luisenstadt,apartment
+89.0,118.57,-29.57,29.57,33.23,entire_home,Altglienicke,house
+71.0,74.46,-3.46,3.46,4.88,private_room,Reuterstraße,apartment
+100.0,169.36,-69.36,69.36,69.36,entire_home,Grünau,house
+118.0,115.43,2.57,2.57,2.18,entire_home,Alexanderplatz,apartment
+91.0,161.02,-70.02,70.02,76.94,entire_home,Grunewald,apartment
+89.0,130.13,-41.13,41.13,46.22,entire_home,Grünau,house
+44.0,59.05,-15.05,15.05,34.2,private_room,Falkenhagener Feld,house
+60.0,65.78,-5.78,5.78,9.63,private_room,Brunnenstr. Süd,apartment
+42.0,41.48,0.52,0.52,1.24,private_room,Tempelhofer Vorstadt,apartment
+168.0,127.93,40.07,40.07,23.85,private_room,Karl-Marx-Allee-Nord,apartment
+89.0,74.74,14.26,14.26,16.02,private_room,Prenzlauer Berg Nord,apartment
+201.0,175.58,25.42,25.42,12.65,entire_home,Schmöckwitz/Karolinenhof/Rauchfangswerder,house
+68.0,65.78,2.22,2.22,3.27,private_room,Pankow Zentrum,apartment
+72.0,92.4,-20.4,20.4,28.34,private_room,Helmholtzplatz,apartment
+59.0,51.06,7.94,7.94,13.47,shared_room,Blankenfelde/Niederschönhausen,apartment
+67.0,62.94,4.06,4.06,6.06,entire_home,Nord 1,apartment
+56.0,64.62,-8.62,8.62,15.4,entire_home,Tempelhof,apartment
+122.0,121.49,0.51,0.51,0.42,entire_home,Schöneberg-Süd,apartment
+177.0,198.47,-21.47,21.47,12.13,entire_home,Frankfurter Allee Nord,apartment
+79.0,81.07,-2.07,2.07,2.62,entire_home,Alt-Lichtenberg,apartment
+236.0,176.51,59.49,59.49,25.21,entire_home,Karl-Marx-Allee-Nord,apartment
+79.0,63.15,15.85,15.85,20.06,private_room,nördliche Luisenstadt,apartment
+163.0,92.85,70.15,70.15,43.04,entire_home,Müggelheim,apartment
+46.0,50.27,-4.27,4.27,9.28,private_room,Ost 2,apartment
+337.0,260.18,76.82,76.82,22.79,entire_home,Helmholtzplatz,apartment
+111.0,100.0,11.0,11.0,9.91,entire_home,Helmholtzplatz,apartment
+179.0,171.34,7.66,7.66,4.28,entire_home,Schmöckwitz/Karolinenhof/Rauchfangswerder,house
+50.0,69.8,-19.8,19.8,39.59,private_room,Tempelhof,apartment
+122.0,146.48,-24.48,24.48,20.07,entire_home,Frankfurter Allee Nord,apartment
+100.0,94.86,5.14,5.14,5.14,entire_home,Helmholtzplatz,apartment
+155.0,253.1,-98.1,98.1,63.29,entire_home,Moabit West,apartment
+82.0,89.49,-7.49,7.49,9.13,entire_home,Albrechtstr.,apartment
+77.0,69.15,7.85,7.85,10.2,private_room,nördliche Luisenstadt,apartment
+333.0,338.28,-5.28,5.28,1.59,entire_home,Alexanderplatz,apartment
+61.0,71.09,-10.09,10.09,16.54,private_room,Tempelhof,apartment
+25.0,36.15,-11.15,11.15,44.6,private_room,Ost 2,apartment
+82.0,108.38,-26.38,26.38,32.17,private_room,Frankfurter Allee Nord,apartment
+149.0,230.76,-81.76,81.76,54.87,entire_home,südliche Luisenstadt,apartment
+82.0,159.74,-77.74,77.74,94.81,entire_home,Volkspark Wilmersdorf,apartment
+196.0,126.7,69.3,69.3,35.36,entire_home,Prenzlauer Berg Südwest,apartment
+160.0,156.46,3.54,3.54,2.21,entire_home,Barstraße,apartment
+291.0,264.1,26.9,26.9,9.24,entire_home,Buchholz,house
+88.0,119.95,-31.95,31.95,36.3,entire_home,Ost 1,apartment
+224.0,130.13,93.87,93.87,41.91,entire_home,Karl-Marx-Allee-Nord,apartment
+66.0,83.76,-17.76,17.76,26.9,entire_home,Teltower Damm,apartment
+168.0,226.11,-58.11,58.11,34.59,entire_home,Pankow Zentrum,apartment
+103.0,114.36,-11.36,11.36,11.03,entire_home,Schillerpromenade,apartment
+72.0,98.54,-26.54,26.54,36.86,private_room,Südliche Friedrichstadt,apartment
+217.0,186.79,30.21,30.21,13.92,entire_home,Südliche Friedrichstadt,apartment
+57.0,55.54,1.46,1.46,2.57,private_room,Schloß Charlottenburg,apartment
+119.0,96.57,22.43,22.43,18.84,entire_home,Tempelhof,apartment
+84.0,61.6,22.4,22.4,26.66,private_room,Tempelhofer Vorstadt,apartment
+181.0,275.9,-94.9,94.9,52.43,entire_home,Rummelsburger Bucht,unique
+163.0,216.54,-53.54,53.54,32.85,entire_home,Alexanderplatz,apartment
+140.0,214.88,-74.88,74.88,53.49,entire_home,Alexanderplatz,apartment
+197.0,176.07,20.93,20.93,10.63,entire_home,Neue Kantstraße,apartment
+130.0,115.6,14.4,14.4,11.08,entire_home,Neue Kantstraße,apartment
+120.0,107.31,12.69,12.69,10.57,entire_home,Neue Kantstraße,apartment
+44.0,50.36,-6.36,6.36,14.46,private_room,Zehlendorf  Nord,apartment
+105.0,95.6,9.4,9.4,8.96,private_room,Brunnenstr. Süd,apartment
+52.0,52.6,-0.6,0.6,1.15,private_room,Frankfurter Allee Süd FK,apartment
+126.0,208.25,-82.25,82.25,65.28,entire_home,Alexanderplatz,apartment
+196.0,205.56,-9.56,9.56,4.88,entire_home,Alexanderplatz,apartment
+184.0,113.03,70.97,70.97,38.57,entire_home,Rixdorf,apartment
+93.0,97.76,-4.76,4.76,5.12,entire_home,Wedding Zentrum,apartment
+129.0,76.87,52.13,52.13,40.41,entire_home,Zehlendorf  Südwest,apartment
+174.0,161.51,12.49,12.49,7.18,entire_home,Mierendorffplatz,apartment
+199.0,190.1,8.9,8.9,4.47,entire_home,Pankow Zentrum,apartment
+120.0,153.52,-33.52,33.52,27.93,entire_home,Brunnenstr. Süd,apartment
+86.0,291.18,-205.18,205.18,238.58,entire_home,Bohnsdorf,house
+116.0,137.05,-21.05,21.05,18.15,entire_home,Schillerpromenade,apartment
+82.0,93.03,-11.03,11.03,13.45,private_room,nördliche Luisenstadt,apartment
+30.0,48.88,-18.88,18.88,62.93,entire_home,Marzahn-Mitte,apartment
+62.0,61.55,0.45,0.45,0.73,private_room,Hakenfelde,house
+65.0,88.86,-23.86,23.86,36.7,entire_home,Brunnenstr. Nord,apartment
+68.0,85.68,-17.68,17.68,25.99,entire_home,Brunnenstr. Nord,apartment
+75.0,87.86,-12.86,12.86,17.15,entire_home,Brunnenstr. Nord,apartment
+59.0,95.38,-36.38,36.38,61.65,entire_home,Buch,house
+43.0,78.73,-35.73,35.73,83.08,entire_home,Alexanderplatz,apartment
+108.0,198.18,-90.18,90.18,83.5,entire_home,Frankfurter Allee Süd FK,apartment
+171.0,172.95,-1.95,1.95,1.14,entire_home,Tempelhofer Vorstadt,apartment
+58.0,77.04,-19.04,19.04,32.84,entire_home,Alexanderplatz,apartment
+75.0,96.39,-21.39,21.39,28.52,entire_home,südliche Luisenstadt,apartment
+103.0,83.17,19.83,19.83,19.25,private_room,Rixdorf,apartment
+99.0,103.35,-4.35,4.35,4.4,entire_home,Heerstrasse,apartment
+209.0,118.54,90.46,90.46,43.28,entire_home,Grunewald,apartment
+57.0,50.38,6.62,6.62,11.62,private_room,Ost 1,apartment
+146.0,122.78,23.22,23.22,15.9,entire_home,südliche Luisenstadt,apartment
+136.0,268.04,-132.04,132.04,97.09,entire_home,Schöneberg-Süd,apartment
+80.0,88.15,-8.15,8.15,10.19,private_room,Zehlendorf  Nord,apartment
+88.0,248.27,-160.27,160.27,182.13,entire_home,Rummelsburger Bucht,house
+127.0,88.17,38.83,38.83,30.57,private_room,südliche Luisenstadt,apartment
+141.0,121.35,19.65,19.65,13.94,entire_home,Brunnenstr. Nord,apartment
+76.0,95.2,-19.2,19.2,25.26,entire_home,Tempelhofer Vorstadt,apartment
+39.0,51.34,-12.34,12.34,31.65,private_room,Köllnische Heide,apartment
+100.0,195.39,-95.39,95.39,95.39,private_room,Friedrichshagen,house
+113.0,115.89,-2.89,2.89,2.56,entire_home,Oberschöneweide,unique
+110.0,95.67,14.33,14.33,13.03,entire_home,Prenzlauer Berg Südwest,apartment
+95.0,124.09,-29.09,29.09,30.62,entire_home,Schöneberg-Süd,apartment
+88.0,80.54,7.46,7.46,8.48,private_room,nördliche Luisenstadt,apartment
+219.0,512.31,-293.31,293.31,133.93,entire_home,Friedrichsfelde Nord,house
+66.0,68.57,-2.57,2.57,3.89,entire_home,Moabit Ost,apartment
+400.0,124.74,275.26,275.26,68.82,entire_home,Neuköllner Mitte/Zentrum,apartment
+466.0,394.31,71.69,71.69,15.38,entire_home,Kantstraße,apartment
+250.0,169.16,80.84,80.84,32.33,entire_home,Tempelhofer Vorstadt,apartment
+91.0,88.57,2.43,2.43,2.67,private_room,Alexanderplatz,apartment
+117.0,123.41,-6.41,6.41,5.48,entire_home,Karl-Marx-Allee-Nord,apartment
+52.0,50.58,1.42,1.42,2.74,private_room,Ost 2,apartment
+87.0,48.24,38.76,38.76,44.56,entire_home,Tiergarten Süd,apartment
+77.0,79.21,-2.21,2.21,2.87,entire_home,Otto-Suhr-Allee,apartment
+45.0,48.78,-3.78,3.78,8.41,private_room,West 2,house
+143.0,111.44,31.56,31.56,22.07,private_room,Neue Kantstraße,hotel
+43.0,54.71,-11.71,11.71,27.22,private_room,West 2,house
+104.0,74.44,29.56,29.56,28.42,entire_home,West 4,apartment
+104.0,72.08,31.92,31.92,30.69,entire_home,West 4,apartment
+29.0,56.07,-27.07,27.07,93.36,private_room,Tempelhofer Vorstadt,apartment
+97.0,83.02,13.98,13.98,14.41,entire_home,Parkviertel,apartment
+184.0,115.67,68.33,68.33,37.13,entire_home,Brunnenstr. Nord,apartment
+86.0,115.81,-29.81,29.81,34.67,entire_home,Frankfurter Allee Nord,apartment
+110.0,109.74,0.26,0.26,0.24,entire_home,Oberschöneweide,apartment
+141.0,111.17,29.83,29.83,21.15,entire_home,Kurfürstendamm,apartment
+185.0,131.77,53.23,53.23,28.77,entire_home,Gatow / Kladow,apartment
+318.0,333.04,-15.04,15.04,4.73,entire_home,Alexanderplatz,apartment
+144.0,165.57,-21.57,21.57,14.98,entire_home,Rahnsdorf/Hessenwinkel,house
+60.0,77.03,-17.03,17.03,28.38,entire_home,Alexanderplatz,apartment
+31.0,38.93,-7.93,7.93,25.57,shared_room,Schöneberg-Nord,hotel
+31.0,35.65,-4.65,4.65,15.0,shared_room,Schöneberg-Nord,hotel
+99.0,113.88,-14.88,14.88,15.03,entire_home,Neuköllner Mitte/Zentrum,apartment
+117.0,165.02,-48.02,48.02,41.05,entire_home,Tempelhof,apartment
+80.0,98.23,-18.23,18.23,22.78,entire_home,Grunewald,other
+159.0,153.81,5.19,5.19,3.26,entire_home,Karl-Marx-Allee-Nord,apartment
+49.0,55.01,-6.01,6.01,12.26,private_room,Drakestr.,apartment
+157.0,103.37,53.63,53.63,34.16,entire_home,Brunnenstr. Nord,apartment
+168.0,127.4,40.6,40.6,24.16,entire_home,Brunnenstr. Nord,apartment
+110.0,102.57,7.43,7.43,6.76,entire_home,Düsseldorfer Straße,apartment
+313.0,164.89,148.11,148.11,47.32,entire_home,Brunnenstr. Süd,apartment
+131.0,124.88,6.12,6.12,4.67,entire_home,Prenzlauer Berg Nordwest,apartment
+334.0,337.29,-3.29,3.29,0.98,entire_home,Alexanderplatz,apartment
+316.0,115.96,200.04,200.04,63.3,entire_home,Plänterwald,house
+125.0,206.25,-81.25,81.25,65.0,entire_home,Frankfurter Allee Süd FK,apartment
+96.0,88.02,7.98,7.98,8.31,private_room,Prenzlauer Berg Süd,apartment
+155.0,132.17,22.83,22.83,14.73,entire_home,Brunnenstr. Nord,apartment
+167.0,105.48,61.52,61.52,36.84,entire_home,Brunnenstr. Nord,apartment
+94.0,130.36,-36.36,36.36,38.68,entire_home,Helmholtzplatz,house
+130.0,154.48,-24.48,24.48,18.83,private_room,Mahlsdorf,other
+150.0,124.65,25.35,25.35,16.9,entire_home,Neuköllner Mitte/Zentrum,apartment
+152.0,96.0,56.0,56.0,36.84,entire_home,Tempelhofer Vorstadt,apartment
+63.0,84.89,-21.89,21.89,34.74,entire_home,Pankow Süd,apartment
+90.0,77.39,12.61,12.61,14.02,private_room,Prenzlauer Berg Nord,apartment
+75.0,137.62,-62.62,62.62,83.49,private_room,Prenzlauer Berg Südwest,hotel
+75.0,141.87,-66.87,66.87,89.16,private_room,Prenzlauer Berg Südwest,hotel
+109.0,110.07,-1.07,1.07,0.98,entire_home,Frankfurter Allee Nord,apartment
+103.0,85.1,17.9,17.9,17.38,entire_home,Moabit West,apartment
+59.0,58.59,0.41,0.41,0.69,private_room,Rudow,house
+185.0,128.15,56.85,56.85,30.73,entire_home,Reuterstraße,apartment
+160.0,202.16,-42.16,42.16,26.35,entire_home,Friedrichshagen,house
+96.0,96.89,-0.89,0.89,0.93,entire_home,Prenzlauer Berg Süd,apartment
+212.0,177.02,34.98,34.98,16.5,entire_home,Reuterstraße,apartment
+239.0,155.81,83.19,83.19,34.81,entire_home,Plänterwald,apartment
+59.0,67.11,-8.11,8.11,13.75,private_room,Prenzlauer Berg Ost,apartment
+43.0,66.9,-23.9,23.9,55.59,entire_home,Alexanderplatz,apartment
+179.0,213.29,-34.29,34.29,19.16,entire_home,Prenzlauer Berg Nord,apartment
+166.0,197.67,-31.67,31.67,19.08,entire_home,nördliche Luisenstadt,apartment
+198.0,201.01,-3.01,3.01,1.52,entire_home,Reuterstraße,apartment
+152.0,134.54,17.46,17.46,11.49,entire_home,Schillerpromenade,apartment
+64.0,74.32,-10.32,10.32,16.13,entire_home,Prenzlauer Berg Nordwest,apartment
+56.0,69.85,-13.85,13.85,24.72,entire_home,Plänterwald,apartment
+193.0,91.15,101.85,101.85,52.77,entire_home,Brunnenstr. Süd,apartment
+78.0,78.42,-0.42,0.42,0.54,entire_home,Siemensstadt,apartment
+240.0,210.79,29.21,29.21,12.17,entire_home,nördliche Luisenstadt,house
+95.0,45.53,49.47,49.47,52.08,private_room,Barstraße,apartment
+64.0,67.93,-3.93,3.93,6.14,private_room,Köllnische Heide,apartment
+140.0,110.45,29.55,29.55,21.11,entire_home,Frankfurter Allee Süd FK,apartment
+102.0,79.72,22.28,22.28,21.85,private_room,Hakenfelde,hotel
+80.0,43.31,36.69,36.69,45.86,private_room,Düsseldorfer Straße,apartment
+100.0,83.0,17.0,17.0,17.0,entire_home,Weißensee,apartment
+41.0,59.08,-18.08,18.08,44.11,private_room,Neuköllner Mitte/Zentrum,apartment
+68.0,94.33,-26.33,26.33,38.72,entire_home,Alexanderplatz,apartment
+50.0,49.11,0.89,0.89,1.79,private_room,Schöneberg-Süd,apartment
+25.0,41.82,-16.82,16.82,67.26,private_room,Schloß Charlottenburg,apartment
+48.0,45.97,2.03,2.03,4.24,private_room,Volkspark Wilmersdorf,apartment
+83.0,77.21,5.79,5.79,6.97,private_room,Westend,apartment
+42.0,51.61,-9.61,9.61,22.88,private_room,Ostpreußendamm,house
+50.0,82.81,-32.81,32.81,65.62,entire_home,Prenzlauer Berg Südwest,apartment
+120.0,100.04,19.96,19.96,16.64,entire_home,südliche Luisenstadt,apartment
+76.0,77.29,-1.29,1.29,1.7,private_room,Tempelhofer Vorstadt,apartment
+64.0,85.14,-21.14,21.14,33.03,entire_home,Volkspark Wilmersdorf,apartment
+72.0,89.04,-17.04,17.04,23.67,entire_home,Brunnenstr. Nord,apartment
+79.0,91.91,-12.91,12.91,16.34,entire_home,Wedding Zentrum,apartment
+50.0,60.93,-10.93,10.93,21.86,private_room,Neuköllner Mitte/Zentrum,house
+49.0,74.28,-25.28,25.28,51.59,entire_home,Kantstraße,apartment
+50.0,36.45,13.55,13.55,27.1,private_room,Marzahn-Mitte,apartment
+45.0,38.83,6.17,6.17,13.72,private_room,Marzahn-Nord,apartment
+51.0,72.99,-21.99,21.99,43.12,entire_home,Tiergarten Süd,apartment
+96.0,70.53,25.47,25.47,26.53,entire_home,Reuterstraße,apartment
+176.0,114.24,61.76,61.76,35.09,entire_home,Volkspark Wilmersdorf,apartment
+86.0,99.64,-13.64,13.64,15.86,entire_home,Prenzlauer Berg Nordwest,apartment
+174.0,355.32,-181.32,181.32,104.21,entire_home,Albrechtstr.,apartment
+510.0,134.23,375.77,375.77,73.68,entire_home,Kölln. Vorstadt/Spindlersf.,apartment
+56.0,81.23,-25.23,25.23,45.06,entire_home,Frankfurter Allee Süd FK,apartment
+37.0,57.63,-20.63,20.63,55.77,entire_home,Alexanderplatz,apartment
+64.0,81.8,-17.8,17.8,27.81,private_room,Schöneberg-Süd,apartment
+68.0,62.35,5.65,5.65,8.31,entire_home,Düsseldorfer Straße,apartment
+30.0,49.32,-19.32,19.32,64.39,private_room,Hellersdorf-Ost,apartment
+79.0,68.86,10.14,10.14,12.83,entire_home,Tempelhof,apartment
+80.0,74.99,5.01,5.01,6.26,entire_home,Helmholtzplatz,apartment
+107.0,82.31,24.69,24.69,23.07,entire_home,Schöneberg-Süd,apartment
+140.0,114.43,25.57,25.57,18.26,entire_home,Alexanderplatz,apartment
+198.0,90.05,107.95,107.95,54.52,entire_home,Kurfürstendamm,apartment
+60.0,81.43,-21.43,21.43,35.72,entire_home,Friedenau,apartment
+96.0,113.21,-17.21,17.21,17.93,entire_home,Südliche Friedrichstadt,apartment
+42.0,79.24,-37.24,37.24,88.67,entire_home,Alexanderplatz,apartment
+220.0,200.46,19.54,19.54,8.88,entire_home,Heerstrasse,apartment
+43.0,72.67,-29.67,29.67,69.0,entire_home,Alexanderplatz,apartment
+600.0,207.65,392.35,392.35,65.39,entire_home,Parkviertel,apartment
+55.0,71.93,-16.93,16.93,30.79,entire_home,Blankenburg/Heinersdorf/Märchenland,apartment
+250.0,132.65,117.35,117.35,46.94,entire_home,Alexanderplatz,apartment
+81.0,108.98,-27.98,27.98,34.55,private_room,Reuterstraße,apartment
+88.0,86.97,1.03,1.03,1.17,entire_home,Zehlendorf  Nord,apartment
+88.0,76.03,11.97,11.97,13.6,entire_home,Gatow / Kladow,apartment
+90.0,91.66,-1.66,1.66,1.84,entire_home,Brunnenstr. Süd,apartment
+115.0,95.12,19.88,19.88,17.29,entire_home,Zehlendorf  Südwest,apartment
+306.0,205.83,100.17,100.17,32.74,entire_home,Brunnenstr. Süd,apartment
+99.0,153.3,-54.3,54.3,54.85,entire_home,Tempelhofer Vorstadt,apartment
+136.0,121.16,14.84,14.84,10.91,entire_home,Prenzlauer Berg Ost,apartment
+116.0,131.43,-15.43,15.43,13.3,entire_home,Tempelhof,apartment
+162.0,121.63,40.37,40.37,24.92,entire_home,Brunnenstr. Nord,apartment
+83.0,113.26,-30.26,30.26,36.46,entire_home,Brunnenstr. Nord,apartment
+60.0,61.42,-1.42,1.42,2.36,private_room,Heerstrasse,apartment
+228.0,254.26,-26.26,26.26,11.52,entire_home,Reuterstraße,apartment
+44.0,55.69,-11.69,11.69,26.57,private_room,Zehlendorf  Nord,apartment
+51.0,80.4,-29.4,29.4,57.64,entire_home,Alexanderplatz,apartment
+88.0,91.42,-3.42,3.42,3.89,entire_home,Prenzlauer Berg Nord,apartment
+99.0,100.89,-1.89,1.89,1.91,private_room,Tempelhofer Vorstadt,apartment
+119.0,162.58,-43.58,43.58,36.62,entire_home,Schöneberg-Süd,apartment
+33.0,38.6,-5.6,5.6,16.98,private_room,Ostpreußendamm,house
+277.0,260.77,16.23,16.23,5.86,entire_home,Friedrichshagen,unique
+25.0,47.13,-22.13,22.13,88.54,private_room,Ost 1,apartment
+90.0,116.12,-26.12,26.12,29.02,entire_home,Kaulsdorf,house
+373.0,528.41,-155.41,155.41,41.67,entire_home,Kurfürstendamm,apartment
+68.0,86.7,-18.7,18.7,27.5,private_room,Südliche Friedrichstadt,apartment
+33.0,49.77,-16.77,16.77,50.83,private_room,Oberschöneweide,hotel
+442.0,454.96,-12.96,12.96,2.93,entire_home,Brunnenstr. Süd,apartment
+150.0,135.73,14.27,14.27,9.51,entire_home,Brunnenstr. Nord,apartment
+163.0,127.09,35.91,35.91,22.03,entire_home,Karl-Marx-Allee-Süd,apartment
+404.0,424.21,-20.21,20.21,5.0,entire_home,Brunnenstr. Süd,apartment
+171.0,191.56,-20.56,20.56,12.02,entire_home,Neuköllner Mitte/Zentrum,apartment
+101.0,98.8,2.2,2.2,2.18,entire_home,Brunnenstr. Süd,apartment
+145.0,154.98,-9.98,9.98,6.88,entire_home,Prenzlauer Berg Süd,apartment
+173.0,126.13,46.87,46.87,27.09,entire_home,Brunnenstr. Nord,apartment
+160.0,106.17,53.83,53.83,33.65,private_room,Otto-Suhr-Allee,apartment
+160.0,139.33,20.67,20.67,12.92,entire_home,Otto-Suhr-Allee,apartment
+160.0,118.94,41.06,41.06,25.66,private_room,Otto-Suhr-Allee,apartment
+302.0,293.83,8.17,8.17,2.71,entire_home,Alexanderplatz,apartment
+232.0,180.86,51.14,51.14,22.04,entire_home,Brunnenstr. Nord,apartment
+209.0,77.74,131.26,131.26,62.8,private_room,Karlshorst,apartment
+209.0,88.95,120.05,120.05,57.44,private_room,Karlshorst,apartment
+209.0,89.99,119.01,119.01,56.94,private_room,Karlshorst,apartment
+209.0,84.85,124.15,124.15,59.4,private_room,Karlshorst,apartment
+147.0,98.53,48.47,48.47,32.97,private_room,Karlshorst,apartment
+147.0,103.59,43.41,43.41,29.53,private_room,Karlshorst,apartment
+147.0,84.35,62.65,62.65,42.62,private_room,Karlshorst,apartment
+201.0,102.69,98.31,98.31,48.91,private_room,Karlshorst,apartment
+201.0,92.07,108.93,108.93,54.19,private_room,Karlshorst,apartment
+260.0,160.85,99.15,99.15,38.13,entire_home,Frankfurter Allee Süd FK,apartment
+209.0,167.57,41.43,41.43,19.83,entire_home,Brunnenstr. Nord,apartment
+53.0,52.39,0.61,0.61,1.15,entire_home,Friedrichsfelde Nord,apartment
+77.0,64.66,12.34,12.34,16.03,private_room,Ostpreußendamm,house
+70.0,98.13,-28.13,28.13,40.18,entire_home,Brunnenstr. Nord,apartment
+168.0,105.1,62.9,62.9,37.44,entire_home,Wedding Zentrum,apartment
+62.0,65.35,-3.35,3.35,5.4,private_room,Rudow,house
+156.0,215.67,-59.67,59.67,38.25,entire_home,Frankfurter Allee Süd FK,apartment
+77.0,122.42,-45.42,45.42,58.99,entire_home,Schöneberg-Süd,apartment
+66.0,54.08,11.92,11.92,18.06,private_room,Mariendorf,apartment
+74.0,61.46,12.54,12.54,16.94,private_room,Grunewald,apartment
+103.0,94.45,8.55,8.55,8.3,entire_home,Frankfurter Allee Süd FK,apartment
+143.0,164.63,-21.63,21.63,15.13,entire_home,Alexanderplatz,apartment
+61.0,66.23,-5.23,5.23,8.57,private_room,Pankow Zentrum,apartment
+99.0,66.49,32.51,32.51,32.84,private_room,südliche Luisenstadt,apartment
+117.0,117.79,-0.79,0.79,0.67,entire_home,Prenzlauer Berg Süd,apartment
+129.0,100.91,28.09,28.09,21.77,private_room,Neue Kantstraße,hotel
+50.0,93.42,-43.42,43.42,86.84,entire_home,Parkviertel,apartment
+85.0,113.08,-28.08,28.08,33.03,entire_home,Helmholtzplatz,apartment
+115.0,146.84,-31.84,31.84,27.69,entire_home,Schöneberg-Nord,apartment
+180.0,133.17,46.83,46.83,26.01,entire_home,Schöneberg-Süd,apartment
+115.0,118.26,-3.26,3.26,2.83,entire_home,Moabit West,apartment
+463.0,382.29,80.71,80.71,17.43,entire_home,Prenzlauer Berg Südwest,apartment
+506.0,366.16,139.84,139.84,27.64,entire_home,Brunnenstr. Süd,apartment
+158.0,166.82,-8.82,8.82,5.58,entire_home,Alexanderplatz,apartment
+260.0,299.2,-39.2,39.2,15.08,entire_home,Alexanderplatz,apartment
+175.0,174.27,0.73,0.73,0.42,entire_home,Alexanderplatz,apartment
+196.0,273.12,-77.12,77.12,39.35,entire_home,Alexanderplatz,apartment
+150.0,146.72,3.28,3.28,2.18,entire_home,Prenzlauer Berg Südwest,apartment
+81.0,94.22,-13.22,13.22,16.32,entire_home,Weißensee,apartment
+80.0,156.16,-76.16,76.16,95.2,entire_home,Weißensee,apartment
+100.0,85.95,14.05,14.05,14.05,entire_home,Helmholtzplatz,apartment
+132.0,154.79,-22.79,22.79,17.27,private_room,Neuköllner Mitte/Zentrum,hotel
+152.0,134.72,17.28,17.28,11.37,private_room,Neuköllner Mitte/Zentrum,hotel
+53.0,61.55,-8.55,8.55,16.13,private_room,Weißensee Ost,apartment
+77.0,88.04,-11.04,11.04,14.33,entire_home,Kurfürstendamm,apartment
+123.0,120.86,2.14,2.14,1.74,entire_home,Altglienicke,house
+57.0,73.99,-16.99,16.99,29.81,private_room,Tempelhofer Vorstadt,apartment
+427.0,231.01,195.99,195.99,45.9,entire_home,Weißensee,apartment
+217.0,173.7,43.3,43.3,19.95,entire_home,Schloß Charlottenburg,apartment
+138.0,113.78,24.22,24.22,17.55,entire_home,Prenzlauer Berg Nordwest,apartment
+164.0,162.54,1.46,1.46,0.89,entire_home,Prenzlauer Berg Nordwest,apartment
+152.0,205.93,-53.93,53.93,35.48,entire_home,Reuterstraße,apartment
+102.0,164.15,-62.15,62.15,60.93,entire_home,Reuterstraße,apartment
+237.0,156.35,80.65,80.65,34.03,entire_home,Frankfurter Allee Süd FK,apartment
+237.0,186.43,50.57,50.57,21.34,entire_home,Frankfurter Allee Süd FK,apartment
+237.0,168.46,68.54,68.54,28.92,entire_home,Frankfurter Allee Süd FK,apartment
+237.0,191.23,45.77,45.77,19.31,entire_home,Frankfurter Allee Süd FK,apartment
+237.0,168.06,68.94,68.94,29.09,entire_home,Frankfurter Allee Süd FK,apartment
+237.0,158.4,78.6,78.6,33.17,entire_home,Frankfurter Allee Süd FK,apartment
+410.0,260.82,149.18,149.18,36.38,entire_home,Frankfurter Allee Süd FK,apartment
+410.0,271.07,138.93,138.93,33.89,entire_home,Frankfurter Allee Süd FK,apartment
+410.0,287.4,122.6,122.6,29.9,entire_home,Frankfurter Allee Süd FK,apartment
+352.0,308.45,43.55,43.55,12.37,entire_home,Frankfurter Allee Süd FK,apartment
+258.0,262.42,-4.42,4.42,1.71,entire_home,Frankfurter Allee Süd FK,apartment
+237.0,163.94,73.06,73.06,30.83,entire_home,Frankfurter Allee Süd FK,apartment
+116.0,126.95,-10.95,10.95,9.44,entire_home,Reuterstraße,apartment
+70.0,75.07,-5.07,5.07,7.25,private_room,Reuterstraße,apartment
+60.0,65.32,-5.32,5.32,8.87,entire_home,Moabit Ost,apartment
+81.0,123.53,-42.53,42.53,52.51,private_room,Westend,apartment
+162.0,112.81,49.19,49.19,30.36,entire_home,Kurfürstendamm,apartment
+153.0,127.36,25.64,25.64,16.76,entire_home,Rixdorf,apartment
+40.0,37.6,2.4,2.4,6.01,entire_home,Frankfurter Allee Nord,apartment
+149.0,146.66,2.34,2.34,1.57,entire_home,Frankfurter Allee Süd FK,apartment
+220.0,279.08,-59.08,59.08,26.85,entire_home,Frankfurter Allee Süd FK,apartment
+202.0,168.42,33.58,33.58,16.63,entire_home,südliche Luisenstadt,apartment
+72.0,62.42,9.58,9.58,13.3,private_room,Reuterstraße,apartment
+138.0,149.29,-11.29,11.29,8.18,entire_home,Karl-Marx-Allee-Süd,apartment
+518.0,220.39,297.61,297.61,57.45,entire_home,Südliche Friedrichstadt,apartment
+60.0,69.45,-9.45,9.45,15.75,entire_home,Prenzlauer Berg Nord,apartment
+83.0,73.68,9.32,9.32,11.23,private_room,Moabit West,apartment
+82.0,114.44,-32.44,32.44,39.56,entire_home,Rummelsburger Bucht,apartment
+133.0,276.37,-143.37,143.37,107.8,entire_home,Tempelhofer Vorstadt,apartment
+107.0,93.59,13.41,13.41,12.53,entire_home,Schöneberg-Süd,apartment
+126.0,92.89,33.11,33.11,26.28,entire_home,Frankfurter Allee Süd FK,apartment
+284.0,266.47,17.53,17.53,6.17,entire_home,Kurfürstendamm,apartment
+166.0,144.71,21.29,21.29,12.82,private_room,Neuköllner Mitte/Zentrum,hotel
+179.0,139.18,39.82,39.82,22.25,private_room,Neuköllner Mitte/Zentrum,hotel
+50.0,78.47,-28.47,28.47,56.95,entire_home,Friedrichsfelde Süd,apartment
+283.0,234.91,48.09,48.09,16.99,entire_home,Reuterstraße,apartment
+147.0,215.28,-68.28,68.28,46.45,entire_home,Otto-Suhr-Allee,apartment
+50.0,52.21,-2.21,2.21,4.43,private_room,Frankfurter Allee Nord,apartment
+62.0,82.96,-20.96,20.96,33.81,private_room,Schöneberg-Süd,apartment
+79.0,80.92,-1.92,1.92,2.42,private_room,Neue Kantstraße,apartment
+42.0,40.02,1.98,1.98,4.71,private_room,Oberschöneweide,apartment
+96.0,108.18,-12.18,12.18,12.69,entire_home,Schöneberg-Nord,apartment
+58.0,58.39,-0.39,0.39,0.67,private_room,Reuterstraße,apartment
+69.0,71.67,-2.67,2.67,3.87,private_room,Frankfurter Allee Nord,apartment
+67.0,95.12,-28.12,28.12,41.96,entire_home,Regierungsviertel,apartment
+81.0,99.52,-18.52,18.52,22.86,entire_home,Brunnenstr. Süd,apartment
+58.0,80.36,-22.36,22.36,38.56,entire_home,Südliche Friedrichstadt,apartment
+81.0,119.99,-38.99,38.99,48.14,entire_home,Schillerpromenade,apartment
+90.0,72.8,17.2,17.2,19.11,private_room,Reuterstraße,apartment
+138.0,153.0,-15.0,15.0,10.87,entire_home,Johannisthal,apartment
+44.0,64.27,-20.27,20.27,46.08,private_room,Moabit West,apartment
+192.0,180.21,11.79,11.79,6.14,entire_home,Brunnenstr. Nord,apartment
+193.0,161.62,31.38,31.38,16.26,entire_home,Alexanderplatz,apartment
+281.0,301.57,-20.57,20.57,7.32,entire_home,Brunnenstr. Nord,apartment
+90.0,111.23,-21.23,21.23,23.59,entire_home,Schöneberg-Nord,apartment
+117.0,139.58,-22.58,22.58,19.3,entire_home,Volkspark Wilmersdorf,apartment
+192.0,153.68,38.32,38.32,19.96,entire_home,Alt  Treptow,apartment
+51.0,62.23,-11.23,11.23,22.01,private_room,Schöneberg-Nord,apartment
+167.0,152.11,14.89,14.89,8.91,entire_home,Brunnenstr. Süd,apartment
+171.0,132.27,38.73,38.73,22.65,entire_home,Kurfürstendamm,apartment
+33.0,34.17,-1.17,1.17,3.55,private_room,Ostpreußendamm,house
+44.0,62.32,-18.32,18.32,41.64,entire_home,Alexanderplatz,apartment
+111.0,51.15,59.85,59.85,53.92,entire_home,Frankfurter Allee Süd FK,apartment
+87.0,90.27,-3.27,3.27,3.76,entire_home,Köllnische Heide,apartment
+93.0,71.79,21.21,21.21,22.81,private_room,Prenzlauer Berg Nordwest,unique
+87.0,80.42,6.58,6.58,7.56,private_room,Wedding Zentrum,apartment
+575.0,278.51,296.49,296.49,51.56,entire_home,Südliche Friedrichstadt,apartment
+121.0,254.87,-133.87,133.87,110.64,entire_home,Südliche Friedrichstadt,apartment
+45.0,72.73,-27.73,27.73,61.62,entire_home,Alexanderplatz,apartment
+89.0,85.08,3.92,3.92,4.41,entire_home,Pankow Süd,apartment
+85.0,106.39,-21.39,21.39,25.16,entire_home,Alexanderplatz,apartment
+138.0,207.45,-69.45,69.45,50.32,entire_home,Südliche Friedrichstadt,apartment
+82.0,97.25,-15.25,15.25,18.6,entire_home,Karl-Marx-Allee-Nord,apartment
+114.0,126.36,-12.36,12.36,10.84,entire_home,Karl-Marx-Allee-Süd,apartment
+193.0,261.56,-68.56,68.56,35.53,entire_home,Südliche Friedrichstadt,apartment
+160.0,106.78,53.22,53.22,33.27,entire_home,Rixdorf,apartment
+215.0,145.97,69.03,69.03,32.11,entire_home,Rixdorf,apartment
+56.0,90.57,-34.57,34.57,61.73,entire_home,Prenzlauer Berg Nordwest,apartment
+137.0,240.37,-103.37,103.37,75.45,entire_home,Friedenau,apartment
+108.0,120.75,-12.75,12.75,11.81,entire_home,Moabit Ost,apartment
+76.0,115.26,-39.26,39.26,51.65,private_room,Regierungsviertel,hotel
+112.0,141.92,-29.92,29.92,26.71,private_room,Regierungsviertel,hotel
+132.0,214.6,-82.6,82.6,62.58,private_room,Regierungsviertel,hotel
+146.0,204.88,-58.88,58.88,40.33,entire_home,Friedenau,apartment
+219.0,219.95,-0.95,0.95,0.43,entire_home,Alexanderplatz,apartment
+104.0,120.45,-16.45,16.45,15.81,entire_home,Tempelhofer Vorstadt,apartment
+108.0,110.45,-2.45,2.45,2.27,entire_home,Moabit West,apartment
+68.0,85.66,-17.66,17.66,25.98,entire_home,Schloßstr.,apartment
+187.0,185.03,1.97,1.97,1.05,entire_home,Schillerpromenade,apartment
+70.0,81.24,-11.24,11.24,16.05,entire_home,Otto-Suhr-Allee,apartment
+88.0,76.17,11.83,11.83,13.44,private_room,südliche Luisenstadt,apartment
+177.0,129.56,47.44,47.44,26.8,entire_home,Prenzlauer Berg Nordwest,apartment
+227.0,247.22,-20.22,20.22,8.91,entire_home,Brunnenstr. Süd,apartment
+144.0,169.42,-25.42,25.42,17.65,entire_home,Brunnenstr. Süd,apartment
+311.0,245.4,65.6,65.6,21.09,entire_home,Brunnenstr. Süd,apartment
+249.0,248.14,0.86,0.86,0.34,entire_home,Brunnenstr. Süd,apartment
+252.0,244.67,7.33,7.33,2.91,entire_home,Brunnenstr. Süd,apartment
+227.0,243.88,-16.88,16.88,7.44,entire_home,Brunnenstr. Süd,apartment
+201.0,238.2,-37.2,37.2,18.51,entire_home,Brunnenstr. Süd,apartment
+129.0,147.29,-18.29,18.29,14.18,entire_home,Brunnenstr. Süd,apartment
+189.0,226.12,-37.12,37.12,19.64,entire_home,Brunnenstr. Süd,apartment
+60.0,82.01,-22.01,22.01,36.68,entire_home,Frankfurter Allee Süd FK,apartment
+246.0,162.02,83.98,83.98,34.14,entire_home,Rixdorf,apartment
+72.0,43.94,28.06,28.06,38.97,private_room,Rixdorf,apartment
+143.0,102.65,40.35,40.35,28.22,entire_home,Alexanderplatz,apartment
+63.0,58.52,4.48,4.48,7.11,private_room,Prenzlauer Berg Süd,apartment
+95.0,124.88,-29.88,29.88,31.45,entire_home,Frankfurter Allee Süd FK,apartment
+153.0,123.59,29.41,29.41,19.22,entire_home,Prenzlauer Berg Nord,apartment
+68.0,83.03,-15.03,15.03,22.1,entire_home,Rahnsdorf/Hessenwinkel,apartment
+85.0,121.44,-36.44,36.44,42.87,entire_home,Blankenburg/Heinersdorf/Märchenland,apartment
+94.0,71.66,22.34,22.34,23.77,entire_home,Karl-Marx-Allee-Nord,apartment
+58.0,62.47,-4.47,4.47,7.71,private_room,Schöneberg-Süd,apartment
+174.0,142.55,31.45,31.45,18.07,entire_home,Weißensee,apartment
+70.0,105.83,-35.83,35.83,51.18,private_room,Rudow,apartment
+110.0,166.09,-56.09,56.09,50.99,private_room,Rudow,apartment
+180.0,266.72,-86.72,86.72,48.18,entire_home,Reuterstraße,apartment
+88.0,135.35,-47.35,47.35,53.8,entire_home,Alexanderplatz,apartment
+124.0,137.34,-13.34,13.34,10.76,entire_home,Karl-Marx-Allee-Süd,apartment
+36.0,67.19,-31.19,31.19,86.65,private_room,Moabit West,apartment
+172.0,187.71,-15.71,15.71,9.14,entire_home,Prenzlauer Berg Süd,apartment
+150.0,113.25,36.75,36.75,24.5,entire_home,Prenzlauer Berg Süd,apartment
+83.0,53.82,29.18,29.18,35.15,private_room,Tiergarten Süd,apartment
+85.0,60.22,24.78,24.78,29.15,private_room,Friedrichsfelde Nord,house
+113.0,134.55,-21.55,21.55,19.07,entire_home,Regierungsviertel,apartment
+232.0,164.15,67.85,67.85,29.25,entire_home,südliche Luisenstadt,apartment
+130.0,91.0,39.0,39.0,30.0,entire_home,Tempelhofer Vorstadt,apartment
+90.0,175.48,-85.48,85.48,94.98,entire_home,Schillerpromenade,apartment
+72.0,90.3,-18.3,18.3,25.42,entire_home,Rixdorf,apartment
+128.0,164.41,-36.41,36.41,28.45,entire_home,Albrechtstr.,apartment
+411.0,327.25,83.75,83.75,20.38,entire_home,Prenzlauer Berg Süd,apartment
+112.0,96.8,15.2,15.2,13.57,entire_home,Alexanderplatz,apartment
+81.0,84.02,-3.02,3.02,3.73,entire_home,Frankfurter Allee Süd FK,apartment
+77.0,96.73,-19.73,19.73,25.63,entire_home,Schöneberg-Nord,apartment
+77.0,97.19,-20.19,20.19,26.23,entire_home,Mariendorf,apartment
+35.0,81.75,-46.75,46.75,133.56,private_room,Rudow,house
+98.0,116.68,-18.68,18.68,19.06,entire_home,Frankfurter Allee Nord,apartment
+420.0,219.71,200.29,200.29,47.69,entire_home,nördliche Luisenstadt,apartment
+138.0,184.39,-46.39,46.39,33.62,entire_home,Frankfurter Allee Nord,apartment
+76.0,96.81,-20.81,20.81,27.38,entire_home,Mariendorf,apartment
+77.0,98.64,-21.64,21.64,28.11,entire_home,Mariendorf,apartment
+83.0,90.33,-7.33,7.33,8.83,entire_home,Mariendorf,apartment
+308.0,256.51,51.49,51.49,16.72,entire_home,Kantstraße,apartment
+84.0,72.21,11.79,11.79,14.03,entire_home,Osloer Straße,apartment
+138.0,172.28,-34.28,34.28,24.84,entire_home,Frankfurter Allee Nord,apartment
+128.0,148.19,-20.19,20.19,15.77,entire_home,Frankfurter Allee Nord,apartment
+92.0,108.81,-16.81,16.81,18.27,entire_home,Karl-Marx-Allee-Nord,apartment
+138.0,144.12,-6.12,6.12,4.43,entire_home,Karl-Marx-Allee-Nord,apartment
+110.0,158.62,-48.62,48.62,44.2,entire_home,Frankfurter Allee Nord,apartment
+165.0,166.85,-1.85,1.85,1.12,entire_home,Karl-Marx-Allee-Nord,apartment
+156.0,181.02,-25.02,25.02,16.04,entire_home,Karl-Marx-Allee-Nord,apartment
+298.0,314.78,-16.78,16.78,5.63,entire_home,Prenzlauer Berg Nordwest,apartment
+84.0,127.92,-43.92,43.92,52.29,private_room,Prenzlauer Berg Nord,hotel
+85.0,123.11,-38.11,38.11,44.83,entire_home,Frankfurter Allee Süd FK,apartment
+152.0,111.64,40.36,40.36,26.55,entire_home,Frankfurter Allee Nord,apartment
+80.0,65.56,14.44,14.44,18.05,private_room,südliche Luisenstadt,apartment
+72.0,80.2,-8.2,8.2,11.39,entire_home,West 2,house
+900.0,319.15,580.85,580.85,64.54,entire_home,Halensee,apartment
+70.0,55.65,14.35,14.35,20.5,entire_home,Tempelhofer Vorstadt,apartment
+61.0,84.77,-23.77,23.77,38.96,entire_home,Alexanderplatz,apartment
+48.0,82.76,-34.76,34.76,72.41,entire_home,Frankfurter Allee Süd FK,apartment
+52.0,82.38,-30.38,30.38,58.43,entire_home,Schöneberg-Süd,apartment
+51.0,95.87,-44.87,44.87,87.98,entire_home,Alexanderplatz,apartment
+69.0,78.81,-9.81,9.81,14.22,private_room,Rixdorf,apartment
+71.0,63.92,7.08,7.08,9.98,private_room,Mahlsdorf,house
+39.0,59.59,-20.59,20.59,52.81,entire_home,Brunnenstr. Süd,apartment
+160.0,76.46,83.54,83.54,52.21,entire_home,Karl-Marx-Allee-Süd,apartment
+40.0,74.73,-34.73,34.73,86.84,entire_home,Brunnenstr. Süd,apartment
+40.0,76.47,-36.47,36.47,91.18,entire_home,Brunnenstr. Süd,apartment
+160.0,138.47,21.53,21.53,13.45,private_room,Otto-Suhr-Allee,apartment
+78.0,110.33,-32.33,32.33,41.45,entire_home,Kantstraße,apartment
+209.0,101.07,107.93,107.93,51.64,private_room,Karlshorst,apartment
+201.0,101.4,99.6,99.6,49.55,private_room,Karlshorst,apartment
+90.0,68.22,21.78,21.78,24.2,entire_home,Prenzlauer Berg Nordwest,apartment
+180.0,163.97,16.03,16.03,8.91,entire_home,Moabit West,apartment
+500.0,259.32,240.68,240.68,48.14,private_room,Düsseldorfer Straße,hotel
+110.0,138.61,-28.61,28.61,26.01,entire_home,Kantstraße,apartment
+137.0,132.84,4.16,4.16,3.04,entire_home,Südliche Friedrichstadt,apartment
+139.0,133.56,5.44,5.44,3.91,entire_home,Südliche Friedrichstadt,apartment
+136.0,158.33,-22.33,22.33,16.42,entire_home,Düsseldorfer Straße,apartment
+77.0,89.27,-12.27,12.27,15.94,entire_home,Kantstraße,apartment
+115.0,60.34,54.66,54.66,47.53,entire_home,Grunewald,apartment
+90.0,79.78,10.22,10.22,11.35,entire_home,Kurfürstendamm,apartment
+51.0,74.65,-23.65,23.65,46.37,entire_home,Alexanderplatz,apartment
+90.0,74.19,15.81,15.81,17.57,entire_home,Alexanderplatz,apartment
+36.0,40.98,-4.98,4.98,13.83,private_room,Ost 2,apartment
+59.0,84.69,-25.69,25.69,43.55,entire_home,Zehlendorf  Südwest,apartment
+52.0,83.95,-31.95,31.95,61.45,entire_home,Frankfurter Allee Süd,apartment
+221.0,266.48,-45.48,45.48,20.58,entire_home,Brunnenstr. Süd,apartment
+231.0,225.67,5.33,5.33,2.31,entire_home,Frankfurter Allee Süd FK,apartment
+237.0,172.31,64.69,64.69,27.3,entire_home,Frankfurter Allee Süd FK,apartment
+237.0,146.86,90.14,90.14,38.03,entire_home,Frankfurter Allee Süd FK,apartment
+231.0,230.15,0.85,0.85,0.37,entire_home,Frankfurter Allee Süd FK,apartment
+209.0,298.53,-89.53,89.53,42.84,entire_home,Frankfurter Allee Süd FK,apartment
+61.0,82.25,-21.25,21.25,34.83,entire_home,Kurfürstendamm,apartment
+63.0,73.79,-10.79,10.79,17.13,private_room,Schillerpromenade,apartment
+120.0,77.06,42.94,42.94,35.78,entire_home,Prenzlauer Berg Süd,apartment
+63.0,87.81,-24.81,24.81,39.38,entire_home,Tiergarten Süd,apartment
+52.0,57.1,-5.1,5.1,9.8,private_room,Helmholtzplatz,apartment
+119.0,117.26,1.74,1.74,1.46,entire_home,Brunnenstr. Nord,apartment
+77.0,94.87,-17.87,17.87,23.21,entire_home,Düsseldorfer Straße,apartment
+132.0,111.27,20.73,20.73,15.7,entire_home,Alt-Hohenschönhausen Süd,apartment
+1500.0,214.79,1285.21,1285.21,85.68,entire_home,Frankfurter Allee Süd FK,apartment
+131.0,134.99,-3.99,3.99,3.05,entire_home,Schillerpromenade,apartment
+85.0,94.02,-9.02,9.02,10.61,entire_home,Neue Kantstraße,apartment
+94.0,107.19,-13.19,13.19,14.03,entire_home,Kurfürstendamm,apartment
+85.0,75.58,9.42,9.42,11.09,entire_home,nördliche Luisenstadt,apartment
+56.0,82.66,-26.66,26.66,47.61,entire_home,Karl-Marx-Allee-Süd,apartment
+284.0,223.13,60.87,60.87,21.43,entire_home,Brunnenstr. Süd,apartment
+970.0,171.95,798.05,798.05,82.27,entire_home,Schmöckwitz/Karolinenhof/Rauchfangswerder,house
+3800.0,626.74,3173.26,3173.26,83.51,entire_home,Schmöckwitz/Karolinenhof/Rauchfangswerder,house
+99.0,189.2,-90.2,90.2,91.11,entire_home,Alexanderplatz,apartment
+35.0,29.9,5.1,5.1,14.58,private_room,Ostpreußendamm,house
+33.0,40.01,-7.01,7.01,21.24,private_room,Ostpreußendamm,house
+44.0,74.45,-30.45,30.45,69.21,entire_home,Alexanderplatz,apartment
+341.0,177.4,163.6,163.6,47.98,entire_home,Südliche Friedrichstadt,apartment
+96.0,75.84,20.16,20.16,21.0,private_room,Schillerpromenade,apartment
+64.0,91.51,-27.51,27.51,42.99,entire_home,Tiergarten Süd,apartment
+117.0,156.44,-39.44,39.44,33.71,entire_home,Tiergarten Süd,apartment
+64.0,56.24,7.76,7.76,12.13,private_room,Reuterstraße,apartment
+317.0,450.68,-133.68,133.68,42.17,private_room,Regierungsviertel,hotel
+256.0,248.12,7.88,7.88,3.08,entire_home,Prenzlauer Berg Ost,house
+95.0,111.05,-16.05,16.05,16.89,entire_home,Schönholz/Wilhelmsruh/Rosenthal,apartment
+35.0,75.96,-40.96,40.96,117.02,private_room,Prenzlauer Berg Nordwest,apartment
+256.0,226.56,29.44,29.44,11.5,entire_home,Brunnenstr. Süd,apartment
+199.0,208.63,-9.63,9.63,4.84,entire_home,Brunnenstr. Süd,apartment
+147.0,159.83,-12.83,12.83,8.73,entire_home,Brunnenstr. Süd,apartment
+285.0,213.07,71.93,71.93,25.24,entire_home,Brunnenstr. Süd,apartment
+257.0,219.39,37.61,37.61,14.64,entire_home,Brunnenstr. Süd,apartment
+228.0,216.53,11.47,11.47,5.03,entire_home,Brunnenstr. Süd,apartment
+200.0,201.14,-1.14,1.14,0.57,entire_home,Brunnenstr. Süd,apartment
+218.0,213.51,4.49,4.49,2.06,entire_home,Brunnenstr. Süd,apartment
+160.0,167.91,-7.91,7.91,4.95,entire_home,Brunnenstr. Süd,apartment
+176.0,204.6,-28.6,28.6,16.25,entire_home,Brunnenstr. Süd,apartment
+123.0,159.61,-36.61,36.61,29.76,entire_home,Brunnenstr. Süd,apartment
+248.0,201.15,46.85,46.85,18.89,entire_home,Brunnenstr. Süd,apartment
+223.0,202.65,20.35,20.35,9.12,entire_home,Brunnenstr. Süd,apartment
+198.0,201.7,-3.7,3.7,1.87,entire_home,Brunnenstr. Süd,apartment
+174.0,181.88,-7.88,7.88,4.53,entire_home,Brunnenstr. Süd,apartment
+212.0,206.16,5.84,5.84,2.75,entire_home,Brunnenstr. Süd,apartment
+236.0,203.41,32.59,32.59,13.81,entire_home,Brunnenstr. Süd,apartment
+165.0,185.03,-20.03,20.03,12.14,entire_home,Brunnenstr. Süd,apartment
+117.0,137.79,-20.79,20.79,17.77,entire_home,Brunnenstr. Süd,apartment
+87.0,99.86,-12.86,12.86,14.78,entire_home,Alexanderplatz,apartment
+45.0,76.13,-31.13,31.13,69.18,entire_home,Otto-Suhr-Allee,apartment
+76.0,127.12,-51.12,51.12,67.27,entire_home,Wedding Zentrum,apartment
+128.0,82.7,45.3,45.3,35.39,entire_home,Tempelhofer Vorstadt,apartment
+55.0,49.11,5.89,5.89,10.71,private_room,Karl-Marx-Allee-Süd,apartment
+84.0,79.42,4.58,4.58,5.46,entire_home,Kantstraße,apartment
+100.0,109.72,-9.72,9.72,9.72,entire_home,Alt  Treptow,apartment
+53.0,54.51,-1.51,1.51,2.86,entire_home,Grunewald,apartment
+53.0,63.99,-10.99,10.99,20.73,entire_home,Albrechtstr.,apartment
+57.0,99.97,-42.97,42.97,75.38,entire_home,Südliche Friedrichstadt,apartment
+112.0,99.58,12.42,12.42,11.09,entire_home,Drakestr.,apartment
+1440.0,707.53,732.47,732.47,50.87,entire_home,Frankfurter Allee Süd FK,house
+56.0,90.32,-34.32,34.32,61.28,entire_home,Tempelhofer Vorstadt,apartment
+144.0,101.91,42.09,42.09,29.23,entire_home,Prenzlauer Berg Südwest,apartment
+45.0,79.32,-34.32,34.32,76.27,entire_home,Alexanderplatz,apartment
+144.0,85.77,58.23,58.23,40.44,entire_home,Tempelhofer Vorstadt,apartment
+140.0,62.51,77.49,77.49,55.35,entire_home,Schöneberg-Süd,apartment
+126.0,122.15,3.85,3.85,3.05,entire_home,Brunnenstr. Nord,apartment
+85.0,86.43,-1.43,1.43,1.69,entire_home,Schloßstr.,apartment
+76.0,126.64,-50.64,50.64,66.63,entire_home,Grunewald,apartment
+59.0,56.73,2.27,2.27,3.84,entire_home,Grunewald,apartment
+200.0,179.44,20.56,20.56,10.28,entire_home,Brunnenstr. Süd,apartment
+71.0,67.16,3.84,3.84,5.41,entire_home,Schöneberg-Süd,apartment
+65.0,107.99,-42.99,42.99,66.15,private_room,Rudow,house
+57.0,54.8,2.2,2.2,3.86,private_room,südliche Luisenstadt,apartment
+240.0,929.45,-689.45,689.45,287.27,entire_home,Frankfurter Allee Süd FK,house
+216.0,189.11,26.89,26.89,12.45,entire_home,Mierendorffplatz,apartment
+76.0,91.74,-15.74,15.74,20.72,entire_home,Frankfurter Allee Süd FK,apartment
+78.0,92.56,-14.56,14.56,18.66,entire_home,Frankfurter Allee Süd FK,apartment
+66.0,88.34,-22.34,22.34,33.85,entire_home,Grunewald,apartment
+78.0,95.37,-17.37,17.37,22.26,entire_home,Karl-Marx-Allee-Nord,apartment
+50.0,74.15,-24.15,24.15,48.3,entire_home,Rixdorf,apartment
+71.0,100.32,-29.32,29.32,41.3,entire_home,Rixdorf,apartment
+220.0,85.43,134.57,134.57,61.17,entire_home,Tempelhofer Vorstadt,apartment
+60.0,52.97,7.03,7.03,11.72,entire_home,Tempelhof,apartment
+73.0,79.07,-6.07,6.07,8.32,entire_home,Wiesbadener Straße,apartment
+212.0,216.73,-4.73,4.73,2.23,entire_home,Alexanderplatz,apartment
+82.0,108.36,-26.36,26.36,32.15,entire_home,Neu Lichtenberg,apartment
+110.0,132.35,-22.35,22.35,20.32,entire_home,Friedrichsfelde Nord,apartment
+290.0,201.28,88.72,88.72,30.59,entire_home,Prenzlauer Berg Südwest,apartment
+383.0,266.03,116.97,116.97,30.54,entire_home,Alexanderplatz,apartment
+119.0,154.52,-35.52,35.52,29.85,entire_home,Karl-Marx-Allee-Süd,apartment
+82.0,136.17,-54.17,54.17,66.06,entire_home,Karl-Marx-Allee-Süd,apartment
+116.0,103.36,12.64,12.64,10.9,entire_home,Alexanderplatz,apartment
+169.0,222.87,-53.87,53.87,31.88,entire_home,Blankenfelde/Niederschönhausen,apartment
+178.0,201.26,-23.26,23.26,13.07,entire_home,Blankenfelde/Niederschönhausen,apartment
+109.0,403.61,-294.61,294.61,270.28,entire_home,Blankenfelde/Niederschönhausen,house
+197.0,178.33,18.67,18.67,9.48,entire_home,Karl-Marx-Allee-Nord,apartment
+76.0,88.79,-12.79,12.79,16.82,private_room,Südliche Friedrichstadt,apartment
+114.0,164.23,-50.23,50.23,44.07,entire_home,Parkviertel,apartment
+131.0,94.23,36.77,36.77,28.07,entire_home,Brunnenstr. Süd,apartment
+171.0,154.07,16.93,16.93,9.9,entire_home,Alt  Treptow,apartment
+86.0,105.32,-19.32,19.32,22.47,entire_home,Helmholtzplatz,apartment
+93.0,115.51,-22.51,22.51,24.2,entire_home,Prenzlauer Berg Nordwest,apartment
+298.0,238.18,59.82,59.82,20.07,entire_home,Altglienicke,house
+255.0,199.34,55.66,55.66,21.83,entire_home,Südliche Friedrichstadt,apartment
+71.0,111.79,-40.79,40.79,57.45,entire_home,Moabit West,apartment
+158.0,143.12,14.88,14.88,9.42,entire_home,Prenzlauer Berg Südwest,apartment
+146.0,132.27,13.73,13.73,9.41,entire_home,Brunnenstr. Nord,apartment
+177.0,114.07,62.93,62.93,35.55,entire_home,Frankfurter Allee Süd FK,apartment
+103.0,115.46,-12.46,12.46,12.1,entire_home,Lankwitz,apartment
+124.0,130.08,-6.08,6.08,4.91,entire_home,Frankfurter Allee Süd FK,apartment
+199.0,223.88,-24.88,24.88,12.5,entire_home,Frankfurter Allee Süd FK,apartment
+77.0,113.4,-36.4,36.4,47.27,entire_home,Mariendorf,apartment
+76.0,91.37,-15.37,15.37,20.22,entire_home,Grünau,apartment
+81.0,128.41,-47.41,47.41,58.53,entire_home,Karl-Marx-Allee-Süd,apartment
+67.0,145.41,-78.41,78.41,117.02,entire_home,Karl-Marx-Allee-Süd,apartment
+65.0,90.77,-25.77,25.77,39.64,private_room,Düsseldorfer Straße,hotel
+52.0,55.17,-3.17,3.17,6.09,private_room,nördliche Luisenstadt,apartment
+289.0,265.17,23.83,23.83,8.25,private_room,Blankenfelde/Niederschönhausen,house
+237.0,273.71,-36.71,36.71,15.49,entire_home,Düsseldorfer Straße,apartment
+91.0,153.3,-62.3,62.3,68.47,entire_home,Helmholtzplatz,apartment
+44.0,93.97,-49.97,49.97,113.58,private_room,Neuköllner Mitte/Zentrum,apartment
+44.0,81.63,-37.63,37.63,85.53,private_room,Neuköllner Mitte/Zentrum,apartment
+44.0,66.02,-22.02,22.02,50.03,private_room,Neuköllner Mitte/Zentrum,apartment
+44.0,84.82,-40.82,40.82,92.77,private_room,Neuköllner Mitte/Zentrum,apartment
+44.0,91.89,-47.89,47.89,108.83,private_room,Neuköllner Mitte/Zentrum,apartment
+44.0,89.78,-45.78,45.78,104.04,private_room,Neuköllner Mitte/Zentrum,apartment
+44.0,94.08,-50.08,50.08,113.81,private_room,Neuköllner Mitte/Zentrum,apartment
+44.0,100.86,-56.86,56.86,129.23,private_room,Neuköllner Mitte/Zentrum,apartment
+44.0,73.07,-29.07,29.07,66.08,private_room,Neuköllner Mitte/Zentrum,apartment
+92.0,104.17,-12.17,12.17,13.23,entire_home,Prenzlauer Berg Süd,apartment
+270.0,205.22,64.78,64.78,23.99,entire_home,Reuterstraße,apartment
+41.0,85.65,-44.65,44.65,108.91,entire_home,Alt-Lichtenberg,apartment
+82.0,152.28,-70.28,70.28,85.71,entire_home,Karl-Marx-Allee-Süd,other
+31.0,169.4,-138.4,138.4,446.46,shared_room,Schöneberg-Nord,hotel
+28.0,141.58,-113.58,113.58,405.63,shared_room,Schöneberg-Nord,hotel
+100.0,98.1,1.9,1.9,1.9,entire_home,Kölln. Vorstadt/Spindlersf.,apartment
+128.0,179.97,-51.97,51.97,40.6,entire_home,Moabit West,apartment
+110.0,114.93,-4.93,4.93,4.48,entire_home,Buckow,apartment
+68.0,117.83,-49.83,49.83,73.28,private_room,Prenzlauer Berg Nordwest,hotel
+180.0,176.6,3.4,3.4,1.89,entire_home,Plänterwald,apartment
+77.0,90.59,-13.59,13.59,17.65,private_room,nördliche Luisenstadt,apartment
+66.0,87.3,-21.3,21.3,32.27,entire_home,Kantstraße,apartment
+308.0,413.53,-105.53,105.53,34.26,entire_home,Brunnenstr. Süd,house
+105.0,109.25,-4.25,4.25,4.05,entire_home,Südliche Friedrichstadt,apartment
+81.0,84.51,-3.51,3.51,4.34,entire_home,südliche Luisenstadt,apartment
+80.0,72.46,7.54,7.54,9.43,private_room,Volkspark Wilmersdorf,apartment
+352.0,415.67,-63.67,63.67,18.09,entire_home,südliche Luisenstadt,apartment
+43.0,81.41,-38.41,38.41,89.32,entire_home,Alexanderplatz,apartment
+88.0,109.3,-21.3,21.3,24.21,entire_home,Alexanderplatz,apartment
+61.0,51.67,9.33,9.33,15.3,private_room,Mariendorf,house
+62.0,59.54,2.46,2.46,3.97,private_room,Alexanderplatz,apartment
+207.0,169.28,37.72,37.72,18.22,entire_home,Schöneberg-Süd,apartment
+114.0,192.71,-78.71,78.71,69.04,entire_home,Tempelhofer Vorstadt,apartment
+338.0,221.22,116.78,116.78,34.55,entire_home,Drakestr.,apartment
+81.0,64.8,16.2,16.2,20.0,private_room,Kantstraße,apartment
+75.0,85.7,-10.7,10.7,14.27,private_room,Rudow,house
+84.0,84.37,-0.37,0.37,0.44,entire_home,Schöneberg-Nord,apartment
+86.0,92.96,-6.96,6.96,8.09,entire_home,Westend,apartment
+69.0,76.41,-7.41,7.41,10.74,private_room,Schillerpromenade,apartment
+50.0,39.8,10.2,10.2,20.4,shared_room,Otto-Suhr-Allee,apartment
+223.0,266.23,-43.23,43.23,19.38,entire_home,Brunnenstr. Nord,apartment
+71.0,105.58,-34.58,34.58,48.7,entire_home,Parkviertel,apartment
+71.0,61.63,9.37,9.37,13.2,private_room,Friedenau,apartment
+228.0,259.89,-31.89,31.89,13.99,entire_home,Schöneberg-Süd,apartment
+92.0,109.88,-17.88,17.88,19.43,entire_home,Prenzlauer Berg Südwest,apartment
+54.0,79.59,-25.59,25.59,47.38,private_room,Schillerpromenade,apartment
+66.0,80.91,-14.91,14.91,22.6,private_room,Prenzlauer Berg Süd,apartment
+281.0,282.33,-1.33,1.33,0.47,entire_home,Alexanderplatz,apartment
+46.0,81.05,-35.05,35.05,76.19,private_room,Brunnenstr. Nord,apartment
+135.0,124.37,10.63,10.63,7.88,entire_home,Regierungsviertel,apartment
+91.0,56.15,34.85,34.85,38.29,private_room,Weißensee,apartment
+72.0,79.8,-7.8,7.8,10.83,private_room,Tempelhof,apartment
+201.0,250.57,-49.57,49.57,24.66,entire_home,Tiergarten Süd,apartment
+59.0,77.63,-18.63,18.63,31.58,entire_home,Pankow Süd,apartment
+57.0,76.57,-19.57,19.57,34.33,private_room,Schöneberg-Nord,apartment
+62.0,116.96,-54.96,54.96,88.65,entire_home,Frankfurter Allee Süd FK,apartment
+144.0,201.8,-57.8,57.8,40.14,entire_home,südliche Luisenstadt,apartment
+85.0,133.76,-48.76,48.76,57.36,entire_home,Spandau Mitte,apartment
+108.0,156.82,-48.82,48.82,45.21,entire_home,Brunnenstr. Süd,apartment
+126.0,211.01,-85.01,85.01,67.46,entire_home,Prenzlauer Berg Südwest,apartment
+137.0,224.59,-87.59,87.59,63.94,entire_home,Prenzlauer Berg Süd,apartment
+142.0,211.66,-69.66,69.66,49.06,entire_home,Prenzlauer Berg Nord,apartment
+125.0,192.73,-67.73,67.73,54.18,entire_home,Prenzlauer Berg Nord,apartment
+129.0,219.26,-90.26,90.26,69.97,entire_home,Prenzlauer Berg Nord,apartment
+90.0,50.38,39.62,39.62,44.02,private_room,Biesdorf,house
+106.0,123.68,-17.68,17.68,16.68,entire_home,Frankfurter Allee Nord,apartment
+75.0,62.87,12.13,12.13,16.18,private_room,Prenzlauer Berg Nord,apartment
+195.0,162.97,32.03,32.03,16.43,entire_home,Wedding Zentrum,apartment
+198.0,152.43,45.57,45.57,23.01,entire_home,Wedding Zentrum,apartment
+180.0,125.51,54.49,54.49,30.27,entire_home,südliche Luisenstadt,apartment
+121.0,153.38,-32.38,32.38,26.76,entire_home,Reuterstraße,apartment
+69.0,85.5,-16.5,16.5,23.91,entire_home,Pankow Süd,apartment
+184.0,106.17,77.83,77.83,42.3,entire_home,Brunnenstr. Süd,apartment
+277.0,411.94,-134.94,134.94,48.72,entire_home,Brunnenstr. Nord,apartment
+180.0,163.44,16.56,16.56,9.2,entire_home,Prenzlauer Berg Ost,apartment
+230.0,316.58,-86.58,86.58,37.64,entire_home,Alexanderplatz,apartment
+65.0,98.19,-33.19,33.19,51.06,entire_home,Frankfurter Allee Nord,apartment
+421.0,500.13,-79.13,79.13,18.8,entire_home,Brunnenstr. Nord,apartment
+100.0,134.58,-34.58,34.58,34.58,entire_home,Otto-Suhr-Allee,apartment
+144.0,165.05,-21.05,21.05,14.62,entire_home,Tempelhofer Vorstadt,apartment
+145.0,209.26,-64.26,64.26,44.32,entire_home,Tempelhofer Vorstadt,apartment
+81.0,166.61,-85.61,85.61,105.69,private_room,Regierungsviertel,hotel
+117.0,162.51,-45.51,45.51,38.9,entire_home,Hakenfelde,apartment
+67.0,72.76,-5.76,5.76,8.6,private_room,Brunnenstr. Nord,apartment
+200.0,193.27,6.73,6.73,3.36,entire_home,Brunnenstr. Nord,apartment
+362.0,331.91,30.09,30.09,8.31,entire_home,Alexanderplatz,apartment
+250.0,225.31,24.69,24.69,9.88,entire_home,Schöneberg-Nord,other
+109.0,166.4,-57.4,57.4,52.66,entire_home,Neue Kantstraße,apartment
+142.0,87.5,54.5,54.5,38.38,entire_home,Tempelhof,apartment
+95.0,101.19,-6.19,6.19,6.51,entire_home,Adlershof,apartment
+310.0,263.59,46.41,46.41,14.97,entire_home,Moabit West,apartment
+203.0,188.24,14.76,14.76,7.27,entire_home,südliche Luisenstadt,apartment
+168.0,172.66,-4.66,4.66,2.77,entire_home,Tiergarten Süd,apartment
+155.0,185.9,-30.9,30.9,19.94,private_room,Frankfurter Allee Süd FK,apartment
+117.0,93.82,23.18,23.18,19.81,entire_home,Karlshorst,house
+58.0,67.68,-9.68,9.68,16.69,entire_home,Osloer Straße,apartment
+96.0,104.7,-8.7,8.7,9.07,entire_home,Tempelhofer Vorstadt,apartment
+113.0,161.36,-48.36,48.36,42.8,entire_home,Pankow Süd,house
+93.0,100.24,-7.24,7.24,7.78,entire_home,Tempelhofer Vorstadt,apartment
+92.0,128.39,-36.39,36.39,39.56,entire_home,Osloer Straße,apartment
+106.0,100.29,5.71,5.71,5.39,entire_home,Frankfurter Allee Süd FK,apartment
+68.0,77.87,-9.87,9.87,14.52,private_room,Prenzlauer Berg Nord,apartment
+69.0,104.16,-35.16,35.16,50.96,private_room,Tempelhofer Vorstadt,apartment
+147.0,196.52,-49.52,49.52,33.69,entire_home,Tempelhofer Vorstadt,apartment
+94.0,109.99,-15.99,15.99,17.01,entire_home,Tempelhofer Vorstadt,apartment
+120.0,189.67,-69.67,69.67,58.06,entire_home,Frankfurter Allee Süd FK,apartment
+100.0,91.12,8.88,8.88,8.88,entire_home,Frankfurter Allee Süd FK,apartment
+106.0,110.87,-4.87,4.87,4.59,entire_home,nördliche Luisenstadt,apartment
+162.0,164.52,-2.52,2.52,1.55,entire_home,Reuterstraße,apartment
+61.0,82.56,-21.56,21.56,35.35,entire_home,Pankow Süd,apartment
+53.0,73.52,-20.52,20.52,38.72,entire_home,Biesdorf,unique
+56.0,50.99,5.01,5.01,8.95,private_room,Alt-Lichtenberg,apartment
+180.0,150.4,29.6,29.6,16.45,entire_home,Weißensee,apartment
+43.0,56.44,-13.44,13.44,31.25,private_room,Otto-Suhr-Allee,house
+137.0,160.42,-23.42,23.42,17.1,entire_home,Weißensee,apartment
+215.0,160.52,54.48,54.48,25.34,entire_home,Weißensee,apartment
+52.0,75.28,-23.28,23.28,44.77,entire_home,Parkviertel,apartment
+101.0,107.01,-6.01,6.01,5.95,entire_home,Osloer Straße,apartment
+120.0,97.69,22.31,22.31,18.59,entire_home,Alexanderplatz,apartment
+329.0,227.68,101.32,101.32,30.8,entire_home,Schöneberg-Süd,apartment
+171.0,178.95,-7.95,7.95,4.65,private_room,Tempelhofer Vorstadt,apartment
+57.0,80.29,-23.29,23.29,40.87,entire_home,Prenzlauer Berg Nord,apartment
+99.0,152.49,-53.49,53.49,54.03,entire_home,Moabit Ost,apartment
+138.0,147.02,-9.02,9.02,6.53,entire_home,Frankfurter Allee Süd FK,apartment
+213.0,304.85,-91.85,91.85,43.12,entire_home,Biesdorf,house
+123.0,104.07,18.93,18.93,15.39,entire_home,Frankfurter Allee Süd FK,apartment
+90.0,98.12,-8.12,8.12,9.02,entire_home,Schöneberg-Nord,apartment
+65.0,102.36,-37.36,37.36,57.48,entire_home,Schöneberg-Nord,apartment
+65.0,116.61,-51.61,51.61,79.39,entire_home,Brunnenstr. Nord,apartment
+193.0,135.91,57.09,57.09,29.58,entire_home,Friedenau,apartment
+196.0,206.46,-10.46,10.46,5.34,entire_home,südliche Luisenstadt,apartment
+58.0,99.46,-41.46,41.46,71.48,entire_home,Prenzlauer Berg Nord,apartment
+204.0,302.59,-98.59,98.59,48.33,entire_home,Tempelhofer Vorstadt,apartment
+28.0,82.4,-54.4,54.4,194.27,private_room,Moabit West,apartment
+69.0,51.16,17.84,17.84,25.86,private_room,Brunsbütteler Damm,apartment
+110.0,127.35,-17.35,17.35,15.78,entire_home,Prenzlauer Berg Nordwest,apartment
+72.0,82.16,-10.16,10.16,14.11,private_room,Rudow,house
+56.0,44.45,11.55,11.55,20.62,private_room,Johannisthal,apartment
+59.0,74.75,-15.75,15.75,26.7,private_room,Prenzlauer Berg Südwest,apartment
+119.0,98.51,20.49,20.49,17.22,entire_home,Karl-Marx-Allee-Süd,apartment
+108.0,136.71,-28.71,28.71,26.59,entire_home,Karl-Marx-Allee-Süd,apartment
+366.0,263.1,102.9,102.9,28.12,entire_home,Tempelhofer Vorstadt,apartment
+125.0,136.19,-11.19,11.19,8.95,entire_home,Schmargendorf,apartment
+128.0,204.99,-76.99,76.99,60.15,entire_home,Kurfürstendamm,apartment
+98.0,126.84,-28.84,28.84,29.43,entire_home,Kantstraße,apartment
+115.0,218.5,-103.5,103.5,90.0,entire_home,Kurfürstendamm,apartment
+147.0,192.67,-45.67,45.67,31.07,entire_home,Kurfürstendamm,apartment
+193.0,271.89,-78.89,78.89,40.88,entire_home,Kurfürstendamm,apartment
+137.0,283.86,-146.86,146.86,107.2,entire_home,Otto-Suhr-Allee,apartment
+70.0,99.32,-29.32,29.32,41.89,entire_home,Hakenfelde,unique
+276.0,186.04,89.96,89.96,32.6,entire_home,Düsseldorfer Straße,apartment
+87.0,76.44,10.56,10.56,12.14,private_room,Karl-Marx-Allee-Süd,apartment
+196.0,151.54,44.46,44.46,22.68,entire_home,Prenzlauer Berg Süd,apartment
+235.0,232.98,2.02,2.02,0.86,entire_home,Moabit West,apartment
+235.0,396.12,-161.12,161.12,68.56,entire_home,Moabit West,apartment
+376.0,407.06,-31.06,31.06,8.26,entire_home,Prenzlauer Berg Südwest,apartment
+75.0,120.84,-45.84,45.84,61.13,private_room,Tempelhofer Vorstadt,apartment
+65.0,70.66,-5.66,5.66,8.71,shared_room,Tempelhofer Vorstadt,apartment
+145.0,205.21,-60.21,60.21,41.52,entire_home,Tempelhofer Vorstadt,apartment
+80.0,83.34,-3.34,3.34,4.18,entire_home,Düsseldorfer Straße,apartment
+43.0,99.94,-56.94,56.94,132.43,entire_home,Alexanderplatz,apartment
+82.0,108.31,-26.31,26.31,32.09,entire_home,Friedrichsfelde Süd,apartment
+72.0,159.73,-87.73,87.73,121.85,entire_home,Wedding Zentrum,apartment
+65.0,67.23,-2.23,2.23,3.42,entire_home,Volkspark Wilmersdorf,apartment
+72.0,94.47,-22.47,22.47,31.21,entire_home,Frankfurter Allee Süd FK,apartment
+99.0,126.26,-27.26,27.26,27.53,entire_home,Karl-Marx-Allee-Süd,apartment
+127.0,141.49,-14.49,14.49,11.41,entire_home,Karl-Marx-Allee-Süd,apartment
+96.0,132.32,-36.32,36.32,37.83,entire_home,Karl-Marx-Allee-Süd,apartment
+108.0,78.99,29.01,29.01,26.86,entire_home,Tempelhofer Vorstadt,apartment
+72.0,64.85,7.15,7.15,9.93,entire_home,Prenzlauer Berg Süd,apartment
+105.0,75.77,29.23,29.23,27.84,entire_home,Neu Lichtenberg,apartment
+72.0,101.05,-29.05,29.05,40.35,entire_home,Schillerpromenade,apartment
+122.0,127.87,-5.87,5.87,4.81,entire_home,Prenzlauer Berg Nordwest,apartment
+110.0,144.99,-34.99,34.99,31.81,entire_home,Düsseldorfer Straße,apartment
+53.0,87.76,-34.76,34.76,65.59,entire_home,Frankfurter Allee Süd FK,apartment
+58.0,85.76,-27.76,27.76,47.87,entire_home,Düsseldorfer Straße,apartment
+145.0,138.16,6.84,6.84,4.72,entire_home,Helmholtzplatz,apartment
+648.0,191.48,456.52,456.52,70.45,entire_home,Albrechtstr.,apartment
+44.0,85.96,-41.96,41.96,95.35,private_room,Neuköllner Mitte/Zentrum,apartment
+84.0,105.69,-21.69,21.69,25.83,entire_home,Prenzlauer Berg Ost,apartment
+55.0,49.84,5.16,5.16,9.38,private_room,Friedrichsfelde Süd,apartment
+85.0,135.42,-50.42,50.42,59.32,entire_home,Pankow Zentrum,house
+64.0,103.89,-39.89,39.89,62.32,entire_home,Lichtenrade,apartment
+83.0,97.53,-14.53,14.53,17.51,entire_home,Pankow Süd,apartment
+46.0,90.52,-44.52,44.52,96.79,entire_home,Pankow Süd,apartment
+78.0,91.74,-13.74,13.74,17.61,entire_home,Südliche Friedrichstadt,apartment
+50.0,90.16,-40.16,40.16,80.33,entire_home,Reuterstraße,apartment
+60.0,66.77,-6.77,6.77,11.28,entire_home,Alt-Lichtenberg,apartment
+73.0,125.49,-52.49,52.49,71.91,entire_home,Britz,apartment
+38.0,66.03,-28.03,28.03,73.75,entire_home,Adlershof,apartment
+99.0,111.12,-12.12,12.12,12.24,entire_home,Zehlendorf  Südwest,house
+71.0,95.99,-24.99,24.99,35.19,entire_home,Tempelhofer Vorstadt,apartment
+53.0,83.81,-30.81,30.81,58.13,entire_home,Tiergarten Süd,apartment
+45.0,60.55,-15.55,15.55,34.57,entire_home,Neu Lichtenberg,apartment
+64.0,50.05,13.95,13.95,21.79,entire_home,Marienfelde,apartment
+78.0,125.41,-47.41,47.41,60.78,entire_home,Neuköllner Mitte/Zentrum,apartment
+66.0,102.64,-36.64,36.64,55.52,entire_home,Kurfürstendamm,apartment
+79.0,90.02,-11.02,11.02,13.95,entire_home,Moabit West,apartment
+85.0,167.11,-82.11,82.11,96.6,entire_home,Lichtenrade,house
+140.0,81.21,58.79,58.79,42.0,entire_home,Tempelhofer Vorstadt,apartment
+45.0,78.07,-33.07,33.07,73.5,entire_home,Alexanderplatz,apartment
+63.0,86.93,-23.93,23.93,37.99,entire_home,Kurfürstendamm,apartment
+63.0,97.62,-34.62,34.62,54.95,entire_home,Moabit Ost,apartment
+70.0,115.41,-45.41,45.41,64.87,entire_home,Parkviertel,apartment
+80.0,114.01,-34.01,34.01,42.51,entire_home,Tempelhof,apartment
+78.0,122.71,-44.71,44.71,57.32,entire_home,Parkviertel,apartment
+76.0,84.73,-8.73,8.73,11.49,entire_home,Moabit West,apartment
+55.0,99.97,-44.97,44.97,81.76,entire_home,Südliche Friedrichstadt,apartment
+65.0,114.64,-49.64,49.64,76.37,entire_home,Südliche Friedrichstadt,apartment
+79.0,263.99,-184.99,184.99,234.16,entire_home,Südliche Friedrichstadt,apartment
+84.0,54.88,29.12,29.12,34.67,entire_home,Halensee,apartment
+49.0,103.46,-54.46,54.46,111.14,entire_home,Frankfurter Allee Süd FK,apartment
+42.0,70.36,-28.36,28.36,67.53,entire_home,Otto-Suhr-Allee,apartment
+57.0,81.83,-24.83,24.83,43.55,entire_home,Südliche Friedrichstadt,apartment
+53.0,92.66,-39.66,39.66,74.83,entire_home,südliche Luisenstadt,apartment
+66.0,105.62,-39.62,39.62,60.04,entire_home,Neue Kantstraße,apartment
+94.0,136.98,-42.98,42.98,45.73,entire_home,Kantstraße,apartment
+99.0,164.47,-65.47,65.47,66.13,entire_home,Prenzlauer Berg Südwest,apartment
+220.0,132.91,87.09,87.09,39.58,entire_home,Tempelhof,apartment
+118.0,80.22,37.78,37.78,32.02,entire_home,Neuköllner Mitte/Zentrum,apartment
+112.0,132.32,-20.32,20.32,18.14,entire_home,Schloßstr.,apartment
+72.0,113.98,-41.98,41.98,58.31,entire_home,Halensee,apartment
+29.0,29.45,-0.45,0.45,1.56,private_room,Wedding Zentrum,apartment
+58.0,78.84,-20.84,20.84,35.93,entire_home,Südliche Friedrichstadt,apartment
+84.0,96.82,-12.82,12.82,15.27,entire_home,Moabit Ost,apartment
+55.0,95.93,-40.93,40.93,74.42,entire_home,Düsseldorfer Straße,apartment
+93.0,77.95,15.05,15.05,16.19,entire_home,Zehlendorf  Nord,house
+8000.0,106.05,7893.95,7893.95,98.67,entire_home,Marienfelde,apartment
+66.0,108.08,-42.08,42.08,63.76,entire_home,Rixdorf,apartment
+66.0,108.48,-42.48,42.48,64.36,entire_home,Rixdorf,apartment
+72.0,99.17,-27.17,27.17,37.73,entire_home,Frankfurter Allee Süd FK,apartment
+208.0,208.45,-0.45,0.45,0.21,entire_home,Müggelheim,house
+54.0,79.76,-25.76,25.76,47.7,entire_home,Mariendorf,apartment
+74.0,84.49,-10.49,10.49,14.17,entire_home,Helmholtzplatz,apartment
+73.0,97.73,-24.73,24.73,33.88,entire_home,Buckow,apartment
+130.0,146.2,-16.2,16.2,12.46,entire_home,Friedenau,apartment
+1200.0,118.44,1081.56,1081.56,90.13,entire_home,Albrechtstr.,apartment
+50.0,90.51,-40.51,40.51,81.02,entire_home,Schillerpromenade,apartment
+147.0,115.98,31.02,31.02,21.1,entire_home,Tempelhofer Vorstadt,apartment
+63.0,97.62,-34.62,34.62,54.95,entire_home,Frankfurter Allee Süd FK,apartment
+89.0,88.05,0.95,0.95,1.07,entire_home,Neu Lichtenberg,apartment
+56.0,61.61,-5.61,5.61,10.01,private_room,Drakestr.,apartment
+70.0,75.89,-5.89,5.89,8.41,entire_home,Friedenau,apartment
+66.0,100.16,-34.16,34.16,51.76,entire_home,Frankfurter Allee Süd FK,apartment
+108.0,126.3,-18.3,18.3,16.94,entire_home,Schöneberg-Süd,apartment
+68.0,97.9,-29.9,29.9,43.97,entire_home,Volkspark Wilmersdorf,apartment
+83.0,135.53,-52.53,52.53,63.28,entire_home,Osloer Straße,apartment
+106.0,105.15,0.85,0.85,0.8,entire_home,Parkviertel,apartment
+70.0,117.0,-47.0,47.0,67.15,entire_home,Parkviertel,apartment
+35.0,49.2,-14.2,14.2,40.56,entire_home,Düsseldorfer Straße,apartment
+90.0,54.83,35.17,35.17,39.08,entire_home,Kölln. Vorstadt/Spindlersf.,apartment
+35.0,57.88,-22.88,22.88,65.36,entire_home,Schloßstr.,apartment
+104.0,182.55,-78.55,78.55,75.53,entire_home,Kantstraße,apartment
+38.0,79.65,-41.65,41.65,109.62,entire_home,Otto-Suhr-Allee,apartment
+88.0,111.5,-23.5,23.5,26.7,entire_home,Alexanderplatz,apartment
+110.0,105.74,4.26,4.26,3.87,entire_home,Adlershof,house
+63.0,123.24,-60.24,60.24,95.62,entire_home,Südliche Friedrichstadt,apartment
+45.0,36.3,8.7,8.7,19.34,private_room,Wedding Zentrum,apartment
+90.0,43.64,46.36,46.36,51.51,private_room,Tempelhofer Vorstadt,apartment
+103.0,97.0,6.0,6.0,5.82,entire_home,Pankow Süd,apartment
+104.0,127.19,-23.19,23.19,22.3,entire_home,Prenzlauer Berg Nordwest,apartment
+90.0,88.64,1.36,1.36,1.51,entire_home,Parkviertel,apartment
+105.0,108.69,-3.69,3.69,3.51,entire_home,Schloßstr.,apartment
+70.0,101.9,-31.9,31.9,45.58,entire_home,Pankow Süd,apartment
+66.0,150.65,-84.65,84.65,128.25,entire_home,Alexanderplatz,apartment
+159.0,147.51,11.49,11.49,7.22,entire_home,Alexanderplatz,apartment
+82.0,128.19,-46.19,46.19,56.33,entire_home,Heerstrasse,apartment
+107.0,105.13,1.87,1.87,1.75,entire_home,Otto-Suhr-Allee,apartment
+19.0,70.47,-51.47,51.47,270.91,entire_home,Blankenburg/Heinersdorf/Märchenland,unique
+105.0,100.02,4.98,4.98,4.75,entire_home,Neu Lichtenberg,apartment
+104.0,157.62,-53.62,53.62,51.55,entire_home,Alexanderplatz,apartment
+63.0,110.4,-47.4,47.4,75.23,entire_home,Südliche Friedrichstadt,apartment
+120.0,160.66,-40.66,40.66,33.88,private_room,Brunsbütteler Damm,apartment
+85.0,84.28,0.72,0.72,0.85,entire_home,Osloer Straße,apartment
+71.0,87.93,-16.93,16.93,23.85,entire_home,Schöneberg-Süd,apartment
+74.0,107.02,-33.02,33.02,44.63,entire_home,Kantstraße,apartment
+99.0,114.27,-15.27,15.27,15.42,entire_home,Südliche Friedrichstadt,apartment
+57.0,113.01,-56.01,56.01,98.26,entire_home,Südliche Friedrichstadt,apartment
+59.0,99.85,-40.85,40.85,69.24,entire_home,Alexanderplatz,apartment
+66.0,98.37,-32.37,32.37,49.04,entire_home,Osloer Straße,apartment
+51.0,98.72,-47.72,47.72,93.56,entire_home,Parkviertel,apartment
+69.0,105.44,-36.44,36.44,52.81,entire_home,Tempelhofer Vorstadt,apartment
+68.0,81.95,-13.95,13.95,20.52,entire_home,Frankfurter Allee Nord,apartment
+51.0,88.65,-37.65,37.65,73.83,entire_home,Parkviertel,apartment
+60.0,80.43,-20.43,20.43,34.05,entire_home,Osloer Straße,apartment
+65.0,100.01,-35.01,35.01,53.86,entire_home,Reuterstraße,apartment
+78.0,121.12,-43.12,43.12,55.28,entire_home,Kantstraße,apartment
+41.0,67.86,-26.86,26.86,65.5,entire_home,Hellersdorf-Nord,unique
+91.0,98.14,-7.14,7.14,7.84,entire_home,Heerstrasse,apartment
+91.0,98.14,-7.14,7.14,7.84,entire_home,Heerstrasse,apartment
+79.0,84.23,-5.23,5.23,6.62,entire_home,Heerstrasse,apartment
+38.0,88.4,-50.4,50.4,132.62,entire_home,Alexanderplatz,apartment
+72.0,47.39,24.61,24.61,34.18,private_room,Schöneberg-Nord,apartment
+106.0,126.96,-20.96,20.96,19.77,entire_home,Heerstrasse,apartment
+53.0,97.4,-44.4,44.4,83.78,entire_home,Reuterstraße,apartment
+62.0,111.99,-49.99,49.99,80.62,entire_home,Britz,apartment
+51.0,77.85,-26.85,26.85,52.65,entire_home,Wedding Zentrum,apartment
+53.0,96.36,-43.36,43.36,81.82,entire_home,Parkviertel,apartment
+54.0,65.44,-11.44,11.44,21.18,private_room,Prenzlauer Berg Südwest,apartment
+101.0,57.44,43.56,43.56,43.13,entire_home,Charlottenburg Nord,apartment
+78.0,99.77,-21.77,21.77,27.9,entire_home,Brunnenstr. Süd,apartment
+72.0,100.91,-28.91,28.91,40.16,entire_home,Südliche Friedrichstadt,apartment
+56.0,87.95,-31.95,31.95,57.06,entire_home,Kantstraße,apartment
+68.0,103.79,-35.79,35.79,52.63,entire_home,Volkspark Wilmersdorf,apartment
+44.0,54.02,-10.02,10.02,22.77,entire_home,Lichtenrade,apartment
+76.0,93.91,-17.91,17.91,23.56,entire_home,Frankfurter Allee Süd FK,apartment
+70.0,100.33,-30.33,30.33,43.33,entire_home,Heerstrasse,apartment
+118.0,120.06,-2.06,2.06,1.75,entire_home,Prenzlauer Berg Südwest,apartment
+122.0,130.75,-8.75,8.75,7.17,entire_home,Prenzlauer Berg Nordwest,apartment
+136.0,137.46,-1.46,1.46,1.07,entire_home,Karl-Marx-Allee-Süd,apartment
+99.0,130.73,-31.73,31.73,32.05,entire_home,Karl-Marx-Allee-Süd,apartment
+70.0,136.79,-66.79,66.79,95.42,entire_home,Karl-Marx-Allee-Süd,apartment
+106.0,137.46,-31.46,31.46,29.68,entire_home,Karl-Marx-Allee-Süd,apartment
+86.0,131.07,-45.07,45.07,52.41,entire_home,Karl-Marx-Allee-Süd,apartment
+113.0,132.15,-19.15,19.15,16.95,entire_home,Karl-Marx-Allee-Süd,apartment
+160.0,115.86,44.14,44.14,27.59,entire_home,südliche Luisenstadt,apartment
+103.0,136.77,-33.77,33.77,32.79,entire_home,Karl-Marx-Allee-Süd,apartment
+144.0,141.41,2.59,2.59,1.8,entire_home,Karl-Marx-Allee-Süd,apartment
+135.0,144.93,-9.93,9.93,7.36,entire_home,Karl-Marx-Allee-Süd,apartment
+139.0,138.28,0.72,0.72,0.52,entire_home,Osloer Straße,apartment
+69.0,97.74,-28.74,28.74,41.65,entire_home,Heerstrasse,apartment
+46.0,82.19,-36.19,36.19,78.67,entire_home,Kurfürstendamm,apartment
+44.0,73.25,-29.25,29.25,66.47,entire_home,Kurfürstendamm,apartment
+89.0,97.38,-8.38,8.38,9.41,entire_home,Alexanderplatz,apartment
+42.0,73.14,-31.14,31.14,74.15,entire_home,Alexanderplatz,apartment
+70.0,138.38,-68.38,68.38,97.69,entire_home,Heerstrasse,apartment
+107.0,107.49,-0.49,0.49,0.46,entire_home,Heerstrasse,apartment
+57.0,94.87,-37.87,37.87,66.44,entire_home,Südliche Friedrichstadt,apartment
+56.0,106.8,-50.8,50.8,90.71,entire_home,Alexanderplatz,apartment
+46.0,95.48,-49.48,49.48,107.57,entire_home,Bohnsdorf,apartment
+70.0,111.54,-41.54,41.54,59.34,entire_home,Parkviertel,apartment
+254.0,230.4,23.6,23.6,9.29,entire_home,Helmholtzplatz,apartment
+51.0,126.27,-75.27,75.27,147.6,entire_home,Moabit Ost,apartment
+169.0,161.55,7.45,7.45,4.41,entire_home,Karl-Marx-Allee-Süd,house
+76.0,116.83,-40.83,40.83,53.72,entire_home,Tempelhofer Vorstadt,apartment
+85.0,84.5,0.5,0.5,0.58,entire_home,Prenzlauer Berg Nordwest,apartment
+155.0,116.33,38.67,38.67,24.95,entire_home,Tempelhofer Vorstadt,apartment
+82.0,139.41,-57.41,57.41,70.01,entire_home,Reuterstraße,apartment
+94.0,122.04,-28.04,28.04,29.83,entire_home,Zehlendorf  Nord,apartment
+61.0,107.67,-46.67,46.67,76.52,entire_home,Frankfurter Allee Süd FK,apartment
+64.0,98.04,-34.04,34.04,53.19,entire_home,Frankfurter Allee Süd FK,apartment
+71.0,95.25,-24.25,24.25,34.15,entire_home,Frankfurter Allee Nord,apartment
+106.0,101.31,4.69,4.69,4.43,entire_home,Schloßstr.,apartment
+104.0,206.99,-102.99,102.99,99.02,entire_home,Alexanderplatz,apartment
+63.0,92.02,-29.02,29.02,46.07,entire_home,Moabit Ost,apartment
+71.0,100.26,-29.26,29.26,41.22,entire_home,Tempelhofer Vorstadt,apartment
+86.0,86.11,-0.11,0.11,0.13,entire_home,Parkviertel,apartment
+104.0,198.86,-94.86,94.86,91.21,entire_home,Alexanderplatz,apartment
+71.0,48.63,22.37,22.37,31.5,private_room,Schöneberg-Nord,apartment
+94.0,116.68,-22.68,22.68,24.13,entire_home,Otto-Suhr-Allee,apartment
+80.0,144.43,-64.43,64.43,80.54,entire_home,Blankenburg/Heinersdorf/Märchenland,apartment
+87.0,100.17,-13.17,13.17,15.14,entire_home,Parkviertel,apartment
+41.0,59.64,-18.64,18.64,45.47,entire_home,Halensee,apartment
+65.0,86.29,-21.29,21.29,32.76,entire_home,Tiergarten Süd,apartment
+60.0,56.55,3.45,3.45,5.75,private_room,Schillerpromenade,apartment
+98.0,170.99,-72.99,72.99,74.48,entire_home,Schillerpromenade,apartment
+63.0,53.13,9.87,9.87,15.66,private_room,Frankfurter Allee Süd FK,apartment
+83.0,91.62,-8.62,8.62,10.39,entire_home,Tempelhof,apartment
+140.0,126.47,13.53,13.53,9.67,entire_home,Prenzlauer Berg Ost,house
+69.0,122.52,-53.52,53.52,77.57,entire_home,Alexanderplatz,apartment
+201.0,115.01,85.99,85.99,42.78,entire_home,Kantstraße,apartment
+67.0,66.51,0.49,0.49,0.74,entire_home,Albrechtstr.,apartment
+72.0,105.86,-33.86,33.86,47.02,entire_home,Parkviertel,apartment
+63.0,73.51,-10.51,10.51,16.68,entire_home,West 3,apartment
+134.0,158.96,-24.96,24.96,18.63,entire_home,Tempelhofer Vorstadt,apartment
+66.0,103.9,-37.9,37.9,57.42,entire_home,Moabit Ost,apartment
+163.0,268.1,-105.1,105.1,64.48,entire_home,Prenzlauer Berg Süd,apartment
+97.0,138.42,-41.42,41.42,42.7,entire_home,Prenzlauer Berg Süd,apartment
+125.0,287.02,-162.02,162.02,129.62,entire_home,Prenzlauer Berg Süd,apartment
+64.0,103.47,-39.47,39.47,61.68,entire_home,Regierungsviertel,apartment
+114.0,111.87,2.13,2.13,1.86,entire_home,Brunnenstr. Nord,apartment
+64.0,96.9,-32.9,32.9,51.41,entire_home,Moabit Ost,apartment
+46.0,84.06,-38.06,38.06,82.73,entire_home,Tempelhofer Vorstadt,apartment
+182.0,306.95,-124.95,124.95,68.65,entire_home,Kurfürstendamm,apartment
+81.0,59.74,21.26,21.26,26.24,entire_home,Fennpfuhl,apartment
+127.0,95.2,31.8,31.8,25.04,entire_home,Reuterstraße,apartment
+159.0,123.84,35.16,35.16,22.12,entire_home,Friedenau,apartment
+48.0,71.15,-23.15,23.15,48.22,private_room,Weißensee,apartment
+60.0,100.59,-40.59,40.59,67.66,entire_home,Moabit Ost,apartment
+113.0,132.76,-19.76,19.76,17.48,entire_home,Prenzlauer Berg Südwest,apartment
+43.0,90.72,-47.72,47.72,110.97,entire_home,Rixdorf,apartment
+81.0,101.46,-20.46,20.46,25.26,entire_home,südliche Luisenstadt,apartment
+89.0,193.38,-104.38,104.38,117.28,entire_home,Adlershof,apartment
+90.0,140.1,-50.1,50.1,55.67,entire_home,Osloer Straße,apartment
+66.0,104.68,-38.68,38.68,58.61,entire_home,Schillerpromenade,apartment
+81.0,99.1,-18.1,18.1,22.35,entire_home,südliche Luisenstadt,apartment
+45.0,68.89,-23.89,23.89,53.09,private_room,Prenzlauer Berg Nordwest,apartment

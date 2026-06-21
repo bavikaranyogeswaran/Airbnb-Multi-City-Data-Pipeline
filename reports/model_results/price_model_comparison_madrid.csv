@@ -1,0 +1,6 @@
+model,test_mae,test_rmse,test_mape,test_r2,within_20pct
+Global median baseline,74.68,200.9,62.11,-0.0286,28.0
+Room-type median baseline,65.8,197.97,39.34,0.0012,32.6
+Ridge,50.76,184.08,30.68,0.1365,44.5
+Random Forest,46.85,175.67,28.6,0.2136,48.3
+Gradient Boosting,46.9,171.32,28.74,0.252,46.8

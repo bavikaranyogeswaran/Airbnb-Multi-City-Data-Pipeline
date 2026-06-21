@@ -1,0 +1,9 @@
+cluster,n,median_price,mean_price,mean_log_price,mean_accommodates,mean_bedrooms,median_minimum_nights,mean_minimum_nights,mean_availability_365,mean_review_scores_rating,mean_reviews_per_month,mean_distance_km,mean_amenity_count,pct_entire_home,pct_private_room,pct_shared_room,pct_hotel_room,dominant_room_type,top_neighbourhood,pct_of_city,cluster_name
+0,4086,120.0,153.24,4.8,2.81,1.01,1.0,1.59,312.09,4.66,0.9,1.97,23.37,69.6,29.1,0.8,0.5,entire_home,Embajadores,21.6,Luxury Listings
+1,485,95.0,136.07,4.59,3.11,1.35,1.0,11.74,254.47,2.57,0.13,2.84,20.23,69.9,27.8,1.9,0.4,entire_home,Universidad,2.6,New & Unreviewed Listings
+2,2707,225.0,373.18,5.51,6.43,2.69,1.0,2.01,217.48,4.69,1.83,1.96,33.35,97.5,2.0,0.5,0.0,entire_home,Embajadores,14.3,Premium Spacious Apartments
+3,1967,62.0,68.28,4.08,1.83,0.99,30.0,38.31,243.4,4.72,0.66,2.49,20.49,58.1,41.9,0.1,0.0,entire_home,Embajadores,10.4,Economy Apartments
+4,2320,58.0,70.99,4.09,2.33,1.1,1.0,2.68,235.37,4.74,1.43,7.05,25.42,40.9,57.2,1.8,0.1,private_room,Rejas,12.2,Budget Rooms
+5,1400,150.0,183.95,5.02,4.39,2.31,30.0,32.05,210.81,4.75,0.62,2.6,29.95,97.2,2.8,0.0,0.0,entire_home,Universidad,7.4,Premium Spacious Apartments
+6,3265,105.0,109.5,4.6,3.0,1.07,2.0,2.35,165.77,4.76,4.45,1.76,35.54,79.0,20.6,0.4,0.0,entire_home,Embajadores,17.2,High-Turnover City Lets
+7,2723,108.0,129.78,4.63,2.69,1.04,2.0,2.48,70.38,4.66,0.87,2.04,23.97,66.0,32.2,1.3,0.6,entire_home,Embajadores,14.4,Part-Time City Apartments

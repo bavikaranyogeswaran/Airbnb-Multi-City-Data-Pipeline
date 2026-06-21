@@ -1,0 +1,4 @@
+model,cv_mae_mean,cv_mae_std,cv_r2_mean,train_mae_mean,overfit_gap
+Ridge,67.48,8.61,0.5608,66.06,-1.42
+Random Forest,65.78,9.42,0.6111,39.99,-25.78
+Gradient Boosting,63.9,9.53,0.6474,31.74,-32.17
