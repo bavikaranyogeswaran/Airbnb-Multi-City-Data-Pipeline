@@ -1,4 +1,4 @@
-import type { City } from '../types';
+import type { City, AskResponse } from '../types';
 import { NEIGHBOURHOOD_TOP_N } from '../types';
 
 const BASE = '/api';
@@ -20,4 +20,22 @@ export const endpoints = {
   reviewSummary:        (city: City) => `${BASE}/analytics/reviews/summary?city=${city}`,
   cityComparison:       ()           => `${BASE}/analytics/comparison/cities`,
   roomTypeComparison:   ()           => `${BASE}/analytics/comparison/room-types`,
+  llmSummary:           (city: City, type: string, refresh = false) =>
+    `${BASE}/analytics/llm/summary?city=${city}&type=${type}&refresh=${refresh}`,
+  llmCrossCity:         (refresh = false) =>
+    `${BASE}/analytics/llm/cross-city?refresh=${refresh}`,
 };
+
+export async function llmAsk(
+  city: City,
+  question: string,
+  model: string,
+): Promise<AskResponse> {
+  const res = await fetch(`${BASE}/analytics/llm/ask`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ city, question, model }),
+  });
+  if (!res.ok) throw await res.json();
+  return res.json();
+}

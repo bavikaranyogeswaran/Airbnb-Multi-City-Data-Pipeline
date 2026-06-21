@@ -1,13 +1,13 @@
-export type City = 'london' | 'amsterdam';
-export type Page = 'overview' | 'pricing' | 'hosts' | 'temporal' | 'statistics' | 'comparison';
+export type City = 'london' | 'amsterdam' | 'madrid' | 'berlin';
+export type Page = 'overview' | 'pricing' | 'hosts' | 'temporal' | 'statistics' | 'comparison' | 'ai';
 
 /** All supported cities in display order — add a new city here to propagate everywhere. */
-export const CITIES: City[] = ['london', 'amsterdam'];
+export const CITIES: City[] = ['london', 'amsterdam', 'madrid', 'berlin'];
 
-export const CURRENCY:   Record<City, string> = { london: '£',           amsterdam: '€'            };
-export const CITY_NAME:  Record<City, string> = { london: 'London',      amsterdam: 'Amsterdam'     };
-export const CITY_LABEL: Record<City, string> = { london: '🇬🇧 London', amsterdam: '🇳🇱 Amsterdam' };
-export const CITY_COLOR: Record<City, string> = { london: '#FF5A5F',     amsterdam: '#00A699'       };
+export const CURRENCY:   Record<City, string> = { london: '£', amsterdam: '€', madrid: '€', berlin: '€' };
+export const CITY_NAME:  Record<City, string> = { london: 'London', amsterdam: 'Amsterdam', madrid: 'Madrid', berlin: 'Berlin' };
+export const CITY_LABEL: Record<City, string> = { london: '🇬🇧 London', amsterdam: '🇳🇱 Amsterdam', madrid: '🇪🇸 Madrid', berlin: '🇩🇪 Berlin' };
+export const CITY_COLOR: Record<City, string> = { london: '#FF5A5F', amsterdam: '#00A699', madrid: '#FC642D', berlin: '#484848' };
 
 export const PIE_COLORS = ['#FF5A5F', '#00A699', '#FC642D', '#484848', '#767676', '#00D1C1'];
 
@@ -130,4 +130,22 @@ export interface RoomTypeComparison {
   room_type: string;
   'Amsterdam (EUR)': number;
   'London (GBP)': number;
+}
+
+export interface LlmSummaryResponse {
+  city: string | null;
+  type: string;
+  model: string;
+  cached: boolean;
+  summary: string;
+}
+
+export interface AskResponse {
+  city: string;
+  question: string;
+  model: string;
+  sql: string;
+  row_count: number;
+  rows: Record<string, unknown>[];
+  explanation: string;
 }
