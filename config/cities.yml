@@ -99,52 +99,52 @@ cities:
         url: "https://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2025-09-11/visualisations/neighbourhoods.geojson"
         compressed: false
 
-  new_york:
-    code: new_york
-    name: New York City
-    country: United States
-    country_code: US
-    currency_code: USD
-    timezone: America/New_York
+  madrid:
+    code: madrid
+    name: Madrid
+    country: Spain
+    country_code: ES
+    currency_code: EUR
+    timezone: Europe/Madrid
 
     source:
-      snapshot_date: "2025-12-04"
-      base_url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04"
+      snapshot_date: "2025-09-14"
+      base_url: "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2025-09-14"
 
     files:
       listings_detailed:
         name: listings.csv.gz
-        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/data/listings.csv.gz"
+        url: "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2025-09-14/data/listings.csv.gz"
         compressed: true
 
       calendar:
         name: calendar.csv.gz
-        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/data/calendar.csv.gz"
+        url: "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2025-09-14/data/calendar.csv.gz"
         compressed: true
 
       reviews_detailed:
         name: reviews.csv.gz
-        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/data/reviews.csv.gz"
+        url: "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2025-09-14/data/reviews.csv.gz"
         compressed: true
 
       listings_summary:
         name: listings.csv
-        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/visualisations/listings.csv"
+        url: "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2025-09-14/visualisations/listings.csv"
         compressed: false
 
       reviews_summary:
         name: reviews.csv
-        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/visualisations/reviews.csv"
+        url: "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2025-09-14/visualisations/reviews.csv"
         compressed: false
 
       neighbourhoods:
         name: neighbourhoods.csv
-        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/visualisations/neighbourhoods.csv"
+        url: "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2025-09-14/visualisations/neighbourhoods.csv"
         compressed: false
 
       neighbourhoods_geojson:
         name: neighbourhoods.geojson
-        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/visualisations/neighbourhoods.geojson"
+        url: "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2025-09-14/visualisations/neighbourhoods.geojson"
         compressed: false
 
   berlin:

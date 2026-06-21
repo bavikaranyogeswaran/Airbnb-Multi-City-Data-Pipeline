@@ -1,21 +1,642 @@
 block_size,id,host_id,neighbourhood_cleansed,name,latitude,longitude,room_type,property_type
-5,769460764152625515,488984558,Centrum-West,"Dubbel kamer, ontbijt is inbegrepen.",52.3742592,4.8992577,Private room,Room in hotel
-5,769498578801201685,488984558,Centrum-West,"Dubbel kamer, ontbijt is inbegrepen.",52.3742592,4.8992577,Private room,Room in hotel
-5,771604446735535557,488984558,Centrum-West,"Dubbel kamer, ontbijt is inbegrepen.",52.3742592,4.8992577,Private room,Room in hotel
-5,771609212449133892,488984558,Centrum-West,"Dubbel kamer, ontbijt is inbegrepen.",52.3742592,4.8992577,Private room,Room in hotel
-5,771611358606779936,488984558,Centrum-West,"Dubbel kamer, ontbijt is inbegrepen.",52.3742592,4.8992577,Private room,Room in hotel
-3,20952129,150677340,Oud-Noord,Romantic VIP suite & private Jacuzzi on top Crane,52.399173736572266,4.894949913024902,Private room,Room in boutique hotel
-3,20952140,150677340,Oud-Noord,Romantic VIP suite & private Jacuzzi on top Crane,52.39915084838867,4.894724845886231,Private room,Room in boutique hotel
-3,20952152,150677340,Oud-Noord,Romantic VIP suite & private Jacuzzi on top Crane,52.39906311035156,4.894676208496094,Private room,Room in boutique hotel
-2,23332938,173784342,Centrum-Oost,David's boat Amsterdam,52.37109,4.929013,Private room,Private room in houseboat
-2,23363442,173784342,Centrum-Oost,David's boat Amsterdam,52.37109,4.929013,Private room,Private room in houseboat
-2,1141218789120396947,198405490,IJburg - Zeeburgereiland,Luxurious 4-Room Water Villa in Amsterdam,52.3642,4.98594,Entire home/apt,Entire home
-2,1417841046436653347,198405490,IJburg - Zeeburgereiland,Luxurious 4-Room Water Villa in Amsterdam,52.364397482968045,4.9855118737091,Entire home/apt,Entire home
-2,868418,4574185,Noord-West,Tranquil wooden house with free parking,52.41197649999999,4.9079143,Private room,Private room in home
-2,922489,4574185,Noord-West,Tranquil wooden house with free parking,52.41197649999999,4.9079143,Private room,Private room in home
-2,1304640454956860244,665458833,Oud-Noord,1909 Classic Sailboat Amsterdam,52.39984669130272,4.891564811639406,Entire home/apt,Boat
-2,1376287696249797306,665458833,Oud-Noord,1909 Classic Sailboat Amsterdam,52.39984590838405,4.891588259246822,Private room,Private room in boat
-2,656411139345937864,460700360,Slotervaart,High-end boutique apartment near city center!,52.3616,4.84111,Entire home/apt,Entire rental unit
-2,656411620862616177,460700360,Slotervaart,High-end boutique apartment near city center!,52.3616031,4.8411113,Entire home/apt,Entire rental unit
-2,633897525764451161,460700360,Slotervaart,High-end boutique studio near city center!,52.3616,4.84111,Entire home/apt,Entire rental unit
-2,666549873738661916,460700360,Slotervaart,High-end boutique studio near city center!,52.3616031,4.8411113,Entire home/apt,Entire rental unit
+13,1115883036092819829,133056146,Universidad,Dobo SB20 2Pax 1Bth,40.42278,-3.70747,Private room,Private room in rental unit
+13,1115887731461936911,133056146,Universidad,Dobo SB20 2Pax 1Bth,40.422783,-3.707468,Private room,Private room in rental unit
+13,1115902112439051866,133056146,Universidad,Dobo SB20 2Pax 1Bth,40.422783,-3.707468,Private room,Private room in rental unit
+13,1115910768181359256,133056146,Universidad,Dobo SB20 2Pax 1Bth,40.422783,-3.707468,Private room,Private room in rental unit
+13,1115912065306477827,133056146,Universidad,Dobo SB20 2Pax 1Bth,40.422783,-3.707468,Private room,Private room in rental unit
+13,1115922671391460401,133056146,Universidad,Dobo SB20 2Pax 1Bth,40.422739688,-3.707496997,Private room,Private room in rental unit
+13,1116056689264465679,133056146,Universidad,Dobo SB20 2Pax 1Bth,40.422783,-3.707468,Private room,Private room in rental unit
+13,1116062507405721060,133056146,Universidad,Dobo SB20 2Pax 1Bth,40.422783,-3.707468,Private room,Private room in rental unit
+13,1381813319725063642,133056146,Universidad,Dobo SB20 2Pax 1Bth,40.422783,-3.707468,Private room,Private room in rental unit
+13,1388238782778965702,133056146,Universidad,Dobo SB20 2Pax 1Bth,40.422783,-3.707468,Private room,Private room in rental unit
+13,1399948844096593195,133056146,Universidad,Dobo SB20 2Pax 1Bth,40.422783,-3.707468,Private room,Private room in rental unit
+13,1399954313722617805,133056146,Universidad,Dobo SB20 2Pax 1Bth,40.42278,-3.70747,Private room,Private room in rental unit
+13,1429579509057097628,133056146,Universidad,Dobo SB20 2Pax 1Bth,40.422783,-3.707468,Private room,Private room in rental unit
+11,847596666234953296,368117770,Universidad,Nuevo Apartamento a 2 calles de Gran Vía Street,40.42273033102197,-3.7017671846557687,Entire home/apt,Entire rental unit
+11,848281662432761392,368117770,Universidad,Nuevo Apartamento a 2 calles de Gran Vía Street,40.42261598367922,-3.701810100000007,Entire home/apt,Entire rental unit
+11,858320593141148454,368117770,Universidad,Nuevo Apartamento a 2 calles de Gran Vía Street,40.4233184,-3.701810099999999,Entire home/apt,Entire rental unit
+11,858748940545303702,368117770,Universidad,Nuevo Apartamento a 2 calles de Gran Vía Street,40.42251797151644,-3.701831557672126,Entire home/apt,Entire rental unit
+11,859072987646569497,368117770,Universidad,Nuevo Apartamento a 2 calles de Gran Vía Street,40.42276300165561,-3.701810100000007,Entire home/apt,Entire rental unit
+11,859073444075382161,368117770,Universidad,Nuevo Apartamento a 2 calles de Gran Vía Street,40.42259964832867,-3.701831557672126,Entire home/apt,Entire rental unit
+11,861233445413643834,368117770,Universidad,Nuevo Apartamento a 2 calles de Gran Vía Street,40.42259964832867,-3.701788642327888,Entire home/apt,Entire rental unit
+11,861654430179627831,368117770,Universidad,Nuevo Apartamento a 2 calles de Gran Vía Street,40.42266498970704,-3.7017457269836496,Entire home/apt,Entire rental unit
+11,862705598244815872,368117770,Universidad,Nuevo Apartamento a 2 calles de Gran Vía Street,40.4226486543684,-3.701874473016365,Entire home/apt,Entire rental unit
+11,862728754324018131,368117770,Universidad,Nuevo Apartamento a 2 calles de Gran Vía Street,40.42273033102197,-3.7017457269836496,Entire home/apt,Entire rental unit
+11,868531576895533962,368117770,Universidad,Nuevo Apartamento a 2 calles de Gran Vía Street,40.4233184,-3.701810099999999,Entire home/apt,Entire rental unit
+10,967497822237545852,494237478,Guindalera,Home Art Madrid Estudio Estándar,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+10,967499877754550678,494237478,Guindalera,Home Art Madrid Estudio Estándar,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+10,967501387704880831,494237478,Guindalera,Home Art Madrid Estudio Estándar,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+10,967506809596029213,494237478,Guindalera,Home Art Madrid Estudio Estándar,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+10,967508459016300073,494237478,Guindalera,Home Art Madrid Estudio Estándar,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+10,967509887486090421,494237478,Guindalera,Home Art Madrid Estudio Estándar,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+10,967512184268080635,494237478,Guindalera,Home Art Madrid Estudio Estándar,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+10,967513903819325000,494237478,Guindalera,Home Art Madrid Estudio Estándar,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+10,967515247341331891,494237478,Guindalera,Home Art Madrid Estudio Estándar,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+10,967516700003249489,494237478,Guindalera,Home Art Madrid Estudio Estándar,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+7,1211583077777641986,133056146,Concepción,Dobo Nuria 2Pax 1Bth Gnd Floor,40.4367549,-3.6517617,Private room,Private room in rental unit
+7,1211584776901616839,133056146,Concepción,Dobo Nuria 2Pax 1Bth Gnd Floor,40.4367549,-3.6517617,Private room,Private room in rental unit
+7,1211585353768846631,133056146,Concepción,Dobo Nuria 2Pax 1Bth Gnd Floor,40.4367549,-3.6517617,Entire home/apt,Entire serviced apartment
+7,1211588700137705166,133056146,Concepción,Dobo Nuria 2Pax 1Bth Gnd Floor,40.4367549,-3.6517617,Entire home/apt,Entire serviced apartment
+7,1211596449647742532,133056146,Concepción,Dobo Nuria 2Pax 1Bth Gnd Floor,40.4367549,-3.6517617,Private room,Private room in rental unit
+7,1211597296058246813,133056146,Concepción,Dobo Nuria 2Pax 1Bth Gnd Floor,40.4367549,-3.6517617,Private room,Private room in rental unit
+7,1211597944406777693,133056146,Concepción,Dobo Nuria 2Pax 1Bth Gnd Floor,40.4367549,-3.6517617,Private room,Private room in rental unit
+7,1404956279937549367,691414022,Cuatro Caminos,Home Art Bernabéu - Estándar,40.45506,-3.70057,Entire home/apt,Entire rental unit
+7,1406554730323441100,691414022,Cuatro Caminos,Home Art Bernabéu - Estándar,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+7,1406563107370156825,691414022,Cuatro Caminos,Home Art Bernabéu - Estándar,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+7,1406567277607153955,691414022,Cuatro Caminos,Home Art Bernabéu - Estándar,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+7,1406569245786855384,691414022,Cuatro Caminos,Home Art Bernabéu - Estándar,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+7,1406571726065035659,691414022,Cuatro Caminos,Home Art Bernabéu - Estándar,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+7,1407208631428984590,691414022,Cuatro Caminos,Home Art Bernabéu - Estándar,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+7,1466661663242980746,707723220,Palacio,Apartamento de un dormitorio,40.417137,-3.7091519,Entire home/apt,Entire rental unit
+7,1466701349533673100,707723220,Palacio,Apartamento de un dormitorio,40.417137,-3.7091519,Entire home/apt,Entire rental unit
+7,1466706428283541416,707723220,Palacio,Apartamento de un dormitorio,40.417137,-3.7091519,Entire home/apt,Entire rental unit
+7,1466708710896770881,707723220,Palacio,Apartamento de un dormitorio,40.417137,-3.7091519,Entire home/apt,Entire rental unit
+7,1467544836635040187,707723220,Palacio,Apartamento de un dormitorio,40.41714,-3.70915,Entire home/apt,Entire rental unit
+7,1467547668925961955,707723220,Palacio,Apartamento de un dormitorio,40.417137,-3.7091519,Entire home/apt,Entire rental unit
+7,1467551360560439312,707723220,Palacio,Apartamento de un dormitorio,40.41714,-3.70915,Entire home/apt,Entire rental unit
+6,1495479932069887109,715439198,Almagro,BeLiveResidence Madrid,40.43084,-3.6947555,Private room,Private room
+6,1498704217849004393,715439198,Almagro,Beliveresidence Madrid,40.43084,-3.69476,Private room,Private room
+6,1498708880263513887,715439198,Almagro,BeLiveResidence Madrid,40.43084,-3.69476,Private room,Room in hotel
+6,1498712601440595966,715439198,Almagro,BeLiveResidence Madrid,40.43084,-3.6947555,Private room,Private room
+6,1498716298809809424,715439198,Almagro,BeLiveResidence Madrid,40.43084,-3.6947555,Private room,Private room
+6,1498719060776885902,715439198,Almagro,BeLiveResidence Madrid,40.43084,-3.6947555,Private room,Private room
+6,23134144,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45797,-3.6971,Private room,Room in boutique hotel
+6,23134789,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45751,-3.69688,Private room,Private room
+6,23135389,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45754,-3.69696,Private room,Private room
+6,23137302,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45761,-3.69742,Private room,Room in boutique hotel
+6,23137641,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45831,-3.69686,Private room,Private room
+6,23139932,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45762,-3.69723,Private room,Private room
+6,1451428018437999028,406746227,Embajadores,Piso Nuevo Exterior Un Dormitorio Centro Ciudad,40.4113373,-3.6993852,Entire home/apt,Entire rental unit
+6,1454983021471093985,406746227,Embajadores,Piso Nuevo Exterior Un Dormitorio Centro Ciudad,40.4113373,-3.6993852,Entire home/apt,Entire rental unit
+6,1456520869531330672,406746227,Embajadores,Piso Nuevo Exterior Un Dormitorio Centro Ciudad,40.4113373,-3.6993852,Entire home/apt,Entire rental unit
+6,1458051963602644381,406746227,Embajadores,Piso Nuevo Exterior Un Dormitorio Centro Ciudad,40.4113373,-3.6993852,Entire home/apt,Entire rental unit
+6,1460164325172582624,406746227,Embajadores,Piso Nuevo Exterior Un Dormitorio Centro Ciudad,40.4113373,-3.6993852,Entire home/apt,Entire rental unit
+6,1460174781402792432,406746227,Embajadores,Piso Nuevo Exterior Un Dormitorio Centro Ciudad,40.4113373,-3.6993852,Entire home/apt,Entire rental unit
+5,1445521024545371884,518331793,Berruguete,Habitación privada Bravo Murillo,40.4618668,-3.7043415,Private room,Private room in rental unit
+5,1445536324074192191,518331793,Berruguete,Habitación Privada Bravo Murillo,40.4618668,-3.7043415,Private room,Private room in rental unit
+5,1445540804360145727,518331793,Berruguete,Habitación privada Bravo murillo,40.4618668,-3.7043415,Private room,Private room in rental unit
+5,1445555081312991832,518331793,Berruguete,Habitación privada Bravo Murillo,40.4618668,-3.7043415,Private room,Private room in rental unit
+5,1445560011099053768,518331793,Berruguete,Habitación privada Bravo Murillo,40.4618668,-3.7043415,Private room,Private room in rental unit
+5,1404248459592708217,661816734,Casa de Campo,Habitación en piso compartido,40.43373007254714,-3.732811232847816,Private room,Private room in rental unit
+5,1404252177528879961,661816734,Casa de Campo,Habitación en piso compartido,40.43383,-3.73317,Private room,Private room in rental unit
+5,1404837536480963354,661816734,Casa de Campo,Habitación en piso compartido,40.43352,-3.73255,Private room,Private room in rental unit
+5,1404861691034600284,661816734,Casa de Campo,Habitación en piso compartido,40.43372987751842,-3.732782907752496,Private room,Private room in rental unit
+5,1404868723279745832,661816734,Casa de Campo,Habitación en piso compartido,40.43369,-3.73317,Private room,Private room in rental unit
+5,1270195802834851581,133056146,Cuatro Caminos,Dobo Murillo 2Pax 1Bth Gnd Floor,40.45458,-3.7005,Private room,Private room in rental unit
+5,1270196804548774788,133056146,Cuatro Caminos,Dobo Murillo 2Pax 1Bth Gnd Floor,40.45458,-3.7005,Private room,Private room in rental unit
+5,1270197447157611038,133056146,Cuatro Caminos,Dobo Murillo 2Pax 1Bth Gnd Floor,40.45458,-3.7005,Private room,Private room in rental unit
+5,1270198266791581576,133056146,Cuatro Caminos,Dobo Murillo 2Pax 1Bth Gnd Floor,40.45458,-3.7005,Private room,Private room in rental unit
+5,1270214008966265651,133056146,Cuatro Caminos,Dobo Murillo 2Pax 1Bth Gnd Floor,40.45458,-3.7005,Private room,Private room in rental unit
+5,1364535310257881520,661816734,Cuatro Caminos,Habitación en piso compartido,40.44909,-3.69432,Private room,Private room in rental unit
+5,1364544831862713434,661816734,Cuatro Caminos,Habitación en piso compartido,40.44905,-3.69431,Private room,Private room in rental unit
+5,1364556803180694715,661816734,Cuatro Caminos,Habitación en piso compartido,40.44863405388832,-3.694390648792651,Private room,Private room in rental unit
+5,1364570812556007295,661816734,Cuatro Caminos,Habitación en piso compartido,40.44897,-3.69432,Private room,Private room in rental unit
+5,1364599821652153724,661816734,Cuatro Caminos,Habitación en piso compartido,40.44891,-3.69446,Private room,Private room in rental unit
+5,707044902688453898,434208714,El Viso,"Blueground | Chamartín, private terrace",40.4403932,-3.6792399,Entire home/apt,Entire rental unit
+5,707049941407423748,434208714,El Viso,"Blueground | Chamartín, private terrace",40.4403932,-3.6792399,Entire home/apt,Entire rental unit
+5,709191556940170937,434208714,El Viso,"Blueground | Chamartín, private terrace",40.4403932,-3.6792399,Entire home/apt,Entire rental unit
+5,709191806332055860,434208714,El Viso,"Blueground | Chamartín, private terrace",40.4403932,-3.6792399,Entire home/apt,Entire rental unit
+5,709854924003982944,434208714,El Viso,"Blueground | Chamartín, private terrace",40.4403932,-3.6792399,Entire home/apt,Entire rental unit
+5,1424489348369399951,133056146,Opañel,Dobo Madrid Ricardos,40.39171,-3.72623,Entire home/apt,Entire rental unit
+5,1424490638677457802,133056146,Opañel,Dobo Madrid Ricardos,40.39171,-3.72623,Private room,Room in aparthotel
+5,1424491930901399062,133056146,Opañel,Dobo Madrid Ricardos,40.39171,-3.72623,Private room,Room in aparthotel
+5,1424493708317022411,133056146,Opañel,Dobo Madrid Ricardos,40.39171,-3.72623,Private room,Room in aparthotel
+5,1424494423591415866,133056146,Opañel,Dobo Madrid Ricardos,40.39171,-3.72623,Private room,Room in aparthotel
+5,1194294483707164161,65656674,Palos de Moguer,Habitación en Atocha junto al Metro y la Renfe,40.40087397813634,-3.6951230243286095,Private room,Private room in rental unit
+5,1194303045896986637,65656674,Palos de Moguer,Habitación en Atocha junto al Metro y la Renfe,40.40087397813634,-3.6951015666564913,Private room,Private room in rental unit
+5,1194748286295424844,65656674,Palos de Moguer,Habitación en Atocha junto al Metro y la Renfe,40.40089031876151,-3.6951230243286095,Private room,Private room in rental unit
+5,1395539219356193568,65656674,Palos de Moguer,Habitación en Atocha junto al Metro y la Renfe,40.40108180596557,-3.6948409476074295,Private room,Private room in rental unit
+5,1492653841301293149,65656674,Palos de Moguer,Habitación en Atocha junto al Metro y la Renfe,40.40101295847783,-3.6948320899352938,Private room,Private room in rental unit
+5,1243440540269502416,133056146,Pinar del Rey,Dobo Pinar 1Br 2Pax 1Bth Gnd Floor,40.4770361,-3.6411374,Entire home/apt,Entire rental unit
+5,1243442026885380328,133056146,Pinar del Rey,Dobo Pinar 1Br 2Pax 1Bth Gnd Floor,40.4770361,-3.6411374,Entire home/apt,Entire rental unit
+5,1243443521253855075,133056146,Pinar del Rey,Dobo Pinar 1Br 2Pax 1Bth Gnd Floor,40.4770361,-3.6411374,Entire home/apt,Entire rental unit
+5,1243443928300236435,133056146,Pinar del Rey,Dobo Pinar 1Br 2Pax 1Bth Gnd Floor,40.4770361,-3.6411374,Entire home/apt,Entire rental unit
+5,1243444579858437627,133056146,Pinar del Rey,Dobo Pinar 1Br 2Pax 1Bth Gnd Floor,40.4770361,-3.6411374,Entire home/apt,Entire rental unit
+5,1253344328186046449,133056146,Pinar del Rey,Dobo Pinar 2Br 3Pax 1Bth,40.4770361,-3.6411374,Entire home/apt,Entire rental unit
+5,1253351165366591572,133056146,Pinar del Rey,Dobo Pinar 2Br 3Pax 1Bth,40.4770361,-3.6411374,Entire home/apt,Entire rental unit
+5,1253355156369534716,133056146,Pinar del Rey,Dobo Pinar 2Br 3Pax 1Bth,40.4770361,-3.6411374,Entire home/apt,Entire rental unit
+5,1253356120881015132,133056146,Pinar del Rey,Dobo Pinar 2Br 3Pax 1Bth,40.4770361,-3.6411374,Entire home/apt,Entire rental unit
+5,1253359073789784737,133056146,Pinar del Rey,Dobo Pinar 2Br 3Pax 1Bth,40.4770361,-3.6411374,Entire home/apt,Entire rental unit
+5,1244013176871203281,65656674,Rios Rosas,Apartamento a 15 min del centro en Cuatro Caminos,40.44539399835739,-3.7026562354736337,Entire home/apt,Entire rental unit
+5,1244021535245842710,65656674,Rios Rosas,Apartamento a 15 min del centro en Cuatro Caminos,40.44539399835739,-3.7025060317688,Entire home/apt,Entire rental unit
+5,1247662771665376694,65656674,Rios Rosas,Apartamento a 15 min del centro en Cuatro Caminos,40.44528,-3.70251,Entire home/apt,Entire rental unit
+5,1247669689048015187,65656674,Rios Rosas,Apartamento a 15 min del centro en Cuatro Caminos,40.44523,-3.70264,Entire home/apt,Entire rental unit
+5,1492627748849376326,65656674,Rios Rosas,Apartamento a 15 min del centro en Cuatro Caminos,40.44533684397744,-3.7025596759490975,Entire home/apt,Entire rental unit
+5,833992336169148124,368117770,Universidad,Nuevo Loft/Studio a 2 calles de Gran Vía Street,40.4233184,-3.701810099999999,Entire home/apt,Entire rental unit
+5,857670063427347471,368117770,Universidad,Nuevo Loft/Studio a 2 calles de Gran Vía Street,40.42274666634076,-3.7017242693115295,Entire home/apt,Entire rental unit
+5,857908678811987992,368117770,Universidad,Nuevo Loft/Studio a 2 calles de Gran Vía Street,40.42256697761569,-3.701895930688484,Entire home/apt,Entire rental unit
+5,863567188894439888,368117770,Universidad,Nuevo Loft/Studio a 2 calles de Gran Vía Street,40.4233184,-3.701810099999999,Entire home/apt,Entire rental unit
+5,873082847855986435,368117770,Universidad,Nuevo Loft/Studio a 2 calles de Gran Vía Street,40.4233184,-3.701810099999999,Entire home/apt,Entire rental unit
+4,1463780816178846366,518331793,Apostol Santiago,Habitación privada Somotin,40.4764048,-3.661203,Private room,Private room in home
+4,1463784194161638134,518331793,Apostol Santiago,Habitación privada Somotin,40.4764048,-3.661203,Private room,Private room in home
+4,1466019730940889412,518331793,Apostol Santiago,Habitación privada somotin,40.4764048,-3.661203,Private room,Private room in home
+4,1466028994198384812,518331793,Apostol Santiago,Habitación privada somotin,40.4764048,-3.661203,Private room,Private room in home
+4,1264388761312408143,133056146,Arapiles,Dobo Galileo 2Pax 1Bth Gnd Floor,40.43533,-3.7104817,Private room,Private room in rental unit
+4,1264390376665090153,133056146,Arapiles,Dobo Galileo 2Pax 1Bth Gnd Floor,40.43533,-3.7104817,Private room,Private room in rental unit
+4,1264393014013233423,133056146,Arapiles,Dobo Galileo 2Pax 1Bth Gnd Floor,40.43533,-3.7104817,Private room,Private room in rental unit
+4,1264394430138404444,133056146,Arapiles,Dobo Galileo 2Pax 1Bth Gnd Floor,40.43533,-3.7104817,Private room,Private room in rental unit
+4,1430216093697191901,661816734,Argüelles,Habitación en piso compartido,40.43028891602072,-3.717569004475206,Private room,Private room in rental unit
+4,1430231381812769157,661816734,Argüelles,Habitación en piso compartido,40.43047921252638,-3.7175867140801446,Private room,Private room in rental unit
+4,1430246272720474883,661816734,Argüelles,Habitación en piso compartido,40.43038352388247,-3.717773835241957,Private room,Private room in rental unit
+4,1430259849055892279,661816734,Argüelles,Habitación en piso compartido,40.43029748205335,-3.7178787630607615,Private room,Private room in rental unit
+4,1404956672276429320,691414022,Cuatro Caminos,Home Art Bernabéu - Básico,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+4,1405035254081158145,691414022,Cuatro Caminos,Home Art Bernabéu - Básico,40.45506,-3.70057,Entire home/apt,Entire rental unit
+4,1407202143617899529,691414022,Cuatro Caminos,Home Art Bernabéu - Básico,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+4,1407206148453987839,691414022,Cuatro Caminos,Home Art Bernabéu - Básico,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+4,1406533888069763456,691414022,Cuatro Caminos,Home Art Bernabéu - Superior,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+4,1407236361652974133,691414022,Cuatro Caminos,Home Art Bernabéu - Superior,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+4,1407239361757505058,691414022,Cuatro Caminos,Home Art Bernabéu - Superior,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+4,1407245050466409046,691414022,Cuatro Caminos,Home Art Bernabéu - Superior,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+4,1501422805161178510,697847196,Cuatro Caminos,Waka – Room in Coliving + Rooftop & Pool,40.4566783,-3.7004628,Private room,Private room in condo
+4,1506334010280944457,697847196,Cuatro Caminos,Waka – Room in Coliving + Rooftop & Pool,40.4566783,-3.7004628,Private room,Private room in condo
+4,1506447792757823226,697847196,Cuatro Caminos,Waka – Room in Coliving + Rooftop & Pool,40.4566783,-3.7004628,Private room,Private room in condo
+4,1506460552526475806,697847196,Cuatro Caminos,Waka – Room in Coliving + Rooftop & Pool,40.4566783,-3.7004628,Private room,Private room in condo
+4,1247951643993537753,31772865,Embajadores,CituSpace - Tirso de Molina - 1 Bed with sofa bed,40.4122263,-3.7038173,Entire home/apt,Entire rental unit
+4,1253445653913367924,31772865,Embajadores,CituSpace - Tirso de Molina - 1 Bed with sofa bed,40.4122263,-3.7038173,Entire home/apt,Entire rental unit
+4,1253457051858137756,31772865,Embajadores,CituSpace - Tirso de Molina - 1 Bed with sofa bed,40.4122263,-3.7038173,Entire home/apt,Entire rental unit
+4,1253457505056487800,31772865,Embajadores,CituSpace - Tirso de Molina - 1 Bed with sofa bed,40.4122263,-3.7038173,Entire home/apt,Entire rental unit
+4,12620921,38098725,Embajadores,"Madrid Center: Puerta del Sol, Tirso de Molina",40.41126,-3.70412,Private room,Private room in hostel
+4,46416127,38098725,Embajadores,"Madrid Center: Puerta del Sol, Tirso de Molina",40.41126,-3.70409,Shared room,Shared room in hostel
+4,46565987,38098725,Embajadores,"Madrid Center: Puerta del Sol, Tirso de Molina",40.41126,-3.70409,Shared room,Shared room in hostel
+4,46565988,38098725,Embajadores,"Madrid Center: Puerta del Sol, Tirso de Molina",40.41126,-3.70409,Private room,Private room in hostel
+4,967519679813505162,494237478,Guindalera,Home Art Madrid Estudio Superior,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+4,967521259292416167,494237478,Guindalera,Home Art Madrid Estudio Superior,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+4,967522629545259178,494237478,Guindalera,Home Art Madrid Estudio Superior,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+4,967523900292464081,494237478,Guindalera,Home Art Madrid Estudio Superior,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+4,1399211800165839870,65656674,Pacífico,Casa Bonita a 15 minutos del centro de Madrid,40.40266486723373,-3.677126929608152,Private room,Private room in rental unit
+4,1400085470750710331,65656674,Pacífico,Casa Bonita a 15 minutos del centro de Madrid,40.402697547610735,-3.677094743099973,Private room,Private room in rental unit
+4,1401237792350874722,65656674,Pacífico,Casa Bonita a 15 minutos del centro de Madrid,40.40272709329402,-3.6770753654389976,Private room,Private room in rental unit
+4,1471631777395533142,65656674,Pacífico,Casa Bonita a 15 minutos del centro de Madrid,40.40264444199008,-3.677110836354063,Private room,Private room in rental unit
+4,1313715430704119939,434208714,Palacio,"Blueground | Palacio, AC & w/d, nr Gran Vía",40.4204493,-3.7079859,Entire home/apt,Entire rental unit
+4,1313715814520088464,434208714,Palacio,"Blueground | Palacio, AC & w/d, nr Gran Vía",40.4204493,-3.7079859,Entire home/apt,Entire rental unit
+4,1313716181531830483,434208714,Palacio,"Blueground | Palacio, AC & w/d, nr Gran Vía",40.4204493,-3.7079859,Entire home/apt,Entire rental unit
+4,1313716561126053574,434208714,Palacio,"Blueground | Palacio, AC & w/d, nr Gran Vía",40.4204493,-3.7079859,Entire home/apt,Entire rental unit
+4,1205628192580511952,586253078,Palos de Moguer,Madrid Suites,40.40169827407397,-3.696534633636474,Entire home/apt,Entire rental unit
+4,1205956775891201327,586253078,Palos de Moguer,Madrid Suites,40.4016983,-3.6965346,Entire home/apt,Entire rental unit
+4,1206544508257513795,586253078,Palos de Moguer,Madrid Suites,40.4016983,-3.6965346,Entire home/apt,Entire rental unit
+4,1206703218612790258,586253078,Palos de Moguer,Madrid Suites,40.4016983,-3.6965346,Entire home/apt,Entire rental unit
+4,1106580452746571461,133056146,San Diego,Dobo San Diego 2Br 4Pax 1Bth,40.3911811,-3.6670178,Entire home/apt,Entire rental unit
+4,1106581130812393903,133056146,San Diego,Dobo San Diego 2Br 4Pax 1Bth,40.39118,-3.66702,Entire home/apt,Entire rental unit
+4,1106582222119830136,133056146,San Diego,Dobo San Diego 2Br 4Pax 1Bth,40.3911811,-3.6670178,Entire home/apt,Entire rental unit
+4,1281673954294880164,133056146,San Diego,Dobo San Diego 2Br 4Pax 1Bth,40.3911811,-3.6670178,Entire home/apt,Entire rental unit
+4,1106580286129900744,133056146,San Diego,Dobo San Diego 2Pax 1Bth,40.3911811,-3.6670178,Entire home/apt,Entire rental unit
+4,1106581529414298705,133056146,San Diego,Dobo San Diego 2Pax 1Bth,40.3911811,-3.6670178,Entire home/apt,Entire rental unit
+4,1106581922386027292,133056146,San Diego,Dobo San Diego 2Pax 1Bth,40.3911811,-3.6670178,Entire home/apt,Entire rental unit
+4,1106582449191971225,133056146,San Diego,Dobo San Diego 2Pax 1Bth,40.3911811,-3.6670178,Entire home/apt,Entire rental unit
+4,1204268176437134016,291253690,Universidad,Bright spacious family apartment,40.42693869595802,-3.701793762434873,Entire home/apt,Entire rental unit
+4,1204272415263552049,291253690,Universidad,Bright spacious family apartment,40.42653762620264,-3.701779961807315,Entire home/apt,Entire rental unit
+4,1204273707307442243,291253690,Universidad,Bright spacious family apartment,40.4268569581626,-3.7017543992415294,Entire home/apt,Entire rental unit
+4,1204275644686984880,291253690,Universidad,Bright spacious family apartment,40.42677,-3.70207,Entire home/apt,Entire rental unit
+3,1365287965841877592,661816734,Argüelles,Habitación en piso compartido,40.431122179657045,-3.7178676661339303,Private room,Private room in rental unit
+3,1365291629615309010,661816734,Argüelles,Habitación en piso compartido,40.43095,-3.71788,Private room,Private room in rental unit
+3,1430239174338473095,661816734,Argüelles,Habitación en piso compartido,40.42892239820909,-3.717239355314902,Private room,Private room in rental unit
+3,1430251932919377592,661816734,Argüelles,Habitación en piso compartido,40.42866,-3.71738,Private room,Private room in rental unit
+3,1430271466270187061,661816734,Argüelles,Habitación en piso compartido,40.43052,-3.71793,Private room,Private room in rental unit
+3,1430282234496039530,661816734,Argüelles,Habitación en piso compartido,40.428792714315854,-3.717371322040421,Private room,Private room in rental unit
+3,1437049547540938724,518331793,Bellas Vistas,Habitación privada Bellas Vistas,40.4538038,-3.709183699999999,Private room,Private room in rental unit
+3,1437054021762535103,518331793,Bellas Vistas,Habitación privada Bellas vistas,40.4538038,-3.709183699999999,Private room,Private room in rental unit
+3,1437061442763546990,518331793,Bellas Vistas,Habitación Privada Bellas Vistas,40.4538038,-3.709183699999999,Private room,Private room in rental unit
+3,23135580,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45944,-3.69714,Private room,Private room
+3,23138132,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45812,-3.69893,Private room,Private room
+3,23138724,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45899,-3.6969,Private room,Private room
+3,23139110,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45791,-3.6986,Private room,Private room
+3,23139328,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45783,-3.69901,Private room,Private room
+3,23139634,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45896,-3.697,Private room,Private room
+3,1368707790528908508,661816734,Castillejos,Habitación en piso compartido,40.45897098796615,-3.6923636925164014,Private room,Private room in rental unit
+3,1368714267955518260,661816734,Castillejos,Habitación en piso compartido,40.45872,-3.69213,Private room,Private room in rental unit
+3,1368854645434754246,661816734,Castillejos,Habitación en piso compartido,40.45857,-3.69198,Private room,Private room in rental unit
+3,1430339721416639417,661816734,Castillejos,Habitación en piso compartido,40.46165,-3.69087,Private room,Private room in rental unit
+3,1430355220272706365,661816734,Castillejos,Habitación en piso compartido,40.46184,-3.69116,Private room,Private room in rental unit
+3,1430367285257951135,661816734,Castillejos,Habitación en piso compartido,40.46227997493786,-3.691423928370068,Private room,Private room in rental unit
+3,1133844324231022017,380805002,Chopera,Modern and quiet loft Atocha Delicias Madrid Rio,40.39617,-3.69777,Entire home/apt,Entire rental unit
+3,1134817610266231474,380805002,Chopera,Modern and quiet loft Atocha Delicias Madrid Rio,40.39617,-3.69777,Entire home/apt,Entire rental unit
+3,1167526027706189559,380805002,Chopera,Modern and quiet loft Atocha Delicias Madrid Rio,40.39617,-3.69777,Entire home/apt,Entire rental unit
+3,726494069634541439,481427278,Cortes,Habitación doble con balcón y baño compartido,40.4129468,-3.6993957,Private room,Private room in rental unit
+3,726509769546619012,481427278,Cortes,Habitación doble con balcón y baño compartido,40.4129468,-3.6993957,Private room,Private room in rental unit
+3,726514887202471456,481427278,Cortes,Habitación doble con balcón y baño compartido,40.4129468,-3.6993957,Private room,Private room in rental unit
+3,936633365938200343,133056146,Cuatro Caminos,Dobo Cabrera 2Pax 1Bth Gnd Floor,40.4554702,-3.6962144,Entire home/apt,Entire rental unit
+3,936633601639422130,133056146,Cuatro Caminos,Dobo Cabrera 2Pax 1Bth Gnd Floor,40.4554702,-3.6962144,Entire home/apt,Entire rental unit
+3,936633754547740800,133056146,Cuatro Caminos,Dobo Cabrera 2Pax 1Bth Gnd Floor,40.4554702,-3.6962144,Entire home/apt,Entire rental unit
+3,1406546160686052281,691414022,Cuatro Caminos,Home Art Bernabéu - 2 Hab,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+3,1407248106560978220,691414022,Cuatro Caminos,Home Art Bernabéu - 2 Hab,40.45506,-3.70057,Entire home/apt,Entire rental unit
+3,1407251699314688754,691414022,Cuatro Caminos,Home Art Bernabéu - 2 Hab,40.45506,-3.70057,Entire home/apt,Entire rental unit
+3,1406515091000656209,691414022,Cuatro Caminos,Home Art Bernabéu - Estándar II,40.455013617582125,-3.7007155037048434,Entire home/apt,Entire rental unit
+3,1407211736876744819,691414022,Cuatro Caminos,Home Art Bernabéu - Estándar II,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+3,1407216725119726739,691414022,Cuatro Caminos,Home Art Bernabéu - Estándar II,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+3,1406527599408588869,691414022,Cuatro Caminos,Home Art Bernabéu - Plus,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+3,1407231250864090507,691414022,Cuatro Caminos,Home Art Bernabéu - Plus,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+3,1407233893719014163,691414022,Cuatro Caminos,Home Art Bernabéu - Plus,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+3,745409828572468869,485016897,Embajadores,"Design Studio-Aparment at Sol, Madrid, City Center",40.4130169,-3.702557799999999,Entire home/apt,Entire loft
+3,759226954404293221,485016897,Embajadores,"Design Studio-Aparment at Sol, Madrid, City Center",40.4130169,-3.702557799999999,Entire home/apt,Entire loft
+3,759237331061500408,485016897,Embajadores,"Design Studio-Aparment at Sol, Madrid, City Center",40.4130169,-3.702557799999999,Entire home/apt,Entire loft
+3,1349971330967545854,518331793,Embajadores,Habitación Privada Sol,40.41395144794227,-3.7041450664401054,Private room,Private room in rental unit
+3,1350558026063169379,518331793,Embajadores,Habitación privada Sol,40.4139515,-3.7041451,Private room,Private room in rental unit
+3,1351398770703117790,518331793,Embajadores,Habitación privada Sol,40.4139515,-3.7041451,Private room,Private room in rental unit
+3,928057490981745010,518713670,Embajadores,Habitación compartida en Atocha,40.41091,-3.69876,Private room,Private room in rental unit
+3,928076158001444307,518713670,Embajadores,Habitación compartida en Atocha,40.41106,-3.69851,Private room,Private room in rental unit
+3,1118138924504206625,518713670,Embajadores,Habitación compartida en  Atocha,40.410859453262525,-3.698620412709456,Private room,Private room in rental unit
+3,648948606041543296,434208714,Guindalera,"Blueground | Salamanca, terrace",40.43188139999999,-3.6684816,Entire home/apt,Entire rental unit
+3,651131480497864883,434208714,Guindalera,"Blueground | Salamanca, terrace",40.43188139999999,-3.6684816,Entire home/apt,Entire rental unit
+3,788061048361277959,434208714,Guindalera,"Blueground | Salamanca, terrace",40.4320069,-3.6682836,Entire home/apt,Entire rental unit
+3,967151480810829693,494237478,Guindalera,Home Art Madrid Estudio Básico,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+3,967180837057329291,494237478,Guindalera,Home Art Madrid Estudio Básico,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+3,967182477276556615,494237478,Guindalera,Home Art Madrid Estudio Básico,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+3,1279506035076823943,504121118,Justicia,Coliving en calle Santa Teresa,40.42623,-3.69652,Private room,Private room in rental unit
+3,1279510356326406400,504121118,Justicia,Coliving en calle Santa Teresa,40.4262329,-3.6965183,Private room,Private room in rental unit
+3,1279524405746385189,504121118,Justicia,Coliving en Calle Santa Teresa,40.4262329,-3.6965183,Private room,Private room in rental unit
+3,1279513271340195547,504121118,Justicia,Habitación en calle Santa Teresa,40.4262329,-3.6965183,Private room,Private room in rental unit
+3,1279516285111174959,504121118,Justicia,Habitación en calle Santa Teresa,40.4262329,-3.6965183,Private room,Private room in rental unit
+3,1279520741912111288,504121118,Justicia,Habitación en calle Santa Teresa,40.4262329,-3.6965183,Private room,Private room in rental unit
+3,907778347466471297,518331793,Justicia,Habitación privada en Gran Vía (cama indiv. 90cm),40.4205958,-3.6986786,Private room,Private room in rental unit
+3,907888221198200660,518331793,Justicia,Habitación privada en Gran Vía (cama indiv. 90cm),40.4205958,-3.6986786,Private room,Private room in rental unit
+3,1148282994057847547,518331793,Justicia,Habitación privada en Gran Vía (cama indiv. 90cm),40.4205958,-3.6986786,Private room,Private room in rental unit
+3,1141958817311978785,397053855,Nueva España,3 bedroom apartment in La Castellana Sharing Co.,40.46168,-3.68689,Entire home/apt,Entire rental unit
+3,1456768715697829995,397053855,Nueva España,3 bedroom apartment in La Castellana Sharing Co.,40.46223721968829,-3.686974155890187,Entire home/apt,Entire rental unit
+3,1456779578098710841,397053855,Nueva España,3 bedroom apartment in La Castellana Sharing Co.,40.46218,-3.68671,Entire home/apt,Entire rental unit
+3,1140324025326919879,291253690,Palacio,"Flamenco Style Apartment | Palacio Real, La Latina",40.413010900731,-3.715350515844968,Entire home/apt,Entire rental unit
+3,1140325740369849432,291253690,Palacio,"Flamenco Style Apartment | Palacio Real, La Latina",40.41295670736466,-3.7152811058631,Entire home/apt,Entire rental unit
+3,1140336917033700175,291253690,Palacio,"Flamenco Style Apartment | Palacio Real, La Latina",40.41291,-3.71512,Entire home/apt,Entire rental unit
+3,923863810053197282,65656674,Palos de Moguer,Luz y color en Madrid Atocha,40.4057916,-3.694369,Private room,Private room in rental unit
+3,923888229196323658,65656674,Palos de Moguer,Luz y color en Madrid Atocha,40.4057916,-3.694369,Private room,Private room in rental unit
+3,924384808212373660,65656674,Palos de Moguer,Luz y color en Madrid Atocha,40.4057916,-3.694369,Private room,Private room in rental unit
+3,28890582,217782757,Palos de Moguer,Atocha City Centre WiFi-A/C-SmartTV,40.40581,-3.69221,Entire home/apt,Entire rental unit
+3,28891626,217782757,Palos de Moguer,Atocha City Centre WiFi-A/C-SmartTV,40.4058,-3.69229,Entire home/apt,Entire rental unit
+3,28892011,217782757,Palos de Moguer,Atocha City Centre WiFi-A/C-SmartTV,40.40569,-3.69156,Entire home/apt,Entire rental unit
+3,721476311501672440,291759043,Prosperidad,Dobo ANR2 1Br 2Pax 1Bth Gnd Floor,40.4401072,-3.6775212,Entire home/apt,Entire rental unit
+3,721476357221999608,291759043,Prosperidad,Dobo ANR2 1Br 2Pax 1Bth Gnd Floor,40.4401072,-3.6775212,Entire home/apt,Entire rental unit
+3,721476392745733602,291759043,Prosperidad,Dobo ANR2 1Br 2Pax 1Bth Gnd Floor,40.4401072,-3.6775212,Entire home/apt,Entire rental unit
+3,1427418706933705054,661816734,Recoletos,Habitación en piso compartido,40.42063170577476,-3.6872132785956784,Private room,Private room in rental unit
+3,1427426848492789471,661816734,Recoletos,Habitación en piso compartido,40.42079204083571,-3.687059611170934,Private room,Private room in rental unit
+3,1427437895495155974,661816734,Recoletos,Habitación en piso compartido,40.42055,-3.68691,Private room,Private room in rental unit
+3,1427369664444702245,661816734,Rios Rosas,Habitación en piso compartido,40.44227748861066,-3.702049896045401,Private room,Private room in rental unit
+3,1427375606472485883,661816734,Rios Rosas,Habitación en piso compartido,40.44233,-3.70188,Private room,Private room in rental unit
+3,1427382937781327159,661816734,Rios Rosas,Habitación en piso compartido,40.44233989699509,-3.70221917527391,Private room,Private room in rental unit
+3,1389122686196694891,133056146,San Isidro,Dobo Rio 4Pax 1Bth with Sofá Bed Gnd Floor,40.398325,-3.718596,Private room,Private room in rental unit
+3,1389124293966542092,133056146,San Isidro,Dobo Rio 4Pax 1Bth with Sofá Bed Gnd Floor,40.398325,-3.718596,Private room,Private room in rental unit
+3,1389128855367844524,133056146,San Isidro,Dobo Rio 4Pax 1Bth with Sofá Bed Gnd Floor,40.398325,-3.718596,Private room,Private room in rental unit
+3,1288328747541093955,661789427,San Isidro,Piso a 15 minutos del centro,40.39662166867235,-3.732015361094743,Entire home/apt,Entire rental unit
+3,1288339806206856682,661789427,San Isidro,Piso a 15 minutos del centro,40.3967,-3.73171,Entire home/apt,Entire rental unit
+3,1288352747554172431,661789427,San Isidro,Piso a 15 minutos del centro,40.3971,-3.73194,Entire home/apt,Entire rental unit
+3,25887862,130907,Sol,Apartamentos Dana Sol,40.41617084170221,-3.7039219872020896,Entire home/apt,Entire rental unit
+3,1450137123215418198,130907,Sol,Apartamentos Dana Sol,40.4158,-3.7043,Entire home/apt,Entire rental unit
+3,1450149492484989938,130907,Sol,Apartamentos Dana Sol,40.41574,-3.70397,Entire home/apt,Entire rental unit
+3,1174089774537728507,316795838,Sol,Estudio Reformado Centro Madrid,40.4150974,-3.7024616,Entire home/apt,Entire rental unit
+3,1175827267009398992,316795838,Sol,Estudio Reformado Centro Madrid,40.4150974,-3.7024616,Entire home/apt,Entire rental unit
+3,1175833330835874865,316795838,Sol,Estudio Reformado Centro Madrid,40.4150974,-3.7024616,Entire home/apt,Entire rental unit
+3,589690349741262308,245560943,Trafalgar,Covarrubias 21 hostal - Private room for 3 people,40.430435,-3.698005,Private room,Private room in hostel
+3,591139933144342265,245560943,Trafalgar,Covarrubias 21 hostal - Private room for 3 people,40.430435,-3.698005,Private room,Private room in hostel
+3,591152555607284180,245560943,Trafalgar,Covarrubias 21 hostal - Private room for 3 people,40.430435,-3.698005,Private room,Private room in hostel
+3,1364593689313835891,661816734,Trafalgar,Habitación en piso compartido,40.429890818691405,-3.701650674114049,Private room,Private room in rental unit
+3,1364601348808162909,661816734,Trafalgar,Habitación en piso compartido,40.42954,-3.7025,Private room,Private room in rental unit
+3,1364607911230381091,661816734,Trafalgar,Habitación en piso compartido,40.42977300799546,-3.701851277901463,Private room,Private room in rental unit
+3,1070993900057172348,133056146,Universidad,Dobo Luna 2Pax 1Bth with Kittchen and Balcony,40.4209708,-3.7033754,Private room,Private room in rental unit
+3,1071599027087416055,133056146,Universidad,Dobo Luna 2Pax 1Bth with Kittchen and Balcony,40.4209708,-3.7033754,Private room,Private room in rental unit
+3,1071600131467788360,133056146,Universidad,Dobo Luna 2Pax 1Bth with Kittchen and Balcony,40.4209708,-3.7033754,Private room,Private room in rental unit
+3,1071603678256481463,133056146,Universidad,Dobo Luna 2Pax 1Bth with Kittchen Int,40.4209708,-3.7033754,Private room,Private room in rental unit
+3,1071605009805080180,133056146,Universidad,Dobo Luna 2Pax 1Bth with Kittchen Int,40.4209708,-3.7033754,Private room,Private room in rental unit
+3,1123095163968452902,133056146,Universidad,Dobo Luna 2Pax 1Bth with Kittchen Int,40.4209708,-3.7033754,Private room,Private room in rental unit
+3,980300834326117016,386318675,Universidad,Céntrica Suite con baño privado,40.4236432,-3.7094443,Private room,Room in hotel
+3,980469201969178346,386318675,Universidad,Céntrica Suite con baño privado,40.4236432,-3.7094443,Private room,Room in hotel
+3,980835769617250729,386318675,Universidad,Céntrica Suite con baño privado,40.4236432,-3.7094443,Private room,Room in hotel
+3,1097736286459816278,434208714,Universidad,"Blueground | Malasaña, elevator, nr Gran Via",40.4243695,-3.7026741,Entire home/apt,Entire rental unit
+3,1101330972806795086,434208714,Universidad,"Blueground | Malasaña, elevator, nr gran via",40.4243695,-3.7026741,Entire home/apt,Entire rental unit
+3,1126757514562075402,434208714,Universidad,"Blueground | Malasaña, elevator, nr gran via",40.4243695,-3.7026741,Entire home/apt,Entire rental unit
+3,1058113376769693532,511649938,Universidad,Exyca Malasaña,40.4284544,-3.702801099999999,Entire home/apt,Entire rental unit
+3,1177624305382928668,511649938,Universidad,Exyca Malasaña,40.4284544,-3.702801099999999,Entire home/apt,Entire rental unit
+3,1300491094760852130,511649938,Universidad,Exyca Malasaña,40.4284544,-3.702801099999999,Entire home/apt,Entire rental unit
+3,1128162271458746939,434208714,Vallehermoso,"Blueground | Vallehermoso, nr School, Shops & Food",40.4448139,-3.7097175,Entire home/apt,Entire rental unit
+3,1130211262903326719,434208714,Vallehermoso,"Blueground | Vallehermoso, nr School, Shops & Food",40.4448139,-3.7097175,Entire home/apt,Entire rental unit
+3,1131664601099606400,434208714,Vallehermoso,"Blueground | Vallehermoso, nr School, Shops & Food",40.4448139,-3.7097175,Entire home/apt,Entire rental unit
+3,1399810254840922732,661816734,Vallehermoso,Habitación en piso compartido,40.441692485305694,-3.7147319345879,Private room,Private room in rental unit
+3,1399816578679431628,661816734,Vallehermoso,Habitación en piso compartido,40.44206112383531,-3.714768398570808,Private room,Private room in rental unit
+3,1399842586926659408,661816734,Vallehermoso,Habitación en piso compartido,40.44197951509466,-3.715173095761036,Private room,Private room in rental unit
+2,19564668,45759520,Acacias,Peace in the city center. + 10 euros parking place,40.39839,-3.70499,Private room,Private room in rental unit
+2,20060669,45759520,Acacias,Peace in the city center. + 10 euros parking place,40.39841,-3.70486,Entire home/apt,Entire rental unit
+2,1102684885702687168,225390196,Acacias,Luxe apartments Madrid Rio by RentitUP,40.396709238907306,-3.705847114418949,Entire home/apt,Entire rental unit
+2,1102751641922598640,225390196,Acacias,Luxe apartments Madrid Rio by RentitUP,40.39664673072016,-3.706215831591082,Entire home/apt,Entire rental unit
+2,1123040179363881354,518331793,Acacias,Habitación Privada Arquitectura,40.4004,-3.70315,Private room,Private room in rental unit
+2,1123073044110913729,518331793,Acacias,Habitación Privada Arquitectura,40.40039042960681,-3.703270236778713,Private room,Private room in rental unit
+2,1426966326408182151,661816734,Acacias,Habitación en piso compartido,40.39921449659006,-3.701475863491511,Private room,Private room in rental unit
+2,1426980303872271385,661816734,Acacias,Habitación en piso compartido,40.3987854997503,-3.701408171924125,Private room,Private room in rental unit
+2,1430290641673392931,661816734,Almagro,Habitación en piso compartido,40.435933451329255,-3.693928686065464,Private room,Private room in rental unit
+2,1430305133458400455,661816734,Almagro,Habitación en piso compartido,40.43595585901653,-3.6949913397797256,Private room,Private room in rental unit
+2,1430317153086566804,661816734,Almagro,Habitación en piso compartido,40.43592,-3.69427,Private room,Private room in rental unit
+2,1430321570149074374,661816734,Almagro,Habitación en piso compartido,40.43631863943215,-3.695396231325798,Private room,Private room in rental unit
+2,1199075078507257223,587614930,Almenara,Five Towers Guest House,40.472743846600906,-3.692373387993151,Entire home/apt,Entire guesthouse
+2,1199075564505436992,587614930,Almenara,Five Towers Guest House,40.4726091939965,-3.692247742567456,Entire home/apt,Entire guesthouse
+2,1194039572441387457,2536524,Amposta,Cozy bedroom wi-fi /Airport/ Ifema/ Metropolitano.,40.42751140844805,-3.617171352702324,Private room,Private room in rental unit
+2,1350767253930681533,2536524,Amposta,Cozy bedroom wi-fi /Airport/ Ifema/ Metropolitano.,40.42753,-3.61689,Private room,Private room in rental unit
+2,1466022961369749060,518331793,Apostol Santiago,Habitacion privada somotin,40.4764048,-3.661203,Private room,Private room in home
+2,1466025845879266779,518331793,Apostol Santiago,Habitacion privada somotin,40.4764048,-3.661203,Private room,Private room in home
+2,1466003981963648437,518331793,Apostol Santiago,Habitación privada somotin (cama90cm),40.4764048,-3.661203,Private room,Private room in home
+2,1466017106530591123,518331793,Apostol Santiago,Habitación privada somotin (cama90cm),40.4764048,-3.661203,Private room,Private room in home
+2,954216781302763432,232520062,Arapiles,V3 - Acogedor Estudio,40.429911767952646,-3.7090846841308656,Entire home/apt,Entire rental unit
+2,973886561093271104,232520062,Arapiles,V3 - Acogedor Estudio,40.43,-3.70938,Entire home/apt,Entire rental unit
+2,1370152123889770343,661816734,Arapiles,Habitación en piso compartido,40.43859,-3.70924,Private room,Private room in rental unit
+2,1370185351749746537,661816734,Arapiles,Habitación en piso compartido,40.43864,-3.70919,Private room,Private room in rental unit
+2,1370203304873635242,661816734,Arapiles,Habitación en piso compartido,40.43678,-3.70758,Private room,Private room in rental unit
+2,1370207975445107687,661816734,Arapiles,Habitación en piso compartido,40.43845,-3.70755,Private room,Private room in rental unit
+2,1371038881901213630,661816734,Arapiles,Habitación en piso compartido,40.43849178981871,-3.7082094001300665,Private room,Private room in rental unit
+2,1371068788189859857,661816734,Arapiles,Habitación en piso compartido,40.43675730765537,-3.707768212272211,Private room,Private room in rental unit
+2,1404876814845895352,661816734,Arapiles,Habitación en piso compartido,40.43063,-3.71062,Private room,Private room in rental unit
+2,1406325538268910183,661816734,Arapiles,Habitación en piso compartido,40.43055,-3.7111,Private room,Private room in rental unit
+2,758670,2536524,Arcos,Cozy bedroom wi-fi /Airport/ Ifema/ Metropolitano.,40.4267,-3.61631,Private room,Private room in rental unit
+2,2362731,2536524,Arcos,Cozy bedroom wi-fi /Airport/ Ifema/ Metropolitano.,40.42654,-3.615916,Private room,Private room in rental unit
+2,1222495581340294056,594248200,Arcos,Bedroom wi-fi /Airport/ Ifema/ Metropolitano.,40.42704375248806,-3.6153200831975,Private room,Private room in cave
+2,1320445621483708491,594248200,Arcos,Bedroom wi-fi /Airport/ Ifema/ Metropolitano.,40.42734,-3.61519,Private room,Private room in rental unit
+2,1441140409526640100,661816734,Argüelles,Habitación en piso compartido,40.4258,-3.71381,Private room,Private room in rental unit
+2,1441145651505846870,661816734,Argüelles,Habitación en piso compartido,40.42639,-3.71398,Private room,Private room in rental unit
+2,889749474447570665,367444024,Canillejas,Habitación privada en chalet,40.44375121097939,-3.6130905351947273,Private room,Private room in home
+2,1029832119305189520,367444024,Canillejas,Habitación privada en Chalet,40.44367124141361,-3.612699851660958,Private room,Private room in home
+2,1167309019783851015,367444024,Canillejas,Habitación privada en chalet,40.44344,-3.61423,Private room,Private room in home
+2,1167339659530465799,367444024,Canillejas,Habitación privada en chalet,40.44329,-3.61434,Private room,Private room in home
+2,1039763176614876577,511649938,Canillejas,Exyca Metropolitano,40.43740409999999,-3.6112102,Entire home/apt,Entire rental unit
+2,1112860660842632153,511649938,Canillejas,Exyca Metropolitano,40.436937733728,-3.611417241455538,Entire home/apt,Entire rental unit
+2,1404270214311148380,661816734,Casa de Campo,Habitación en piso compartido,40.43162,-3.73416,Private room,Private room in rental unit
+2,1404854822929172752,661816734,Casa de Campo,Habitación en piso compartido,40.43194844108366,-3.7342289061288456,Private room,Private room in rental unit
+2,994078759001798830,434208714,Castellana,"Blueground | Castellana, doorman, nr restaurants",40.4375418,-3.6865269,Entire home/apt,Entire rental unit
+2,996221381777112615,434208714,Castellana,"Blueground | Castellana, doorman, nr restaurants",40.4375418,-3.6865269,Entire home/apt,Entire rental unit
+2,1112860096749849619,511649938,Castilla,Exyca Castellana,40.4742332,-3.6856507,Entire home/apt,Entire rental unit
+2,1225129989542354272,511649938,Castilla,Exyca Castellana,40.4742332,-3.6856507,Entire home/apt,Entire rental unit
+2,1046222300986271054,31772865,Castillejos,CituSpace Cuzco - 1 Bed apartment with terrace,40.4582343,-3.6955659,Entire home/apt,Entire rental unit
+2,1223050693680063546,31772865,Castillejos,CituSpace Cuzco - 1 Bed apartment with terrace,40.4582343,-3.6955659,Entire home/apt,Entire rental unit
+2,23121098,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45954,-3.69839,Private room,Private room
+2,23124018,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45972,-3.69881,Private room,Room in hotel
+2,23135722,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45977,-3.69882,Private room,Private room
+2,23138965,103336792,Castillejos,Fantastic residence ``FUNWAY´´ north zone Madrid,40.45961,-3.69832,Private room,Private room
+2,1289123385834635190,434208714,Castillejos,Blueground | Cuzco 1bd apartment,40.4625879,-3.6935038,Entire home/apt,Entire rental unit
+2,1289123755229499129,434208714,Castillejos,Blueground | Cuzco 1bd apartment,40.4625879,-3.6935038,Entire home/apt,Entire rental unit
+2,1365927360590159976,661816734,Castillejos,Habitación en piso compartido,40.46059284670331,-3.693340740878904,Private room,Private room in rental unit
+2,1368749685503466639,661816734,Castillejos,Habitación en piso compartido,40.4607,-3.69266,Private room,Private room in rental unit
+2,1229069280721089782,331982718,Ciudad Universitaria,Habitación nueva con aire acondicionado,40.4477747,-3.7100956,Private room,Private room in rental unit
+2,1262891208287484177,331982718,Ciudad Universitaria,Habitación nueva con aire acondicionado,40.4477747,-3.7100956,Private room,Private room in rental unit
+2,23660687,392790154,Colina,Arturo Soria - 3 bedrooms with pool and parking,40.46017,-3.6624,Entire home/apt,Entire rental unit
+2,49629881,392790154,Colina,Arturo Soria - 3 bedrooms with pool and parking,40.46021,-3.66226,Entire home/apt,Entire rental unit
+2,726488838996270928,481427278,Cortes,Habitación doble con baño compartido,40.4129468,-3.6993957,Private room,Private room in rental unit
+2,1012973987475098405,481427278,Cortes,Habitación doble con baño compartido,40.4129468,-3.6993957,Private room,Private room in rental unit
+2,893972031891349935,490812264,Cortes,L Cortes Museos Ventana Interior,40.4159034,-3.6955958,Entire home/apt,Entire rental unit
+2,894024078073746836,490812264,Cortes,L Cortes Museos ventana Interior,40.4159034,-3.6955958,Entire home/apt,Entire rental unit
+2,904234961958702509,490812264,Cortes,Las cortes Museos - 1 persona Ventana Interior,40.4159034,-3.6955958,Entire home/apt,Entire rental unit
+2,943263936064396299,490812264,Cortes,Las cortes Museos - 1 persona Ventana Interior,40.4159034,-3.6955958,Entire home/apt,Entire rental unit
+2,787562928471772259,490812264,Cortes,Las cortes y Museos,40.4159034,-3.6955958,Entire home/apt,Entire rental unit
+2,787573076488743644,490812264,Cortes,Las cortes y Museos,40.4159034,-3.6955958,Entire home/apt,Entire rental unit
+2,1427434797857438301,661816734,Cortes,Habitación en piso compartido,40.41543,-3.70053,Private room,Private room in rental unit
+2,1427441253816162087,661816734,Cortes,Habitación en piso compartido,40.41489,-3.70067,Private room,Private room in rental unit
+2,1429502358113823662,661816734,Cortes,Habitación en piso compartido,40.41473363480818,-3.70221949968609,Private room,Private room in rental unit
+2,1429506470073396914,661816734,Cortes,Habitación en piso compartido,40.41494,-3.70179,Private room,Private room in rental unit
+2,1327419239168043947,670890476,Cortes,habitación de un Piso en Sol,40.41498,-3.70198,Private room,Private room in rental unit
+2,1333270073714477101,670890476,Cortes,Habitación de un piso en Sol,40.41499355261646,-3.702337720873294,Private room,Private room in rental unit
+2,1094257892375486093,378837583,Costillares,Beautiful flat Arturo Soria 1 Bedroom-4People. D1,40.47004363458663,-3.666894003165335,Entire home/apt,Entire rental unit
+2,1094258385248907267,378837583,Costillares,Beautiful flat Arturo Soria 1 Bedroom-4People. D1,40.4696163249667,-3.667237239144351,Entire home/apt,Entire rental unit
+2,1094260170115783481,378837583,Costillares,Cozy studio (14m2) in Arturo Soria area,40.46867,-3.66503,Entire home/apt,Entire rental unit
+2,1094260435730129775,378837583,Costillares,Cozy studio (14m2) in Arturo Soria area,40.46885,-3.66515,Entire home/apt,Entire rental unit
+2,1094258890296864918,378837583,Costillares,Fantastic flat Arturo Soria D2,40.47001,-3.66529,Entire home/apt,Entire rental unit
+2,1094259188295324494,378837583,Costillares,Fantastic flat Arturo Soria D2,40.46960252635127,-3.665090474620561,Entire home/apt,Entire rental unit
+2,936634120461158061,133056146,Cuatro Caminos,Dobo Cabrera 1Br 2Pax 1Bth Gnd Floor,40.4554702,-3.6962144,Entire home/apt,Entire rental unit
+2,936634302336374135,133056146,Cuatro Caminos,Dobo Cabrera 1Br 2Pax 1Bth Gnd Floor,40.45544724,-3.696257986,Entire home/apt,Entire rental unit
+2,1364507559842634949,661816734,Cuatro Caminos,Habitación en piso compartido,40.44885620370989,-3.6953814797169153,Private room,Private room in rental unit
+2,1364560830826797638,661816734,Cuatro Caminos,Habitación en piso compartido,40.44876,-3.69473,Private room,Private room in rental unit
+2,1430990076710937693,661816734,Cuatro Caminos,Habitación piso compartido.,40.45523,-3.69157,Private room,Private room in rental unit
+2,1430996103029951321,661816734,Cuatro Caminos,Habitación piso compartido.,40.45468095180353,-3.6918104597843455,Private room,Private room in rental unit
+2,1406520860915671728,691414022,Cuatro Caminos,Home Art Bernabéu - 1 Hab,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+2,1407228535905698085,691414022,Cuatro Caminos,Home Art Bernabéu - 1 Hab,40.4550626,-3.7005653,Entire home/apt,Entire rental unit
+2,1223066602231979992,31772865,El Viso,CituSpace Castellana - 2 Bed apartment with 2 bath,40.4470704,-3.6905118,Entire home/apt,Entire rental unit
+2,1223073540959177933,31772865,El Viso,CituSpace Castellana - 2 Bed apartment with 2 bath,40.4470704,-3.6905118,Entire home/apt,Entire rental unit
+2,1344975793284355652,661816734,El Viso,Habitación en piso compartido,40.45003917149472,-3.690619007966321,Private room,Private room in rental unit
+2,1348543763757358144,661816734,El Viso,Habitación en piso compartido,40.45019039270865,-3.6904688920562654,Private room,Private room in rental unit
+2,1354245797336428033,661816734,El Viso,Habitación en piso compartido,40.4502862605474,-3.6901334118424782,Private room,Private room in rental unit
+2,1354252011273761917,661816734,El Viso,Habitación en piso compartido,40.4502,-3.69064,Private room,Private room in rental unit
+2,1430970744373803337,661816734,El Viso,Habitación piso compartido.,40.44930288232351,-3.6889389725706816,Private room,Private room in rental unit
+2,1430974899489976259,661816734,El Viso,Habitación piso compartido.,40.44916188885172,-3.688643002918066,Private room,Private room in rental unit
+2,5312932,5239042,Embajadores,"Bright and modern, in the heart of Madrid",40.41076,-3.70223,Entire home/apt,Entire rental unit
+2,15143840,5239042,Embajadores,"Bright and modern, in the heart of Madrid",40.41058,-3.70217,Entire home/apt,Entire rental unit
+2,7818234,5239042,Embajadores,"Cozy and quiet, in the heart of Madrid",40.41058,-3.70217,Entire home/apt,Entire rental unit
+2,8422607,5239042,Embajadores,"Cozy and quiet, in the heart of Madrid",40.41058,-3.70217,Entire home/apt,Entire rental unit
+2,1247839784801012832,31772865,Embajadores,CituSpace - Tirso de Molina - 1 Bedroom w sofa bed,40.4122263,-3.7038173,Entire home/apt,Entire rental unit
+2,1247948836665506735,31772865,Embajadores,CituSpace - Tirso de Molina - 1 Bedroom w sofa bed,40.4122263,-3.7038173,Entire home/apt,Entire rental unit
+2,1247947555188023402,31772865,Embajadores,CituSpace Tirso de Molina - Studio,40.4122263,-3.7038173,Entire home/apt,Entire rental unit
+2,1247950569133046750,31772865,Embajadores,CituSpace Tirso de Molina - Studio,40.4122263,-3.7038173,Entire home/apt,Entire rental unit
+2,569053623876496036,271118919,Embajadores,"Private Room & Balcony, Views",40.40807723999024,-3.7011990547180176,Private room,Private room in rental unit
+2,587839801886903076,271118919,Embajadores,"Private Room & Balcony, Views",40.40807723999024,-3.7011990547180176,Private room,Private room in rental unit
+2,762844050954238088,485016897,Embajadores,"Studio-Apartamento de diseño en Sol, Madrid Centro",40.4130169,-3.702557799999999,Entire home/apt,Entire rental unit
+2,767352176390857406,485016897,Embajadores,"Studio-Apartamento de diseño en Sol, Madrid Centro",40.4130169,-3.702557799999999,Entire home/apt,Entire loft
+2,50427903,16944831,Fontarrón,Room for student or worker girls,40.40133,-3.64314,Private room,Private room in rental unit
+2,50428217,16944831,Fontarrón,Room for student or worker girls,40.40112,-3.64289,Private room,Private room in rental unit
+2,1431806567803307336,291253690,Gaztambide,Elegance & comfort in Chamberi- B,40.4390465506257,-3.716445950938819,Entire home/apt,Entire rental unit
+2,1431816316581859772,291253690,Gaztambide,Elegance & comfort in Chamberi- B,40.43885,-3.71643,Entire home/apt,Entire rental unit
+2,1431807580821201088,291253690,Gaztambide,Elegance & comfort in Chamberi- C,40.43905,-3.71645,Entire home/apt,Entire rental unit
+2,1431821691573877726,291253690,Gaztambide,Elegance & comfort in Chamberi- C,40.4391232213986,-3.715913523210395,Entire home/apt,Entire rental unit
+2,1409279807030720429,550521861,Gaztambide,Apartamento de 6 habitaciones,40.43639470000001,-3.7161926,Entire home/apt,Entire rental unit
+2,1420309683838340227,550521861,Gaztambide,Apartamento de 6 habitaciones,40.43639470000001,-3.7161926,Entire home/apt,Entire rental unit
+2,1066540931043653558,31772865,Goya,CituSpace Alcalá - Apartamento en Barrio Salamanca,40.42262275879611,-3.678344222432532,Entire home/apt,Entire rental unit
+2,1066550819697316460,31772865,Goya,CituSpace Alcalá - Apartamento en Barrio Salamanca,40.42336237024321,-3.678495274315256,Entire home/apt,Entire rental unit
+2,594676504954847187,434208714,Guindalera,"Blueground | Salamanca, nr Plaza de Toros",40.4335148,-3.6722237,Entire home/apt,Entire rental unit
+2,898373118257988096,434208714,Guindalera,"Blueground | Salamanca, nr Plaza de Toros",40.4335148,-3.6722237,Entire home/apt,Entire rental unit
+2,967490828356733761,494237478,Guindalera,Home Art Madrid Estudio Groundfloor,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+2,967492731256878578,494237478,Guindalera,Home Art Madrid Estudio Groundfloor,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+2,967527713763127470,494237478,Guindalera,Home Art Madrid Estudio Ático,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+2,967529259944455965,494237478,Guindalera,Home Art Madrid Estudio Ático,40.43369879999999,-3.6722668,Entire home/apt,Entire rental unit
+2,1427403196612596104,661816734,Guindalera,Habitacion en piso compartido,40.43797892100704,-3.675641938572047,Private room,Private room in rental unit
+2,1427409862271917621,661816734,Guindalera,Habitacion en piso compartido,40.43821114118376,-3.675553239424435,Private room,Private room in rental unit
+2,1404208393364187950,661816734,Ibiza,Habitación en piso compartido,40.41795937988988,-3.673690435543319,Private room,Private room in rental unit
+2,1404221813293980773,661816734,Ibiza,Habitación en piso compartido,40.41786,-3.67407,Private room,Private room in rental unit
+2,1283370419870251833,571742692,Imperial,"Puerta Toledo, Habitación doble",40.4056018,-3.7135842,Private room,Private room in rental unit
+2,1283376068851290365,571742692,Imperial,"Puerta Toledo, Habitación doble",40.4056018,-3.7135842,Private room,Private room in rental unit
+2,1255025311260742489,133056146,Justicia,Dobo Justicia 2Pax 1Bth,40.4235621,-3.6954886,Entire home/apt,Entire rental unit
+2,1255026920684474197,133056146,Justicia,Dobo Justicia 2Pax 1Bth,40.4235621,-3.6954886,Entire home/apt,Entire rental unit
+2,1255024298615573984,133056146,Justicia,Dobo Justicia 4Pax 1Bth with Sofa Bed,40.4235621,-3.6954886,Entire home/apt,Entire rental unit
+2,1255030025693673438,133056146,Justicia,Dobo Justicia 4Pax 1Bth with Sofa Bed,40.4235621,-3.6954886,Entire home/apt,Entire rental unit
+2,51518437,229138489,Justicia,Inmejorable Ubicación en Madrid,40.42376,-3.69188,Entire home/apt,Entire condo
+2,51533380,229138489,Justicia,Inmejorable Ubicación en Madrid,40.42398,-3.69186,Entire home/apt,Entire rental unit
+2,1204269959031280563,291253690,Justicia,Bright spacious family apartment,40.42809,-3.70017,Entire home/apt,Entire rental unit
+2,1204274588072646670,291253690,Justicia,Bright spacious family apartment,40.42788927388426,-3.699936129794749,Entire home/apt,Entire rental unit
+2,701915609306316316,434208714,Justicia,"Blueground | Chueca, completely furnished",40.4213937,-3.6982813,Entire home/apt,Entire rental unit
+2,706365434977891681,434208714,Justicia,"Blueground | Chueca, completely furnished",40.4213937,-3.6982813,Entire home/apt,Entire rental unit
+2,681738660196486512,434208714,Justicia,"Blueground | Chueca, in the heart of Madrid",40.4245547,-3.6991939,Entire home/apt,Entire rental unit
+2,700506328928861604,434208714,Justicia,"Blueground | Chueca, in the heart of Madrid",40.4245547,-3.6991939,Entire home/apt,Entire rental unit
+2,771444261734906757,434208714,Justicia,"Blueground | Chueca, nr city center",40.4228923,-3.693789799999999,Entire home/apt,Entire rental unit
+2,833064792844890222,434208714,Justicia,"Blueground | Chueca, nr city center",40.4228923,-3.693789799999999,Entire home/apt,Entire rental unit
+2,1428784056064468851,511649938,Justicia,Exyca Chueca,40.4248851,-3.6985488,Entire home/apt,Entire rental unit
+2,1429526338780631831,511649938,Justicia,Exyca Chueca,40.4248851,-3.6985488,Entire home/apt,Entire rental unit
+2,909175983949106874,518331793,Justicia,Habitación privada en Gran Vía (cama indiv. 105cm),40.4205958,-3.6986786,Private room,Private room in rental unit
+2,949229243863065232,518331793,Justicia,Habitación privada en Gran Vía (cama indiv. 105cm),40.4205958,-3.6986786,Private room,Private room in rental unit
+2,1344957911286597163,661816734,Justicia,Habitación en piso compartido,40.42146607277333,-3.697632975025801,Private room,Private room in rental unit
+2,1344966130706688508,661816734,Justicia,Habitación en piso compartido,40.42121224552777,-3.697779212632052,Private room,Private room in rental unit
+2,1364574446589569544,661816734,Justicia,Habitación en piso compartido,40.42782,-3.70059,Private room,Private room in rental unit
+2,1364596823939085102,661816734,Justicia,Habitación en piso compartido,40.42825375380865,-3.700501224236165,Private room,Private room in rental unit
+2,893891591625645539,434208714,Lista,"Blueground | Lista, doorman, nr El Retiro Park",40.43428,-3.67469,Entire home/apt,Entire rental unit
+2,893892008914586753,434208714,Lista,"Blueground | Lista, doorman, nr El Retiro Park",40.43428,-3.67469,Entire home/apt,Entire rental unit
+2,1404137799234032065,661816734,Lista,Habitación en piso compartido,40.428790891383336,-3.674675455189728,Private room,Private room in rental unit
+2,1404190513083242426,661816734,Lista,Habitación en piso compartido,40.42924,-3.67456,Private room,Private room in rental unit
+2,1113605800671978642,294949526,Lucero,Guillermo,40.4070875,-3.7506901,Private room,Private room in rental unit
+2,1114326769269935209,294949526,Lucero,Guillermo,40.40668557988421,-3.751362379078021,Private room,Private room in rental unit
+2,915794359353518442,135505201,Moscardó,Habitación privada,40.3874694,-3.7137286,Private room,Private room in rental unit
+2,915827660596527576,135505201,Moscardó,Habitación privada,40.3874694,-3.7137286,Private room,Private room in rental unit
+2,1141853803574417552,397053855,Nueva España,1 bedroom apartment in La Castellana,40.46129,-3.68736,Entire home/apt,Entire rental unit
+2,1152890580845890350,397053855,Nueva España,1 bedroom apartment in La Castellana,40.46139,-3.68723,Entire home/apt,Entire rental unit
+2,1097699379458114308,397053855,Nueva España,3 bedroom apartment in La Castellana Sharing Co,40.46160643376312,-3.686966555437404,Entire home/apt,Entire rental unit
+2,1097725397198068979,397053855,Nueva España,3 bedroom apartment in La Castellana Sharing Co,40.46188329151002,-3.68687216233258,Entire home/apt,Entire rental unit
+2,1141829836769956686,397053855,Nueva España,Apartment in Castellana 2 Bedrooms by Sharing Co,40.46342234809023,-3.687262524750087,Entire home/apt,Entire rental unit
+2,1152869056742814622,397053855,Nueva España,Apartment in Castellana 2 Bedrooms by Sharing Co,40.46334106547173,-3.687071736481886,Entire home/apt,Entire rental unit
+2,1436128479068441994,133056146,Numancia,Dobo Moncayo 4Pax 1Bth with Murphy Bed,40.40212,-3.66368,Private room,Private room in rental unit
+2,1436144595172583534,133056146,Numancia,Dobo Moncayo 4Pax 1Bth with Murphy Bed,40.4023,-3.66355,Private room,Private room in rental unit
+2,1446103698051055044,413550168,Numancia,Lena Suite Hotel. Privado y acceso independiente.,40.39926,-3.66453,Entire home/apt,Entire rental unit
+2,1446106343881797752,413550168,Numancia,Lena Suite Hotel. Privado y acceso independiente.,40.399114221922886,-3.6646141161097536,Entire home/apt,Entire rental unit
+2,980358473352577104,391810099,Opañel,apartamento reformado en madrid rio de alquiler te,40.391067799083245,-3.7231002488513134,Entire home/apt,Entire rental unit
+2,980358582332087407,391810099,Opañel,apartamento reformado en madrid rio de alquiler te,40.39208279252259,-3.723207248115928,Entire home/apt,Entire rental unit
+2,980368543059892148,391810099,Opañel,apartamento reformado en madrid rio de alquiler te,40.39215,-3.7232,Entire home/apt,Entire rental unit
+2,980432847763709761,391810099,Opañel,apartamento reformado en madrid rio de alquiler te,40.39086,-3.72522,Entire home/apt,Entire rental unit
+2,980432975949363695,391810099,Opañel,apartamento reformado en madrid rio de alquiler te,40.390771748271455,-3.723462709790231,Entire home/apt,Entire rental unit
+2,980438051004599053,391810099,Opañel,apartamento reformado en madrid rio de alquiler te,40.390744039693054,-3.725133531043195,Entire home/apt,Entire rental unit
+2,1026680119138115370,65656674,Orcasur,Acogedor apartamento junto a la Caja Mágica,40.3704111,-3.6982935,Entire home/apt,Entire rental unit
+2,1171718186428235335,65656674,Orcasur,Acogedor apartamento junto a la Caja Mágica,40.3704111,-3.6982935,Entire home/apt,Entire rental unit
+2,1206340600250098428,232520062,Pacífico,Valderribas - Habitación Ventana Exterior,40.4066418,-3.6801959,Private room,Private room in rental unit
+2,1206349745888042159,232520062,Pacífico,Valderribas - Habitación Ventana Exterior,40.4066418,-3.6801959,Private room,Private room in rental unit
+2,1206356645407921478,232520062,Pacífico,Valderribas - Habitación Ventana Interior,40.4066418,-3.6801959,Private room,Private room in rental unit
+2,1206361428701972068,232520062,Pacífico,Valderribas - Habitación Ventana Interior,40.4066418,-3.6801959,Private room,Private room in rental unit
+2,1304379413329605736,434208714,Pacífico,"Blueground | Pacífico, elevator & w/d, nr Retiro",40.4044344,-3.6748816,Entire home/apt,Entire rental unit
+2,1314484991713722109,434208714,Pacífico,"Blueground | Pacífico, elevator & w/d, nr Retiro",40.4044344,-3.6748816,Entire home/apt,Entire rental unit
+2,1331793159348279185,473275950,Pacífico,Habitación Privada Madrid Retiro,40.40698728719328,-3.67889270742872,Private room,Private room in rental unit
+2,1476688787325365941,473275950,Pacífico,Habitación Privada Madrid Retiro,40.40692,-3.67892,Private room,Private room in rental unit
+2,43828290,17011402,Palacio,Madrid,40.4217,-3.71009,Entire home/apt,Entire rental unit
+2,43842071,17011402,Palacio,Madrid,40.42025,-3.71056,Entire home/apt,Entire rental unit
+2,46843887,17011402,Palacio,Madrid,40.42005,-3.71068,Entire home/apt,Entire serviced apartment
+2,49253784,17011402,Palacio,Madrid,40.42163,-3.71043,Entire home/apt,Entire serviced apartment
+2,1009466345727228120,47554470,Palacio,La Latina-City Centre-WiFi-A/C-SmartTV,40.40973168339459,-3.7172467706102,Entire home/apt,Entire rental unit
+2,1009467784086891818,47554470,Palacio,La Latina-City Centre-WiFi-A/C-SmartTV,40.40967,-3.71718,Entire home/apt,Entire rental unit
+2,874562151958238334,66952923,Palacio,Habitación Plaza de España,40.42277284739648,-3.710924349725247,Private room,Private room in rental unit
+2,1418173515005074772,66952923,Palacio,Habitación Plaza de España,40.42272920216527,-3.7109142914414406,Private room,Private room in rental unit
+2,40585946,270258576,Palacio,Generator - Deluxe King,40.42021,-3.70889,Private room,Private room in hostel
+2,1496324597859889715,270258576,Palacio,Generator - Deluxe King,40.41975,-3.70867,Private room,Room in hotel
+2,1140322291975373342,291253690,Palacio,"Flamenco Style Apartment | Palacio Real, La Latina",40.41363052342934,-3.7135381897780215,Entire home/apt,Entire rental unit
+2,1140332329387943254,291253690,Palacio,"Flamenco Style Apartment | Palacio Real, La Latina",40.41164,-3.7147,Entire home/apt,Entire rental unit
+2,1140343125181975514,291253690,Palacio,"Flamenco Style Apartment | Palacio Real, La Latina",40.41366,-3.71387,Entire home/apt,Entire rental unit
+2,1140345058545890300,291253690,Palacio,"Flamenco Style Apartment | Palacio Real, La Latina",40.4122,-3.71522,Entire home/apt,Entire rental unit
+2,1167865917001380751,316795838,Palacio,Madrid 1915 Private Suites Apartamento Lujo 2 hab,40.41596,-3.70961,Entire home/apt,Entire rental unit
+2,1168046398172945988,316795838,Palacio,Madrid 1915 Private Suites Apartamento Lujo 2 hab,40.41596,-3.70961,Entire home/apt,Entire rental unit
+2,1298500639650701094,434208714,Palacio,"Blueground | Palacio, elev, washer, move-in-ready",40.4153398,-3.7123217,Entire home/apt,Entire rental unit
+2,1298501087254513904,434208714,Palacio,"Blueground | Palacio, elev, washer, move-in-ready",40.4153398,-3.7123217,Entire home/apt,Entire rental unit
+2,1219478007919564612,434208714,Palacio,"Blueground | Palacio, washer & air conditioning",40.4210968,-3.709806099999999,Entire home/apt,Entire rental unit
+2,1219502160359550990,434208714,Palacio,"Blueground | Palacio, washer & air conditioning",40.4210968,-3.709806099999999,Entire home/apt,Entire rental unit
+2,1361409105395582589,511649938,Palacio,Exyca Homes Gran Via,40.4213297,-3.7093026,Entire home/apt,Entire rental unit
+2,1394741579671659830,511649938,Palacio,Exyca Homes Gran Via,40.4213297,-3.7093026,Entire home/apt,Entire rental unit
+2,1309277459351034826,661816734,Palacio,Habitación en piso compartido,40.416326723095366,-3.710740118806463,Private room,Private room in rental unit
+2,1309292115417543729,661816734,Palacio,Habitación en piso compartido,40.41610541623062,-3.711245438078401,Private room,Private room in rental unit
+2,1369546775593225417,661816734,Palacio,Habitación en piso compartido,40.42114,-3.70859,Private room,Private room in rental unit
+2,1369551571714803216,661816734,Palacio,Habitación en piso compartido,40.42095366498171,-3.708697973216832,Private room,Private room in rental unit
+2,1466712222556351308,707723220,Palacio,Apartamento de un dormitorio,40.417724,-3.708958399999999,Entire home/apt,Entire rental unit
+2,1466824824201025497,707723220,Palacio,Apartamento de un dormitorio,40.417724,-3.708958399999999,Entire home/apt,Entire rental unit
+2,1466676274522026916,707723220,Palacio,Ático de un dormitorio,40.417137,-3.7091519,Entire home/apt,Entire rental unit
+2,1466816932696885841,707723220,Palacio,Ático de un dormitorio,40.417137,-3.7091519,Entire home/apt,Entire rental unit
+2,23564481,149257574,Prosperidad,Exterior Studio with free Wifi. America Av. Zone,40.44396065151728,-3.673436922449344,Entire home/apt,Entire rental unit
+2,25398055,149257574,Prosperidad,Exterior Studio with free Wifi. America Av. Zone,40.44444,-3.67329,Entire home/apt,Entire rental unit
+2,51293909,291759043,Prosperidad,Dobo ANR1 2Pax 1Bth Gnd Floor,40.442326,-3.671175,Entire home/apt,Entire rental unit
+2,51293911,291759043,Prosperidad,Dobo ANR1  2Pax 1Bth Gnd Floor,40.442326,-3.671175,Entire home/apt,Entire rental unit
+2,721476501078701599,291759043,Prosperidad,Dobo ANR2 2Pax 1Bth,40.4401072,-3.6775212,Entire home/apt,Entire rental unit
+2,780507594477362209,291759043,Prosperidad,Dobo ANR2 2Pax 1Bth,40.4401072,-3.6775212,Entire home/apt,Entire rental unit
+2,964253294574156684,533423349,Prosperidad,At 20' by Metro from the city centre (A),40.4389264587436,-3.674564576196282,Entire home/apt,Entire rental unit
+2,1100490960092073798,533423349,Prosperidad,At 20' by Metro from the city centre (A),40.438825839616506,-3.674895858861498,Entire home/apt,Entire rental unit
+2,1045404706171185756,31772865,Recoletos,CituSpace Alcalá - Apartamento en Barrio Salamanca,40.42401,-3.68032,Entire home/apt,Entire rental unit
+2,1066553633300097956,31772865,Recoletos,CituSpace Alcalá - Apartamento en Barrio Salamanca,40.42400412863841,-3.680350849075216,Entire home/apt,Entire rental unit
+2,600474685977713489,434208714,Recoletos,"Blueground | Salamanca, nr El Retiro Park",40.423728,-3.6813995,Entire home/apt,Entire rental unit
+2,698903263996054204,434208714,Recoletos,"Blueground | Salamanca, nr El Retiro Park",40.423728,-3.6813995,Entire home/apt,Entire rental unit
+2,1427413916917870423,661816734,Recoletos,Habitación en piso compartido,40.4224479312558,-3.687017642106624,Private room,Private room in rental unit
+2,1427421593913347914,661816734,Recoletos,Habitación en piso compartido,40.422377662338405,-3.685248603519948,Private room,Private room in rental unit
+2,1427441388246071409,661816734,Recoletos,Habitación en piso compartido,40.42204,-3.68702,Private room,Private room in rental unit
+2,1427445142288452239,661816734,Recoletos,Habitación en piso compartido,40.42202,-3.68499,Private room,Private room in rental unit
+2,1390446117756460439,661816734,Recoletos,Habitación piso compartido,40.42745088890262,-3.6831956698476502,Private room,Private room in rental unit
+2,1394760236920536878,661816734,Recoletos,Habitación piso compartido,40.42596,-3.68289,Private room,Private room in rental unit
+2,1394792095236778703,661816734,Recoletos,Habitación piso compartido,40.42787,-3.68163,Private room,Private room in rental unit
+2,1399163684856790041,661816734,Recoletos,Habitación piso compartido,40.42586,-3.68297,Private room,Private room in rental unit
+2,1399168636248341726,661816734,Recoletos,Habitación piso compartido,40.42662145143545,-3.6834822957539184,Private room,Private room in rental unit
+2,1399176392813481900,661816734,Recoletos,Habitación piso compartido,40.42771,-3.6817,Private room,Private room in rental unit
+2,1427362981529096744,661816734,Rios Rosas,Habitación en piso compartido,40.44066437089512,-3.702109703641226,Private room,Private room in rental unit
+2,1427379197634496648,661816734,Rios Rosas,Habitación en piso compartido,40.44245,-3.70071,Private room,Private room in rental unit
+2,1427385712906480893,661816734,Rios Rosas,Habitación en piso compartido,40.44233791881612,-3.7007014216149456,Private room,Private room in rental unit
+2,1427389953963672873,661816734,Rios Rosas,Habitación en piso compartido,40.44059114163528,-3.702246887108681,Private room,Private room in rental unit
+2,1114941310995216975,133056146,San Diego,Dobo San Diego 2Br 4Pax 1Bth Gnd Floor,40.3911811,-3.6670178,Entire home/apt,Entire rental unit
+2,1114941537716483239,133056146,San Diego,Dobo San Diego 2Br 4Pax 1Bth Gnd Floor,40.3911811,-3.6670178,Entire home/apt,Entire rental unit
+2,1107364511673446145,133056146,San Diego,Dobo San Diego 2Br 4Pax 1Bth with Terrace,40.39118,-3.66702,Entire home/apt,Entire rental unit
+2,1123101037619963484,133056146,San Diego,Dobo San Diego 2Br 4Pax 1Bth with Terrace,40.3911811,-3.6670178,Entire home/apt,Entire rental unit
+2,917793583419782807,391810099,San Diego,apartamentos reformados en vallecas,40.392146685568726,-3.667877199527117,Entire home/apt,Entire rental unit
+2,917947150925969419,391810099,San Diego,apartamentos reformados en vallecas,40.39192573960872,-3.667522531578393,Entire home/apt,Entire rental unit
+2,1213665043476654011,65656674,San Fermín,Acogedor apartamento en la Caja Mágica,40.37521441602496,-3.6901376986724777,Entire home/apt,Entire rental unit
+2,1215722102715891684,65656674,San Fermín,Acogedor apartamento en la Caja Mágica,40.37521032931135,-3.690191342852776,Entire home/apt,Entire rental unit
+2,548520124802401692,460391145,San Isidro,Nice studio with terrace,40.39558,-3.73197,Entire home/apt,Entire rental unit
+2,833332888695282574,460391145,San Isidro,Nice studio with terrace,40.39589080041149,-3.7318954921314726,Entire home/apt,Entire rental unit
+2,1288343869656949353,661789427,San Isidro,Piso a 15 minutos del centro,40.39854525026579,-3.7317537592624,Entire home/apt,Entire rental unit
+2,1288356975432385670,661789427,San Isidro,Piso a 15 minutos del centro,40.39857,-3.73174,Entire home/apt,Entire rental unit
+2,1282010348939931508,354999395,San Pascual,Habitación con Baño Privado,40.43889214929885,-3.652838126469628,Private room,Private room in rental unit
+2,1286949606367187754,354999395,San Pascual,Habitación con Baño Privado,40.43902,-3.65308,Private room,Private room in rental unit
+2,30320,130907,Sol,Apartamentos Dana Sol,40.41476,-3.70418,Entire home/apt,Entire rental unit
+2,1450142911308416001,130907,Sol,Apartamentos Dana Sol,40.41504,-3.70435,Entire home/apt,Entire rental unit
+2,628230480971957675,105344430,Sol,"Estudio Privado ""Opera-Sol""",40.4167,-3.70707,Entire home/apt,Entire rental unit
+2,628237571714796006,105344430,Sol,"Estudio Privado ""Opera-Sol""",40.41682,-3.70654,Entire home/apt,Entire rental unit
+2,1427424922149976814,661816734,Sol,Habitación en piso compartido,40.41663,-3.70243,Private room,Private room in rental unit
+2,1429498442904787741,661816734,Sol,Habitación en piso compartido,40.41700185359699,-3.702237505046482,Private room,Private room in rental unit
+2,1333310417765191916,670890476,Sol,Habitación de un piso en Sol,40.41623123657345,-3.704256076731582,Private room,Private room in rental unit
+2,1333324726733673844,670890476,Sol,Habitación de un piso en Sol,40.4165,-3.70402,Private room,Private room in rental unit
+2,872384079324085168,31772865,Trafalgar,CituSpace Sandoval - 1 Bed Apartment in Chamberí,40.43063,-3.70445,Entire home/apt,Entire rental unit
+2,872909351438986621,31772865,Trafalgar,CituSpace Sandoval - 1 Bed Apartment in Chamberí,40.43101726991004,-3.7040427957087614,Entire home/apt,Entire rental unit
+2,654080915562183035,434208714,Trafalgar,"Blueground | Trafalgar, furnished & equipped",40.4351278,-3.7031621,Entire home/apt,Entire rental unit
+2,655600942932700879,434208714,Trafalgar,"Blueground | Trafalgar, furnished & equipped",40.4351278,-3.7031621,Entire home/apt,Entire rental unit
+2,876662569232028534,434208714,Trafalgar,"Blueground | Trafalgar, nr Plaza de Olavide",40.4335787,-3.698887,Entire home/apt,Entire rental unit
+2,954860341915432182,434208714,Trafalgar,"Blueground | Trafalgar, nr Plaza de Olavide",40.43364,-3.69875,Entire home/apt,Entire rental unit
+2,1364483995292925287,661816734,Trafalgar,Habitación en piso compartido,40.42912,-3.7006,Private room,Private room in rental unit
+2,1364490446307033756,661816734,Trafalgar,Habitación en piso compartido,40.42985,-3.70069,Private room,Private room in rental unit
+2,1364493864158551029,661816734,Trafalgar,Habitación en piso compartido,40.429300361323534,-3.70119803364616,Private room,Private room in rental unit
+2,1365077707281181645,661816734,Trafalgar,Habitación en piso compartido,40.42951,-3.70095,Private room,Private room in rental unit
+2,40916,130907,Universidad,Apartasol Apartamentos Dana,40.42247,-3.70577,Entire home/apt,Entire rental unit
+2,750251,130907,Universidad,Apartasol Apartamentos Dana,40.42063868265047,-3.705671159481837,Entire home/apt,Entire rental unit
+2,1450785427509011967,130907,Universidad,Apartasol Apartamentos Dana,40.42256,-3.70558,Entire home/apt,Entire rental unit
+2,1450810214533489678,130907,Universidad,Apartasol Apartamentos Dana,40.42074,-3.70555,Entire home/apt,Entire rental unit
+2,1450814336519229049,130907,Universidad,Apartasol Apartamentos Dana,40.42205,-3.70618,Entire home/apt,Entire rental unit
+2,1450840317879744362,130907,Universidad,Apartasol Apartamentos Dana,40.42302,-3.70633,Entire home/apt,Entire rental unit
+2,1424608422650921196,25280313,Universidad,habitación céntrica con comodidad,40.42299640246607,-3.7070179900178193,Private room,Private room in rental unit
+2,1424608991471409237,25280313,Universidad,habitación céntrica con comodidad,40.42305,-3.70732,Private room,Private room in rental unit
+2,872392622991072284,31772865,Universidad,CituSpace Sandoval - 1 Bed Apartment in Chamberí,40.42875560231244,-3.702463146763105,Entire home/apt,Entire rental unit
+2,872911268122036315,31772865,Universidad,CituSpace Sandoval - 1 Bed Apartment in Chamberí,40.42878,-3.70243,Entire home/apt,Entire rental unit
+2,1107092145048469652,218986228,Universidad,*Granvía 2Gbps Telework. Netflix in 40TV Ergochair,40.4263571,-3.7074789,Private room,Private room in rental unit
+2,1500272200123852943,218986228,Universidad,*Granvía 2Gbps Telework. Netflix in 40TV Ergochair,40.4263571,-3.7074789,Private room,Private room in rental unit
+2,32123511,240975048,Universidad,Hostal en el centro de Madrid a 2min de Callao,40.42094,-3.70441,Hotel room,Room in hostel
+2,32123717,240975048,Universidad,Hostal en el centro de Madrid a 2min de Callao,40.4214,-3.70407,Hotel room,Room in hostel
+2,1119320967160758953,319616632,Universidad,2 Camas en habitación compartida 8 camas.,40.4218907,-3.703881299999999,Shared room,Shared room in hostel
+2,1119328150887420690,319616632,Universidad,2 Camas en habitación compartida 8 camas.,40.4218907,-3.703881299999999,Shared room,Shared room in hostel
+2,1118790995731043941,319616632,Universidad,Cama en habitación compartida 4 literas,40.4218907,-3.703881299999999,Shared room,Shared room in hostel
+2,1118918594600182177,319616632,Universidad,Cama en habitación compartida 4 literas,40.4218907,-3.703881299999999,Shared room,Shared room in hostel
+2,1101459308425097944,434208714,Universidad,"Blueground | Malasaña, elevator, nr shopping",40.4243695,-3.7026741,Entire home/apt,Entire rental unit
+2,1122429998597398169,434208714,Universidad,"Blueground | Malasaña, elevator, nr shopping",40.4243695,-3.7026741,Entire home/apt,Entire rental unit
+2,1097736825539095228,434208714,Universidad,"Blueground | Malasaña, elevator, nr shops",40.4243695,-3.7026741,Entire home/apt,Entire rental unit
+2,1117973122911058981,434208714,Universidad,"Blueground | Malasaña, elevator, nr shops",40.4243695,-3.7026741,Entire home/apt,Entire rental unit
+2,1010923546759626871,493916828,Universidad,"2 Camas en hab. compartida-baño privado, 4 literas",40.4218907,-3.703881299999999,Shared room,Shared room in rental unit
+2,1010940551699508357,493916828,Universidad,"2 Camas en hab. compartida-baño privado, 4 literas",40.4218907,-3.703881299999999,Shared room,Shared room in rental unit
+2,832971784484258490,493916828,Universidad,"Cama en hab. compartida-baño privado, 4 literas.",40.4218907,-3.703881299999999,Shared room,Shared room in rental unit
+2,1012357173035634798,493916828,Universidad,"Cama en hab. compartida-baño privado, 4 literas.",40.4218907,-3.703881299999999,Shared room,Shared room in rental unit
+2,1010939086536303265,493916828,Universidad,Cama en habitación compartida 4 literas,40.4218907,-3.703881299999999,Shared room,Shared room in rental unit
+2,1011543817442397556,493916828,Universidad,Cama en habitación compartida 4 literas,40.4218907,-3.703881299999999,Shared room,Shared room in rental unit
+2,1059985588659746880,553942117,Universidad,"Catrachos Rooms -Cama doble, Baño Compartido",40.4212889,-3.7031182,Private room,Private room in home
+2,1059998034931486767,553942117,Universidad,"Catrachos Rooms -Cama doble, Baño Compartido",40.4212889,-3.7031182,Private room,Private room in home
+2,1427416760227987504,661816734,Universidad,Habitacion en piso compartido,40.42677944934039,-3.711284910270686,Private room,Private room in rental unit
+2,1427421011288020136,661816734,Universidad,Habitacion en piso compartido,40.42479014347593,-3.711085390751365,Private room,Private room in rental unit
+2,1427433992678596269,661816734,Universidad,Habitacion en piso compartido,40.42501,-3.71101,Private room,Private room in rental unit
+2,1427442187689862403,661816734,Universidad,Habitacion en piso compartido,40.4268600246762,-3.711191741357721,Private room,Private room in rental unit
+2,1364582582143267088,661816734,Universidad,Habitación en piso compartido,40.42792839041556,-3.70241704948566,Private room,Private room in rental unit
+2,1365084152583884555,661816734,Universidad,Habitación en piso compartido,40.427878990073374,-3.702373213460584,Private room,Private room in rental unit
+2,1429543743015304109,661816734,Universidad,Habitación piso compartido,40.4213,-3.70228,Private room,Private room in rental unit
+2,1429612394465766628,661816734,Universidad,Habitación piso compartido,40.42109,-3.70196,Entire home/apt,Entire rental unit
+2,1314729674636656242,665232378,Universidad,Cuarto de lujo junto a Gran Via,40.42467,-3.71122,Private room,Private room in rental unit
+2,1314732821569564346,665232378,Universidad,Cuarto de lujo junto a Gran Via,40.42456187003968,-3.7108713160590057,Private room,Private room in rental unit
+2,1478125067794215962,71848646,Valdeacederas,Acogedora habitación en Madrid,40.4609348,-3.6984055,Private room,Private room in rental unit
+2,1479076773497424613,71848646,Valdeacederas,Acogedora habitación en Madrid,40.4609348,-3.6984055,Private room,Private room in rental unit
+2,34972620,263490779,Valdeacederas,HOUSE RENT FOR THE CHAMPIONS FINAL.,40.46376,-3.69803,Entire home/apt,Entire home
+2,34973839,263490779,Valdeacederas,HOUSE RENT FOR THE CHAMPIONS FINAL.,40.4636,-3.69799,Entire home/apt,Entire home
+2,1105060657867969092,493877759,Valdeacederas,Habitación con baño privado,40.4670626,-3.7056482,Private room,Private room in rental unit
+2,1167318753146395727,493877759,Valdeacederas,Habitación con baño privado,40.4670626,-3.7056482,Private room,Private room in rental unit
+2,867913383219281095,106518825,Valdezarza,habitación+TV Netflix HBO Disney Plus Prime Video,40.4699102355086,-3.7178843468427663,Private room,Private room in rental unit
+2,874317046747122784,106518825,Valdezarza,habitación+TV Netflix HBO Disney Plus Prime Video,40.46991,-3.71788,Private room,Private room in rental unit
+2,1399794350772476627,661816734,Vallehermoso,Habitación en piso compartido,40.44186,-3.7144,Private room,Private room in rental unit
+2,1399838079041299039,661816734,Vallehermoso,Habitación en piso compartido,40.44187,-3.7145,Private room,Private room in rental unit
+2,50045702,16944831,Vinateros,Room for student or worker girls,40.40628,-3.64956,Private room,Private room in rental unit
+2,50056511,16944831,Vinateros,Room for student or worker girls,40.40653,-3.64809,Private room,Private room in rental unit
+2,50076413,16944831,Vinateros,Room for student or worker girls,40.40666,-3.6485,Private room,Private room in rental unit
+2,50077174,16944831,Vinateros,Room for student or worker girls,40.40617,-3.64961,Private room,Private room in rental unit

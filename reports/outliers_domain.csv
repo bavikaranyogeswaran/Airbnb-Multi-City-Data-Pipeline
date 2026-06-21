@@ -3,10 +3,10 @@ listings.csv.gz,price_negative,0
 listings.csv.gz,price_zero,0
 listings.csv.gz,latitude_out_of_range,0
 listings.csv.gz,longitude_out_of_range,0
-listings.csv.gz,latitude_outside_london_bbox,10480
-listings.csv.gz,longitude_outside_london_bbox,10480
+listings.csv.gz,latitude_outside_london_bbox,25000
+listings.csv.gz,longitude_outside_london_bbox,25000
 listings.csv.gz,minimum_nights_le_zero,0
-listings.csv.gz,minimum_nights_ge_365,5
+listings.csv.gz,minimum_nights_ge_365,37
 listings.csv.gz,maximum_nights_int_max_sentinel,0
 listings.csv.gz,availability_30_out_of_range,0
 listings.csv.gz,availability_60_out_of_range,0
@@ -18,5 +18,5 @@ listings.csv.gz,bedrooms_negative,0
 listings.csv.gz,beds_negative,0
 calendar.csv.gz,available_not_in_t_f,0
 calendar.csv.gz,minimum_nights_le_zero,0
-calendar.csv.gz,minimum_nights_ge_365,1096
-calendar.csv.gz,maximum_nights_int_max_sentinel,730
+calendar.csv.gz,minimum_nights_ge_365,13703
+calendar.csv.gz,maximum_nights_int_max_sentinel,0
