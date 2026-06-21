@@ -167,10 +167,10 @@ def test_regression_coefficients_exclude_neighbourhood_flag():
     not (TABLES / "city_comparison_summary.csv").exists(),
     reason="artifact not built",
 )
-def test_city_comparison_returns_two_cities():
+def test_city_comparison_returns_four_cities():
     r = client.get("/analytics/comparison/cities")
     assert r.status_code == 200
-    assert len(r.json()) == 2
+    assert len(r.json()) == 4
 
 
 # ── Reports ────────────────────────────────────────────────────────────────────

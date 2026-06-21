@@ -22,7 +22,7 @@ def test_dim_neighbourhood_area_positive(warehouse_con):
 
 def test_dim_neighbourhood_count_matches_source(warehouse_con, city):
     # City-specific neighbourhood counts from the source CSV (A-028).
-    expected = {"london": 33, "amsterdam": 22}
+    expected = {"london": 33, "amsterdam": 22, "madrid": 128, "berlin": 140}
     n = warehouse_con.execute("SELECT COUNT(*) FROM dim_neighbourhood").fetchone()[0]
     exp = expected.get(city, n)   # unknown city: skip the exact check
     assert n == exp, f"expected {exp} neighbourhoods for {city}, got {n}"

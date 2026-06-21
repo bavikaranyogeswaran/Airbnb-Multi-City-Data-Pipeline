@@ -1,7 +1,7 @@
 """Shared pytest fixtures.
 
 warehouse_con is parametrized over all known cities so every warehouse
-test runs against both London and Amsterdam automatically. Tests that
+test runs against London, Amsterdam, Madrid, and Berlin automatically. Tests that
 need raw parquet read it directly. All tests are read-only.
 """
 
@@ -19,6 +19,8 @@ ROOT = Path(__file__).resolve().parents[1]
 MIN_LISTING_ROWS = {
     "london":    50_000,
     "amsterdam":  5_000,
+    "madrid":    15_000,
+    "berlin":     8_000,
 }
 
 
@@ -26,7 +28,7 @@ def _warehouse_path(city: str) -> Path:
     return ROOT / "data" / "processed" / city / "warehouse.duckdb"
 
 
-@pytest.fixture(scope="session", params=["london", "amsterdam"])
+@pytest.fixture(scope="session", params=["london", "amsterdam", "madrid", "berlin"])
 def city(request) -> str:
     return request.param
 
