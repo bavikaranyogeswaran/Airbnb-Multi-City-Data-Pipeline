@@ -11,6 +11,7 @@ const NAV: NavItem[] = [
   { id: 'temporal',   label: 'Temporal Trends',      icon: '📅' },
   { id: 'statistics', label: 'Statistical Findings', icon: '📈' },
   { id: 'comparison', label: 'Cross-City',           icon: '🌍' },
+  { id: 'ai',         label: 'AI Insights',          icon: '🤖' },
 ];
 
 interface Props {
