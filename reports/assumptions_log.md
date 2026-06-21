@@ -1,11 +1,13 @@
 # Assumptions Log
 
-Cities: **London** (2025-09-14) · **Amsterdam** (2025-09-11)
+Cities: **London** (2025-09-14) · **Amsterdam** (2025-09-11) · **Madrid** (2025-09-14) · **Berlin** (2025-09-23)
 
 Every non-trivial choice the downstream pipeline depends on is recorded
 here as a numbered assumption. Each entry states what is assumed, the
 evidence supporting it, the risk if the assumption is wrong, and where
 in the project the assumption is acted on.
+
+Unless noted, each assumption was verified or inherited for all four cities. Amsterdam-specific entries (A-031–A-036) document deviations from the London baseline; Madrid and Berlin follow the Amsterdam schema conventions (same "t"/"f" superhost encoding, same neighbourhood structure without group hierarchy).
 
 Statuses:
 - **verified** — confirmed against the data in an earlier step
@@ -261,6 +263,8 @@ Statuses:
 | A-034 | Amsterdam has 22 neighbourhoods, no borough grouping | verified |
 | A-035 | Amsterdam H2 reversal: non-superhosts rated higher | verified |
 | A-036 | `_gbp` suffix cosmetically wrong for Amsterdam EUR data | noted (D-022) |
+| A-037 | Madrid and Berlin use same schema conventions as Amsterdam | verified |
+| A-038 | City-centre coordinates for haversine distance (all cities) | inherited |
 
 ---
 
@@ -310,6 +314,22 @@ Statuses:
   Cross-city models should not assume superhost → higher rating.
 - **Acted on in:** `hypothesis_test_results.csv` (amsterdam) conclusion field.
 - **Status:** verified.
+
+### A-037 · Madrid and Berlin use the same schema conventions as Amsterdam
+- **Reason:** Observed during EDA generation — `host_is_superhost` stored as "t"/"f" strings, no `neighbourhood_group` field, price denominated in EUR. `parse_bool()` and the existing cleaning transforms handle all three non-London cities identically.
+- **Risk:** Any new city with a different convention would need its own cleaning rule.
+- **Acted on in:** `src/analytics/run_eda.py` makes no city-specific schema assumptions; `src/cleaning/transforms.py` handles all four cities.
+- **Status:** verified.
+
+### A-038 · City centres used for distance calculations
+- **Reason:** `run_eda.py` uses fixed city-centre coordinates for the haversine distance feature. These are canonical geographic centres, not tourism or demand centres.
+  - London: (51.5080, -0.1281) — Trafalgar Square
+  - Amsterdam: (52.3676, 4.9041) — Dam Square
+  - Madrid: (40.4168, -3.7038) — Puerta del Sol
+  - Berlin: (52.5163, 13.3777) — Brandenburg Gate
+- **Risk:** All four cities are polycentric to varying degrees. A single reference point produces a centre-periphery gradient but misses secondary demand clusters.
+- **Acted on in:** `price_by_distance_band.csv` and the `distance_to_centre_km` clustering feature.
+- **Status:** inherited.
 
 ### A-036 · Three derived columns carry a `_gbp` suffix that is wrong for Amsterdam EUR data
 - **Reason:** `revenue_proxy_gbp`, `price_per_bedroom_gbp`, and `neighbourhood_median_price_gbp`

@@ -1,10 +1,10 @@
 # Data Lineage
 
-City: **London** · Snapshot: **2025-09-14**
+Cities: **London** (2025-09-14) · **Amsterdam** (2025-09-11) · **Madrid** (2025-09-14) · **Berlin** (2025-09-23)
 
-Tracks every output back to the source file it was derived from, plus the
-function or SQL that performed the transformation. Use this when a
-warehouse value looks wrong and you need to find the upstream cause.
+The lineage below describes the canonical transformation chain. It applies identically to all four cities — substitute `london` with the relevant city code in every path. Row counts shown are for London; other cities differ in scale but not structure.
+
+Tracks every output back to the source file it was derived from, plus the function or SQL that performed the transformation. Use this when a warehouse value looks wrong and you need to find the upstream cause.
 
 ---
 
@@ -160,7 +160,60 @@ reports/data_quality_report.html
 
 ---
 
-## 7. Run + metadata
+## 7. EDA and statistical analysis lineage
+
+```
+data/processed/{city}/listing_master.parquet
+data/processed/{city}/calendar_clean.parquet
+data/processed/{city}/reviews_clean.parquet
+   │ src.analytics.run_eda.run(city)
+   │   • haversine distance from city centre → distance bands
+   │   • host segment classification (solo / multi / professional)
+   │   • availability band summary
+   │   • OLS regression: log_price ~ room_type + accommodates + bedrooms
+   │                                  + review_scores_rating + superhost
+   │                                  + neighbourhood_cleansed   [HC3]
+   │   • hypothesis tests H1–H5 (Welch t, Mann-Whitney U, Kruskal-Wallis)
+   ▼
+reports/tables/{city}/                         (22 CSV files)
+  numerical_summary.csv
+  price_by_room_type.csv
+  price_by_neighbourhood.csv
+  host_segment_summary.csv
+  availability_band_summary.csv
+  neighbourhood_density.csv
+  price_by_distance_band.csv
+  room_type_by_neighbourhood.csv
+  monthly_availability.csv
+  weekday_weekend_availability.csv
+  minimum_nights_monthly.csv
+  monthly_review_volume.csv
+  host_tenure_summary.csv
+  response_rate_summary.csv
+  market_concentration.csv
+  high_review_low_score_listings.csv
+  review_subdimension_summary.csv
+  review_summary.csv
+  temporal_summary.csv
+  hypothesis_test_results.csv
+  regression_coefficients.csv
+  regression_summary.csv
+```
+
+```
+reports/tables/{city}/ + reports/model_results/
+   │ src.llm.context_builder.*
+   ▼
+Groq API (llama-3.3-70b-versatile)
+   │ src.llm.client.generate
+   ▼
+reports/llm_summaries/{city}_{type}.md         (cached narrative summaries)
+reports/llm_summaries/cross_city.md
+```
+
+---
+
+## 8. Run + metadata
 
 Every orchestrated run is recorded in three tables inside `warehouse.duckdb`:
 

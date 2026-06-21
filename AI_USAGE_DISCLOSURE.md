@@ -29,13 +29,14 @@ No other AI tools (ChatGPT, GitHub Copilot, Gemini, etc.) were used.
 
 Claude Code was used to generate boilerplate and implementation code for:
 
-- FastAPI route modules (`analytics.py`, endpoint handlers)
+- FastAPI route modules (`analytics.py`, `llm.py`, endpoint handlers)
 - Feature engineering scripts (`listing_features.py`, `clustering_features.py`, `host_features.py`)
-- ML model training and evaluation pipelines (`train_price_model.py`, `evaluate_model.py`, `explain_model.py`)
+- ML model training and evaluation pipelines (`train_price_model.py`, `evaluate.py`, `explain.py`)
 - K-Means clustering modules (`cluster_listings.py`, `cluster_hosts.py`)
 - Cluster profiling and naming logic (`cluster_profiles.py`, `host_cluster_profiles.py`)
-- Cross-city transfer analysis (`cross_city_transfer.py`)
-- Residual analysis scripts (`residual_analysis.py`)
+- City-agnostic EDA and statistical analysis generator (`src/analytics/run_eda.py`) — produces all 22 CSVs per city including hypothesis tests (H1–H5) and OLS regression
+- LLM integration layer (`src/llm/client.py`, `context_builder.py`, `prompts.py`, `schema_inspector.py`, `sql_runner.py`) — Groq API wrapper, disk caching, and Text-to-SQL pipeline
+- AI Insights dashboard page (`dashboard/src/pages/AI.tsx`) — narrative summary UI and Text-to-SQL Q&A interface
 
 In each case, the candidate reviewed the generated code, ran it, inspected the outputs, and directed corrections when results were incorrect or incomplete.
 
@@ -48,6 +49,9 @@ AI assistance was used to diagnose and fix errors encountered during execution, 
 - Incorrect `_pick_k()` index reference (`iloc[1]` vs `iloc[0]`) causing wrong k selection
 - `ValueError` in f-string formatting of optional fields
 - sklearn `UserWarning` about feature names when passing numpy arrays to a scaler fitted on a DataFrame
+- `503 Service Unavailable` on LLM endpoints — root cause: FastAPI process did not auto-load `.env`; fixed by adding `load_dotenv(Path(__file__).resolve().parents[2] / '.env')` to `app.py` with an explicit path anchored to the file, not the working directory
+- `TypeError` on Statistics page for Madrid and Berlin — `p_value.toExponential()` called on `null` (H5 uses a summary comparison method with no test statistic); fixed with a null guard in `Statistics.tsx`
+- Metric name mismatch on Statistics page — EDA generator writes `"R2"` and `"Adjusted R2"` (ASCII) but the frontend looked up `"R²"` / `"Adjusted R²"` (Unicode superscript); fixed with a `normMetric()` normaliser
 
 ### 3.3 Architecture and Design Guidance
 
@@ -57,12 +61,15 @@ The candidate used AI assistance to:
 - Structure the GroupShuffleSplit strategy for host-aware train/test splitting
 - Plan the 9-feature listing clustering feature set and 13-feature host feature set
 - Design the priority-ordered cluster naming rule system
+- Design the LLM integration layer — two-stage Text-to-SQL pipeline (schema inspection → SQL generation → validation → execution → explanation) and disk-based summary caching
+- Design the AI Insights dashboard page — section A narrative summary with type selector and cache badge; section B Text-to-SQL with SQL code display and results table
 
 ### 3.4 Documentation
 
 AI assistance was used to draft:
 
 - The `README.md` (reviewed and approved by the candidate)
+- `reports/eda_findings.md`, `reports/assumptions_log.md`, `reports/engineering_decisions.md`, `reports/lineage.md`
 - This disclosure document
 
 ---
