@@ -220,3 +220,62 @@ def render(summary_type: str, context: dict) -> str:
             f"Valid types: {sorted(VALID_TYPES)}"
         )
     return _RENDERERS[summary_type](context)
+
+
+# ── Text-to-SQL prompts ────────────────────────────────────────────────────────
+# These have a different signature from render() so they are standalone functions,
+# not entries in _RENDERERS.
+
+SQL_SYSTEM = """\
+You are a DuckDB SQL expert. Your only job is to convert a natural-language \
+question into a valid DuckDB SELECT statement.
+
+Rules you must follow without exception:
+1. Return ONLY the SQL statement — no explanation, no markdown fences, \
+no comments, no trailing semicolons.
+2. The statement must start with SELECT or WITH (for CTEs). \
+Never use INSERT, UPDATE, DELETE, DROP, CREATE, TRUNCATE, or ALTER.
+3. Use only the table names and column names that appear in the schema block. \
+Do not invent columns or tables.
+4. If the query has no LIMIT clause, add LIMIT 50 at the end.
+5. When joining tables, always use the key columns shown in the \
+KEY RELATIONSHIPS section of the schema.
+6. Prefer MEDIAN() over AVG() for price columns to reduce outlier sensitivity.\
+"""
+
+
+def render_sql(question: str, schema_text: str) -> str:
+    """User-turn prompt for SQL generation — returns SQL only."""
+    return f"""\
+Schema:
+{schema_text}
+
+Question: {question}
+
+Return only the DuckDB SQL SELECT statement that answers this question. \
+No explanation. No markdown. No semicolon at the end.\
+"""
+
+
+def render_explanation(question: str, sql: str, results: list[dict]) -> str:
+    """User-turn prompt for plain-English explanation of query results."""
+    if not results:
+        results_block = "The query returned no rows."
+    else:
+        results_block = json.dumps(results[:10], ensure_ascii=False, indent=2)
+
+    return f"""\
+A stakeholder asked: "{question}"
+
+The following SQL was run against the warehouse:
+{sql}
+
+Results ({len(results)} rows returned, showing up to 10):
+{results_block}
+
+Write 2-3 sentences in plain English explaining what the results show. \
+Use specific numbers from the results. \
+Write in present tense for a non-technical business audience. \
+If no rows were returned, explain that the query found no matching data \
+and suggest a likely reason.\
+"""
