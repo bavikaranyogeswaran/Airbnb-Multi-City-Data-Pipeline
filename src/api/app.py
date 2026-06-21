@@ -19,22 +19,23 @@ from fastapi.responses import RedirectResponse
 
 from .routes import (
     analytics, cities, cleaning, enrichment, familiarization,
-    ingestion, orchestration, quality, warehouse,
+    ingestion, llm, orchestration, quality, warehouse,
 )
 from src.validation import completion_gate as _gate
 
 app = FastAPI(
-    title="Inside Airbnb · London & Amsterdam Pipeline",
-    version="1.0.0",
+    title="Inside Airbnb · Multi-City Pipeline",
+    version="2.0.0",
     description=(
         "FastAPI surface over Familiarization, Ingestion & Profiling, "
         "Cleaning, Enrichment, Warehouse, Quality Tests, Orchestration, "
         "the Analytics layer (EDA + statistical analysis), "
-        "the ML layer (LightGBM price prediction + live inference), "
-        "and the Clustering layer (K-Means market segmentation for London & Amsterdam). "
+        "the ML layer (price prediction + live inference), "
+        "the Clustering layer (K-Means market segmentation), "
+        "and the LLM layer (natural-language summaries via Groq). "
+        "Covers London, Amsterdam, Madrid, and Berlin. "
         "Read endpoints serve generated artifacts; trigger endpoints "
-        "re-run the underlying `run()` functions in-process. "
-        "Heavy steps may block 1–2 min."
+        "re-run the underlying `run()` functions in-process."
     ),
 )
 
@@ -55,6 +56,7 @@ app.include_router(warehouse.router)
 app.include_router(quality.router)
 app.include_router(orchestration.router)
 app.include_router(analytics.router)
+app.include_router(llm.router)
 
 
 @app.get("/", include_in_schema=False)
@@ -97,5 +99,6 @@ def index() -> dict:
             "analytics":             "/analytics",
             "analytics_ml":          "/analytics/ml",
             "analytics_clustering":  "/analytics/clustering",
+            "llm":                   "/analytics/llm",
         },
     }
