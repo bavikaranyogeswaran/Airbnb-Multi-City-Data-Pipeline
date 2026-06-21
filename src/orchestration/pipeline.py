@@ -49,6 +49,7 @@ from src.transformation import (
 )
 from src.validation import quality_report, quality_tests
 from src.orchestration import metadata as meta
+from src.orchestration import incremental
 
 ROOT = Path(__file__).resolve().parents[2]
 CONFIG_PATH = ROOT / "config" / "cities.yml"
@@ -126,6 +127,20 @@ def run(city: str = "london", stages: list[str] | None = None, force: bool = Fal
     _setup_logging(run_id)
 
     meta.ensure_tables(city)
+    incremental.ensure_diff_table(city)
+
+    # Capture the most recently registered snapshot date before this run.
+    # Used later to archive the old listing_master and compute the diff.
+    prev_versions = meta.list_dataset_versions(city)
+    prev_snapshot = str(prev_versions[0]["snapshot_date"]) if prev_versions else None
+
+    # Archive the current listing_master.parquet (old snapshot data) so that
+    # detect_changes() can compare it against the newly processed snapshot.
+    if prev_snapshot and prev_snapshot != snapshot and "transform" in requested:
+        archived = incremental.archive_current(city, prev_snapshot)
+        if archived:
+            log.info("archived previous listing_master for %s @ %s → %s",
+                     city, prev_snapshot, archived)
 
     # Idempotency gate
     if not force and requested == DEFAULT_STAGES and meta.is_snapshot_registered(city, snapshot):
@@ -202,6 +217,17 @@ def run(city: str = "london", stages: list[str] | None = None, force: bool = Fal
     })
 
     if status == "ok" and requested == DEFAULT_STAGES:
+        # Run incremental diff before registering the new version so that
+        # list_dataset_versions() still returns only the previous snapshot.
+        if prev_snapshot and prev_snapshot != snapshot:
+            diff = incremental.detect_changes(city, prev_snapshot, snapshot)
+            log.info(
+                "incremental diff %s → %s: %d new, %d removed, %d price, %d status",
+                prev_snapshot, snapshot,
+                diff.get("new_listings", 0), diff.get("removed_listings", 0),
+                diff.get("price_changes", 0), diff.get("status_changes", 0),
+            )
+
         sha = meta.register_dataset_version(city, snapshot, run_id)
         log.info("dataset version registered: %s @ %s (sha256=%s...)",
                  city, snapshot, sha[:10])

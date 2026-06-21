@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException, Query
 
+from src.orchestration import incremental
 from src.orchestration import metadata as meta
 from src.orchestration import pipeline as pipe
 
@@ -23,14 +24,17 @@ def orchestration_index() -> dict:
         "area": "Pipeline Orchestration & Metadata",
         "stages": list(pipe.STAGE_STEPS.keys()),
         "reads": {
-            "runs":             "GET  /orchestration/runs?city=london&limit=20",
-            "run_detail":       "GET  /orchestration/runs/{run_id}?city=london",
-            "dataset_versions": "GET  /orchestration/dataset-versions?city=london",
-            "lineage":          "GET  /orchestration/lineage  (Markdown)",
-            "decisions":        "GET  /orchestration/engineering-decisions  (Markdown)",
+            "runs":              "GET  /orchestration/runs?city=london&limit=20",
+            "run_detail":        "GET  /orchestration/runs/{run_id}?city=london",
+            "dataset_versions":  "GET  /orchestration/dataset-versions?city=london",
+            "incremental_diff":  "GET  /orchestration/incremental-diff?city=london",
+            "incremental_archives": "GET /orchestration/incremental-archives?city=london",
+            "lineage":           "GET  /orchestration/lineage  (Markdown)",
+            "decisions":         "GET  /orchestration/engineering-decisions  (Markdown)",
         },
         "triggers": {
             "run":              "POST /orchestration/run?city=london&stages=all&force=false",
+            "run_diff":         "POST /orchestration/incremental-diff?city=london&old_snapshot=2025-09-14&new_snapshot=2025-12-01",
         },
     }
 
@@ -62,6 +66,47 @@ def get_lineage():
 def get_engineering_decisions():
     # Every non-trivial architectural choice with Reason / Trade-offs / Future.
     return markdown_response(REPORTS_DIR / "engineering_decisions.md")
+
+
+@router.get("/incremental-diff", summary="Latest incremental diff summary for a city")
+def get_incremental_diff(city: str = Query("london")) -> dict:
+    """
+    Returns counts of new/removed listings and price/status changes from the
+    most recent snapshot comparison stored in the warehouse.
+
+    The diff is computed automatically when a new snapshot is processed via
+    `POST /orchestration/run`. Use the POST variant below to trigger a
+    manual diff between two specific snapshot dates.
+    """
+    return incremental.latest_diff_summary(city)
+
+
+@router.get("/incremental-archives", summary="List archived snapshots available for diffing")
+def list_incremental_archives(city: str = Query("london")) -> dict:
+    """Returns the snapshot dates for which a listing_master archive exists."""
+    return {"city": city, "archives": incremental.list_archives(city)}
+
+
+@router.post("/incremental-diff", summary="Run incremental diff between two snapshots")
+def run_incremental_diff(
+    city: str = Query("london"),
+    old_snapshot: str = Query(..., description="Previous snapshot date (YYYY-MM-DD)"),
+    new_snapshot: str = Query(..., description="New snapshot date (YYYY-MM-DD)"),
+) -> dict:
+    """
+    Manually trigger a change-detection diff between two snapshot dates.
+
+    Requires that `old_snapshot` has been archived under
+    `data/processed/{city}/snapshots/listing_master_{old_snapshot}.parquet`
+    and that the current `listing_master.parquet` corresponds to `new_snapshot`.
+
+    Returns per-category change counts and writes the full diff to
+    `reports/incremental/{city}_diff_{old}_to_{new}.csv`.
+    """
+    result = incremental.detect_changes(city, old_snapshot, new_snapshot)
+    if result.get("status") == "no_baseline":
+        raise HTTPException(status_code=404, detail=result["message"])
+    return result
 
 
 @router.post("/run", summary="Run the pipeline (sync). Empty stages → all.")

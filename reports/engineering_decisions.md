@@ -204,9 +204,12 @@ These show up here because *not* doing them is itself a decision.
 - **Reason.** dbt's value (lineage, testing, materialisation) is duplicated by `src/loading/warehouse.py` + `src/validation/quality_tests.py` + `reports/lineage.md` at a smaller code footprint. dbt would dominate the project size.
 - **Future.** Migrate the analytical SQL to dbt models if the SQL count grows past ~20 or if non-engineers need to contribute models.
 
-### D-021 · No streaming / CDC
-- **Reason.** Inside Airbnb publishes monthly-cadence snapshots. CDC has no source signal here.
-- **Future.** Out of scope for this dataset.
+### D-021 · Snapshot-based incremental processing (not stream CDC)
+- **Reason.** Inside Airbnb publishes monthly-cadence static snapshots, not a change stream. True CDC (log-based row capture) has no source signal here. Instead, `src/orchestration/incremental.py` implements snapshot-to-snapshot diff: it archives the previous `listing_master.parquet` before the transform stage overwrites it, then compares the two parquets after a successful run to surface new/removed listings, price changes (>5%), and status changes.
+- **Outputs.** `reports/incremental/{city}_diff_{old}_to_{new}.csv` + `snapshot_diff` table in the warehouse.
+- **API.** `GET /orchestration/incremental-diff?city=london` returns the latest diff summary; `POST /orchestration/incremental-diff` triggers a manual diff between two explicit snapshot dates.
+- **Trade-offs.** Requires that a previous successful run exists for the city (first-run returns an empty baseline). The 5% price-change threshold is configurable in `incremental.PRICE_THRESHOLD`.
+- **Future.** Partition `fact_listing_snapshot` by snapshot date to support full SCD-2 history rather than single-snapshot fact rows.
 
 ---
 
@@ -235,4 +238,4 @@ These show up here because *not* doing them is itself a decision.
 | D-018 | EPSG:27700 for projected geometry | accepted |
 | D-019 | No Docker | deferred |
 | D-020 | No dbt | deferred |
-| D-021 | No streaming / CDC | n/a for this source |
+| D-021 | Snapshot-based incremental diff (not stream CDC) | accepted |
