@@ -44,7 +44,13 @@ export default function AI({ city }: Props) {
       : endpoints.llmSummary(city, summaryType, refresh);
     try {
       const res = await fetch(url);
-      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+      if (!res.ok) {
+        const body = await res.json().catch(() => null);
+        const detail = body?.detail;
+        throw new Error(
+          typeof detail === 'string' ? detail : `${res.status} ${res.statusText}`
+        );
+      }
       const data = await res.json() as LlmSummaryResponse;
       setSummaryState({ data, loading: false, error: null });
     } catch (err: unknown) {
@@ -154,7 +160,11 @@ export default function AI({ city }: Props) {
         </div>
 
         {summaryState.loading && <Loading />}
-        {summaryState.error   && <Err message={summaryState.error} />}
+        {summaryState.error && (
+          <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-600 text-sm">
+            {summaryState.error}
+          </div>
+        )}
         {summaryState.data && !summaryState.loading && (
           <div className="border-l-4 pl-4 py-1" style={{ borderColor: color }}>
             <p className="text-xs text-brand-gray mb-1">{summaryState.data.model}</p>
