@@ -109,7 +109,7 @@ export interface HypothesisTest {
   hypothesis: string;
   method: string;
   n_total: number;
-  p_value: number;
+  p_value: number | null;
   effect_size: number;
   effect_label: string;
   significant: boolean | string;

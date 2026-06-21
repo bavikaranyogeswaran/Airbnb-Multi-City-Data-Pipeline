@@ -16,9 +16,12 @@ function isSig(v: boolean | string): boolean {
   return v === true || v === 'True';
 }
 
+/** Normalise metric keys so R² and R2 both match */
+function normMetric(s: string) { return s.replace('²', '2').toLowerCase(); }
+
 /** Pull a single metric value from the regression summary rows */
 function getReg(rows: RegressionSummary[], key: string): string {
-  const row = rows.find((r) => r.metric === key || r.metric === key.toLowerCase());
+  const row = rows.find((r) => r.metric === key || normMetric(r.metric) === normMetric(key));
   if (!row) return '—';
   const n = Number(row.value);
   return isNaN(n) ? String(row.value) : n.toFixed(4);
@@ -111,7 +114,9 @@ export default function Statistics({ city }: Props) {
               <div className="grid grid-cols-4 gap-4 mb-3">
                 <div>
                   <p className="text-xs text-brand-gray">p-value</p>
-                  <p className="font-mono text-sm font-semibold">{t.p_value.toExponential(2)}</p>
+                  <p className="font-mono text-sm font-semibold">
+                    {t.p_value != null ? t.p_value.toExponential(2) : 'N/A'}
+                  </p>
                 </div>
                 <div>
                   <p className="text-xs text-brand-gray">{t.effect_label}</p>
