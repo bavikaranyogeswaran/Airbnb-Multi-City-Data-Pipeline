@@ -712,6 +712,8 @@ DATA_DIR = ROOT / "data" / "processed"
 _CLUSTER_CENTRES: dict[str, tuple[float, float]] = {
     "london":    (51.5080, -0.1281),
     "amsterdam": (52.3732,  4.8932),
+    "new_york":  (40.7580, -73.9855),
+    "berlin":    (52.5163,  13.3777),
 }
 
 # Features and skewed cols must match the order used during K-Means training

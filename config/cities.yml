@@ -98,3 +98,99 @@ cities:
         name: neighbourhoods.geojson
         url: "https://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2025-09-11/visualisations/neighbourhoods.geojson"
         compressed: false
+
+  new_york:
+    code: new_york
+    name: New York City
+    country: United States
+    country_code: US
+    currency_code: USD
+    timezone: America/New_York
+
+    source:
+      snapshot_date: "2025-12-04"
+      base_url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04"
+
+    files:
+      listings_detailed:
+        name: listings.csv.gz
+        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/data/listings.csv.gz"
+        compressed: true
+
+      calendar:
+        name: calendar.csv.gz
+        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/data/calendar.csv.gz"
+        compressed: true
+
+      reviews_detailed:
+        name: reviews.csv.gz
+        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/data/reviews.csv.gz"
+        compressed: true
+
+      listings_summary:
+        name: listings.csv
+        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/visualisations/listings.csv"
+        compressed: false
+
+      reviews_summary:
+        name: reviews.csv
+        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/visualisations/reviews.csv"
+        compressed: false
+
+      neighbourhoods:
+        name: neighbourhoods.csv
+        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/visualisations/neighbourhoods.csv"
+        compressed: false
+
+      neighbourhoods_geojson:
+        name: neighbourhoods.geojson
+        url: "https://data.insideairbnb.com/united-states/ny/new-york-city/2025-12-04/visualisations/neighbourhoods.geojson"
+        compressed: false
+
+  berlin:
+    code: berlin
+    name: Berlin
+    country: Germany
+    country_code: DE
+    currency_code: EUR
+    timezone: Europe/Berlin
+
+    source:
+      snapshot_date: "2025-09-23"
+      base_url: "https://data.insideairbnb.com/germany/be/berlin/2025-09-23"
+
+    files:
+      listings_detailed:
+        name: listings.csv.gz
+        url: "https://data.insideairbnb.com/germany/be/berlin/2025-09-23/data/listings.csv.gz"
+        compressed: true
+
+      calendar:
+        name: calendar.csv.gz
+        url: "https://data.insideairbnb.com/germany/be/berlin/2025-09-23/data/calendar.csv.gz"
+        compressed: true
+
+      reviews_detailed:
+        name: reviews.csv.gz
+        url: "https://data.insideairbnb.com/germany/be/berlin/2025-09-23/data/reviews.csv.gz"
+        compressed: true
+
+      listings_summary:
+        name: listings.csv
+        url: "https://data.insideairbnb.com/germany/be/berlin/2025-09-23/visualisations/listings.csv"
+        compressed: false
+
+      reviews_summary:
+        name: reviews.csv
+        url: "https://data.insideairbnb.com/germany/be/berlin/2025-09-23/visualisations/reviews.csv"
+        compressed: false
+
+      neighbourhoods:
+        name: neighbourhoods.csv
+        url: "https://data.insideairbnb.com/germany/be/berlin/2025-09-23/visualisations/neighbourhoods.csv"
+        compressed: false
+
+      neighbourhoods_geojson:
+        name: neighbourhoods.geojson
+        url: "https://data.insideairbnb.com/germany/be/berlin/2025-09-23/visualisations/neighbourhoods.geojson"
+        compressed: false
