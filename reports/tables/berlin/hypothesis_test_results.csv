@@ -1,0 +1,6 @@
+test,hypothesis,method,n_total,statistic,p_value,effect_size,effect_label,significant,conclusion
+H1,Entire home vs private room: price,Welch t-test (log),9066,40.9005,1.05e-305,0.9841,Cohen d,True,EH priced higher
+H2,Superhost vs non-superhost: rating,Mann-Whitney U,10810,14099791.0,2.78e-39,-0.1578,rank-biserial r,True,No significant difference
+H3,High-review (>10) vs low-review: price,Welch t-test (log),9264,5.5613,2.76e-08,0.1171,Cohen d,True,No significant difference
+H4,Neighbourhood price differences,Kruskal-Wallis,8238,662.7852,2.17e-100,0.0733,epsilon-squared,True,Significant neighbourhood differences
+H5,Weekend vs weekday availability rate,Summary comparison (A-005 adapted),5210011,0.000147,N/A,0.000147,mean difference,False,Weekend avail 0.403 vs weekday 0.402

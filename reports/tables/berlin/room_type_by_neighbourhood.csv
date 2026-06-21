@@ -1,0 +1,139 @@
+neighbourhood_cleansed,entire_home,hotel_room,private_room,shared_room
+Adlershof,76.7,0.0,20.9,2.3
+Albrechtstr.,68.4,0.0,31.6,0.0
+Alexanderplatz,69.7,2.4,24.1,3.8
+Allende-Viertel,50.0,0.0,50.0,0.0
+Alt  Treptow,67.0,0.0,33.0,0.0
+Alt-Hohenschönhausen Nord,58.3,0.0,41.7,0.0
+Alt-Hohenschönhausen Süd,87.0,0.0,13.0,0.0
+Alt-Lichtenberg,50.0,0.0,50.0,0.0
+Altglienicke,80.0,0.0,20.0,0.0
+Altstadt-Kietz,77.8,0.0,22.2,0.0
+Barstraße,51.1,0.0,48.9,0.0
+Baumschulenweg,52.6,0.0,47.4,0.0
+Biesdorf,57.6,0.0,42.4,0.0
+Blankenburg/Heinersdorf/Märchenland,64.5,0.0,35.5,0.0
+Blankenfelde/Niederschönhausen,70.6,0.0,27.5,2.0
+Bohnsdorf,46.2,0.0,53.8,0.0
+Britz,61.7,0.0,38.3,0.0
+Brunnenstr. Nord,76.3,0.0,23.7,0.0
+Brunnenstr. Süd,83.9,1.1,15.1,0.0
+Brunsbütteler Damm,53.3,0.0,46.7,0.0
+Buch,72.7,0.0,27.3,0.0
+Buchholz,70.0,0.0,30.0,0.0
+Buckow,81.8,0.0,18.2,0.0
+Buckow Nord,60.0,0.0,40.0,0.0
+Charlottenburg Nord,57.1,0.0,42.9,0.0
+Dammvorstadt,78.6,0.0,21.4,0.0
+Drakestr.,63.3,0.0,36.7,0.0
+Düsseldorfer Straße,58.0,0.4,41.6,0.0
+Falkenhagener Feld,20.0,0.0,80.0,0.0
+Fennpfuhl,47.8,0.0,52.2,0.0
+Forst Grunewald,75.0,0.0,25.0,0.0
+Frankfurter Allee Nord,68.8,0.3,30.9,0.0
+Frankfurter Allee Süd,64.7,0.0,35.3,0.0
+Frankfurter Allee Süd FK,66.3,0.0,33.7,0.0
+Friedenau,64.2,6.3,29.5,0.0
+Friedrichsfelde Nord,63.3,0.0,36.7,0.0
+Friedrichsfelde Süd,53.3,0.0,46.7,0.0
+Friedrichshagen,65.8,0.0,34.2,0.0
+Gatow / Kladow,76.5,0.0,23.5,0.0
+Gropiusstadt,66.7,0.0,33.3,0.0
+Grunewald,73.8,0.0,26.2,0.0
+Grünau,78.9,0.0,21.1,0.0
+Hakenfelde,57.1,0.0,42.9,0.0
+Halensee,76.2,5.0,18.8,0.0
+Haselhorst,100.0,0.0,0.0,0.0
+Heerstrasse,85.7,0.0,14.3,0.0
+Heerstraße Nord,52.6,0.0,47.4,0.0
+Hellersdorf-Nord,60.0,0.0,40.0,0.0
+Hellersdorf-Ost,0.0,0.0,100.0,0.0
+Hellersdorf-Süd,66.7,0.0,33.3,0.0
+Helmholtzplatz,77.5,0.0,22.5,0.0
+Johannisthal,54.5,0.0,45.5,0.0
+Kantstraße,67.6,0.0,31.6,0.7
+Karl-Marx-Allee-Nord,65.4,0.5,34.1,0.0
+Karl-Marx-Allee-Süd,52.5,0.0,40.9,6.6
+Karlshorst,47.0,12.1,40.9,0.0
+Karow,63.6,0.0,36.4,0.0
+Kaulsdorf,72.2,0.0,27.8,0.0
+Kurfürstendamm,68.8,2.3,29.0,0.0
+Kölln. Vorstadt/Spindlersf.,50.0,0.0,50.0,0.0
+Köllnische Heide,64.0,0.0,36.0,0.0
+Köpenick-Nord,62.5,0.0,37.5,0.0
+Köpenick-Süd,78.6,0.0,21.4,0.0
+Lankwitz,66.7,0.0,33.3,0.0
+Lichtenrade,80.0,0.0,20.0,0.0
+MV 1,66.7,0.0,33.3,0.0
+MV 2,5.6,0.0,94.4,0.0
+Mahlsdorf,75.0,0.0,25.0,0.0
+"Malchow, Wartenberg und Falkenberg",100.0,0.0,0.0,0.0
+Mariendorf,81.8,0.0,18.2,0.0
+Marienfelde,72.2,0.0,27.8,0.0
+Marzahn-Mitte,25.0,0.0,75.0,0.0
+Marzahn-Nord,0.0,0.0,100.0,0.0
+Marzahn-Süd,73.7,0.0,26.3,0.0
+Mierendorffplatz,74.0,0.0,26.0,0.0
+Moabit Ost,67.9,0.0,31.3,0.8
+Moabit West,60.8,0.0,37.7,1.5
+Müggelheim,87.5,0.0,12.5,0.0
+Neu Lichtenberg,61.2,2.6,36.2,0.0
+Neu-Hohenschönhausen Nord,100.0,0.0,0.0,0.0
+Neu-Hohenschönhausen Süd,100.0,0.0,0.0,0.0
+Neue Kantstraße,67.4,0.0,32.6,0.0
+Neuköllner Mitte/Zentrum,56.9,0.0,43.1,0.0
+Niederschöneweide,83.9,0.0,12.9,3.2
+Nord 1,60.9,0.0,39.1,0.0
+Nord 2,80.0,0.0,20.0,0.0
+Oberschöneweide,76.1,0.0,23.9,0.0
+Osloer Straße,62.5,2.0,35.5,0.0
+Ost 1,60.0,0.0,40.0,0.0
+Ost 2,52.5,0.0,47.5,0.0
+Ostpreußendamm,30.6,0.0,69.4,0.0
+Otto-Suhr-Allee,67.6,3.4,28.4,0.6
+Pankow Süd,64.2,0.0,35.8,0.0
+Pankow Zentrum,68.2,0.0,31.8,0.0
+Parkviertel,62.0,0.0,36.8,1.2
+Plänterwald,67.4,0.0,32.6,0.0
+Prenzlauer Berg Nord,71.3,0.0,28.7,0.0
+Prenzlauer Berg Nordwest,73.9,2.3,23.8,0.0
+Prenzlauer Berg Ost,70.1,2.1,27.8,0.0
+Prenzlauer Berg Süd,77.6,0.9,21.2,0.3
+Prenzlauer Berg Südwest,79.4,1.8,17.8,1.0
+Rahnsdorf/Hessenwinkel,100.0,0.0,0.0,0.0
+Regierungsviertel,69.6,0.0,30.4,0.0
+Reuterstraße,59.0,0.0,39.4,1.7
+Rixdorf,57.3,0.0,42.7,0.0
+Rudow,41.5,0.0,58.5,0.0
+Rummelsburger Bucht,85.0,0.0,15.0,0.0
+Schillerpromenade,69.0,0.0,31.0,0.0
+Schloß Charlottenburg,66.3,0.0,33.7,0.0
+Schloßstr.,81.0,0.0,19.0,0.0
+Schmargendorf,88.4,0.0,11.6,0.0
+Schmöckwitz/Karolinenhof/Rauchfangswerder,86.7,0.0,13.3,0.0
+Schöneberg-Nord,60.7,2.2,35.8,1.3
+Schöneberg-Süd,72.3,0.0,27.7,0.0
+Schönholz/Wilhelmsruh/Rosenthal,80.8,0.0,19.2,0.0
+Siemensstadt,90.9,0.0,9.1,0.0
+Spandau Mitte,75.0,15.0,10.0,0.0
+Südliche Friedrichstadt,70.1,0.7,29.2,0.0
+Teltower Damm,64.7,0.0,35.3,0.0
+Tempelhof,72.9,0.0,27.1,0.0
+Tempelhofer Vorstadt,65.2,0.1,33.2,1.5
+Tiergarten Süd,69.2,5.7,25.2,0.0
+Volkspark Wilmersdorf,74.6,0.0,25.4,0.0
+Wedding Zentrum,63.4,0.0,36.6,0.0
+Weißensee,78.2,0.0,21.8,0.0
+Weißensee Ost,94.1,0.0,5.9,0.0
+West 1,55.6,0.0,44.4,0.0
+West 2,57.1,0.0,42.9,0.0
+West 3,37.5,0.0,62.5,0.0
+West 4,66.7,0.0,33.3,0.0
+West 5,35.7,0.0,64.3,0.0
+Westend,62.7,1.2,36.1,0.0
+Wiesbadener Straße,51.6,0.0,48.4,0.0
+Wilhelmstadt,70.0,5.0,25.0,0.0
+Zehlendorf  Nord,61.5,0.0,38.5,0.0
+Zehlendorf  Südwest,94.7,0.0,5.3,0.0
+nördliche Luisenstadt,59.8,0.0,39.8,0.4
+südliche Luisenstadt,65.1,0.0,32.6,2.3

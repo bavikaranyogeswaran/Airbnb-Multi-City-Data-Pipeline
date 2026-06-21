@@ -1,0 +1,5 @@
+band,listing_count,share_pct,median_price,median_occupancy
+Blocked / inactive  (0-30 d),5403,37.9,105.0,1.0
+Occasional  (31-90 d),1412,9.9,103.0,0.8246575342465754
+Active  (91-270 d),3561,24.9,99.0,0.46849315068493147
+Always-on  (271-365 d),3898,27.3,111.0,0.07123287671232881

@@ -1,0 +1,7 @@
+,accuracy,cleanliness,checkin,communication,location,value
+accuracy,1.0,0.73,0.692,0.744,0.56,0.831
+cleanliness,0.73,1.0,0.603,0.64,0.505,0.74
+checkin,0.692,0.603,1.0,0.759,0.516,0.682
+communication,0.744,0.64,0.759,1.0,0.523,0.75
+location,0.56,0.505,0.516,0.523,1.0,0.579
+value,0.831,0.74,0.682,0.75,0.579,1.0

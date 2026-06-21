@@ -1,0 +1,822 @@
+id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of_reviews,review_scores_rating,review_scores_cleanliness,review_scores_communication,host_segment,host_response_rate
+3176,Prenzlauer Berg Südwest,entire_home,apartment,105.0,150,4.63,4.52,4.7,solo,1.0
+20858,Prenzlauer Berg Südwest,entire_home,apartment,202.0,140,4.48,4.65,4.54,solo,1.0
+23834,Tempelhofer Vorstadt,entire_home,apartment,65.0,98,4.37,4.51,4.59,solo,
+26543,Helmholtzplatz,entire_home,apartment,260.0,201,4.66,4.55,4.74,solo,1.0
+37836,südliche Luisenstadt,private_room,apartment,,207,4.53,4.41,4.8,multi,1.0
+68448,Prenzlauer Berg Nord,entire_home,apartment,137.0,441,4.64,4.67,4.77,professional,1.0
+135097,Schöneberg-Nord,entire_home,apartment,165.0,306,4.45,4.43,4.74,solo,
+145249,Frankfurter Allee Nord,private_room,apartment,,188,4.67,4.68,4.74,solo,
+174576,Alexanderplatz,entire_home,apartment,,40,4.66,4.78,4.69,multi,
+174579,Alexanderplatz,entire_home,apartment,,79,4.66,4.91,4.68,multi,
+186851,Schöneberg-Nord,entire_home,apartment,45.0,58,4.66,4.83,4.81,solo,
+194374,Karlshorst,entire_home,house,118.0,66,4.15,4.25,4.51,professional,1.0
+198239,Südliche Friedrichstadt,private_room,apartment,110.0,105,4.6,4.77,4.81,solo,1.0
+214518,Otto-Suhr-Allee,private_room,apartment,44.0,99,4.54,4.41,4.76,solo,1.0
+229348,Moabit Ost,entire_home,apartment,106.0,178,4.63,4.67,4.89,multi,1.0
+229363,Moabit Ost,entire_home,apartment,106.0,129,4.5,4.54,4.87,multi,1.0
+243063,Alexanderplatz,entire_home,apartment,,453,4.67,4.75,4.67,multi,1.0
+243238,Johannisthal,entire_home,apartment,77.0,277,4.62,4.74,4.8,solo,1.0
+245744,Regierungsviertel,entire_home,apartment,276.0,195,4.55,4.57,4.53,solo,0.8
+245827,Regierungsviertel,entire_home,apartment,140.0,119,4.53,4.63,4.57,solo,
+250253,Otto-Suhr-Allee,entire_home,apartment,127.0,108,4.44,4.56,4.6,multi,1.0
+250707,Otto-Suhr-Allee,entire_home,apartment,111.0,51,4.5,4.54,4.82,multi,1.0
+250729,Friedenau,entire_home,apartment,112.0,55,4.53,4.6,4.64,multi,1.0
+250753,Tiergarten Süd,entire_home,apartment,127.0,99,4.64,4.59,4.52,multi,1.0
+250871,Schöneberg-Süd,entire_home,apartment,82.0,47,4.55,4.32,4.96,solo,1.0
+251423,Brunnenstr. Nord,entire_home,apartment,127.0,50,4.56,4.52,4.8,professional,1.0
+252967,Frankfurter Allee Süd FK,private_room,apartment,,40,4.56,4.7,4.68,multi,
+252993,Frankfurter Allee Süd FK,private_room,apartment,,174,4.6,4.75,4.71,multi,
+254788,Südliche Friedrichstadt,entire_home,apartment,55.0,108,4.34,4.44,4.79,multi,1.0
+255557,Frankfurter Allee Süd FK,entire_home,apartment,81.0,398,4.66,4.67,4.83,solo,1.0
+255722,Tempelhofer Vorstadt,entire_home,apartment,68.0,256,4.59,4.64,4.94,solo,1.0
+265354,Karl-Marx-Allee-Süd,private_room,hotel,148.0,227,4.43,4.27,4.64,professional,1.0
+265394,Karl-Marx-Allee-Süd,private_room,hotel,112.0,306,4.27,4.17,4.59,professional,1.0
+265402,Karl-Marx-Allee-Süd,shared_room,hotel,18.0,208,4.36,4.26,4.51,professional,1.0
+265408,Karl-Marx-Allee-Süd,shared_room,hotel,20.0,77,4.3,4.22,4.53,professional,1.0
+320305,Karl-Marx-Allee-Süd,private_room,apartment,,91,4.64,4.64,4.87,solo,
+321378,Brunnenstr. Süd,entire_home,apartment,161.0,292,4.58,4.54,4.66,multi,0.9
+322463,Prenzlauer Berg Nord,entire_home,apartment,140.0,503,4.64,4.71,4.81,professional,1.0
+322520,Prenzlauer Berg Nord,entire_home,apartment,146.0,506,4.66,4.79,4.78,professional,1.0
+323243,Neuköllner Mitte/Zentrum,private_room,apartment,,168,4.5,4.47,4.63,professional,1.0
+323255,Neuköllner Mitte/Zentrum,private_room,apartment,,280,4.39,4.23,4.65,professional,1.0
+323259,Neuköllner Mitte/Zentrum,private_room,apartment,62.0,322,4.37,4.28,4.57,professional,1.0
+341910,Südliche Friedrichstadt,entire_home,apartment,85.0,490,4.5,4.68,4.61,solo,1.0
+355494,Blankenburg/Heinersdorf/Märchenland,entire_home,apartment,59.0,174,4.45,4.57,4.73,solo,1.0
+519671,Prenzlauer Berg Nordwest,entire_home,apartment,,51,4.44,4.48,4.34,solo,1.0
+578821,Schöneberg-Nord,entire_home,apartment,31.0,83,4.51,4.68,4.87,solo,1.0
+583916,Rudow,entire_home,apartment,60.0,80,4.52,4.72,4.66,multi,1.0
+590200,Rudow,entire_home,apartment,65.0,70,4.63,4.8,4.7,multi,1.0
+594032,Halensee,entire_home,apartment,112.0,131,4.63,4.61,4.77,multi,1.0
+681132,Moabit Ost,entire_home,apartment,57.0,149,4.57,4.5,4.9,multi,1.0
+687582,Südliche Friedrichstadt,entire_home,apartment,96.0,158,4.61,4.77,4.79,solo,1.0
+714312,Gropiusstadt,entire_home,apartment,40.0,241,4.65,4.83,4.86,solo,1.0
+744264,Tempelhofer Vorstadt,entire_home,apartment,112.0,430,4.58,4.75,4.64,multi,1.0
+752358,Rixdorf,entire_home,apartment,,79,4.23,3.89,4.53,solo,1.0
+817454,Helmholtzplatz,entire_home,apartment,128.0,273,4.55,4.54,4.79,multi,1.0
+829241,Prenzlauer Berg Süd,entire_home,apartment,109.0,70,4.63,4.61,4.87,solo,1.0
+849431,Rixdorf,entire_home,apartment,,198,4.59,4.79,4.82,multi,1.0
+863534,Regierungsviertel,entire_home,apartment,117.0,54,4.48,4.63,4.59,professional,1.0
+965074,Altglienicke,private_room,house,63.0,54,4.65,4.89,4.83,multi,1.0
+969200,Prenzlauer Berg Nord,entire_home,apartment,139.0,464,4.61,4.65,4.77,professional,1.0
+1111145,Brunnenstr. Süd,entire_home,apartment,208.0,197,4.53,4.53,4.73,professional,1.0
+1130337,Ost 1,entire_home,apartment,65.0,277,4.37,3.94,4.87,solo,0.33
+1234638,Frankfurter Allee Nord,entire_home,apartment,169.0,144,4.39,4.41,4.41,multi,0.8
+1236282,Reuterstraße,private_room,apartment,,210,4.61,4.25,4.77,multi,1.0
+1273287,Neue Kantstraße,entire_home,apartment,,104,4.55,4.6,4.9,solo,
+1273930,Brunnenstr. Süd,entire_home,apartment,208.0,107,4.62,4.68,4.87,professional,1.0
+1273941,Brunnenstr. Süd,entire_home,apartment,260.0,92,4.65,4.71,4.87,professional,1.0
+1273954,Brunnenstr. Süd,entire_home,apartment,260.0,122,4.54,4.64,4.77,professional,1.0
+1273965,Brunnenstr. Süd,entire_home,apartment,208.0,156,4.58,4.61,4.72,professional,1.0
+1274387,Mierendorffplatz,private_room,apartment,24.0,179,4.6,4.31,4.87,multi,1.0
+1302932,Schöneberg-Nord,entire_home,apartment,210.0,91,4.47,4.68,4.88,solo,1.0
+1312007,Prenzlauer Berg Süd,entire_home,apartment,,44,4.61,4.52,4.8,solo,1.0
+1405939,Neuköllner Mitte/Zentrum,entire_home,apartment,67.0,384,4.43,4.17,4.72,solo,0.7
+1537125,Brunnenstr. Nord,entire_home,apartment,93.0,345,4.56,4.54,4.82,multi,1.0
+1564654,Karl-Marx-Allee-Süd,private_room,hotel,133.0,170,4.49,4.76,4.68,professional,0.99
+1564917,Karl-Marx-Allee-Süd,shared_room,hotel,44.0,271,4.63,4.69,4.77,professional,0.99
+1565012,Alexanderplatz,shared_room,hotel,37.0,297,4.54,4.57,4.64,professional,0.99
+1565047,Alexanderplatz,shared_room,hotel,76.0,166,4.6,4.5,4.73,professional,0.99
+1575295,Brunnenstr. Süd,private_room,apartment,68.0,730,4.63,4.6,4.67,solo,1.0
+1599410,Tempelhofer Vorstadt,entire_home,apartment,80.0,76,4.65,4.8,4.79,solo,1.0
+1654057,Rixdorf,entire_home,apartment,71.0,117,4.56,4.58,4.89,multi,1.0
+1827536,Helmholtzplatz,entire_home,apartment,123.0,290,4.58,4.59,4.89,multi,1.0
+1876910,Alexanderplatz,entire_home,apartment,,51,4.67,4.85,4.75,solo,1.0
+1898454,Tempelhofer Vorstadt,entire_home,apartment,85.0,62,4.47,4.35,4.61,solo,
+1954311,Reuterstraße,entire_home,apartment,90.0,48,4.29,4.5,4.81,solo,1.0
+1986327,Südliche Friedrichstadt,entire_home,apartment,100.0,153,4.41,4.38,4.78,multi,1.0
+2018489,Rahnsdorf/Hessenwinkel,entire_home,apartment,100.0,44,4.5,4.51,4.84,solo,0.8
+2079942,Schloß Charlottenburg,entire_home,apartment,76.0,167,4.66,4.69,4.87,multi,0.9
+2110056,Alexanderplatz,entire_home,apartment,80.0,73,4.51,4.77,4.64,professional,1.0
+2121535,Schloß Charlottenburg,entire_home,apartment,,49,4.39,4.48,4.8,multi,1.0
+2140695,Prenzlauer Berg Nordwest,entire_home,apartment,63.0,74,4.3,3.95,4.53,solo,0.0
+2165255,Rixdorf,entire_home,apartment,77.0,269,4.37,4.15,4.74,multi,1.0
+2201228,Alexanderplatz,entire_home,apartment,79.0,204,4.61,4.59,4.73,multi,1.0
+2328948,Moabit Ost,entire_home,apartment,72.0,382,4.67,4.8,4.86,solo,1.0
+2396312,Alexanderplatz,entire_home,apartment,170.0,291,4.66,4.81,4.75,solo,1.0
+2485124,Wedding Zentrum,entire_home,apartment,173.0,340,4.65,4.63,4.91,multi,1.0
+2485985,Moabit West,entire_home,apartment,95.0,66,4.26,4.58,4.43,solo,1.0
+2529429,Moabit West,private_room,apartment,45.0,273,4.67,4.45,4.91,solo,1.0
+2588197,Schöneberg-Nord,entire_home,apartment,,42,4.67,4.74,4.95,solo,
+2599765,Moabit Ost,entire_home,apartment,161.0,522,4.6,4.72,4.66,multi,1.0
+2784176,Biesdorf,entire_home,apartment,48.0,69,4.58,4.61,4.87,multi,1.0
+2820362,Fennpfuhl,entire_home,apartment,63.0,63,4.43,4.3,4.78,solo,1.0
+2850204,Tempelhofer Vorstadt,entire_home,apartment,91.0,128,4.59,4.7,4.69,multi,0.94
+2883909,Kantstraße,private_room,apartment,34.0,84,4.65,4.74,4.8,solo,1.0
+2965875,Kantstraße,entire_home,apartment,171.0,85,4.67,4.19,4.96,solo,1.0
+3108376,Karl-Marx-Allee-Süd,shared_room,hotel,17.0,188,4.37,4.18,4.57,professional,1.0
+3108596,Karl-Marx-Allee-Süd,shared_room,hotel,15.0,74,4.35,4.34,4.61,professional,1.0
+3108686,Karl-Marx-Allee-Süd,shared_room,hotel,12.0,117,4.33,4.16,4.58,professional,1.0
+3109265,Karl-Marx-Allee-Süd,private_room,hotel,105.0,66,4.06,3.92,4.48,professional,1.0
+3408290,Helmholtzplatz,entire_home,apartment,68.0,243,4.59,4.67,4.85,solo,0.0
+3427815,Prenzlauer Berg Nordwest,entire_home,other,,69,4.19,4.45,4.63,solo,
+3700984,Otto-Suhr-Allee,entire_home,apartment,,146,4.64,4.58,4.88,solo,
+3717559,Brunnenstr. Süd,entire_home,apartment,180.0,196,4.47,4.38,4.71,solo,1.0
+3849605,Prenzlauer Berg Nord,private_room,apartment,44.0,163,4.6,4.53,4.69,solo,1.0
+3970161,Parkviertel,entire_home,apartment,68.0,694,4.54,4.66,4.76,multi,0.87
+4024815,Westend,entire_home,house,,40,4.3,4.3,4.5,multi,0.9
+4066963,Volkspark Wilmersdorf,entire_home,apartment,40.0,74,4.61,4.72,4.47,solo,1.0
+4083538,Karl-Marx-Allee-Süd,entire_home,apartment,,126,4.63,4.35,4.8,solo,0.3
+4102472,Schmöckwitz/Karolinenhof/Rauchfangswerder,entire_home,apartment,130.0,56,4.52,4.61,4.71,solo,1.0
+4106583,Brunnenstr. Nord,entire_home,apartment,171.0,569,4.63,4.5,4.88,multi,1.0
+4240183,Moabit West,entire_home,apartment,81.0,81,4.62,4.65,4.86,solo,
+4290174,Buch,entire_home,apartment,115.0,91,4.59,4.65,4.63,multi,1.0
+4326410,Neuköllner Mitte/Zentrum,entire_home,apartment,58.0,382,4.53,4.52,4.67,multi,0.96
+4406052,Buch,entire_home,apartment,121.0,45,4.56,4.57,4.56,multi,1.0
+4448981,Alexanderplatz,entire_home,apartment,203.0,294,4.51,4.5,4.6,professional,1.0
+4636280,Alexanderplatz,entire_home,apartment,136.0,262,4.58,4.66,4.66,professional,1.0
+4679825,Buckow,entire_home,hotel,99.0,48,4.21,4.19,4.54,professional,0.73
+4744063,Drakestr.,entire_home,apartment,54.0,193,4.6,4.69,4.67,solo,1.0
+4869716,Tempelhofer Vorstadt,entire_home,apartment,95.0,772,4.65,4.73,4.78,professional,1.0
+4898739,Volkspark Wilmersdorf,private_room,apartment,,80,4.65,4.62,4.92,solo,
+5060152,Brunnenstr. Süd,entire_home,apartment,120.0,233,4.65,4.44,4.74,multi,0.9
+5115511,Alexanderplatz,entire_home,apartment,,117,4.61,4.47,4.79,solo,
+5768047,Reuterstraße,private_room,apartment,38.0,120,4.67,4.32,4.83,solo,0.9
+5825471,Moabit West,private_room,apartment,34.0,72,4.07,4.25,4.24,multi,1.0
+5865532,Düsseldorfer Straße,entire_home,apartment,,60,4.27,3.95,4.8,solo,
+6098049,Alexanderplatz,private_room,hotel,132.0,125,4.47,4.67,4.66,professional,0.99
+6098179,Karl-Marx-Allee-Süd,shared_room,hotel,190.0,106,4.64,4.71,4.7,professional,0.99
+6098609,Alexanderplatz,shared_room,hotel,43.0,156,4.55,4.66,4.78,professional,0.99
+6101399,Schloß Charlottenburg,entire_home,apartment,92.0,111,4.57,4.67,4.72,solo,
+6103025,Karl-Marx-Allee-Süd,shared_room,hotel,99.0,43,4.49,4.67,4.76,professional,0.99
+6110762,Alexanderplatz,shared_room,hotel,31.0,280,4.55,4.64,4.76,professional,0.99
+6111076,Alexanderplatz,shared_room,hotel,31.0,309,4.58,4.66,4.72,professional,0.99
+6232949,Alexanderplatz,entire_home,apartment,98.0,446,4.64,4.6,4.77,multi,0.94
+6592954,Reuterstraße,private_room,apartment,32.0,41,4.39,4.38,4.4,solo,0.0
+6618275,Regierungsviertel,entire_home,apartment,,42,4.62,4.86,4.81,solo,
+6663931,Alexanderplatz,shared_room,hotel,180.0,514,4.67,4.66,4.74,professional,0.99
+6664659,Karl-Marx-Allee-Süd,shared_room,hotel,37.0,70,4.56,4.59,4.66,professional,0.99
+6697033,Karl-Marx-Allee-Süd,private_room,hotel,172.0,655,4.59,4.74,4.71,professional,0.99
+6708791,Prenzlauer Berg Südwest,entire_home,apartment,248.0,329,4.62,4.62,4.84,multi,1.0
+6858383,Alexanderplatz,shared_room,hotel,123.0,327,4.56,4.5,4.69,professional,0.99
+7037153,Kurfürstendamm,private_room,apartment,,72,4.64,4.85,4.74,solo,
+7495407,Tempelhof,entire_home,apartment,200.0,49,4.61,4.54,4.85,professional,0.0
+7545423,Moabit Ost,entire_home,apartment,87.0,59,4.44,4.63,4.83,solo,1.0
+7560830,Tempelhof,entire_home,apartment,310.0,45,4.47,4.47,4.78,professional,0.0
+7695587,Südliche Friedrichstadt,entire_home,apartment,113.0,232,4.61,4.59,4.91,solo,1.0
+7824562,Schloß Charlottenburg,private_room,apartment,48.0,543,4.63,4.61,4.81,professional,1.0
+7828523,Neue Kantstraße,private_room,apartment,47.0,581,4.51,4.6,4.79,professional,1.0
+7838754,Frankfurter Allee Nord,entire_home,apartment,112.0,299,4.61,4.4,4.79,multi,1.0
+7838790,Schloß Charlottenburg,private_room,apartment,45.0,557,4.63,4.66,4.83,professional,1.0
+7890338,Mierendorffplatz,entire_home,apartment,58.0,273,4.64,4.47,4.9,solo,1.0
+7905519,Frankfurter Allee Nord,entire_home,apartment,77.0,281,4.45,4.2,4.81,multi,1.0
+7916154,Schöneberg-Süd,entire_home,apartment,85.0,334,4.48,4.38,4.83,multi,1.0
+7956833,Volkspark Wilmersdorf,entire_home,apartment,85.0,295,4.45,4.34,4.87,multi,1.0
+7963887,Volkspark Wilmersdorf,entire_home,apartment,85.0,299,4.61,4.56,4.88,multi,1.0
+8057477,Prenzlauer Berg Nord,entire_home,apartment,77.0,48,4.48,4.15,4.89,solo,
+8063187,Brunnenstr. Süd,entire_home,apartment,165.0,300,4.59,4.51,4.73,multi,0.9
+8094511,Alexanderplatz,shared_room,hotel,99.0,46,4.59,4.59,4.72,professional,0.99
+8161618,Frankfurter Allee Süd FK,entire_home,apartment,148.0,127,4.57,4.72,4.56,multi,0.25
+8360878,Düsseldorfer Straße,entire_home,apartment,,46,4.54,4.67,4.52,solo,
+8822071,Alexanderplatz,entire_home,apartment,113.0,238,4.63,4.81,4.74,multi,1.0
+9063682,Helmholtzplatz,entire_home,apartment,40.0,43,4.47,4.58,4.79,multi,1.0
+9122881,Prenzlauer Berg Süd,entire_home,apartment,148.0,81,4.65,4.67,4.68,solo,1.0
+9136533,Volkspark Wilmersdorf,private_room,apartment,45.0,137,4.65,4.46,4.77,multi,1.0
+9536240,Alexanderplatz,shared_room,hotel,48.0,372,4.62,4.57,4.71,professional,0.99
+9540682,Karl-Marx-Allee-Süd,shared_room,hotel,150.0,209,4.61,4.72,4.67,professional,0.99
+9543073,Köpenick-Süd,entire_home,house,72.0,256,4.65,4.41,4.83,solo,1.0
+9572022,Schloß Charlottenburg,private_room,apartment,57.0,178,4.52,4.52,4.74,professional,1.0
+9625405,Alexanderplatz,entire_home,apartment,210.0,77,4.1,4.5,4.37,solo,1.0
+9727345,Karl-Marx-Allee-Süd,private_room,apartment,71.0,118,4.58,4.12,4.85,solo,1.0
+9768373,Mierendorffplatz,entire_home,apartment,80.0,119,4.67,4.25,4.84,multi,1.0
+9892924,Alexanderplatz,private_room,hotel,148.0,57,4.47,4.63,4.56,professional,0.99
+9981480,Prenzlauer Berg Südwest,entire_home,apartment,,46,4.5,3.63,4.83,solo,
+10266677,Regierungsviertel,private_room,apartment,,111,4.62,4.26,4.85,solo,
+10332030,Reuterstraße,entire_home,apartment,593.0,147,4.54,4.39,4.36,solo,0.0
+10483677,Brunnenstr. Süd,entire_home,apartment,245.0,252,4.42,4.49,4.65,professional,0.97
+10736361,Alexanderplatz,private_room,hotel,124.0,115,4.57,4.79,4.76,professional,0.99
+10801764,Neue Kantstraße,private_room,apartment,35.0,63,4.67,4.48,4.89,solo,0.67
+11078656,Tempelhofer Vorstadt,entire_home,apartment,77.0,361,4.52,4.61,4.84,professional,1.0
+11079277,Frankfurter Allee Süd FK,entire_home,apartment,351.0,66,4.67,4.48,4.64,professional,1.0
+11224443,Düsseldorfer Straße,entire_home,apartment,93.0,203,4.54,4.59,4.83,multi,1.0
+11267258,Regierungsviertel,entire_home,apartment,199.0,50,4.44,4.44,4.84,solo,1.0
+11286561,Alexanderplatz,shared_room,hotel,38.0,66,4.61,4.65,4.76,professional,0.99
+11290301,Prenzlauer Berg Südwest,entire_home,apartment,128.0,252,4.66,4.61,4.77,multi,1.0
+11306475,Brunnenstr. Süd,entire_home,apartment,139.0,249,4.58,4.52,4.62,multi,1.0
+11414934,Tempelhofer Vorstadt,entire_home,apartment,95.0,353,4.59,4.62,4.82,professional,1.0
+11429575,Otto-Suhr-Allee,entire_home,apartment,103.0,285,4.67,4.54,4.9,professional,1.0
+11579227,Schöneberg-Süd,entire_home,apartment,134.0,41,4.63,4.73,4.78,professional,1.0
+11764015,Alexanderplatz,entire_home,apartment,182.0,323,4.66,4.69,4.8,solo,
+12044871,Volkspark Wilmersdorf,entire_home,apartment,157.0,258,4.67,4.71,4.82,professional,1.0
+12046648,Brunnenstr. Süd,entire_home,apartment,146.0,57,4.63,4.67,4.74,solo,1.0
+12047604,Brunnenstr. Süd,entire_home,apartment,257.0,117,4.63,4.63,4.62,solo,1.0
+12541792,Karl-Marx-Allee-Süd,entire_home,apartment,267.0,158,4.35,4.32,4.78,solo,1.0
+12723428,Frankfurter Allee Süd FK,entire_home,apartment,95.0,222,4.57,4.28,4.53,solo,1.0
+12925015,Parkviertel,entire_home,apartment,141.0,63,4.65,4.79,4.92,professional,1.0
+13507504,Frankfurter Allee Nord,entire_home,apartment,131.0,355,4.63,4.75,4.78,professional,1.0
+13508386,Frankfurter Allee Nord,entire_home,apartment,208.0,340,4.61,4.72,4.79,professional,1.0
+13559199,Prenzlauer Berg Südwest,entire_home,apartment,77.0,229,4.64,4.8,4.64,solo,1.0
+13668880,Moabit West,entire_home,apartment,85.0,226,4.49,4.58,4.5,multi,0.0
+13669087,Moabit West,entire_home,apartment,,249,4.47,4.64,4.58,multi,0.0
+13669202,Moabit West,entire_home,apartment,90.0,236,4.55,4.75,4.64,multi,0.0
+13742979,Köllnische Heide,entire_home,apartment,126.0,194,4.4,4.57,4.74,professional,1.0
+13812209,Frankfurter Allee Süd FK,entire_home,apartment,107.0,453,4.6,4.45,4.85,multi,1.0
+13857894,Frankfurter Allee Nord,entire_home,apartment,162.0,52,4.23,3.87,4.81,solo,0.5
+13879500,Schillerpromenade,entire_home,apartment,,86,4.59,4.44,4.71,solo,
+14574834,Neu Lichtenberg,entire_home,apartment,112.0,167,4.51,4.6,4.75,professional,1.0
+14588206,Tiergarten Süd,entire_home,apartment,273.0,317,4.66,4.61,4.83,multi,1.0
+14618013,Moabit West,entire_home,apartment,149.0,299,4.6,4.73,4.56,multi,0.0
+14648612,Rixdorf,entire_home,apartment,82.0,153,4.67,4.49,4.86,multi,1.0
+14649359,Regierungsviertel,entire_home,apartment,60.0,184,4.33,4.33,4.73,solo,
+14692920,Neu Lichtenberg,entire_home,apartment,105.0,97,4.64,4.71,4.79,professional,1.0
+14829530,Neuköllner Mitte/Zentrum,private_room,apartment,,142,4.4,4.49,4.64,professional,1.0
+14830887,Neuköllner Mitte/Zentrum,private_room,apartment,,227,4.52,4.48,4.78,professional,1.0
+14831190,Neuköllner Mitte/Zentrum,private_room,apartment,,206,4.5,4.44,4.77,professional,1.0
+14927090,Moabit West,entire_home,apartment,63.0,161,4.43,4.58,4.54,professional,0.0
+15019290,Mierendorffplatz,entire_home,apartment,89.0,388,4.66,4.69,4.74,solo,1.0
+15047551,Schöneberg-Nord,private_room,apartment,,46,4.48,4.28,4.74,multi,
+15069720,Neu Lichtenberg,entire_home,apartment,,117,4.66,4.85,4.84,solo,
+15120448,Alexanderplatz,private_room,hotel,,137,4.61,4.68,4.72,professional,0.99
+15135449,Karl-Marx-Allee-Süd,private_room,hotel,224.0,144,4.58,4.6,4.82,professional,0.99
+15135834,Alexanderplatz,private_room,hotel,165.0,514,4.61,4.55,4.72,professional,0.99
+15153401,Alexanderplatz,private_room,hotel,170.0,83,4.58,4.58,4.7,professional,0.99
+15277811,Moabit West,entire_home,apartment,,294,4.53,4.68,4.58,professional,0.0
+15363472,Alexanderplatz,private_room,hotel,159.0,75,4.64,4.8,4.64,professional,0.99
+15868988,Moabit Ost,entire_home,apartment,91.0,303,4.61,4.57,4.95,solo,1.0
+15940518,Tempelhofer Vorstadt,private_room,apartment,,43,4.56,4.44,4.81,solo,
+16026861,Tiergarten Süd,entire_home,apartment,145.0,128,4.52,4.38,4.77,multi,1.0
+16050152,Brunnenstr. Süd,entire_home,apartment,158.0,171,4.6,4.72,4.87,professional,1.0
+16295639,Prenzlauer Berg Südwest,entire_home,apartment,137.0,164,4.48,4.34,4.65,professional,1.0
+16298872,Prenzlauer Berg Südwest,entire_home,apartment,88.0,198,4.57,4.49,4.64,professional,1.0
+16299075,Helmholtzplatz,entire_home,apartment,117.0,245,4.64,4.6,4.75,professional,1.0
+16299453,Helmholtzplatz,entire_home,apartment,116.0,179,4.49,4.56,4.61,professional,1.0
+16299803,Prenzlauer Berg Süd,entire_home,apartment,156.0,328,4.65,4.53,4.72,professional,1.0
+16951874,nördliche Luisenstadt,entire_home,apartment,118.0,267,4.63,4.61,4.77,professional,0.93
+17077519,Moabit West,entire_home,apartment,363.0,179,4.47,4.3,4.72,professional,0.93
+17103649,Rahnsdorf/Hessenwinkel,entire_home,apartment,102.0,42,4.4,4.4,4.67,multi,1.0
+17237876,Schloß Charlottenburg,private_room,apartment,60.0,564,4.44,4.38,4.84,professional,
+17384054,Schillerpromenade,entire_home,apartment,213.0,398,4.67,4.61,4.84,solo,1.0
+17819100,Schloß Charlottenburg,private_room,apartment,50.0,188,4.6,4.53,4.86,professional,
+17863035,Schloß Charlottenburg,private_room,apartment,57.0,368,4.54,4.56,4.86,professional,
+17948177,Tempelhofer Vorstadt,entire_home,apartment,201.0,241,4.6,4.6,4.88,multi,1.0
+18066481,Schloß Charlottenburg,private_room,apartment,44.0,505,4.44,4.33,4.81,professional,
+18082169,Otto-Suhr-Allee,entire_home,apartment,61.0,50,4.64,4.68,4.68,solo,1.0
+18150458,Parkviertel,entire_home,apartment,70.0,248,4.38,4.61,4.68,professional,1.0
+18289300,Kurfürstendamm,entire_home,apartment,364.0,174,4.61,4.4,4.72,solo,1.0
+18352268,Schloß Charlottenburg,private_room,apartment,57.0,428,4.46,4.41,4.83,professional,
+18473062,Schillerpromenade,entire_home,apartment,114.0,229,4.61,4.6,4.58,multi,1.0
+18610999,Schloß Charlottenburg,private_room,apartment,47.0,346,4.4,4.36,4.83,professional,
+18659651,Tiergarten Süd,entire_home,apartment,,77,4.42,4.43,4.77,solo,
+18714753,südliche Luisenstadt,private_room,apartment,,140,4.31,4.01,4.37,solo,
+18798641,Parkviertel,entire_home,apartment,75.0,129,4.34,4.6,4.58,professional,1.0
+18910942,Prenzlauer Berg Nordwest,entire_home,apartment,252.0,86,4.58,4.77,4.63,solo,1.0
+19173973,südliche Luisenstadt,entire_home,apartment,200.0,289,4.65,4.56,4.84,professional,1.0
+19406486,Brunnenstr. Nord,private_room,apartment,64.0,233,4.58,4.51,4.57,solo,
+19614279,Schloß Charlottenburg,private_room,hotel,46.0,149,4.48,4.52,4.86,professional,
+19651885,Moabit West,entire_home,apartment,80.0,179,4.54,4.69,4.67,professional,0.0
+19753755,Schöneberg-Nord,entire_home,apartment,82.0,186,4.63,4.61,4.91,multi,
+19825141,südliche Luisenstadt,private_room,apartment,,41,4.56,4.29,4.93,solo,
+19885029,Weißensee,entire_home,apartment,348.0,46,4.57,4.74,4.67,professional,1.0
+19944626,Alexanderplatz,entire_home,apartment,209.0,270,4.64,4.79,4.61,professional,1.0
+20119053,Parkviertel,entire_home,apartment,143.0,190,4.65,4.65,4.63,multi,1.0
+20157960,Alexanderplatz,entire_home,apartment,258.0,235,4.62,4.69,4.58,multi,1.0
+20166135,Neue Kantstraße,private_room,apartment,52.0,180,4.52,4.43,4.83,professional,1.0
+20368223,Tempelhof,private_room,house,46.0,44,4.61,4.55,4.75,solo,1.0
+20668903,Schöneberg-Nord,entire_home,apartment,82.0,141,4.57,4.62,4.87,multi,
+20745478,Frankfurter Allee Süd FK,private_room,hotel,64.0,217,4.51,4.48,4.69,professional,1.0
+20752987,Frankfurter Allee Süd FK,private_room,hotel,65.0,105,4.25,4.48,4.45,professional,1.0
+20965750,Moabit Ost,entire_home,apartment,95.0,42,4.64,4.86,4.67,multi,0.83
+21074683,Tempelhofer Vorstadt,entire_home,apartment,319.0,245,4.66,4.66,4.87,multi,1.0
+21089349,Moabit West,entire_home,apartment,250.0,43,4.67,4.81,4.52,solo,1.0
+21252091,Frankfurter Allee Süd FK,entire_home,apartment,116.0,218,4.43,4.56,4.85,professional,1.0
+21276630,Düsseldorfer Straße,entire_home,apartment,65.0,230,4.47,4.52,4.67,solo,1.0
+21443258,Moabit Ost,entire_home,apartment,123.0,222,4.59,4.66,4.74,solo,1.0
+21458938,Frankfurter Allee Nord,entire_home,apartment,126.0,224,4.25,4.04,4.84,multi,
+22110197,Schmöckwitz/Karolinenhof/Rauchfangswerder,entire_home,house,31.0,135,4.52,4.39,4.72,solo,0.86
+22183259,Kantstraße,entire_home,apartment,256.0,48,4.52,4.56,4.36,multi,1.0
+22200375,Plänterwald,entire_home,apartment,62.0,81,4.58,4.73,4.79,solo,
+22242698,Weißensee,entire_home,house,196.0,71,4.59,4.72,4.82,professional,1.0
+22370109,Karl-Marx-Allee-Süd,entire_home,apartment,222.0,244,4.59,4.5,4.82,multi,
+22407272,Kaulsdorf,private_room,house,,45,4.56,4.76,4.44,solo,
+22556872,Brunnenstr. Süd,entire_home,apartment,153.0,187,4.32,4.44,4.75,multi,0.8
+22559227,Alexanderplatz,private_room,hotel,209.0,44,4.64,4.55,4.66,professional,0.99
+22684601,Prenzlauer Berg Süd,entire_home,apartment,147.0,157,4.66,4.54,4.82,solo,1.0
+22736888,Schillerpromenade,private_room,apartment,44.0,521,4.54,4.16,4.71,solo,1.0
+22748047,Prenzlauer Berg Nordwest,private_room,apartment,,52,4.58,4.5,4.71,solo,
+22802583,Ost 2,entire_home,apartment,52.0,297,4.66,4.77,4.9,professional,1.0
+22812543,Prenzlauer Berg Süd,entire_home,apartment,,66,4.56,4.73,4.86,solo,
+23071933,Frankfurter Allee Nord,entire_home,apartment,75.0,562,4.3,4.36,4.63,solo,1.0
+23120023,Volkspark Wilmersdorf,entire_home,apartment,85.0,96,4.59,4.63,4.76,solo,0.5
+23674729,Brunnenstr. Süd,entire_home,apartment,89.0,54,4.35,4.58,4.7,solo,1.0
+23677956,Prenzlauer Berg Süd,entire_home,apartment,103.0,337,4.6,4.76,4.61,multi,1.0
+23782669,Köpenick-Nord,entire_home,apartment,68.0,235,4.57,4.46,4.87,solo,1.0
+23848408,Helmholtzplatz,entire_home,apartment,82.0,117,4.2,4.5,3.97,multi,1.0
+24027880,Zehlendorf  Südwest,entire_home,apartment,,69,4.62,4.51,4.87,solo,
+24081986,Alexanderplatz,entire_home,apartment,133.0,318,4.45,4.36,4.66,professional,1.0
+24094560,südliche Luisenstadt,private_room,hotel,,66,4.56,4.3,4.82,professional,1.0
+24259674,Helmholtzplatz,entire_home,apartment,235.0,148,4.53,4.5,4.37,multi,1.0
+24505475,Moabit West,entire_home,apartment,70.0,325,4.62,4.69,4.58,solo,1.0
+24615567,Ost 2,entire_home,apartment,59.0,285,4.61,4.8,4.88,professional,1.0
+24690410,Tiergarten Süd,entire_home,apartment,375.0,59,4.63,4.64,4.51,professional,1.0
+24912827,Alt-Hohenschönhausen Nord,private_room,house,42.0,51,4.57,4.65,4.82,multi,1.0
+25032777,Rixdorf,entire_home,apartment,103.0,175,4.66,4.63,4.57,multi,1.0
+25202253,Baumschulenweg,private_room,apartment,23.0,76,4.62,4.32,4.8,solo,
+25496270,Karl-Marx-Allee-Süd,private_room,hotel,,95,4.65,4.79,4.72,professional,0.99
+25535508,Marzahn-Süd,entire_home,apartment,104.0,95,4.56,4.77,4.75,professional,1.0
+26070220,Lichtenrade,entire_home,apartment,,270,4.67,4.83,4.65,solo,1.0
+26195084,Neuköllner Mitte/Zentrum,private_room,apartment,,101,4.37,4.3,4.74,professional,1.0
+26248619,Schöneberg-Süd,entire_home,apartment,,45,4.67,4.58,4.89,solo,1.0
+26351609,Karl-Marx-Allee-Süd,private_room,apartment,,153,4.52,4.5,4.8,solo,
+26559060,Alexanderplatz,entire_home,apartment,67.0,216,4.4,4.34,4.74,multi,1.0
+26594082,Wedding Zentrum,entire_home,apartment,95.0,59,4.59,4.54,4.86,solo,1.0
+26701296,Zehlendorf  Nord,entire_home,house,168.0,42,4.6,4.62,4.67,solo,
+26769830,Prenzlauer Berg Nord,entire_home,apartment,177.0,227,4.64,4.66,4.88,professional,1.0
+26771372,Prenzlauer Berg Nordwest,hotel_room,hotel,86.0,78,4.59,4.76,4.6,professional,0.89
+26772242,Prenzlauer Berg Nordwest,hotel_room,hotel,116.0,129,4.38,4.5,4.48,professional,0.89
+26808026,Prenzlauer Berg Nordwest,hotel_room,hotel,,203,4.5,4.59,4.43,professional,0.89
+27018606,Frankfurter Allee Süd FK,entire_home,apartment,142.0,112,4.47,4.48,4.69,professional,0.96
+27018620,Frankfurter Allee Süd FK,entire_home,apartment,155.0,179,4.41,4.27,4.75,professional,0.96
+27018621,Frankfurter Allee Süd FK,entire_home,apartment,156.0,160,4.42,4.39,4.66,professional,0.96
+27018623,Frankfurter Allee Süd FK,entire_home,apartment,280.0,167,4.52,4.47,4.67,professional,0.96
+27018624,Frankfurter Allee Süd FK,entire_home,apartment,225.0,211,4.64,4.56,4.68,professional,0.96
+27018634,Frankfurter Allee Süd FK,entire_home,apartment,190.0,255,4.63,4.58,4.68,professional,0.96
+27018635,Frankfurter Allee Süd FK,entire_home,apartment,102.0,88,4.56,4.49,4.72,professional,0.96
+27018640,Frankfurter Allee Süd FK,entire_home,apartment,144.0,162,4.51,4.41,4.66,professional,0.96
+27018643,Frankfurter Allee Süd FK,entire_home,apartment,105.0,129,4.44,4.43,4.71,professional,0.96
+27018645,Frankfurter Allee Süd FK,entire_home,apartment,157.0,134,4.4,4.28,4.72,professional,0.96
+27018646,Frankfurter Allee Süd FK,entire_home,apartment,143.0,165,4.4,4.28,4.65,professional,0.96
+27018647,Frankfurter Allee Süd FK,entire_home,apartment,136.0,190,4.61,4.58,4.76,professional,0.96
+27049153,Alexanderplatz,entire_home,apartment,129.0,130,4.57,4.6,4.8,multi,1.0
+27347856,Alexanderplatz,shared_room,hotel,30.0,124,4.62,4.58,4.68,professional,0.99
+27410997,Frankfurter Allee Nord,entire_home,apartment,244.0,157,4.66,4.59,4.9,professional,1.0
+27499168,Düsseldorfer Straße,entire_home,apartment,153.0,54,4.33,4.46,4.63,solo,1.0
+27512181,Moabit Ost,entire_home,apartment,90.0,316,4.52,4.37,4.79,multi,1.0
+27551986,Schloßstr.,entire_home,apartment,132.0,101,4.64,4.82,4.82,multi,1.0
+27645497,südliche Luisenstadt,entire_home,apartment,114.0,293,4.59,4.45,4.94,professional,0.99
+27867153,Schöneberg-Nord,entire_home,apartment,85.0,200,4.42,4.36,4.63,professional,1.0
+27868396,Schöneberg-Nord,entire_home,apartment,96.0,214,4.54,4.54,4.68,professional,1.0
+27868762,Schöneberg-Nord,entire_home,apartment,109.0,140,4.39,4.37,4.47,professional,1.0
+27869320,Schöneberg-Nord,entire_home,apartment,118.0,282,4.46,4.48,4.63,professional,1.0
+27869754,Schöneberg-Nord,entire_home,apartment,106.0,150,4.35,4.33,4.54,professional,1.0
+27870140,Schöneberg-Nord,entire_home,apartment,113.0,134,4.56,4.46,4.73,professional,1.0
+27955603,Alexanderplatz,entire_home,apartment,201.0,194,4.59,4.63,4.62,professional,1.0
+28299765,Prenzlauer Berg Ost,hotel_room,apartment,260.0,924,4.59,4.7,4.66,professional,0.91
+28302220,Karlshorst,hotel_room,apartment,197.0,299,4.62,4.74,4.62,professional,0.9
+28328620,Otto-Suhr-Allee,hotel_room,apartment,183.0,56,4.64,4.63,4.43,professional,1.0
+28462130,südliche Luisenstadt,entire_home,apartment,117.0,257,4.61,4.57,4.91,professional,0.99
+28532542,Schöneberg-Nord,hotel_room,hotel,165.0,182,4.65,4.78,4.68,professional,1.0
+28776888,Prenzlauer Berg Nordwest,private_room,other,102.0,71,4.58,4.58,4.72,multi,1.0
+28880341,Neu Lichtenberg,private_room,apartment,,52,4.33,4.54,4.5,solo,
+29029427,Moabit Ost,private_room,apartment,,154,4.6,4.85,4.68,multi,
+29172413,Frankfurter Allee Süd FK,entire_home,apartment,,135,4.64,4.58,4.69,solo,1.0
+29282378,südliche Luisenstadt,private_room,apartment,,40,4.3,4.1,4.55,solo,
+29509862,Alexanderplatz,hotel_room,apartment,240.0,144,4.67,4.92,4.66,professional,0.7
+29620734,Marzahn-Süd,entire_home,apartment,131.0,76,4.3,4.75,4.53,professional,1.0
+29814952,Karl-Marx-Allee-Süd,private_room,hotel,194.0,131,4.65,4.74,4.78,professional,0.99
+30289059,Prenzlauer Berg Ost,entire_home,apartment,80.0,283,4.6,4.49,4.88,professional,1.0
+30331629,Tempelhofer Vorstadt,entire_home,apartment,,260,4.54,4.59,4.22,multi,
+30341837,Weißensee,private_room,apartment,65.0,133,4.67,4.61,4.84,professional,1.0
+30515176,Alexanderplatz,entire_home,apartment,134.0,87,4.63,4.77,4.82,professional,0.99
+30628724,Zehlendorf  Südwest,entire_home,house,77.0,139,4.64,4.61,4.81,multi,1.0
+30711405,Schöneberg-Süd,entire_home,apartment,,90,4.49,4.22,4.69,solo,
+30728734,Moabit West,entire_home,apartment,,46,4.57,4.5,4.8,solo,
+30756552,Moabit Ost,entire_home,apartment,102.0,201,4.65,4.5,4.86,multi,1.0
+30758793,Karl-Marx-Allee-Süd,shared_room,hotel,25.0,152,4.34,3.98,4.65,professional,1.0
+30758989,Karl-Marx-Allee-Süd,shared_room,hotel,25.0,248,4.51,4.38,4.71,professional,1.0
+30759237,Karl-Marx-Allee-Süd,shared_room,hotel,20.0,159,4.47,4.45,4.7,professional,1.0
+30849280,Karlshorst,hotel_room,apartment,133.0,74,4.53,4.61,4.57,professional,0.9
+30946969,Tempelhofer Vorstadt,entire_home,apartment,,141,4.56,4.6,4.43,multi,
+31011154,Buckow,entire_home,apartment,120.0,49,4.24,4.2,4.76,professional,0.73
+31092213,Weißensee,private_room,hotel,45.0,279,4.65,4.78,4.81,multi,
+31170463,Otto-Suhr-Allee,entire_home,apartment,90.0,493,4.5,4.62,4.86,multi,
+31172381,Otto-Suhr-Allee,entire_home,apartment,88.0,432,4.63,4.71,4.88,multi,
+31246982,Alexanderplatz,entire_home,apartment,140.0,94,4.63,4.73,4.78,multi,1.0
+31427501,Spandau Mitte,hotel_room,hotel,95.0,104,4.6,4.81,4.64,solo,1.0
+31629992,Südliche Friedrichstadt,entire_home,apartment,58.0,343,4.61,4.58,4.8,multi,1.0
+31817631,Karl-Marx-Allee-Süd,shared_room,hotel,13.0,241,4.52,4.4,4.69,professional,1.0
+31847084,Weißensee,entire_home,apartment,,52,4.63,4.48,4.87,multi,
+32510629,Moabit Ost,entire_home,apartment,194.0,108,4.59,4.52,4.8,professional,1.0
+33234428,Karl-Marx-Allee-Süd,entire_home,apartment,168.0,324,4.63,4.39,4.9,professional,0.99
+33542164,Neuköllner Mitte/Zentrum,entire_home,apartment,177.0,54,4.3,4.52,4.24,multi,1.0
+33668396,Alexanderplatz,entire_home,apartment,211.0,139,4.63,4.47,4.65,professional,1.0
+33707449,Rudow,private_room,apartment,150.0,75,4.63,4.8,4.79,multi,0.96
+34135306,Alexanderplatz,entire_home,apartment,125.0,137,4.64,4.56,4.79,multi,0.9
+34294699,Alexanderplatz,entire_home,hotel,214.0,573,4.61,4.72,4.64,multi,0.98
+34294913,Alexanderplatz,entire_home,hotel,160.0,2895,4.54,4.66,4.66,multi,0.98
+34893511,Kurfürstendamm,private_room,hotel,193.0,334,4.28,4.35,4.36,professional,0.99
+35107959,südliche Luisenstadt,entire_home,apartment,84.0,92,4.6,4.53,4.88,professional,0.99
+35242748,Alexanderplatz,entire_home,apartment,256.0,285,4.62,4.56,4.52,professional,1.0
+35261758,Helmholtzplatz,entire_home,apartment,,51,4.29,3.31,4.8,solo,
+35815972,Alexanderplatz,hotel_room,hotel,285.0,69,4.59,4.36,4.71,professional,0.98
+35816059,Alexanderplatz,hotel_room,hotel,40.0,1025,4.56,4.5,4.69,professional,0.98
+35816176,Alexanderplatz,hotel_room,hotel,204.0,90,4.53,4.54,4.66,professional,0.98
+35986989,Baumschulenweg,entire_home,house,380.0,176,4.67,4.62,4.86,multi,1.0
+36256668,Alexanderplatz,private_room,hotel,117.0,84,4.29,4.33,4.54,professional,1.0
+36258637,Alexanderplatz,private_room,hotel,141.0,71,4.37,4.41,4.38,professional,1.0
+36259013,Alexanderplatz,private_room,hotel,141.0,110,4.25,4.34,4.5,professional,1.0
+36268916,Moabit West,private_room,apartment,,42,4.4,4.17,4.93,solo,
+36338771,Alexanderplatz,private_room,hotel,191.0,277,4.33,4.45,4.58,professional,0.93
+36339392,Alexanderplatz,private_room,hotel,172.0,762,4.28,4.19,4.52,professional,0.93
+36340336,Alexanderplatz,shared_room,hotel,36.0,439,4.3,4.19,4.57,professional,0.93
+36401268,Brunnenstr. Süd,entire_home,apartment,106.0,170,4.63,4.7,4.65,professional,1.0
+36434098,Alexanderplatz,entire_home,apartment,117.0,130,4.62,4.42,4.75,multi,0.9
+36445603,Alexanderplatz,entire_home,apartment,124.0,113,4.65,4.48,4.64,multi,0.9
+36748398,Grünau,entire_home,apartment,77.0,57,4.54,4.6,4.7,multi,1.0
+36839962,Brunnenstr. Süd,entire_home,apartment,124.0,226,4.59,4.59,4.66,professional,1.0
+37071847,Schöneberg-Süd,entire_home,apartment,114.0,212,4.57,4.66,4.73,multi,1.0
+37079665,Prenzlauer Berg Nordwest,entire_home,house,76.0,186,4.39,4.47,4.44,professional,0.99
+37113779,Prenzlauer Berg Nordwest,entire_home,house,,257,4.41,4.5,4.47,professional,0.99
+37114073,Prenzlauer Berg Nordwest,entire_home,house,76.0,270,4.5,4.63,4.43,professional,0.99
+37328374,Otto-Suhr-Allee,entire_home,apartment,85.0,260,4.6,4.7,4.83,professional,1.0
+37346562,Otto-Suhr-Allee,entire_home,apartment,85.0,251,4.63,4.74,4.88,professional,1.0
+37578254,Frankfurter Allee Süd FK,private_room,apartment,461.0,119,4.6,4.74,4.62,solo,1.0
+37616627,Prenzlauer Berg Nordwest,entire_home,house,76.0,236,4.33,4.51,4.36,professional,0.99
+38343024,Grünau,entire_home,apartment,77.0,82,4.51,4.45,4.7,multi,1.0
+38343048,Grünau,entire_home,apartment,107.0,60,4.58,4.52,4.68,multi,1.0
+38343050,Grünau,entire_home,apartment,77.0,87,4.61,4.4,4.79,multi,1.0
+38686018,Schloß Charlottenburg,private_room,apartment,52.0,169,4.54,4.52,4.75,professional,1.0
+38723424,Kantstraße,entire_home,apartment,422.0,74,4.58,4.53,4.5,solo,1.0
+38833009,Frankfurter Allee Nord,entire_home,apartment,217.0,182,4.59,4.44,4.92,multi,
+38892522,Reuterstraße,entire_home,apartment,304.0,281,4.67,4.4,4.87,solo,1.0
+38971259,Prenzlauer Berg Nordwest,entire_home,house,76.0,207,4.2,4.3,4.36,professional,0.99
+39572610,Friedenau,entire_home,apartment,224.0,68,4.56,4.47,4.49,professional,1.0
+39662142,Düsseldorfer Straße,entire_home,apartment,81.0,111,4.62,4.67,4.74,multi,
+39671800,Friedenau,entire_home,apartment,171.0,48,4.4,4.27,4.35,professional,1.0
+39826933,Wedding Zentrum,entire_home,apartment,216.0,83,4.55,4.72,4.81,professional,1.0
+39886188,Prenzlauer Berg Südwest,entire_home,apartment,204.0,292,4.65,4.71,4.72,professional,0.91
+40335581,Schillerpromenade,entire_home,apartment,190.0,101,4.56,4.2,4.62,solo,0.5
+40414534,Frankfurter Allee Süd FK,entire_home,apartment,158.0,98,4.67,4.66,4.88,multi,1.0
+40584336,Alexanderplatz,private_room,hotel,191.0,152,4.23,4.36,4.57,professional,0.93
+40606892,Frankfurter Allee Süd FK,entire_home,apartment,117.0,95,4.55,4.47,4.62,professional,0.96
+40607563,Frankfurter Allee Süd FK,entire_home,apartment,90.0,116,4.51,4.53,4.63,professional,0.96
+40609244,Frankfurter Allee Süd FK,entire_home,apartment,109.0,80,4.55,4.49,4.66,professional,0.96
+40609660,Frankfurter Allee Süd FK,entire_home,apartment,133.0,69,4.29,4.35,4.61,professional,0.96
+40609979,Frankfurter Allee Süd FK,entire_home,apartment,153.0,148,4.57,4.49,4.66,professional,0.96
+40961984,Karl-Marx-Allee-Nord,entire_home,apartment,60.0,346,4.59,4.43,4.83,professional,1.0
+41263449,Schloß Charlottenburg,entire_home,apartment,70.0,99,4.67,4.58,4.67,solo,0.8
+41306967,Schloß Charlottenburg,private_room,apartment,50.0,194,4.56,4.55,4.82,professional,1.0
+41336107,Tempelhofer Vorstadt,private_room,hotel,,178,4.42,4.56,4.7,professional,0.93
+41359889,Tempelhofer Vorstadt,shared_room,hotel,15.0,175,4.62,4.55,4.76,professional,0.93
+41362381,Tempelhofer Vorstadt,shared_room,hotel,25.0,1021,4.51,4.55,4.72,professional,0.93
+41392394,Reuterstraße,shared_room,hotel,20.0,365,4.54,4.48,4.74,professional,0.93
+41403574,Prenzlauer Berg Nordwest,entire_home,house,76.0,193,4.56,4.7,4.46,professional,0.99
+41420913,Reuterstraße,shared_room,hotel,20.0,284,4.47,4.36,4.69,professional,0.93
+41422019,Reuterstraße,private_room,hotel,69.0,72,4.61,4.59,4.81,professional,0.93
+41422691,Reuterstraße,private_room,hotel,60.0,181,4.59,4.63,4.77,professional,0.93
+41423018,Reuterstraße,private_room,hotel,69.0,87,4.57,4.47,4.79,professional,0.93
+41450308,Heerstrasse,entire_home,apartment,75.0,245,4.67,4.41,4.91,solo,1.0
+41479133,Prenzlauer Berg Nordwest,entire_home,house,76.0,147,4.08,4.33,4.24,professional,0.99
+42045052,Volkspark Wilmersdorf,entire_home,apartment,206.0,70,4.57,4.34,4.76,professional,1.0
+42238664,Alexanderplatz,private_room,hotel,274.0,97,4.65,4.76,4.6,multi,1.0
+42606303,Otto-Suhr-Allee,entire_home,apartment,117.0,109,4.67,4.6,4.66,solo,1.0
+42727731,Schloß Charlottenburg,entire_home,apartment,41.0,67,4.63,4.79,4.58,professional,0.88
+42752268,Rixdorf,private_room,apartment,68.0,43,4.67,4.47,4.84,solo,0.89
+42958725,Kantstraße,private_room,apartment,100.0,161,4.66,4.8,4.64,multi,1.0
+42972615,Helmholtzplatz,entire_home,apartment,94.0,135,4.65,4.79,4.9,multi,1.0
+42981075,Weißensee,entire_home,apartment,135.0,57,4.56,4.67,4.61,solo,1.0
+42996053,Kurfürstendamm,private_room,hotel,128.0,163,4.37,4.52,4.48,professional,0.99
+43483322,MV 2,private_room,apartment,95.0,45,4.36,4.71,4.64,professional,0.93
+43484143,MV 2,private_room,apartment,136.0,84,4.64,4.79,4.81,professional,0.93
+43541550,Schöneberg-Nord,entire_home,apartment,87.0,120,4.62,4.59,4.73,solo,0.6
+43550976,Frankfurter Allee Süd FK,private_room,apartment,39.0,74,4.42,3.76,4.62,solo,1.0
+43598557,MV 2,private_room,apartment,135.0,53,4.66,4.79,4.72,professional,0.93
+43598594,MV 2,private_room,apartment,109.0,42,4.5,4.74,4.69,professional,0.93
+43798011,Tempelhofer Vorstadt,entire_home,hotel,160.0,1572,4.54,4.54,4.69,multi,0.87
+43798150,Tempelhofer Vorstadt,entire_home,hotel,151.0,121,4.67,4.6,4.74,multi,0.87
+43811867,Schillerpromenade,entire_home,hotel,159.0,472,4.39,4.36,4.49,professional,0.95
+43811934,Schillerpromenade,entire_home,hotel,172.0,287,4.48,4.51,4.46,professional,0.95
+43811981,Schillerpromenade,entire_home,hotel,186.0,239,4.27,4.38,4.43,professional,0.95
+43823296,Regierungsviertel,private_room,hotel,,677,4.67,4.68,4.71,multi,0.82
+43864181,Moabit Ost,entire_home,apartment,73.0,224,4.53,4.44,4.83,solo,1.0
+44054396,MV 2,private_room,apartment,76.0,53,4.51,4.87,4.91,professional,0.93
+44272628,Moabit West,private_room,hotel,93.0,80,4.14,4.39,4.55,professional,1.0
+44297296,Neue Kantstraße,entire_home,apartment,89.0,205,4.46,4.48,4.6,multi,1.0
+44298927,Tiergarten Süd,entire_home,apartment,197.0,52,4.63,4.46,4.77,multi,1.0
+44313831,Südliche Friedrichstadt,entire_home,apartment,126.0,50,4.44,4.5,4.52,multi,0.94
+44590435,Prenzlauer Berg Süd,private_room,other,163.0,106,4.49,4.47,4.74,professional,1.0
+44776173,Schöneberg-Süd,entire_home,apartment,104.0,219,4.47,4.5,4.7,multi,1.0
+45016027,Schöneberg-Süd,entire_home,apartment,78.0,188,4.45,4.5,4.62,multi,1.0
+45170497,Brunnenstr. Süd,entire_home,apartment,82.0,280,4.65,4.49,4.84,multi,1.0
+45173813,Alt  Treptow,private_room,apartment,,52,4.65,4.5,4.85,multi,1.0
+45177785,Tiergarten Süd,entire_home,apartment,,43,4.16,4.42,4.67,multi,1.0
+45246686,Moabit West,private_room,hotel,105.0,51,4.02,4.25,4.55,professional,1.0
+45331917,Frankfurter Allee Nord,entire_home,apartment,120.0,156,4.18,4.31,4.33,professional,0.97
+45339029,Helmholtzplatz,private_room,hotel,73.0,334,4.63,4.55,4.77,multi,1.0
+45354619,Helmholtzplatz,private_room,hotel,101.0,303,4.64,4.56,4.81,multi,1.0
+45354685,Helmholtzplatz,private_room,hotel,124.0,355,4.67,4.51,4.81,multi,1.0
+45374751,Moabit West,private_room,hotel,103.0,93,4.25,4.45,4.66,professional,1.0
+45375004,Moabit West,private_room,hotel,92.0,207,4.33,4.64,4.71,professional,1.0
+45554889,Kurfürstendamm,private_room,hotel,207.0,53,3.96,4.3,4.15,professional,0.99
+45575242,Frankfurter Allee Süd FK,entire_home,apartment,323.0,62,4.42,4.35,4.53,solo,1.0
+45656534,Halensee,entire_home,apartment,83.0,211,4.48,4.42,4.71,multi,1.0
+45681016,Moabit West,private_room,hotel,103.0,154,4.33,4.49,4.62,professional,1.0
+45732707,Neuköllner Mitte/Zentrum,entire_home,apartment,149.0,308,4.66,4.74,4.59,professional,0.96
+45809645,südliche Luisenstadt,entire_home,apartment,103.0,378,4.59,4.65,4.79,multi,1.0
+45843870,Prenzlauer Berg Süd,entire_home,apartment,126.0,205,4.64,4.57,4.84,solo,1.0
+45854967,Kurfürstendamm,private_room,hotel,305.0,148,4.3,4.5,4.44,professional,0.99
+45905820,Kurfürstendamm,entire_home,apartment,188.0,225,4.49,4.56,4.48,professional,1.0
+45918471,Volkspark Wilmersdorf,entire_home,apartment,272.0,70,4.29,4.39,4.34,professional,1.0
+45950789,Rixdorf,entire_home,apartment,,43,4.65,4.3,4.74,solo,0.88
+45962465,Prenzlauer Berg Südwest,entire_home,apartment,333.0,165,4.67,4.63,4.65,solo,1.0
+46113337,südliche Luisenstadt,entire_home,apartment,131.0,350,4.62,4.68,4.78,multi,1.0
+46114906,Kurfürstendamm,private_room,hotel,144.0,407,4.17,4.28,4.31,professional,0.99
+46462154,Südliche Friedrichstadt,entire_home,apartment,114.0,173,4.63,4.69,4.84,professional,0.93
+46624413,Prenzlauer Berg Süd,entire_home,apartment,233.0,177,4.59,4.58,4.86,professional,1.0
+46726253,Prenzlauer Berg Süd,entire_home,apartment,242.0,136,4.63,4.6,4.86,professional,1.0
+46744092,Alexanderplatz,private_room,hotel,,45,4.47,4.31,4.69,professional,0.98
+46794943,Prenzlauer Berg Süd,entire_home,apartment,,183,4.66,4.66,4.86,professional,1.0
+46864858,Frankfurter Allee Süd FK,entire_home,apartment,163.0,1553,4.67,4.78,4.75,professional,0.91
+46865074,Frankfurter Allee Süd FK,entire_home,apartment,161.0,382,4.65,4.79,4.8,professional,0.91
+46865267,Frankfurter Allee Süd FK,entire_home,apartment,167.0,70,4.67,4.77,4.79,professional,0.91
+46866971,Frankfurter Allee Süd FK,entire_home,apartment,182.0,338,4.67,4.75,4.74,professional,0.91
+47051386,Frankfurter Allee Süd FK,entire_home,apartment,161.0,57,4.47,4.42,4.77,multi,1.0
+47215807,Regierungsviertel,private_room,hotel,122.0,1350,4.61,4.66,4.65,professional,0.96
+47897467,Prenzlauer Berg Süd,private_room,apartment,,218,4.67,4.74,4.74,solo,1.0
+48135198,Rummelsburger Bucht,entire_home,apartment,56.0,157,4.52,4.38,4.7,solo,
+49086677,Schöneberg-Nord,entire_home,apartment,159.0,53,4.64,4.85,4.66,professional,0.94
+49086780,Schöneberg-Nord,entire_home,apartment,164.0,167,4.67,4.77,4.76,professional,0.94
+49509138,Tempelhofer Vorstadt,entire_home,hotel,187.0,659,4.58,4.55,4.67,multi,0.87
+49844243,Südliche Friedrichstadt,entire_home,hotel,156.0,1498,4.58,4.63,4.55,multi,1.0
+49933100,Düsseldorfer Straße,private_room,hotel,77.0,215,4.21,4.14,4.25,professional,1.0
+50259416,Otto-Suhr-Allee,entire_home,apartment,97.0,119,4.59,4.62,4.59,multi,1.0
+50457835,Schloß Charlottenburg,entire_home,apartment,38.0,40,4.58,4.78,4.53,professional,0.88
+50601986,Wedding Zentrum,entire_home,apartment,153.0,87,4.62,4.3,4.84,solo,1.0
+50713075,Moabit West,private_room,hotel,92.0,102,4.34,4.62,4.64,professional,1.0
+50789984,Schloß Charlottenburg,private_room,hotel,45.0,272,4.65,4.62,4.84,solo,1.0
+50825618,Parkviertel,private_room,apartment,59.0,49,4.57,4.86,4.39,multi,1.0
+50927054,Moabit West,private_room,hotel,103.0,60,4.38,4.48,4.62,professional,1.0
+50927063,Moabit West,private_room,hotel,120.0,108,4.33,4.48,4.59,professional,1.0
+50931530,Regierungsviertel,private_room,hotel,146.0,315,4.67,4.71,4.71,professional,0.96
+51097048,Prenzlauer Berg Südwest,entire_home,apartment,78.0,139,4.65,4.52,4.68,professional,1.0
+51097075,Prenzlauer Berg Südwest,entire_home,apartment,92.0,123,4.54,4.58,4.54,professional,1.0
+51225073,Kurfürstendamm,private_room,hotel,180.0,75,4.15,4.25,4.39,professional,0.99
+51513538,Weißensee,entire_home,apartment,285.0,44,4.64,4.7,4.84,professional,1.0
+51549694,Prenzlauer Berg Süd,private_room,other,103.0,541,4.42,4.64,4.63,professional,1.0
+51795737,Prenzlauer Berg Süd,private_room,other,115.0,844,4.45,4.57,4.63,professional,1.0
+51799775,Prenzlauer Berg Süd,private_room,other,121.0,315,4.38,4.57,4.61,professional,1.0
+51811485,Alexanderplatz,shared_room,hotel,39.0,54,4.67,4.46,4.78,professional,0.98
+51856856,Südliche Friedrichstadt,entire_home,hotel,201.0,67,4.67,4.72,4.63,multi,1.0
+52401704,Prenzlauer Berg Nord,entire_home,apartment,91.0,131,4.4,4.27,4.58,solo,0.9
+52402770,Rixdorf,entire_home,apartment,97.0,164,4.62,4.7,4.82,professional,1.0
+52403115,Neuköllner Mitte/Zentrum,entire_home,apartment,92.0,107,4.64,4.57,4.81,professional,1.0
+52551544,Neuköllner Mitte/Zentrum,entire_home,apartment,120.0,126,4.46,4.48,4.81,professional,1.0
+52575214,Köllnische Heide,entire_home,apartment,99.0,143,4.62,4.69,4.85,professional,1.0
+52652026,Prenzlauer Berg Nordwest,entire_home,apartment,80.0,190,4.62,4.83,4.65,professional,1.0
+52686607,Neuköllner Mitte/Zentrum,entire_home,apartment,399.0,61,4.16,4.05,4.79,professional,1.0
+52762746,Frankfurter Allee Süd FK,entire_home,apartment,205.0,236,4.63,4.48,4.81,professional,0.95
+53104445,Düsseldorfer Straße,private_room,apartment,85.0,54,4.39,4.65,4.39,professional,1.0
+53104636,Düsseldorfer Straße,private_room,hotel,95.0,87,4.09,3.85,4.26,professional,1.0
+53104664,Düsseldorfer Straße,private_room,hotel,82.0,56,4.25,4.41,4.46,professional,1.0
+53160614,Schloß Charlottenburg,private_room,hotel,45.0,205,4.53,4.51,4.79,professional,
+53161115,MV 2,private_room,apartment,92.0,43,4.58,4.67,4.72,professional,0.93
+53197615,Frankfurter Allee Nord,entire_home,apartment,190.0,54,4.63,4.35,4.8,solo,0.0
+53287576,Parkviertel,entire_home,apartment,80.0,68,4.66,4.41,4.88,solo,1.0
+53350852,Brunnenstr. Nord,entire_home,house,112.0,114,4.64,4.72,4.8,professional,1.0
+53350871,Wedding Zentrum,entire_home,house,104.0,148,4.61,4.68,4.81,professional,1.0
+53491060,Osloer Straße,entire_home,apartment,127.0,166,4.57,4.42,4.87,solo,1.0
+53539095,Parkviertel,entire_home,apartment,119.0,100,4.18,3.91,4.56,multi,1.0
+53539117,Parkviertel,entire_home,apartment,92.0,117,4.23,4.04,4.62,multi,1.0
+53653291,Prenzlauer Berg Nordwest,entire_home,apartment,132.0,145,4.43,4.2,4.66,professional,0.98
+53744429,Frankfurter Allee Süd FK,entire_home,apartment,159.0,82,4.57,4.61,4.63,professional,0.91
+53746320,Schöneberg-Nord,private_room,hotel,145.0,52,4.44,4.54,4.63,professional,1.0
+53796458,Reuterstraße,entire_home,apartment,228.0,52,4.29,4.13,4.71,professional,1.0
+53811686,Alexanderplatz,entire_home,apartment,135.0,204,4.5,4.43,4.58,professional,1.0
+53873194,Prenzlauer Berg Südwest,entire_home,apartment,111.0,106,4.15,3.91,4.5,professional,0.99
+53902310,Helmholtzplatz,entire_home,apartment,205.0,116,4.67,4.64,4.83,professional,1.0
+53928297,Neuköllner Mitte/Zentrum,entire_home,apartment,142.0,98,4.66,4.77,4.68,professional,0.96
+53928511,Neuköllner Mitte/Zentrum,entire_home,apartment,161.0,74,4.58,4.72,4.53,professional,0.96
+53928585,Neuköllner Mitte/Zentrum,entire_home,apartment,179.0,100,4.59,4.8,4.48,professional,0.96
+53928630,Neuköllner Mitte/Zentrum,entire_home,apartment,190.0,57,4.65,4.67,4.63,professional,0.96
+53961297,Brunnenstr. Nord,entire_home,apartment,94.0,153,4.61,4.31,4.76,multi,0.95
+53988565,Alexanderplatz,entire_home,apartment,97.0,163,4.59,4.48,4.8,multi,0.97
+54034302,Frankfurter Allee Süd FK,entire_home,apartment,66.0,118,4.24,4.1,4.67,multi,1.0
+54034354,Frankfurter Allee Süd FK,entire_home,apartment,84.0,138,4.13,4.1,4.7,multi,1.0
+54035917,Brunnenstr. Süd,entire_home,apartment,313.0,168,4.62,4.34,4.7,professional,1.0
+54351687,Brunnenstr. Süd,entire_home,apartment,83.0,72,4.67,4.65,4.71,professional,0.97
+535415314007589795,Halensee,entire_home,apartment,83.0,112,4.32,4.18,4.69,multi,1.0
+545600882039604060,Prenzlauer Berg Süd,entire_home,apartment,147.0,81,4.49,4.36,4.79,professional,1.0
+545659043263203170,Prenzlauer Berg Süd,entire_home,apartment,141.0,50,4.5,4.28,4.76,professional,1.0
+546417520591682575,Prenzlauer Berg Süd,entire_home,apartment,138.0,86,4.58,4.44,4.78,professional,1.0
+553304897120069097,Prenzlauer Berg Südwest,shared_room,hotel,59.0,51,4.57,4.53,4.59,professional,0.94
+554765041888369644,Frankfurter Allee Süd FK,entire_home,apartment,104.0,167,4.56,4.53,4.89,professional,1.0
+567073865333260546,Neue Kantstraße,private_room,hotel,165.0,49,4.27,4.1,4.39,multi,1.0
+568504774522092058,Karl-Marx-Allee-Süd,entire_home,apartment,155.0,69,4.59,4.72,4.65,professional,0.86
+568518385545605519,Karl-Marx-Allee-Süd,entire_home,apartment,174.0,53,4.58,4.68,4.68,professional,0.86
+568524485826835987,Karl-Marx-Allee-Süd,entire_home,apartment,195.0,57,4.63,4.67,4.53,professional,0.86
+568536046180605398,Karl-Marx-Allee-Süd,entire_home,apartment,213.0,138,4.52,4.62,4.56,professional,0.86
+569168063883091750,Brunnenstr. Nord,private_room,hotel,229.0,188,4.6,4.74,4.65,professional,1.0
+572154090232449167,nördliche Luisenstadt,private_room,apartment,77.0,225,4.61,4.52,4.89,professional,1.0
+572161925621135232,nördliche Luisenstadt,private_room,apartment,77.0,181,4.61,4.62,4.87,professional,1.0
+574603969538219434,Weißensee,entire_home,apartment,129.0,54,4.52,4.41,4.87,multi,1.0
+578277721614638271,Tempelhofer Vorstadt,private_room,hotel,,40,3.9,4.23,4.05,professional,0.97
+585463784171353825,Karl-Marx-Allee-Nord,entire_home,apartment,,205,4.56,4.56,4.73,solo,
+586909089632830722,Schöneberg-Süd,entire_home,apartment,156.0,45,4.6,4.56,4.58,multi,1.0
+596259346432142153,Prenzlauer Berg Nordwest,entire_home,apartment,95.0,42,4.62,4.64,4.52,professional,0.99
+623791863376446371,Friedrichsfelde Nord,entire_home,apartment,159.0,94,4.39,4.12,4.73,professional,1.0
+627993614199123614,Schöneberg-Süd,entire_home,apartment,129.0,40,4.58,4.63,4.53,multi,1.0
+629399957445489292,Kantstraße,entire_home,apartment,94.0,125,4.38,4.37,4.81,solo,1.0
+633244035489321026,Mierendorffplatz,entire_home,apartment,164.0,40,4.45,4.73,4.53,multi,1.0
+636114384665109408,Schloß Charlottenburg,entire_home,apartment,39.0,44,4.48,4.7,4.48,professional,0.88
+637540704086864148,Tempelhofer Vorstadt,entire_home,apartment,138.0,157,4.63,4.47,4.88,professional,0.95
+638424907749087837,Neue Kantstraße,entire_home,apartment,,119,4.61,4.51,4.79,multi,
+639025586735250390,Tempelhofer Vorstadt,entire_home,apartment,114.0,146,4.66,4.6,4.82,professional,0.95
+657271356031976665,Otto-Suhr-Allee,entire_home,apartment,193.0,86,4.21,4.0,4.35,multi,1.0
+657271494560701835,Otto-Suhr-Allee,entire_home,apartment,115.0,72,4.43,4.15,4.76,multi,1.0
+659191083969556429,Britz,entire_home,apartment,130.0,44,4.43,4.43,4.75,multi,
+662129063586725752,Alexanderplatz,entire_home,apartment,250.0,93,4.42,4.35,4.61,professional,0.97
+662252642803259249,Brunnenstr. Süd,entire_home,apartment,343.0,133,4.41,4.28,4.61,professional,0.97
+667065230104134766,Kölln. Vorstadt/Spindlersf.,entire_home,house,213.0,76,4.55,4.41,4.8,solo,1.0
+674300744723900413,Helmholtzplatz,entire_home,apartment,90.0,156,4.67,4.58,4.91,multi,1.0
+675853626086058786,Frankfurter Allee Süd FK,entire_home,apartment,169.0,42,4.4,4.36,4.6,professional,0.96
+675853675555524734,Frankfurter Allee Süd FK,entire_home,apartment,140.0,81,4.57,4.49,4.77,professional,0.96
+679607737624570621,Neuköllner Mitte/Zentrum,private_room,other,74.0,85,4.64,4.62,4.65,solo,1.0
+684491013825440916,Johannisthal,private_room,apartment,95.0,87,4.61,4.29,4.66,multi,1.0
+685224054858608898,Alexanderplatz,entire_home,apartment,158.0,83,4.46,4.61,4.51,professional,0.98
+686661051291812885,Frankfurter Allee Süd FK,entire_home,apartment,145.0,99,4.43,4.41,4.67,professional,0.96
+693862220904540813,Alexanderplatz,entire_home,apartment,204.0,65,4.62,4.68,4.29,professional,0.98
+693900049186346562,Prenzlauer Berg Südwest,entire_home,apartment,196.0,93,4.61,4.65,4.62,professional,0.98
+693907181004707396,Prenzlauer Berg Südwest,entire_home,apartment,179.0,59,4.66,4.68,4.66,professional,0.98
+693914756024294308,Prenzlauer Berg Südwest,entire_home,apartment,237.0,40,4.18,4.33,4.18,professional,0.98
+693923313653482667,Prenzlauer Berg Südwest,entire_home,apartment,151.0,63,4.54,4.49,4.59,professional,0.98
+693927235073254056,Prenzlauer Berg Südwest,entire_home,apartment,264.0,46,4.5,4.59,4.46,professional,0.98
+693937566341496900,Brunnenstr. Nord,entire_home,apartment,141.0,54,4.61,4.78,4.69,professional,0.98
+699107965092639742,Schillerpromenade,entire_home,apartment,213.0,74,4.2,4.04,4.12,professional,0.95
+699117423589365431,Schillerpromenade,entire_home,apartment,231.0,90,4.13,3.99,4.26,professional,0.95
+699798425824175964,Düsseldorfer Straße,entire_home,apartment,136.0,61,4.59,4.74,4.54,professional,0.9
+699804614899553353,Düsseldorfer Straße,entire_home,apartment,146.0,303,4.66,4.71,4.74,professional,0.9
+715660998471957523,Weißensee,entire_home,apartment,234.0,64,4.67,4.58,4.81,professional,1.0
+720839766613886451,Südliche Friedrichstadt,entire_home,apartment,144.0,553,4.67,4.76,4.7,professional,0.94
+721515853504302012,Südliche Friedrichstadt,entire_home,apartment,149.0,314,4.65,4.76,4.74,professional,0.94
+721523591301947759,Südliche Friedrichstadt,entire_home,apartment,150.0,119,4.66,4.76,4.71,professional,0.94
+721527807549293451,Südliche Friedrichstadt,entire_home,apartment,151.0,1550,4.67,4.77,4.7,professional,0.94
+721540353786100222,Südliche Friedrichstadt,entire_home,apartment,158.0,44,4.61,4.82,4.66,professional,0.94
+731809279716237058,Tempelhof,entire_home,apartment,136.0,117,4.67,4.75,4.68,professional,0.98
+731825380030233334,Tempelhof,entire_home,apartment,140.0,269,4.61,4.65,4.59,professional,0.98
+735085199089327822,Brunnenstr. Süd,entire_home,apartment,118.0,89,4.58,4.53,4.51,professional,0.97
+744143139305808819,Frankfurter Allee Nord,entire_home,apartment,110.0,182,4.66,4.65,4.78,professional,1.0
+751276921166035373,Rixdorf,entire_home,apartment,195.0,72,4.38,4.17,4.67,professional,0.98
+751277762483967066,Weißensee,entire_home,apartment,110.0,71,4.27,4.1,4.58,professional,0.98
+751277900458527377,Rixdorf,entire_home,apartment,150.0,66,4.38,4.18,4.74,professional,0.98
+764978494366252475,Tempelhofer Vorstadt,shared_room,hotel,30.0,43,4.53,4.47,4.72,professional,0.93
+767066760432215577,Frankfurter Allee Nord,entire_home,apartment,72.0,96,4.5,4.18,4.83,solo,1.0
+771647846393350366,Frankfurter Allee Süd FK,entire_home,apartment,149.0,126,4.51,4.67,4.38,professional,0.89
+771648187434844191,Frankfurter Allee Süd FK,entire_home,apartment,156.0,46,4.54,4.43,4.74,professional,0.89
+771649342687823471,Frankfurter Allee Süd FK,entire_home,apartment,163.0,174,4.51,4.68,4.56,professional,0.89
+771649554456588856,Frankfurter Allee Süd FK,entire_home,apartment,,156,4.63,4.72,4.81,professional,0.89
+778808739489367432,Tempelhofer Vorstadt,entire_home,apartment,103.0,154,4.58,4.36,4.86,professional,1.0
+783118783690353126,Prenzlauer Berg Südwest,entire_home,apartment,95.0,43,4.56,4.42,4.65,multi,0.8
+786785762986729653,Neuköllner Mitte/Zentrum,private_room,hotel,74.0,92,4.49,4.57,4.62,multi,0.7
+791921785972465654,Brunnenstr. Süd,entire_home,apartment,140.0,106,4.58,4.61,4.62,professional,0.99
+799883479729708626,Alexanderplatz,entire_home,apartment,118.0,166,4.67,4.55,4.68,multi,1.0
+810667192102353036,Tempelhofer Vorstadt,entire_home,apartment,81.0,109,4.48,4.48,4.77,multi,1.0
+818630719501735634,Moabit Ost,entire_home,apartment,94.0,90,4.14,4.1,4.76,multi,1.0
+822243196789037017,Prenzlauer Berg Südwest,entire_home,apartment,172.0,71,4.51,4.76,4.35,professional,0.98
+825927326336386111,Alexanderplatz,entire_home,apartment,88.0,147,4.61,4.48,4.86,multi,1.0
+830986220293338962,Moabit Ost,entire_home,apartment,198.0,82,4.48,4.41,4.73,multi,1.0
+831127713135648319,Moabit Ost,entire_home,apartment,145.0,68,4.44,4.34,4.72,multi,1.0
+832538204717853678,nördliche Luisenstadt,entire_home,apartment,209.0,128,4.63,4.66,4.81,multi,0.95
+839919420344071044,Tiergarten Süd,entire_home,apartment,496.0,122,4.63,4.48,4.77,professional,1.0
+843504356821251289,Tempelhofer Vorstadt,entire_home,apartment,70.0,114,4.46,4.04,4.78,solo,1.0
+846747833403837793,Johannisthal,private_room,apartment,78.0,84,4.62,4.46,4.74,multi,1.0
+847738714730041206,Moabit Ost,private_room,other,162.0,49,4.37,4.29,4.69,multi,0.8
+851458418244863960,Helmholtzplatz,entire_home,apartment,100.0,154,4.66,4.54,4.9,multi,1.0
+854220755445327340,Regierungsviertel,entire_home,apartment,158.0,69,4.51,4.77,4.23,professional,0.88
+854251028991888522,Regierungsviertel,entire_home,apartment,243.0,257,4.42,4.53,4.36,professional,0.88
+854259609751966037,Regierungsviertel,entire_home,apartment,323.0,96,4.36,4.52,4.17,professional,0.88
+857975239099139321,Alexanderplatz,entire_home,apartment,333.0,80,4.65,4.71,4.54,solo,1.0
+863593505561736460,südliche Luisenstadt,entire_home,apartment,149.0,54,4.61,4.65,4.67,multi,1.0
+867942287055057182,Mierendorffplatz,entire_home,apartment,341.0,89,4.52,4.25,4.71,multi,0.98
+868904063319864225,Alt-Lichtenberg,entire_home,apartment,101.0,59,4.39,4.22,4.66,professional,1.0
+874539280573538923,Niederschöneweide,entire_home,hotel,137.0,47,4.62,4.83,4.49,multi,0.7
+878927610471054839,Wedding Zentrum,entire_home,apartment,90.0,133,4.35,4.41,4.63,professional,0.97
+879653438579452099,Wedding Zentrum,entire_home,apartment,125.0,177,4.41,4.44,4.54,professional,0.97
+881082549976607654,Wedding Zentrum,entire_home,apartment,119.0,92,4.32,4.29,4.54,professional,0.97
+881100962020102125,Wedding Zentrum,entire_home,apartment,136.0,238,4.37,4.32,4.61,professional,0.97
+881117426754466812,Prenzlauer Berg Süd,entire_home,apartment,,47,4.66,4.74,4.7,solo,1.0
+884025877402223579,Prenzlauer Berg Nordwest,entire_home,apartment,85.0,142,4.67,4.66,4.68,multi,1.0
+894093144693655986,Neue Kantstraße,entire_home,apartment,120.0,149,4.66,4.53,4.84,professional,1.0
+901937393948803232,Wedding Zentrum,entire_home,apartment,93.0,140,4.65,4.67,4.6,solo,1.0
+903311880306888460,Prenzlauer Berg Süd,entire_home,apartment,247.0,45,4.62,4.82,4.47,solo,1.0
+907683064086815377,Frankfurter Allee Süd FK,entire_home,apartment,115.0,81,4.63,4.72,4.78,professional,0.99
+908604778539124166,Frankfurter Allee Süd FK,entire_home,apartment,121.0,150,4.65,4.41,4.81,professional,0.99
+909301412910894590,Frankfurter Allee Süd FK,entire_home,apartment,,85,4.55,4.49,4.73,professional,0.99
+922893196670431337,südliche Luisenstadt,entire_home,apartment,75.0,109,4.65,4.55,4.78,multi,1.0
+924375729009154375,Kantstraße,entire_home,apartment,148.0,40,4.63,4.83,4.65,professional,0.87
+926550612095718076,Alexanderplatz,entire_home,apartment,141.0,67,4.67,4.57,4.94,solo,1.0
+927191932137439622,Tempelhofer Vorstadt,entire_home,apartment,55.0,72,4.58,4.74,4.68,solo,0.9
+928114741395000896,Frankfurter Allee Süd FK,entire_home,apartment,217.0,90,4.28,4.0,4.54,professional,0.99
+929010804770377239,Prenzlauer Berg Südwest,entire_home,apartment,112.0,87,4.54,4.64,4.59,professional,1.0
+929013826831725263,Prenzlauer Berg Südwest,entire_home,apartment,163.0,109,4.57,4.65,4.74,professional,1.0
+930648202291914187,nördliche Luisenstadt,entire_home,apartment,161.0,85,4.49,4.44,4.79,multi,1.0
+931971305403805713,Adlershof,private_room,house,38.0,85,4.51,4.74,4.71,multi,0.46
+933151319571395755,Adlershof,private_room,apartment,148.0,159,4.63,4.6,4.68,professional,0.96
+934551564754627156,Westend,entire_home,apartment,108.0,41,4.63,4.49,4.95,professional,1.0
+940931072644357926,Karlshorst,entire_home,apartment,133.0,58,4.66,4.55,4.78,professional,1.0
+945370095384488800,Südliche Friedrichstadt,entire_home,apartment,122.0,74,4.57,4.7,4.54,professional,0.98
+945402747216841031,Südliche Friedrichstadt,entire_home,apartment,131.0,211,4.56,4.7,4.41,professional,0.98
+945448927812934557,Südliche Friedrichstadt,entire_home,apartment,170.0,112,4.67,4.74,4.6,professional,0.98
+946910204786307003,Schöneberg-Nord,private_room,hotel,177.0,43,4.37,4.49,4.74,professional,1.0
+949809978051323317,nördliche Luisenstadt,entire_home,apartment,191.0,64,4.38,4.4,4.7,multi,0.95
+950841243829958860,Schöneberg-Nord,private_room,hotel,145.0,48,4.52,4.63,4.65,professional,1.0
+951116961687236543,Schöneberg-Nord,private_room,hotel,147.0,50,4.36,4.6,4.52,professional,1.0
+957737492041138566,Regierungsviertel,entire_home,apartment,239.0,102,4.43,4.61,4.28,professional,0.88
+958668285940060858,Prenzlauer Berg Südwest,entire_home,apartment,166.0,81,4.65,4.63,4.68,multi,0.98
+960718759443282693,Osloer Straße,entire_home,apartment,125.0,92,4.67,4.75,4.93,multi,1.0
+967178200199695879,Prenzlauer Berg Südwest,entire_home,apartment,79.0,54,4.46,4.19,4.74,solo,1.0
+968877295746673943,Alt-Lichtenberg,private_room,apartment,71.0,75,4.63,4.57,4.76,multi,1.0
+973583520048735925,Prenzlauer Berg Südwest,entire_home,apartment,558.0,43,4.6,4.7,4.91,professional,0.96
+979394943253152771,Alexanderplatz,entire_home,apartment,203.0,59,4.46,4.56,4.83,professional,0.99
+984944922120776917,Moabit West,entire_home,apartment,94.0,84,4.5,4.51,4.55,professional,0.97
+993380042593079111,Schöneberg-Nord,private_room,hotel,,397,4.45,4.55,4.65,professional,1.0
+994857652827989415,Frankfurter Allee Nord,entire_home,apartment,70.0,49,4.49,4.27,4.86,solo,0.9
+996110167745683025,Alexanderplatz,private_room,hotel,178.0,109,4.47,4.6,4.58,multi,0.98
+1006363629503914037,Prenzlauer Berg Süd,entire_home,apartment,84.0,98,4.58,4.69,4.71,multi,1.0
+1009239484480765860,Alexanderplatz,entire_home,apartment,284.0,100,4.56,4.47,4.73,professional,0.97
+1009333985223408786,Frankfurter Allee Süd FK,entire_home,apartment,66.0,94,4.35,3.85,4.7,multi,1.0
+1015884445657478456,Karl-Marx-Allee-Süd,private_room,hotel,100.0,97,4.64,4.75,4.8,professional,1.0
+1017395777190519314,Prenzlauer Berg Südwest,private_room,hotel,75.0,93,4.51,4.55,4.52,professional,0.99
+1017402136198604032,Prenzlauer Berg Südwest,private_room,hotel,75.0,93,4.45,4.59,4.46,professional,0.99
+1020063244542576917,Karl-Marx-Allee-Süd,private_room,hotel,,60,4.62,4.55,4.67,professional,1.0
+1028746069347704435,nördliche Luisenstadt,private_room,apartment,74.0,87,4.66,4.6,4.94,professional,1.0
+1028876494516603742,Prenzlauer Berg Süd,entire_home,apartment,273.0,49,4.57,4.41,4.88,professional,1.0
+1028945847518547440,nördliche Luisenstadt,private_room,apartment,70.0,57,4.53,4.33,4.88,professional,1.0
+1028963055976766923,nördliche Luisenstadt,private_room,apartment,85.0,108,4.58,4.53,4.88,professional,1.0
+1029524990447302421,Moabit Ost,private_room,hotel,,61,4.66,4.82,4.72,multi,1.0
+1029535431648698690,Alexanderplatz,entire_home,apartment,269.0,50,4.58,4.82,4.78,professional,1.0
+1034594067790242581,Kurfürstendamm,private_room,hotel,104.0,95,4.49,4.66,4.57,professional,0.99
+1034665825236371167,Tempelhofer Vorstadt,entire_home,apartment,138.0,95,4.67,4.77,4.83,professional,0.95
+1037622960575355218,Reuterstraße,shared_room,apartment,54.0,44,4.57,4.68,4.41,solo,1.0
+1039788698093936651,Schöneberg-Süd,entire_home,apartment,130.0,81,4.4,4.07,4.6,multi,1.0
+1040544729415769188,Friedrichsfelde Nord,entire_home,apartment,159.0,40,4.6,4.53,4.9,professional,1.0
+1046189906957761570,Karlshorst,entire_home,apartment,86.0,51,4.49,4.45,4.8,multi,1.0
+1050424535012234861,Südliche Friedrichstadt,entire_home,apartment,112.0,75,4.13,4.03,4.64,professional,0.99
+1055697452883493133,Schöneberg-Süd,entire_home,apartment,119.0,74,4.62,4.65,4.82,professional,1.0
+1055700373321607221,Plänterwald,entire_home,apartment,132.0,66,4.58,4.36,4.73,professional,1.0
+1055746491460468407,Düsseldorfer Straße,entire_home,apartment,150.0,72,4.36,4.39,4.33,professional,1.0
+1059989859731356234,Prenzlauer Berg Nordwest,entire_home,apartment,90.0,105,4.35,4.13,4.61,professional,0.98
+1064342235550660801,Düsseldorfer Straße,entire_home,apartment,145.0,48,4.44,4.33,4.81,multi,1.0
+1065767763528781735,Düsseldorfer Straße,entire_home,apartment,89.0,52,4.58,4.46,4.83,multi,1.0
+1067255733826613148,Wedding Zentrum,entire_home,apartment,94.0,71,4.66,4.31,4.68,multi,1.0
+1069319700158091488,Alexanderplatz,entire_home,apartment,269.0,57,4.49,4.47,4.68,professional,1.0
+1073160758892484294,Adlershof,entire_home,apartment,193.0,47,4.66,4.81,4.68,professional,0.96
+1075256603704816590,Wedding Zentrum,entire_home,apartment,83.0,97,4.63,4.77,4.74,professional,1.0
+1079634029327345477,Moabit West,entire_home,apartment,151.0,61,4.64,4.59,4.84,professional,0.99
+1080198254054575244,Tempelhofer Vorstadt,entire_home,apartment,174.0,56,4.59,4.71,4.82,multi,1.0
+1085314077755107955,Alexanderplatz,entire_home,apartment,302.0,52,4.67,4.6,4.73,professional,1.0
+1085448104301002487,Prenzlauer Berg Ost,entire_home,apartment,241.0,49,4.57,4.55,4.67,professional,0.91
+1088501536142233960,Tempelhofer Vorstadt,entire_home,apartment,144.0,73,4.45,4.71,4.64,multi,1.0
+1092723111680073243,Alexanderplatz,entire_home,apartment,187.0,64,4.66,4.7,4.84,professional,1.0
+1094295373335288269,Alexanderplatz,entire_home,apartment,261.0,82,4.66,4.57,4.85,professional,1.0
+1096244509415184234,Regierungsviertel,private_room,hotel,,54,4.61,4.56,4.52,solo,
+1096244816645288389,Schöneberg-Nord,private_room,hotel,,81,4.02,4.04,4.33,multi,1.0
+1096245423597605165,Otto-Suhr-Allee,private_room,hotel,,80,4.46,4.44,4.29,multi,
+1096343616019487560,Otto-Suhr-Allee,entire_home,apartment,113.0,84,4.64,4.76,4.65,professional,0.95
+1096909066946360427,Schöneberg-Nord,private_room,hotel,,65,3.63,3.92,3.97,solo,
+1097094696496002319,Alexanderplatz,entire_home,apartment,365.0,49,4.67,4.55,4.84,professional,1.0
+1097124971775341744,Tempelhofer Vorstadt,entire_home,apartment,209.0,67,4.63,4.57,4.87,professional,0.95
+1098349584301999328,Karl-Marx-Allee-Nord,entire_home,apartment,126.0,77,4.64,4.55,4.77,multi,1.0
+1099849503876168022,Plänterwald,entire_home,apartment,121.0,100,4.57,4.62,4.87,professional,1.0
+1101241838417054700,Alexanderplatz,private_room,hotel,,72,4.46,4.52,4.62,solo,1.0
+1115032840574598575,Tempelhofer Vorstadt,entire_home,apartment,153.0,79,4.53,4.35,4.81,professional,1.0
+1117489702353576375,südliche Luisenstadt,private_room,apartment,65.0,42,4.62,4.55,4.79,professional,1.0
+1117524935379296860,südliche Luisenstadt,private_room,apartment,56.0,59,4.61,4.58,4.8,professional,1.0
+1125492855945930693,Prenzlauer Berg Südwest,entire_home,apartment,96.0,88,4.6,4.84,4.84,multi,1.0
+1128165292964796729,Kurfürstendamm,entire_home,apartment,113.0,59,4.29,4.14,4.56,professional,0.97
+1131692549156539593,Alexanderplatz,entire_home,apartment,200.0,52,4.67,4.65,4.62,multi,1.0
+1134562686709958303,Frankfurter Allee Süd FK,entire_home,apartment,74.0,40,4.5,4.53,4.83,multi,1.0
+1150698402058912681,Wedding Zentrum,private_room,apartment,65.0,42,4.52,4.4,4.88,solo,1.0
+1151602841841467381,Reuterstraße,entire_home,apartment,102.0,70,4.54,4.71,4.83,professional,1.0
+1153457093549600015,Schöneberg-Süd,entire_home,apartment,71.0,55,4.49,4.69,4.6,multi,1.0
+1155679542466018758,Alexanderplatz,entire_home,apartment,215.0,76,4.33,4.11,4.57,multi,0.96
+1162142616960425874,Kurfürstendamm,entire_home,apartment,150.0,53,4.6,4.75,4.6,professional,0.89
+1162164016027964062,Kurfürstendamm,entire_home,apartment,161.0,69,4.67,4.81,4.59,professional,0.89
+1163670634919077328,Prenzlauer Berg Nordwest,entire_home,apartment,214.0,52,4.52,4.73,4.85,professional,1.0
+1167288311968188692,Moabit Ost,entire_home,apartment,318.0,48,4.6,4.42,4.85,professional,1.0
+1183941128374898613,Moabit West,private_room,apartment,44.0,44,4.52,4.35,4.91,multi,1.0
+1186818127998253545,Alexanderplatz,entire_home,apartment,193.0,44,4.66,4.89,4.61,professional,0.85
+1188256454206026066,Schöneberg-Nord,entire_home,apartment,90.0,55,4.56,4.53,4.58,multi,1.0
+1188507107579542864,Brunnenstr. Süd,entire_home,apartment,187.0,58,4.33,4.19,4.43,multi,0.96
+1190365662394819313,Moabit West,entire_home,apartment,92.0,57,4.67,4.7,4.75,multi,1.0
+1197644344306709834,Schöneberg-Nord,private_room,apartment,56.0,54,4.57,4.46,4.93,professional,1.0
+1197648463545088690,Schöneberg-Nord,private_room,apartment,62.0,50,4.6,4.36,4.88,professional,1.0
+1197649294395524118,Schöneberg-Nord,private_room,apartment,62.0,70,4.64,4.3,4.84,professional,1.0
+1197650117198421109,Schöneberg-Nord,private_room,apartment,62.0,51,4.65,4.49,4.92,professional,1.0
+1197650166550450440,Schöneberg-Nord,private_room,apartment,62.0,48,4.4,3.94,4.75,professional,1.0
+1197652368892223424,Schöneberg-Nord,private_room,apartment,61.0,52,4.52,4.33,4.77,professional,1.0
+1202232515126350694,Drakestr.,entire_home,house,,47,4.6,4.64,4.64,multi,1.0
+1206341839388252549,Rixdorf,entire_home,apartment,160.0,172,4.0,4.12,4.37,multi,0.91
+1211495325815600084,Alexanderplatz,entire_home,apartment,149.0,50,4.6,4.84,4.56,professional,0.95
+1215148902005435671,Regierungsviertel,private_room,hotel,76.0,77,3.9,4.16,3.75,professional,0.97
+1216465253515023473,Alexanderplatz,entire_home,apartment,136.0,57,4.09,4.21,3.95,professional,0.81
+1222450748405653717,Otto-Suhr-Allee,entire_home,apartment,104.0,51,4.59,4.58,4.54,professional,0.95
+1223085929929021865,Rixdorf,entire_home,apartment,145.0,107,4.26,4.36,4.44,multi,0.81
+1223091910763945275,Rixdorf,entire_home,apartment,149.0,183,4.17,4.26,4.46,multi,0.81
+1228740059437196624,Neue Kantstraße,private_room,hotel,116.0,56,4.43,4.69,4.69,professional,1.0
+1230689097377857385,Wedding Zentrum,entire_home,apartment,93.0,46,4.52,4.59,4.74,professional,1.0
+1237634828969855498,Westend,entire_home,apartment,75.0,43,4.65,4.7,4.91,professional,1.0
+1244038654302437819,Karl-Marx-Allee-Nord,entire_home,apartment,94.0,42,4.38,4.64,4.19,multi,0.87
+1254056869652098320,nördliche Luisenstadt,private_room,apartment,74.0,54,4.26,3.96,4.76,professional,1.0
+1254057716880208873,nördliche Luisenstadt,private_room,apartment,74.0,46,4.46,4.15,4.83,professional,1.0
+1254058011047220173,nördliche Luisenstadt,private_room,apartment,62.0,53,4.3,3.85,4.79,professional,1.0
+1264387511715820970,Südliche Friedrichstadt,entire_home,apartment,157.0,278,4.67,4.7,4.64,professional,0.89
+1268121761753625501,Tempelhofer Vorstadt,entire_home,apartment,444.0,45,4.44,4.6,4.56,professional,0.97
+1273814853420840203,Prenzlauer Berg Ost,entire_home,apartment,260.0,46,4.43,4.43,4.74,multi,1.0
+1274600210645473682,Karl-Marx-Allee-Süd,entire_home,apartment,152.0,40,4.55,4.6,4.48,multi,1.0
+1302869509092517265,Kurfürstendamm,entire_home,apartment,127.0,270,4.59,4.69,4.59,professional,0.98
+1320131827647030801,Moabit West,shared_room,apartment,41.0,40,4.65,4.0,4.88,solo,1.0
+1333910684186106416,Niederschöneweide,entire_home,apartment,99.0,51,4.0,4.1,4.51,professional,0.97
+1373943993862283055,Brunnenstr. Nord,private_room,apartment,46.0,43,4.6,4.71,4.55,multi,1.0
+1374708011871848658,Wedding Zentrum,entire_home,apartment,86.0,40,4.18,4.3,4.38,professional,0.97
+1374811813498968427,Wedding Zentrum,entire_home,apartment,92.0,45,3.93,3.96,4.13,professional,0.97
+1379740552315153632,Ost 1,private_room,hotel,127.0,47,4.34,4.43,4.36,professional,0.97
+1379759790076809671,Osloer Straße,private_room,hotel,181.0,118,4.42,4.29,4.41,professional,0.97

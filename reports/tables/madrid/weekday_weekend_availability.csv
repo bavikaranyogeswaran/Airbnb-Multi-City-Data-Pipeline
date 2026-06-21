@@ -1,0 +1,3 @@
+is_weekend,total_days,available_days,unique_listings,availability_rate,occupancy_rate,label
+False,6516268,3047417.0,25000,0.46766293221825744,0.5323370677817425,Weekday
+True,2608739,1195230.0,25000,0.45816388684341364,0.5418361131565863,Weekend

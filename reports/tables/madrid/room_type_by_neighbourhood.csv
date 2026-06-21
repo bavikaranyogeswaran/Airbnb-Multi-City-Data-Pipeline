@@ -1,0 +1,129 @@
+neighbourhood_cleansed,entire_home,hotel_room,private_room,shared_room
+Abrantes,23.5,0.0,76.5,0.0
+Acacias,59.8,0.0,40.2,0.0
+Adelfas,81.3,0.0,18.7,0.0
+Aeropuerto,23.1,0.0,61.5,15.4
+Aguilas,15.8,0.0,84.2,0.0
+Alameda de Osuna,23.3,0.0,76.7,0.0
+Almagro,70.8,0.0,29.2,0.0
+Almenara,75.8,0.0,24.2,0.0
+Almendrales,64.5,0.0,34.7,0.8
+Aluche,33.0,0.0,67.0,0.0
+Ambroz,21.4,0.0,78.6,0.0
+Amposta,25.0,0.0,75.0,0.0
+Apostol Santiago,26.8,0.0,73.2,0.0
+Arapiles,68.0,0.0,32.0,0.0
+Aravaca,81.8,0.0,18.2,0.0
+Arcos,17.3,0.0,82.7,0.0
+Argüelles,52.7,0.0,46.7,0.5
+Atalaya,0.0,0.0,100.0,0.0
+Atocha,77.6,0.0,18.4,4.1
+Bellas Vistas,66.7,0.0,33.3,0.0
+Berruguete,70.7,0.0,29.3,0.0
+Buenavista,27.0,0.0,71.4,1.6
+Butarque,21.4,0.0,78.6,0.0
+Campamento,16.2,0.0,83.8,0.0
+Canillas,41.7,2.1,56.2,0.0
+Canillejas,45.1,1.6,53.3,0.0
+Casa de Campo,51.4,0.0,48.6,0.0
+Casco Histórico de Barajas,49.2,0.0,49.2,1.6
+Casco Histórico de Vallecas,55.8,0.0,44.2,0.0
+Casco Histórico de Vicálvaro,39.4,0.0,60.6,0.0
+Castellana,84.3,0.0,15.7,0.0
+Castilla,65.5,0.0,34.5,0.0
+Castillejos,65.5,0.0,34.1,0.3
+Chopera,60.5,0.0,39.5,0.0
+Ciudad Jardín,78.4,0.8,20.8,0.0
+Ciudad Universitaria,48.8,0.0,51.2,0.0
+Colina,72.0,0.0,28.0,0.0
+Comillas,61.6,0.0,37.7,0.6
+Concepción,55.7,0.0,44.3,0.0
+Corralejos,72.7,0.0,27.3,0.0
+Cortes,77.9,0.4,21.8,0.0
+Costillares,83.7,0.0,16.3,0.0
+Cuatro Caminos,67.6,0.0,24.7,7.7
+Cuatro Vientos,28.6,0.0,71.4,0.0
+Cármenes,37.0,0.0,63.0,0.0
+Delicias,55.5,0.0,44.5,0.0
+El Goloso,80.0,0.0,20.0,0.0
+El Pardo,100.0,0.0,0.0,0.0
+El Plantío,11.8,0.0,82.4,5.9
+El Viso,60.4,0.0,39.6,0.0
+Embajadores,74.6,0.4,24.2,0.8
+Entrevías,34.9,0.0,60.3,4.8
+Estrella,47.6,0.0,52.4,0.0
+Fontarrón,17.1,0.0,82.9,0.0
+Fuente del Berro,70.9,0.0,29.1,0.0
+Fuentelareina,80.0,0.0,20.0,0.0
+Gaztambide,52.6,0.0,47.0,0.4
+Goya,79.0,0.0,21.0,0.0
+Guindalera,72.3,0.3,27.5,0.0
+Hellín,25.0,0.0,75.0,0.0
+Hispanoamérica,74.8,0.0,25.2,0.0
+Horcajo,0.0,0.0,100.0,0.0
+Ibiza,66.9,0.0,33.1,0.0
+Imperial,71.5,0.0,28.5,0.0
+Jerónimos,71.0,0.0,29.0,0.0
+Justicia,77.3,0.2,22.4,0.1
+La Paz,29.2,0.0,70.8,0.0
+Legazpi,81.2,2.1,16.7,0.0
+Lista,74.2,0.0,25.8,0.0
+Los Angeles,30.0,0.0,70.0,0.0
+Los Rosales,42.9,0.0,57.1,0.0
+Lucero,38.1,0.0,61.9,0.0
+Marroquina,51.7,0.0,48.3,0.0
+Media Legua,28.0,0.0,72.0,0.0
+Mirasierra,46.2,0.0,53.8,0.0
+Moscardó,52.9,0.0,47.1,0.0
+Niño Jesús,78.3,0.0,21.7,0.0
+Nueva España,74.6,0.0,21.3,4.1
+Numancia,53.8,0.0,45.7,0.5
+Opañel,57.9,0.0,42.1,0.0
+Orcasitas,33.3,0.0,66.7,0.0
+Orcasur,76.8,0.0,23.2,0.0
+Pacífico,51.8,0.0,48.2,0.0
+Palacio,75.5,0.2,23.4,0.9
+Palomas,80.0,0.0,20.0,0.0
+Palomeras Bajas,40.7,0.0,59.3,0.0
+Palomeras Sureste,39.6,0.0,60.4,0.0
+Palos de Moguer,66.2,0.0,33.1,0.7
+Pavones,42.9,0.0,57.1,0.0
+Peñagrande,43.1,0.0,56.9,0.0
+Pilar,63.5,0.0,36.5,0.0
+Pinar del Rey,66.4,0.0,33.6,0.0
+Piovera,73.0,0.0,27.0,0.0
+Portazgo,33.3,0.0,63.5,3.2
+Pradolongo,37.9,0.0,58.6,3.4
+Prosperidad,70.8,1.3,27.9,0.0
+Pueblo Nuevo,55.3,0.0,44.7,0.0
+Puerta Bonita,38.8,0.0,61.2,0.0
+Puerta del Angel,54.4,0.0,45.6,0.0
+Quintana,52.7,0.0,47.3,0.0
+Recoletos,85.3,1.6,13.1,0.0
+Rejas,78.3,0.0,21.7,0.0
+Rios Rosas,67.2,2.3,30.5,0.0
+Rosas,15.1,0.0,84.9,0.0
+Salvador,44.8,0.0,55.2,0.0
+San Andrés,52.7,1.1,45.1,1.1
+San Cristobal,19.0,0.0,81.0,0.0
+San Diego,64.5,0.0,35.5,0.0
+San Fermín,32.7,0.0,67.3,0.0
+San Isidro,61.3,0.0,38.2,0.5
+San Juan Bautista,60.5,0.0,39.5,0.0
+San Pascual,40.3,1.6,58.1,0.0
+Santa Eugenia,33.3,0.0,66.7,0.0
+Simancas,44.8,0.0,55.2,0.0
+Sol,74.6,0.9,24.1,0.4
+Timón,47.8,0.0,52.2,0.0
+Trafalgar,71.5,0.0,28.5,0.0
+Universidad,73.8,0.5,23.9,1.8
+Valdeacederas,77.0,0.0,22.7,0.4
+Valdefuentes,73.3,0.0,26.7,0.0
+Valdemarín,40.0,0.0,60.0,0.0
+Valdezarza,42.9,0.0,57.1,0.0
+Vallehermoso,65.8,0.0,34.2,0.0
+Valverde,59.1,0.0,40.9,0.0
+Ventas,53.8,0.0,46.2,0.0
+Vinateros,14.7,0.0,85.3,0.0
+Vista Alegre,40.0,0.0,57.9,2.1
+Zofío,59.6,0.0,40.4,0.0

@@ -1,0 +1,134 @@
+,coefficient,std_err,t_stat,p_value,ci_low,ci_high,significant
+Intercept,3.728256,0.08693,42.888087,0.0,3.557877,3.898636,True
+C(room_type)[T.hotel_room],0.202377,0.071017,2.8497,0.004376,0.063186,0.341568,True
+C(room_type)[T.private_room],-0.502595,0.011674,-43.05304,0.0,-0.525476,-0.479715,True
+C(room_type)[T.shared_room],-1.179407,0.081921,-14.396837,0.0,-1.33997,-1.018844,True
+C(neighbourhood_cleansed)[T.Acacias],0.201933,0.075917,2.659912,0.007816,0.053138,0.350727,True
+C(neighbourhood_cleansed)[T.Adelfas],0.397955,0.090503,4.397142,1.1e-05,0.220572,0.575338,True
+C(neighbourhood_cleansed)[T.Aeropuerto],0.12215,0.183854,0.664384,0.506445,-0.238198,0.482498,False
+C(neighbourhood_cleansed)[T.Aguilas],-0.116181,0.107202,-1.083763,0.27847,-0.326293,0.09393,False
+C(neighbourhood_cleansed)[T.Alameda de Osuna],0.143294,0.09047,1.583887,0.11322,-0.034024,0.320613,False
+C(neighbourhood_cleansed)[T.Almagro],0.548754,0.079701,6.885153,0.0,0.392543,0.704965,True
+C(neighbourhood_cleansed)[T.Almenara],0.268165,0.076052,3.526068,0.000422,0.119106,0.417225,True
+C(neighbourhood_cleansed)[T.Almendrales],0.015075,0.099185,0.15199,0.879194,-0.179324,0.209475,False
+C(neighbourhood_cleansed)[T.Aluche],-0.071223,0.081093,-0.878286,0.379789,-0.230163,0.087717,False
+C(neighbourhood_cleansed)[T.Ambroz],-0.10002,0.09323,-1.07283,0.283348,-0.282747,0.082707,False
+C(neighbourhood_cleansed)[T.Amposta],0.046808,0.152196,0.307549,0.758425,-0.251491,0.345107,False
+C(neighbourhood_cleansed)[T.Apostol Santiago],0.04748,0.08153,0.58236,0.560324,-0.112316,0.207275,False
+C(neighbourhood_cleansed)[T.Arapiles],0.389746,0.077347,5.038905,0.0,0.238148,0.541345,True
+C(neighbourhood_cleansed)[T.Aravaca],0.021467,0.089463,0.23995,0.810369,-0.153878,0.196811,False
+C(neighbourhood_cleansed)[T.Arcos],0.163807,0.163011,1.004883,0.314953,-0.155689,0.483302,False
+C(neighbourhood_cleansed)[T.Argüelles],0.531594,0.080962,6.565968,0.0,0.372911,0.690276,True
+C(neighbourhood_cleansed)[T.Atocha],0.439168,0.105193,4.174876,3e-05,0.232993,0.645342,True
+C(neighbourhood_cleansed)[T.Bellas Vistas],0.192903,0.07633,2.527216,0.011497,0.043298,0.342507,True
+C(neighbourhood_cleansed)[T.Berruguete],0.20289,0.077308,2.624422,0.00868,0.051368,0.354411,True
+C(neighbourhood_cleansed)[T.Buenavista],0.076681,0.102882,0.745323,0.456076,-0.124965,0.278326,False
+C(neighbourhood_cleansed)[T.Butarque],0.067527,0.105807,0.638203,0.523342,-0.139852,0.274905,False
+C(neighbourhood_cleansed)[T.Campamento],-0.095073,0.084342,-1.127235,0.259643,-0.26038,0.070234,False
+C(neighbourhood_cleansed)[T.Canillas],0.100128,0.083561,1.19826,0.230816,-0.063649,0.263905,False
+C(neighbourhood_cleansed)[T.Canillejas],-0.014601,0.078828,-0.185222,0.853055,-0.1691,0.139899,False
+C(neighbourhood_cleansed)[T.Casa de Campo],0.446032,0.116453,3.830135,0.000128,0.217788,0.674276,True
+C(neighbourhood_cleansed)[T.Casco Histórico de Barajas],0.189273,0.080212,2.359655,0.018292,0.03206,0.346487,True
+C(neighbourhood_cleansed)[T.Casco Histórico de Vallecas],-0.013999,0.079921,-0.175158,0.860956,-0.17064,0.142643,False
+C(neighbourhood_cleansed)[T.Casco Histórico de Vicálvaro],-0.032945,0.083307,-0.395465,0.6925,-0.196223,0.130333,False
+C(neighbourhood_cleansed)[T.Castellana],0.583946,0.080589,7.246017,0.0,0.425996,0.741897,True
+C(neighbourhood_cleansed)[T.Castilla],0.351506,0.091502,3.841513,0.000122,0.172165,0.530846,True
+C(neighbourhood_cleansed)[T.Castillejos],0.472716,0.091902,5.143704,0.0,0.292592,0.652841,True
+C(neighbourhood_cleansed)[T.Chopera],0.14103,0.075861,1.859053,0.06302,-0.007655,0.289716,False
+C(neighbourhood_cleansed)[T.Ciudad Jardín],0.198001,0.082669,2.39511,0.016615,0.035973,0.360029,True
+C(neighbourhood_cleansed)[T.Ciudad Universitaria],0.043924,0.103828,0.423048,0.67226,-0.159575,0.247423,False
+C(neighbourhood_cleansed)[T.Colina],0.400206,0.162767,2.458767,0.013942,0.081189,0.719224,True
+C(neighbourhood_cleansed)[T.Comillas],0.039002,0.076797,0.507858,0.611553,-0.111518,0.189522,False
+C(neighbourhood_cleansed)[T.Concepción],0.201044,0.093893,2.141209,0.032257,0.017018,0.38507,True
+C(neighbourhood_cleansed)[T.Corralejos],-0.069002,0.148462,-0.46478,0.642089,-0.359981,0.221977,False
+C(neighbourhood_cleansed)[T.Cortes],0.545593,0.072999,7.473955,0.0,0.402517,0.688668,True
+C(neighbourhood_cleansed)[T.Costillares],0.151864,0.087229,1.740966,0.081689,-0.019103,0.32283,False
+C(neighbourhood_cleansed)[T.Cuatro Caminos],0.384725,0.074359,5.173883,0.0,0.238984,0.530466,True
+C(neighbourhood_cleansed)[T.Cuatro Vientos],-0.058016,0.084519,-0.686419,0.492449,-0.223671,0.107639,False
+C(neighbourhood_cleansed)[T.Cármenes],-0.048776,0.091779,-0.531454,0.595105,-0.22866,0.131107,False
+C(neighbourhood_cleansed)[T.Delicias],0.183382,0.079398,2.309639,0.020908,0.027764,0.339,True
+C(neighbourhood_cleansed)[T.El Goloso],-0.038238,0.231247,-0.165356,0.868664,-0.491474,0.414998,False
+C(neighbourhood_cleansed)[T.El Plantío],0.346659,0.120268,2.882387,0.003947,0.110938,0.582379,True
+C(neighbourhood_cleansed)[T.El Viso],0.482626,0.096592,4.996554,1e-06,0.29331,0.671943,True
+C(neighbourhood_cleansed)[T.Embajadores],0.331114,0.07141,4.636821,4e-06,0.191153,0.471074,True
+C(neighbourhood_cleansed)[T.Entrevías],0.052942,0.086348,0.613122,0.539796,-0.116297,0.22218,False
+C(neighbourhood_cleansed)[T.Estrella],0.410371,0.102108,4.019006,5.8e-05,0.210244,0.610498,True
+C(neighbourhood_cleansed)[T.Fontarrón],-0.096002,0.113444,-0.84625,0.397413,-0.318349,0.126345,False
+C(neighbourhood_cleansed)[T.Fuente del Berro],0.261977,0.07913,3.310701,0.000931,0.106884,0.417069,True
+C(neighbourhood_cleansed)[T.Fuentelareina],0.627601,0.203203,3.08854,0.002011,0.22933,1.025871,True
+C(neighbourhood_cleansed)[T.Gaztambide],0.335005,0.075871,4.415469,1e-05,0.186301,0.483709,True
+C(neighbourhood_cleansed)[T.Goya],0.592613,0.07798,7.599541,0.0,0.439775,0.745451,True
+C(neighbourhood_cleansed)[T.Guindalera],0.385778,0.078391,4.921222,1e-06,0.232135,0.539421,True
+C(neighbourhood_cleansed)[T.Hellín],-0.083006,0.098596,-0.841879,0.399856,-0.276251,0.110239,False
+C(neighbourhood_cleansed)[T.Hispanoamérica],0.420867,0.080342,5.238425,0.0,0.263399,0.578335,True
+C(neighbourhood_cleansed)[T.Horcajo],0.062946,0.173848,0.362074,0.717297,-0.277789,0.403681,False
+C(neighbourhood_cleansed)[T.Ibiza],0.310825,0.07773,3.998778,6.4e-05,0.158477,0.463174,True
+C(neighbourhood_cleansed)[T.Imperial],0.250822,0.079097,3.171085,0.001519,0.095796,0.405849,True
+C(neighbourhood_cleansed)[T.Jerónimos],0.578354,0.087684,6.595854,0.0,0.406496,0.750212,True
+C(neighbourhood_cleansed)[T.Justicia],0.547735,0.072417,7.563633,0.0,0.405801,0.68967,True
+C(neighbourhood_cleansed)[T.La Paz],0.237191,0.188477,1.258461,0.208225,-0.132217,0.606599,False
+C(neighbourhood_cleansed)[T.Legazpi],0.153436,0.117324,1.307799,0.190942,-0.076515,0.383387,False
+C(neighbourhood_cleansed)[T.Lista],0.436189,0.079911,5.458438,0.0,0.279566,0.592811,True
+C(neighbourhood_cleansed)[T.Los Angeles],-0.233378,0.102886,-2.268312,0.02331,-0.435031,-0.031725,True
+C(neighbourhood_cleansed)[T.Los Rosales],-0.032837,0.08369,-0.392367,0.694787,-0.196867,0.131193,False
+C(neighbourhood_cleansed)[T.Lucero],-0.092696,0.084104,-1.102153,0.270395,-0.257537,0.072146,False
+C(neighbourhood_cleansed)[T.Marroquina],-0.00096,0.095478,-0.010057,0.991976,-0.188094,0.186173,False
+C(neighbourhood_cleansed)[T.Media Legua],0.051692,0.097275,0.531394,0.595145,-0.138965,0.242348,False
+C(neighbourhood_cleansed)[T.Mirasierra],0.106002,0.154389,0.686592,0.49234,-0.196595,0.4086,False
+C(neighbourhood_cleansed)[T.Moscardó],0.00127,0.074833,0.016973,0.986458,-0.1454,0.14794,False
+C(neighbourhood_cleansed)[T.Niño Jesús],0.43471,0.091457,4.753136,2e-06,0.255456,0.613963,True
+C(neighbourhood_cleansed)[T.Nueva España],0.291989,0.089516,3.261878,0.001107,0.116542,0.467437,True
+C(neighbourhood_cleansed)[T.Numancia],0.057149,0.080496,0.709956,0.477731,-0.100621,0.214919,False
+C(neighbourhood_cleansed)[T.Opañel],-0.017395,0.080605,-0.215808,0.829138,-0.175379,0.140588,False
+C(neighbourhood_cleansed)[T.Orcasitas],-0.164741,0.085875,-1.918391,0.055061,-0.333052,0.00357,False
+C(neighbourhood_cleansed)[T.Orcasur],0.10955,0.081944,1.336895,0.181257,-0.051057,0.270158,False
+C(neighbourhood_cleansed)[T.Pacífico],0.197202,0.076651,2.572734,0.01009,0.046969,0.347435,True
+C(neighbourhood_cleansed)[T.Palacio],0.514022,0.072095,7.129792,0.0,0.372718,0.655325,True
+C(neighbourhood_cleansed)[T.Palomas],0.072872,0.355383,0.205052,0.837531,-0.623665,0.769409,False
+C(neighbourhood_cleansed)[T.Palomeras Bajas],-0.031377,0.112949,-0.2778,0.781166,-0.252753,0.189999,False
+C(neighbourhood_cleansed)[T.Palomeras Sureste],0.014372,0.120159,0.119609,0.904793,-0.221135,0.24988,False
+C(neighbourhood_cleansed)[T.Palos de Moguer],0.29184,0.075642,3.858158,0.000114,0.143584,0.440096,True
+C(neighbourhood_cleansed)[T.Pavones],-0.102417,0.153147,-0.66875,0.503655,-0.40258,0.197746,False
+C(neighbourhood_cleansed)[T.Peñagrande],0.085805,0.094898,0.90418,0.3659,-0.100192,0.271803,False
+C(neighbourhood_cleansed)[T.Pilar],0.046537,0.084791,0.548837,0.583117,-0.119651,0.212724,False
+C(neighbourhood_cleansed)[T.Pinar del Rey],0.189013,0.080814,2.338845,0.019343,0.030619,0.347406,True
+C(neighbourhood_cleansed)[T.Piovera],0.430914,0.116692,3.692756,0.000222,0.202202,0.659626,True
+C(neighbourhood_cleansed)[T.Portazgo],-0.062611,0.147294,-0.425074,0.670782,-0.351302,0.22608,False
+C(neighbourhood_cleansed)[T.Pradolongo],-0.109605,0.10074,-1.087996,0.276597,-0.307051,0.087842,False
+C(neighbourhood_cleansed)[T.Prosperidad],0.273529,0.075792,3.608968,0.000307,0.124981,0.422078,True
+C(neighbourhood_cleansed)[T.Pueblo Nuevo],0.070797,0.079782,0.887377,0.374876,-0.085574,0.227168,False
+C(neighbourhood_cleansed)[T.Puerta Bonita],-0.193481,0.078144,-2.475944,0.013288,-0.346642,-0.040321,True
+C(neighbourhood_cleansed)[T.Puerta del Angel],0.105892,0.088548,1.195866,0.231749,-0.067659,0.279443,False
+C(neighbourhood_cleansed)[T.Quintana],-0.047483,0.095457,-0.497426,0.618889,-0.234574,0.139609,False
+C(neighbourhood_cleansed)[T.Recoletos],0.778004,0.077704,10.012438,0.0,0.625707,0.9303,True
+C(neighbourhood_cleansed)[T.Rejas],-0.013857,0.074777,-0.185309,0.852987,-0.160417,0.132704,False
+C(neighbourhood_cleansed)[T.Rios Rosas],0.336747,0.0795,4.235822,2.3e-05,0.18093,0.492564,True
+C(neighbourhood_cleansed)[T.Rosas],0.375509,0.170281,2.205234,0.027438,0.041765,0.709253,True
+C(neighbourhood_cleansed)[T.Salvador],0.209682,0.112283,1.867449,0.061839,-0.010388,0.429753,False
+C(neighbourhood_cleansed)[T.San Andrés],-0.009354,0.080316,-0.116468,0.907282,-0.16677,0.148062,False
+C(neighbourhood_cleansed)[T.San Cristobal],-0.437813,0.141302,-3.098416,0.001946,-0.714761,-0.160866,True
+C(neighbourhood_cleansed)[T.San Diego],0.080473,0.078817,1.021018,0.307246,-0.074005,0.234951,False
+C(neighbourhood_cleansed)[T.San Fermín],-0.076657,0.085469,-0.896895,0.369775,-0.244173,0.09086,False
+C(neighbourhood_cleansed)[T.San Isidro],0.059295,0.082714,0.71686,0.47346,-0.102823,0.221412,False
+C(neighbourhood_cleansed)[T.San Juan Bautista],0.424451,0.107019,3.96613,7.3e-05,0.214698,0.634204,True
+C(neighbourhood_cleansed)[T.San Pascual],0.003424,0.089792,0.038133,0.969582,-0.172564,0.179412,False
+C(neighbourhood_cleansed)[T.Santa Eugenia],-0.135602,0.119702,-1.132831,0.257285,-0.370214,0.09901,False
+C(neighbourhood_cleansed)[T.Simancas],-0.025321,0.08457,-0.299407,0.76463,-0.191075,0.140433,False
+C(neighbourhood_cleansed)[T.Sol],0.560286,0.072802,7.696015,0.0,0.417596,0.702975,True
+C(neighbourhood_cleansed)[T.Timón],0.102183,0.110415,0.92545,0.354732,-0.114226,0.318593,False
+C(neighbourhood_cleansed)[T.Trafalgar],0.455112,0.076624,5.939557,0.0,0.304932,0.605292,True
+C(neighbourhood_cleansed)[T.Universidad],0.465305,0.071794,6.481132,0.0,0.324592,0.606019,True
+C(neighbourhood_cleansed)[T.Valdeacederas],0.141039,0.075222,1.874974,0.060796,-0.006393,0.28847,False
+C(neighbourhood_cleansed)[T.Valdefuentes],0.222696,0.088919,2.504485,0.012263,0.048418,0.396974,True
+C(neighbourhood_cleansed)[T.Valdemarín],0.220475,0.102783,2.145039,0.03195,0.019023,0.421926,True
+C(neighbourhood_cleansed)[T.Valdezarza],0.05903,0.088299,0.668525,0.503799,-0.114032,0.232092,False
+C(neighbourhood_cleansed)[T.Vallehermoso],0.347375,0.081746,4.24947,2.1e-05,0.187157,0.507594,True
+C(neighbourhood_cleansed)[T.Valverde],0.116888,0.081837,1.428299,0.153206,-0.04351,0.277287,False
+C(neighbourhood_cleansed)[T.Ventas],0.148802,0.083266,1.787057,0.073928,-0.014397,0.312001,False
+C(neighbourhood_cleansed)[T.Vinateros],-0.276923,0.108165,-2.560179,0.010462,-0.488923,-0.064923,True
+C(neighbourhood_cleansed)[T.Vista Alegre],-0.071889,0.078376,-0.917232,0.359021,-0.225503,0.081725,False
+C(neighbourhood_cleansed)[T.Zofío],0.064991,0.098585,0.659235,0.509745,-0.128233,0.258214,False
+accommodates,0.125173,0.003898,32.108166,0.0,0.117532,0.132814,True
+bedrooms,0.066237,0.00758,8.738123,0.0,0.05138,0.081094,True
+review_scores_rating,0.053347,0.009776,5.456791,0.0,0.034186,0.072508,True
+superhost_flag,0.020217,0.008096,2.497136,0.01252,0.004349,0.036085,True

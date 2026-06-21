@@ -1,0 +1,5 @@
+tenure_band,listing_count,unique_hosts,median_price,median_rating,superhost_rate,median_portfolio,median_occupancy
+New  (0-2 yr),1391,632,120.0,4.8,0.3367272727272727,4.0,0.32
+Established  (2-5 yr),2135,851,109.0,4.8,0.21087470449172577,5.0,0.29
+Experienced  (5-10 yr),5113,3536,102.0,4.85,0.23945335710041593,1.0,0.76
+Veteran  (10+ yr),5635,4445,99.0,4.89,0.2538143959791779,1.0,0.89

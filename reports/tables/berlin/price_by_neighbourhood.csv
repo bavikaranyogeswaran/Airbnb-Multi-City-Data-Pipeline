@@ -1,0 +1,101 @@
+neighbourhood_cleansed,listing_count,median_price,mean_price
+Adlershof,31,95.0,100.0
+Albrechtstr.,56,86.0,135.0
+Alexanderplatz,725,142.0,922.0
+Alt  Treptow,50,94.0,114.0
+Alt-Lichtenberg,32,110.0,122.0
+Altglienicke,23,62.0,80.0
+Barstraße,33,99.0,116.0
+Baumschulenweg,20,82.0,96.0
+Biesdorf,26,80.0,95.0
+Blankenburg/Heinersdorf/Märchenland,27,68.0,79.0
+Blankenfelde/Niederschönhausen,42,98.0,341.0
+Bohnsdorf,24,64.0,503.0
+Britz,29,97.0,116.0
+Brunnenstr. Nord,161,150.0,190.0
+Brunnenstr. Süd,402,146.0,181.0
+Buchholz,25,79.0,101.0
+Buckow,20,99.0,96.0
+Drakestr.,49,95.0,106.0
+Düsseldorfer Straße,170,110.0,132.0
+Frankfurter Allee Nord,156,104.0,128.0
+Frankfurter Allee Süd FK,477,108.0,135.0
+Friedenau,60,110.0,119.0
+Friedrichsfelde Nord,23,110.0,124.0
+Friedrichshagen,33,128.0,134.0
+Gatow / Kladow,17,88.0,95.0
+Grunewald,64,110.0,119.0
+Grünau,16,86.0,101.0
+Halensee,63,84.0,118.0
+Heerstrasse,40,84.0,118.0
+Heerstraße Nord,18,65.0,101.0
+Helmholtzplatz,157,119.0,137.0
+Johannisthal,25,69.0,104.0
+Kantstraße,85,100.0,131.0
+Karl-Marx-Allee-Nord,105,102.0,116.0
+Karl-Marx-Allee-Süd,183,100.0,114.0
+Karlshorst,50,135.0,130.0
+Kaulsdorf,15,85.0,89.0
+Kurfürstendamm,139,138.0,150.0
+Köllnische Heide,15,93.0,92.0
+Köpenick-Nord,14,64.0,81.0
+Lichtenrade,21,76.0,87.0
+MV 2,18,84.0,82.0
+Mahlsdorf,21,90.0,102.0
+Mariendorf,30,98.0,121.0
+Marzahn-Süd,18,121.0,138.0
+Mierendorffplatz,36,99.0,117.0
+Moabit Ost,153,87.0,113.0
+Moabit West,157,92.0,119.0
+Müggelheim,19,136.0,1065.0
+Neu Lichtenberg,62,101.0,112.0
+Neue Kantstraße,89,113.0,159.0
+Neuköllner Mitte/Zentrum,169,93.0,133.0
+Niederschöneweide,22,114.0,126.0
+Nord 1,19,60.0,98.0
+Oberschöneweide,57,85.0,100.0
+Osloer Straße,69,85.0,102.0
+Ost 1,18,66.0,130.0
+Ost 2,31,52.0,58.0
+Ostpreußendamm,26,51.0,72.0
+Otto-Suhr-Allee,123,104.0,121.0
+Pankow Süd,61,83.0,112.0
+Pankow Zentrum,55,115.0,136.0
+Parkviertel,91,72.0,91.0
+Plänterwald,28,90.0,113.0
+Prenzlauer Berg Nord,130,114.0,127.0
+Prenzlauer Berg Nordwest,193,97.0,121.0
+Prenzlauer Berg Ost,69,116.0,280.0
+Prenzlauer Berg Süd,197,125.0,138.0
+Prenzlauer Berg Südwest,290,144.0,176.0
+Rahnsdorf/Hessenwinkel,29,100.0,188.0
+Regierungsviertel,98,159.0,186.0
+Reuterstraße,181,90.0,110.0
+Rixdorf,122,88.0,101.0
+Rudow,47,72.0,294.0
+Rummelsburger Bucht,30,120.0,138.0
+Schillerpromenade,140,98.0,115.0
+Schloß Charlottenburg,67,66.0,116.0
+Schloßstr.,41,95.0,101.0
+Schmargendorf,34,172.0,171.0
+Schmöckwitz/Karolinenhof/Rauchfangswerder,27,122.0,444.0
+Schöneberg-Nord,212,85.0,113.0
+Schöneberg-Süd,163,103.0,140.0
+Schönholz/Wilhelmsruh/Rosenthal,21,105.0,585.0
+Spandau Mitte,16,120.0,153.0
+Südliche Friedrichstadt,180,125.0,145.0
+Teltower Damm,27,85.0,95.0
+Tempelhof,144,102.0,145.0
+Tempelhofer Vorstadt,420,98.0,124.0
+Tiergarten Süd,115,139.0,152.0
+Volkspark Wilmersdorf,87,89.0,221.0
+Wedding Zentrum,124,91.0,117.0
+Weißensee,106,94.0,123.0
+West 4,16,79.0,73.0
+Westend,64,90.0,131.0
+Wiesbadener Straße,25,132.0,144.0
+Wilhelmstadt,17,120.0,130.0
+Zehlendorf  Nord,49,84.0,119.0
+Zehlendorf  Südwest,29,102.0,117.0
+nördliche Luisenstadt,147,97.0,121.0
+südliche Luisenstadt,242,101.0,126.0

@@ -1,0 +1,143 @@
+,coefficient,std_err,t_stat,p_value,ci_low,ci_high,significant
+Intercept,4.072277,0.144455,28.190681,0.0,3.789151,4.355403,True
+C(room_type)[T.hotel_room],0.667158,0.129425,5.154776,0.0,0.413489,0.920827,True
+C(room_type)[T.private_room],-0.334489,0.014452,-23.145482,0.0,-0.362814,-0.306165,True
+C(room_type)[T.shared_room],-1.17824,0.091805,-12.834118,0.0,-1.358175,-0.998305,True
+C(neighbourhood_cleansed)[T.Albrechtstr.],-0.119023,0.114212,-1.042122,0.297355,-0.342876,0.104829,False
+C(neighbourhood_cleansed)[T.Alexanderplatz],0.367406,0.102329,3.590434,0.00033,0.166845,0.567968,True
+C(neighbourhood_cleansed)[T.Allende-Viertel],-0.69446,0.125709,-5.524334,0.0,-0.940846,-0.448074,True
+C(neighbourhood_cleansed)[T.Alt  Treptow],0.017729,0.122093,0.145207,0.884547,-0.221569,0.257026,False
+C(neighbourhood_cleansed)[T.Alt-Hohenschönhausen Nord],0.011384,0.28042,0.040595,0.967619,-0.53823,0.560997,False
+C(neighbourhood_cleansed)[T.Alt-Hohenschönhausen Süd],0.001472,0.229059,0.006428,0.994871,-0.447475,0.45042,False
+C(neighbourhood_cleansed)[T.Alt-Lichtenberg],0.089011,0.137913,0.645411,0.518661,-0.181294,0.359316,False
+C(neighbourhood_cleansed)[T.Altglienicke],-0.255231,0.129909,-1.964682,0.049451,-0.509849,-0.000613,True
+C(neighbourhood_cleansed)[T.Altstadt-Kietz],0.064117,0.26461,0.242306,0.808543,-0.454509,0.582743,False
+C(neighbourhood_cleansed)[T.Barstraße],0.133107,0.129978,1.024074,0.305801,-0.121645,0.38786,False
+C(neighbourhood_cleansed)[T.Baumschulenweg],-0.1513,0.137763,-1.098265,0.272089,-0.421309,0.11871,False
+C(neighbourhood_cleansed)[T.Biesdorf],-0.224104,0.129074,-1.736247,0.08252,-0.477083,0.028876,False
+C(neighbourhood_cleansed)[T.Blankenburg/Heinersdorf/Märchenland],-0.175071,0.126392,-1.38514,0.16601,-0.422796,0.072653,False
+C(neighbourhood_cleansed)[T.Blankenfelde/Niederschönhausen],0.111339,0.174441,0.638259,0.523305,-0.23056,0.453237,False
+C(neighbourhood_cleansed)[T.Bohnsdorf],0.041254,0.311636,0.132379,0.894684,-0.569542,0.65205,False
+C(neighbourhood_cleansed)[T.Britz],0.024109,0.125205,0.192554,0.847308,-0.221288,0.269506,False
+C(neighbourhood_cleansed)[T.Brunnenstr. Nord],0.420616,0.10997,3.824836,0.000131,0.205079,0.636153,True
+C(neighbourhood_cleansed)[T.Brunnenstr. Süd],0.361023,0.102941,3.50709,0.000453,0.159263,0.562784,True
+C(neighbourhood_cleansed)[T.Brunsbütteler Damm],-0.200646,0.145059,-1.383201,0.166603,-0.484956,0.083665,False
+C(neighbourhood_cleansed)[T.Buch],-0.204666,0.170367,-1.201327,0.229624,-0.538579,0.129247,False
+C(neighbourhood_cleansed)[T.Buchholz],-0.097252,0.157759,-0.616457,0.537593,-0.406454,0.211951,False
+C(neighbourhood_cleansed)[T.Buckow],0.080964,0.140916,0.574555,0.565592,-0.195227,0.357156,False
+C(neighbourhood_cleansed)[T.Buckow Nord],-0.380032,0.190363,-1.996354,0.045895,-0.753136,-0.006927,True
+C(neighbourhood_cleansed)[T.Charlottenburg Nord],0.569221,0.664574,0.85652,0.39171,-0.73332,1.871762,False
+C(neighbourhood_cleansed)[T.Dammvorstadt],0.048715,0.232641,0.209399,0.834137,-0.407252,0.504682,False
+C(neighbourhood_cleansed)[T.Drakestr.],0.047668,0.109378,0.435805,0.662978,-0.16671,0.262045,False
+C(neighbourhood_cleansed)[T.Düsseldorfer Straße],0.295737,0.10723,2.757956,0.005816,0.085569,0.505904,True
+C(neighbourhood_cleansed)[T.Falkenhagener Feld],-0.148848,0.141285,-1.05353,0.292098,-0.425762,0.128066,False
+C(neighbourhood_cleansed)[T.Fennpfuhl],-0.2645,0.151746,-1.74305,0.081325,-0.561916,0.032916,False
+C(neighbourhood_cleansed)[T.Forst Grunewald],0.260652,0.431009,0.60475,0.545345,-0.584109,1.105414,False
+C(neighbourhood_cleansed)[T.Frankfurter Allee Nord],0.06214,0.105304,0.5901,0.555124,-0.144252,0.268532,False
+C(neighbourhood_cleansed)[T.Frankfurter Allee Süd],-0.37783,0.185615,-2.035558,0.041795,-0.741628,-0.014031,True
+C(neighbourhood_cleansed)[T.Frankfurter Allee Süd FK],0.172109,0.101644,1.693248,0.090408,-0.02711,0.371328,False
+C(neighbourhood_cleansed)[T.Friedenau],0.004396,0.112276,0.039158,0.968765,-0.21566,0.224453,False
+C(neighbourhood_cleansed)[T.Friedrichsfelde Nord],0.039769,0.129919,0.306106,0.759524,-0.214867,0.294405,False
+C(neighbourhood_cleansed)[T.Friedrichsfelde Süd],-0.283396,0.132774,-2.134415,0.032809,-0.543628,-0.023163,True
+C(neighbourhood_cleansed)[T.Friedrichshagen],0.191029,0.128953,1.481381,0.138505,-0.061715,0.443772,False
+C(neighbourhood_cleansed)[T.Gatow / Kladow],-0.013561,0.138331,-0.098033,0.921906,-0.284686,0.257564,False
+C(neighbourhood_cleansed)[T.Gropiusstadt],-0.279539,0.220928,-1.265292,0.205767,-0.712551,0.153473,False
+C(neighbourhood_cleansed)[T.Grunewald],0.118004,0.128509,0.918252,0.358487,-0.13387,0.369878,False
+C(neighbourhood_cleansed)[T.Grünau],-0.13063,0.120272,-1.086123,0.277424,-0.366359,0.105099,False
+C(neighbourhood_cleansed)[T.Hakenfelde],-0.23012,0.172687,-1.332587,0.182667,-0.56858,0.10834,False
+C(neighbourhood_cleansed)[T.Halensee],-0.036478,0.115602,-0.315544,0.752349,-0.263053,0.190098,False
+C(neighbourhood_cleansed)[T.Haselhorst],0.580575,0.144787,4.009859,6.1e-05,0.296798,0.864352,True
+C(neighbourhood_cleansed)[T.Heerstrasse],-0.022341,0.135707,-0.164625,0.869239,-0.288322,0.24364,False
+C(neighbourhood_cleansed)[T.Heerstraße Nord],-0.33067,0.131262,-2.519162,0.011763,-0.587939,-0.073402,True
+C(neighbourhood_cleansed)[T.Hellersdorf-Nord],-0.38863,0.266818,-1.456537,0.145244,-0.911585,0.134324,False
+C(neighbourhood_cleansed)[T.Hellersdorf-Süd],-0.935638,1.306147,-0.716335,0.473785,-3.495639,1.624363,False
+C(neighbourhood_cleansed)[T.Helmholtzplatz],0.185343,0.104036,1.78153,0.074826,-0.018564,0.389249,False
+C(neighbourhood_cleansed)[T.Johannisthal],-0.263321,0.118946,-2.213781,0.026844,-0.496451,-0.030191,True
+C(neighbourhood_cleansed)[T.Kantstraße],0.28428,0.114583,2.480989,0.013102,0.059701,0.508859,True
+C(neighbourhood_cleansed)[T.Karl-Marx-Allee-Nord],0.025553,0.109884,0.232548,0.816113,-0.189816,0.240923,False
+C(neighbourhood_cleansed)[T.Karl-Marx-Allee-Süd],0.251232,0.107021,2.347503,0.0189,0.041475,0.460989,True
+C(neighbourhood_cleansed)[T.Karlshorst],0.153407,0.135797,1.129684,0.258609,-0.112749,0.419564,False
+C(neighbourhood_cleansed)[T.Karow],-0.229014,0.160703,-1.425078,0.154135,-0.543986,0.085958,False
+C(neighbourhood_cleansed)[T.Kaulsdorf],-0.213927,0.146691,-1.458348,0.144745,-0.501436,0.073583,False
+C(neighbourhood_cleansed)[T.Kurfürstendamm],0.426596,0.105289,4.051676,5.1e-05,0.220234,0.632958,True
+C(neighbourhood_cleansed)[T.Kölln. Vorstadt/Spindlersf.],-0.113323,0.147899,-0.766221,0.443545,-0.4032,0.176553,False
+C(neighbourhood_cleansed)[T.Köllnische Heide],-0.035011,0.117783,-0.297251,0.766275,-0.265861,0.195839,False
+C(neighbourhood_cleansed)[T.Köpenick-Nord],-0.248749,0.143487,-1.733606,0.082988,-0.529978,0.032479,False
+C(neighbourhood_cleansed)[T.Köpenick-Süd],-0.51833,0.131684,-3.936169,8.3e-05,-0.776426,-0.260234,True
+C(neighbourhood_cleansed)[T.Lankwitz],-0.264771,0.152196,-1.739671,0.081917,-0.563069,0.033528,False
+C(neighbourhood_cleansed)[T.Lichtenrade],-0.209821,0.128151,-1.637289,0.10157,-0.460992,0.041351,False
+C(neighbourhood_cleansed)[T.MV 1],0.060705,0.142712,0.425371,0.670566,-0.219005,0.340416,False
+C(neighbourhood_cleansed)[T.MV 2],0.175601,0.140116,1.253258,0.210112,-0.099021,0.450223,False
+C(neighbourhood_cleansed)[T.Mahlsdorf],-0.182361,0.12216,-1.492808,0.135487,-0.421791,0.057068,False
+"C(neighbourhood_cleansed)[T.Malchow, Wartenberg und Falkenberg]",-0.368355,0.277317,-1.32828,0.184086,-0.911888,0.175177,False
+C(neighbourhood_cleansed)[T.Mariendorf],-0.104373,0.112056,-0.93144,0.351626,-0.323999,0.115252,False
+C(neighbourhood_cleansed)[T.Marienfelde],-0.348121,0.317631,-1.095993,0.273082,-0.970666,0.274424,False
+C(neighbourhood_cleansed)[T.Marzahn-Mitte],-0.466214,0.263476,-1.769473,0.076815,-0.982618,0.05019,False
+C(neighbourhood_cleansed)[T.Marzahn-Süd],0.183422,0.109341,1.677521,0.093441,-0.030883,0.397726,False
+C(neighbourhood_cleansed)[T.Mierendorffplatz],0.07233,0.121217,0.596698,0.550709,-0.165251,0.30991,False
+C(neighbourhood_cleansed)[T.Moabit Ost],-0.009379,0.104732,-0.089553,0.928642,-0.21465,0.195892,False
+C(neighbourhood_cleansed)[T.Moabit West],-0.01217,0.10492,-0.115995,0.907657,-0.217809,0.193469,False
+C(neighbourhood_cleansed)[T.Müggelheim],0.308307,0.317031,0.972482,0.330811,-0.313062,0.929676,False
+C(neighbourhood_cleansed)[T.Neu Lichtenberg],-0.00865,0.111445,-0.07762,0.93813,-0.227079,0.209778,False
+C(neighbourhood_cleansed)[T.Neu-Hohenschönhausen Süd],-0.543096,3.22376,-0.168467,0.866216,-6.86155,5.775358,False
+C(neighbourhood_cleansed)[T.Neue Kantstraße],0.234402,0.115929,2.021937,0.043183,0.007185,0.461619,True
+C(neighbourhood_cleansed)[T.Neuköllner Mitte/Zentrum],0.167254,0.106462,1.571026,0.116177,-0.041407,0.375915,False
+C(neighbourhood_cleansed)[T.Niederschöneweide],-0.076801,0.157228,-0.488466,0.62522,-0.384963,0.231361,False
+C(neighbourhood_cleansed)[T.Nord 1],-0.143768,0.146607,-0.980639,0.326771,-0.431112,0.143576,False
+C(neighbourhood_cleansed)[T.Nord 2],-0.163813,0.156892,-1.044113,0.296433,-0.471317,0.14369,False
+C(neighbourhood_cleansed)[T.Oberschöneweide],-0.064169,0.117662,-0.545363,0.585504,-0.294783,0.166445,False
+C(neighbourhood_cleansed)[T.Osloer Straße],-0.028415,0.116447,-0.244022,0.807214,-0.256647,0.199816,False
+C(neighbourhood_cleansed)[T.Ost 1],-0.320922,0.149835,-2.141844,0.032206,-0.614593,-0.027252,True
+C(neighbourhood_cleansed)[T.Ost 2],-0.481508,0.130544,-3.688483,0.000226,-0.737369,-0.225647,True
+C(neighbourhood_cleansed)[T.Ostpreußendamm],-0.193692,0.131886,-1.468631,0.141933,-0.452184,0.0648,False
+C(neighbourhood_cleansed)[T.Otto-Suhr-Allee],0.092063,0.108549,0.848116,0.396373,-0.120691,0.304816,False
+C(neighbourhood_cleansed)[T.Pankow Süd],0.074315,0.111664,0.66553,0.505712,-0.144541,0.293172,False
+C(neighbourhood_cleansed)[T.Pankow Zentrum],0.136125,0.120665,1.12812,0.259269,-0.100374,0.372624,False
+C(neighbourhood_cleansed)[T.Parkviertel],-0.122819,0.11178,-1.098756,0.271874,-0.341904,0.096266,False
+C(neighbourhood_cleansed)[T.Plänterwald],0.073913,0.132333,0.558537,0.576478,-0.185455,0.333281,False
+C(neighbourhood_cleansed)[T.Prenzlauer Berg Nord],0.061178,0.105339,0.580772,0.561394,-0.145283,0.267638,False
+C(neighbourhood_cleansed)[T.Prenzlauer Berg Nordwest],0.094828,0.10389,0.912774,0.361361,-0.108793,0.29845,False
+C(neighbourhood_cleansed)[T.Prenzlauer Berg Ost],0.211449,0.133926,1.57885,0.11437,-0.051041,0.47394,False
+C(neighbourhood_cleansed)[T.Prenzlauer Berg Süd],0.205164,0.102975,1.992365,0.046331,0.003336,0.406991,True
+C(neighbourhood_cleansed)[T.Prenzlauer Berg Südwest],0.3684,0.102743,3.585659,0.000336,0.167028,0.569772,True
+C(neighbourhood_cleansed)[T.Rahnsdorf/Hessenwinkel],-0.178376,0.122431,-1.456946,0.145131,-0.418337,0.061585,False
+C(neighbourhood_cleansed)[T.Regierungsviertel],0.402032,0.112939,3.559743,0.000371,0.180677,0.623388,True
+C(neighbourhood_cleansed)[T.Reuterstraße],0.066834,0.103329,0.646813,0.517753,-0.135686,0.269355,False
+C(neighbourhood_cleansed)[T.Rixdorf],0.056919,0.104149,0.546517,0.58471,-0.147208,0.261046,False
+C(neighbourhood_cleansed)[T.Rudow],0.012637,0.158242,0.079861,0.936348,-0.297512,0.322786,False
+C(neighbourhood_cleansed)[T.Rummelsburger Bucht],0.18223,0.129727,1.404717,0.160105,-0.072031,0.43649,False
+C(neighbourhood_cleansed)[T.Schillerpromenade],0.12913,0.105752,1.221074,0.222058,-0.078139,0.3364,False
+C(neighbourhood_cleansed)[T.Schloß Charlottenburg],-0.119567,0.117571,-1.016977,0.309165,-0.350003,0.110868,False
+C(neighbourhood_cleansed)[T.Schloßstr.],-0.059302,0.11884,-0.499008,0.617774,-0.292225,0.17362,False
+C(neighbourhood_cleansed)[T.Schmargendorf],0.424639,0.134798,3.150189,0.001632,0.16044,0.688838,True
+C(neighbourhood_cleansed)[T.Schmöckwitz/Karolinenhof/Rauchfangswerder],0.083714,0.174785,0.478954,0.631971,-0.258858,0.426287,False
+C(neighbourhood_cleansed)[T.Schöneberg-Nord],0.101206,0.104778,0.965911,0.334088,-0.104154,0.306566,False
+C(neighbourhood_cleansed)[T.Schöneberg-Süd],0.028369,0.108099,0.262435,0.792986,-0.183502,0.24024,False
+C(neighbourhood_cleansed)[T.Schönholz/Wilhelmsruh/Rosenthal],0.165216,0.291094,0.567568,0.570328,-0.405318,0.735749,False
+C(neighbourhood_cleansed)[T.Siemensstadt],-0.030587,0.453222,-0.067488,0.946193,-0.918885,0.857711,False
+C(neighbourhood_cleansed)[T.Spandau Mitte],-0.012544,0.151904,-0.08258,0.934186,-0.31027,0.285182,False
+C(neighbourhood_cleansed)[T.Südliche Friedrichstadt],0.283993,0.104928,2.706553,0.006799,0.078338,0.489647,True
+C(neighbourhood_cleansed)[T.Teltower Damm],-0.075148,0.117498,-0.639567,0.522454,-0.305439,0.155144,False
+C(neighbourhood_cleansed)[T.Tempelhof],-0.007738,0.104041,-0.074372,0.940714,-0.211655,0.196179,False
+C(neighbourhood_cleansed)[T.Tempelhofer Vorstadt],0.063269,0.101665,0.622329,0.533726,-0.135991,0.262529,False
+C(neighbourhood_cleansed)[T.Tiergarten Süd],0.181582,0.114185,1.590235,0.111782,-0.042218,0.405381,False
+C(neighbourhood_cleansed)[T.Volkspark Wilmersdorf],0.048985,0.131515,0.372467,0.709545,-0.20878,0.30675,False
+C(neighbourhood_cleansed)[T.Wedding Zentrum],-0.091441,0.105396,-0.867597,0.385615,-0.298014,0.115131,False
+C(neighbourhood_cleansed)[T.Weißensee],0.010231,0.105586,0.096894,0.922811,-0.196714,0.217176,False
+C(neighbourhood_cleansed)[T.Weißensee Ost],-0.036717,0.135732,-0.270513,0.786766,-0.302748,0.229313,False
+C(neighbourhood_cleansed)[T.West 1],0.017021,0.152332,0.111735,0.911034,-0.281544,0.315585,False
+C(neighbourhood_cleansed)[T.West 2],-0.121311,0.143331,-0.846367,0.397348,-0.402235,0.159613,False
+C(neighbourhood_cleansed)[T.West 3],-0.146456,0.204471,-0.716268,0.473826,-0.547212,0.2543,False
+C(neighbourhood_cleansed)[T.West 4],-0.114217,0.137999,-0.827666,0.40786,-0.38469,0.156256,False
+C(neighbourhood_cleansed)[T.West 5],1.242298,0.403323,3.08016,0.002069,0.4518,2.032795,True
+C(neighbourhood_cleansed)[T.Westend],0.196567,0.12804,1.535202,0.124734,-0.054387,0.447522,False
+C(neighbourhood_cleansed)[T.Wiesbadener Straße],0.275615,0.172648,1.596394,0.110401,-0.06277,0.614,False
+C(neighbourhood_cleansed)[T.Wilhelmstadt],0.052037,0.176028,0.295616,0.767524,-0.292971,0.397044,False
+C(neighbourhood_cleansed)[T.Zehlendorf  Nord],-0.025466,0.109459,-0.232653,0.816031,-0.240002,0.18907,False
+C(neighbourhood_cleansed)[T.Zehlendorf  Südwest],-0.018338,0.118867,-0.154273,0.877395,-0.251314,0.214638,False
+C(neighbourhood_cleansed)[T.nördliche Luisenstadt],0.180741,0.104986,1.721575,0.085146,-0.025027,0.38651,False
+C(neighbourhood_cleansed)[T.südliche Luisenstadt],0.153477,0.10304,1.489495,0.136357,-0.048477,0.355432,False
+accommodates,0.09653,0.004719,20.454435,0.0,0.08728,0.105779,True
+bedrooms,0.12997,0.011081,11.728866,0.0,0.108251,0.151688,True
+review_scores_rating,0.022213,0.022169,1.002005,0.316341,-0.021237,0.065663,False
+superhost_flag,0.017252,0.012369,1.394788,0.16308,-0.006991,0.041494,False
