@@ -1,0 +1,682 @@
+{
+  "city": "berlin",
+  "ge_version": "1.18.1",
+  "validated_at": "2026-06-22 00:00:56",
+  "datasets": {
+    "listing_master": {
+      "success": true,
+      "passed": 26,
+      "failed": 0,
+      "total": 26,
+      "expectations": [
+        {
+          "expectation_type": "expect_table_row_count_to_be_between",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "min_value": 1000,
+            "max_value": 200000
+          },
+          "success": true,
+          "observed_value": "14274",
+          "element_count": null,
+          "unexpected_count": null,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_table_columns_to_match_set",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column_set": [
+              "id",
+              "host_id",
+              "neighbourhood_cleansed",
+              "latitude",
+              "longitude",
+              "room_type",
+              "accommodates",
+              "availability_365",
+              "price_numeric",
+              "currency_code",
+              "is_de_facto_inactive",
+              "is_active_supply"
+            ],
+            "exact_match": false
+          },
+          "success": true,
+          "observed_value": "['accommodates', 'amenities', 'availability_30', 'availability_365', 'availability_60', 'availability_90', 'availability_eoy', 'availability_rate', 'available_days', 'avg_comment_length', 'bathroom_count', 'bathroom_is_shared', 'bathrooms_text', 'bedrooms', 'bedrooms_is_missing', 'beds', 'calculated_host_listings_count', 'calculated_host_listings_count_entire_homes', 'calculated_host_listings_count_private_rooms', 'calculated_host_listings_count_shared_rooms', 'calendar_days', 'calendar_last_scraped', 'currency_code', 'description', 'duplicate_comment_count', 'estimated_occupancy_l365d', 'estimated_revenue_l365d', 'first_review', 'first_review_calc', 'has_availability', 'host_about', 'host_acceptance_rate', 'host_has_profile_pic', 'host_id', 'host_identity_verified', 'host_is_superhost', 'host_listings_count', 'host_location', 'host_name', 'host_neighbourhood', 'host_portfolio_size', 'host_response_rate', 'host_response_time', 'host_since', 'host_tenure_years', 'host_total_listings_count', 'host_verifications', 'id', 'instant_bookable', 'is_active_supply', 'is_de_facto_inactive', 'is_professional_host', 'last_review', 'last_review_calc', 'last_scraped', 'latitude', 'longitude', 'maximum_maximum_nights', 'maximum_minimum_nights', 'maximum_nights', 'maximum_nights_avg_ntm', 'minimum_maximum_nights', 'minimum_minimum_nights', 'minimum_nights', 'minimum_nights_avg_ntm', 'name', 'neighborhood_overview', 'neighbourhood_cleansed', 'neighbourhood_density_per_km2', 'neighbourhood_listing_count', 'neighbourhood_median_price_gbp', 'number_of_reviews', 'number_of_reviews_l30d', 'number_of_reviews_ltm', 'number_of_reviews_ly', 'occupancy_proxy', 'price_numeric', 'price_per_bedroom_gbp', 'price_raw', 'property_type', 'property_type_bucket', 'revenue_proxy_gbp', 'review_count_calc', 'review_count_l12m', 'review_count_l30d', 'review_scores_accuracy', 'review_scores_checkin', 'review_scores_cleanliness', 'review_scores_communication', 'review_scores_location', 'review_scores_rating', 'review_scores_value', 'reviews_per_month', 'reviews_per_month_calc', 'room_type', 'source', 'unavailable_days', 'unique_reviewer_count', 'weekday_available_days', 'weekend_available_days']",
+          "element_count": null,
+          "unexpected_count": null,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_to_exist",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "id"
+          },
+          "success": true,
+          "observed_value": null,
+          "element_count": null,
+          "unexpected_count": null,
+          "unexpected_percent": null
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "id"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_unique",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "id"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "host_id"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "neighbourhood_cleansed"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "latitude"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "latitude",
+            "min_value": -90.0,
+            "max_value": 90.0
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "longitude"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "longitude",
+            "min_value": -180.0,
+            "max_value": 180.0
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "room_type"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_in_set",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "room_type",
+            "value_set": [
+              "entire_home",
+              "private_room",
+              "shared_room",
+              "hotel_room"
+            ]
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "accommodates"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "accommodates",
+            "min_value": 1.0,
+            "max_value": 100.0
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "minimum_nights",
+            "mostly": 0.99,
+            "min_value": 1.0
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "availability_365"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "availability_365",
+            "min_value": 0.0,
+            "max_value": 365.0
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "price_numeric",
+            "mostly": 0.99,
+            "min_value": 0.01,
+            "max_value": 50000.0
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "price_numeric",
+            "mostly": 0.55,
+            "min_value": 0.01
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "review_scores_rating",
+            "mostly": 0.99,
+            "min_value": 1.0,
+            "max_value": 5.0
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 1,
+          "unexpected_percent": 0.0091
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "is_de_facto_inactive"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_in_set",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "is_de_facto_inactive",
+            "value_set": [
+              true,
+              false
+            ]
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "currency_code"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "host_tenure_years",
+            "mostly": 0.99,
+            "min_value": 0.0,
+            "max_value": 25.0
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "listing_master_ds-listing_master",
+            "column": "occupancy_proxy",
+            "min_value": 0.0,
+            "max_value": 1.0
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 14274,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        }
+      ],
+      "failed_expectations": []
+    },
+    "calendar_clean": {
+      "success": true,
+      "passed": 9,
+      "failed": 0,
+      "total": 9,
+      "expectations": [
+        {
+          "expectation_type": "expect_table_row_count_to_be_between",
+          "kwargs": {
+            "batch_id": "calendar_clean_ds-calendar_clean",
+            "min_value": 365000,
+            "max_value": 40000000
+          },
+          "success": true,
+          "observed_value": "5210011",
+          "element_count": null,
+          "unexpected_count": null,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_table_columns_to_match_set",
+          "kwargs": {
+            "batch_id": "calendar_clean_ds-calendar_clean",
+            "column_set": [
+              "listing_id",
+              "date",
+              "available",
+              "minimum_nights",
+              "maximum_nights"
+            ]
+          },
+          "success": true,
+          "observed_value": "['available', 'date', 'listing_id', 'maximum_nights', 'minimum_nights']",
+          "element_count": null,
+          "unexpected_count": null,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "calendar_clean_ds-calendar_clean",
+            "column": "listing_id"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 5210011,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "calendar_clean_ds-calendar_clean",
+            "column": "date"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 5210011,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "calendar_clean_ds-calendar_clean",
+            "column": "date",
+            "min_value": "2025-01-01T00:00:00",
+            "max_value": "2027-12-31T00:00:00"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 5210011,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "calendar_clean_ds-calendar_clean",
+            "column": "available"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 5210011,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_in_set",
+          "kwargs": {
+            "batch_id": "calendar_clean_ds-calendar_clean",
+            "column": "available",
+            "value_set": [
+              true,
+              false
+            ]
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 5210011,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "calendar_clean_ds-calendar_clean",
+            "column": "minimum_nights",
+            "mostly": 0.99,
+            "min_value": 1.0,
+            "max_value": 365.0
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 5210011,
+          "unexpected_count": 3650,
+          "unexpected_percent": 0.0701
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "calendar_clean_ds-calendar_clean",
+            "column": "maximum_nights",
+            "mostly": 0.99,
+            "min_value": 1.0
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 5210011,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        }
+      ],
+      "failed_expectations": []
+    },
+    "reviews_clean": {
+      "success": true,
+      "passed": 12,
+      "failed": 0,
+      "total": 12,
+      "expectations": [
+        {
+          "expectation_type": "expect_table_row_count_to_be_between",
+          "kwargs": {
+            "batch_id": "reviews_clean_ds-reviews_clean",
+            "min_value": 1000,
+            "max_value": 5000000
+          },
+          "success": true,
+          "observed_value": "635471",
+          "element_count": null,
+          "unexpected_count": null,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_table_columns_to_match_set",
+          "kwargs": {
+            "batch_id": "reviews_clean_ds-reviews_clean",
+            "column_set": [
+              "id",
+              "listing_id",
+              "date",
+              "reviewer_id",
+              "reviewer_name",
+              "comments",
+              "comment_length",
+              "comment_is_duplicate"
+            ]
+          },
+          "success": true,
+          "observed_value": "['comment_is_duplicate', 'comment_length', 'comments', 'date', 'id', 'listing_id', 'reviewer_id', 'reviewer_name']",
+          "element_count": null,
+          "unexpected_count": null,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "reviews_clean_ds-reviews_clean",
+            "column": "id"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 635471,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_unique",
+          "kwargs": {
+            "batch_id": "reviews_clean_ds-reviews_clean",
+            "column": "id"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 635471,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "reviews_clean_ds-reviews_clean",
+            "column": "listing_id"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 635471,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "reviews_clean_ds-reviews_clean",
+            "column": "reviewer_id"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 635471,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "reviews_clean_ds-reviews_clean",
+            "column": "date"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 635471,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "reviews_clean_ds-reviews_clean",
+            "column": "date",
+            "min_value": "2008-01-01T00:00:00",
+            "max_value": "2026-12-31T00:00:00"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 635471,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "reviews_clean_ds-reviews_clean",
+            "column": "comment_length"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 635471,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "reviews_clean_ds-reviews_clean",
+            "column": "comment_length",
+            "min_value": 0.0,
+            "max_value": 50000.0
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 635471,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "reviews_clean_ds-reviews_clean",
+            "column": "comment_is_duplicate"
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 635471,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        },
+        {
+          "expectation_type": "expect_column_values_to_be_in_set",
+          "kwargs": {
+            "batch_id": "reviews_clean_ds-reviews_clean",
+            "column": "comment_is_duplicate",
+            "value_set": [
+              true,
+              false
+            ]
+          },
+          "success": true,
+          "observed_value": "",
+          "element_count": 635471,
+          "unexpected_count": 0,
+          "unexpected_percent": 0
+        }
+      ],
+      "failed_expectations": []
+    }
+  }
+}

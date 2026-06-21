@@ -1,0 +1,26 @@
+{
+  "city": "berlin",
+  "validated_at": "2026-06-22 00:00:56",
+  "total_passed": 47,
+  "total_failed": 0,
+  "total_expectations": 47,
+  "overall_success": true,
+  "by_dataset": {
+    "listing_master": {
+      "passed": 26,
+      "failed": 0,
+      "success": true
+    },
+    "calendar_clean": {
+      "passed": 9,
+      "failed": 0,
+      "success": true
+    },
+    "reviews_clean": {
+      "passed": 12,
+      "failed": 0,
+      "success": true
+    }
+  },
+  "results_file": "reports\\ge_validation\\berlin_results.json"
+}
