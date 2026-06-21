@@ -16,6 +16,9 @@ data/quality_reports/
 logs/
 *.log
 
+# Large model artifacts (regenerable; exceeds GitHub 100 MB limit)
+models/madrid_price_model.joblib
+
 # Local config / secrets
 .env
 .env.*
