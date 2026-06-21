@@ -59,6 +59,11 @@ def _call_groq(system: str, user: str, model: str) -> str:
     return content.strip()
 
 
+def call_once(system: str, user: str, model: str = DEFAULT_MODEL) -> str:
+    """Single Groq call with no caching — used by the Q&A endpoint."""
+    return _call_groq(system, user, model)
+
+
 def generate(
     context: dict,
     summary_type: str,

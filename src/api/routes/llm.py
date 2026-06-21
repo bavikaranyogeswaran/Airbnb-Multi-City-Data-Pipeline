@@ -10,8 +10,9 @@ Requires GROQ_API_KEY to be set in the environment.
 from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException, Query
+from pydantic import BaseModel
 
-from src.llm.client import DEFAULT_MODEL, generate
+from src.llm.client import DEFAULT_MODEL, call_once, generate
 from src.llm.context_builder import (
     build_city_context,
     build_cluster_context,
@@ -19,7 +20,8 @@ from src.llm.context_builder import (
     build_host_context,
     build_model_context,
 )
-from src.llm.prompts import VALID_TYPES
+from src.llm.prompts import SQL_SYSTEM, SYSTEM, VALID_TYPES, render_explanation, render_sql
+from src.llm import schema_inspector, sql_runner
 
 router = APIRouter(prefix="/analytics/llm", tags=["llm"])
 
@@ -146,3 +148,71 @@ def list_cache() -> dict:
         for f in files
     ]
     return {"cache_dir": str(CACHE_DIR), "count": len(entries), "files": entries}
+
+
+# ── Text-to-SQL Q&A ───────────────────────────────────────────────────────────
+
+class AskRequest(BaseModel):
+    city: str = "london"
+    question: str
+    model: str = DEFAULT_MODEL
+
+
+@router.post(
+    "/ask",
+    summary="Natural-language Q&A — translates a question to SQL and explains the result",
+)
+def ask(body: AskRequest) -> dict:
+    """
+    Ask a natural-language question about one city's Airbnb data.
+
+    **Flow:**
+    1. Retrieve the warehouse schema for the requested city
+    2. Call Groq to translate the question into a DuckDB SELECT statement
+    3. Validate the SQL (only SELECT/WITH allowed; no mutation keywords)
+    4. Execute the SQL against the DuckDB warehouse (read-only, max 50 rows)
+    5. Call Groq again to explain the results in plain English
+
+    **Response fields:**
+    - `sql` — the exact statement that was executed
+    - `rows` — up to 50 result rows as a list of objects
+    - `row_count` — total rows returned
+    - `explanation` — 2-3 sentence plain-English narrative of the findings
+    """
+    raw_sql: str | None = None
+
+    try:
+        schema_text = schema_inspector.get_schema(body.city)
+
+        sql_prompt = render_sql(body.question, schema_text)
+        raw_sql = call_once(SQL_SYSTEM, sql_prompt, body.model)
+
+        clean_sql, rows = sql_runner.validate_and_run(raw_sql, body.city)
+
+        exp_prompt = render_explanation(body.question, clean_sql, rows)
+        explanation = call_once(SYSTEM, exp_prompt, body.model)
+
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail=str(exc))
+    except EnvironmentError as exc:
+        raise HTTPException(status_code=503, detail=str(exc))
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=422,
+            detail={"error": str(exc), "generated_sql": raw_sql},
+        )
+    except RuntimeError as exc:
+        raise HTTPException(
+            status_code=422,
+            detail={"error": str(exc), "generated_sql": raw_sql},
+        )
+
+    return {
+        "city":        body.city,
+        "question":    body.question,
+        "model":       body.model,
+        "sql":         clean_sql,
+        "row_count":   len(rows),
+        "rows":        rows,
+        "explanation": explanation,
+    }
