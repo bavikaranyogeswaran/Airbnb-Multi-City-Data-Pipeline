@@ -2,7 +2,7 @@
 
 **Experne'c Talent Assessment · Data Engineer Intern**
 
-FastAPI-first pipeline covering ingestion → cleaning → enrichment → warehouse → EDA → ML pricing models → K-Means market segmentation for London and Amsterdam.
+FastAPI-first pipeline covering ingestion → cleaning → enrichment → warehouse → EDA → ML pricing models → K-Means market segmentation for London, Amsterdam, Madrid, and Berlin.
 
 **FastAPI is the canonical interface.** Every pipeline step is exposed as an HTTP endpoint. CLI wrappers (`python -m src.X.Y`) exist for shell users and call the same functions.
 
@@ -25,34 +25,40 @@ Interactive docs: **http://localhost:8000/docs**
 
 ## Cities
 
-| City | Snapshot | Raw listings | Filtered (price > 0) | Currency |
-|---|---|---|---|---|
-| London | 2025-09-14 | 96,871 | 61,963 | GBP |
-| Amsterdam | 2025-09-11 | 10,480 | 5,874 | EUR |
+| City | Snapshot | Raw listings | Filtered (price > 0) | Unique hosts | Currency |
+|---|---|---|---|---|---|
+| London | 2025-09-14 | 96,871 | 61,963 | 55,646 | GBP |
+| Amsterdam | 2025-09-11 | 10,480 | 5,874 | 9,201 | EUR |
+| Madrid | 2025-09-14 | 25,000 | 18,953 | 10,453 | EUR |
+| Berlin | 2025-09-23 | 14,274 | 9,264 | 9,464 | EUR |
 
 Source: https://insideairbnb.com/get-the-data/
+
+> **Note — New York City (2025-12-04):** NYC was evaluated as a 5th city but all 36,261 listings had null prices. Airbnb stopped exposing nightly prices in NYC scrapes following enforcement of New York City Local Law 18 (September 2023), which heavily restricted short-term rentals. Ingest and warehouse steps completed successfully; ML and clustering were skipped due to the absence of a price signal.
 
 ---
 
 ## Key Results
 
-### Price Prediction (LightGBM)
+### Price Prediction
 
-| City | Test MAE | RMSE | MAPE | R² (log) | Within 20% |
-|---|---|---|---|---|---|
-| London | £77.47 | £485.71 | 27.9% | 0.690 | 49.6% |
-| Amsterdam | €80.68 | — | — | 0.617 | — |
+| City | Best Model | Test MAE | R² (log) | Within 20% |
+|---|---|---|---|---|
+| London | LightGBM | £77.47 | 0.690 | 49.6% |
+| Amsterdam | LightGBM | €80.68 | 0.617 | 54.1% |
+| Madrid | Random Forest | €46.85 | — | — |
+| Berlin | LightGBM | €46.44 | — | — |
 
-- Best model: **LightGBM** (gradient-boosted trees, log-price target)
 - Train/test split: **GroupShuffleSplit by host_id** — same host cannot appear in both splits
-- Top feature: `accommodates` (permutation importance), followed by `neighbourhood_cleansed` (TargetEncoded), `room_type`, `bedrooms`
-- Known bias: luxury listings (>£500 / >€700) are systematically **underpredicted** (median residual +£376 / +€327)
+- Target: **log1p(price)** — back-transformed to currency for MAE reporting
+- Madrid and Berlin achieve lower MAE than Amsterdam despite fewer training rows — smaller, more homogeneous markets are inherently easier to predict
+- Known bias: luxury listings (>£500 / >€700) are systematically **underpredicted** — regression-to-mean effect from log-price target
 
 **Cross-city transfer (London model → Amsterdam):** MAE degraded from €81 to €175, R²(log) from +0.617 to −2.058. Root cause: TargetEncoder trained on London neighbourhoods maps all 22 Amsterdam neighbourhoods to the London global mean. Per-city retraining is required.
 
-### Market Segmentation (K-Means, k=5)
+### Market Segmentation (K-Means — auto-detected k)
 
-**London**
+**London** (k=5)
 
 | Cluster | Segment Name | % of city | Median £ |
 |---|---|---|---|
@@ -62,7 +68,7 @@ Source: https://insideairbnb.com/get-the-data/
 | 2 | Standard City Apartments | 33.5% | £134 |
 | 0 | Premium Spacious Apartments | 26.9% | £262 |
 
-**Amsterdam**
+**Amsterdam** (k=5)
 
 | Cluster | Segment Name | % of city | Median € |
 |---|---|---|---|
@@ -72,19 +78,53 @@ Source: https://insideairbnb.com/get-the-data/
 | 1 | Well-Available City Apartments | 20.8% | €241 |
 | 0 | Premium Spacious Apartments | 28.9% | €333 |
 
-Both cities share the same five market archetypes despite different price levels, confirming the segment structure generalises across cities.
+**Madrid** (k=8)
+
+| Cluster | Segment Name | % of city | Median € |
+|---|---|---|---|
+| 4 | Budget Rooms | 12.2% | €58 |
+| 3 | Economy Apartments | 10.4% | €62 |
+| 1 | New & Unreviewed Listings | 2.6% | €95 |
+| 6 | High-Turnover City Lets | 17.2% | €105 |
+| 7 | Part-Time City Apartments | 14.4% | €108 |
+| 0 | Luxury Listings | 21.6% | €120 |
+| 5 | Premium Spacious Apartments | 7.4% | €150 |
+| 2 | Premium Spacious Apartments (large) | 14.3% | €225 |
+
+**Berlin** (k=8)
+
+| Cluster | Segment Name | % of city | Median € |
+|---|---|---|---|
+| 5 | Well-Available City Apartments | 22.8% | €72 |
+| 4 | Economy Apartments | 7.3% | €85 |
+| 6 | Part-Time City Apartments | 18.6% | €89 |
+| 1 | High-Turnover City Lets | 15.2% | €98 |
+| 2 | New & Unreviewed Listings | 1.4% | €100 |
+| 3 | Luxury Listings | 15.4% | €125 |
+| 0 | Premium Spacious Apartments | 12.2% | €195 |
+| 7 | Premium Spacious Apartments (large) | 7.3% | €250 |
+
+All four cities produce the same core archetypes — budget/economy tiers, high-turnover lets, new/unreviewed fringe, mid-market apartments, premium spacious — confirming the segment structure is universal. Madrid and Berlin auto-selected k=8 vs k=5 for London/Amsterdam, reflecting more granular price tiers in mid-sized markets.
 
 ### Host Segmentation (K-Means on host portfolios)
 
-| City | Cluster | Segment Name | Hosts | % | Key signal |
+| City | k | Segment Name | Hosts | % | Key signal |
 |---|---|---|---|---|---|
-| London | 0 | Passive Listers | 6,788 | 12.2% | 53% response, 24% acceptance — disengaged |
-| London | 1 | Professional Superhosts | 9,925 | 17.8% | 79% superhost, 4+ listings, actively booked |
-| London | 2 | Occasional Hosts | 38,933 | 70.0% | Responsive, part-time (81 avail days/year) |
-| Amsterdam | 0 | Active Superhost Operators | 1,270 | 13.8% | 65% superhost, 2.83 reviews/month, room-sharers |
-| Amsterdam | 1 | Part-Time Apartment Hosts | 7,931 | 86.2% | 97% entire home, rarely booked holiday lets |
+| London | 3 | Passive Listers | 6,788 | 12.2% | 53% response, 24% acceptance — disengaged |
+| London | 3 | Professional Superhosts | 9,925 | 17.8% | 79% superhost, 4+ listings, actively booked |
+| London | 3 | Occasional Hosts | 38,933 | 70.0% | Responsive, part-time (81 avail days/year) |
+| Amsterdam | 2 | Active Superhost Operators | 1,270 | 13.8% | 65% superhost, 2.83 reviews/month |
+| Amsterdam | 2 | Part-Time Apartment Hosts | 7,931 | 86.2% | 97% entire home, rarely booked |
+| Madrid | 5 | Passive Listers | 665 | 6.4% | 19% response, 22% acceptance — disengaged |
+| Madrid | 5 | Active Superhost Operators | 2,408 | 23.0% | 97% superhost, 2.88 reviews/month |
+| Madrid | 5 | Premium Hosts | 4,113 | 39.3% | 98% entire home, responsive non-superhosts |
+| Madrid | 5 | Occasional Hosts | 3,113 | 29.8% | Low availability, mostly private rooms |
+| Madrid | 5 | Luxury Hosts | 154 | 1.5% | 24+ listings, professional operators |
+| Berlin | 3 | Passive Listers | 1,044 | 11.0% | 60% response, 29% acceptance — disengaged |
+| Berlin | 3 | Occasional Hosts | 5,658 | 59.8% | Responsive, very low availability (69 days) |
+| Berlin | 3 | Professional Superhosts | 2,762 | 29.2% | 68% superhost, 1.83 reviews/month |
 
-Host clustering silhouette scores: London 0.266, Amsterdam 0.366 — hosts cluster more cleanly than listings.
+Silhouette scores — listings: London 0.151, Amsterdam 0.155, Madrid 0.150, Berlin 0.172. Hosts: London 0.266, Amsterdam 0.366, Berlin 0.235, Madrid 0.171. Hosts cluster more naturally than listings in all cities. **Passive Listers appear in every city** — a universal platform health signal.
 
 ---
 
@@ -188,24 +228,27 @@ pip install -r requirements.txt
 
 ## Running the Pipeline
 
-### Step 1 — Ingest, clean, enrich, and load (both cities)
+### Step 1 — Ingest, clean, enrich, and load (all cities)
 
 ```bash
 # Via API (recommended)
 curl -X POST "http://localhost:8000/orchestration/run?city=london&stages=all"
 curl -X POST "http://localhost:8000/orchestration/run?city=amsterdam&stages=all"
+curl -X POST "http://localhost:8000/orchestration/run?city=madrid&stages=all"
+curl -X POST "http://localhost:8000/orchestration/run?city=berlin&stages=all"
 
 # Via CLI
-python -m src.ingestion.ingest london
-python -m src.orchestration.orchestrate london
-python -m src.orchestration.orchestrate amsterdam
+python -m src.orchestration.pipeline london
+python -m src.orchestration.pipeline amsterdam
+python -m src.orchestration.pipeline madrid
+python -m src.orchestration.pipeline berlin
 ```
 
 ### Step 2 — Run data quality tests
 
 ```bash
 python -m pytest tests/ -v
-# 128 tests across both cities
+# Tests run against all configured cities
 ```
 
 ### Step 3 — Build ML feature matrices
@@ -213,6 +256,8 @@ python -m pytest tests/ -v
 ```bash
 python -m src.features.listing_features london
 python -m src.features.listing_features amsterdam
+python -m src.features.listing_features madrid
+python -m src.features.listing_features berlin
 ```
 
 ### Step 4 — Train pricing models
@@ -220,19 +265,17 @@ python -m src.features.listing_features amsterdam
 ```bash
 python -m src.models.train_price_model london
 python -m src.models.train_price_model amsterdam
+python -m src.models.train_price_model madrid
+python -m src.models.train_price_model berlin
 ```
 
 ### Step 5 — Evaluate and explain models
 
 ```bash
 python -m src.models.evaluate_model london
-python -m src.models.evaluate_model amsterdam
-
 python -m src.models.explain_model london    # SHAP + permutation importance
-python -m src.models.explain_model amsterdam
-
 python -m src.models.residual_analysis london
-python -m src.models.residual_analysis amsterdam
+# Repeat for amsterdam, madrid, berlin
 
 python -m src.models.cross_city_transfer     # London model → Amsterdam
 ```
@@ -240,27 +283,21 @@ python -m src.models.cross_city_transfer     # London model → Amsterdam
 ### Step 6 — Build listing clustering features and run K-Means
 
 ```bash
+# k is auto-detected (knee heuristic + silhouette); London/Amsterdam → k=5, Madrid/Berlin → k=8
 python -m src.features.clustering_features london
-python -m src.features.clustering_features amsterdam
-
-python -m src.models.cluster_listings london 5   # k=5 (or omit for auto-detect)
-python -m src.models.cluster_listings amsterdam 5
-
+python -m src.models.cluster_listings london
 python -m src.models.cluster_profiles london
-python -m src.models.cluster_profiles amsterdam
+# Repeat for amsterdam, madrid, berlin
 ```
 
 ### Step 7 — Build host clustering features and run K-Means
 
 ```bash
+# k auto-detected: London=3, Amsterdam=2, Madrid=5, Berlin=3
 python -m src.features.host_features london
-python -m src.features.host_features amsterdam
-
-python -m src.models.cluster_hosts london    # k auto-detected (London=3, Amsterdam=2)
-python -m src.models.cluster_hosts amsterdam
-
+python -m src.models.cluster_hosts london
 python -m src.models.host_cluster_profiles london
-python -m src.models.host_cluster_profiles amsterdam
+# Repeat for amsterdam, madrid, berlin
 ```
 
 Everything above is also triggerable via the API — see the endpoint map below.
@@ -269,7 +306,7 @@ Everything above is also triggerable via the API — see the endpoint map below.
 
 ## Endpoint Map
 
-All endpoints that accept a `city` query parameter support `london` and `amsterdam`. Default is always `city=london`.
+All endpoints that accept a `city` query parameter support `london`, `amsterdam`, `madrid`, and `berlin`. Default is always `city=london`.
 
 ### Meta
 
