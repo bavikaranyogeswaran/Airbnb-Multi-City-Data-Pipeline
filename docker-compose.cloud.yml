@@ -1,0 +1,13 @@
+# Cloud override — applied on top of docker-compose.yml on the EC2 instance.
+#
+# The only difference from local: the dashboard port is bound to all interfaces
+# (0.0.0.0:80) so the EC2 public IP is reachable from the internet.
+# Port 8000 stays localhost-only; the API is never exposed directly.
+#
+# Usage:
+#   docker compose -f docker-compose.yml -f docker-compose.cloud.yml up -d --build
+
+services:
+  dashboard:
+    ports:
+      - "80:80"        # 0.0.0.0 binding — visible on the EC2 public IP
