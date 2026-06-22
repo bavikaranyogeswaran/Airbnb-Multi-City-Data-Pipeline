@@ -58,6 +58,8 @@ def analytics_index() -> dict:
             "numerical_summary":    "GET /analytics/listings/numerical-summary",
             "price_by_room_type":   "GET /analytics/listings/price-by-room-type",
             "price_by_neighbourhood": "GET /analytics/listings/price-by-neighbourhood?top_n=20",
+            "price_ci_neighbourhood":           "GET /analytics/listings/price-ci-neighbourhood?city=london",
+            "price_ci_neighbourhood_room_type": "GET /analytics/listings/price-ci-neighbourhood-room-type?city=london",
             "availability_bands":   "GET /analytics/listings/availability-bands",
             "search":               "GET /analytics/listings/search?room_type=entire_home&max_price=200&limit=20",
             "detail":               "GET /analytics/listings/{listing_id}",
@@ -146,6 +148,28 @@ def price_by_neighbourhood(
     # Sort by median descending so the caller gets the most expensive boroughs first
     rows.sort(key=lambda r: r.get("median_price") or 0, reverse=True)
     return rows[:top_n]
+
+
+@router.get("/listings/price-ci-neighbourhood", summary="95% CI for mean price by neighbourhood")
+def price_ci_neighbourhood(
+    city:  Annotated[str, Query()] = "london",
+    top_n: Annotated[int, Query(ge=1, le=100)] = 33,
+) -> list[dict]:
+    rows = csv_to_records(_t("price_by_neighbourhood.csv", city))
+    rows.sort(key=lambda r: r.get("median_price") or 0, reverse=True)
+    return rows[:top_n]
+
+
+@router.get("/listings/price-ci-neighbourhood-room-type", summary="95% CI for mean price by neighbourhood × room type")
+def price_ci_neighbourhood_room_type(
+    city:      Annotated[str, Query()] = "london",
+    room_type: Annotated[str | None, Query(description="Filter to one room type")] = None,
+) -> list[dict]:
+    path = _t("price_ci_by_neighbourhood_room_type.csv", city)
+    rows = csv_to_records(path)
+    if room_type:
+        rows = [r for r in rows if str(r.get("room_type", "")).lower() == room_type.lower()]
+    return rows
 
 
 @router.get("/listings/availability-bands", summary="Listings grouped by annual availability band")
