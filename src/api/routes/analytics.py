@@ -73,9 +73,10 @@ def analytics_index() -> dict:
             "concentration": "GET /analytics/market/concentration",
         },
         "geographic": {
-            "density":           "GET /analytics/geographic/density",
-            "price_by_distance": "GET /analytics/geographic/price-by-distance",
-            "room_type_mix":     "GET /analytics/geographic/room-type-mix",
+            "density":              "GET /analytics/geographic/density",
+            "price_by_distance":    "GET /analytics/geographic/price-by-distance",
+            "room_type_mix":        "GET /analytics/geographic/room-type-mix",
+            "neighbourhood_map":    "GET /analytics/geographic/neighbourhood-map?city=london",
         },
         "temporal": {
             "availability":     "GET /analytics/temporal/availability",
@@ -318,6 +319,15 @@ def room_type_mix(
     city: Annotated[str, Query()] = "london",
 ) -> list[dict]:
     return csv_to_records(_t("room_type_by_neighbourhood.csv", city))
+
+
+@router.get("/geographic/neighbourhood-map", summary="Enriched neighbourhood GeoJSON for choropleth map")
+def neighbourhood_map(
+    city: Annotated[str, Query()] = "london",
+) -> dict:
+    path = must_exist(_t("neighbourhood_map.geojson", city))
+    with path.open(encoding="utf-8") as f:
+        return json.load(f)
 
 
 # ── Temporal endpoints ─────────────────────────────────────────────────────────
