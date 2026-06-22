@@ -73,6 +73,28 @@ export interface PriceByNeighbourhoodRoomType {
   ci_upper?: number;
 }
 
+export interface NeighbourhoodMapProps {
+  neighbourhood: string;
+  neighbourhood_group: string | null;
+  listing_count: number | null;
+  unique_hosts: number | null;
+  listings_per_km2: number | null;
+  median_price: number | null;
+  mean_price: number | null;
+  ci_lower: number | null;
+  ci_upper: number | null;
+  area_km2?: number | null;
+}
+
+export interface NeighbourhoodMapGeoJSON {
+  type: 'FeatureCollection';
+  features: Array<{
+    type: 'Feature';
+    geometry: object;
+    properties: NeighbourhoodMapProps;
+  }>;
+}
+
 export interface PriceByDistance {
   dist_band: string;
   listing_count: number;
