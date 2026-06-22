@@ -7,6 +7,7 @@ interface NavItem { id: Page; label: string; icon: string }
 const NAV: NavItem[] = [
   { id: 'overview',   label: 'Market Overview',      icon: '📊' },
   { id: 'pricing',    label: 'Pricing Analysis',     icon: '💰' },
+  { id: 'geography',  label: 'Geographic Map',       icon: '🗺️' },
   { id: 'hosts',      label: 'Host & Supply',        icon: '🏠' },
   { id: 'temporal',   label: 'Temporal Trends',      icon: '📅' },
   { id: 'statistics', label: 'Statistical Findings', icon: '📈' },

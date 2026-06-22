@@ -1,5 +1,5 @@
 export type City = 'london' | 'amsterdam' | 'madrid' | 'berlin';
-export type Page = 'overview' | 'pricing' | 'hosts' | 'temporal' | 'statistics' | 'comparison' | 'ai';
+export type Page = 'overview' | 'pricing' | 'geography' | 'hosts' | 'temporal' | 'statistics' | 'comparison' | 'ai';
 
 /** All supported cities in display order — add a new city here to propagate everywhere. */
 export const CITIES: City[] = ['london', 'amsterdam', 'madrid', 'berlin'];

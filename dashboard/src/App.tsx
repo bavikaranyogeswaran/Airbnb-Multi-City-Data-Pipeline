@@ -6,6 +6,7 @@ import Hosts      from './pages/Hosts';
 import Temporal   from './pages/Temporal';
 import Statistics from './pages/Statistics';
 import Comparison from './pages/Comparison';
+import Geography  from './pages/Geography';
 import AI         from './pages/AI';
 import type { City, Page } from './types';
 
@@ -17,6 +18,7 @@ export default function App() {
     <Layout page={page} city={city} onPageChange={setPage} onCityChange={setCity}>
       {page === 'overview'   && <Overview   city={city} />}
       {page === 'pricing'    && <Pricing    city={city} />}
+      {page === 'geography'  && <Geography  city={city} />}
       {page === 'hosts'      && <Hosts      city={city} />}
       {page === 'temporal'   && <Temporal   city={city} />}
       {page === 'statistics' && <Statistics city={city} />}
