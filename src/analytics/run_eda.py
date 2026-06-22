@@ -86,6 +86,17 @@ def _dist_band(d: float) -> str:
     return "20+ km"
 
 
+def _price_ci(series: pd.Series, confidence: float = 0.95) -> tuple[float, float]:
+    """95% t-distribution CI for the mean of a price series. Returns (lower, upper)."""
+    x = series.dropna()
+    n = len(x)
+    if n < 3:
+        return (float("nan"), float("nan"))
+    se = stats.sem(x)
+    lo, hi = stats.t.interval(confidence, df=n - 1, loc=x.mean(), scale=se)
+    return (round(lo, 2), round(hi, 2))
+
+
 # ── main generator ────────────────────────────────────────────────────────────
 
 def run(city: str) -> dict:
