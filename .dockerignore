@@ -1,0 +1,46 @@
+# ── Data & artefacts (mounted as volumes at runtime) ──────────────────────────
+data/
+logs/
+models/
+reports/figures/
+reports/ge_validation/
+reports/llm_summaries/
+
+# ── Python environment & caches ───────────────────────────────────────────────
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# ── Frontend build artefacts ──────────────────────────────────────────────────
+dashboard/node_modules/
+dashboard/dist/
+
+# ── Notebooks & local tooling ─────────────────────────────────────────────────
+notebooks/
+scripts/
+
+# ── Large binary files ────────────────────────────────────────────────────────
+*.parquet
+*.duckdb
+*.gz
+*.zip
+
+# ── Secrets & local config ────────────────────────────────────────────────────
+.env
+.env.local
+
+# ── Version control & IDE ─────────────────────────────────────────────────────
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# ── OS noise ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
