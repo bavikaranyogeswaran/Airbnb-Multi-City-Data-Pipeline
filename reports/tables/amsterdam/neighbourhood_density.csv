@@ -1,23 +1,23 @@
-neighbourhood,neighbourhood_group,area_km2,listing_count,unique_hosts,listings_per_km2
-De Baarsjes - Oud-West,,3.3422,1808,1704,540.96
-Centrum-West,,3.5998,1207,938,335.3
-De Pijp - Rivierenbuurt,,4.4086,1199,1120,271.97
-Centrum-Oost,,4.4809,923,726,205.99
-Westerpark,,3.872,736,690,190.08
-Zuid,,5.428,735,667,135.41
-Oud-Oost,,2.2032,654,607,296.84
-Bos en Lommer,,2.7792,547,524,196.82
-Oud-Noord,,9.044,485,428,53.63
-Oostelijk Havengebied - Indische Buurt,,5.6141,436,414,77.66
-Watergraafsmeer,,9.0689,318,283,35.06
-Noord-West,,8.3854,298,276,35.54
-Slotervaart,,5.9255,206,184,34.76
-Noord-Oost,,46.6989,188,160,4.03
-IJburg - Zeeburgereiland,,13.8525,188,172,13.57
-Geuzenveld - Slotermeer,,10.0404,139,109,13.84
-Buitenveldert - Zuidas,,7.5165,125,106,16.63
-De Aker - Nieuw Sloten,,7.6182,67,59,8.79
-Bijlmer-Centrum,,8.4714,66,44,7.79
-Gaasperdam - Driemond,,9.6515,60,48,6.22
-Osdorp,,9.2151,57,52,6.19
-Bijlmer-Oost,,4.0956,38,36,9.28
+neighbourhood,listing_count,unique_hosts,listings_per_km2
+De Baarsjes - Oud-West,1808,1704,540.9549941788082
+Centrum-West,1207,938,335.2991247496194
+Oud-Oost,654,607,296.84085904268466
+De Pijp - Rivierenbuurt,1199,1120,271.97027295958804
+Centrum-Oost,923,726,205.9864814749573
+Bos en Lommer,547,524,196.81644236596975
+Westerpark,736,690,190.08066545003066
+Zuid,735,667,135.40841287895276
+Oostelijk Havengebied - Indische Buurt,436,414,77.66188214247158
+Oud-Noord,485,428,53.62697678516676
+Noord-West,298,276,35.537911604539005
+Watergraafsmeer,318,283,35.06496089090117
+Slotervaart,206,184,34.76497155088934
+Buitenveldert - Zuidas,125,106,16.63012467750262
+Geuzenveld - Slotermeer,139,109,13.84401346982226
+IJburg - Zeeburgereiland,188,172,13.571512201902985
+Bijlmer-Oost,38,36,9.278165296784751
+De Aker - Nieuw Sloten,67,59,8.794761229863536
+Bijlmer-Centrum,66,44,7.7909158215904295
+Gaasperdam - Driemond,60,48,6.2166498707188875
+Osdorp,57,52,6.18550577631932
+Noord-Oost,188,160,4.025794872686079

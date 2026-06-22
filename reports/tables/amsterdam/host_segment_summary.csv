@@ -1,4 +1,4 @@
 host_segment,listing_count,unique_hosts,median_price,median_rating,median_occupancy,median_availability,superhost_rate
-multi,1137,491,179.0,4.84,0.625,135.0,0.419
-professional,720,87,210.0,4.71,0.549,164.5,0.42
-solo,8623,8623,227.0,4.94,0.978,8.0,0.129
+solo,8623,8623,227.0,4.94,0.98,8.0,0.12900210329516243
+multi,1137,491,179.0,4.84,0.62,135.0,0.41906474820143885
+professional,720,87,210.0,4.71,0.55,164.5,0.4201438848920863

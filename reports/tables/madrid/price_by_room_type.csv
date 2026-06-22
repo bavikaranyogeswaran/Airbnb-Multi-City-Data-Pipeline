@@ -1,5 +1,5 @@
-room_type,listing_count,median_price,mean_price,p25,p75,p95
-hotel_room,41,152.0,151.0,123.0,170.0,284.0
-entire_home,13648,129.0,185.0,96.0,183.0,369.0
-private_room,5116,50.0,84.0,36.0,79.0,208.0
-shared_room,148,30.0,53.0,25.0,40.0,139.0
+room_type,listing_count,median_price,mean_price,p25,p75,p95,ci_lower,ci_upper
+hotel_room,41,152.0,151.0,123.0,170.0,284.0,131.0,171.0
+entire_home,13648,129.0,185.0,96.0,183.0,369.0,176.0,194.0
+private_room,5116,50.0,84.0,36.0,79.0,208.0,79.0,90.0
+shared_room,148,30.0,53.0,25.0,40.0,139.0,34.0,72.0

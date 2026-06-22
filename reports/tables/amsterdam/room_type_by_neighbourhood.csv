@@ -1,23 +1,23 @@
 neighbourhood_cleansed,entire_home,hotel_room,private_room,shared_room
-Bijlmer-Centrum,28,7,31,0
-Bijlmer-Oost,32,0,6,0
-Bos en Lommer,509,0,38,0
-Buitenveldert - Zuidas,96,9,20,0
-Centrum-Oost,641,3,267,12
-Centrum-West,764,9,420,14
-De Aker - Nieuw Sloten,44,0,22,1
-De Baarsjes - Oud-West,1614,5,188,1
-De Pijp - Rivierenbuurt,1059,0,140,0
-Gaasperdam - Driemond,33,3,23,1
-Geuzenveld - Slotermeer,102,0,37,0
-IJburg - Zeeburgereiland,146,0,42,0
-Noord-Oost,144,0,44,0
-Noord-West,254,0,44,0
-Oostelijk Havengebied - Indische Buurt,381,0,55,0
-Osdorp,38,0,19,0
-Oud-Noord,401,2,80,2
-Oud-Oost,573,5,76,0
-Slotervaart,160,0,46,0
-Watergraafsmeer,259,0,59,0
-Westerpark,664,2,70,0
-Zuid,619,4,112,0
+Bijlmer-Centrum,42.4,10.6,47.0,0.0
+Bijlmer-Oost,84.2,0.0,15.8,0.0
+Bos en Lommer,93.1,0.0,6.9,0.0
+Buitenveldert - Zuidas,76.8,7.2,16.0,0.0
+Centrum-Oost,69.4,0.3,28.9,1.3
+Centrum-West,63.3,0.7,34.8,1.2
+De Aker - Nieuw Sloten,65.7,0.0,32.8,1.5
+De Baarsjes - Oud-West,89.3,0.3,10.4,0.1
+De Pijp - Rivierenbuurt,88.3,0.0,11.7,0.0
+Gaasperdam - Driemond,55.0,5.0,38.3,1.7
+Geuzenveld - Slotermeer,73.4,0.0,26.6,0.0
+IJburg - Zeeburgereiland,77.7,0.0,22.3,0.0
+Noord-Oost,76.6,0.0,23.4,0.0
+Noord-West,85.2,0.0,14.8,0.0
+Oostelijk Havengebied - Indische Buurt,87.4,0.0,12.6,0.0
+Osdorp,66.7,0.0,33.3,0.0
+Oud-Noord,82.7,0.4,16.5,0.4
+Oud-Oost,87.6,0.8,11.6,0.0
+Slotervaart,77.7,0.0,22.3,0.0
+Watergraafsmeer,81.4,0.0,18.6,0.0
+Westerpark,90.2,0.3,9.5,0.0
+Zuid,84.2,0.5,15.2,0.0

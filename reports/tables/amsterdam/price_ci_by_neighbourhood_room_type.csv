@@ -1,0 +1,50 @@
+neighbourhood_cleansed,room_type,listing_count,median_price,mean_price,ci_lower,ci_upper
+Bijlmer-Centrum,entire_home,12,152.0,181.0,120.0,242.0
+Bijlmer-Centrum,private_room,23,99.0,126.0,104.0,147.0
+Bijlmer-Oost,entire_home,17,147.0,180.0,138.0,222.0
+Bijlmer-Oost,private_room,5,81.0,82.0,74.0,90.0
+Bos en Lommer,entire_home,232,192.0,217.0,205.0,229.0
+Bos en Lommer,private_room,29,90.0,106.0,87.0,124.0
+Buitenveldert - Zuidas,entire_home,57,202.0,417.0,73.0,762.0
+Buitenveldert - Zuidas,hotel_room,9,40000.0,24620.0,6705.0,42535.0
+Buitenveldert - Zuidas,private_room,16,109.0,107.0,91.0,123.0
+Centrum-Oost,entire_home,402,304.0,366.0,330.0,403.0
+Centrum-Oost,private_room,164,162.0,176.0,163.0,188.0
+Centrum-Oost,shared_room,12,101.0,152.0,75.0,229.0
+Centrum-West,entire_home,465,307.0,387.0,341.0,432.0
+Centrum-West,hotel_room,8,196.0,187.0,113.0,262.0
+Centrum-West,private_room,283,170.0,214.0,184.0,244.0
+Centrum-West,shared_room,14,78.0,104.0,48.0,160.0
+De Aker - Nieuw Sloten,entire_home,24,188.0,222.0,166.0,278.0
+De Aker - Nieuw Sloten,private_room,18,114.0,138.0,97.0,178.0
+De Baarsjes - Oud-West,entire_home,837,255.0,290.0,281.0,300.0
+De Baarsjes - Oud-West,hotel_room,5,153.0,169.0,79.0,258.0
+De Baarsjes - Oud-West,private_room,149,135.0,167.0,149.0,185.0
+De Pijp - Rivierenbuurt,entire_home,558,264.0,300.0,287.0,312.0
+De Pijp - Rivierenbuurt,private_room,91,146.0,163.0,149.0,178.0
+Gaasperdam - Driemond,entire_home,13,170.0,190.0,149.0,231.0
+Gaasperdam - Driemond,private_room,13,71.0,99.0,58.0,139.0
+Geuzenveld - Slotermeer,entire_home,58,223.0,229.0,211.0,247.0
+Geuzenveld - Slotermeer,private_room,33,99.0,137.0,105.0,169.0
+IJburg - Zeeburgereiland,entire_home,77,230.0,2355.0,-542.0,5253.0
+IJburg - Zeeburgereiland,private_room,30,113.0,126.0,109.0,143.0
+Noord-Oost,entire_home,91,200.0,228.0,197.0,259.0
+Noord-Oost,private_room,36,88.0,98.0,87.0,109.0
+Noord-West,entire_home,141,205.0,220.0,208.0,232.0
+Noord-West,private_room,34,94.0,101.0,88.0,114.0
+Oostelijk Havengebied - Indische Buurt,entire_home,190,207.0,233.0,219.0,247.0
+Oostelijk Havengebied - Indische Buurt,private_room,41,125.0,141.0,119.0,164.0
+Osdorp,entire_home,22,180.0,203.0,168.0,237.0
+Osdorp,private_room,15,125.0,119.0,100.0,137.0
+Oud-Noord,entire_home,193,212.0,368.0,210.0,526.0
+Oud-Noord,private_room,55,150.0,393.0,-3.0,789.0
+Oud-Oost,entire_home,272,235.0,271.0,254.0,289.0
+Oud-Oost,private_room,50,130.0,147.0,126.0,168.0
+Slotervaart,entire_home,71,210.0,230.0,209.0,250.0
+Slotervaart,private_room,29,85.0,103.0,84.0,122.0
+Watergraafsmeer,entire_home,103,231.0,304.0,244.0,364.0
+Watergraafsmeer,private_room,35,120.0,164.0,133.0,194.0
+Westerpark,entire_home,335,225.0,269.0,249.0,288.0
+Westerpark,private_room,55,152.0,174.0,153.0,196.0
+Zuid,entire_home,362,260.0,336.0,304.0,367.0
+Zuid,private_room,70,148.0,183.0,156.0,209.0

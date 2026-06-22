@@ -1,100 +1,100 @@
-neighbourhood_cleansed,listing_count,median_price,mean_price
-Abrantes,38,46.0,54.0
-Acacias,160,92.0,104.0
-Adelfas,107,115.0,121.0
-Aguilas,40,46.0,63.0
-Almagro,178,136.0,153.0
-Almenara,157,112.0,119.0
-Almendrales,92,68.0,127.0
-Aluche,64,50.0,65.0
-Apostol Santiago,36,45.0,77.0
-Arapiles,216,108.0,132.0
-Aravaca,62,82.0,98.0
-Arcos,34,42.0,124.0
-Argüelles,243,127.0,189.0
-Atocha,29,130.0,144.0
-Bellas Vistas,162,94.0,123.0
-Berruguete,200,86.0,110.0
-Buenavista,41,57.0,74.0
-Campamento,26,40.0,49.0
-Canillas,113,68.0,89.0
-Canillejas,76,68.0,81.0
-Casa de Campo,67,82.0,145.0
-Casco Histórico de Barajas,43,87.0,101.0
-Casco Histórico de Vallecas,68,80.0,85.0
-Casco Histórico de Vicálvaro,53,55.0,74.0
-Castellana,160,174.0,209.0
-Castilla,96,114.0,152.0
-Castillejos,218,108.0,326.0
-Chopera,118,88.0,91.0
-Ciudad Jardín,91,115.0,124.0
-Ciudad Universitaria,57,98.0,133.0
-Comillas,121,82.0,98.0
-Concepción,76,98.0,107.0
-Cortes,863,142.0,191.0
-Costillares,39,132.0,154.0
-Cuatro Caminos,346,110.0,115.0
-Cármenes,51,55.0,88.0
-Delicias,128,88.0,95.0
-El Viso,81,118.0,157.0
-Embajadores,1985,109.0,149.0
-Entrevías,50,50.0,69.0
-Estrella,34,92.0,148.0
-Fontarrón,52,41.0,82.0
-Fuente del Berro,102,116.0,124.0
-Gaztambide,187,97.0,119.0
-Goya,315,154.0,192.0
-Guindalera,303,112.0,152.0
-Hispanoamérica,123,125.0,143.0
-Ibiza,225,124.0,228.0
-Imperial,133,100.0,182.0
-Jerónimos,86,146.0,218.0
-Justicia,947,138.0,172.0
-Legazpi,36,110.0,111.0
-Lista,173,144.0,156.0
-Los Angeles,34,35.0,59.0
-Los Rosales,39,78.0,78.0
-Lucero,60,69.0,69.0
-Moscardó,124,62.0,78.0
-Niño Jesús,61,143.0,153.0
-Nueva España,133,129.0,126.0
-Numancia,182,77.0,91.0
-Opañel,141,84.0,128.0
-Orcasur,55,93.0,103.0
-Pacífico,214,90.0,111.0
-Palacio,1485,135.0,210.0
-Palomeras Bajas,41,59.0,590.0
-Palomeras Sureste,29,49.0,68.0
-Palos de Moguer,301,105.0,127.0
-Peñagrande,35,81.0,108.0
-Pilar,53,89.0,113.0
-Pinar del Rey,115,100.0,118.0
-Piovera,26,91.0,302.0
-Portazgo,44,46.0,77.0
-Pradolongo,40,51.0,63.0
-Prosperidad,165,105.0,113.0
-Pueblo Nuevo,172,81.0,107.0
-Puerta Bonita,80,50.0,61.0
-Puerta del Angel,192,80.0,201.0
-Quintana,84,86.0,129.0
-Recoletos,263,176.0,229.0
-Rejas,118,84.0,98.0
-Rios Rosas,176,118.0,144.0
-Rosas,29,97.0,185.0
-San Andrés,62,76.0,81.0
-San Diego,205,85.0,105.0
-San Fermín,32,52.0,83.0
-San Isidro,155,78.0,98.0
-San Pascual,36,67.0,70.0
-Simancas,83,81.0,94.0
-Sol,1104,149.0,234.0
-Timón,27,106.0,132.0
-Trafalgar,357,144.0,161.0
-Universidad,1710,126.0,177.0
-Valdeacederas,220,92.0,102.0
-Valdefuentes,122,100.0,235.0
-Valdezarza,57,70.0,91.0
-Vallehermoso,82,108.0,110.0
-Valverde,92,82.0,95.0
-Ventas,167,81.0,133.0
-Vista Alegre,85,67.0,78.0
+neighbourhood_cleansed,listing_count,median_price,mean_price,ci_lower,ci_upper
+Abrantes,38,46.0,54.0,45.0,64.0
+Acacias,160,92.0,104.0,90.0,118.0
+Adelfas,107,115.0,121.0,107.0,134.0
+Aguilas,40,46.0,63.0,45.0,81.0
+Almagro,178,136.0,153.0,136.0,170.0
+Almenara,157,112.0,119.0,109.0,129.0
+Almendrales,92,68.0,127.0,20.0,233.0
+Aluche,64,50.0,65.0,54.0,76.0
+Apostol Santiago,36,45.0,77.0,39.0,115.0
+Arapiles,216,108.0,132.0,116.0,148.0
+Aravaca,62,82.0,98.0,78.0,119.0
+Arcos,34,42.0,124.0,54.0,194.0
+Argüelles,243,127.0,189.0,108.0,271.0
+Atocha,29,130.0,144.0,111.0,176.0
+Bellas Vistas,162,94.0,123.0,102.0,144.0
+Berruguete,200,86.0,110.0,94.0,127.0
+Buenavista,41,57.0,74.0,55.0,93.0
+Campamento,26,40.0,49.0,38.0,60.0
+Canillas,113,68.0,89.0,76.0,103.0
+Canillejas,76,68.0,81.0,67.0,95.0
+Casa de Campo,67,82.0,145.0,74.0,216.0
+Casco Histórico de Barajas,43,87.0,101.0,84.0,119.0
+Casco Histórico de Vallecas,68,80.0,85.0,73.0,97.0
+Casco Histórico de Vicálvaro,53,55.0,74.0,62.0,86.0
+Castellana,160,174.0,209.0,186.0,232.0
+Castilla,96,114.0,152.0,121.0,183.0
+Castillejos,218,108.0,326.0,139.0,513.0
+Chopera,118,88.0,91.0,84.0,97.0
+Ciudad Jardín,91,115.0,124.0,111.0,137.0
+Ciudad Universitaria,57,98.0,133.0,87.0,179.0
+Comillas,121,82.0,98.0,87.0,110.0
+Concepción,76,98.0,107.0,87.0,126.0
+Cortes,863,142.0,191.0,176.0,206.0
+Costillares,39,132.0,154.0,130.0,178.0
+Cuatro Caminos,346,110.0,115.0,106.0,124.0
+Cármenes,51,55.0,88.0,60.0,115.0
+Delicias,128,88.0,95.0,84.0,106.0
+El Viso,81,118.0,157.0,114.0,200.0
+Embajadores,1985,109.0,149.0,134.0,164.0
+Entrevías,50,50.0,69.0,54.0,84.0
+Estrella,34,92.0,148.0,78.0,218.0
+Fontarrón,52,41.0,82.0,52.0,111.0
+Fuente del Berro,102,116.0,124.0,111.0,138.0
+Gaztambide,187,97.0,119.0,106.0,131.0
+Goya,315,154.0,192.0,175.0,209.0
+Guindalera,303,112.0,152.0,136.0,168.0
+Hispanoamérica,123,125.0,143.0,128.0,158.0
+Ibiza,225,124.0,228.0,67.0,388.0
+Imperial,133,100.0,182.0,69.0,295.0
+Jerónimos,86,146.0,218.0,113.0,323.0
+Justicia,947,138.0,172.0,163.0,182.0
+Legazpi,36,110.0,111.0,94.0,128.0
+Lista,173,144.0,156.0,143.0,170.0
+Los Angeles,34,35.0,59.0,44.0,73.0
+Los Rosales,39,78.0,78.0,61.0,95.0
+Lucero,60,69.0,69.0,59.0,78.0
+Moscardó,124,62.0,78.0,69.0,86.0
+Niño Jesús,61,143.0,153.0,128.0,178.0
+Nueva España,133,129.0,126.0,115.0,136.0
+Numancia,182,77.0,91.0,77.0,105.0
+Opañel,141,84.0,128.0,94.0,162.0
+Orcasur,55,93.0,103.0,83.0,124.0
+Pacífico,214,90.0,111.0,99.0,122.0
+Palacio,1485,135.0,210.0,182.0,239.0
+Palomeras Bajas,41,59.0,590.0,-441.0,1622.0
+Palomeras Sureste,29,49.0,68.0,49.0,88.0
+Palos de Moguer,301,105.0,127.0,115.0,138.0
+Peñagrande,35,81.0,108.0,48.0,168.0
+Pilar,53,89.0,113.0,77.0,149.0
+Pinar del Rey,115,100.0,118.0,101.0,135.0
+Piovera,26,91.0,302.0,22.0,582.0
+Portazgo,44,46.0,77.0,34.0,121.0
+Pradolongo,40,51.0,63.0,51.0,74.0
+Prosperidad,165,105.0,113.0,104.0,122.0
+Pueblo Nuevo,172,81.0,107.0,84.0,129.0
+Puerta Bonita,80,50.0,61.0,48.0,74.0
+Puerta del Angel,192,80.0,201.0,25.0,377.0
+Quintana,84,86.0,129.0,69.0,189.0
+Recoletos,263,176.0,229.0,205.0,252.0
+Rejas,118,84.0,98.0,83.0,113.0
+Rios Rosas,176,118.0,144.0,125.0,163.0
+Rosas,29,97.0,185.0,102.0,268.0
+San Andrés,62,76.0,81.0,62.0,100.0
+San Diego,205,85.0,105.0,92.0,117.0
+San Fermín,32,52.0,83.0,54.0,112.0
+San Isidro,155,78.0,98.0,79.0,117.0
+San Pascual,36,67.0,70.0,58.0,82.0
+Simancas,83,81.0,94.0,73.0,115.0
+Sol,1104,149.0,234.0,172.0,296.0
+Timón,27,106.0,132.0,84.0,181.0
+Trafalgar,357,144.0,161.0,148.0,174.0
+Universidad,1710,126.0,177.0,148.0,206.0
+Valdeacederas,220,92.0,102.0,93.0,110.0
+Valdefuentes,122,100.0,235.0,102.0,367.0
+Valdezarza,57,70.0,91.0,64.0,119.0
+Vallehermoso,82,108.0,110.0,97.0,122.0
+Valverde,92,82.0,95.0,79.0,110.0
+Ventas,167,81.0,133.0,72.0,194.0
+Vista Alegre,85,67.0,78.0,59.0,98.0

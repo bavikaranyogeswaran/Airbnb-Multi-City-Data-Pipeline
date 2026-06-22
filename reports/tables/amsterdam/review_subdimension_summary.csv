@@ -1,5 +1,7 @@
-Unnamed: 0,accuracy,cleanliness,checkin,communication,location,value
-entire_home,4.94,4.88,5.0,5.0,4.9,4.72
-hotel_room,4.76,4.77,4.89,4.83,4.81,4.48
-private_room,4.86,4.84,4.92,4.93,4.85,4.66
-shared_room,4.85,4.69,4.92,4.82,4.92,4.63
+,accuracy,cleanliness,checkin,communication,location,value
+accuracy,1.0,0.628,0.526,0.593,0.365,0.678
+cleanliness,0.628,1.0,0.492,0.487,0.352,0.61
+checkin,0.526,0.492,1.0,0.646,0.313,0.486
+communication,0.593,0.487,0.646,1.0,0.327,0.545
+location,0.365,0.352,0.313,0.327,1.0,0.441
+value,0.678,0.61,0.486,0.545,0.441,1.0

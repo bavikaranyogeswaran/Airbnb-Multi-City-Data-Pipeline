@@ -1,0 +1,193 @@
+neighbourhood_cleansed,room_type,listing_count,median_price,mean_price,ci_lower,ci_upper
+Abrantes,private_room,31,40.0,48.0,39.0,58.0
+Acacias,entire_home,109,104.0,123.0,104.0,142.0
+Acacias,private_room,51,55.0,63.0,49.0,77.0
+Adelfas,entire_home,88,116.0,129.0,118.0,141.0
+Adelfas,private_room,19,43.0,81.0,28.0,134.0
+Aguilas,private_room,33,40.0,54.0,34.0,74.0
+Almagro,entire_home,126,155.0,184.0,163.0,205.0
+Almagro,private_room,52,60.0,78.0,62.0,94.0
+Almenara,entire_home,122,123.0,137.0,126.0,148.0
+Almenara,private_room,35,44.0,55.0,45.0,66.0
+Almendrales,entire_home,60,86.0,90.0,80.0,100.0
+Almendrales,private_room,31,39.0,201.0,-126.0,528.0
+Aluche,entire_home,24,86.0,99.0,83.0,114.0
+Aluche,private_room,40,38.0,44.0,33.0,55.0
+Apostol Santiago,private_room,27,44.0,65.0,16.0,115.0
+Arapiles,entire_home,153,136.0,162.0,142.0,183.0
+Arapiles,private_room,63,48.0,57.0,50.0,64.0
+Aravaca,entire_home,51,89.0,110.0,86.0,134.0
+Arcos,private_room,29,40.0,128.0,46.0,211.0
+Argüelles,entire_home,154,154.0,249.0,122.0,377.0
+Argüelles,private_room,87,50.0,86.0,64.0,109.0
+Atocha,entire_home,24,148.0,163.0,129.0,197.0
+Bellas Vistas,entire_home,116,110.0,125.0,112.0,138.0
+Bellas Vistas,private_room,46,52.0,117.0,48.0,186.0
+Berruguete,entire_home,147,96.0,119.0,101.0,136.0
+Berruguete,private_room,53,49.0,86.0,46.0,126.0
+Buenavista,entire_home,13,104.0,119.0,70.0,167.0
+Buenavista,private_room,27,47.0,54.0,41.0,66.0
+Butarque,private_room,16,46.0,45.0,38.0,52.0
+Campamento,private_room,21,38.0,38.0,33.0,42.0
+Canillas,entire_home,48,114.0,144.0,122.0,167.0
+Canillas,private_room,63,38.0,48.0,42.0,55.0
+Canillejas,entire_home,40,83.0,100.0,85.0,114.0
+Canillejas,private_room,36,40.0,61.0,36.0,85.0
+Casa de Campo,entire_home,37,116.0,232.0,109.0,356.0
+Casa de Campo,private_room,30,18.0,38.0,28.0,48.0
+Casco Histórico de Barajas,entire_home,30,103.0,123.0,102.0,144.0
+Casco Histórico de Barajas,private_room,12,54.0,52.0,45.0,60.0
+Casco Histórico de Vallecas,entire_home,48,90.0,103.0,89.0,116.0
+Casco Histórico de Vallecas,private_room,20,35.0,42.0,33.0,52.0
+Casco Histórico de Vicálvaro,entire_home,24,90.0,109.0,90.0,128.0
+Casco Histórico de Vicálvaro,private_room,29,42.0,45.0,39.0,50.0
+Castellana,entire_home,145,180.0,224.0,200.0,248.0
+Castellana,private_room,15,54.0,65.0,30.0,99.0
+Castilla,entire_home,69,118.0,160.0,122.0,198.0
+Castilla,private_room,27,55.0,132.0,74.0,189.0
+Castillejos,entire_home,164,121.0,415.0,167.0,662.0
+Castillejos,private_room,53,36.0,58.0,46.0,69.0
+Chopera,entire_home,82,97.0,104.0,98.0,111.0
+Chopera,private_room,36,60.0,59.0,51.0,67.0
+Ciudad Jardín,entire_home,80,118.0,131.0,117.0,144.0
+Ciudad Universitaria,entire_home,33,110.0,160.0,101.0,220.0
+Ciudad Universitaria,private_room,24,46.0,96.0,20.0,171.0
+Colina,entire_home,16,153.0,163.0,111.0,215.0
+Comillas,entire_home,87,107.0,121.0,107.0,134.0
+Comillas,private_room,33,38.0,40.0,35.0,45.0
+Concepción,entire_home,41,119.0,126.0,107.0,144.0
+Concepción,private_room,35,44.0,84.0,49.0,120.0
+Cortes,entire_home,707,149.0,204.0,186.0,222.0
+Cortes,private_room,156,86.0,131.0,110.0,151.0
+Costillares,entire_home,35,151.0,164.0,139.0,188.0
+Cuatro Caminos,entire_home,239,125.0,140.0,130.0,151.0
+Cuatro Caminos,private_room,70,66.0,76.0,64.0,87.0
+Cuatro Caminos,shared_room,37,25.0,27.0,25.0,29.0
+Cármenes,entire_home,22,98.0,141.0,89.0,192.0
+Cármenes,private_room,29,38.0,47.0,28.0,66.0
+Delicias,entire_home,81,100.0,116.0,101.0,130.0
+Delicias,private_room,47,48.0,59.0,45.0,73.0
+El Plantío,private_room,14,71.0,71.0,60.0,82.0
+El Viso,entire_home,52,156.0,199.0,140.0,258.0
+El Viso,private_room,29,44.0,83.0,31.0,135.0
+Embajadores,entire_home,1556,118.0,159.0,144.0,174.0
+Embajadores,private_room,402,62.0,112.0,67.0,156.0
+Embajadores,shared_room,19,40.0,89.0,-18.0,195.0
+Entrevías,entire_home,18,107.0,118.0,87.0,148.0
+Entrevías,private_room,30,41.0,43.0,38.0,48.0
+Estrella,entire_home,17,185.0,247.0,119.0,375.0
+Estrella,private_room,17,44.0,50.0,40.0,59.0
+Fontarrón,private_room,41,29.0,54.0,38.0,71.0
+Fuente del Berro,entire_home,79,129.0,142.0,127.0,157.0
+Fuente del Berro,private_room,23,59.0,64.0,51.0,76.0
+Gaztambide,entire_home,113,132.0,148.0,132.0,163.0
+Gaztambide,private_room,73,56.0,75.0,57.0,92.0
+Goya,entire_home,266,165.0,211.0,192.0,230.0
+Goya,private_room,49,56.0,88.0,63.0,112.0
+Guindalera,entire_home,232,122.0,157.0,140.0,174.0
+Guindalera,private_room,71,55.0,136.0,92.0,180.0
+Hispanoamérica,entire_home,94,143.0,162.0,147.0,177.0
+Hispanoamérica,private_room,29,60.0,80.0,48.0,112.0
+Ibiza,entire_home,163,150.0,295.0,74.0,516.0
+Ibiza,private_room,62,39.0,52.0,33.0,70.0
+Imperial,entire_home,102,110.0,212.0,65.0,359.0
+Imperial,private_room,31,59.0,84.0,59.0,109.0
+Jerónimos,entire_home,62,175.0,271.0,127.0,415.0
+Jerónimos,private_room,24,68.0,81.0,56.0,105.0
+Justicia,entire_home,765,150.0,190.0,180.0,200.0
+Justicia,private_room,181,66.0,97.0,77.0,117.0
+Legazpi,entire_home,31,120.0,115.0,102.0,129.0
+Lista,entire_home,138,166.0,181.0,168.0,194.0
+Lista,private_room,35,44.0,59.0,44.0,75.0
+Los Angeles,private_room,24,30.0,39.0,29.0,48.0
+Los Rosales,entire_home,20,94.0,105.0,88.0,123.0
+Los Rosales,private_room,19,35.0,49.0,25.0,72.0
+Lucero,entire_home,32,85.0,93.0,84.0,103.0
+Lucero,private_room,28,34.0,41.0,32.0,50.0
+Marroquina,entire_home,13,98.0,109.0,82.0,136.0
+Moscardó,entire_home,64,98.0,110.0,99.0,121.0
+Moscardó,private_room,60,41.0,43.0,39.0,47.0
+Niño Jesús,entire_home,50,148.0,171.0,143.0,199.0
+Nueva España,entire_home,102,140.0,146.0,137.0,156.0
+Nueva España,private_room,27,45.0,63.0,47.0,80.0
+Numancia,entire_home,100,88.0,108.0,93.0,123.0
+Numancia,private_room,81,43.0,70.0,45.0,96.0
+Opañel,entire_home,88,107.0,128.0,102.0,153.0
+Opañel,private_room,53,36.0,127.0,45.0,209.0
+Orcasitas,private_room,18,40.0,38.0,34.0,42.0
+Orcasur,entire_home,48,94.0,102.0,87.0,117.0
+Pacífico,entire_home,124,128.0,150.0,134.0,167.0
+Pacífico,private_room,90,44.0,56.0,47.0,64.0
+Palacio,entire_home,1205,146.0,233.0,198.0,268.0
+Palacio,private_room,262,79.0,118.0,103.0,133.0
+Palacio,shared_room,16,40.0,51.0,14.0,87.0
+Palomeras Bajas,entire_home,17,87.0,1325.0,-1282.0,3932.0
+Palomeras Bajas,private_room,24,34.0,70.0,21.0,119.0
+Palomeras Sureste,private_room,20,40.0,50.0,36.0,63.0
+Palos de Moguer,entire_home,224,122.0,149.0,135.0,164.0
+Palos de Moguer,private_room,74,55.0,62.0,53.0,71.0
+Peñagrande,entire_home,19,104.0,157.0,47.0,267.0
+Peñagrande,private_room,16,44.0,50.0,36.0,65.0
+Pilar,entire_home,41,94.0,128.0,83.0,173.0
+Pilar,private_room,12,45.0,63.0,26.0,99.0
+Pinar del Rey,entire_home,81,108.0,139.0,118.0,161.0
+Pinar del Rey,private_room,34,49.0,68.0,48.0,89.0
+Piovera,entire_home,19,97.0,383.0,-2.0,769.0
+Portazgo,entire_home,16,74.0,93.0,59.0,126.0
+Portazgo,private_room,27,36.0,36.0,31.0,41.0
+Pradolongo,entire_home,15,90.0,88.0,74.0,102.0
+Pradolongo,private_room,23,36.0,49.0,34.0,64.0
+Prosperidad,entire_home,124,122.0,128.0,119.0,137.0
+Prosperidad,private_room,41,48.0,69.0,52.0,86.0
+Pueblo Nuevo,entire_home,106,102.0,110.0,101.0,120.0
+Pueblo Nuevo,private_room,66,44.0,100.0,44.0,157.0
+Puerta Bonita,entire_home,31,73.0,76.0,68.0,84.0
+Puerta Bonita,private_room,49,38.0,51.0,31.0,71.0
+Puerta del Angel,entire_home,125,104.0,287.0,17.0,557.0
+Puerta del Angel,private_room,67,39.0,40.0,36.0,43.0
+Quintana,entire_home,48,98.0,114.0,101.0,128.0
+Quintana,private_room,36,39.0,149.0,7.0,291.0
+Recoletos,entire_home,226,192.0,253.0,228.0,278.0
+Recoletos,private_room,37,32.0,80.0,44.0,116.0
+Rejas,entire_home,106,87.0,103.0,87.0,120.0
+Rejas,private_room,12,46.0,48.0,39.0,57.0
+Rios Rosas,entire_home,127,133.0,170.0,147.0,194.0
+Rios Rosas,private_room,43,48.0,66.0,45.0,88.0
+Rosas,private_room,23,91.0,186.0,81.0,290.0
+San Andrés,entire_home,36,84.0,90.0,82.0,98.0
+San Andrés,private_room,25,47.0,70.0,24.0,117.0
+San Diego,entire_home,137,102.0,123.0,109.0,137.0
+San Diego,private_room,68,42.0,68.0,44.0,91.0
+San Fermín,entire_home,14,112.0,140.0,84.0,195.0
+San Fermín,private_room,18,37.0,39.0,34.0,44.0
+San Isidro,entire_home,107,86.0,110.0,89.0,132.0
+San Isidro,private_room,47,41.0,71.0,31.0,111.0
+San Juan Bautista,entire_home,18,132.0,152.0,109.0,195.0
+San Pascual,entire_home,18,92.0,96.0,79.0,113.0
+San Pascual,private_room,17,39.0,45.0,37.0,52.0
+Simancas,entire_home,46,94.0,97.0,88.0,106.0
+Simancas,private_room,37,36.0,91.0,44.0,137.0
+Sol,entire_home,859,163.0,262.0,183.0,341.0
+Sol,private_room,230,75.0,134.0,102.0,167.0
+Timón,entire_home,20,122.0,161.0,100.0,223.0
+Trafalgar,entire_home,274,165.0,188.0,172.0,203.0
+Trafalgar,private_room,83,56.0,74.0,61.0,88.0
+Universidad,entire_home,1302,142.0,204.0,166.0,242.0
+Universidad,private_room,358,62.0,97.0,84.0,110.0
+Universidad,shared_room,39,33.0,36.0,28.0,44.0
+Valdeacederas,entire_home,174,103.0,116.0,106.0,125.0
+Valdeacederas,private_room,46,44.0,49.0,43.0,54.0
+Valdefuentes,entire_home,100,116.0,274.0,113.0,436.0
+Valdefuentes,private_room,22,44.0,53.0,43.0,64.0
+Valdezarza,entire_home,27,95.0,113.0,84.0,142.0
+Valdezarza,private_room,30,36.0,72.0,25.0,119.0
+Vallehermoso,entire_home,65,121.0,128.0,117.0,140.0
+Vallehermoso,private_room,17,42.0,39.0,31.0,47.0
+Valverde,entire_home,56,88.0,112.0,98.0,126.0
+Valverde,private_room,36,40.0,68.0,36.0,99.0
+Ventas,entire_home,102,102.0,136.0,105.0,168.0
+Ventas,private_room,65,42.0,127.0,-24.0,278.0
+Vinateros,private_room,18,24.0,27.0,22.0,32.0
+Vista Alegre,entire_home,45,86.0,97.0,85.0,110.0
+Vista Alegre,private_room,37,36.0,60.0,18.0,102.0
+Zofío,private_room,15,42.0,47.0,36.0,58.0

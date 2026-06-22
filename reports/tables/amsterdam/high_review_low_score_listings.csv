@@ -1,65 +1,91 @@
 id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of_reviews,review_scores_rating,review_scores_cleanliness,review_scores_communication,host_segment,host_response_rate
 44391,Centrum-Oost,entire_home,apartment,,42,4.71,4.49,4.9,solo,
+80635,Centrum-West,private_room,house,,241,4.77,4.82,4.79,multi,
+91535,De Pijp - Rivierenbuurt,private_room,unique,,318,4.79,4.65,4.88,solo,1.0
 97221,Slotervaart,private_room,hotel,68.0,412,4.68,4.88,4.78,multi,1.0
 137026,De Pijp - Rivierenbuurt,entire_home,house,335.0,117,4.71,4.63,4.88,solo,1.0
 168769,Centrum-West,private_room,hotel,,278,4.59,4.77,4.71,multi,
+171054,De Baarsjes - Oud-West,entire_home,apartment,,103,4.75,4.77,4.97,solo,
 179528,De Pijp - Rivierenbuurt,entire_home,apartment,301.0,37,4.57,4.43,4.86,multi,1.0
 188347,De Baarsjes - Oud-West,private_room,apartment,68.0,478,4.68,4.81,4.87,solo,1.0
-212050,De Baarsjes - Oud-West,entire_home,apartment,,23,4.73,4.48,5.0,solo,
 283170,Zuid,entire_home,apartment,1036.0,130,4.5,4.53,4.83,solo,1.0
+304082,Centrum-West,entire_home,house,185.0,381,4.78,4.75,4.85,solo,0.95
 306852,Centrum-Oost,entire_home,apartment,200.0,32,4.63,4.63,4.88,multi,
+308028,Centrum-Oost,private_room,apartment,,36,4.75,4.69,4.92,multi,
+311124,Centrum-West,entire_home,apartment,325.0,100,4.79,4.8,4.93,solo,1.0
 359298,Centrum-Oost,entire_home,apartment,271.0,112,4.58,4.23,4.79,solo,0.0
+366438,Centrum-West,private_room,apartment,147.0,565,4.78,4.78,4.9,solo,1.0
 379885,De Pijp - Rivierenbuurt,private_room,house,228.0,94,4.66,4.53,4.57,solo,
 441424,Oostelijk Havengebied - Indische Buurt,entire_home,house,158.0,45,4.64,4.44,4.84,solo,1.0
+450767,Centrum-Oost,entire_home,house,374.0,334,4.77,4.76,4.78,multi,1.0
 505012,Centrum-Oost,entire_home,house,630.0,61,4.74,4.72,4.97,solo,0.0
 507598,Centrum-West,entire_home,apartment,500.0,62,4.74,4.66,4.9,solo,1.0
 515921,Zuid,entire_home,apartment,175.0,104,4.37,4.1,4.57,solo,1.0
+528594,Slotervaart,private_room,apartment,,75,4.78,4.85,4.88,multi,1.0
 549310,De Baarsjes - Oud-West,entire_home,apartment,,63,4.59,4.48,4.71,solo,1.0
 553514,Westerpark,entire_home,apartment,108.0,162,4.41,4.34,4.88,solo,0.5
-556829,Buitenveldert - Zuidas,entire_home,apartment,126.0,28,4.62,4.54,4.96,multi,0.0
+575615,Centrum-Oost,entire_home,apartment,,40,4.75,4.64,4.78,solo,
 588020,Centrum-Oost,entire_home,apartment,360.0,391,4.57,4.63,4.64,multi,1.0
+608432,Centrum-West,private_room,hotel,110.0,1002,4.78,4.79,4.93,multi,1.0
 664697,Oud-Noord,entire_home,apartment,87.0,62,4.33,4.23,4.6,multi,0.9
 683431,De Pijp - Rivierenbuurt,private_room,apartment,115.0,774,4.7,4.62,4.93,solo,1.0
+689623,Centrum-Oost,entire_home,apartment,162.0,98,4.76,4.56,4.86,solo,
 716107,De Baarsjes - Oud-West,entire_home,apartment,,175,4.72,4.65,4.84,solo,
 729260,Centrum-West,entire_home,apartment,184.0,108,4.71,4.19,4.89,solo,1.0
 729317,Centrum-Oost,private_room,hotel,147.0,218,4.7,4.66,4.81,multi,1.0
+730916,Westerpark,private_room,apartment,,453,4.75,4.78,4.86,solo,1.0
 746067,Centrum-West,entire_home,apartment,,91,4.73,4.62,4.91,multi,1.0
 751626,Oud-Oost,entire_home,apartment,,32,4.72,4.72,4.91,solo,1.0
 758475,De Baarsjes - Oud-West,entire_home,apartment,,39,4.74,4.51,4.87,solo,
+761411,Noord-Oost,private_room,apartment,,346,4.76,4.9,4.92,multi,1.0
 771758,Slotervaart,private_room,hotel,60.0,374,4.63,4.89,4.78,multi,1.0
 775655,Centrum-Oost,private_room,apartment,137.0,555,4.6,4.61,4.8,solo,0.93
 782254,Centrum-West,entire_home,apartment,,67,4.71,4.69,4.8,solo,1.0
+794322,Centrum-Oost,private_room,unique,199.0,446,4.78,4.65,4.75,solo,1.0
 801544,De Pijp - Rivierenbuurt,entire_home,apartment,,105,4.57,4.4,4.72,solo,1.0
 847093,De Baarsjes - Oud-West,entire_home,apartment,340.0,58,4.74,4.76,4.84,multi,1.0
+851044,Zuid,entire_home,apartment,138.0,1133,4.75,4.84,4.81,multi,0.97
 874057,De Baarsjes - Oud-West,entire_home,apartment,,35,4.63,4.65,4.82,solo,
 879986,De Pijp - Rivierenbuurt,private_room,apartment,108.0,622,4.72,4.76,4.92,solo,1.0
 906446,Buitenveldert - Zuidas,private_room,apartment,89.0,437,4.45,4.75,4.55,multi,1.0
 916096,Centrum-West,entire_home,apartment,,93,4.72,4.66,4.95,solo,1.0
+934060,Oud-Noord,private_room,unique,668.0,163,4.75,4.82,4.84,multi,1.0
 937635,De Baarsjes - Oud-West,entire_home,apartment,,93,4.65,4.18,4.56,solo,1.0
 951483,Watergraafsmeer,entire_home,house,128.0,67,4.66,4.58,4.6,solo,1.0
+969862,Zuid,private_room,apartment,95.0,274,4.77,4.82,4.92,solo,1.0
 978852,De Baarsjes - Oud-West,private_room,hotel,,264,4.4,4.2,4.71,solo,
 989222,De Pijp - Rivierenbuurt,entire_home,apartment,,34,4.74,4.85,4.85,multi,
+1008006,Westerpark,private_room,unique,127.0,203,4.77,4.81,4.76,multi,1.0
 1008223,Slotervaart,private_room,hotel,86.0,659,4.69,4.65,4.85,solo,
 1018639,Centrum-Oost,private_room,apartment,,41,4.61,4.7,4.83,multi,0.9
 1018703,De Pijp - Rivierenbuurt,private_room,unique,164.0,358,4.72,4.7,4.83,multi,1.0
 1044448,Oud-Oost,entire_home,apartment,750.0,51,4.68,4.6,4.92,solo,1.0
 1047746,Oud-Oost,entire_home,apartment,250.0,34,4.71,4.68,4.88,solo,
 1057494,Zuid,private_room,apartment,76.0,626,4.44,4.58,4.71,multi,1.0
+1086763,Centrum-Oost,private_room,hotel,200.0,56,4.79,4.71,4.77,multi,1.0
 1102846,Centrum-Oost,entire_home,apartment,,115,4.72,4.72,4.95,solo,
 1116446,Bos en Lommer,private_room,apartment,85.0,388,4.61,4.63,4.8,multi,1.0
-1145140,Zuid,entire_home,apartment,,29,4.69,4.93,4.9,solo,1.0
 1145866,Bos en Lommer,private_room,apartment,88.0,380,4.66,4.68,4.85,multi,1.0
 1149289,Centrum-Oost,entire_home,apartment,198.0,99,4.73,4.58,4.95,solo,1.0
+1149380,Bijlmer-Centrum,private_room,hotel,159.0,804,4.75,4.56,4.94,solo,1.0
 1149694,Bos en Lommer,entire_home,apartment,,74,4.19,3.82,4.66,solo,
 1155386,De Pijp - Rivierenbuurt,entire_home,apartment,150.0,68,4.74,4.97,4.91,solo,1.0
+1159534,Centrum-Oost,entire_home,house,800.0,30,4.77,4.77,4.97,solo,
 1196088,Oud-Noord,entire_home,apartment,178.0,625,4.65,4.63,4.85,solo,1.0
 1223171,De Baarsjes - Oud-West,private_room,house,156.0,586,4.74,4.69,4.79,solo,0.9
+1260229,Centrum-West,entire_home,unique,256.0,85,4.78,4.61,4.96,solo,1.0
+1267645,Centrum-Oost,entire_home,house,,38,4.79,4.53,4.95,solo,
 1272352,Bos en Lommer,private_room,apartment,108.0,476,4.69,4.62,4.91,solo,1.0
 1303321,De Pijp - Rivierenbuurt,private_room,house,86.0,131,4.7,4.63,4.79,multi,0.95
 1364013,De Baarsjes - Oud-West,entire_home,apartment,,31,4.74,4.48,4.87,solo,
 1375612,Noord-Oost,private_room,hotel,76.0,229,4.57,4.14,4.66,professional,0.87
+1383369,Westerpark,entire_home,apartment,,161,4.79,4.77,4.9,solo,1.0
 1432378,De Baarsjes - Oud-West,entire_home,apartment,,35,4.69,4.74,4.8,solo,1.0
+1454784,De Pijp - Rivierenbuurt,entire_home,apartment,220.0,56,4.75,4.8,4.93,solo,1.0
 1468473,Bos en Lommer,entire_home,apartment,196.0,143,4.57,4.41,4.85,solo,1.0
+1511360,De Baarsjes - Oud-West,entire_home,apartment,160.0,101,4.75,4.91,5.0,solo,1.0
+1567891,Zuid,entire_home,apartment,162.0,95,4.77,4.55,4.92,solo,0.67
+1568669,Watergraafsmeer,entire_home,house,174.0,45,4.77,4.68,5.0,solo,1.0
 1580186,Centrum-West,entire_home,unique,389.0,139,4.71,4.55,4.74,solo,1.0
 1601408,De Pijp - Rivierenbuurt,entire_home,apartment,379.0,316,4.73,4.68,4.94,solo,1.0
 1630603,Zuid,private_room,apartment,79.0,596,4.54,4.73,4.73,multi,1.0
@@ -76,19 +102,23 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 1894944,De Pijp - Rivierenbuurt,entire_home,apartment,540.0,52,4.69,4.45,4.96,solo,1.0
 1911182,Oostelijk Havengebied - Indische Buurt,private_room,apartment,92.0,366,4.35,4.71,4.69,solo,1.0
 1919184,De Baarsjes - Oud-West,entire_home,apartment,256.0,86,4.62,4.76,4.88,solo,1.0
+1938510,Oostelijk Havengebied - Indische Buurt,entire_home,apartment,249.0,108,4.76,4.72,4.86,solo,1.0
 1943465,De Baarsjes - Oud-West,entire_home,house,,41,4.68,4.12,4.76,solo,
 1954308,De Baarsjes - Oud-West,entire_home,apartment,,76,4.71,4.75,4.89,solo,
+2016153,De Pijp - Rivierenbuurt,entire_home,apartment,190.0,72,4.77,4.93,4.86,solo,0.7
 2018017,Centrum-Oost,private_room,apartment,,75,4.56,4.32,4.93,solo,
 2047730,Watergraafsmeer,private_room,apartment,,38,4.73,4.86,4.81,solo,
-2080427,Oud-Oost,entire_home,apartment,,21,4.52,4.52,4.81,solo,1.0
+2070211,Zuid,entire_home,apartment,315.0,146,4.77,4.86,4.86,solo,0.9
 2090727,De Pijp - Rivierenbuurt,entire_home,apartment,,41,4.63,4.76,4.93,solo,
 2224903,Oud-Oost,entire_home,house,254.0,30,4.47,4.47,4.7,solo,1.0
 2272303,De Pijp - Rivierenbuurt,entire_home,apartment,343.0,105,4.5,4.52,4.45,solo,1.0
 2429334,Centrum-West,private_room,house,167.0,574,4.73,4.67,4.81,solo,1.0
-2450249,Westerpark,entire_home,house,,22,4.68,4.41,4.86,multi,1.0
-2474754,Centrum-West,entire_home,apartment,10000.0,24,4.71,4.63,4.92,solo,
 2477880,Centrum-West,private_room,apartment,118.0,609,4.72,4.7,4.84,solo,1.0
+2478937,Centrum-West,private_room,house,129.0,833,4.77,4.74,4.86,solo,1.0
 2497346,De Pijp - Rivierenbuurt,private_room,apartment,174.0,843,4.66,4.74,4.87,multi,1.0
+2518607,De Pijp - Rivierenbuurt,entire_home,apartment,,72,4.79,4.85,5.0,solo,
+2529643,Oostelijk Havengebied - Indische Buurt,private_room,hotel,155.0,39,4.79,4.89,4.82,solo,
+2574202,De Pijp - Rivierenbuurt,entire_home,apartment,,35,4.77,4.68,4.97,solo,
 2638552,Gaasperdam - Driemond,shared_room,hotel,109.0,270,4.59,4.65,4.5,professional,1.0
 2639206,Gaasperdam - Driemond,hotel_room,hotel,103.0,162,4.7,4.72,4.66,professional,1.0
 2647276,Gaasperdam - Driemond,hotel_room,hotel,113.0,228,4.59,4.59,4.5,professional,1.0
@@ -96,7 +126,8 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 2648251,Bos en Lommer,entire_home,apartment,,101,4.72,4.59,4.88,solo,
 2705165,Oud-Noord,entire_home,house,417.0,460,4.67,4.45,4.81,solo,1.0
 2739228,Centrum-West,private_room,hotel,,200,4.69,4.86,4.82,multi,
-2775209,Zuid,entire_home,apartment,469.0,21,4.1,4.33,4.52,solo,0.93
+2761156,Slotervaart,private_room,apartment,61.0,574,4.78,4.92,4.84,multi,0.95
+2763037,Centrum-West,private_room,house,211.0,553,4.76,4.74,4.92,solo,1.0
 2787645,De Pijp - Rivierenbuurt,entire_home,house,,40,4.68,4.2,4.85,solo,
 2842228,Noord-Oost,private_room,other,60.0,184,4.55,4.32,4.56,professional,0.87
 2853285,De Baarsjes - Oud-West,private_room,hotel,96.0,259,4.41,4.41,4.66,professional,0.96
@@ -105,26 +136,25 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 2981853,De Baarsjes - Oud-West,private_room,hotel,101.0,72,4.58,4.48,4.77,professional,0.96
 2981861,De Baarsjes - Oud-West,private_room,hotel,96.0,160,4.49,4.56,4.66,professional,0.96
 2984018,De Baarsjes - Oud-West,private_room,hotel,104.0,49,4.43,4.55,4.63,professional,0.96
+3155284,Noord-Oost,private_room,other,87.0,182,4.79,4.81,4.88,professional,0.87
 3235970,Centrum-Oost,entire_home,apartment,220.0,311,4.53,4.54,4.52,multi,1.0
 3267105,Zuid,entire_home,apartment,217.0,50,4.66,4.35,4.79,solo,0.8
-3277053,Centrum-West,entire_home,apartment,,23,4.3,3.5,4.7,solo,
 3285009,De Pijp - Rivierenbuurt,private_room,house,124.0,357,4.66,4.75,4.83,solo,1.0
-3285500,Oostelijk Havengebied - Indische Buurt,entire_home,house,,23,4.74,4.39,4.78,solo,1.0
 3294707,Westerpark,entire_home,apartment,,47,4.23,4.4,4.34,solo,0.8
-3329357,Westerpark,entire_home,apartment,,28,4.46,4.11,4.71,solo,
 3332625,De Baarsjes - Oud-West,entire_home,apartment,550.0,40,4.63,4.41,4.72,solo,0.8
 3341765,De Pijp - Rivierenbuurt,entire_home,apartment,,30,4.53,4.55,4.63,multi,0.93
 3346620,Noord-Oost,private_room,apartment,61.0,274,4.74,4.87,4.85,multi,1.0
+3383408,Centrum-West,private_room,apartment,,429,4.75,4.79,4.89,solo,
 3484708,Slotervaart,private_room,apartment,,46,4.74,4.93,4.84,solo,
 3501084,Centrum-West,entire_home,apartment,356.0,71,4.73,4.8,4.99,solo,1.0
 3504128,Oud-Oost,entire_home,apartment,341.0,31,4.74,4.67,4.87,solo,0.38
-3519739,Westerpark,entire_home,apartment,147.0,22,4.64,4.86,4.91,solo,1.0
+3508800,De Pijp - Rivierenbuurt,private_room,house,,731,4.76,4.7,4.94,solo,1.0
 3649382,Zuid,entire_home,apartment,,52,4.46,4.39,4.88,solo,
-3673223,Oostelijk Havengebied - Indische Buurt,entire_home,apartment,,22,4.73,4.68,4.86,solo,
 3708105,De Baarsjes - Oud-West,entire_home,apartment,,61,4.67,4.67,4.82,solo,
-3729980,Centrum-West,entire_home,apartment,121.0,25,4.48,4.56,4.92,solo,1.0
 3758059,De Pijp - Rivierenbuurt,entire_home,apartment,336.0,60,4.57,4.48,4.72,solo,
-3847617,De Baarsjes - Oud-West,entire_home,apartment,250.0,23,4.7,4.74,4.96,solo,
+3796459,Oud-Oost,private_room,house,69.0,96,4.75,4.63,4.93,solo,1.0
+3850766,IJburg - Zeeburgereiland,private_room,house,104.0,578,4.79,4.58,4.91,solo,1.0
+3853993,Oud-Noord,entire_home,house,,52,4.79,4.67,4.88,solo,
 3944495,Centrum-Oost,entire_home,apartment,217.0,687,4.54,4.64,4.61,solo,1.0
 3957639,Watergraafsmeer,private_room,house,114.0,343,4.65,4.46,4.93,solo,1.0
 4043288,Centrum-West,private_room,house,,113,4.59,4.88,4.79,multi,
@@ -135,53 +165,66 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 4282686,Noord-West,private_room,apartment,81.0,515,4.74,4.68,4.93,solo,1.0
 4299280,Centrum-Oost,entire_home,apartment,,50,4.74,4.59,4.86,solo,1.0
 4329449,De Baarsjes - Oud-West,entire_home,apartment,,74,4.47,4.14,4.84,solo,
+4409509,Oud-Noord,entire_home,unique,600.0,101,4.78,4.86,4.87,solo,1.0
 4416539,Slotervaart,entire_home,house,,97,4.69,4.65,4.85,solo,
 4459764,Gaasperdam - Driemond,hotel_room,hotel,152.0,510,4.57,4.57,4.44,professional,1.0
 4616816,De Pijp - Rivierenbuurt,entire_home,apartment,,43,4.6,4.26,4.98,solo,
+4636051,Oud-Oost,private_room,apartment,84.0,200,4.79,4.68,4.91,multi,1.0
 4697911,Noord-Oost,entire_home,house,200.0,39,4.59,4.1,4.9,solo,1.0
-4707046,Centrum-Oost,entire_home,apartment,,25,4.6,4.4,5.0,solo,
 4736237,Oostelijk Havengebied - Indische Buurt,entire_home,apartment,,49,4.49,4.04,4.78,solo,
 4764819,Centrum-Oost,private_room,apartment,,528,4.51,4.49,4.71,solo,1.0
 4774677,Oostelijk Havengebied - Indische Buurt,entire_home,apartment,153.0,43,4.53,4.19,4.86,solo,1.0
 4815695,De Pijp - Rivierenbuurt,entire_home,apartment,155.0,109,4.67,4.62,4.81,solo,
 4884158,De Baarsjes - Oud-West,private_room,house,145.0,255,4.73,4.78,4.93,solo,1.0
-4994217,Westerpark,entire_home,apartment,,29,4.41,4.24,4.76,solo,
-5109339,Centrum-West,entire_home,house,,23,4.7,4.7,4.74,solo,
+4934646,Oud-Oost,private_room,apartment,103.0,165,4.79,4.73,4.87,solo,0.9
+4949644,Noord-West,entire_home,house,270.0,36,4.78,4.69,4.94,solo,1.0
+4984717,Centrum-West,private_room,hotel,169.0,192,4.76,4.82,4.73,multi,0.9
+5009826,Centrum-West,private_room,hotel,141.0,189,4.77,4.77,4.74,multi,0.9
+5088206,De Baarsjes - Oud-West,entire_home,apartment,254.0,66,4.79,4.61,4.92,solo,1.0
 5133110,Centrum-West,private_room,hotel,371.0,35,4.69,4.8,4.69,solo,0.13
 5367709,Centrum-West,private_room,house,162.0,438,4.72,4.83,4.58,solo,1.0
 5401988,Oud-Oost,entire_home,apartment,191.0,37,4.65,4.43,4.89,solo,0.25
 5432591,Oostelijk Havengebied - Indische Buurt,private_room,apartment,115.0,402,4.74,4.68,4.88,solo,1.0
 5474153,De Baarsjes - Oud-West,entire_home,apartment,,82,4.6,4.41,4.8,solo,1.0
 5586553,Centrum-West,entire_home,apartment,144.0,71,4.69,4.56,4.96,solo,0.0
-5596462,IJburg - Zeeburgereiland,entire_home,house,,26,4.69,4.42,4.8,solo,
+5719013,Centrum-West,private_room,apartment,175.0,195,4.77,4.84,4.85,solo,1.0
 5781996,Centrum-West,entire_home,apartment,200.0,82,4.74,4.71,4.76,solo,
 5799439,De Pijp - Rivierenbuurt,private_room,apartment,116.0,180,4.67,4.81,4.81,multi,1.0
 5859999,Westerpark,entire_home,apartment,,54,4.7,4.54,5.0,solo,
 5875754,Watergraafsmeer,entire_home,apartment,,35,4.69,4.69,4.94,solo,
-5910570,De Pijp - Rivierenbuurt,entire_home,apartment,495.0,22,4.45,4.36,4.73,solo,0.88
+5906728,De Baarsjes - Oud-West,entire_home,apartment,,96,4.77,4.8,4.92,solo,1.0
 5991024,Zuid,private_room,apartment,82.0,202,4.74,4.59,4.88,multi,0.8
+6010587,Centrum-West,entire_home,unique,176.0,501,4.79,4.77,4.84,solo,0.9
+6012665,De Pijp - Rivierenbuurt,entire_home,apartment,181.0,353,4.75,4.7,4.91,solo,1.0
 6043774,Oud-Oost,private_room,apartment,72.0,643,4.54,4.46,4.69,solo,0.91
 6116302,Gaasperdam - Driemond,private_room,apartment,,282,4.51,4.7,4.8,multi,
 6133157,Centrum-West,private_room,apartment,80.0,719,4.57,4.4,4.85,multi,1.0
 6210110,De Aker - Nieuw Sloten,entire_home,apartment,83.0,47,4.55,4.61,4.8,solo,1.0
+6258741,Westerpark,entire_home,apartment,,53,4.77,4.94,4.85,solo,1.0
+6359921,Centrum-Oost,private_room,house,147.0,465,4.79,4.79,4.92,solo,1.0
 6485103,Centrum-Oost,private_room,hotel,175.0,314,4.45,4.52,4.52,solo,1.0
 6524982,De Baarsjes - Oud-West,entire_home,house,600.0,39,4.64,4.59,4.9,solo,
-6526164,De Pijp - Rivierenbuurt,entire_home,apartment,174.0,23,4.35,4.43,4.91,solo,1.0
 6564456,Centrum-Oost,entire_home,apartment,,71,4.59,4.48,4.94,solo,0.0
+6665729,Gaasperdam - Driemond,private_room,house,60.0,383,4.75,4.73,4.78,solo,1.0
 6745944,Westerpark,entire_home,apartment,80.0,78,4.73,4.7,4.92,solo,1.0
 6770676,De Baarsjes - Oud-West,entire_home,apartment,,40,4.7,4.45,4.98,solo,
 6780631,De Baarsjes - Oud-West,entire_home,apartment,,31,4.71,4.81,4.97,solo,
 6781132,Bos en Lommer,entire_home,house,,37,4.57,4.43,4.78,solo,
+6816107,De Baarsjes - Oud-West,entire_home,apartment,139.0,70,4.79,4.74,4.96,solo,
 6826043,Oud-Noord,entire_home,house,,58,4.67,4.58,4.93,solo,
+6831658,Westerpark,entire_home,apartment,224.0,62,4.79,4.66,4.92,solo,1.0
 6861769,De Baarsjes - Oud-West,entire_home,apartment,183.0,100,4.48,4.4,4.78,solo,0.83
-6982667,Noord-West,entire_home,house,,21,4.71,4.0,4.95,solo,1.0
 7088751,De Pijp - Rivierenbuurt,entire_home,apartment,166.0,37,4.59,4.51,4.68,solo,
 7160841,Noord-Oost,private_room,hotel,95.0,92,4.64,4.73,4.64,professional,0.87
 7239681,Centrum-Oost,entire_home,apartment,,37,4.3,4.25,4.83,solo,
-7457987,De Baarsjes - Oud-West,private_room,hotel,129.0,29,3.83,3.76,4.41,professional,0.96
+7318827,Westerpark,private_room,apartment,,32,4.75,4.84,4.94,solo,1.0
+7394725,Bos en Lommer,entire_home,apartment,,39,4.77,4.85,4.85,solo,
+7409137,Bos en Lommer,entire_home,apartment,,40,4.78,4.43,4.93,solo,
+7448305,IJburg - Zeeburgereiland,private_room,hotel,246.0,59,4.75,4.86,4.92,multi,1.0
 7474662,Centrum-Oost,private_room,house,89.0,705,4.68,4.55,4.82,solo,1.0
 7523012,De Baarsjes - Oud-West,private_room,house,113.0,469,4.5,4.29,4.77,multi,0.7
 7555385,Slotervaart,private_room,apartment,81.0,539,4.72,4.67,4.8,solo,1.0
+7571471,Zuid,private_room,other,110.0,830,4.75,4.75,4.88,solo,1.0
 7627497,Westerpark,entire_home,apartment,,30,4.73,4.3,4.86,solo,
 7786801,Bos en Lommer,entire_home,apartment,,41,4.73,4.66,4.85,solo,
 7895182,Bos en Lommer,private_room,apartment,85.0,121,4.63,4.79,4.83,multi,1.0
@@ -192,95 +235,111 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 8093694,Westerpark,entire_home,apartment,225.0,32,4.47,4.56,4.84,solo,
 8095648,De Baarsjes - Oud-West,entire_home,apartment,,31,4.42,4.06,4.71,solo,
 8168988,De Baarsjes - Oud-West,entire_home,apartment,,73,4.4,4.46,4.8,solo,1.0
+8176659,Oostelijk Havengebied - Indische Buurt,entire_home,apartment,,52,4.75,4.71,4.92,solo,
 8191077,Centrum-Oost,private_room,hotel,358.0,324,4.61,4.58,4.78,solo,0.97
 8397086,Zuid,entire_home,apartment,116.0,88,4.69,4.47,4.9,multi,0.8
-8920212,Watergraafsmeer,entire_home,apartment,695.0,25,4.64,4.88,4.96,solo,
+8591687,Centrum-West,private_room,hotel,,565,4.78,4.58,4.93,multi,1.0
+8835898,Centrum-Oost,private_room,hotel,,250,4.79,4.83,4.9,professional,0.97
 9181640,De Baarsjes - Oud-West,private_room,house,128.0,484,4.54,4.36,4.71,multi,0.7
 9308904,De Baarsjes - Oud-West,private_room,hotel,161.0,181,4.58,4.7,4.64,solo,
-9340964,Centrum-West,entire_home,apartment,,27,4.52,4.07,4.81,solo,1.0
 9343414,Centrum-West,private_room,apartment,244.0,160,4.68,4.65,4.74,multi,0.97
+9509889,Centrum-West,private_room,apartment,269.0,371,4.75,4.68,4.85,solo,1.0
 9613135,Noord-West,private_room,house,,58,4.48,4.78,4.83,solo,
 9619832,De Pijp - Rivierenbuurt,entire_home,apartment,399.0,47,4.21,3.81,4.7,solo,1.0
-9815325,De Baarsjes - Oud-West,entire_home,apartment,,24,4.54,4.58,4.54,solo,1.0
+9629614,Oud-Oost,entire_home,apartment,238.0,152,4.77,4.47,4.95,solo,1.0
+9769837,IJburg - Zeeburgereiland,entire_home,house,200.0,48,4.77,4.77,4.92,solo,
 9840533,Centrum-Oost,entire_home,apartment,,43,4.7,4.86,4.91,solo,
-10043980,Zuid,private_room,hotel,,26,4.46,4.69,4.62,professional,
 10050359,De Pijp - Rivierenbuurt,entire_home,apartment,,30,4.57,4.5,4.93,solo,
 10055684,Oostelijk Havengebied - Indische Buurt,entire_home,apartment,173.0,53,4.57,3.83,4.87,solo,0.1
 10055894,De Baarsjes - Oud-West,entire_home,apartment,,47,4.74,4.81,4.77,solo,
+10098198,Westerpark,entire_home,apartment,190.0,111,4.78,4.77,4.86,solo,1.0
 10287267,Centrum-West,private_room,apartment,143.0,139,4.63,4.83,4.7,multi,0.97
 10441222,Centrum-West,private_room,other,161.0,405,4.51,4.59,4.69,multi,1.0
 10500911,Oud-Noord,private_room,apartment,123.0,251,4.67,4.85,4.85,solo,1.0
 10512492,Centrum-West,private_room,apartment,141.0,436,4.64,4.79,4.78,multi,1.0
 10644438,Centrum-West,entire_home,apartment,244.0,308,4.6,4.63,4.73,multi,
 10741538,Westerpark,entire_home,apartment,,43,4.63,4.35,4.84,solo,
-10823505,Noord-West,entire_home,house,,28,4.71,3.96,4.89,solo,
 10824845,Westerpark,entire_home,apartment,,35,4.71,4.54,4.88,solo,
-10952396,De Baarsjes - Oud-West,entire_home,apartment,,25,4.56,4.79,4.92,solo,
 11215477,Bos en Lommer,private_room,hotel,304.0,74,4.73,4.92,4.96,multi,1.0
-11454092,Centrum-Oost,entire_home,apartment,,27,4.74,4.77,4.96,solo,
+11252596,Bos en Lommer,private_room,apartment,205.0,431,4.79,4.76,4.93,solo,1.0
 11460770,Noord-West,private_room,house,89.0,209,4.71,4.44,4.83,multi,1.0
-11562257,Centrum-West,entire_home,apartment,,29,4.59,4.48,4.97,solo,
 11689351,De Pijp - Rivierenbuurt,entire_home,apartment,,52,4.69,4.53,4.92,solo,1.0
 11855399,De Pijp - Rivierenbuurt,entire_home,apartment,324.0,39,4.56,4.23,4.97,solo,1.0
 11859556,Centrum-West,private_room,house,103.0,468,4.68,4.67,4.95,solo,1.0
 12079751,Westerpark,entire_home,apartment,,61,4.56,4.51,4.87,solo,
 12082536,Watergraafsmeer,entire_home,apartment,90.0,50,4.58,4.38,4.82,solo,1.0
+12106511,Watergraafsmeer,entire_home,apartment,,62,4.77,4.42,4.95,solo,
+12141525,Noord-West,private_room,house,104.0,120,4.79,4.77,4.89,multi,1.0
 12143783,Westerpark,entire_home,apartment,,57,4.7,4.7,4.72,solo,1.0
 12151249,Westerpark,entire_home,apartment,178.0,279,4.55,4.68,4.64,solo,1.0
-12160646,Oud-Noord,entire_home,house,,22,4.41,4.59,4.77,solo,
 12507039,Centrum-West,private_room,hotel,151.0,143,4.58,4.75,4.8,multi,0.83
 12550549,Centrum-West,private_room,other,183.0,375,4.7,4.78,4.81,multi,1.0
-12553513,Oud-Oost,entire_home,apartment,284.0,25,4.72,4.4,4.8,solo,1.0
+12558413,Zuid,entire_home,apartment,,37,4.78,4.73,4.95,solo,
+12596165,Watergraafsmeer,entire_home,apartment,,43,4.79,4.86,5.0,solo,1.0
 12596322,Centrum-Oost,entire_home,house,841.0,260,4.31,4.54,4.57,professional,1.0
 12597756,Centrum-West,entire_home,apartment,,233,4.38,4.44,4.66,professional,1.0
 12598630,Centrum-West,entire_home,apartment,269.0,324,4.47,4.46,4.61,professional,1.0
 12598924,Centrum-West,entire_home,apartment,255.0,312,4.51,4.54,4.6,professional,1.0
 12599072,Centrum-West,entire_home,apartment,314.0,250,4.41,4.48,4.55,professional,1.0
 12619145,Westerpark,entire_home,apartment,98.0,77,4.68,4.39,4.94,solo,
-12725921,Oud-Noord,entire_home,house,251.0,21,4.48,4.24,4.9,solo,1.0
+12674363,Noord-West,entire_home,house,,210,4.77,4.67,4.96,solo,1.0
 12733599,Watergraafsmeer,private_room,house,81.0,161,4.69,4.61,4.92,solo,1.0
 12863352,Centrum-West,entire_home,apartment,275.0,41,4.71,4.88,4.8,solo,1.0
 13040996,Westerpark,private_room,apartment,70.0,642,4.62,4.47,4.85,multi,1.0
 13051355,Centrum-West,private_room,hotel,142.0,329,4.61,4.64,4.79,multi,1.0
 13072405,Geuzenveld - Slotermeer,private_room,apartment,70.0,350,4.73,4.71,4.87,solo,1.0
+13080195,Centrum-West,private_room,house,189.0,154,4.75,4.66,4.88,solo,1.0
+13135409,Zuid,entire_home,apartment,114.0,42,4.76,4.61,4.81,solo,1.0
 13144575,Centrum-West,private_room,hotel,110.0,262,4.49,4.56,4.72,multi,1.0
 13262950,De Baarsjes - Oud-West,entire_home,apartment,,33,4.67,4.55,4.94,solo,1.0
 13272633,Centrum-Oost,private_room,hotel,386.0,154,4.69,4.72,4.77,solo,
+13460110,Oud-Noord,private_room,apartment,121.0,281,4.77,4.72,4.87,solo,
+13463261,De Pijp - Rivierenbuurt,entire_home,apartment,,61,4.75,4.72,4.93,solo,
 13712862,De Baarsjes - Oud-West,entire_home,apartment,,35,4.6,4.17,4.63,solo,1.0
 13812250,Westerpark,entire_home,apartment,274.0,207,4.65,4.79,4.87,multi,1.0
 13825117,Oud-Oost,entire_home,apartment,,52,4.71,4.38,4.94,solo,
+13826877,Zuid,private_room,apartment,,82,4.79,4.73,4.96,solo,
 13836709,Noord-West,private_room,house,77.0,192,4.66,4.7,4.79,solo,1.0
 13851468,Westerpark,entire_home,apartment,175.0,48,4.71,4.4,4.98,solo,0.0
+13852643,Centrum-West,private_room,hotel,,128,4.76,4.72,4.88,multi,0.83
 13854126,Westerpark,entire_home,apartment,259.0,79,4.63,4.33,4.81,solo,0.25
-13933082,Bos en Lommer,entire_home,house,,23,4.74,4.74,4.87,solo,
+13952479,De Pijp - Rivierenbuurt,entire_home,apartment,255.0,670,4.79,4.83,4.91,solo,1.0
+14017892,Centrum-West,private_room,hotel,124.0,333,4.79,4.81,4.88,multi,1.0
 14022135,Oud-Noord,entire_home,house,346.0,330,4.73,4.63,4.96,solo,1.0
+14022661,Zuid,entire_home,apartment,,58,4.78,4.88,4.96,solo,
 14079338,Bos en Lommer,entire_home,apartment,,58,4.74,4.6,4.84,solo,1.0
 14086359,De Baarsjes - Oud-West,private_room,apartment,75.0,252,4.74,4.57,4.95,solo,1.0
-14171624,Bos en Lommer,entire_home,apartment,,26,4.73,4.54,4.96,solo,
+14274187,Centrum-Oost,entire_home,apartment,,48,4.79,4.94,4.96,solo,1.0
 14292407,De Pijp - Rivierenbuurt,private_room,apartment,200.0,226,4.65,4.67,4.89,solo,1.0
 14311105,De Pijp - Rivierenbuurt,entire_home,apartment,309.0,50,4.66,4.6,4.86,solo,1.0
 14325757,Centrum-Oost,private_room,hotel,164.0,331,4.74,4.78,4.84,multi,1.0
+14348158,Centrum-West,entire_home,apartment,,41,4.78,4.59,4.88,solo,
+14387468,Westerpark,entire_home,apartment,,52,4.75,4.69,4.75,solo,1.0
 14439841,Oud-Oost,entire_home,apartment,177.0,31,4.68,4.68,4.68,solo,1.0
 14462366,Centrum-West,entire_home,apartment,,35,4.56,4.65,4.94,solo,
 14690112,Centrum-Oost,private_room,other,289.0,72,4.74,4.67,4.96,solo,1.0
+14816635,Westerpark,entire_home,apartment,288.0,129,4.79,4.86,4.71,multi,1.0
+14817368,Westerpark,entire_home,apartment,144.0,170,4.76,4.89,4.85,multi,1.0
 14819599,Westerpark,private_room,apartment,,56,4.64,4.79,4.77,multi,1.0
+14847200,Centrum-Oost,entire_home,house,390.0,43,4.77,4.95,4.88,solo,1.0
 14909329,De Pijp - Rivierenbuurt,entire_home,apartment,,40,4.55,4.11,4.47,solo,
+15033074,Centrum-West,private_room,hotel,,151,4.77,4.64,4.91,solo,1.0
+15046252,Slotervaart,entire_home,apartment,134.0,304,4.76,4.81,4.91,solo,1.0
 15109768,Centrum-West,entire_home,apartment,,62,4.73,4.68,4.84,solo,1.0
 15110564,De Pijp - Rivierenbuurt,entire_home,apartment,96.0,49,4.73,4.45,4.92,solo,1.0
 15121800,De Baarsjes - Oud-West,entire_home,apartment,184.0,463,4.66,4.67,4.73,solo,0.8
 15239518,De Pijp - Rivierenbuurt,private_room,house,,231,4.69,4.73,4.82,multi,1.0
 15260123,Watergraafsmeer,private_room,apartment,230.0,277,4.72,4.64,4.93,solo,1.0
 15264411,Oud-Oost,entire_home,apartment,,41,4.73,4.41,4.88,solo,
-15441005,Oud-Noord,entire_home,house,,28,4.39,4.39,4.78,solo,
 15564639,Centrum-West,private_room,apartment,,167,4.63,4.73,4.84,solo,
-15713472,Zuid,entire_home,apartment,236.0,27,4.74,4.63,4.93,multi,1.0
+15984970,De Baarsjes - Oud-West,entire_home,apartment,261.0,57,4.77,4.32,4.98,solo,1.0
 16050056,Noord-West,private_room,house,87.0,121,4.73,4.54,4.82,multi,1.0
 16127802,De Baarsjes - Oud-West,entire_home,apartment,409.0,47,4.7,4.53,4.81,solo,0.6
 16185181,Oostelijk Havengebied - Indische Buurt,entire_home,house,,36,4.64,4.61,4.77,solo,
 16198996,Westerpark,entire_home,house,,35,4.74,4.86,4.97,solo,
+16222778,Centrum-West,entire_home,apartment,,201,4.77,4.67,4.95,solo,1.0
 16249620,Centrum-West,private_room,apartment,120.0,395,4.63,4.73,4.84,multi,0.94
 16249820,Centrum-West,private_room,apartment,,361,4.63,4.73,4.83,multi,0.94
-16328805,Oostelijk Havengebied - Indische Buurt,entire_home,apartment,160.0,28,4.64,4.32,4.81,solo,0.8
 16341879,Centrum-West,private_room,apartment,86.0,40,4.58,4.58,4.78,multi,1.0
 16342515,Centrum-West,private_room,apartment,85.0,49,4.51,4.55,4.78,multi,1.0
 16401179,Centrum-West,private_room,hotel,234.0,94,4.56,4.68,4.56,multi,1.0
@@ -289,24 +348,19 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 16553990,De Pijp - Rivierenbuurt,private_room,hotel,173.0,146,4.64,4.74,4.73,solo,1.0
 16583033,De Baarsjes - Oud-West,private_room,house,96.0,508,4.72,4.54,4.9,multi,1.0
 16705542,Noord-Oost,private_room,other,72.0,110,4.4,4.27,4.45,professional,0.87
-16775644,Oud-Oost,entire_home,apartment,,27,4.63,4.7,4.81,solo,
+16877004,Oud-Oost,entire_home,apartment,,60,4.78,4.83,4.85,solo,
+16938317,Centrum-Oost,private_room,apartment,101.0,267,4.78,4.76,4.92,multi,1.0
 17150944,Centrum-Oost,private_room,hotel,216.0,396,4.64,4.71,4.76,solo,1.0
-17247524,Oud-Oost,entire_home,apartment,,21,4.62,4.67,4.86,solo,
-17365362,Noord-Oost,private_room,hotel,95.0,26,4.69,4.85,4.83,professional,0.87
-17435636,Centrum-West,entire_home,apartment,,22,4.68,4.5,4.57,solo,
-17457335,De Baarsjes - Oud-West,entire_home,apartment,,27,4.56,4.19,4.85,solo,
 17525219,Centrum-West,private_room,hotel,195.0,206,4.65,4.8,4.65,solo,1.0
 17859181,Oostelijk Havengebied - Indische Buurt,entire_home,unique,295.0,40,4.45,3.58,4.85,solo,1.0
-18115831,De Baarsjes - Oud-West,entire_home,apartment,,25,4.72,4.8,4.83,solo,
-18135326,Oud-Oost,entire_home,unique,252.0,24,4.71,4.54,5.0,solo,1.0
+18017923,De Baarsjes - Oud-West,entire_home,apartment,,32,4.78,4.44,4.97,solo,
 18145166,IJburg - Zeeburgereiland,entire_home,apartment,350.0,45,4.73,4.56,4.84,solo,1.0
+18172462,IJburg - Zeeburgereiland,private_room,house,101.0,251,4.75,4.86,4.89,solo,1.0
 18193212,Gaasperdam - Driemond,entire_home,apartment,113.0,44,4.66,4.36,4.95,solo,
 18233200,IJburg - Zeeburgereiland,entire_home,unique,247.0,198,4.72,4.68,4.86,solo,1.0
+18237895,De Baarsjes - Oud-West,entire_home,apartment,,37,4.76,4.7,4.92,multi,1.0
 18252871,Centrum-Oost,private_room,house,333.0,224,4.74,4.8,4.8,multi,1.0
-18266190,Oud-Noord,entire_home,apartment,176.0,29,4.69,4.52,4.82,solo,1.0
 18298091,Zuid,entire_home,apartment,104.0,516,4.65,4.61,4.86,multi,1.0
-18405137,De Pijp - Rivierenbuurt,entire_home,apartment,199.0,21,4.71,4.81,5.0,solo,0.8
-18496678,De Baarsjes - Oud-West,entire_home,apartment,,25,4.72,4.8,5.0,multi,
 18514892,Westerpark,entire_home,apartment,342.0,43,4.6,4.67,4.88,solo,
 18557924,De Baarsjes - Oud-West,entire_home,apartment,190.0,204,4.61,4.78,4.77,multi,1.0
 18606303,Centrum-Oost,entire_home,unique,237.0,246,4.68,4.67,4.83,solo,1.0
@@ -315,31 +369,30 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 18666266,De Pijp - Rivierenbuurt,entire_home,apartment,,49,4.65,4.47,4.92,multi,
 18733380,De Baarsjes - Oud-West,entire_home,apartment,,33,4.61,4.03,4.91,solo,
 18798860,Slotervaart,private_room,apartment,,108,4.62,4.71,4.73,solo,1.0
-18800259,De Baarsjes - Oud-West,entire_home,apartment,315.0,24,4.71,4.67,4.83,solo,1.0
-18816109,De Pijp - Rivierenbuurt,private_room,apartment,,24,4.58,4.21,5.0,multi,
-18817028,IJburg - Zeeburgereiland,entire_home,house,,29,4.66,4.32,4.81,solo,1.0
 18871870,Geuzenveld - Slotermeer,private_room,hotel,78.0,171,4.45,4.58,4.82,multi,1.0
 18882208,Centrum-West,private_room,other,,156,4.58,4.68,4.78,multi,1.0
 18882385,Centrum-West,private_room,other,1431.0,235,4.68,4.71,4.85,multi,1.0
 18883450,De Baarsjes - Oud-West,entire_home,apartment,189.0,32,4.63,4.56,4.84,solo,1.0
 18886577,Geuzenveld - Slotermeer,private_room,hotel,115.0,134,4.51,4.53,4.77,multi,1.0
 18906944,Centrum-West,private_room,apartment,124.0,47,4.55,4.55,4.77,multi,1.0
-18939163,De Pijp - Rivierenbuurt,entire_home,apartment,,29,4.69,4.38,4.9,solo,
 18972421,De Baarsjes - Oud-West,entire_home,apartment,,41,4.73,4.78,4.93,solo,
 19061374,Watergraafsmeer,entire_home,house,,43,4.65,4.53,4.72,solo,
 19093068,Centrum-Oost,private_room,hotel,125.0,363,4.54,4.52,4.7,professional,0.81
 19132615,Centrum-West,entire_home,apartment,,50,4.52,4.7,4.66,solo,0.88
 19200364,Centrum-West,entire_home,apartment,180.0,55,4.69,4.65,4.93,solo,1.0
+19237281,Centrum-Oost,entire_home,apartment,,60,4.75,4.78,4.93,solo,
 19444004,Noord-West,entire_home,house,,42,4.67,4.93,4.8,solo,1.0
-19630955,Noord-West,entire_home,house,,21,4.52,4.19,4.81,solo,0.86
+19528180,Centrum-West,entire_home,apartment,951.0,35,4.77,4.51,4.8,solo,1.0
+19715150,Centrum-Oost,entire_home,apartment,228.0,426,4.79,4.72,4.94,multi,1.0
 19803300,Centrum-Oost,entire_home,house,280.0,400,4.71,4.71,4.67,solo,0.94
 19818979,Oud-Noord,entire_home,apartment,,37,4.57,4.16,4.86,solo,
 19820314,Bos en Lommer,entire_home,apartment,199.0,282,4.54,4.45,4.71,solo,1.0
 19845913,Centrum-Oost,entire_home,apartment,,34,4.74,4.76,4.85,solo,
 19854424,De Pijp - Rivierenbuurt,entire_home,apartment,197.0,106,4.21,3.92,4.2,solo,1.0
 19875455,Centrum-West,entire_home,apartment,171.0,35,4.66,4.74,4.8,multi,1.0
-19942146,De Pijp - Rivierenbuurt,entire_home,apartment,450.0,26,4.58,4.81,5.0,solo,1.0
+19939329,De Pijp - Rivierenbuurt,entire_home,apartment,,41,4.76,4.66,4.95,solo,1.0
 19948942,Osdorp,entire_home,house,,55,4.65,4.38,4.91,solo,1.0
+20063721,Centrum-Oost,entire_home,apartment,,328,4.76,4.8,4.68,solo,
 20071782,Westerpark,private_room,other,167.0,388,4.73,4.72,4.84,solo,1.0
 20113545,Centrum-Oost,entire_home,apartment,260.0,229,4.64,4.81,4.59,professional,1.0
 20178478,Centrum-West,private_room,hotel,164.0,384,4.73,4.84,4.77,solo,0.92
@@ -347,8 +400,14 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 20226379,De Baarsjes - Oud-West,entire_home,apartment,473.0,45,4.73,4.67,4.73,solo,1.0
 20405959,Centrum-West,private_room,apartment,114.0,461,4.54,4.64,4.49,multi,0.83
 20433445,De Baarsjes - Oud-West,entire_home,apartment,600.0,44,4.68,4.86,4.95,solo,
+20433472,Centrum-West,private_room,hotel,114.0,398,4.79,4.81,4.93,multi,1.0
+20447839,Centrum-Oost,entire_home,house,233.0,101,4.75,4.81,4.88,multi,0.94
+20465459,Noord-West,entire_home,apartment,153.0,85,4.78,4.62,4.93,professional,1.0
 20498694,De Baarsjes - Oud-West,private_room,apartment,94.0,266,4.64,4.29,4.92,solo,1.0
 20549160,Noord-West,entire_home,apartment,164.0,97,4.74,4.6,4.93,professional,1.0
+20621604,Centrum-Oost,private_room,hotel,225.0,306,4.78,4.86,4.9,solo,0.8
+20756989,Noord-West,entire_home,apartment,143.0,92,4.77,4.71,4.9,professional,1.0
+20791949,Centrum-West,private_room,hotel,99.0,292,4.75,4.84,4.93,multi,1.0
 20792976,Gaasperdam - Driemond,private_room,apartment,59.0,198,4.43,4.32,4.81,multi,1.0
 20793220,Gaasperdam - Driemond,private_room,apartment,68.0,219,4.47,4.51,4.78,multi,1.0
 21009564,Centrum-Oost,private_room,apartment,163.0,383,4.74,4.62,4.88,multi,1.0
@@ -358,57 +417,74 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 21319098,Centrum-Oost,entire_home,apartment,150.0,40,4.7,4.63,4.7,solo,0.8
 21324372,De Baarsjes - Oud-West,private_room,apartment,199.0,108,4.47,4.66,4.68,multi,1.0
 21330883,Centrum-Oost,entire_home,house,125.0,50,4.52,4.62,4.84,multi,0.94
-21345715,Slotervaart,entire_home,apartment,,24,4.54,4.71,4.83,solo,
+21405561,Watergraafsmeer,private_room,other,153.0,246,4.78,4.59,4.87,solo,1.0
 21486402,De Baarsjes - Oud-West,private_room,house,113.0,702,4.73,4.79,4.92,multi,1.0
 21511394,Watergraafsmeer,private_room,house,83.0,323,4.6,4.53,4.77,solo,0.9
 21534270,Centrum-Oost,private_room,apartment,126.0,134,4.61,4.51,4.77,solo,1.0
 21747510,Centrum-Oost,entire_home,apartment,432.0,31,4.71,4.61,4.77,solo,
 21761307,Westerpark,entire_home,apartment,,52,4.63,4.63,4.73,solo,
+21779417,Oud-Oost,entire_home,apartment,,48,4.75,4.4,4.9,multi,0.91
 21801282,De Pijp - Rivierenbuurt,entire_home,apartment,,55,4.71,4.64,4.82,solo,
 21931660,Westerpark,private_room,apartment,112.0,142,4.49,4.63,4.61,multi,1.0
 21943080,De Baarsjes - Oud-West,entire_home,apartment,237.0,596,4.53,4.62,4.61,multi,1.0
 21978969,Bos en Lommer,private_room,apartment,77.0,568,4.73,4.67,4.88,multi,1.0
-21980258,Zuid,entire_home,apartment,243.0,28,4.57,4.36,4.46,solo,0.0
-22120577,Oud-Noord,entire_home,apartment,,21,4.57,4.24,4.86,solo,
+21979569,Bos en Lommer,private_room,apartment,77.0,549,4.78,4.7,4.9,multi,1.0
 22453701,Oud-Oost,entire_home,apartment,201.0,49,4.71,4.18,4.92,solo,0.8
 22559057,Watergraafsmeer,private_room,apartment,,193,4.71,4.67,4.88,solo,
+22563427,Centrum-West,entire_home,apartment,199.0,385,4.75,4.86,4.75,multi,0.88
+22566099,Centrum-West,entire_home,apartment,230.0,410,4.76,4.82,4.79,multi,0.88
+22643412,Centrum-Oost,entire_home,house,262.0,280,4.75,4.75,4.92,solo,0.94
+22781669,Zuid,private_room,unique,100.0,119,4.76,4.84,4.81,solo,1.0
 22807669,Zuid,private_room,house,134.0,367,4.7,4.47,4.84,solo,1.0
-22822451,De Baarsjes - Oud-West,entire_home,apartment,,23,4.7,4.57,4.87,solo,
+22861154,De Pijp - Rivierenbuurt,entire_home,apartment,,39,4.79,4.64,4.72,solo,1.0
 22872252,Centrum-West,entire_home,apartment,148.0,78,4.42,4.49,4.64,solo,0.94
 22920222,Zuid,private_room,apartment,106.0,149,4.7,4.84,4.9,solo,
 22975936,Centrum-West,private_room,apartment,124.0,477,4.73,4.84,4.77,solo,1.0
+23020332,Noord-Oost,private_room,house,86.0,267,4.76,4.85,4.9,solo,1.0
 23100840,Noord-West,entire_home,house,111.0,30,4.7,4.5,4.9,solo,1.0
-23105158,De Baarsjes - Oud-West,entire_home,house,420.0,25,4.4,4.36,4.88,solo,1.0
-23306061,Bos en Lommer,entire_home,apartment,200.0,25,4.72,4.72,4.96,solo,1.0
-24073841,Oud-Oost,entire_home,apartment,,21,4.5,4.24,5.0,solo,
+23332938,Centrum-Oost,private_room,house,73.0,572,4.75,4.8,4.95,multi,1.0
+23729261,De Pijp - Rivierenbuurt,private_room,apartment,,60,4.78,4.93,4.97,solo,
+23963946,De Pijp - Rivierenbuurt,entire_home,house,254.0,290,4.78,4.76,4.88,multi,1.0
+24217698,Centrum-West,entire_home,apartment,282.0,323,4.76,4.84,4.87,solo,1.0
 24428291,De Baarsjes - Oud-West,private_room,apartment,180.0,112,4.61,4.83,4.79,multi,1.0
+24556511,Centrum-West,private_room,apartment,288.0,222,4.75,4.67,4.86,solo,0.88
 24567873,Bos en Lommer,entire_home,apartment,,55,4.73,4.6,4.91,solo,
-24652004,Centrum-West,entire_home,apartment,,27,4.41,4.15,4.78,solo,
-25051800,Bijlmer-Centrum,entire_home,house,,21,4.71,4.52,4.81,solo,
 25179644,Centrum-Oost,private_room,hotel,120.0,113,4.69,4.62,4.88,multi,1.0
 25310162,Centrum-West,private_room,apartment,129.0,376,4.6,4.59,4.69,multi,
 25310429,Centrum-West,private_room,apartment,122.0,444,4.74,4.7,4.75,multi,
-25698586,Oud-Noord,entire_home,house,815.0,22,4.55,4.45,4.5,solo,0.9
+25557506,Oostelijk Havengebied - Indische Buurt,entire_home,apartment,216.0,39,4.77,4.64,4.95,solo,1.0
+25765951,Westerpark,private_room,apartment,,133,4.79,4.86,4.83,multi,1.0
+25775511,Centrum-West,private_room,apartment,,293,4.78,4.79,4.92,solo,1.0
+25818312,Centrum-Oost,entire_home,house,343.0,56,4.77,4.59,4.89,solo,1.0
 26071272,Zuid,private_room,apartment,72.0,32,4.53,4.38,4.88,professional,1.0
-26275584,Westerpark,entire_home,apartment,,22,4.73,4.77,4.91,solo,1.0
-26950990,Bos en Lommer,entire_home,apartment,,22,4.73,4.81,4.82,solo,
+26139659,Westerpark,entire_home,apartment,,33,4.79,4.85,4.91,solo,1.0
+26519083,Centrum-West,private_room,apartment,294.0,185,4.76,4.78,4.77,multi,
 27081619,Centrum-West,private_room,apartment,299.0,103,4.66,4.82,4.7,multi,
+27240740,Zuid,private_room,apartment,161.0,99,4.78,4.84,4.86,professional,1.0
+27466356,Noord-West,private_room,house,129.0,242,4.76,4.84,4.85,solo,1.0
+27595911,Centrum-West,entire_home,apartment,251.0,50,4.76,4.88,4.68,solo,1.0
 27711181,Centrum-Oost,hotel_room,apartment,232.0,30,4.67,4.8,4.83,professional,1.0
+27711659,Westerpark,hotel_room,apartment,192.0,102,4.76,4.88,4.89,professional,1.0
 27743041,Noord-West,entire_home,other,210.0,32,4.59,4.75,4.72,solo,0.9
 27745560,Westerpark,entire_home,apartment,,42,4.31,3.64,4.69,solo,1.0
 27793181,Centrum-West,private_room,apartment,113.0,394,4.5,4.48,4.54,multi,1.0
 27803193,Centrum-West,private_room,hotel,111.0,404,4.58,4.56,4.55,multi,1.0
 27809371,Centrum-West,private_room,apartment,220.0,91,4.55,4.64,4.35,multi,1.0
+27850551,Centrum-Oost,private_room,apartment,406.0,40,4.75,4.45,4.8,multi,1.0
+27913560,Zuid,entire_home,apartment,,34,4.76,4.56,5.0,solo,0.9
 27916775,Bos en Lommer,private_room,apartment,79.0,89,4.71,4.61,4.82,multi,1.0
-28042923,Westerpark,entire_home,unique,359.0,21,4.71,4.38,4.76,solo,1.0
-28219242,Oud-Noord,entire_home,apartment,,24,4.71,4.79,4.96,solo,
+27921739,De Baarsjes - Oud-West,private_room,apartment,190.0,37,4.76,4.89,4.86,professional,1.0
+28005499,Westerpark,private_room,apartment,,165,4.77,4.82,4.91,multi,1.0
+28238045,Centrum-Oost,private_room,apartment,226.0,84,4.77,4.82,4.9,solo,1.0
 28239821,De Baarsjes - Oud-West,entire_home,apartment,,32,4.56,4.38,4.88,solo,
 28270449,De Pijp - Rivierenbuurt,entire_home,apartment,,34,4.56,4.53,4.88,multi,
 28298830,Oud-Noord,entire_home,apartment,169.0,109,4.69,4.77,4.92,professional,1.0
 28544205,Centrum-West,private_room,unique,241.0,173,4.69,4.62,4.72,solo,1.0
+28706467,Centrum-Oost,entire_home,apartment,,30,4.77,4.6,5.0,solo,
 28797705,Centrum-West,private_room,apartment,107.0,335,4.57,4.6,4.64,multi,1.0
 28798431,Centrum-West,private_room,apartment,111.0,346,4.62,4.59,4.66,multi,1.0
 28838040,Slotervaart,private_room,hotel,135.0,161,4.66,4.58,4.87,solo,1.0
+28924243,Geuzenveld - Slotermeer,entire_home,other,,90,4.79,4.81,4.99,solo,
 28946381,Centrum-Oost,private_room,house,125.0,604,4.72,4.77,4.92,solo,1.0
 29258934,IJburg - Zeeburgereiland,private_room,house,63.0,138,4.7,4.88,4.86,multi,1.0
 30026596,Oostelijk Havengebied - Indische Buurt,entire_home,apartment,122.0,48,4.63,4.0,4.9,solo,1.0
@@ -416,27 +492,27 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 30244717,De Aker - Nieuw Sloten,entire_home,house,84.0,423,4.71,4.83,4.84,multi,0.97
 30250279,Centrum-Oost,private_room,apartment,165.0,278,4.49,4.51,4.8,solo,1.0
 30261748,Oud-Oost,private_room,apartment,316.0,200,4.69,4.76,4.93,solo,1.0
+30264925,Centrum-West,private_room,apartment,131.0,436,4.76,4.72,4.83,multi,1.0
 30265278,Centrum-West,private_room,apartment,158.0,362,4.73,4.72,4.8,multi,1.0
 30549659,De Baarsjes - Oud-West,entire_home,apartment,,40,4.73,4.68,4.9,solo,
+30723226,Centrum-West,private_room,house,90.0,173,4.76,4.58,4.75,solo,0.9
 30770374,Centrum-West,private_room,apartment,213.0,455,4.44,4.47,4.42,multi,1.0
 30808063,Centrum-Oost,private_room,apartment,137.0,121,4.47,4.35,4.59,solo,0.92
 30823357,Centrum-Oost,private_room,apartment,137.0,360,4.74,4.72,4.96,multi,1.0
+31064558,Centrum-West,private_room,apartment,114.0,409,4.77,4.79,4.94,solo,1.0
 31139590,Centrum-West,private_room,apartment,101.0,391,4.61,4.69,4.51,multi,0.98
 31397938,De Baarsjes - Oud-West,private_room,hotel,268.0,85,4.66,4.76,4.67,solo,1.0
-31536003,De Baarsjes - Oud-West,entire_home,apartment,270.0,21,4.62,4.0,5.0,solo,
 31561365,Oostelijk Havengebied - Indische Buurt,entire_home,house,193.0,121,4.61,4.5,4.81,solo,0.9
 31870080,Centrum-West,private_room,hotel,325.0,359,4.59,4.5,4.7,solo,0.92
-31944927,Centrum-West,hotel_room,hotel,69.0,22,4.55,4.55,4.73,professional,0.5
+31871461,Centrum-West,private_room,apartment,131.0,172,4.79,4.77,4.96,solo,1.0
 31945032,Centrum-West,hotel_room,hotel,66.0,32,4.56,4.41,4.75,professional,0.5
 31945078,Zuid,hotel_room,hotel,46.0,37,4.43,4.3,4.78,professional,0.5
 31945182,Centrum-West,private_room,hotel,,91,4.25,4.01,4.67,professional,1.0
 31945260,Centrum-West,shared_room,hotel,60.0,170,4.54,4.41,4.81,professional,1.0
-31945342,Centrum-West,private_room,hotel,,26,4.15,4.23,4.65,professional,1.0
 31979911,De Aker - Nieuw Sloten,private_room,hotel,357.0,63,4.71,4.54,4.76,solo,1.0
-32021626,De Baarsjes - Oud-West,entire_home,apartment,,22,4.68,4.64,4.82,solo,
+32253177,Westerpark,private_room,apartment,,73,4.79,4.9,4.95,multi,
 32279527,Centrum-Oost,entire_home,apartment,,38,4.5,4.21,4.79,solo,1.0
 32337426,Centrum-West,entire_home,apartment,219.0,74,4.65,4.73,4.66,multi,0.96
-32415362,Centrum-West,entire_home,apartment,,25,4.72,4.72,4.88,solo,1.0
 32485826,De Pijp - Rivierenbuurt,private_room,apartment,100.0,43,4.65,4.77,4.67,multi,1.0
 32559296,Oud-Noord,private_room,apartment,177.0,54,4.69,4.74,4.67,professional,1.0
 32624963,Oud-Noord,hotel_room,hotel,236.0,87,4.62,4.55,4.71,multi,
@@ -444,102 +520,122 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 32691009,De Baarsjes - Oud-West,entire_home,apartment,,35,4.63,4.29,4.77,solo,1.0
 33005148,De Baarsjes - Oud-West,private_room,apartment,,83,4.58,4.57,4.8,solo,
 33160030,Buitenveldert - Zuidas,private_room,unique,,71,4.56,4.59,4.65,solo,
-33416292,De Baarsjes - Oud-West,private_room,hotel,,26,4.15,4.31,4.08,solo,
 33426492,Centrum-Oost,entire_home,house,321.0,68,4.74,4.93,4.88,professional,0.95
 33439715,De Baarsjes - Oud-West,hotel_room,hotel,288.0,189,4.69,4.75,4.8,professional,1.0
 33448591,Centrum-Oost,private_room,apartment,168.0,264,4.5,4.46,4.79,solo,1.0
-33713934,Geuzenveld - Slotermeer,entire_home,house,,29,4.72,4.79,5.0,solo,1.0
 33734417,Bijlmer-Centrum,private_room,house,153.0,195,4.69,4.85,4.92,solo,1.0
 33865629,Centrum-Oost,private_room,apartment,68.0,490,4.49,4.61,4.61,professional,0.99
+33875782,Noord-West,entire_home,house,,41,4.76,4.51,4.93,solo,
 33980766,De Baarsjes - Oud-West,private_room,hotel,257.0,216,4.63,4.73,4.71,professional,1.0
 34032786,De Baarsjes - Oud-West,private_room,hotel,,40,4.73,4.83,4.85,professional,1.0
 34108976,De Baarsjes - Oud-West,private_room,hotel,299.0,114,4.53,4.55,4.66,professional,1.0
-34188854,De Pijp - Rivierenbuurt,private_room,apartment,,25,4.72,4.44,4.88,solo,
+34174819,Oud-Oost,private_room,apartment,57.0,211,4.79,4.78,4.82,multi,1.0
 34312839,De Aker - Nieuw Sloten,private_room,house,107.0,46,4.72,4.87,4.83,solo,0.9
-34321791,Oostelijk Havengebied - Indische Buurt,entire_home,apartment,182.0,25,4.56,4.44,4.88,solo,1.0
 34386174,Centrum-West,private_room,apartment,178.0,308,4.7,4.68,4.72,solo,0.83
 34408771,Watergraafsmeer,entire_home,house,,86,4.74,4.79,4.87,multi,0.97
-35118660,IJburg - Zeeburgereiland,entire_home,house,364.0,22,4.73,4.68,4.86,solo,1.0
+34551064,De Aker - Nieuw Sloten,private_room,other,114.0,180,4.76,4.78,4.78,solo,1.0
+35104980,Centrum-West,entire_home,apartment,434.0,42,4.79,4.95,4.93,multi,
+35338083,Oud-Oost,entire_home,apartment,,30,4.77,4.8,4.97,solo,1.0
 35394324,Oud-Oost,hotel_room,hotel,291.0,275,4.68,4.77,4.58,professional,
 35610949,De Baarsjes - Oud-West,entire_home,apartment,197.0,32,4.66,4.59,4.84,solo,1.0
 36338125,De Baarsjes - Oud-West,entire_home,apartment,351.0,85,4.55,4.6,4.69,professional,0.79
+36342920,Centrum-West,entire_home,house,434.0,63,4.76,4.71,4.87,professional,0.97
+36513166,Centrum-West,entire_home,apartment,327.0,273,4.78,4.86,4.86,multi,0.92
+36546346,Osdorp,entire_home,apartment,,38,4.76,4.79,4.79,solo,
 36586486,De Baarsjes - Oud-West,entire_home,apartment,351.0,83,4.52,4.67,4.65,professional,0.79
 36711377,Centrum-West,entire_home,apartment,,30,4.53,4.3,4.77,solo,1.0
 36732140,Oud-Oost,private_room,apartment,116.0,157,4.72,4.66,4.77,multi,0.96
-36759213,Westerpark,entire_home,apartment,,21,4.71,4.52,4.95,solo,
 36824667,De Baarsjes - Oud-West,entire_home,apartment,351.0,77,4.64,4.55,4.69,professional,0.79
 36829748,De Baarsjes - Oud-West,entire_home,apartment,351.0,65,4.58,4.6,4.72,professional,0.79
-36835036,Centrum-West,private_room,house,,25,4.68,4.76,4.64,solo,
+36863216,Oud-Oost,hotel_room,hotel,232.0,37,4.76,4.57,4.57,professional,
+37343840,IJburg - Zeeburgereiland,private_room,house,198.0,66,4.76,4.8,4.82,multi,1.0
 37344101,De Baarsjes - Oud-West,hotel_room,hotel,95.0,123,4.67,4.72,4.97,multi,1.0
 37493556,De Baarsjes - Oud-West,hotel_room,hotel,138.0,138,4.69,4.63,4.94,multi,1.0
 38082061,Watergraafsmeer,private_room,hotel,164.0,132,4.7,4.68,4.91,solo,1.0
 38422857,Centrum-Oost,entire_home,unique,178.0,68,4.69,4.72,4.9,solo,1.0
 38425685,Westerpark,private_room,house,207.0,183,4.69,4.67,4.72,multi,1.0
 38530763,Centrum-West,entire_home,apartment,250.0,46,4.65,4.35,4.63,solo,1.0
+38632941,Osdorp,private_room,apartment,,50,4.76,4.76,4.98,multi,
 38874720,IJburg - Zeeburgereiland,private_room,house,76.0,210,4.7,4.87,4.87,multi,1.0
 38887993,Westerpark,private_room,apartment,222.0,77,4.62,4.51,4.68,multi,1.0
 39028077,Oud-Oost,private_room,house,159.0,388,4.61,4.52,4.84,solo,1.0
 39085747,Geuzenveld - Slotermeer,private_room,apartment,84.0,199,4.68,4.81,4.8,solo,1.0
+39168555,De Baarsjes - Oud-West,entire_home,apartment,154.0,267,4.77,4.7,4.85,solo,1.0
 39194258,Westerpark,entire_home,apartment,,32,4.69,4.81,4.97,solo,0.9
+39361288,Centrum-Oost,entire_home,apartment,308.0,257,4.77,4.79,4.91,solo,1.0
 39401306,Westerpark,private_room,apartment,118.0,100,4.51,4.58,4.58,multi,1.0
 39501874,Centrum-West,entire_home,apartment,400.0,55,4.55,4.5,4.72,solo,1.0
-39830817,De Baarsjes - Oud-West,entire_home,apartment,196.0,24,4.67,4.17,4.88,solo,1.0
-39894293,Oostelijk Havengebied - Indische Buurt,entire_home,apartment,250.0,25,4.52,4.36,4.76,solo,1.0
 40225175,Centrum-West,private_room,house,104.0,136,4.72,4.5,4.85,solo,1.0
 40368512,Centrum-West,entire_home,apartment,484.0,47,4.74,4.74,4.66,multi,0.8
+40417258,Zuid,private_room,apartment,103.0,253,4.79,4.54,4.87,multi,1.0
+40427718,Centrum-West,private_room,hotel,,193,4.75,4.68,4.84,multi,1.0
+40428175,Centrum-West,private_room,hotel,,92,4.79,4.89,4.85,multi,1.0
 40524374,Noord-Oost,private_room,hotel,202.0,89,4.73,4.49,4.96,multi,1.0
 40626325,Centrum-West,entire_home,apartment,523.0,49,4.69,4.61,4.76,multi,0.8
 40815112,Centrum-West,entire_home,other,161.0,276,4.73,4.71,4.92,solo,1.0
-40985735,De Baarsjes - Oud-West,entire_home,apartment,,24,4.67,4.5,4.79,solo,0.9
+40833312,IJburg - Zeeburgereiland,private_room,unique,116.0,144,4.78,4.53,4.87,multi,1.0
+41258369,Bijlmer-Centrum,private_room,apartment,234.0,165,4.75,4.79,4.91,professional,1.0
 41365349,Bos en Lommer,entire_home,apartment,,43,4.74,4.58,4.81,solo,1.0
-41466832,IJburg - Zeeburgereiland,entire_home,house,135.0,27,4.52,4.19,4.74,solo,1.0
 41522652,Centrum-West,private_room,hotel,204.0,86,4.69,4.95,4.57,multi,0.67
 41603312,Watergraafsmeer,entire_home,apartment,143.0,61,4.61,4.72,4.7,professional,1.0
 41603564,Westerpark,entire_home,apartment,223.0,95,4.71,4.84,4.83,professional,1.0
 41688975,Buitenveldert - Zuidas,entire_home,apartment,82.0,169,4.63,4.71,4.63,solo,1.0
+41783364,Noord-Oost,entire_home,apartment,143.0,59,4.76,4.83,4.85,professional,1.0
 42109978,De Pijp - Rivierenbuurt,private_room,apartment,185.0,306,4.71,4.69,4.9,solo,1.0
 42431101,Oud-Noord,private_room,apartment,80.0,166,4.65,4.46,4.92,solo,1.0
 42446222,Centrum-Oost,entire_home,apartment,623.0,128,4.74,4.85,4.81,professional,1.0
 42470025,Zuid,private_room,apartment,72.0,56,4.43,4.05,4.88,professional,1.0
-43043107,Geuzenveld - Slotermeer,private_room,hotel,115.0,23,4.3,4.35,4.04,professional,0.77
+42834134,Centrum-Oost,private_room,apartment,,221,4.78,4.64,4.89,multi,1.0
+42958645,Westerpark,private_room,house,162.0,54,4.78,4.69,4.74,solo,1.0
 43046236,Geuzenveld - Slotermeer,private_room,hotel,175.0,48,4.33,4.48,4.52,professional,0.77
 43049332,Geuzenveld - Slotermeer,private_room,hotel,,163,4.34,4.13,4.52,professional,0.77
 43049949,Centrum-Oost,private_room,house,248.0,107,4.68,4.89,4.64,multi,1.0
+43233137,Bijlmer-Centrum,private_room,hotel,234.0,196,4.75,4.69,4.92,professional,1.0
 43574919,De Pijp - Rivierenbuurt,private_room,hotel,,82,4.73,4.71,4.8,multi,1.0
 43672517,Centrum-West,private_room,apartment,153.0,152,4.36,4.42,4.47,solo,0.67
 43686728,De Baarsjes - Oud-West,entire_home,apartment,,30,4.63,4.57,4.83,solo,0.9
 43707658,Westerpark,private_room,hotel,444.0,66,4.74,4.68,4.76,professional,1.0
+43709075,Westerpark,private_room,hotel,243.0,57,4.77,4.82,4.74,professional,1.0
+43719104,Centrum-Oost,private_room,unique,180.0,337,4.79,4.79,4.8,multi,1.0
 43920891,Oud-Noord,entire_home,house,260.0,106,4.5,4.68,4.79,multi,1.0
+43922419,Oud-Noord,private_room,hotel,275.0,36,4.78,4.69,4.92,multi,1.0
+43933080,Centrum-West,entire_home,apartment,371.0,358,4.78,4.78,4.87,solo,1.0
 44586588,Centrum-West,private_room,apartment,154.0,69,4.51,4.62,4.78,solo,1.0
 44695126,Centrum-West,private_room,apartment,,97,4.71,4.73,4.88,multi,1.0
-44947670,Westerpark,private_room,hotel,271.0,25,4.64,4.76,4.68,professional,1.0
+45045046,De Baarsjes - Oud-West,private_room,hotel,193.0,3187,4.76,4.77,4.76,multi,0.95
 45047727,De Baarsjes - Oud-West,private_room,hotel,205.0,202,4.63,4.7,4.64,multi,0.95
+45051672,Zuid,private_room,hotel,323.0,519,4.76,4.8,4.81,multi,0.9
+45052496,Centrum-West,private_room,apartment,168.0,202,4.79,4.75,4.77,solo,0.85
 45072261,Zuid,hotel_room,hotel,43.0,34,4.74,4.62,4.94,professional,0.5
-45263150,De Pijp - Rivierenbuurt,entire_home,apartment,,26,4.65,4.46,4.88,multi,
-45311452,Westerpark,entire_home,apartment,,26,4.54,4.38,4.92,solo,
+45110826,Centrum-Oost,private_room,hotel,165.0,327,4.77,4.79,4.95,professional,1.0
+45372746,De Baarsjes - Oud-West,private_room,hotel,203.0,325,4.77,4.83,4.82,multi,0.95
+45429116,Zuid,private_room,hotel,247.0,504,4.77,4.76,4.76,multi,0.95
 45463326,Centrum-Oost,private_room,hotel,120.0,383,4.56,4.57,4.83,professional,1.0
 45464344,Centrum-Oost,private_room,hotel,119.0,641,4.51,4.46,4.81,professional,1.0
 45464448,Centrum-Oost,private_room,hotel,,477,4.38,4.34,4.69,professional,1.0
+45539425,Oud-Noord,shared_room,hotel,101.0,1026,4.77,4.73,4.86,professional,0.99
 45539466,Oud-Noord,private_room,hotel,166.0,551,4.72,4.86,4.82,professional,0.99
 45539504,Oud-Noord,shared_room,hotel,128.0,355,4.74,4.68,4.79,professional,0.99
-45539609,Oud-Noord,private_room,hotel,,28,4.5,4.86,4.68,professional,0.99
 45539684,Oud-Noord,private_room,hotel,176.0,684,4.73,4.85,4.83,professional,0.99
 45539834,Oud-Noord,private_room,hotel,,188,4.65,4.76,4.77,professional,0.99
 45539870,Oud-Noord,private_room,hotel,287.0,191,4.73,4.8,4.84,professional,0.99
+45539926,Oud-Noord,private_room,hotel,260.0,81,4.78,4.74,4.79,professional,0.99
 45615057,De Baarsjes - Oud-West,private_room,hotel,104.0,105,4.37,4.28,4.56,professional,0.96
 45615193,De Baarsjes - Oud-West,private_room,hotel,101.0,65,4.15,4.15,4.45,professional,0.96
 45615277,De Baarsjes - Oud-West,private_room,hotel,104.0,124,4.46,4.47,4.65,professional,0.96
-45615306,De Baarsjes - Oud-West,private_room,hotel,147.0,24,4.63,4.33,4.5,professional,0.96
+45646002,De Pijp - Rivierenbuurt,private_room,apartment,137.0,206,4.78,4.73,4.86,multi,1.0
 45695711,Centrum-Oost,private_room,hotel,,1080,4.57,4.51,4.79,professional,1.0
 45744936,Centrum-Oost,private_room,hotel,,219,4.4,4.35,4.73,professional,1.0
-45841645,Centrum-West,private_room,hotel,,21,4.71,4.9,4.62,multi,1.0
+45859773,Noord-West,entire_home,house,,50,4.78,4.42,4.92,solo,1.0
 46346561,Centrum-West,private_room,apartment,76.0,42,4.31,4.62,4.69,solo,1.0
 46348037,Centrum-West,private_room,apartment,84.0,62,4.47,4.47,4.69,multi,1.0
 46348181,Centrum-Oost,private_room,apartment,84.0,85,4.33,4.36,4.61,multi,1.0
 46369075,De Baarsjes - Oud-West,private_room,hotel,199.0,63,4.41,4.44,4.6,professional,0.96
 46369170,De Baarsjes - Oud-West,private_room,hotel,104.0,71,4.3,4.51,4.56,professional,0.96
 46369237,De Baarsjes - Oud-West,private_room,hotel,104.0,84,4.32,4.37,4.57,professional,0.96
+46478635,Bos en Lommer,entire_home,apartment,598.0,77,4.77,4.81,4.69,professional,1.0
 46502181,Centrum-Oost,private_room,house,81.0,392,4.7,4.71,4.82,solo,1.0
+46502425,Zuid,private_room,hotel,220.0,626,4.76,4.78,4.77,multi,0.8
 46521450,De Baarsjes - Oud-West,private_room,hotel,220.0,161,4.64,4.71,4.72,multi,0.8
 46591961,Bos en Lommer,entire_home,apartment,192.0,53,4.57,4.68,4.64,professional,1.0
 46591985,Bos en Lommer,entire_home,apartment,193.0,1065,4.72,4.69,4.75,professional,1.0
@@ -551,12 +647,14 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 46592190,Bos en Lommer,entire_home,apartment,477.0,104,4.57,4.64,4.72,professional,1.0
 46631908,Centrum-West,entire_home,apartment,500.0,42,4.6,4.67,4.64,multi,0.92
 47002742,De Baarsjes - Oud-West,private_room,hotel,175.0,87,4.68,4.7,4.83,professional,1.0
+47017355,Centrum-Oost,entire_home,hotel,308.0,79,4.78,4.81,4.65,professional,0.94
 47573141,Centrum-Oost,entire_home,hotel,285.0,31,4.68,4.77,4.71,professional,0.94
 47811447,Westerpark,entire_home,apartment,360.0,37,4.68,4.41,4.84,solo,0.13
 47917082,Centrum-West,private_room,hotel,257.0,151,4.69,4.72,4.76,multi,1.0
 48220980,Centrum-West,private_room,hotel,,137,4.73,4.7,4.8,multi,1.0
 48305619,Centrum-Oost,private_room,apartment,78.0,464,4.71,4.79,4.81,professional,0.99
 48668901,Watergraafsmeer,private_room,hotel,237.0,176,4.74,4.65,4.91,multi,1.0
+48842950,Centrum-Oost,private_room,other,165.0,91,4.75,4.8,4.85,professional,1.0
 49067570,Centrum-West,private_room,apartment,108.0,93,4.68,4.62,4.65,multi,0.98
 49085366,Centrum-West,private_room,apartment,,34,4.5,4.53,4.65,solo,1.0
 49375834,Centrum-West,private_room,hotel,196.0,266,4.74,4.79,4.89,professional,1.0
@@ -575,143 +673,134 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 49867500,Centrum-West,private_room,apartment,175.0,247,4.64,4.62,4.5,multi,0.95
 49927889,Buitenveldert - Zuidas,private_room,apartment,79.0,156,4.68,4.72,4.77,multi,1.0
 49940021,Oud-Oost,private_room,hotel,144.0,51,4.14,4.2,4.49,professional,0.93
-49940274,Oud-Oost,private_room,hotel,217.0,21,4.38,4.14,4.57,professional,0.93
 50133183,Centrum-Oost,entire_home,apartment,214.0,32,4.25,4.25,4.53,solo,1.0
 50188418,Centrum-West,private_room,hotel,,43,4.37,4.47,4.47,professional,1.0
 50193797,Centrum-West,private_room,hotel,,215,4.48,4.57,4.62,professional,1.0
+50342109,Centrum-West,private_room,apartment,168.0,80,4.75,4.77,4.9,multi,1.0
 50383849,Osdorp,private_room,hotel,132.0,5097,4.68,4.69,4.83,professional,0.99
 50451988,Osdorp,private_room,hotel,128.0,715,4.67,4.73,4.83,professional,0.99
 50452179,Osdorp,private_room,hotel,142.0,1879,4.73,4.72,4.85,professional,0.99
 50452284,Osdorp,private_room,hotel,168.0,459,4.64,4.62,4.85,professional,0.99
 50452369,Osdorp,private_room,hotel,182.0,515,4.65,4.7,4.86,professional,0.99
 50613624,Geuzenveld - Slotermeer,private_room,hotel,282.0,50,4.68,4.62,4.7,professional,1.0
-50739369,Geuzenveld - Slotermeer,private_room,hotel,222.0,22,4.55,4.59,4.86,professional,1.0
 50742990,Geuzenveld - Slotermeer,private_room,hotel,148.0,63,4.73,4.65,4.7,professional,1.0
 50743857,Geuzenveld - Slotermeer,private_room,hotel,,55,4.65,4.56,4.71,professional,1.0
 50829714,Watergraafsmeer,private_room,apartment,98.0,80,4.69,4.54,4.81,multi,0.96
 50838617,IJburg - Zeeburgereiland,entire_home,unique,420.0,88,4.68,4.39,4.72,solo,0.9
 50892592,Centrum-West,private_room,hotel,146.0,33,4.58,4.7,4.76,multi,1.0
+51116938,De Baarsjes - Oud-West,entire_home,apartment,,32,4.78,4.44,4.97,solo,1.0
+51144055,Centrum-West,private_room,apartment,89.0,176,4.77,4.59,4.93,solo,1.0
+51202359,Centrum-West,entire_home,apartment,,38,4.79,4.68,4.95,solo,1.0
 51302114,Gaasperdam - Driemond,private_room,hotel,57.0,304,4.66,4.61,4.83,multi,1.0
 51316529,Watergraafsmeer,private_room,other,,43,4.53,4.56,4.42,solo,
-51427452,Westerpark,entire_home,apartment,100.0,25,4.72,4.68,4.96,solo,1.0
 51477304,De Baarsjes - Oud-West,private_room,hotel,125.0,67,4.63,4.7,4.85,multi,1.0
 51572428,Centrum-West,private_room,house,95.0,69,4.57,4.41,4.7,solo,1.0
 51999409,Centrum-Oost,private_room,hotel,158.0,40,4.73,4.83,4.8,multi,1.0
+52230621,Noord-West,private_room,hotel,130.0,128,4.76,4.79,4.83,multi,1.0
 52231889,Geuzenveld - Slotermeer,entire_home,house,273.0,52,4.6,4.62,4.52,professional,1.0
 52630801,Centrum-West,private_room,hotel,202.0,105,4.74,4.72,4.69,solo,1.0
 52703709,De Baarsjes - Oud-West,private_room,hotel,,312,4.6,4.72,4.47,solo,1.0
-53122889,De Baarsjes - Oud-West,entire_home,apartment,336.0,24,4.71,4.58,4.88,solo,1.0
+52927383,De Baarsjes - Oud-West,private_room,hotel,158.0,35,4.77,4.83,4.77,solo,
 53267102,Centrum-West,private_room,apartment,,91,4.49,4.58,4.51,solo,
 53390946,De Baarsjes - Oud-West,private_room,hotel,299.0,58,4.57,4.72,4.71,professional,0.93
 53391440,De Baarsjes - Oud-West,private_room,hotel,329.0,44,4.52,4.55,4.64,professional,0.93
 53629389,Centrum-West,entire_home,apartment,249.0,195,4.58,4.65,4.73,multi,0.96
 53669920,Centrum-West,entire_home,apartment,235.0,89,4.7,4.71,4.78,solo,1.0
-53825405,Gaasperdam - Driemond,private_room,apartment,,23,4.48,4.35,4.87,multi,1.0
 54043086,Westerpark,private_room,other,157.0,263,4.67,4.59,4.9,solo,1.0
 54071180,Centrum-Oost,private_room,apartment,,129,4.5,4.52,4.82,solo,1.0
+543972624373040318,Oostelijk Havengebied - Indische Buurt,private_room,apartment,254.0,89,4.75,4.75,4.98,solo,1.0
 548208029251203092,Centrum-Oost,private_room,apartment,75.0,327,4.72,4.82,4.88,professional,0.99
 548911617846906974,De Baarsjes - Oud-West,entire_home,apartment,139.0,89,4.74,4.64,4.88,solo,1.0
-567958632398468204,De Baarsjes - Oud-West,entire_home,apartment,290.0,23,4.74,4.61,4.7,solo,1.0
+561997609077687306,Centrum-West,private_room,other,262.0,173,4.79,4.85,4.97,solo,1.0
 575083882544272867,Bijlmer-Centrum,private_room,apartment,91.0,277,4.55,4.48,4.83,multi,1.0
-580866819345737086,Bijlmer-Centrum,private_room,apartment,193.0,26,4.15,4.08,4.58,multi,1.0
 586806999898875589,Centrum-Oost,private_room,hotel,,32,3.78,3.34,4.44,professional,0.95
-590353045193952809,Oud-Noord,entire_home,apartment,158.0,25,3.64,4.32,4.04,professional,1.0
 598364660031591022,Centrum-West,private_room,apartment,198.0,177,4.63,4.51,4.69,solo,0.92
-599095640730147281,Zuid,private_room,apartment,61.0,21,4.52,4.33,4.71,professional,1.0
-600545421995078797,Oud-Noord,entire_home,apartment,213.0,28,4.5,4.46,4.54,professional,1.0
 600546428941251893,Oud-Noord,entire_home,apartment,229.0,46,4.35,4.41,4.46,professional,1.0
 601244188326151661,Centrum-West,private_room,apartment,174.0,234,4.53,4.45,4.64,solo,1.0
 606427189986295048,Centrum-Oost,private_room,apartment,71.0,166,4.43,4.52,4.75,professional,0.99
+609888073187351595,De Aker - Nieuw Sloten,private_room,house,106.0,155,4.77,4.82,4.88,multi,1.0
 612900007919508138,De Aker - Nieuw Sloten,entire_home,other,88.0,216,4.66,4.8,4.88,solo,1.0
 613435024662409206,Noord-West,private_room,hotel,161.0,196,4.74,4.81,4.85,solo,1.0
-616399692682639237,De Pijp - Rivierenbuurt,entire_home,apartment,,25,4.72,4.76,4.88,solo,1.0
+617378058167008775,Centrum-West,entire_home,apartment,473.0,52,4.77,4.79,4.77,multi,1.0
 619283373356472530,Centrum-Oost,private_room,hotel,113.0,421,4.46,4.42,4.8,professional,1.0
-620327003425007313,De Pijp - Rivierenbuurt,private_room,other,,25,4.2,3.36,4.68,solo,
 623038399611231664,Buitenveldert - Zuidas,entire_home,apartment,,190,4.61,4.73,4.81,solo,1.0
 627286755565970242,Watergraafsmeer,entire_home,house,218.0,36,4.72,4.56,4.94,solo,1.0
 640979169940307267,Centrum-West,private_room,apartment,85.0,117,4.51,4.47,4.84,multi,1.0
-647860180117905304,Centrum-West,entire_home,apartment,280.0,22,4.73,4.32,4.82,solo,0.25
 649101816251286416,Centrum-West,private_room,house,105.0,286,4.74,4.7,4.91,multi,1.0
-654302835462723146,De Pijp - Rivierenbuurt,entire_home,apartment,145.0,24,4.42,4.29,4.63,solo,1.0
-654918546695168927,Bos en Lommer,entire_home,apartment,,23,4.61,4.65,4.83,solo,1.0
-656411139345937864,Slotervaart,entire_home,apartment,184.0,29,3.97,4.45,4.45,professional,1.0
 666549873738661916,Slotervaart,entire_home,apartment,180.0,67,4.51,4.33,4.67,professional,1.0
 666550282691690525,Slotervaart,entire_home,apartment,198.0,46,4.5,4.35,4.63,professional,1.0
 670897479972458235,Centrum-Oost,private_room,hotel,120.0,170,4.61,4.74,4.84,solo,1.0
 672305056360128105,Gaasperdam - Driemond,private_room,apartment,81.0,127,4.62,4.6,4.83,solo,1.0
 676837659076152918,De Baarsjes - Oud-West,private_room,hotel,146.0,257,4.73,4.72,4.83,solo,1.0
 680955535725338595,Zuid,private_room,apartment,69.0,54,4.48,4.3,4.89,professional,1.0
-681817217484871420,De Pijp - Rivierenbuurt,entire_home,apartment,150.0,22,4.59,4.55,4.82,professional,1.0
 685965730124625759,Centrum-West,entire_home,apartment,442.0,55,4.56,4.69,4.64,solo,1.0
 691050234985914515,De Baarsjes - Oud-West,entire_home,apartment,233.0,61,4.64,4.59,4.67,multi,0.9
-704211235118017363,Centrum-Oost,entire_home,apartment,380.0,23,4.65,4.61,5.0,solo,1.0
-706326739280301415,De Baarsjes - Oud-West,entire_home,apartment,308.0,21,4.62,4.48,4.95,solo,
+699846140916875590,De Aker - Nieuw Sloten,entire_home,apartment,147.0,142,4.79,4.81,4.92,multi,1.0
 708675306315322716,Centrum-Oost,private_room,hotel,,148,4.58,4.68,4.7,multi,1.0
 710579176695583986,De Baarsjes - Oud-West,private_room,hotel,190.0,103,4.54,4.64,4.78,multi,1.0
 710584638543209293,De Baarsjes - Oud-West,private_room,hotel,177.0,79,4.43,4.53,4.59,multi,1.0
-713667623231781051,De Pijp - Rivierenbuurt,private_room,house,,23,4.61,4.74,4.78,multi,1.0
 727328895429365423,Centrum-Oost,private_room,apartment,77.0,259,4.62,4.67,4.81,professional,0.99
-728775250214113792,Centrum-West,entire_home,apartment,,22,4.64,4.73,5.0,solo,1.0
 731673570142288155,Oud-Oost,entire_home,apartment,136.0,70,4.47,4.56,4.83,solo,1.0
 731804416591123524,De Pijp - Rivierenbuurt,private_room,apartment,,63,3.98,4.27,3.87,professional,0.98
+732499626582941762,Centrum-West,private_room,hotel,,70,4.76,4.81,4.91,multi,1.0
 732514953237134848,De Pijp - Rivierenbuurt,private_room,apartment,228.0,62,4.55,4.84,4.52,professional,0.98
 732517478644304973,De Pijp - Rivierenbuurt,private_room,apartment,255.0,138,4.17,4.43,4.36,professional,0.98
 746060021045144380,Centrum-Oost,shared_room,hotel,73.0,1033,4.72,4.76,4.8,multi,1.0
 748283522963623005,Oud-Oost,entire_home,apartment,285.0,62,4.71,4.65,4.94,solo,1.0
-748286115290082332,Bos en Lommer,entire_home,apartment,400.0,24,4.54,4.13,4.75,solo,1.0
 766046942861626607,Centrum-Oost,private_room,apartment,192.0,165,4.67,4.7,4.84,multi,
 769483610559319327,Centrum-West,private_room,hotel,129.0,111,4.72,4.76,4.9,professional,1.0
 769498578801201685,Centrum-West,private_room,hotel,140.0,94,4.68,4.62,4.9,professional,1.0
 769519444113579670,Centrum-West,private_room,hotel,170.0,150,4.73,4.64,4.92,professional,1.0
-785526014986227582,Centrum-West,entire_home,house,290.0,24,4.71,4.92,4.67,professional,0.97
+771609212449133892,Centrum-West,private_room,hotel,147.0,111,4.79,4.74,4.91,professional,1.0
+771611358606779936,Centrum-West,private_room,hotel,,97,4.79,4.77,4.93,professional,1.0
+771619151759198939,Centrum-West,private_room,hotel,128.0,98,4.76,4.74,4.86,professional,1.0
+792572785212838193,De Pijp - Rivierenbuurt,entire_home,apartment,133.0,67,4.79,4.85,4.82,solo,1.0
 798948243126861330,De Pijp - Rivierenbuurt,private_room,apartment,257.0,60,4.63,4.6,4.8,professional,0.8
-830511046095504210,Zuid,entire_home,house,,24,4.54,4.58,4.71,solo,1.0
+808662624466713575,Centrum-Oost,entire_home,apartment,702.0,60,4.78,4.92,5.0,professional,0.89
 834759608068926634,Zuid,entire_home,apartment,,35,4.66,4.37,4.86,solo,1.0
-835365880069241102,Geuzenveld - Slotermeer,entire_home,apartment,146.0,22,4.59,4.91,4.77,solo,1.0
-835500414516617073,Oud-Noord,private_room,hotel,108.0,21,4.19,3.95,4.14,multi,1.0
 845582865704770270,Centrum-West,private_room,apartment,159.0,164,4.56,4.55,4.83,multi,1.0
 852043442856009458,De Baarsjes - Oud-West,private_room,apartment,,47,4.55,4.38,4.53,solo,
 857912232244819865,Centrum-West,private_room,apartment,159.0,161,4.55,4.53,4.91,multi,1.0
+861467850158252726,Centrum-West,private_room,apartment,123.0,121,4.75,4.75,4.93,multi,1.0
 871525807497618555,Westerpark,private_room,house,115.0,99,4.68,4.79,4.73,multi,1.0
+874585950722395731,Centrum-Oost,entire_home,apartment,169.0,53,4.77,4.89,4.85,multi,1.0
 886135357976024989,Centrum-Oost,private_room,apartment,143.0,101,4.58,4.79,4.76,solo,1.0
 886324511791632525,Buitenveldert - Zuidas,entire_home,house,,46,4.7,4.7,4.87,solo,1.0
 887614357269711457,Centrum-Oost,entire_home,apartment,360.0,31,4.68,4.35,4.68,solo,
 888016739156396885,Centrum-West,private_room,hotel,,39,4.59,4.59,4.36,professional,1.0
 888023321185083972,Centrum-West,private_room,hotel,,31,4.35,4.48,4.65,professional,1.0
+888024531592402527,Centrum-West,private_room,hotel,,61,4.75,4.8,4.7,professional,1.0
 889917638978550710,Westerpark,entire_home,apartment,286.0,54,4.74,4.8,4.83,solo,1.0
 892606907158447003,Centrum-West,entire_home,apartment,167.0,32,4.66,4.41,4.5,solo,0.5
+893335258353473217,Noord-Oost,private_room,hotel,80.0,151,4.75,4.79,4.84,multi,0.94
 896249006377405064,Noord-Oost,entire_home,other,135.0,62,4.61,4.47,4.55,professional,0.87
+897856327503690423,De Pijp - Rivierenbuurt,entire_home,house,110.0,75,4.76,4.77,4.91,multi,1.0
 903714820962613689,Centrum-West,entire_home,apartment,221.0,68,4.68,4.59,4.82,multi,
-904139549347980627,Oud-Noord,entire_home,apartment,189.0,21,4.52,4.81,4.76,multi,0.99
+905676279032136546,Oud-Noord,entire_home,apartment,205.0,251,4.76,4.8,4.84,multi,0.99
 905677609043113133,Oud-Noord,entire_home,apartment,182.0,1095,4.74,4.77,4.83,multi,0.99
 908435116774626440,Centrum-West,entire_home,apartment,200.0,42,4.74,4.55,4.98,solo,1.0
 920807348400931060,Zuid,private_room,apartment,62.0,35,4.71,4.46,4.91,multi,1.0
 933188132506826453,De Pijp - Rivierenbuurt,entire_home,apartment,267.0,65,4.72,4.92,4.89,multi,1.0
-940661674868235591,Centrum-Oost,entire_home,apartment,,21,4.67,4.52,4.62,solo,1.0
-943324935229158687,Centrum-West,private_room,hotel,150.0,27,4.52,4.37,4.63,professional,0.81
 949085857017071799,De Pijp - Rivierenbuurt,private_room,apartment,92.0,52,4.69,4.81,4.81,multi,1.0
 950826670788841030,Centrum-West,private_room,apartment,143.0,130,4.73,4.78,4.82,multi,0.92
 951160138081111662,Centrum-West,private_room,apartment,138.0,103,4.74,4.77,4.93,multi,0.92
 953285827967297295,Oostelijk Havengebied - Indische Buurt,private_room,apartment,93.0,43,4.42,4.23,4.51,solo,1.0
+953539337193788533,Westerpark,entire_home,apartment,531.0,180,4.75,4.91,4.72,multi,0.93
+957891889626715891,Watergraafsmeer,entire_home,apartment,174.0,200,4.76,4.79,4.86,multi,0.95
 960002576012180410,Centrum-West,private_room,apartment,135.0,80,4.66,4.56,4.91,solo,1.0
-965742355870607804,Watergraafsmeer,entire_home,apartment,107.0,23,4.61,4.43,4.74,multi,0.95
-967861525767807467,De Pijp - Rivierenbuurt,private_room,hotel,,23,3.7,3.78,3.74,professional,0.98
-972267051483180173,Westerpark,entire_home,apartment,200.0,27,4.48,4.0,4.81,solo,1.0
 974525394495410987,De Baarsjes - Oud-West,private_room,apartment,56.0,50,4.36,4.22,4.4,multi,1.0
 1001038303846389335,IJburg - Zeeburgereiland,entire_home,apartment,131.0,87,4.72,4.8,4.87,multi,1.0
+1009947098347990641,IJburg - Zeeburgereiland,entire_home,apartment,160.0,52,4.75,4.56,4.92,multi,0.5
 1015342164585958205,Bijlmer-Oost,private_room,house,82.0,73,4.47,4.55,4.6,multi,1.0
 1018594977888575386,De Baarsjes - Oud-West,private_room,apartment,67.0,50,4.34,4.32,4.4,multi,0.89
-1038293751001867529,Bos en Lommer,private_room,apartment,80.0,28,4.68,4.43,4.82,solo,1.0
 1039811851837633284,Centrum-West,entire_home,apartment,217.0,107,4.68,4.79,4.81,multi,0.94
 1039828186305222073,Bijlmer-Oost,private_room,house,81.0,63,4.29,4.38,4.56,multi,1.0
 1044095219134842542,Centrum-West,private_room,apartment,120.0,58,4.6,4.45,4.67,multi,1.0
+1047634949162040987,Centrum-West,private_room,other,3930.0,50,4.78,4.72,4.98,multi,1.0
 1051276165819384554,De Baarsjes - Oud-West,private_room,hotel,,720,4.47,4.42,4.58,multi,1.0
-1064552855919083863,De Baarsjes - Oud-West,private_room,hotel,139.0,29,4.69,4.93,4.9,solo,0.9
+1052725228900518539,Bijlmer-Oost,private_room,house,92.0,50,4.78,4.54,4.82,solo,1.0
 1070838435634595880,Oostelijk Havengebied - Indische Buurt,private_room,hotel,,45,4.64,4.87,4.6,professional,
-1074517080728596948,De Pijp - Rivierenbuurt,private_room,hotel,159.0,27,4.7,4.85,4.93,multi,1.0
 1080400371674885906,Bijlmer-Centrum,private_room,hotel,134.0,125,4.45,4.42,4.58,professional,1.0
-1080400391115118344,Bijlmer-Centrum,private_room,hotel,,25,4.16,4.24,4.56,professional,1.0
-1080400468025953047,Bijlmer-Centrum,private_room,hotel,,25,4.64,4.56,4.76,professional,1.0
 1080400470981051445,Bijlmer-Centrum,private_room,hotel,,97,4.47,4.44,4.58,professional,1.0
 1080404233704746629,De Pijp - Rivierenbuurt,private_room,hotel,,486,4.32,4.4,4.61,professional,1.0
 1080404315599095169,De Pijp - Rivierenbuurt,private_room,hotel,,383,4.27,4.39,4.61,professional,1.0
@@ -723,11 +812,10 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 1085266654325992109,Centrum-Oost,private_room,hotel,,36,4.39,4.81,4.53,professional,0.98
 1091815580643187209,De Baarsjes - Oud-West,private_room,hotel,,60,4.48,4.43,4.6,multi,1.0
 1095467564153718913,Zuid,private_room,hotel,,289,4.57,4.66,4.73,professional,1.0
+1096337791567082986,Centrum-West,private_room,hotel,192.0,48,4.77,4.73,4.83,professional,1.0
 1096854003091398367,Oud-Oost,entire_home,apartment,213.0,99,4.55,4.66,4.68,professional,0.83
 1096861088223294820,Oud-Oost,entire_home,apartment,277.0,99,4.55,4.66,4.63,professional,0.83
 1096863104966096054,Oud-Oost,entire_home,apartment,279.0,47,4.4,4.49,4.64,professional,0.83
-1096865013183728897,Oud-Oost,entire_home,apartment,336.0,26,4.5,4.77,4.73,professional,0.83
-1100480287331600583,Centrum-Oost,private_room,apartment,94.0,29,4.72,4.66,4.9,multi,1.0
 1101982642216045796,Centrum-West,private_room,hotel,176.0,104,4.64,4.78,4.81,multi,1.0
 1105075438460559918,Centrum-West,private_room,hotel,,45,4.69,4.69,4.87,multi,1.0
 1108669608104959701,Centrum-Oost,entire_home,apartment,911.0,36,4.72,4.75,4.81,multi,1.0
@@ -748,28 +836,27 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 1125842306751353638,Centrum-Oost,entire_home,apartment,316.0,46,4.41,4.35,4.59,multi,0.88
 1125863691122733721,Centrum-Oost,entire_home,apartment,225.0,36,4.19,4.22,4.47,multi,0.88
 1130906891787023511,Bijlmer-Centrum,private_room,hotel,130.0,248,4.44,4.38,4.67,professional,1.0
-1132335409056929336,Zuid,private_room,hotel,,29,4.66,4.69,4.62,professional,0.99
+1132334737447631275,Zuid,private_room,hotel,,213,4.79,4.78,4.8,professional,0.99
 1132752110953161237,Centrum-West,private_room,hotel,,88,4.68,4.84,4.84,professional,1.0
+1133069352316831534,Zuid,private_room,hotel,,174,4.77,4.79,4.79,professional,1.0
 1135438160036890531,De Baarsjes - Oud-West,private_room,hotel,,145,4.58,4.38,4.61,multi,1.0
 1135815753606055677,Oud-Noord,entire_home,apartment,162.0,56,4.63,4.66,4.95,solo,1.0
-1136864901944268028,Noord-West,private_room,hotel,59.0,26,4.62,4.46,4.77,multi,1.0
 1136995645703341746,De Pijp - Rivierenbuurt,private_room,house,106.0,65,4.71,4.82,4.91,solo,1.0
 1140490326042473592,Centrum-Oost,private_room,hotel,,46,4.63,4.67,4.84,professional,1.0
-1140511591010878235,Centrum-West,private_room,hotel,140.0,21,4.48,4.57,4.71,professional,0.81
-1142971192018977798,Westerpark,private_room,apartment,99.0,25,4.64,4.64,4.96,solo,1.0
 1145422775904303199,Centrum-Oost,entire_home,apartment,200.0,52,4.56,4.38,4.73,professional,0.89
-1145444486856229903,Centrum-Oost,entire_home,apartment,200.0,21,4.67,4.52,4.81,professional,0.89
 1145446407850073157,Centrum-Oost,entire_home,apartment,248.0,134,4.57,4.5,4.75,professional,0.89
 1145469397440593598,Centrum-Oost,entire_home,apartment,453.0,142,4.74,4.67,4.8,professional,0.89
-1147505742912525147,De Pijp - Rivierenbuurt,private_room,hotel,190.0,29,4.66,4.76,4.83,multi,1.0
+1146389809098621488,Centrum-West,entire_home,apartment,449.0,59,4.78,4.85,4.86,solo,1.0
 1153043872338429988,Centrum-West,entire_home,apartment,212.0,33,4.55,4.39,4.64,multi,
 1153534671054431144,Westerpark,entire_home,apartment,185.0,78,4.53,4.65,4.68,professional,0.82
 1153537591131298918,Westerpark,entire_home,apartment,265.0,92,4.63,4.5,4.75,professional,0.82
+1153539628538521069,Westerpark,entire_home,apartment,274.0,41,4.78,4.78,4.83,professional,0.82
 1153542654003266630,Westerpark,entire_home,apartment,402.0,60,4.55,4.43,4.72,professional,0.82
+1157222535817181903,Oostelijk Havengebied - Indische Buurt,entire_home,apartment,200.0,40,4.75,4.9,4.88,professional,0.85
 1157223771943768879,Oostelijk Havengebied - Indische Buurt,entire_home,apartment,247.0,43,4.44,4.56,4.49,professional,0.85
 1172516446568425964,Centrum-West,private_room,hotel,,42,4.45,3.81,4.81,solo,0.91
-1173085144414756833,Watergraafsmeer,private_room,other,82.0,27,4.56,4.44,4.81,solo,1.0
-1176677799462262624,Centrum-West,private_room,hotel,540.0,21,4.62,4.67,4.48,professional,1.0
+1181136038642103493,Centrum-West,private_room,hotel,252.0,81,4.78,4.88,4.91,multi,1.0
+1192497214286318857,Centrum-Oost,private_room,hotel,115.0,35,4.77,4.69,4.97,professional,0.97
 1193346490682168251,Centrum-West,entire_home,apartment,179.0,69,4.55,4.68,4.8,solo,1.0
 1197640682243354608,Centrum-Oost,entire_home,apartment,194.0,73,4.74,4.81,4.89,solo,1.0
 1206323394243227856,Centrum-Oost,private_room,apartment,73.0,32,4.44,4.34,4.56,multi,1.0
@@ -779,24 +866,13 @@ id,neighbourhood_cleansed,room_type,property_type_bucket,price_numeric,number_of
 1243289012287500670,Bijlmer-Centrum,private_room,hotel,135.0,152,4.6,4.57,4.72,professional,1.0
 1262926523628473517,Bijlmer-Oost,entire_home,house,142.0,30,4.43,4.23,4.47,solo,1.0
 1269518334512050670,Centrum-West,entire_home,apartment,508.0,38,4.74,4.89,4.79,solo,0.7
-1274465135327312722,Centrum-Oost,private_room,apartment,178.0,26,4.69,4.69,4.85,multi,0.96
-1278275471454253067,Centrum-West,entire_home,apartment,261.0,26,4.65,4.62,4.69,multi,0.98
 1289074909775975716,Centrum-West,entire_home,apartment,169.0,32,4.66,4.66,4.75,solo,1.0
-1293334414292732949,Centrum-West,private_room,hotel,,24,4.71,4.63,4.96,professional,1.0
-1293334590320694732,Centrum-West,private_room,hotel,,28,4.29,3.96,4.71,professional,1.0
-1303549419899148826,Buitenveldert - Zuidas,private_room,hotel,151.0,25,4.4,4.76,4.56,solo,0.99
-1304640454956860244,Oud-Noord,entire_home,unique,495.0,24,4.46,4.08,4.58,multi,0.8
 1305475108011068851,Centrum-West,private_room,apartment,58.0,34,4.38,4.24,4.26,multi,0.83
-1307907526905453100,De Baarsjes - Oud-West,entire_home,apartment,299.0,22,4.36,4.5,4.27,solo,1.0
 1307989781180399680,Centrum-West,entire_home,apartment,258.0,35,4.63,4.74,4.63,solo,1.0
 1313919886409208645,Centrum-West,private_room,house,126.0,43,4.67,4.74,4.72,multi,0.97
-1322363206018330830,Centrum-West,private_room,hotel,309.0,24,4.5,4.5,4.63,multi,0.98
-1350581533714967664,De Baarsjes - Oud-West,private_room,apartment,56.0,24,4.38,4.13,4.42,multi,1.0
 1358586156577118346,Centrum-West,private_room,hotel,,32,4.09,4.22,4.41,professional,0.95
 1359435745888609154,Westerpark,entire_home,apartment,319.0,34,4.71,4.85,4.79,solo,1.0
 1360063146226844833,Centrum-West,private_room,hotel,,32,4.0,3.69,4.31,professional,0.95
-1365104817512800676,Centrum-West,entire_home,unique,279.0,23,4.52,4.22,4.78,professional,0.97
-1405580952002890361,Watergraafsmeer,private_room,hotel,226.0,25,4.6,4.96,4.63,multi,1.0
-1405580952928891695,Watergraafsmeer,private_room,hotel,,29,4.66,4.79,4.62,multi,1.0
-1454889920992606142,Slotervaart,private_room,hotel,,25,4.28,4.36,4.28,multi,1.0
+1386776872850768075,Bos en Lommer,entire_home,apartment,268.0,61,4.77,4.82,4.85,professional,1.0
+1445482496485405601,Oud-Oost,private_room,hotel,,181,4.78,4.64,4.82,professional,1.0
 1454890157176094842,Slotervaart,private_room,hotel,,55,4.51,4.55,4.6,multi,1.0

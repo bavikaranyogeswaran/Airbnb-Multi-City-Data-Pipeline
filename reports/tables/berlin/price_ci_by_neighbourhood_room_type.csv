@@ -1,0 +1,194 @@
+neighbourhood_cleansed,room_type,listing_count,median_price,mean_price,ci_lower,ci_upper
+Adlershof,entire_home,22,95.0,105.0,86.0,123.0
+Adlershof,private_room,8,96.0,94.0,50.0,138.0
+Albrechtstr.,entire_home,45,121.0,156.0,100.0,212.0
+Albrechtstr.,private_room,11,42.0,47.0,33.0,61.0
+Alexanderplatz,entire_home,532,145.0,181.0,150.0,211.0
+Alexanderplatz,hotel_room,23,40000.0,23576.0,13554.0,33598.0
+Alexanderplatz,private_room,134,142.0,196.0,159.0,233.0
+Alexanderplatz,shared_room,36,38.0,112.0,-16.0,240.0
+Alt  Treptow,entire_home,36,101.0,133.0,102.0,164.0
+Alt  Treptow,private_room,14,66.0,65.0,49.0,81.0
+Alt-Hohenschönhausen Süd,entire_home,10,126.0,132.0,82.0,181.0
+Alt-Lichtenberg,entire_home,21,120.0,131.0,97.0,164.0
+Alt-Lichtenberg,private_room,11,71.0,106.0,59.0,154.0
+Altglienicke,entire_home,19,65.0,86.0,56.0,115.0
+Barstraße,entire_home,21,112.0,132.0,98.0,166.0
+Barstraße,private_room,12,97.0,88.0,74.0,103.0
+Baumschulenweg,entire_home,10,104.0,132.0,67.0,197.0
+Baumschulenweg,private_room,10,56.0,60.0,35.0,86.0
+Biesdorf,entire_home,18,94.0,112.0,80.0,145.0
+Biesdorf,private_room,8,56.0,56.0,32.0,80.0
+Blankenburg/Heinersdorf/Märchenland,entire_home,16,74.0,89.0,64.0,114.0
+Blankenburg/Heinersdorf/Märchenland,private_room,11,68.0,65.0,48.0,82.0
+Blankenfelde/Niederschönhausen,entire_home,30,110.0,450.0,-223.0,1124.0
+Blankenfelde/Niederschönhausen,private_room,11,48.0,67.0,16.0,117.0
+Bohnsdorf,entire_home,11,85.0,981.0,-1028.0,2991.0
+Bohnsdorf,private_room,13,45.0,98.0,36.0,161.0
+Britz,entire_home,20,130.0,141.0,99.0,183.0
+Britz,private_room,9,57.0,61.0,38.0,84.0
+Brunnenstr. Nord,entire_home,135,157.0,200.0,168.0,231.0
+Brunnenstr. Nord,private_room,26,84.0,141.0,94.0,188.0
+Brunnenstr. Süd,entire_home,355,155.0,190.0,175.0,205.0
+Brunnenstr. Süd,private_room,41,72.0,101.0,57.0,144.0
+Brunsbütteler Damm,entire_home,7,95.0,110.0,64.0,155.0
+Buch,entire_home,8,69.0,81.0,56.0,106.0
+Buchholz,entire_home,20,83.0,111.0,76.0,145.0
+Buckow,entire_home,16,99.0,97.0,85.0,109.0
+Drakestr.,entire_home,32,114.0,126.0,104.0,148.0
+Drakestr.,private_room,17,59.0,68.0,55.0,80.0
+Düsseldorfer Straße,entire_home,108,114.0,137.0,123.0,151.0
+Düsseldorfer Straße,private_room,61,96.0,120.0,98.0,143.0
+Falkenhagener Feld,private_room,7,52.0,62.0,36.0,89.0
+Fennpfuhl,private_room,7,54.0,52.0,42.0,62.0
+Frankfurter Allee Nord,entire_home,125,118.0,143.0,121.0,165.0
+Frankfurter Allee Nord,private_room,30,67.0,66.0,56.0,76.0
+Frankfurter Allee Süd FK,entire_home,357,126.0,157.0,143.0,171.0
+Frankfurter Allee Süd FK,private_room,120,66.0,72.0,62.0,83.0
+Friedenau,entire_home,41,119.0,126.0,108.0,144.0
+Friedenau,private_room,14,48.0,64.0,40.0,88.0
+Friedrichsfelde Nord,entire_home,16,148.0,154.0,109.0,198.0
+Friedrichsfelde Nord,private_room,7,61.0,57.0,38.0,75.0
+Friedrichshagen,entire_home,20,130.0,144.0,111.0,177.0
+Friedrichshagen,private_room,13,111.0,120.0,91.0,149.0
+Gatow / Kladow,entire_home,13,99.0,106.0,78.0,134.0
+Grunewald,entire_home,49,115.0,129.0,110.0,147.0
+Grunewald,private_room,15,81.0,88.0,71.0,105.0
+Grünau,entire_home,13,100.0,114.0,84.0,145.0
+Hakenfelde,entire_home,7,111.0,127.0,58.0,196.0
+Halensee,entire_home,49,84.0,115.0,78.0,152.0
+Halensee,private_room,10,74.0,76.0,54.0,98.0
+Heerstrasse,entire_home,34,87.0,123.0,89.0,157.0
+Heerstraße Nord,entire_home,10,74.0,140.0,-6.0,286.0
+Heerstraße Nord,private_room,8,51.0,52.0,35.0,69.0
+Helmholtzplatz,entire_home,132,124.0,146.0,134.0,158.0
+Helmholtzplatz,private_room,25,72.0,87.0,69.0,105.0
+Johannisthal,entire_home,15,70.0,131.0,39.0,223.0
+Johannisthal,private_room,10,58.0,62.0,48.0,77.0
+Kantstraße,entire_home,61,129.0,146.0,122.0,171.0
+Kantstraße,private_room,23,89.0,93.0,76.0,111.0
+Karl-Marx-Allee-Nord,entire_home,73,118.0,137.0,121.0,153.0
+Karl-Marx-Allee-Nord,private_room,31,56.0,69.0,48.0,90.0
+Karl-Marx-Allee-Süd,entire_home,96,120.0,134.0,121.0,146.0
+Karl-Marx-Allee-Süd,private_room,70,95.0,101.0,90.0,112.0
+Karl-Marx-Allee-Süd,shared_room,17,25.0,56.0,27.0,84.0
+Karlshorst,entire_home,21,118.0,122.0,100.0,145.0
+Karlshorst,hotel_room,7,164.0,170.0,136.0,204.0
+Karlshorst,private_room,22,145.0,124.0,91.0,156.0
+Kaulsdorf,entire_home,12,98.0,102.0,68.0,136.0
+Kurfürstendamm,entire_home,95,143.0,161.0,144.0,177.0
+Kurfürstendamm,private_room,40,96.0,115.0,95.0,135.0
+Köllnische Heide,entire_home,12,96.0,102.0,89.0,114.0
+Köpenick-Nord,entire_home,8,99.0,105.0,58.0,152.0
+Köpenick-Süd,entire_home,8,79.0,75.0,53.0,97.0
+Lichtenrade,entire_home,16,83.0,98.0,72.0,124.0
+MV 2,private_room,17,91.0,83.0,68.0,99.0
+Mahlsdorf,entire_home,16,106.0,113.0,85.0,141.0
+Mariendorf,entire_home,24,122.0,137.0,107.0,167.0
+Marzahn-Süd,entire_home,13,131.0,154.0,109.0,199.0
+Mierendorffplatz,entire_home,31,101.0,129.0,104.0,154.0
+Moabit Ost,entire_home,120,95.0,127.0,112.0,141.0
+Moabit Ost,private_room,31,59.0,62.0,52.0,73.0
+Moabit West,entire_home,113,102.0,137.0,120.0,153.0
+Moabit West,private_room,41,68.0,79.0,64.0,94.0
+Müggelheim,entire_home,18,137.0,1120.0,-316.0,2556.0
+Neu Lichtenberg,entire_home,45,105.0,122.0,104.0,141.0
+Neu Lichtenberg,private_room,14,52.0,61.0,44.0,78.0
+Neue Kantstraße,entire_home,66,142.0,188.0,144.0,232.0
+Neue Kantstraße,private_room,23,68.0,76.0,60.0,92.0
+Neuköllner Mitte/Zentrum,entire_home,107,121.0,164.0,136.0,192.0
+Neuköllner Mitte/Zentrum,private_room,62,60.0,80.0,62.0,97.0
+Niederschöneweide,entire_home,18,128.0,135.0,101.0,169.0
+Nord 1,entire_home,12,79.0,125.0,47.0,203.0
+Nord 1,private_room,7,53.0,51.0,40.0,62.0
+Nord 2,entire_home,8,100.0,110.0,63.0,158.0
+Oberschöneweide,entire_home,43,99.0,119.0,96.0,143.0
+Oberschöneweide,private_room,14,40.0,39.0,31.0,46.0
+Osloer Straße,entire_home,47,86.0,108.0,87.0,129.0
+Osloer Straße,private_room,20,66.0,91.0,66.0,117.0
+Ost 1,entire_home,12,77.0,165.0,30.0,301.0
+Ost 2,entire_home,17,59.0,64.0,52.0,76.0
+Ost 2,private_room,14,40.0,51.0,34.0,67.0
+Ostpreußendamm,entire_home,7,80.0,132.0,18.0,247.0
+Ostpreußendamm,private_room,19,42.0,50.0,39.0,60.0
+Otto-Suhr-Allee,entire_home,88,112.0,131.0,116.0,147.0
+Otto-Suhr-Allee,private_room,29,60.0,85.0,64.0,106.0
+Pankow Süd,entire_home,47,102.0,125.0,103.0,147.0
+Pankow Süd,private_room,14,63.0,67.0,48.0,86.0
+Pankow Zentrum,entire_home,37,140.0,163.0,121.0,206.0
+Pankow Zentrum,private_room,18,50.0,81.0,28.0,135.0
+Parkviertel,entire_home,66,86.0,103.0,84.0,121.0
+Parkviertel,private_room,24,58.0,61.0,50.0,72.0
+Plänterwald,entire_home,20,126.0,132.0,102.0,163.0
+Plänterwald,private_room,8,67.0,65.0,54.0,75.0
+Prenzlauer Berg Nord,entire_home,107,131.0,142.0,125.0,158.0
+Prenzlauer Berg Nord,private_room,23,60.0,60.0,53.0,68.0
+Prenzlauer Berg Nordwest,entire_home,147,114.0,134.0,121.0,146.0
+Prenzlauer Berg Nordwest,private_room,40,62.0,66.0,57.0,75.0
+Prenzlauer Berg Ost,entire_home,54,136.0,330.0,-37.0,696.0
+Prenzlauer Berg Ost,private_room,12,58.0,78.0,45.0,111.0
+Prenzlauer Berg Süd,entire_home,153,137.0,154.0,140.0,167.0
+Prenzlauer Berg Süd,private_room,40,70.0,83.0,71.0,96.0
+Prenzlauer Berg Südwest,entire_home,237,157.0,187.0,172.0,202.0
+Prenzlauer Berg Südwest,private_room,43,76.0,90.0,75.0,105.0
+Rahnsdorf/Hessenwinkel,entire_home,29,100.0,188.0,25.0,351.0
+Regierungsviertel,entire_home,80,162.0,183.0,159.0,206.0
+Regierungsviertel,private_room,18,124.0,200.0,103.0,297.0
+Reuterstraße,entire_home,117,115.0,137.0,121.0,152.0
+Reuterstraße,private_room,57,65.0,66.0,60.0,72.0
+Reuterstraße,shared_room,7,29.0,31.0,20.0,42.0
+Rixdorf,entire_home,90,103.0,113.0,103.0,122.0
+Rixdorf,private_room,32,66.0,66.0,59.0,72.0
+Rudow,entire_home,18,88.0,644.0,-517.0,1806.0
+Rudow,private_room,29,70.0,76.0,65.0,86.0
+Rummelsburger Bucht,entire_home,26,126.0,147.0,115.0,180.0
+Schillerpromenade,entire_home,103,111.0,130.0,118.0,143.0
+Schillerpromenade,private_room,37,69.0,74.0,59.0,90.0
+Schloß Charlottenburg,entire_home,45,100.0,150.0,115.0,186.0
+Schloß Charlottenburg,private_room,22,48.0,47.0,42.0,52.0
+Schloßstr.,entire_home,36,102.0,106.0,86.0,127.0
+Schmargendorf,entire_home,31,172.0,177.0,134.0,220.0
+Schmöckwitz/Karolinenhof/Rauchfangswerder,entire_home,23,130.0,512.0,124.0,900.0
+Schöneberg-Nord,entire_home,140,91.0,123.0,109.0,138.0
+Schöneberg-Nord,hotel_room,7,179.0,178.0,167.0,189.0
+Schöneberg-Nord,private_room,61,70.0,86.0,75.0,97.0
+Schöneberg-Süd,entire_home,128,119.0,161.0,108.0,214.0
+Schöneberg-Süd,private_room,35,59.0,63.0,55.0,70.0
+Schönholz/Wilhelmsruh/Rosenthal,entire_home,17,109.0,710.0,-521.0,1941.0
+Siemensstadt,entire_home,8,74.0,80.0,49.0,112.0
+Spandau Mitte,entire_home,12,120.0,149.0,90.0,208.0
+Südliche Friedrichstadt,entire_home,146,139.0,162.0,144.0,180.0
+Südliche Friedrichstadt,private_room,34,67.0,69.0,62.0,76.0
+Teltower Damm,entire_home,18,88.0,108.0,85.0,131.0
+Teltower Damm,private_room,9,75.0,70.0,52.0,88.0
+Tempelhof,entire_home,122,118.0,160.0,129.0,191.0
+Tempelhof,private_room,22,55.0,58.0,48.0,68.0
+Tempelhofer Vorstadt,entire_home,308,115.0,144.0,126.0,162.0
+Tempelhofer Vorstadt,private_room,104,66.0,70.0,64.0,76.0
+Tempelhofer Vorstadt,shared_room,7,30.0,33.0,19.0,48.0
+Tiergarten Süd,entire_home,85,141.0,159.0,140.0,178.0
+Tiergarten Süd,hotel_room,8,192.0,207.0,178.0,236.0
+Tiergarten Süd,private_room,22,78.0,105.0,77.0,134.0
+Volkspark Wilmersdorf,entire_home,72,101.0,255.0,-19.0,530.0
+Volkspark Wilmersdorf,private_room,15,50.0,57.0,47.0,68.0
+Wedding Zentrum,entire_home,96,100.0,130.0,110.0,150.0
+Wedding Zentrum,private_room,28,52.0,74.0,40.0,109.0
+Weißensee,entire_home,88,100.0,134.0,116.0,152.0
+Weißensee,private_room,18,66.0,69.0,56.0,83.0
+Weißensee Ost,entire_home,11,85.0,115.0,74.0,155.0
+West 2,entire_home,7,140.0,134.0,98.0,169.0
+West 4,entire_home,12,81.0,80.0,66.0,93.0
+West 5,private_room,8,216.0,454.0,77.0,830.0
+Westend,entire_home,41,99.0,127.0,99.0,154.0
+Westend,private_room,22,68.0,109.0,72.0,146.0
+Wiesbadener Straße,entire_home,14,160.0,188.0,97.0,279.0
+Wiesbadener Straße,private_room,11,79.0,89.0,52.0,126.0
+Wilhelmstadt,entire_home,13,130.0,146.0,97.0,194.0
+Zehlendorf  Nord,entire_home,28,102.0,156.0,89.0,223.0
+Zehlendorf  Nord,private_room,21,69.0,69.0,59.0,79.0
+Zehlendorf  Südwest,entire_home,28,103.0,119.0,98.0,139.0
+nördliche Luisenstadt,entire_home,93,118.0,150.0,131.0,169.0
+nördliche Luisenstadt,private_room,53,74.0,70.0,64.0,75.0
+südliche Luisenstadt,entire_home,174,122.0,149.0,134.0,164.0
+südliche Luisenstadt,private_room,59,69.0,68.0,62.0,74.0
+südliche Luisenstadt,shared_room,9,42.0,63.0,41.0,85.0
