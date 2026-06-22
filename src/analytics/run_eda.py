@@ -17,6 +17,7 @@ import argparse
 import math
 import warnings
 from pathlib import Path
+from typing import cast
 
 import numpy as np
 import pandas as pd
@@ -145,11 +146,15 @@ def run(city: str) -> dict:
 
     # ── 2. price_by_room_type ─────────────────────────────────────────────────
     price_by_room = (
-        eda.groupby("room_type")["price_numeric"]
-        .agg(listing_count="count", median_price="median", mean_price="mean",
-             p25=lambda x: x.quantile(0.25),
-             p75=lambda x: x.quantile(0.75),
-             p95=lambda x: x.quantile(0.95))
+        eda.groupby("room_type")
+        .agg(
+            listing_count=("price_numeric", "count"),
+            median_price=("price_numeric", "median"),
+            mean_price=("price_numeric", "mean"),
+            p25=("price_numeric", lambda x: x.quantile(0.25)),
+            p75=("price_numeric", lambda x: x.quantile(0.75)),
+            p95=("price_numeric", lambda x: x.quantile(0.95)),
+        )
         .sort_values("median_price", ascending=False)
         .round(0)
     )
@@ -157,10 +162,17 @@ def run(city: str) -> dict:
 
     # ── 3. price_by_neighbourhood ─────────────────────────────────────────────
     min_listings = max(10, int(len(lm) * 0.001))   # adaptive floor
+    neigh_grp = eda.groupby("neighbourhood_cleansed")["price_numeric"]
+    neigh_ci = (
+        neigh_grp.apply(_price_ci)
+        .apply(pd.Series)
+        .rename(columns={0: "ci_lower", 1: "ci_upper"})
+    )
     neigh_price = (
-        eda.groupby("neighbourhood_cleansed")["price_numeric"]
+        neigh_grp
         .agg(listing_count="count", median_price="median", mean_price="mean")
         .query(f"listing_count >= {min_listings}")
+        .join(neigh_ci)
         .round(0)
     )
     _save(neigh_price, "price_by_neighbourhood.csv")
@@ -220,9 +232,13 @@ def run(city: str) -> dict:
     geo["dist_band"] = geo["dist_km"].apply(_dist_band)
     dist_order = ["0-2 km", "2-5 km", "5-10 km", "10-20 km", "20+ km"]
     price_by_dist = (
-        geo.groupby("dist_band", observed=True)["price_numeric"]
-        .agg(listing_count="count", median_price="median",
-             mean_price="mean", p75=lambda x: x.quantile(0.75))
+        geo.groupby("dist_band", observed=True)
+        .agg(
+            listing_count=("price_numeric", "count"),
+            median_price=("price_numeric", "median"),
+            mean_price=("price_numeric", "mean"),
+            p75=("price_numeric", lambda x: x.quantile(0.75)),
+        )
         .reindex([b for b in dist_order if b in geo["dist_band"].values])
         .round(0)
     )
@@ -241,8 +257,9 @@ def run(city: str) -> dict:
         columns=["listing_id", "date", "available", "minimum_nights"],
     )
     cal["available_int"] = cal["available"].astype("Int64").astype(float)
-    cal["month"]      = cal["date"].dt.to_period("M").dt.to_timestamp()
-    cal["is_weekend"] = cal["date"].dt.dayofweek >= 5
+    cal_date = pd.to_datetime(cal["date"])
+    cal["month"]      = cal_date.dt.to_period("M").dt.to_timestamp()
+    cal["is_weekend"] = cal_date.dt.dayofweek >= 5
     print(f"  {len(cal):,} rows")
 
     # 9. monthly_availability
@@ -290,7 +307,7 @@ def run(city: str) -> dict:
         processed / "reviews_clean.parquet",
         columns=["id", "listing_id", "date"],
     )
-    rev["month"] = rev["date"].dt.to_period("M").dt.to_timestamp()
+    rev["month"] = pd.to_datetime(rev["date"]).dt.to_period("M").dt.to_timestamp()
     monthly_reviews = (
         rev.groupby("month")
         .agg(review_count=("id", "count"), active_listings=("listing_id", "nunique"))
@@ -394,7 +411,7 @@ def run(city: str) -> dict:
         review_stats.append({
             "dimension":  col.replace("review_scores_", "").replace("_", " ").title(),
             "n_rated":    len(s),
-            "null_count": int(lm[col].isna().sum()),
+            "null_count": lm[col].isna().sum(),
             "null_pct":   round(lm[col].isna().mean() * 100, 1),
             "mean":  round(s.mean(), 4), "median": round(s.median(), 4),
             "std":   round(s.std(), 4),
@@ -410,7 +427,7 @@ def run(city: str) -> dict:
             s = lm[col].dropna()
             review_stats.append({
                 "dimension":  label,
-                "n_rated":    len(s), "null_count": int(lm[col].isna().sum()),
+                "n_rated":    len(s), "null_count": lm[col].isna().sum(),
                 "null_pct":   round(lm[col].isna().mean() * 100, 1),
                 "mean":  round(s.mean(), 4), "median": round(s.median(), 4),
                 "std":   round(s.std(), 4),
@@ -453,7 +470,9 @@ def run(city: str) -> dict:
     pr_ = h1.loc[h1["room_type"] == "private_room", "log_price"].dropna()
     if len(eh_) >= 30 and len(pr_) >= 30:
         t1, p1 = stats.ttest_ind(eh_, pr_, equal_var=False)
-        d1 = (eh_.mean() - pr_.mean()) / np.sqrt((eh_.var() + pr_.var()) / 2)
+        d1 = (eh_.mean() - pr_.mean()) / math.sqrt(
+            (cast(float, eh_.var()) + cast(float, pr_.var())) / 2
+        )
         results.append({"test": "H1", "hypothesis": "Entire home vs private room: price",
                         "method": "Welch t-test (log)", "n_total": len(eh_) + len(pr_),
                         "statistic": round(t1, 4), "p_value": f"{p1:.2e}",
@@ -481,7 +500,9 @@ def run(city: str) -> dict:
     lo_ = h3.loc[h3["number_of_reviews"] <= 10, "log_price"].dropna()
     if len(hi_) >= 30 and len(lo_) >= 30:
         t3, p3 = stats.ttest_ind(hi_, lo_, equal_var=False)
-        d3 = (hi_.mean() - lo_.mean()) / np.sqrt((hi_.var() + lo_.var()) / 2)
+        d3 = (hi_.mean() - lo_.mean()) / math.sqrt(
+            (cast(float, hi_.var()) + cast(float, lo_.var())) / 2
+        )
         results.append({"test": "H3", "hypothesis": "High-review (>10) vs low-review: price",
                         "method": "Welch t-test (log)", "n_total": len(hi_) + len(lo_),
                         "statistic": round(t3, 4), "p_value": f"{p3:.2e}",
