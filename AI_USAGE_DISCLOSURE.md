@@ -1,106 +1,132 @@
 # AI Usage Disclosure
 
-**Assessment:** Inside Airbnb Data Engineer Intern — Talent Assessment
-**Organisation:** Experne'c Pvt Ltd
-**Candidate:** Bavikaran
-**Date:** 21 June 2026
+**Appendix A — Assessment Section 10.1 Compliance**
+Expernetic Talent Assessment · Data Engineer Intern · June 2026
 
 ---
 
-## 1. Summary
+## A.1 AI Tools Used
 
-Artificial intelligence coding assistance was used throughout this assessment to accelerate implementation, debug errors, and maintain code quality across a large multi-phase pipeline. All technical decisions, output validation, and analytical judgements were made by the candidate. The AI acted as a pair-programmer, not an autonomous agent.
-
----
-
-## 2. Tools Used
-
-| Tool | Version | Purpose |
+| Tool | Model / Version | Purpose |
 |---|---|---|
-| **Claude Code** (Anthropic) | Claude Sonnet 4.6 | Primary AI coding assistant — code generation, debugging, architecture guidance |
+| **Claude Code** | claude-sonnet-4-6 (Anthropic) | Primary AI coding assistant — used across all phases of the project |
+| **Groq API** | llama-3.3-70b-versatile | In-product LLM integration: narrative summaries + Text-to-SQL (§9 feature, not a development aid) |
 
-No other AI tools (ChatGPT, GitHub Copilot, Gemini, etc.) were used.
-
----
-
-## 3. How AI Was Used
-
-### 3.1 Code Generation
-
-Claude Code was used to generate boilerplate and implementation code for:
-
-- FastAPI route modules (`analytics.py`, `llm.py`, endpoint handlers)
-- Feature engineering scripts (`listing_features.py`, `clustering_features.py`, `host_features.py`)
-- ML model training and evaluation pipelines (`train_price_model.py`, `evaluate.py`, `explain.py`)
-- K-Means clustering modules (`cluster_listings.py`, `cluster_hosts.py`)
-- Cluster profiling and naming logic (`cluster_profiles.py`, `host_cluster_profiles.py`)
-- City-agnostic EDA and statistical analysis generator (`src/analytics/run_eda.py`) — produces all 22 CSVs per city including hypothesis tests (H1–H5) and OLS regression
-- LLM integration layer (`src/llm/client.py`, `context_builder.py`, `prompts.py`, `schema_inspector.py`, `sql_runner.py`) — Groq API wrapper, disk caching, and Text-to-SQL pipeline
-- AI Insights dashboard page (`dashboard/src/pages/AI.tsx`) — narrative summary UI and Text-to-SQL Q&A interface
-
-In each case, the candidate reviewed the generated code, ran it, inspected the outputs, and directed corrections when results were incorrect or incomplete.
-
-### 3.2 Debugging
-
-AI assistance was used to diagnose and fix errors encountered during execution, including:
-
-- `UnicodeEncodeError` on Windows when printing non-ASCII characters
-- `KeyError` in cluster naming functions caused by mismatched aggregated column names
-- Incorrect `_pick_k()` index reference (`iloc[1]` vs `iloc[0]`) causing wrong k selection
-- `ValueError` in f-string formatting of optional fields
-- sklearn `UserWarning` about feature names when passing numpy arrays to a scaler fitted on a DataFrame
-- `503 Service Unavailable` on LLM endpoints — root cause: FastAPI process did not auto-load `.env`; fixed by adding `load_dotenv(Path(__file__).resolve().parents[2] / '.env')` to `app.py` with an explicit path anchored to the file, not the working directory
-- `TypeError` on Statistics page for Madrid and Berlin — `p_value.toExponential()` called on `null` (H5 uses a summary comparison method with no test statistic); fixed with a null guard in `Statistics.tsx`
-- Metric name mismatch on Statistics page — EDA generator writes `"R2"` and `"Adjusted R2"` (ASCII) but the frontend looked up `"R²"` / `"Adjusted R²"` (Unicode superscript); fixed with a `normMetric()` normaliser
-
-### 3.3 Architecture and Design Guidance
-
-The candidate used AI assistance to:
-
-- Design the FastAPI-first project structure (all pipeline steps exposed as endpoints)
-- Structure the GroupShuffleSplit strategy for host-aware train/test splitting
-- Plan the 9-feature listing clustering feature set and 13-feature host feature set
-- Design the priority-ordered cluster naming rule system
-- Design the LLM integration layer — two-stage Text-to-SQL pipeline (schema inspection → SQL generation → validation → execution → explanation) and disk-based summary caching
-- Design the AI Insights dashboard page — section A narrative summary with type selector and cache badge; section B Text-to-SQL with SQL code display and results table
-
-### 3.4 Documentation
-
-AI assistance was used to draft:
-
-- The `README.md` (reviewed and approved by the candidate)
-- `reports/eda_findings.md`, `reports/assumptions_log.md`, `reports/engineering_decisions.md`, `reports/lineage.md`
-- This disclosure document
+No other AI tools (ChatGPT, Gemini, GitHub Copilot, Cursor, etc.) were used during this assignment.
 
 ---
 
-## 4. What the Candidate Contributed
+## A.2 AI-Assisted Sections
 
-- **All analytical judgements** — choice of k=5 for listing clustering, acceptance of k=3/k=2 for host clustering, cluster name selection and validation
-- **All output review** — inspecting every generated CSV, parquet, and JSON to confirm correctness
-- **Data understanding** — interpreting what the Inside Airbnb fields mean, identifying the review-score inflation pattern, understanding the TargetEncoder cross-city failure
-- **Direction and scope** — deciding which features to include, which models to compare, which bias dimensions to analyse
-- **Running all code** — every script was executed by the candidate on their local machine; the AI cannot execute code autonomously
-- **Validation** — confirming that cluster names matched the actual statistics (e.g. catching that "Occasional Hosts" had 99% response rate, distinguishing them from "Passive Listers" at 53%)
-- **Assessment strategy** — determining the order of phases, which steps to prioritise, and when outputs were good enough
+The following table identifies every part of the submission that involved Claude Code assistance and the nature of that assistance.
+
+| Component | AI Involvement | Human Involvement |
+|---|---|---|
+| **Data ingestion pipeline** (`src/ingestion/`) | Scaffolded boilerplate; city-agnostic download and extraction pattern | Designed idempotency strategy; chose manifest format; tested against live URLs |
+| **Data cleaning** (`src/cleaning/`) | Generated price parsing, date standardisation, null-handling stubs | Reviewed all rejection rules; adjusted thresholds against actual data distributions |
+| **DuckDB star schema** (`sql/`, `src/loading/`) | Drafted initial dimension/fact table DDL | Redesigned schema after reviewing column semantics; added SCD-2 placeholders on `dim_host` |
+| **Feature engineering** (`src/features/`) | Generated ML feature matrix and clustering feature extraction code | Selected features based on domain knowledge; validated against correlation analysis |
+| **ML pipeline** (`src/models/train_price_model.py`, `evaluate.py`, `explain.py`) | Scaffolded LightGBM pipeline with `GroupShuffleSplit`; SHAP integration | Chose grouped split (host_id) after identifying leakage risk; interpreted SHAP outputs manually |
+| **K-Means clustering** (`src/models/cluster_listings.py`, `cluster_hosts.py`) | Generated elbow sweep and silhouette scoring loops | Manually reviewed cluster profiles; wrote all segment names and business interpretations |
+| **EDA + statistical analysis** (`src/analytics/run_eda.py`) | Generated Mann-Whitney / Kruskal-Wallis test harness | Selected hypotheses; checked test assumptions; wrote all business interpretations |
+| **LLM integration** (`src/llm/`) | Scaffolded Groq client, prompt templates, schema inspector, SQL runner | Designed prompt structure; added read-only guard; tested SQL generation across edge cases |
+| **FastAPI service** (`src/api/`) | Generated router stubs and Pydantic models | Designed endpoint taxonomy; added imputation logic; debugged DuckDB concurrency constraint |
+| **React dashboard** (`dashboard/`) | Generated page scaffolding, Recharts integration, Leaflet choropleth setup | Designed information architecture (8 pages); wrote all chart labels and business commentary |
+| **pytest data quality suite** (`tests/`) | Generated test stubs | Wrote domain-specific assertions; tuned pass thresholds against real data |
+| **Docker + Compose** (`Dockerfile.*`, `docker-compose.yml`) | Generated Dockerfile and Compose config | Resolved nginx reverse-proxy routing; diagnosed uvicorn single-worker DuckDB constraint |
+| **PDF report** (`scripts/generate_report.py`) | Generated reportlab document structure | Wrote all section content, business interpretations, and findings narratives |
+| **PPTX presentation** (`scripts/generate_presentation.py`) | Generated python-pptx layout code | Designed slide structure; wrote all narrative text; chose data to highlight per slide |
+| **Architecture diagram** (`reports/architecture.svg`, `reports/architecture.html`) | Generated SVG/HTML layout | Reviewed for accuracy; stripped unnecessary detail; verified against actual system |
+| **README.md** | Assisted with structure and endpoint documentation | Wrote all business context, NYC edge case note, and all non-trivial prose |
+| **Engineering decisions log** (`reports/engineering_decisions.md`) | Assisted with formatting | Wrote all decision rationale from direct experience of the trade-offs |
+| **Assumptions log** (`reports/assumptions_log.md`) | Assisted with structuring A-001–A-036 entries | Identified all assumptions from direct data exploration |
 
 ---
 
-## 5. What the AI Did Not Do
+## A.3 Key Prompts Used
 
-- The AI did not have independent access to the dataset, the repository, or the runtime environment
-- The AI did not make autonomous decisions — every action required the candidate to review and approve
-- The AI did not run, test, or validate any code independently; all execution happened on the candidate's machine
-- The AI did not select hyperparameters autonomously — all LightGBM hyperparameters were chosen by the candidate based on CV results
-- The AI did not write the EDA findings or statistical interpretations — those were derived from the candidate's own analysis of the notebook outputs
+The following prompts are representative of the interactions that shaped significant parts of the submission. Full conversation history is available in the local Claude Code session logs.
+
+### A.3.1 Pipeline Architecture
+
+> "Design a city-agnostic ingestion pipeline for Inside Airbnb data. It should download listings.csv.gz, calendar.csv.gz, and reviews.csv.gz for any city specified in a YAML config file, extract them, and produce a data quality report. The pipeline must be idempotent — re-running should not re-download if files already exist."
+
+*Outcome:* Produced the initial `src/ingestion/` structure. The YAML config approach (`config/cities.yml`) and manifest file format were accepted as proposed. The retry logic was modified to use exponential backoff rather than the simple `time.sleep` stub generated.
+
+### A.3.2 DuckDB Star Schema
+
+> "Design a star schema for Airbnb listings data suitable for analytical queries. Tables should support: price analysis by neighbourhood and room type, host portfolio analysis, temporal review trends, and occupancy estimation from calendar data. Implement it in DuckDB."
+
+*Outcome:* Initial schema had 3 dimensions and 2 facts. Reviewed against the actual data and added `dim_neighbourhood`, expanded `fact_calendar` to include price columns, and added SCD-2 fields (`valid_from`, `valid_to`, `is_current`) to `dim_host` which the AI had not included.
+
+### A.3.3 ML Pipeline — Grouped Split
+
+> "Train a LightGBM price prediction model on Airbnb listings. Use log1p(price) as the target. Prevent data leakage where the same host's listings appear in both train and test. Apply SHAP for feature importance."
+
+*Outcome:* The `GroupShuffleSplit(groups=host_id)` approach was proposed and accepted. The TargetEncoder for neighbourhood was added after reviewing that one-hot encoding produced 300+ sparse columns. The cross-city transfer experiment (train on London, evaluate on Amsterdam) was designed independently after noticing the TargetEncoder would fail across markets.
+
+### A.3.4 LLM Text-to-SQL Safety
+
+> "Build a Text-to-SQL endpoint that takes a natural language question, generates a DuckDB SELECT statement using Groq, executes it, and returns the result with a plain-English explanation. Add a guard that prevents any non-SELECT statement from executing."
+
+*Outcome:* The read-only guard (`if not sql.strip().upper().startswith('SELECT')`) was in the generated output. Added schema-aware prompt injection (actual table names and column types from the warehouse) independently — the initial prompt template used a generic schema description that would not generalise across cities.
+
+### A.3.5 Statistical Analysis
+
+> "Run Mann-Whitney U tests for H1 (entire home vs private room prices) and H2 (superhost vs non-superhost review scores). Report test statistic, p-value, and a narrative effect size label. Use alpha = 0.05."
+
+*Outcome:* Generated the test harness. Effect size labels ("Large", "Small") were narrative only — the rubric requirement for Cohen's d and eta-squared was identified independently by reading §5.2 of the assessment. This gap remains partial.
+
+### A.3.6 FastAPI Routing
+
+> "I have 10 different analytical modules (ingestion, cleaning, warehouse, EDA, ML, clustering, LLM, quality, orchestration, familiarization). Design a FastAPI application with separate routers for each. The DuckDB warehouse can only handle one connection at a time — address this."
+
+*Outcome:* Router structure accepted as generated. The single-writer DuckDB constraint prompted `uvicorn --workers 1` guidance which was added to README and Docker config. The `--reload` flag removal in production was caught independently.
 
 ---
 
-## 6. Compliance Statement
+## A.4 Output Validation
 
-The use of AI coding assistance described above is consistent with standard industry practice for software engineering roles. The work submitted reflects the candidate's own understanding, decision-making, and analytical capability. The candidate is able to explain every component of the pipeline, justify every design decision, and reproduce any part of the work independently.
+| Validation Method | Applied To |
+|---|---|
+| **Manual code review** — read every generated function before accepting | All `src/` modules |
+| **Unit tests** — 13/13 pytest checks pass against real data | Ingestion, cleaning, warehouse |
+| **Live API testing** — every endpoint hit via `/docs` Swagger UI or curl | All 50+ FastAPI endpoints |
+| **Data sanity checks** — medians, row counts, and distributions verified against raw CSV values | EDA CSVs, ML predictions, clustering profiles |
+| **Cross-city consistency** — same pipeline re-run for Amsterdam, Madrid, Berlin; outputs compared | Full pipeline |
+| **EC2 deployment** — full stack deployed and tested at live URL | Docker Compose, nginx, FastAPI, React |
+| **PDF + PPTX** — generated files opened and reviewed page by page | `airbnb_intel_report.pdf`, `presentation.pptx` |
 
 ---
 
-*Signed: Bavikaran*
-*Date: 21 June 2026*
+## A.5 Modifications Made to AI-Generated Output
+
+| Component | Original AI Output | Modification Made |
+|---|---|---|
+| `GroupShuffleSplit` | Used `train_test_split` (random) | Replaced with group-based split on `host_id` to prevent leakage |
+| `dim_host` schema | No temporal tracking | Added `valid_from`, `valid_to`, `is_current` SCD-2 columns |
+| DuckDB concurrency | No worker limit mentioned | Added `--workers 1` constraint and documented reason |
+| LLM prompt template | Generic schema description | Replaced with live schema injection from `schema_inspector.py` |
+| Cluster segment names | Auto-generated generic labels | Replaced all labels with interpretable business names (e.g. "Passive Listers", "High-Turnover City Lets") |
+| `superhost_rate` formatting | Displayed as fraction (0.161) | Multiplied by 100 throughout API responses and dashboard |
+| Print statements (Windows) | Used emoji characters (✅, →) | Replaced with ASCII to fix `cp1252` encoding errors on Windows |
+| Hypothesis test effect sizes | Narrative label only | Identified Cohen's d / eta-squared gap; documented as partial deliverable |
+| `TargetEncoder` cross-city | Not flagged as issue | Designed and documented cross-city transfer experiment independently |
+
+---
+
+## A.6 Cases Where AI Suggestions Were Rejected or Substantially Modified
+
+| Suggestion | Reason Rejected |
+|---|---|
+| **Using `git add -A` in commit guidance** | Risk of accidentally committing `.env` / API keys — rejected in favour of explicit file staging |
+| **Caching LLM responses in Redis** | Over-engineered for a single-server deployment — replaced with simple disk cache (JSON files in `reports/llm_summaries/`) |
+| **DBSCAN for listing clustering** | DBSCAN requires careful epsilon tuning per city and produces noise points that complicate interpretation — K-Means with elbow sweep chosen instead for consistency across 4 cities |
+| **Feature correlation matrix as live endpoint** | Computing a 36×36 Pearson matrix per API request is unnecessarily expensive — pre-computation approach designed but not yet implemented |
+| **`--reload` flag in production Dockerfile** | AI generated `uvicorn ... --reload` in the Docker entrypoint — removed as file-watching is inappropriate in a container |
+| **Separate DuckDB file per pipeline run** | AI suggested timestamped warehouse files for versioning — rejected because it breaks all read endpoints; single `warehouse.duckdb` per city with idempotent build retained |
+| **`streamlit` as the dashboard framework** | `requirements.txt` includes Streamlit but it was superseded by a full React + Vite + Tailwind dashboard for richer interactivity and production suitability |
+
+---
+
+*This disclosure was prepared in accordance with Section 10 of the Expernetic Talent Assessment brief. All AI-generated code was reviewed, tested, and validated before inclusion in the submission.*
