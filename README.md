@@ -10,6 +10,8 @@ FastAPI-first pipeline covering ingestion → cleaning → enrichment → wareho
 
 ## Quick Start
 
+If the pipeline artefacts (`data/processed/`, `models/`, `reports/tables/`) are already present:
+
 ```bash
 python -m venv .venv
 .venv\Scripts\activate          # Windows
@@ -20,6 +22,8 @@ uvicorn src.api.app:app --reload --port 8000
 ```
 
 Interactive docs: **http://localhost:8000/docs**
+
+Starting from scratch? See **[Full Setup](#full-setup)** below — the pipeline must run first.
 
 ---
 
@@ -288,20 +292,48 @@ tests/                      pytest data-quality test suite
 
 ## Full Setup
 
+**Prerequisites:** Python 3.11+, Node.js 20+ (dashboard only), Git
+
 ```bash
 # 1. Create and activate virtual environment
 python -m venv .venv
 .venv\Scripts\activate        # Windows
 source .venv/bin/activate     # macOS / Linux
 
-# 2. Install dependencies
+# 2. Install Python dependencies
 pip install -r requirements.txt
-# Key packages: fastapi uvicorn lightgbm scikit-learn shap duckdb pandas pyarrow joblib pydantic
+
+# 3. Set the Groq API key (required for /analytics/llm/* endpoints)
+echo "GROQ_API_KEY=your_key_here" > .env
+# Free key at https://console.groq.com — all other endpoints work without it
+
+# 4. Run the full pipeline for all four cities (see "Running the Pipeline" below)
+# Data is downloaded automatically by the ingestion step — no manual download needed.
+# Steps must run in order 1 → 9; the server reads the artefacts they produce.
+
+# 5. Start the API server
+uvicorn src.api.app:app --port 8000
 ```
+
+Interactive docs: **http://localhost:8000/docs**
 
 ---
 
 ## Running the Pipeline
+
+Steps must run in order. Each step reads the artefacts produced by the previous one.
+
+| Step | What it produces |
+|---|---|
+| 1 — Ingest → load | `listing_master.parquet`, `warehouse.duckdb` |
+| 2 — Quality tests | pass/fail gate before modelling |
+| 3 — Listing features | `feature_matrix.parquet`, `clustering_features.parquet` |
+| 4 — Train price model | `models/{city}_price_model.joblib` |
+| 5 — Evaluate & explain | `reports/model_results/` (MAE, SHAP, residuals) |
+| 6 — Listing clustering | `models/{city}_kmeans.joblib`, cluster labels |
+| 7 — Host clustering | `models/{city}_host_kmeans.joblib`, host labels |
+| 8 — EDA CSVs | `reports/tables/{city}/` (23 files) |
+| 9 — Dashboard | served at localhost:5173 |
 
 ### Step 1 — Ingest, clean, enrich, and load (all cities)
 
