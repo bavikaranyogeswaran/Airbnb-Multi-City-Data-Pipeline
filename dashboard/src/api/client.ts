@@ -20,7 +20,9 @@ export const endpoints = {
   minimumNights:        (city: City) => `${BASE}/analytics/temporal/minimum-nights?city=${city}`,
   hypothesisTests:      (city: City) => `${BASE}/analytics/stats/hypothesis-tests?city=${city}`,
   regressionSummary:    (city: City) => `${BASE}/analytics/stats/regression/summary?city=${city}`,
-  reviewSummary:        (city: City) => `${BASE}/analytics/reviews/summary?city=${city}`,
+  reviewSummary:             (city: City) => `${BASE}/analytics/reviews/summary?city=${city}`,
+  reviewPriceScoreBuckets:   (city: City) => `${BASE}/analytics/reviews/price-score-buckets?city=${city}`,
+  reviewAnomalies:           (city: City, limit = 10) => `${BASE}/analytics/reviews/anomalies?city=${city}&limit=${limit}`,
   cityComparison:       ()           => `${BASE}/analytics/comparison/cities`,
   roomTypeComparison:   ()           => `${BASE}/analytics/comparison/room-types`,
   llmSummary:           (city: City, type: string, refresh = false) =>

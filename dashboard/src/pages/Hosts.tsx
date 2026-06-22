@@ -169,6 +169,72 @@ export default function Hosts({ city }: Props) {
           )}
         </div>
       </div>
+
+      {/* Tenure — occupancy rate + superhost rate */}
+      <div className="grid grid-cols-2 gap-5 mt-5">
+        <div className="bg-white rounded-xl border border-gray-200 p-5">
+          <h2 className="text-base font-semibold text-brand-dark mb-1">Occupancy Rate by Host Tenure</h2>
+          <p className="text-xs text-brand-gray mb-3">
+            Median occupancy (1 − availability/365). Veterans show substantially higher booking density.
+          </p>
+          {tenure.loading && <Loading />}
+          {tenure.error   && <Err message={tenure.error} />}
+          {tenure.data && (
+            <ResponsiveContainer width="100%" height={230}>
+              <BarChart data={tenure.data} margin={{ top: 10, right: 20, bottom: 40, left: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                <XAxis dataKey="tenure_band" tick={{ fontSize: 10 }} angle={-25} textAnchor="end" interval={0} />
+                <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 11 }} domain={[0, 1]} />
+                <Tooltip formatter={(v) => [`${((v as number) * 100).toFixed(0)}%`, 'Occupancy rate']} />
+                <Bar dataKey="median_occupancy" fill={color} radius={[4, 4, 0, 0]}>
+                  <LabelList
+                    dataKey="median_occupancy"
+                    position="top"
+                    formatter={(v: number) => `${(v * 100).toFixed(0)}%`}
+                    style={{ fontSize: 10 }}
+                  />
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          )}
+        </div>
+
+        <div className="bg-white rounded-xl border border-gray-200 p-5">
+          <h2 className="text-base font-semibold text-brand-dark mb-1">Rating &amp; Superhost Rate by Tenure</h2>
+          <p className="text-xs text-brand-gray mb-3">
+            Longer-tenured hosts earn marginally higher ratings and Superhost status at greater rates.
+          </p>
+          {tenure.loading && <Loading />}
+          {tenure.error   && <Err message={tenure.error} />}
+          {tenure.data && (
+            <>
+              <ResponsiveContainer width="100%" height={130}>
+                <BarChart data={tenure.data} margin={{ top: 5, right: 20, bottom: 5, left: 5 }}>
+                  <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                  <XAxis dataKey="tenure_band" tick={{ fontSize: 9 }} />
+                  <YAxis domain={[4.6, 5]} tickFormatter={(v) => v.toFixed(2)} tick={{ fontSize: 10 }} />
+                  <Tooltip formatter={(v) => [(v as number).toFixed(2), 'Median rating']} />
+                  <Bar dataKey="median_rating" fill={color} radius={[4, 4, 0, 0]}>
+                    <LabelList dataKey="median_rating" position="top" formatter={(v: number) => v.toFixed(2)} style={{ fontSize: 9 }} />
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+              <p className="text-xs text-brand-gray mt-3 mb-1 font-medium">Superhost rate</p>
+              <ResponsiveContainer width="100%" height={100}>
+                <BarChart data={tenure.data} margin={{ top: 5, right: 20, bottom: 5, left: 5 }}>
+                  <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                  <XAxis dataKey="tenure_band" tick={{ fontSize: 9 }} />
+                  <YAxis tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} tick={{ fontSize: 10 }} />
+                  <Tooltip formatter={(v) => [`${((v as number) * 100).toFixed(1)}%`, 'Superhost rate']} />
+                  <Bar dataKey="superhost_rate" fill="#FC642D" radius={[4, 4, 0, 0]}>
+                    <LabelList dataKey="superhost_rate" position="top" formatter={(v: number) => `${(v * 100).toFixed(0)}%`} style={{ fontSize: 9 }} />
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

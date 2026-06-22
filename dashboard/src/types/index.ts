@@ -113,9 +113,31 @@ export interface HostSegment {
 export interface HostTenure {
   tenure_band: string;
   listing_count: number;
+  unique_hosts: number;
   median_price: number;
   median_rating: number;
   superhost_rate: number;
+  median_occupancy: number;
+}
+
+export interface ReviewPriceScoreBucket {
+  review_count_bucket: string;
+  listing_count: number;
+  median_price: number;
+  mean_price: number;
+  median_rating: number | null;
+  mean_rating: number | null;
+}
+
+export interface ReviewAnomaly {
+  id: number;
+  neighbourhood_cleansed: string;
+  room_type: string;
+  price_numeric: number | null;
+  number_of_reviews: number;
+  review_scores_rating: number;
+  review_scores_cleanliness: number;
+  host_segment: string;
 }
 
 export interface MonthlyAvailability {

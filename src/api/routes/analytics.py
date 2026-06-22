@@ -88,7 +88,8 @@ def analytics_index() -> dict:
         "reviews": {
             "summary":       "GET /analytics/reviews/summary",
             "subdimensions": "GET /analytics/reviews/subdimensions",
-            "anomalies":     "GET /analytics/reviews/anomalies?limit=50",
+            "anomalies":            "GET /analytics/reviews/anomalies?limit=50",
+            "price_score_buckets":  "GET /analytics/reviews/price-score-buckets?city=london",
         },
         "stats": {
             "hypothesis_tests":        "GET /analytics/stats/hypothesis-tests",
@@ -381,6 +382,13 @@ def reviews_subdimensions(
     city: Annotated[str, Query()] = "london",
 ) -> list[dict]:
     return csv_to_records(_t("review_subdimension_summary.csv", city))
+
+
+@router.get("/reviews/price-score-buckets", summary="Median price and rating by review count bucket")
+def reviews_price_score_buckets(
+    city: Annotated[str, Query()] = "london",
+) -> list[dict]:
+    return csv_to_records(_t("review_price_score_buckets.csv", city))
 
 
 @router.get("/reviews/anomalies", summary="High-review / low-score anomaly listings")

@@ -1,0 +1,6 @@
+review_count_bucket,listing_count,median_price,mean_price,median_rating,mean_rating
+0 reviews,5147,102.0,187.1,,
+1-5,5310,108.0,164.7,5.0,4.449
+6-20,4234,108.0,144.0,4.71,4.633
+21-100,6375,113.0,141.8,4.74,4.704
+100+,3934,115.0,156.3,4.77,4.746
