@@ -1,0 +1,30 @@
+# syntax=docker/dockerfile:1
+# ── Airbnb Market Intelligence — Dashboard ────────────────────────────────────
+
+# ── Stage 1: build the React app ──────────────────────────────────────────────
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+# Install dependencies with BuildKit npm cache — the global npm cache
+# persists across builds so packages are not re-downloaded each time.
+COPY dashboard/package.json dashboard/package-lock.json ./
+RUN --mount=type=cache,target=/root/.npm \
+    npm ci --prefer-offline
+
+# Copy source and build.
+# API_TARGET is only used by the Vite dev-server proxy and is not baked
+# into the production bundle; nginx handles /api proxying at runtime.
+COPY dashboard/ .
+RUN npm run build
+
+# ── Stage 2: serve the static bundle with nginx ───────────────────────────────
+FROM nginx:alpine
+
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

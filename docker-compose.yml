@@ -1,0 +1,53 @@
+name: airbnb-intel
+
+services:
+
+  # ── FastAPI backend ──────────────────────────────────────────────────────────
+  api:
+    image: airbnb-intel-api:latest
+    container_name: airbnb-api
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    env_file: .env                       # injects GROQ_API_KEY and any other secrets
+    volumes:
+      - ./data:/app/data:ro              # raw + processed Airbnb data (read-only)
+      - ./reports:/app/reports           # EDA artefacts, GeoJSON, tables (writable)
+      - ./models:/app/models             # trained ML pipelines (writable)
+      - ./logs:/app/logs                 # pipeline logs (writable)
+      - ./config:/app/config:ro          # cities.yml (read-only)
+    ports:
+      - "127.0.0.1:8000:8000"            # expose locally for direct API / curl access
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 15s
+      retries: 3
+    stop_grace_period: 10s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
+
+  # ── React dashboard (nginx) ──────────────────────────────────────────────────
+  dashboard:
+    image: airbnb-intel-dashboard:latest
+    container_name: airbnb-dashboard
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    ports:
+      - "127.0.0.1:80:80"               # main entry point for the browser
+    depends_on:
+      api:
+        condition: service_healthy       # wait until API passes its health check
+    stop_grace_period: 5s
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "2"
+    restart: unless-stopped

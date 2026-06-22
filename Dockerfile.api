@@ -1,0 +1,41 @@
+# syntax=docker/dockerfile:1
+# ── Airbnb Market Intelligence — API ──────────────────────────────────────────
+# Matches local Python 3.13. pyogrio (pulled in by geopandas 1.1+) bundles
+# GDAL internally, so no system GDAL packages are required.
+FROM python:3.13-slim
+
+# Prevent .pyc files and enable unbuffered stdout/stderr for clean Docker logs
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+# curl is needed only for the HEALTHCHECK command
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends curl \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Install Python deps with BuildKit pip cache so repeated builds reuse
+# the downloaded wheels instead of re-fetching from PyPI each time.
+COPY requirements.txt .
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install -r requirements.txt
+
+# Copy application source and static config
+COPY src/    src/
+COPY config/ config/
+
+# Pre-create volume mount-points so they exist before Docker attaches them.
+# data/ and config/ are read-only; reports/, models/, logs/ are read-write.
+RUN mkdir -p data reports models logs
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
+    CMD curl -f http://localhost:8000/health || exit 1
+
+# Single worker — DuckDB file locks prevent safe multi-worker access.
+CMD ["uvicorn", "src.api.app:app", \
+     "--host", "0.0.0.0", \
+     "--port", "8000", \
+     "--log-level", "info"]
