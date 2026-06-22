@@ -1,0 +1,94 @@
+<svg viewBox="0 0 900 455" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Airbnb Intel — System Architecture</title>
+  <desc>Data pipeline from insideairbnb.com through 6 stages to pre-computed artefacts; FastAPI reads artefacts and serves 50+ endpoints; nginx reverse-proxies to a React dashboard; all containerised on Docker Compose and deployed to AWS EC2 t3.micro.</desc>
+
+  <defs>
+    <marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0.5 L0,6.5 L7,3.5 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="455" fill="#ffffff"/>
+
+  <!-- Infrastructure band -->
+  <rect x="10" y="375" width="880" height="68" rx="8" fill="#0f172a"/>
+  <text x="450" y="396" text-anchor="middle" font-size="9" font-weight="700" fill="#475569" letter-spacing="1.5" font-family="ui-sans-serif,sans-serif">DOCKER COMPOSE  ·  AWS EC2 t3.micro  ·  13.53.108.244</text>
+  <text x="450" y="416" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="ui-sans-serif,sans-serif">airbnb-api (:8000)  +  airbnb-dashboard (:80)</text>
+
+  <!-- Divider -->
+  <line x1="435" y1="28" x2="435" y2="367" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Panel headers -->
+  <text x="217" y="22" text-anchor="middle" font-size="9" font-weight="700" fill="#94a3b8" letter-spacing="1.5" font-family="ui-sans-serif,sans-serif">DATA PIPELINE</text>
+  <text x="667" y="22" text-anchor="middle" font-size="9" font-weight="700" fill="#94a3b8" letter-spacing="1.5" font-family="ui-sans-serif,sans-serif">SERVING STACK</text>
+
+  <!-- Source -->
+  <rect x="20" y="32" width="395" height="44" rx="6" fill="#ffffff" stroke="#f97316" stroke-width="2"/>
+  <text x="217" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="#f97316" font-family="ui-sans-serif,sans-serif">insideairbnb.com</text>
+  <text x="217" y="66" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="ui-sans-serif,sans-serif">London · Amsterdam · Madrid · Berlin</text>
+
+  <!-- arrow source → pipeline -->
+  <line x1="217" y1="76" x2="217" y2="91" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Pipeline container -->
+  <rect x="20" y="92" width="395" height="203" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="217" y="108" text-anchor="middle" font-size="8" font-weight="700" fill="#94a3b8" letter-spacing="1" font-family="ui-sans-serif,sans-serif">src/</text>
+
+  <!-- Stage chips -->
+  <rect x="34" y="114" width="367" height="24" rx="4" fill="#334155"/>
+  <text x="217" y="130" text-anchor="middle" font-size="10" font-weight="600" fill="#ffffff" font-family="ui-sans-serif,sans-serif">Ingestion</text>
+  <line x1="217" y1="138" x2="217" y2="143" stroke="#475569" stroke-width="1"/>
+
+  <rect x="34" y="143" width="367" height="24" rx="4" fill="#334155"/>
+  <text x="217" y="159" text-anchor="middle" font-size="10" font-weight="600" fill="#ffffff" font-family="ui-sans-serif,sans-serif">Cleaning + Enrichment</text>
+  <line x1="217" y1="167" x2="217" y2="172" stroke="#475569" stroke-width="1"/>
+
+  <rect x="34" y="172" width="367" height="24" rx="4" fill="#1e40af"/>
+  <text x="217" y="188" text-anchor="middle" font-size="10" font-weight="600" fill="#ffffff" font-family="ui-sans-serif,sans-serif">DuckDB Warehouse</text>
+  <line x1="217" y1="196" x2="217" y2="201" stroke="#475569" stroke-width="1"/>
+
+  <rect x="34" y="201" width="367" height="24" rx="4" fill="#334155"/>
+  <text x="217" y="217" text-anchor="middle" font-size="10" font-weight="600" fill="#ffffff" font-family="ui-sans-serif,sans-serif">EDA + Statistical Analysis</text>
+  <line x1="217" y1="225" x2="217" y2="230" stroke="#475569" stroke-width="1"/>
+
+  <rect x="34" y="230" width="367" height="24" rx="4" fill="#334155"/>
+  <text x="217" y="246" text-anchor="middle" font-size="10" font-weight="600" fill="#ffffff" font-family="ui-sans-serif,sans-serif">ML Pricing + K-Means Segmentation</text>
+  <line x1="217" y1="254" x2="217" y2="259" stroke="#475569" stroke-width="1"/>
+
+  <rect x="34" y="259" width="367" height="24" rx="4" fill="#334155"/>
+  <text x="217" y="275" text-anchor="middle" font-size="10" font-weight="600" fill="#ffffff" font-family="ui-sans-serif,sans-serif">LLM Summaries + Text-to-SQL</text>
+
+  <!-- arrow pipeline → artefacts -->
+  <line x1="217" y1="295" x2="217" y2="310" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Artefacts box -->
+  <rect x="20" y="311" width="395" height="44" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="217" y="328" text-anchor="middle" font-size="8" font-weight="700" fill="#94a3b8" letter-spacing="1" font-family="ui-sans-serif,sans-serif">PRE-COMPUTED ARTEFACTS</text>
+  <text x="217" y="345" text-anchor="middle" font-size="8.5" fill="#94a3b8" font-family="ui-monospace,monospace">Parquet · DuckDB · CSVs · models/ · llm cache</text>
+
+  <!-- FastAPI -->
+  <rect x="450" y="32" width="430" height="148" rx="8" fill="#1d4ed8"/>
+  <text x="665" y="54" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="ui-sans-serif,sans-serif">FastAPI</text>
+  <text x="665" y="70" text-anchor="middle" font-size="9" fill="#93c5fd" font-family="ui-sans-serif,sans-serif">50+ endpoints  ·  OpenAPI /docs</text>
+  <line x1="460" y1="78" x2="870" y2="78" stroke="#1e40af" stroke-width="0.5"/>
+  <text x="460" y="95" font-size="9" fill="#bfdbfe" font-family="ui-monospace,monospace">/analytics  /ml  /clustering  /llm</text>
+  <text x="460" y="113" font-size="9" fill="#bfdbfe" font-family="ui-monospace,monospace">/warehouse  /quality  /orchestration</text>
+  <rect x="460" y="122" width="410" height="22" rx="3" fill="none" stroke="#f97316" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="665" y="137" text-anchor="middle" font-size="8.5" fill="#fed7aa" font-family="ui-sans-serif,sans-serif">Groq API (external)  ·  llama-3.3-70b</text>
+
+  <!-- arrow FastAPI → nginx -->
+  <line x1="665" y1="180" x2="665" y2="198" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- nginx -->
+  <rect x="450" y="199" width="430" height="48" rx="6" fill="#1e293b"/>
+  <text x="665" y="220" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" font-family="ui-sans-serif,sans-serif">nginx · :80</text>
+  <text x="665" y="235" text-anchor="middle" font-size="8.5" fill="#475569" font-family="ui-sans-serif,sans-serif">/api → FastAPI  ·  / → React static</text>
+
+  <!-- arrow nginx → React -->
+  <line x1="665" y1="247" x2="665" y2="265" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- React Dashboard -->
+  <rect x="450" y="266" width="430" height="65" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="665" y="292" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a" font-family="ui-sans-serif,sans-serif">React Dashboard</text>
+  <text x="665" y="311" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="ui-sans-serif,sans-serif">8 pages  ·  Recharts  ·  Leaflet  ·  city selector</text>
+</svg>

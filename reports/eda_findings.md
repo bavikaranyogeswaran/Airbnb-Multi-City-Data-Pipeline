@@ -4,7 +4,7 @@
 **Cities:** London (snapshot 2025-09-14) · Amsterdam (snapshot 2025-09-11) · Madrid (snapshot 2025-09-14) · Berlin (snapshot 2025-09-23)  
 **Notebooks:** `notebooks/03_exploratory_data_analysis.ipynb` (London) · `notebooks/04_statistical_analysis.ipynb` · `notebooks/05_amsterdam_eda.ipynb`  
 **EDA generator:** `src/analytics/run_eda.py` — produces all 22 CSVs per city (incl. hypothesis tests and OLS regression) into `reports/tables/<city>/`  
-**Updated:** 2026-06-21
+**Updated:** 2026-06-22
 
 ---
 
@@ -157,10 +157,20 @@ Each finding follows the Section 11 framework: Question → Evidence → Interpr
 ### F-07 · High Review Count Does Not Signal Premium Pricing
 
 **Question:** Do listings with more reviews charge more?  
-**Evidence:** The median price trend line in Chart 20 is flat-to-declining as review count increases. High-review listings (> P75 = 20) have lower median prices than low-review listings.  
-**Interpretation:** Review count is a proxy for throughput, not premium positioning. Affordable, high-turnover listings accumulate reviews faster than luxury listings, which have fewer, longer stays.  
+**Evidence:** Median price by review count bucket (London; `review_price_score_buckets.csv`):
+
+| Review count | Listings | Median price | Median rating |
+|---|---|---|---|
+| 0 reviews | 24,122 | £150 | — |
+| 1–5 | 26,672 | £141 | 5.00 |
+| 6–20 | 22,096 | £136 | 4.80 |
+| 21–100 | 19,338 | £125 | 4.81 |
+| 100+ | 4,643 | £86 | 4.81 |
+
+Median price falls monotonically from £150 (unreviewed) to £86 (100+ reviews). Rating stabilises at 4.80–4.81 after the first few reviews; the inflated 5.00 for the 1–5 bucket reflects early-reviewer generosity bias.  
+**Interpretation:** Review count is a proxy for throughput and budget positioning, not premium quality. Affordable, high-turnover listings accumulate reviews faster than luxury listings, which have fewer, longer stays. The unreviewed cohort (£150 median) is likely newly listed or luxury/enquiry-only — priced high before the market has tested them.  
 **Business implication:** A dashboard ranking listings by review count will surface budget properties, not high-value ones. Review rate (per month) is a better demand proxy; review score is the quality signal.  
-**Recommended action:** Separate 'review activity' (reviews/month = 0.17 median) from 'review quality' (overall score) in all host-facing dashboards.  
+**Recommended action:** Separate 'review activity' (reviews/month = 0.17 median) from 'review quality' (overall score) in all host-facing dashboards. Flag the 100+ bucket as high-throughput / value-positioned — these hosts need volume-based analytics, not premium-pricing guidance.  
 **Limitation:** Review count is cumulative and favours older listings regardless of current performance. A listing may have 500 reviews from 10 years ago and zero from the last 12 months.
 
 ### F-08 · 38.3% of Listings Are Effectively Inactive

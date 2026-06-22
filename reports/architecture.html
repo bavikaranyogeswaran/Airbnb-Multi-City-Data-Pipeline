@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airbnb Intel — System Architecture</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f1f5f9;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:32px 16px}
+.arch{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fff;padding:24px;max-width:820px;width:100%;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.06)}
+.panels{display:grid;grid-template-columns:1fr 1fr}
+.col{display:flex;flex-direction:column;padding:0 14px}
+.col-left{padding-left:0;border-right:1px solid #e2e8f0;padding-right:18px}
+.col-right{padding-left:18px;padding-right:0}
+.panel-label{font-size:9px;font-weight:700;letter-spacing:1.5px;color:#94a3b8;text-align:center;padding:4px 0 12px}
+
+.source{border:2px solid #f97316;border-radius:8px;padding:10px 14px;text-align:center}
+.source-title{font-size:14px;font-weight:700;color:#f97316}
+.source-sub{font-size:9px;color:#94a3b8;margin-top:2px}
+
+.arrow{text-align:center;color:#cbd5e1;font-size:16px;padding:4px 0;flex-shrink:0}
+
+.pipeline{border:1.5px solid #e2e8f0;border-radius:8px;background:#f8fafc;padding:8px 10px;flex:1}
+.pipeline-label{font-size:8px;font-weight:700;letter-spacing:1px;color:#94a3b8;text-align:center;margin-bottom:8px}
+.chip{border-radius:5px;padding:7px 12px;font-size:10px;font-weight:600;color:#fff;cursor:default;transition:filter .15s}
+.chip:hover{filter:brightness(1.15)}
+.chip-gray{background:#334155}
+.chip-blue{background:#1e40af}
+.conn{width:1px;height:5px;background:#475569;margin:0 auto}
+
+.artefacts{border:1px solid #e2e8f0;border-radius:8px;background:#f8fafc;padding:8px 12px;text-align:center}
+.artefacts-label{font-size:8px;font-weight:700;letter-spacing:1px;color:#94a3b8;margin-bottom:4px}
+.artefacts-line{font-size:8px;color:#94a3b8;font-family:ui-monospace,monospace}
+
+.fastapi{background:#1d4ed8;border-radius:8px;padding:12px 14px;flex-shrink:0}
+.fastapi-title{font-size:14px;font-weight:700;color:#fff;text-align:center;margin-bottom:3px}
+.fastapi-sub{font-size:9px;color:#93c5fd;text-align:center;margin-bottom:8px}
+.fastapi-div{border-top:.5px solid #1e40af;margin:0 0 7px}
+.router{font-size:9px;font-family:ui-monospace,monospace;color:#bfdbfe;line-height:2.1}
+.groq{border:1px dashed #f97316;border-radius:4px;padding:4px 8px;margin-top:8px;font-size:8px;color:#fed7aa;text-align:center}
+
+.nginx{background:#1e293b;border-radius:6px;padding:10px 14px;text-align:center;flex-shrink:0}
+.nginx-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:2px}
+.nginx-sub{font-size:8.5px;color:#475569}
+
+.react{border:1.5px solid #e2e8f0;border-radius:8px;background:#f8fafc;padding:10px 12px;flex:1;text-align:center}
+.react-title{font-size:13px;font-weight:700;color:#0f172a}
+.react-sub{font-size:9px;color:#94a3b8;margin-top:3px}
+
+.infra{background:#0f172a;border-radius:8px;padding:12px 16px;margin-top:14px;text-align:center}
+.infra-title{font-size:9px;font-weight:700;letter-spacing:1.5px;color:#475569;margin-bottom:4px}
+.infra-l1{font-size:9.5px;color:#cbd5e1}
+</style>
+</head>
+<body>
+<div class="arch">
+  <div class="panels">
+
+    <div class="col col-left">
+      <div class="panel-label">DATA PIPELINE</div>
+
+      <div class="source">
+        <div class="source-title">insideairbnb.com</div>
+        <div class="source-sub">London · Amsterdam · Madrid · Berlin</div>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="pipeline">
+        <div class="pipeline-label">src/</div>
+        <div class="chip chip-gray">Ingestion</div>
+        <div class="conn"></div>
+        <div class="chip chip-gray">Cleaning + Enrichment</div>
+        <div class="conn"></div>
+        <div class="chip chip-blue">DuckDB Warehouse</div>
+        <div class="conn"></div>
+        <div class="chip chip-gray">EDA + Statistical Analysis</div>
+        <div class="conn"></div>
+        <div class="chip chip-gray">ML Pricing + K-Means Segmentation</div>
+        <div class="conn"></div>
+        <div class="chip chip-gray">LLM Summaries + Text-to-SQL</div>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="artefacts">
+        <div class="artefacts-label">PRE-COMPUTED ARTEFACTS</div>
+        <div class="artefacts-line">Parquet · DuckDB · CSVs · models/ · llm cache</div>
+      </div>
+    </div>
+
+    <div class="col col-right">
+      <div class="panel-label">SERVING STACK</div>
+
+      <div class="fastapi">
+        <div class="fastapi-title">FastAPI</div>
+        <div class="fastapi-sub">50+ endpoints · OpenAPI /docs</div>
+        <div class="fastapi-div"></div>
+        <div class="router">/analytics &nbsp; /ml &nbsp; /clustering &nbsp; /llm</div>
+        <div class="router">/warehouse &nbsp; /quality &nbsp; /orchestration</div>
+        <div class="groq">Groq API (external) · llama-3.3-70b</div>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="nginx">
+        <div class="nginx-title">nginx · :80</div>
+        <div class="nginx-sub">/api → FastAPI &nbsp;·&nbsp; / → React static</div>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="react">
+        <div class="react-title">React Dashboard</div>
+        <div class="react-sub">8 pages · Recharts · Leaflet · city selector</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="infra">
+    <div class="infra-title">DOCKER COMPOSE · AWS EC2 t3.micro · 13.53.108.244</div>
+    <div class="infra-l1">airbnb-api (:8000) &nbsp;+&nbsp; airbnb-dashboard (:80)</div>
+  </div>
+</div>
+</body>
+</html>

@@ -128,6 +128,56 @@ Silhouette scores — listings: London 0.151, Amsterdam 0.155, Madrid 0.150, Ber
 
 ---
 
+## Implementation Status (§11.1)
+
+Cross-reference of every assessment section against what was delivered.
+
+### Completed ✅
+
+| Section | Deliverable | Evidence |
+|---|---|---|
+| §1 Dataset Familiarisation | Schema profiling, candidate-key analysis, field assumptions (A-001–A-036), data limitations | `reports/file_purpose.md`, `reports/assumptions_log.md`, `reports/data_limitations.md`, `GET /familiarization/*` |
+| §2 Data Ingestion | City-agnostic download pipeline, manifest, quality report; all 4 cities | `src/ingestion/`, `POST /ingestion/all?city=*` |
+| §3 Data Cleaning | Rejection records, silver-layer Parquet, pytest data-quality suite (13/13 checks pass) | `src/cleaning/`, `tests/`, `GET /completion-gate` |
+| §3 DuckDB Warehouse | Star schema (5 dims + 3 facts), 8 tables, named SQL queries, SCD-2 placeholders on `dim_host` | `data/processed/{city}/warehouse.duckdb`, `sql/`, `GET /warehouse/*` |
+| §3 FastAPI Service | 50+ endpoints across 10 routers; OpenAPI docs at `/docs` | `src/api/`, `GET /index` |
+| §3.6 Cloud Deployment | AWS EC2 t3.micro (free tier); Docker + Compose; public endpoint at 13.53.108.244 | `Dockerfile.api`, `Dockerfile.dashboard`, `docker-compose.yml`, `docker-compose.cloud.yml`, `scripts/deploy.sh` |
+| §4.1 Price Distributions | Histogram, room-type boxplots, neighbourhood medians (top 15), CI bands, distance-band gradient | `reports/tables/*/price_by_room_type.csv`, `price_by_neighbourhood.csv`, `price_by_distance_band.csv` |
+| §4.2 Neighbourhood Analysis | Listing-density choropleth, median-price map, room-type mix heatmap | `reports/tables/*/neighbourhood_*.csv`, `GET /analytics/geographic/*` |
+| §4.3 Host Tenure Distributions | Listing count, median price, occupancy rate (30%→92%), superhost rate, rating by tenure band; all 4 cities | `reports/tables/*/host_tenure_summary.csv`, dashboard Hosts page |
+| §4.4 Temporal Patterns | Monthly occupancy/availability trend, review volume 2009–2025, weekday vs weekend, min-nights policy | `reports/tables/*/monthly_availability.csv`, `weekday_weekend_summary.csv` |
+| §4.5 Review Count / Score / Price | Price and rating by review-count bucket (0→100+); high-review / low-score anomaly listings; sub-dimension correlation matrix | `reports/tables/*/review_price_score_buckets.csv`, `high_review_low_score_listings.csv`, dashboard Statistics page |
+| §5 Hypothesis Testing | 5 tests (Mann-Whitney, Kruskal-Wallis) with p-value, effect size, conclusion; α = 0.05 | `reports/tables/*/hypothesis_tests.csv`, `GET /analytics/stats/hypothesis-tests` |
+| §5 OLS Regression | Log-price ~ room type + neighbourhood + host + availability; R², F-stat, coefficients | `reports/tables/*/regression_*.csv`, `GET /analytics/stats/regression/*` |
+| §6 ML Price Prediction | LightGBM (best city MAE: £77 London, €46 Berlin); GroupShuffleSplit by host_id; SHAP + permutation importance; cross-city transfer test | `models/{city}_price_model.joblib`, `reports/model_results/`, `POST /analytics/ml/predict` |
+| §7 Market Segmentation | K-Means listing clustering (auto-k: 5 or 8 per city); silhouette scoring; interpretable segment names | `models/{city}_kmeans.joblib`, `reports/model_results/clustering_profile_*.csv`, `GET /analytics/clustering/*` |
+| §8 Host Segmentation | K-Means on per-host portfolio aggregates (13 features); Passive Listers / Professional Superhosts / Occasional Hosts pattern universal across all cities | `models/{city}_host_kmeans.joblib`, `GET /analytics/clustering/host-*` |
+| §9 LLM Narrative Summaries | Groq-backed city overview, model performance, cluster, and host narratives; disk-cached; cross-city comparative | `src/llm/`, `reports/llm_summaries/`, `GET /analytics/llm/summary` |
+| §9 Text-to-SQL Q&A | Natural-language → DuckDB SQL → explanation; schema-aware prompt; read-only guard | `src/llm/sql_runner.py`, `POST /analytics/llm/ask` |
+| §10 Interactive Dashboard | React + Vite + Tailwind; 8 pages; city selector; Leaflet choropleth maps; Recharts; served via nginx reverse-proxy | `dashboard/`, live at `http://13.53.108.244` |
+| §11.2 Engineering Decisions | 20+ decisions documented with problem / options / selected / trade-offs | `reports/engineering_decisions.md` |
+| §11.3 Data Limitations | A-005 calendar-price null, single-snapshot caveat, review-count bias, host-identity ambiguity | `reports/data_limitations.md` |
+| §11.4 Assumptions Log | A-001–A-036: field-level assumptions, scraping artefacts, calendar interpretation | `reports/assumptions_log.md` |
+
+### Partial ⚠️
+
+| Section | Gap | What exists |
+|---|---|---|
+| §5 Effect sizes | Cohen's d / eta-squared not in output | p-value, test statistic, and a narrative effect label are present but not a standardised effect-size coefficient |
+| §5 Multicollinearity | VIF not computed | OLS coefficients and R² are available; no variance inflation factor table |
+| §5 Correlation matrix | No full feature-correlation matrix endpoint | Sub-dimension review correlations exist (`GET /analytics/reviews/subdimensions`); listing-feature Pearson matrix not exposed |
+| §10 Architecture diagram | Diagram covers pipeline and serving but not the DuckDB star-schema detail or ML feature flow | `reports/architecture.svg` — embedded in §Architecture Diagram above |
+
+### Not Implemented ❌
+
+| Section | Deliverable | Reason / Notes |
+|---|---|---|
+| §12 PDF Report | Minimum 20-page written report (15 sections) | Not produced — all findings live in `reports/eda_findings.md`, the dashboard, and API responses |
+| §11 Presentation Deck | Slide deck summarising methodology and findings | Not produced |
+| §4 Demand Forecasting | Availability / occupancy prediction over time | Single-snapshot dataset; no multi-snapshot time series available to train a forecasting model |
+
+---
+
 ## Project Layout
 
 ```
@@ -154,10 +204,10 @@ models/
   {city}_model_metadata.json      35-key model card
 
 reports/
-  tables/                   London EDA CSVs (22 files)
-  tables/amsterdam/         Amsterdam EDA CSVs (22 files)
-  tables/madrid/            Madrid EDA CSVs (22 files)
-  tables/berlin/            Berlin EDA CSVs (22 files)
+  tables/                   London EDA CSVs (23 files)
+  tables/amsterdam/         Amsterdam EDA CSVs (23 files)
+  tables/madrid/            Madrid EDA CSVs (23 files)
+  tables/berlin/            Berlin EDA CSVs (23 files)
   llm_summaries/            Cached Groq narrative summaries (city + cross-city)
   model_results/            ML + clustering outputs (all cities)
     full_model_comparison_{city}.csv
@@ -404,6 +454,7 @@ All analytics read endpoints serve pre-computed CSVs/JSON. Run the pipeline firs
 - `GET /analytics/reviews/summary?city=london`
 - `GET /analytics/reviews/subdimensions?city=amsterdam`
 - `GET /analytics/reviews/anomalies?city=london&limit=50`
+- `GET /analytics/reviews/price-score-buckets?city=london` — median price and rating by review count bucket (0, 1–5, 6–20, 21–100, 100+)
 
 **Statistical Analysis**
 - `GET /analytics/stats/hypothesis-tests?city=amsterdam` — H1–H5 test results
@@ -617,6 +668,12 @@ Stages: `ingest → profile → clean → transform → load`. Idempotent by def
 - `GET /familiarization/schema` — column names, types, sample values
 - `GET /familiarization/assumptions` — 36 documented field assumptions (A-001–A-036)
 - `GET /familiarization/limitations` — coverage gaps and scraping artifacts
+
+---
+
+## Architecture Diagram
+
+![System Architecture](reports/architecture.svg)
 
 ---
 
