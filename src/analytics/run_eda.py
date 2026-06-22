@@ -145,6 +145,12 @@ def run(city: str) -> dict:
     _save(summary, "numerical_summary.csv")
 
     # ── 2. price_by_room_type ─────────────────────────────────────────────────
+    rt_grp = eda.groupby("room_type")["price_numeric"]
+    rt_ci = (
+        rt_grp.apply(_price_ci)
+        .apply(pd.Series)
+        .rename(columns={0: "ci_lower", 1: "ci_upper"})
+    )
     price_by_room = (
         eda.groupby("room_type")
         .agg(
@@ -156,6 +162,7 @@ def run(city: str) -> dict:
             p95=("price_numeric", lambda x: x.quantile(0.95)),
         )
         .sort_values("median_price", ascending=False)
+        .join(rt_ci)
         .round(0)
     )
     _save(price_by_room, "price_by_room_type.csv")
