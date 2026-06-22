@@ -1,0 +1,68 @@
+neighbourhood_cleansed,room_type,listing_count,median_price,mean_price,ci_lower,ci_upper
+Barking and Dagenham,entire_home,277,146.0,164.0,153.0,176.0
+Barking and Dagenham,private_room,266,43.0,51.0,47.0,54.0
+Barnet,entire_home,1200,133.0,165.0,157.0,174.0
+Barnet,private_room,530,56.0,78.0,60.0,97.0
+Bexley,entire_home,251,130.0,188.0,146.0,229.0
+Bexley,private_room,245,43.0,50.0,47.0,53.0
+Brent,entire_home,1238,148.0,224.0,172.0,276.0
+Brent,private_room,818,60.0,99.0,81.0,117.0
+Bromley,entire_home,400,126.0,173.0,137.0,209.0
+Bromley,private_room,272,50.0,64.0,56.0,71.0
+Camden,entire_home,3154,199.0,260.0,244.0,276.0
+Camden,private_room,1141,76.0,101.0,87.0,115.0
+City of London,entire_home,384,248.0,354.0,296.0,413.0
+City of London,private_room,51,169.0,361.0,237.0,485.0
+Croydon,entire_home,599,116.0,147.0,123.0,170.0
+Croydon,private_room,584,45.0,57.0,53.0,61.0
+Ealing,entire_home,931,127.0,193.0,160.0,226.0
+Ealing,private_room,673,55.0,69.0,63.0,74.0
+Enfield,entire_home,339,129.0,178.0,143.0,214.0
+Enfield,private_room,325,49.0,60.0,56.0,64.0
+Greenwich,entire_home,826,149.0,204.0,175.0,232.0
+Greenwich,private_room,505,53.0,72.0,64.0,81.0
+Hackney,entire_home,2246,152.0,190.0,179.0,200.0
+Hackney,private_room,925,63.0,92.0,75.0,108.0
+Hammersmith and Fulham,entire_home,2053,170.0,231.0,217.0,245.0
+Hammersmith and Fulham,private_room,601,73.0,93.0,85.0,102.0
+Haringey,entire_home,866,140.0,183.0,163.0,203.0
+Haringey,private_room,622,57.0,79.0,65.0,92.0
+Harrow,entire_home,261,120.0,150.0,133.0,167.0
+Harrow,private_room,199,48.0,56.0,52.0,61.0
+Havering,entire_home,239,136.0,229.0,141.0,317.0
+Havering,private_room,191,43.0,57.0,48.0,66.0
+Hillingdon,entire_home,294,127.0,174.0,142.0,206.0
+Hillingdon,private_room,420,56.0,63.0,59.0,67.0
+Hounslow,entire_home,519,145.0,201.0,161.0,241.0
+Hounslow,private_room,376,54.0,79.0,56.0,103.0
+Islington,entire_home,1984,167.0,256.0,181.0,330.0
+Islington,private_room,771,74.0,120.0,96.0,143.0
+Kensington and Chelsea,entire_home,4228,238.0,342.0,328.0,355.0
+Kensington and Chelsea,private_room,510,96.0,268.0,62.0,475.0
+Kingston upon Thames,entire_home,297,144.0,185.0,168.0,201.0
+Kingston upon Thames,private_room,188,58.0,66.0,61.0,70.0
+Lambeth,entire_home,1668,164.0,211.0,195.0,227.0
+Lambeth,private_room,1147,61.0,544.0,280.0,807.0
+Lewisham,entire_home,898,128.0,154.0,141.0,166.0
+Lewisham,private_room,636,51.0,77.0,56.0,98.0
+Merton,entire_home,573,154.0,197.0,185.0,209.0
+Merton,private_room,394,59.0,78.0,70.0,86.0
+Newham,entire_home,980,168.0,202.0,181.0,223.0
+Newham,private_room,666,56.0,86.0,66.0,105.0
+Redbridge,entire_home,330,138.0,196.0,174.0,217.0
+Redbridge,private_room,395,49.0,72.0,48.0,96.0
+Richmond upon Thames,entire_home,540,180.0,239.0,221.0,258.0
+Richmond upon Thames,private_room,271,64.0,74.0,69.0,79.0
+Southwark,entire_home,1962,164.0,214.0,197.0,231.0
+Southwark,private_room,1246,63.0,112.0,87.0,137.0
+Sutton,entire_home,199,113.0,128.0,115.0,140.0
+Sutton,private_room,164,45.0,60.0,49.0,71.0
+Tower Hamlets,entire_home,2762,169.0,617.0,-153.0,1388.0
+Tower Hamlets,private_room,1499,62.0,91.0,75.0,107.0
+Waltham Forest,entire_home,676,130.0,158.0,148.0,167.0
+Waltham Forest,private_room,521,54.0,65.0,62.0,68.0
+Wandsworth,entire_home,2020,183.0,249.0,230.0,269.0
+Wandsworth,private_room,986,65.0,94.0,79.0,109.0
+Westminster,entire_home,7124,246.0,374.0,358.0,389.0
+Westminster,private_room,1244,94.0,155.0,133.0,178.0
+Westminster,shared_room,53,30.0,191.0,75.0,308.0

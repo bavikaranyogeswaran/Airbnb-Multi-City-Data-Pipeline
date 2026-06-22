@@ -184,6 +184,24 @@ def run(city: str) -> dict:
     )
     _save(neigh_price, "price_by_neighbourhood.csv")
 
+    # ── 3b. price_ci_by_neighbourhood_room_type ───────────────────────────────
+    min_cross = max(5, int(len(lm) * 0.0005))
+    cross_grp = eda.groupby(["neighbourhood_cleansed", "room_type"])["price_numeric"]
+    cross_ci = (
+        cross_grp.apply(_price_ci)
+        .apply(pd.Series)
+        .rename(columns={0: "ci_lower", 1: "ci_upper"})
+    )
+    cross = (
+        cross_grp
+        .agg(listing_count="count", median_price="median", mean_price="mean")
+        .query(f"listing_count >= {min_cross}")
+        .join(cross_ci)
+        .reset_index()
+        .round(0)
+    )
+    _save(cross, "price_ci_by_neighbourhood_room_type.csv", index=False)
+
     # ── 4. host_segment_summary ───────────────────────────────────────────────
     seg_order = ["solo", "multi", "professional"]
     host_seg = (
