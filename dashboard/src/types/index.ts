@@ -30,6 +30,8 @@ export interface PriceByRoomType {
   listing_count: number;
   median_price: number;
   mean_price: number;
+  ci_lower?: number;
+  ci_upper?: number;
 }
 
 export interface CityComparison {
@@ -57,6 +59,18 @@ export interface PriceByNeighbourhood {
   listing_count: number;
   median_price: number;
   mean_price: number;
+  ci_lower?: number;
+  ci_upper?: number;
+}
+
+export interface PriceByNeighbourhoodRoomType {
+  neighbourhood_cleansed: string;
+  room_type: string;
+  listing_count: number;
+  median_price: number;
+  mean_price: number;
+  ci_lower?: number;
+  ci_upper?: number;
 }
 
 export interface PriceByDistance {

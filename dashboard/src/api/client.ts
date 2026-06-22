@@ -6,7 +6,9 @@ const BASE = '/api';
 /** All analytics endpoints call FastAPI via the Vite dev-server proxy (/api → :8000). */
 export const endpoints = {
   priceByRoomType:      (city: City) => `${BASE}/analytics/listings/price-by-room-type?city=${city}`,
-  priceByNeighbourhood: (city: City) => `${BASE}/analytics/listings/price-by-neighbourhood?city=${city}&top_n=${NEIGHBOURHOOD_TOP_N}`,
+  priceByNeighbourhood:          (city: City) => `${BASE}/analytics/listings/price-by-neighbourhood?city=${city}&top_n=${NEIGHBOURHOOD_TOP_N}`,
+  priceCiNeighbourhoodRoomType:  (city: City, roomType = 'entire_home') =>
+    `${BASE}/analytics/listings/price-ci-neighbourhood-room-type?city=${city}&room_type=${roomType}`,
   availabilityBands:    (city: City) => `${BASE}/analytics/listings/availability-bands?city=${city}`,
   priceByDistance:      (city: City) => `${BASE}/analytics/geographic/price-by-distance?city=${city}`,
   hostSegments:         (city: City) => `${BASE}/analytics/hosts/segments?city=${city}`,
